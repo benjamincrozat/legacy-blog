@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Third Party Services
@@ -31,4 +30,13 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'convertkit' => [
+        'api_key' => env('CONVERTKIT_API_KEY'),
+        'form_id' => env('CONVERTKIT_FORM_ID'),
+    ],
+
+    'fathom' => [
+        'api_token' => env('FATHOM_API_TOKEN'),
+        'site_id' => env('FATHOM_SITE_ID'),
+    ],
 ];

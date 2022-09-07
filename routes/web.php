@@ -1,18 +1,22 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ShowPostController;
+use App\Http\Controllers\SubscribeController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+Route::get('/test', function () {
+    header('Location: https://www.google.com');
 
-Route::get('/', function () {
-    return view('welcome');
+    http_response_code(301);
+
+    exit;
 });
+
+Route::get('/', HomeController::class)->name('home');
+
+Route::post('/subscribe', SubscribeController::class)->name('subscribe');
+
+Route::feeds();
+
+Route::get('/{slug}', ShowPostController::class)->name('posts.show');

@@ -1,0 +1,122 @@
+---
+Description: When in doubt, clear caches in Laravel. Knowing all the different types of caches will help you debug any problem you might have in your projects.
+Published At: 2022-09-10
+Modified At:
+---
+
+# 6 kind of caches in Laravel & how to clear them for debugging
+
+Some performance issues at scale can come from repeatedly computing values for [Laravel's bootstrapping process](https://laravel.com/docs/lifecycle), which occurs at each request your visitors make (unless you're using [Octane](https://laravel.com/docs/octane)). Therefore, caching those values is essential to help your application stays fast. Sometimes though, problems happen, and cache gets in the way of debugging. Let's see how we can clear every cache Laravel uses.
+
+## Why and how to clear general cache in Laravel
+
+First, we all know the general cache in Laravel. This is where you can store all your expensive values (meaning that they take time to compute).
+
+```bash
+php artisan cache:clear
+```
+
+## Why and how to clear config cache in Laravel
+
+Some config values are fetched from your environment file and it can be a bit slow. Luckily, Laravel can cache them to help us speed up our applications.
+
+```bash
+php artisan config:clear
+```
+
+## Why and how to clear events cache in Laravel
+
+[Laravel's automatic event discovery](https://laravel.com/docs/9.x/events#event-discovery) is beneficial. You don't need to register listeners manually anymore thanks to this tiny change you can make in your EventServiceProvider.
+
+```php
+…
+
+class EventServiceProvider extends ServiceProvider
+{
+    …
+
+    public function shouldDiscoverEvents() : bool
+    {
+        return true;
+    }
+}
+```
+
+When going into production, you can cache auto-discovered events for maximum performance.
+
+```bash
+php artisan event:clear
+```
+
+## Why and how to clear routes cache in Laravel
+
+[Laravel's routes](https://laravel.com/docs/9.x/routing) are an essential part of your web application or API. Resolving a route can take time if you have a lot of them and as you guessed, caching helps for that.
+
+```bash
+php artisan route:clear
+```
+
+## Why and how to clear scheduled tasks cache in Laravel
+
+Let's say you have a recurring task that takes so much time to complete it will overlap with its next occurrence. You can prevent it until the previous one has finished:
+
+```php
+$schedule->command('some:task')->withoutOverlapping();
+```
+
+Behind the scenes, Laravel uses the application's cache to remember which task hasn't finished running.
+
+```bash
+php artisan schedule:clear-cache
+```
+
+## Why and how to clear views cache in Laravel
+
+Blade directives are compiled and cached even in your local environment. Sometimes though, compiled views can conflict with a recent change in your code. Again, you have a command for that:
+
+```bash
+php artisan view:clear
+```
+
+## How to clear every cache in Laravel
+
+Finally, let's see the ultimate cache-busting command.
+
+```bash
+php artisan optimize:clear
+```
+
+This command will remove the following caches:
+- Config
+- Compiled classes cache
+- Events
+- General Cache
+- Routes
+- Views
+
+How do I know that? Simple. I used the "Go To File" command in my code editor and searched for the "OptimizeClearCommand.php" file. Its source code is straightforward to understand, as you can see:
+
+```php
+…
+
+class OptimizeClearCommand extends Command
+{
+    …
+
+    public function handle()
+    {
+        $this->components->info('Clearing cached bootstrap files.');
+
+        collect([
+            'events' => fn () => $this->callSilent('event:clear') == 0,
+            'views' => fn () => $this->callSilent('view:clear') == 0,
+            'cache' => fn () => $this->callSilent('cache:clear') == 0,
+            'route' => fn () => $this->callSilent('route:clear') == 0,
+            'config' => fn () => $this->callSilent('config:clear') == 0,
+            'compiled' => fn () => $this->callSilent('clear-compiled') == 0,
+        ])->each(fn ($task, $description) => $this->components->task($description, $task));
+
+        $this->newLine();
+    }
+}
+```
