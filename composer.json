@@ -7,6 +7,7 @@
         "laravel/tinker": "^2.7",
         "spatie/laravel-feed": "^4.1",
         "spatie/laravel-google-fonts": "^1.2",
+        "spatie/laravel-sitemap": "^6.2",
         "torchlight/torchlight-commonmark": "^0.5.5",
         "torchlight/torchlight-laravel": "^0.5.11"
     },

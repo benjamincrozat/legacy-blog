@@ -11,6 +11,7 @@
 /public/css
 /public/hot
 /public/js
+/public/sitemap.xml
 /public/storage
 /storage/*.key
 /vendor
