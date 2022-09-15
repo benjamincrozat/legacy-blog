@@ -88,7 +88,7 @@ echo 'Hello, World!';
 
 ## What's the difference between 301 and 302 redirects?
 
-By default, adding a "Location" header will result in a 302 Moved Temporarily redirect. But most of the time, we need 301 Moved Permanently redirections (the most common use case is for SEO purposes). Since PHP 5.4, we can use the `[http_response_code()](https://www.php.net/manual/en/function.http-response-code.php)` function:
+By default, adding a "Location" header will result in a 302 Moved Temporarily redirect. But most of the time, we need 301 Moved Permanently redirections (the most common use case is for SEO purposes). Since PHP 5.4, we can use the [`http_response_code()ˋ](https://www.php.net/manual/en/function.http-response-code.php) function:
 
 ```php
 <?php
