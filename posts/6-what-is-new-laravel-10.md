@@ -1,0 +1,71 @@
+---
+Description: Laravel 10 will be released on February 7, 2023. Its development is still ongoing. That said, every Laravel ninja should already know what's coming.
+Published At: 2022-09-15
+Modified At:
+---
+
+# The Laravel ninja already knows what's new in Laravel 10
+
+Laravel 10 will be released on February 7, 2023. Its development is still ongoing. I'll update this article as often as needed to make sure you have a digestible list of every new feature and enhancement embedded inside Laravel 10.
+
+## Dropped support for PHP 8.0
+
+Some people are barely adopting PHP 8.0. Meanwhile, Laravel 10 will drop support for PHP 8.0, and that's good.
+
+Remember: big enterprise apps don't need to be updated to the latest and greatest as soon as they're released. Enterprise apps have paid clients or employees depending on them to do their work. They need to move forward carefully and do extensive testing.
+
+See the pull request on GitHub: [[10.x] Drop PHP 8.0](https://github.com/laravel/laravel/pull/5854)
+
+## Removal of all deprecated methods and properties
+
+Releasing a major version also means the Laravel team can finally remove what's been deprecated in Laravel 9. It also means you should carefully test any Laravel application you might want to migrate to version 10.
+
+Here's a list of all PRs taking care of that:
+- [[10.x] Remove deprecated Route::home method](https://github.com/laravel/framework/pull/42614)
+- [[10.x] Remove deprecated assertTimesSent](https://github.com/laravel/framework/pull/42592)
+- [[10.x] Remove deprecated dispatchNow functionality](https://github.com/laravel/framework/pull/42591)
+- [[10.x] Remove deprecated method](https://github.com/laravel/framework/pull/42590)
+- [[10.x] Remove deprecated dates property](https://github.com/laravel/framework/pull/42587)
+- [[10.x] Use native php 8.1 array_is_list function](https://github.com/laravel/framework/pull/41347)
+- [[10.x] Remove deprecations](https://github.com/laravel/framework/pull/41136)
+
+## Invokable validation rules by default
+
+In Laravel 9, [invokable validation rules]() could be generated using the `--invokable` flag with the `php artisan make:rule` command. Starting from Laravel 10, you won't need it anymore.
+
+```php
+php artisan make:rule Uppercase
+```
+
+To remind you a bit of what invokable validation rules are, here's what they look like:
+
+```php
+namespace App\Rules;
+
+use Illuminate\Contracts\Validation\InvokableRule;
+
+class Uppercase implements InvokableRule
+{
+ /**
+ * Run the validation rule.
+ *
+ * @param string $attribute
+ * @param mixed $value
+ * @param \Closure(string): \Illuminate\Translation\PotentiallyTranslatedString $fail
+ * @return void
+ */
+ public function __invoke($attribute, $value, $fail)
+ {
+ if (strtoupper($value) !== $value) {
+ $fail('The :attribute must be uppercase.');
+ }
+ }
+}
+```
+
+The boilerplate code is considerably smaller and easier to understand.
+
+See the pull request on GitHub: [[10.x] Make invokable rules default](https://github.com/laravel/docs/pull/8165)
+
+**There's more to come until February 2023. Be sure to [follow me on Twitter](https://twitter.com/benjamincrozat) and [subscribe to my newsletter](#newsletter)!**
+
