@@ -31,7 +31,7 @@ Here's a list of all PRs taking care of that:
 
 ## Invokable validation rules by default
 
-In Laravel 9, [invokable validation rules]() could be generated using the `--invokable` flag with the `php artisan make:rule` command. Starting from Laravel 10, you won't need it anymore.
+In Laravel 9, [invokable validation rules](https://laravel.com/docs/9.x/validation#custom-validation-rules) could be generated using the `--invokable` flag with the `php artisan make:rule` command. Starting from Laravel 10, you won't need it anymore.
 
 ```php
 php artisan make:rule Uppercase
@@ -64,6 +64,8 @@ class Uppercase implements InvokableRule
 ```
 
 The boilerplate code is considerably smaller and easier to understand.
+
+The old way of writing custom validation rules will still work.
 
 See the pull request on GitHub: [[10.x] Make invokable rules default](https://github.com/laravel/docs/pull/8165)
 
