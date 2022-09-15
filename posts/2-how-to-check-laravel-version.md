@@ -1,14 +1,14 @@
 ---
-Description: Knowing how to get the Laravel version you are running is incredibly important before you do anything on any project. There are multiple ways to check this information.
+Description: Knowing how to get the Laravel version you are running is important before starting to write code on a project. There are multiple ways to get check it.
 Published At: 2022-09-10
 Modified At:
 ---
 
-# 3 easy ways to check which Laravel version you are running
+# 4 easy ways to check which Laravel version you are running
 
 As soon as you get a new Laravel project to work on, the first thing you should do is to check which version you are running. For instance, you may need to install a new package and you want to make sure it is compatible with your version of Laravel.
 
-## Check which Laravel version you are running on Laravel 9 and later
+## Check your Laravel version on Laravel 9 and later with the about command
 
 The about command gives you the Laravel version you are running as well as a lot of other information about your project.
 
@@ -41,7 +41,7 @@ Queue ................................................................. sync
 Session .............................................................. redis
 ```
 
-## Check which Laravel version you are running on any Laravel version
+## Check your Laravel version with the --version flag on Artisan
 
 Before Laravel blessed us with the `about` command, it was also possible to check your project's Laravel version like so:
 
@@ -51,11 +51,41 @@ php artisan --version
 Laravel Framework 9.29.0
 ```
 
-## Check which Laravel version you are running with code on any Laravel version
+## Check your Laravel version with the app() helper
 
-The [`app()`](https://laravel.com/docs/helpers#method-app) helper will give you access to many information, such as the Laravel version you are running.
+The [`app()`](https://laravel.com/docs/helpers#method-app) helper will give you access to many information, such as the Laravel version you are running. Try this simple code below:
 
 ```php
 // 9.28.0
 app()->version();
+```
+
+## Check your Laravel version in your composer.json and composer.lock files
+
+In your *composer.json*, you will be able to get the minimum version of Laravel your project is locked on:
+
+```json
+"require": {
+    "php": "^8.0.2",
+    "guzzlehttp/guzzle": "^7.2",
+    "laravel/framework": "^9.19",
+    "laravel/sanctum": "^3.0",
+    "laravel/tinker": "^2.7"
+},
+```
+
+As you can see, this project is locked on Laravel 9.19.0 or earlier.
+
+But this might not be enough. Search for "laravel/framework" inside your *composer.lock* file to get the exact Laravel version that's installed on your project :
+
+```json
+{
+    "name": "laravel/framework",
+    "version": "v9.30.0",
+    "source": {
+        "type": "git",
+        "url": "https://github.com/laravel/framework.git",
+        "reference": "2ca2b168a3e995a8ec6ea2805906379095d20080"
+    }
+}
 ```
