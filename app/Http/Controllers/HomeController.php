@@ -9,8 +9,6 @@ class HomeController extends Controller
 {
     public function __invoke() : View
     {
-        return view('home', [
-            'posts' => Post::all(),
-        ]);
+        return view('home', ['posts' => Post::all()]);
     }
 }

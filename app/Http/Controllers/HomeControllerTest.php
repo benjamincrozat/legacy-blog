@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature;
+namespace App\Http\Controllers;
 
 use Tests\TestCase;
 use Illuminate\Support\Collection;
