@@ -1,5 +1,5 @@
 ---
-Description: Knowing which Laravel version you are running is incredibly important before you do anything on any project. There are multiple ways to get this information.
+Description: Knowing how to get the Laravel version you are running is incredibly important before you do anything on any project. There are multiple ways to check this information.
 Published At: 2022-09-10
 Modified At:
 ---
@@ -10,7 +10,7 @@ As soon as you get a new Laravel project to work on, the first thing you should 
 
 ## Check which Laravel version you are running on Laravel 9 and later
 
-The about command gives you the Laravel version you are running as well as a lot of other information.
+The about command gives you the Laravel version you are running as well as a lot of other information about your project.
 
 ```
 php artisan about
@@ -43,7 +43,7 @@ Session .............................................................. redis
 
 ## Check which Laravel version you are running on any Laravel version
 
-Before Laravel blessed us with the `about` command, it was also possible to check your Laravel version like so:
+Before Laravel blessed us with the `about` command, it was also possible to check your project's Laravel version like so:
 
 ```
 php artisan --version

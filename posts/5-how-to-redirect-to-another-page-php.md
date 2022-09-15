@@ -4,7 +4,7 @@ Published At: 2022-09-12
 Modified At: 2022-09-15
 ---
 
-# Redirect your visitors to another page with 3 lines of PHP
+# Redirect users to another page in PHP, the right way
 
 ## Basics first: what is HTTP?
 
