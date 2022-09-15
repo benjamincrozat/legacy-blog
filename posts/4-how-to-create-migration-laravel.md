@@ -8,8 +8,13 @@ Modified At: 2022-09-15
 
 ## Why should you use migrations
 
-Instead of changing the database manually, you should use Laravel's migrations. Migrations contain PHP code that shapes your database exactly how you want it.  
-It means that each time you make a change, it's added to your Git history. Everyone in your team, including you, will be able to keep track of the database's schema and regenerate their development database accordingly.
+Instead of changing the database manually, you should use Laravel's migrations. Migrations contain PHP code that shapes your database exactly how you want it. It means that it's added to your Git history each time you make a change.  
+Here are the benefits for your team and you:
+- Keep track of the database's schema;
+- Regenerate your local database to include any change that's been made;
+- Keep the production database synced as well.
+
+When used correctly, you should never have to open your MySQL client ever again.
 
 ## When you should use migrations
 

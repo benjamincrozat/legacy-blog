@@ -18,7 +18,7 @@ Some-Other-Header: Some other value
 Some data.
 ```
 
-It's that simple.
+It's that easy.
 
 Here is the (simplified) HTTP response our browser receives when we visit my awesome website:
 
