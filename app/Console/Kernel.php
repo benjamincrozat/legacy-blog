@@ -10,7 +10,10 @@ class Kernel extends ConsoleKernel
 {
     protected function schedule(Schedule $schedule) : void
     {
-        $schedule->command(SitemapGenerateCommand::class)->daily();
+        $schedule
+            ->command(SitemapGenerateCommand::class)
+            ->daily()
+            ->thenPing('http://beats.envoyer.io/heartbeat/wd65Mos3cOmSZS0');
     }
 
     protected function commands() : void
