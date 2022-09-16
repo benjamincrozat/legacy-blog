@@ -4,7 +4,7 @@ Published At: 2022-09-10
 Modified At:
 ---
 
-# 4 easy ways to check which Laravel version you are running
+# 5 easy ways to check which Laravel version you are running
 
 As soon as you get a new Laravel project to work on, the first thing you should do is to check which version you are running. For instance, you may need to install a new package and you want to make sure it is compatible with your version of Laravel.
 
@@ -89,3 +89,9 @@ But this might not be enough. Search for "laravel/framework" inside your *compos
     }
 }
 ```
+
+## Check your Laravel version with Tinkerwell
+
+Do you use [Tinkerwell](https://a.paddle.com/v2/click/103161/155964?link=2106)? It's a must-have application for Laravel that runs on Mac, Linux and Windows. The version of Laravel your project is using is visible at the bottom left of the application.
+
+![Screenshot of Tinkerwell.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1663340855/benjamincrozat.com/Screenshot_2022-09-16_at_17.04.41_gshody.png)
