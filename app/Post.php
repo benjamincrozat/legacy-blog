@@ -151,7 +151,7 @@ class Post implements Feedable
     public function toFeedItem() : FeedItem
     {
         return FeedItem::create([
-            'id' => $this->id,
+            'id' => route('posts.show', $this->slug),
             'title' => $this->title,
             'summary' => Str::marxdown($this->content),
             'updated' => $this->getPublishedAtDate(),
