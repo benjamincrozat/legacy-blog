@@ -4,7 +4,7 @@ Published At: 2022-09-18
 Modified At:
 ---
 
-# How to fix: "Methods with the same name as their class will not be constructors in a future version of PHP"?
+# How to fix "Methods with the same name as their class will not be constructors in a future version of PHP"
 
 ## Steps to fix "Methods with the same name as their class will not be constructors in a future version of PHP"
 
