@@ -12,7 +12,7 @@ Laravel 10 will be released on February 7, 2023. Its development is still ongoin
 
 Some people are barely adopting PHP 8.0. Meanwhile, Laravel 10 will drop support for PHP 8.0, and that's good.
 
-Remember: big enterprise apps don't need to be updated to the latest and greatest as soon as they're released. Enterprise apps have paid clients or employees depending on them to do their work. They need to move forward carefully and do extensive testing.
+Remember: big enterprise apps don't need to be updated to the latest and greatest as soon as they're released. Enterprise apps have paid clients or employees depending on them to do their work. They need to slowly but surely move forward by doing extensive testing.
 
 See the pull request on GitHub: [[10.x] Drop PHP 8.0](https://github.com/laravel/laravel/pull/5854)
 
