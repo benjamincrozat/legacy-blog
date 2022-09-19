@@ -36,10 +36,6 @@
             </p>
 
             <p class="mt-4">
-                I created a French community for Laravel developers called <a href="https://larabiz.fr" class="border-b border-blue-200 text-blue-400">Larabiz</a>.
-            </p>
-
-            <p class="mt-4">
                 You can find me on <a href="https://github.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer" class="border-b border-blue-200 text-blue-400">GitHub</a>, <a href="https://www.linkedin.com/in/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer" class="border-b border-blue-200 text-blue-400">LinkedIn</a> and <a href="https://twitter.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer" class="border-b border-blue-200 text-blue-400">Twitter</a>.
             </p>
         </div>
