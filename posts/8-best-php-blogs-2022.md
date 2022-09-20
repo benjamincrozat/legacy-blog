@@ -8,7 +8,7 @@ Modified At:
 
 I think blogging is necessary. I wouldn’t be where I am today without others sharing their knowledge. Everybody owning their content should be the default. Therefore, I present you a bunch of awesome PHP blogs from community members publishing interesting and valuable content. Get your RSS feeds aggregator and follow me!
 
-I will update this article as soon as I find any new PHP blog worth reading.
+(I will update this article each time I find any new PHP blog worth reading.)
 
 ## [Christoph Rumpel's blog](https://christoph-rumpel.com)
 
