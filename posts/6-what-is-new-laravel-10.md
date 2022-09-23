@@ -8,6 +8,8 @@ Modified At:
 
 Laravel 10 will be released on February 7, 2023. Its development is still ongoing. I'll update this article as often as needed to make sure you have a digestible list of every new feature and enhancement embedded inside Laravel 10.
 
+Get your ninja suit and follow me!
+
 ## Dropped support for PHP 8.0
 
 Some people are barely adopting PHP 8.0. Meanwhile, Laravel 10 will drop support for PHP 8.0, and that's good.
@@ -65,9 +67,8 @@ class Uppercase implements InvokableRule
 
 The boilerplate code is considerably smaller and easier to understand.
 
-The old way of writing custom validation rules will still work.
+That said, the old way of writing custom validation rules will still work.
 
 See the pull request on GitHub: [[10.x] Make invokable rules default](https://github.com/laravel/docs/pull/8165)
 
-**There's more to come until February 2023. Be sure to [follow me on Twitter](https://twitter.com/benjamincrozat) and [subscribe to my newsletter](#newsletter)!**
-
+**There's more to come until February 2023. If you're feeling like a ninja, [follow me on Twitter](https://twitter.com/benjamincrozat) and [subscribe to my newsletter](#newsletter)!**
