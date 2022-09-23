@@ -10,6 +10,8 @@ Laravel 10 will be released on February 7, 2023. Its development is still ongoin
 
 Get your ninja suit and follow me!
 
+![Laravel's logo.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1663966984/benjamincrozat.com/laravel_umomrs.png)
+
 ## Dropped support for PHP 8.0
 
 Some people are barely adopting PHP 8.0. Meanwhile, Laravel 10 will drop support for PHP 8.0, and that's good.
@@ -18,14 +20,19 @@ Remember: big enterprise apps don't need to be updated to the latest and greates
 
 See the pull request on GitHub: [[10.x] Drop PHP 8.0](https://github.com/laravel/laravel/pull/5854)
 
-## Removal of all deprecated methods and properties
+### dispatchNow() was deprecated and will be removed in Laravel 10
+
+`dispatchNow()` is a popular method in Laravel. It was deprecated in Laravel 9 in favor of [`dispatchSync()`](https://laravel.com/docs/9.x/queues#synchronous-dispatching). Laravel 10 will remove it, so be sure to search and replace it in all of your projects. It may be a breaking change, be it's an extremely easy fix.
+
+See the pull request on GitHub: [[10.x] Remove deprecated dispatchNow functionality](https://github.com/laravel/framework/pull/42591)
+
+## Many more removal of deprecated methods and properties
 
 Releasing a major version also means the Laravel team can finally remove what's been deprecated in Laravel 9. It also means you should carefully test any Laravel application you might want to migrate to version 10.
 
 Here's a list of all PRs taking care of that:
 - [[10.x] Remove deprecated Route::home method](https://github.com/laravel/framework/pull/42614)
 - [[10.x] Remove deprecated assertTimesSent](https://github.com/laravel/framework/pull/42592)
-- [[10.x] Remove deprecated dispatchNow functionality](https://github.com/laravel/framework/pull/42591)
 - [[10.x] Remove deprecated method](https://github.com/laravel/framework/pull/42590)
 - [[10.x] Remove deprecated dates property](https://github.com/laravel/framework/pull/42587)
 - [[10.x] Use native php 8.1 array_is_list function](https://github.com/laravel/framework/pull/41347)
