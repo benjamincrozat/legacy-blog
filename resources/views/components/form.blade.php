@@ -7,5 +7,9 @@
         @method($method)
     @endif
 
+    @if ('GET' !== $method)
+        <x-honeypot />
+    @endif
+
     {{ $slot }}
 </form>

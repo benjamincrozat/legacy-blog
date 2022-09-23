@@ -26,6 +26,7 @@ class SubscribeControllerTest extends TestCase
         $this
             ->from(route('home'))
             ->postJson(route('subscribe'), ['email' => fake()->safeEmail()])
+            ->assertValid(['email'])
             ->assertRedirect(route('home'))
         ;
     }
