@@ -20,13 +20,13 @@ Remember: big enterprise apps don't need to be updated to the latest and greates
 
 See the pull request on GitHub: [[10.x] Drop PHP 8.0](https://github.com/laravel/laravel/pull/5854)
 
-### dispatchNow() was deprecated and will be removed in Laravel 10
+## dispatchNow() has been removed
 
 `dispatchNow()` is a popular method in Laravel. It was deprecated in Laravel 9 in favor of [`dispatchSync()`](https://laravel.com/docs/9.x/queues#synchronous-dispatching). Laravel 10 will remove it, so be sure to search and replace it in all of your projects. It may be a breaking change, but it's an extremely easy fix.
 
 See the pull request on GitHub: [[10.x] Remove deprecated dispatchNow functionality](https://github.com/laravel/framework/pull/42591)
 
-## Many more removal of deprecated methods and properties
+## Many deprecated methods and properties have been removed
 
 Releasing a major version also means the Laravel team can finally remove what's been deprecated in Laravel 9. It also means you should carefully test any Laravel application you might want to migrate to version 10.
 
@@ -38,7 +38,7 @@ Here's a list of all PRs taking care of that:
 - [[10.x] Use native php 8.1 array_is_list function](https://github.com/laravel/framework/pull/41347)
 - [[10.x] Remove deprecations](https://github.com/laravel/framework/pull/41136)
 
-## Invokable validation rules by default
+## Laravel 10 uses invokable validation rules by default
 
 In Laravel 9, [invokable validation rules](https://laravel.com/docs/9.x/validation#custom-validation-rules) could be generated using the `--invokable` flag with the `php artisan make:rule` command. Starting from Laravel 10, you won't need it anymore.
 
