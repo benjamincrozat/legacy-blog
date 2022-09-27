@@ -1,4 +1,4 @@
-<section {{ $attributes->merge([
+<aside {{ $attributes->merge([
     'id' => 'newsletter',
     'class' => 'container max-w-screen-sm text-center',
 ]) }}>
@@ -13,4 +13,4 @@
             Sign me up
         </button>
     </x-form>
-</section>
+</aside>

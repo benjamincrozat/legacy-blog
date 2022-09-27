@@ -10,8 +10,9 @@
         </x-breadcrumb-item>
     </x-breadcrumb>
 
-    <div class="container">
-        <article class="mt-8">
+    <article class="mt-8">
+        {{-- Post --}}
+        <div class="container">
             <h1 class="font-thin text-3xl md:text-5xl">{{ $post->title }}</h1>
 
             <x-metadata :date="$post->getPublishedAtDate()" :read-time="$post->getReadTime()" class="mt-4" />
@@ -54,9 +55,10 @@
             <div class="max-w-full mt-8 prose prose-a:border-b prose-a:border-blue-200 prose-a:text-blue-400 prose-a:no-underline">
                 {!! Illuminate\Support\Str::marxdown($post->content) !!}
             </div>
-        </article>
+        </div>
 
-        <aside class="py-16">
+        {{-- Author --}}
+        <aside class="container mt-16">
             <figure class="flex items-center gap-2">
                 <img src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}" width="24" height="24" alt="Benjamin Crozat's avatar." class="flex-shrink-0 rounded-full" />
 
@@ -72,23 +74,27 @@
                 Hi! I'm Benjamin Crozat. I'm a freelance full-stack Laravel developer. <a href="mailto:benjamincrozat@me.com" class="border-b border-blue-200 text-blue-400">Contact me</a> if you need a consultant to help you with your project.
             </p>
         </aside>
-    </div>
 
-    <div class="bg-gray-100 py-8 sm:py-16">
-        <x-newsletter class="scroll-mt-8 sm:scroll-mt-16" />
-    </div>
+        {{-- Newsletter --}}
+        <div class="bg-gray-100 mt-16">
+            <div class="container py-8 sm:py-16">
+                <x-newsletter class="scroll-mt-8 sm:scroll-mt-16" />
+            </div>
+        </div>
 
-    @if ($others->isNotEmpty())
-        <section class="container py-16">
-            <h4 class="font-bold text-center text-xl">Other posts to read</h4>
+        {{-- Other posts to read --}}
+        @if ($others->isNotEmpty())
+            <div class="container py-16">
+                <h4 class="font-bold text-center text-xl">Other posts to read</h4>
 
-            <ul class="grid gap-12 mt-8">
-                @foreach ($others as $post)
-                    <li><x-post :post="$post" /></li>
-                @endforeach
-            </ul>
-        </section>
-    @endif
+                <ul class="grid gap-12 mt-8">
+                    @foreach ($others as $post)
+                        <li><x-post :post="$post" /></li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+    </article>
 
     <script type="application/ld+json">
         {
