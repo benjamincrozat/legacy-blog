@@ -4,7 +4,7 @@ import { resolve } from 'path'
 import fs from 'fs';
 import laravel from 'laravel-vite-plugin'
 
-let host = 'larabiz.test'
+let host = 'benjamincrozat.test'
 
 export default defineConfig({
     plugins: [
