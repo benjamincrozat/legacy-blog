@@ -4,9 +4,9 @@ Published At: 2022-09-15
 Modified At: 2022-10-05
 ---
 
-# The Laravel ninja already knows what's new in Laravel 10
+# What's new in Laravel 10? A relevant list of everything.
 
-Let's dive into every relevant new feature we know will be available in Laravel 10. Get your ninja suit and follow me!
+Let's dive into every relevant new feature we know will be available in Laravel 10.
 
 ![Laravel's logo.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1663966984/benjamincrozat.com/laravel_umomrs.png)
 
