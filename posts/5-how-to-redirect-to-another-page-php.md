@@ -1,10 +1,14 @@
 ---
-Description: Correctly redirecting a user to another page in PHP only takes a few lines of code. We'll also see the difference between 301 and 302 redirects.
+Description: Redirecting a user to another page in PHP takes one line of code. We'll also see the importance of HTTP and the difference between 301 and 302 redirects.
 Published At: 2022-09-12
-Modified At: 2022-09-15
+Modified At: 2022-10-05
 ---
 
 # Redirect users to another page in PHP, the right way
+
+To redirect users to another page in PHP, use the [`header()`](https://www.php.net/manual/en/function.header.php) function.
+
+But if you want to understand what you're doing, we need to learn about HTTP first.
 
 ## Basics first: what is HTTP?
 
