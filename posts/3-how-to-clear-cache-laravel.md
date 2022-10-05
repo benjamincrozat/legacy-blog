@@ -6,13 +6,9 @@ Modified At:
 
 # 6 kind of caches in Laravel & how to clear them for debugging
 
-Some performance issues at scale can come from repeatedly computing values for [Laravel's bootstrapping process](https://laravel.com/docs/lifecycle), which occurs at each request your visitors make (unless you're using [Octane](https://laravel.com/docs/octane)).
+**To clear Laravel's cache, use the `php artisan optimize:clear` command.**
 
-Therefore, caching those values is essential to help your application stays fast.
-
-Sometimes though, problems happen, and cache gets in the way of debugging.
-
-Let's see how we can clear every cache Laravel uses.
+But if you want to understand what you're doing, we need to talk more deeply about all the kind of caches there are in Laravel. Why they exist, and how to clear them individually. Because when problems happen, cache may get in the way of your debugging process.
 
 ## Clear Laravel's general cache
 
