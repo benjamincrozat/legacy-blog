@@ -82,8 +82,8 @@ class Uppercase implements InvokableRule
 
 The boilerplate code is considerably smaller and easier to understand. Thanks to Laravel 10, people will be less intimidated by the perspective of making custom validation rules.
 
-That said, the old ninja way of writing custom validation rules will still work.
+That said, **the old way of writing custom validation rules will still work**.
 
 See the pull request on GitHub: [[10.x] Make invokable rules default](https://github.com/laravel/docs/pull/8165)
 
-**There's more to come until February 2023. If you're feeling like a ninja, [follow me on Twitter](https://twitter.com/benjamincrozat) and [subscribe to my newsletter](#newsletter)!**
+**There's more to come until February 2023. If you're feeling awesome, [follow me on Twitter](https://twitter.com/benjamincrozat) and [subscribe to my newsletter](#newsletter)!**
