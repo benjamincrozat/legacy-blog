@@ -13,6 +13,4 @@ This is a service I use since God knows when as a freelance web developer, becau
 
 ## Vultr
 
-## Amazon Web Services
-
 ## DigitalOcean

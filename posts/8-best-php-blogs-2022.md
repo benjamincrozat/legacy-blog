@@ -1,12 +1,12 @@
 ---
-Description: To grow your PHP knowledge, subscribe to as many quality PHP blogs as possible. In this article, I share those I regularly read myself.
+Description: To keep getting better with PHP, you should subscribe to as many quality blogs as possible. In this article, I share the ones I often read myself.
 Published At: 2022-09-19
 Modified At:
 ---
 
 # Best PHP blogs to read in 2022
 
-I think blogging is necessary. I wouldn’t be where I am today without others sharing their knowledge. Everybody owning their content should be the default. Therefore, I present you a bunch of awesome PHP blogs from community members publishing interesting and valuable content. Get your RSS feeds aggregator and follow me!
+I think blogging is necessary. I wouldn’t be where I am today without others sharing their knowledge. Therefore, I present you a bunch of awesome PHP blogs from community members publishing interesting and valuable content. Get your RSS feeds aggregator and follow me!
 
 (I will update this article each time I find any new PHP blog worth reading.)
 
