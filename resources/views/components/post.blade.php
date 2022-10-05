@@ -3,5 +3,10 @@
         {{ $post->title }}
     </p>
 
-    <x-metadata :date="$post->getPublishedAtDate()" :read-time="$post->getReadTime()" class="mt-3" />
+    <x-metadata
+        :published-at="$post->getPublishedAtDate()"
+        :modified-at="$post->getModifiedAtDate()"
+        :read-time="$post->getReadTime()"
+        class="mt-3"
+    />
 </a>

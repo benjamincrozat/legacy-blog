@@ -4,8 +4,14 @@
     <span>
         <span class="text-black">Benjamin Crozat</span>,
 
-        <time datetime="{{ $date->toDateString() }}" class="text-black">
-            {{ $date->isoFormat('LL') }}
+        @if ($modifiedAt)
+            updated on
+        @else
+            published on
+        @endif
+
+        <time datetime="{{ $modifiedAt?->toDateString() ?? $publishedAt->toDateString() }}" class="text-black">
+            {{ $modifiedAt?->isoFormat('LL') ?? $publishedAt->isoFormat('LL') }}
         </time>
 
         —&nbsp;@choice(':count&nbsp;minute&nbsp;read|:count&nbsp;minutes&nbsp;read', $readTime)

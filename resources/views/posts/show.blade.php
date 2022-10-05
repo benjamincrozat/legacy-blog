@@ -15,7 +15,7 @@
         <div class="container">
             <h1 class="font-thin text-3xl md:text-5xl">{{ $post->title }}</h1>
 
-            <x-metadata :date="$post->getPublishedAtDate()" :read-time="$post->getReadTime()" class="mt-4" />
+            <x-metadata :published-at="$post->getPublishedAtDate()" :modified-at="$post->getModifiedAtDate()" :read-time="$post->getReadTime()" class="mt-4" />
 
             <p class="font-normal font-serif mt-8 text-blue-400 text-xl">
                 {{ $post->description }}
