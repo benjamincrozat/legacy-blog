@@ -1,14 +1,12 @@
 ---
 Description: Laravel 10 will be released on February 7, 2023. Its development is still ongoing. That said, every Laravel ninja should already know what's coming.
 Published At: 2022-09-15
-Modified At:
+Modified At: 2022-10-05
 ---
 
 # The Laravel ninja already knows what's new in Laravel 10
 
-Laravel 10 will be released on February 7, 2023. Its development is still ongoing. I'll update this article as often as needed to make sure you have a digestible list of every new feature and enhancement embedded inside Laravel 10.
-
-Get your ninja suit and follow me!
+Let's dive into every relevant new feature we know will be available in Laravel 10. Get your ninja suit and follow me!
 
 ![Laravel's logo.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1663966984/benjamincrozat.com/laravel_umomrs.png)
 
@@ -19,6 +17,16 @@ Some people are barely adopting PHP 8.0. Meanwhile, Laravel 10 will drop support
 Remember: big enterprise apps don't need to be updated to the latest and greatest as soon as they're released. Enterprise apps have paid clients or employees depending on them to do their work. They need to slowly but surely move forward by doing extensive testing.
 
 See the pull request on GitHub: [[10.x] Drop PHP 8.0](https://github.com/laravel/laravel/pull/5854)
+
+## Dropped support for Predis v1
+
+If you're forcing the usage of Predis v1 in your project, you might want to upgrade to v2.
+
+To see what changed in Predis v2, take a look at the [changelog](https://github.com/predis/predis/blob/main/CHANGELOG.md#v200-2022-06-08).
+
+See the pull request on GitHub: [[10.x] Drop Predis v1 support](https://github.com/laravel/framework/pull/44209)
+
+In my opinion, instead of using Predis, you should consider using [PHP's native Redis extension](https://github.com/phpredis/phpredis), which is faster and could speed up your website if you have a lot of traffic.
 
 ## dispatchNow() has been removed
 
