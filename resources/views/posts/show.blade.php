@@ -17,10 +17,6 @@
 
             <x-metadata :published-at="$post->getPublishedAtDate()" :modified-at="$post->getModifiedAtDate()" :read-time="$post->getReadTime()" class="mt-4" />
 
-            <p class="font-normal font-serif mt-8 text-blue-400 text-xl">
-                {{ $post->description }}
-            </p>
-
             @if (! empty($tableOfContents = $post->getTableOfContents()))
                 <nav class="mt-8" x-data="{ open: false }">
                     <h4 class="font-bold">Table of contents</h4>
