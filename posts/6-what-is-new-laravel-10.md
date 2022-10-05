@@ -4,7 +4,7 @@ Published At: 2022-09-15
 Modified At: 2022-10-05
 ---
 
-# What's new in Laravel 10? A relevant list of everything.
+# What's new in Laravel 10? A relevant list.
 
 Let's dive into every relevant new feature we know will be available in Laravel 10.
 
