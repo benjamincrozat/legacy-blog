@@ -1,5 +1,5 @@
 ---
-Description: Take a look at all the one-line of code built-in ways to print arrays in PHP.
+Description: Debugging requires dissecting everything. Here's a list of all the one-line of code built-in ways to print arrays in PHP.
 Published At: 2022-10-07
 Modified At:
 ---
