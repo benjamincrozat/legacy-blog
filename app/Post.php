@@ -47,7 +47,11 @@ class Post implements Feedable
 
     public static function all() : Collection
     {
-        return collect(glob(base_path('posts/*.md')))->sort()->map(function (string $file) {
+        $files = glob(base_path('posts/*.md'));
+
+        natsort($files);
+
+        return collect($files)->map(function (string $file) {
             return self::getFromFile($file);
         })->filter(
             fn ($p) => $p->getPublishedAtDate()?->isPast()
