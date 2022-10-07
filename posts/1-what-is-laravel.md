@@ -107,56 +107,56 @@ Laravel offers many features. I'll do my best to list them here:
 
 But that's not it. Thanks to Composer and Laravel's modular package system, the community provides a huge amount of packages for you to use free of charge (find them on [Packagist](https://packagist.org)). Laravel also proposes official packages:
 
-- Laravel Breeze
-- Laravel Cashier (handles subscriptions by plugging into subscription billing services and payment providers)
-- Laravel Dusk
-- Laravel Envoy
-- Laravel Forge
-- Laravel Fortify
-- Laravel Homestead
-- Laravel Horizon
-- Laravel Jetstream
-- Laravel Mix
-- Laravel Nova (paid)
-- Laravel Octane (which can drastically improve the performance of a web application)
-- Laravel Passport
-- Laravel Pint
-- Laravel Sail
-- Laravel Sanctum
-- Laravel Scout
-- Laravel Socialite
-- Laravel Spark (paid)
-- Laravel Telescope
-- Laravel Valet (a macOS development environment for any Laravel project you might be working on)
-- Laravel Vapor
+- Breeze
+- Cashier (handles subscriptions by plugging into subscription billing services and payment providers)
+- Dusk
+- Envoy
+- Forge
+- Fortify
+- Homestead
+- Horizon
+- Jetstream
+- Mix
+- Nova (paid)
+- Octane (which can drastically improve the performance of a web application)
+- Passport
+- Pint
+- Sail
+- Sanctum
+- Scout
+- Socialite
+- Spark (paid)
+- Telescope
+- Valet (a PHP development environment for macOS)
+- Vapor
 
 Let me talk about some of those Laravel packages that I think are remarquable.
 
-### What is Laravel Cashier?
+### Cashier
 
 ![Laravel Cashier's logo.](https://images.surferseo.art/c93c7064-9a9f-491a-b6e0-f8888c0c0365.svg+xml)
 
 [Laravel Cashier](https://laravel.com/docs/billing) is an abstraction over Stripe's API (meaning that you don't have to deal with their RESTful API).
 
-### What is Laravel Horizon?
+### Horizon
 
 ![Laravel Horizon's logo.](https://images.surferseo.art/d1dc6aae-e00a-4876-87d3-38080755366e.svg+xml)
 
 [Laravel Horizon](https://laravel.com/docs/horizon) is a user interface that lets you easily manage jobs (background tasks that take time), see their status, and rerun them if needed.
 
-### What is Laravel Octane?
+### Octane
 
 ![Laravel Octane's logo.](https://images.surferseo.art/b5004eb3-ebb2-4538-8162-b5722070528e.svg+xml)
 
 [Laravel Octane](https://laravel.com/docs/octane) is a powerful tool that speeds up any website by keeping the bootstrapping process of Laravel in memory. Only your code will be run every time a visitor goes onto your website. If you have a very high-traffic website, your servers will thank you.
 
-### What is Laravel Sanctum?
+### Sanctum
 
 ![Laravel Sanctum's logo.](https://images.surferseo.art/2a320b57-442a-4d16-8a2a-5a7c5b4219c7.svg+xml)
 
 [Laravel Sanctum](https://laravel.com/docs/sanctum) is a very simple authentication system made for the needs SPAs (Single Page Applications), mobile applications, and token-based web APIs.
 
-### What is Laravel Scout?
+### Scout
 
 ![Laravel Scout's logo.](https://images.surferseo.art/d9283172-f3a4-47c1-8a2e-e6ba5b49f16b.svg+xml)
 
@@ -164,7 +164,7 @@ Let me talk about some of those Laravel packages that I think are remarquable.
 
 ## How much does Laravel cost?
 
-Laravel costs nothing. It is an open-source project that anybody can use to create any web application. Developers can even contribute to the code of Laravel itself. Here is [the official repository of Laravel on GitHub](https://laravel.com/laravel/laravel).
+**Laravel costs nothing.** It's an open-source project anybody can use to create web applications. Developers can even contribute to its source code. Here is the official [repository](https://laravel.com/laravel/laravel).
 
 ## Is Laravel easy to learn for beginners?
 
@@ -211,5 +211,3 @@ My main recommendation for hosting a Laravel application would be [DigitalOcean
 Even better: you can [get $100 of credit for 60 days](https://m.do.co/c/58bbdf89fc72) to try it!
 
 Once you get your hosting, I highly recommend using [Laravel Forge](https://forge.laravel.com), which plugs into DigitalOcean and sets up your server for you while also making it super optimized for running Laravel applications.
-
-Or, if you want automated scalability, you may want to try [Laravel Vapor](https://vapor.laravel.com), a serverless deployment platform for Laravel applications that uses Amazon Web Services.
