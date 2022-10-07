@@ -4,7 +4,7 @@ Published At: 2022-09-12
 Modified At: 2022-09-15
 ---
 
-# Make your life easier, use Laravel's migrations at all cost
+# How to use migrations in Laravel to make your life easier
 
 ## Why should you use migrations
 
