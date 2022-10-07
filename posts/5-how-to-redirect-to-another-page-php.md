@@ -69,9 +69,11 @@ In the next section, we'll see how to construct our HTTP message with PHP and wh
 
 ## Use PHP to redirect users
 
-Using PHP to add headers to the HTTP response that will be sent to the browser is straightforward. Here are the steps we need to take:
+Adding headers to the HTTP response that will be sent to the browser with PHP is a straightforward process.
+
+Here are the steps we need to take:
 1. Send the header;
-2. Stop code execution with the [`exit()`](https://www.php.net/exit) function (or your user will be redirected after the code has finished running);
+2. Stop code execution with the [`exit()`](https://www.php.net/exit) function (or your visitor will be redirected after the code has finished running);
 
 The function to add headers is pretty damn easy to remember: [`header()`](https://www.php.net/manual/en/function.header.php)
 
@@ -82,29 +84,46 @@ header('Location: https://example.com/some/page');
 
 exit;
 
-// This code will never be executed.
-do_something();
+// The following code will never be executed.
 
- // Text output should come after headers.
- // This code won't be executed either.
-echo 'Hello, World!';
+do_something();
 ```
 
-## What's the difference between 301 and 302 redirects?
-
-By default, adding a "Location" header will result in a 302 Moved Temporarily redirect. But most of the time, we need 301 Moved Permanently redirections (the most common use case is for SEO purposes). Since PHP 5.4, we can use the [`http_response_code()ˋ](https://www.php.net/manual/en/function.http-response-code.php) function:
+Be careful, echoing text before you send headers isn't advised!
 
 ```php
 <?php
 
-http_response_code(301);
+echo 'Hello, World!';
 
 header('Location: https://example.com/some/page');
 ```
 
-## Who or what benefits from a correct HTTP code?
+This will result in a warning:
 
-- Users consuming the web API you made. They need to know when something went right or wrong and the standard way to do it is with the correct HTTP codes (200 OK, 404 Not Found, 500 Server Error, etc.);
-- Google's bot trying to figure out what's happening on your website. For instance, when it sees a "301 Moved Permanently" HTTP code, it knows your page has been moved to a new location and needs to be updated in its index.
+```
+Warning: Cannot modify header information - headers already sent by
+```
 
-There are many other use cases I won't bother listing here, but trust me when I tell you it's crutial.
+## The difference between 301 and 302 redirects?
+
+- **The HTTP 301 code means the resource has been moved permanently**; Some of the most common use cases include:
+    - Redirect from HTTP to HTTPS;
+    - Redirect from www to non-www URLs;
+    - Redirect old URLs to new ones (we don't want people to stumble upon dead links). This is useful when migrating to a new domain;
+- **The HTTP 302 code means the resource has been moved temporarly**. The most common uses cases are for SEO (I couldn't find anything else):
+    - You have a promotion for a product and you want to redirect your visitors to it for a limited time, while preserving the ranking of your page on search engines results pages (or SERPs, for SEO nerds out there);
+    - A product is sold out, we need to redirect users to a new one for a limited time;
+    - A/B testing. You want to redirect some visitors to a another page, still without affecting your ranking.
+
+When using `header()` with the "Location" header in PHP, a 302 Moved Temporarily redirection will be performed.
+
+But as you saw, we mostly need 301 Moved Permanently redirects.
+
+Since PHP 5.4, we can use the [`http_response_code()ˋ](https://www.php.net/manual/en/function.http-response-code.php) function instead of constructing the entire HTTP message ourselves:
+
+```php
+http_response_code(301);
+
+header('Location: https://example.com/some/page');
+```
