@@ -132,6 +132,8 @@ But that's not it. Thanks to Composer and Laravel's modular package system, the 
 
 Let me talk about some of those Laravel packages that I think are remarquable.
 
+## Noteworthy official Laravel packages
+
 ### Cashier
 
 ![Laravel Cashier's logo.](https://images.surferseo.art/c93c7064-9a9f-491a-b6e0-f8888c0c0365.svg+xml)
