@@ -1,8 +1,4 @@
-<li>
-    <x-heroicon-o-chevron-right
-        class="-translate-y-[.5px] text-gray-400 w-4 h-4"
-    />
-</li>
+<li class="opacity-20">/</li>
 
 <li {{ $attributes->merge(['class' => 'truncate']) }}>
     @if ($attributes->get('href'))

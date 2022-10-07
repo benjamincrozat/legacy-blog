@@ -13,9 +13,18 @@
     <article class="mt-8">
         {{-- Post --}}
         <div class="container">
-            <h1 class="font-thin text-3xl md:text-5xl">{{ $post->title }}</h1>
+            {{-- Title --}}
+            <h1 class="font-thin text-3xl md:text-5xl">
+                {{ $post->title }}
+            </h1>
 
-            <x-metadata :published-at="$post->getPublishedAtDate()" :modified-at="$post->getModifiedAtDate()" :read-time="$post->getReadTime()" class="mt-4" />
+            {{-- Metadata --}}
+            <x-metadata
+                :published-at="$post->getPublishedAtDate()"
+                :modified-at="$post->getModifiedAtDate()"
+                :read-time="$post->getReadTime()"
+                class="mt-4"
+            />
 
             @if (! empty($tableOfContents = $post->getTableOfContents()))
                 <nav class="mt-8" x-data="{ open: false }">
@@ -48,6 +57,7 @@
                 </nav>
             @endif
 
+            {{-- Content --}}
             <div class="max-w-full mt-8 prose prose-a:border-b prose-a:border-blue-200 prose-a:text-blue-400 prose-a:no-underline">
                 {!! Illuminate\Support\Str::marxdown($post->content) !!}
             </div>
@@ -67,15 +77,15 @@
             </figure>
 
             <p class="bg-white font-normal font-serif mt-4 p-4 rounded-lg shadow-md shadow-black/5">
-                Hi! I'm Benjamin Crozat. I'm a freelance full-stack Laravel developer. <a href="mailto:benjamincrozat@me.com" class="border-b border-blue-200 text-blue-400">Contact me</a> if you need a consultant to help you with your project.
+                Benjamin Crozat is a freelance full-stack Laravel developer. <a href="mailto:benjamincrozat@me.com" class="border-b border-blue-200 text-blue-400">Contact him</a> if you need a consultant to help on your project.
             </p>
         </aside>
 
         {{-- Newsletter --}}
         <div class="bg-gray-100 mt-16">
-            <div class="container py-8 sm:py-16">
+            <aside class="container py-8 sm:py-16">
                 <x-newsletter class="scroll-mt-8 sm:scroll-mt-16" />
-            </div>
+            </aside>
         </div>
 
         {{-- Other posts to read --}}

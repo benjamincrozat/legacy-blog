@@ -6,8 +6,6 @@
 
         @if ($modifiedAt)
             updated on
-        @else
-            published on
         @endif
 
         <time datetime="{{ $modifiedAt?->toDateString() ?? $publishedAt->toDateString() }}" class="text-black">
