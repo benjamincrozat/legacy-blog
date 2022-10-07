@@ -6,6 +6,8 @@ Modified At:
 
 # Why "Using $this when not in object context" isn't allowed
 
+![Illustration for "Using $this when not in object context".](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1665150096/benjamincrozat.com/37d84224be98def713fda53db19b3c73b2787949_xzdh4n.png)
+
 **The *"Using $this when not in object context"* error occurs because you are calling a non-static method from a [static method](https://www.php.net/manual/en/language.oop5.static.php#language.oop5.static.methods).**
 
 To fix it, make your static method non-static and call it from an object.
