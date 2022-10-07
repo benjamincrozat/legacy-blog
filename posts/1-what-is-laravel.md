@@ -75,7 +75,7 @@ Laravel offers many features. I'll do my best to list them here:
 - Validation
 - Error handling
 - Logging
-- The Artisan command line utility
+- Artisan (a command line utility)
 - Broadcasting
 - Cache
 - Collections
@@ -90,7 +90,7 @@ Laravel offers many features. I'll do my best to list them here:
 - Package Development
 - Queues
 - Rate limiting
-- Task scheduling (allows you to run common tasks automatically at your preferred interval)
+- Task scheduling (to run common tasks automatically at your preferred interval)
 - User authentication
 - Authorization
 - Email verification
@@ -99,10 +99,10 @@ Laravel offers many features. I'll do my best to list them here:
 - Password reset
 - Database query builder
 - Pagination
-- Database migrations
+- Database migrations ([learn more](https://benjamincrozat.com/how-to-create-migration-laravel))
 - Database seeding
 - Redis
-- The Eloquent ORM
+- Eloquent (an ORM that abstracts SQL queries)
 - Testing
 
 But that's not it. Thanks to Composer and Laravel's modular package system, the community provides a huge amount of packages for you to use free of charge (find them on [Packagist](https://packagist.org)). Laravel also proposes official packages:
@@ -117,8 +117,8 @@ But that's not it. Thanks to Composer and Laravel's modular package system, the 
 - Horizon
 - Jetstream
 - Mix
-- Nova (paid)
-- Octane (which can drastically improve the performance of a web application)
+- Nova (a paid admin panel)
+- Octane (drastically improves the performance of a web application, by keeping the bootstraping process in-memory)
 - Passport
 - Pint
 - Sail
@@ -129,40 +129,6 @@ But that's not it. Thanks to Composer and Laravel's modular package system, the 
 - Telescope
 - Valet (a PHP development environment for macOS)
 - Vapor
-
-Let me talk about some of those Laravel packages that I think are remarquable.
-
-## Noteworthy official Laravel packages
-
-### Cashier
-
-![Laravel Cashier's logo.](https://images.surferseo.art/c93c7064-9a9f-491a-b6e0-f8888c0c0365.svg+xml)
-
-[Laravel Cashier](https://laravel.com/docs/billing) is an abstraction over Stripe's API (meaning that you don't have to deal with their RESTful API).
-
-### Horizon
-
-![Laravel Horizon's logo.](https://images.surferseo.art/d1dc6aae-e00a-4876-87d3-38080755366e.svg+xml)
-
-[Laravel Horizon](https://laravel.com/docs/horizon) is a user interface that lets you easily manage jobs (background tasks that take time), see their status, and rerun them if needed.
-
-### Octane
-
-![Laravel Octane's logo.](https://images.surferseo.art/b5004eb3-ebb2-4538-8162-b5722070528e.svg+xml)
-
-[Laravel Octane](https://laravel.com/docs/octane) is a powerful tool that speeds up any website by keeping the bootstrapping process of Laravel in memory. Only your code will be run every time a visitor goes onto your website. If you have a very high-traffic website, your servers will thank you.
-
-### Sanctum
-
-![Laravel Sanctum's logo.](https://images.surferseo.art/2a320b57-442a-4d16-8a2a-5a7c5b4219c7.svg+xml)
-
-[Laravel Sanctum](https://laravel.com/docs/sanctum) is a very simple authentication system made for the needs SPAs (Single Page Applications), mobile applications, and token-based web APIs.
-
-### Scout
-
-![Laravel Scout's logo.](https://images.surferseo.art/d9283172-f3a4-47c1-8a2e-e6ba5b49f16b.svg+xml)
-
-[Laravel Scout](https://laravel.com/docs/scout) handles searching models for you over database, Meilisearch, Algolia and other services.
 
 ## How much does Laravel cost?
 
