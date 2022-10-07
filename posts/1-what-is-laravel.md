@@ -201,15 +201,3 @@ I have bits of advice for you:
 - Start an actual project based on Laravel; this will also be a great source of learning;
 
 - But most importantly, **don't give up**. It doesn't matter how much time it takes. **Laravel is a good investment**.
-
-## What is the latest Laravel version?
-
-The latest Laravel version is version 9\. It was released on February 8th, 2022.
-
-## How to host a Laravel application?
-
-My main recommendation for hosting a Laravel application would be [DigitalOcean](https://m.do.co/c/58bbdf89fc72). I've been using it for years, as well as many developers, and it never failed me. Scale up your VPC (Virtual Private Server) whenever you need to handle more traffic, and scale it back down when your traffic goes back to normal.
-
-Even better: you can [get $100 of credit for 60 days](https://m.do.co/c/58bbdf89fc72) to try it!
-
-Once you get your hosting, I highly recommend using [Laravel Forge](https://forge.laravel.com), which plugs into DigitalOcean and sets up your server for you while also making it super optimized for running Laravel applications.
