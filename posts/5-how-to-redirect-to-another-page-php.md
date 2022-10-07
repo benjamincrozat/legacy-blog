@@ -107,7 +107,7 @@ Warning: Cannot modify header information - headers already sent by
 
 ## The difference between 301 and 302 redirects?
 
-- **The HTTP 301 code means the resource has been moved permanently**; Some of the most common use cases include:
+- **The HTTP 301 code means the resource has been moved permanently**; Some use cases include:
     - Redirect from HTTP to HTTPS;
     - Redirect from www to non-www URLs;
     - Redirect old URLs to new ones (we don't want people to stumble upon dead links). This is useful when migrating to a new domain;
