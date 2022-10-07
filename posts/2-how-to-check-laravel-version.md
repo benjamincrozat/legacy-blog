@@ -8,7 +8,9 @@ Modified At:
 
 As soon as you get a new Laravel project to work on, the first thing you should do is to check which version you are running. For instance, you may need to install a new package and you want to make sure it is compatible with your version of Laravel.
 
-## Check your Laravel version on Laravel 9 and later with the about command
+## Using Artisan, Laravel's command line tool
+
+### The about command
 
 The about command gives you the Laravel version you are running as well as a lot of other information about your project.
 
@@ -41,7 +43,7 @@ Queue ................................................................. sync
 Session .............................................................. redis
 ```
 
-## Check your Laravel version with the --version flag on Artisan
+### The --version flag
 
 Before Laravel blessed us with the `about` command, it was also possible to check your project's Laravel version like so:
 
