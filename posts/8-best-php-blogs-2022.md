@@ -26,7 +26,7 @@ Freek Van der Herten is a well known PHP developer in the Laravel community. He 
 
 ![Screenshot of Matthias Noback's blog.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1663615680/benjamincrozat.com/Screenshot_2022-09-19_at_21.27.05_v8zfxv.png)
 
-This one is a PHP blog I recently discovered. I don't know much about this developer and I think his articles are very interesting.
+I recently discovered Matthias Noback's blog. I don't know much about him, but his articles are interesting.
 
 ## [stitcher.io](https://stitcher.io)
 
