@@ -33,7 +33,7 @@
             Hosting by <a href="https://m.do.co/c/58bbdf89fc72" target="_blank" rel="nofollow noopener noreferrer" class="border-b border-gray-700 text-gray-300 hover:text-white transition-colors">DigitalOcean</a>, analytics by <a href="https://usefathom.com/ref/JTPOCN" target="_blank" rel="nofollow noopener noreferrer" class="border-b border-gray-700 text-gray-300 hover:text-white transition-colors">Fathom&nbsp;Analytics</a> and syntax highlighting by <a href="https://torchlight.dev" target="_blank" rel="nofollow noopener noreferrer" class="border-b border-gray-700 text-gray-300 hover:text-white transition-colors">Torchlight</a>.
         </p>
 
-        <p class="mt-8 text-center text-gray-600 text-xs">
+        <p class="mt-8 text-center text-gray-600 text-xs uppercase">
             © Benjamin Crozat {{ date('Y') }}. All&nbsp;rights&nbsp;reserved.
         </p>
     </footer>
