@@ -4,17 +4,17 @@ Published At: 2022-10-09
 Modified At:
 ---
 
-# 2 ways to check if an array is empty
+# 2 ways to check if an array is empty in PHP
 
-## How to check if an array is empty
+## How to check if an array is empty in PHP
 
-**To check if an array if empty, use the [empty()](https://www.php.net/empty) or [count()](https://www.php.net/count) functions.**
+**To check if an array is empty in PHP, use the [empty()](https://www.php.net/empty) or [count()](https://www.php.net/count) functions.**
 
 ## The empty() function
 
 The empty() function determines if a value is empty or not. It simply return `true` if it's empty, or `false` if it's not.
 
-This is my favorite way to check if an array is empty.
+This is my favorite way to check if an array is empty in PHP.
 
 ```php
 $foo = [];
@@ -41,7 +41,9 @@ echo count(['Foo', 'Bar', 'Baz']);
 
 ## The sizeof() function
 
-The sizeof() function is actually an alias of count(). There's nothing to add, [you already know how to use it](#the-count-function):
+The sizeof() function is actually an alias of count(). PHP actually has a lot of aliases for various functions.
+
+There's nothing to add, [you already know how to use it](#the-count-function):
 
 ```php
 // 3    
