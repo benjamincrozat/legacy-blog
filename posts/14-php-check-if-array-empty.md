@@ -8,7 +8,7 @@ Modified At:
 
 ## How to check if an array is empty
 
-**To check if an array if empty, use the empty() or count() functions.**
+**To check if an array if empty, use the [empty()](https://www.php.net/empty) or [count()](https://www.php.net/count) functions.**
 
 ## The empty() function
 
