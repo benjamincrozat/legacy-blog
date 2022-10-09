@@ -12,12 +12,24 @@ Modified At:
 
 ## The empty() function
 
+The empty() function determines if a value is empty or not. It simply return true if it's emoty, or false it's not.
+
+This is my favorite way to check if an array is empty.
+
 ```php
+$foo = [];
+
 // true
-var_dump(empty([]));
+if (empty($foo)) {
+    //
+}
+
+$bar = ['Foo', 'Bar', 'Baz'];
 
 // false
-var_dump(empty(['Foo', 'Bar', 'Baz']));
+if (empty($bar)) {
+    //
+}
 ```
 
 ## The count() function
