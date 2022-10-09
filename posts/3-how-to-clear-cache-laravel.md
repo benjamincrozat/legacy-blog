@@ -6,13 +6,17 @@ Modified At:
 
 # Clear every existing cache at once in Laravel
 
+## How to clear cache in Laravel?
+
 <span class="text-xl">**To clear every existing cache in Laravel, use the `php artisan optimize:clear` command.**</span>
 
 But if you want to understand what you're doing, we need to talk more deeply about all the kind of caches there are in Laravel.
 
-## Clear the general cache
+## Clear the application cache
 
-First, we all know the general cache in Laravel. This is where you can store all your expensive values (meaning that they take time to compute).
+First, we all know the application cache in Laravel. This is where you can store all your expensive values (meaning they take time to compute).
+
+Depending on your cache driver (defined in your *.env* file and named `CACHE_DRIVER`), Laravel will clear files on your disk or data in Redis or memcached.
 
 ```bash
 php artisan cache:clear
@@ -22,13 +26,15 @@ php artisan cache:clear
 
 Some config values are fetched from your environment file and it can be a bit slow. Luckily, Laravel can cache them to help us speed up our applications.
 
+When using the following command, Laravel will delete *bootstrap/cache/config.php*.
+
 ```bash
 php artisan config:clear
 ```
 
 ## Clear the events cache
 
-[Laravel's automatic event discovery](https://laravel.com/docs/9.x/events#event-discovery) is beneficial. You don't need to register listeners manually anymore thanks to this tiny change you can make in your EventServiceProvider.
+[Laravel's automatic event discovery](https://laravel.com/docs/9.x/events#event-discovery) is beneficial. You don't need to register listeners manually anymore thanks to this tiny change you can make in your EventServiceProvider. Once you're into production, you can cache every implicit listener.
 
 ```php
 …
@@ -44,7 +50,7 @@ class EventServiceProvider extends ServiceProvider
 }
 ```
 
-When going into production, you can cache auto-discovered events for maximum performance.
+When using the following command, Laravel will delete *bootstrap/cache/events.php*.
 
 ```bash
 php artisan event:clear
@@ -53,6 +59,8 @@ php artisan event:clear
 ## Clear the routes cache
 
 [Laravel's routes](https://laravel.com/docs/9.x/routing) are an essential part of your web application or API. Resolving a route can take time if you have a lot of them and as you guessed, caching helps for that.
+
+When using the following command, Laravel will delete *bootstrap/cache/routes-v7.php*.
 
 ```bash
 php artisan route:clear
@@ -74,7 +82,9 @@ php artisan schedule:clear-cache
 
 ## Clear the views cache
 
-Blade directives are compiled and cached even in your local environment. Sometimes though, compiled views can conflict with a recent change in your code. Again, you have a command for that:
+Blade directives are automatically compiled and cached as PHP files, even in your local environment. You can even use `php artisan view:cache` to make sure no visitor gets longer response times.
+
+When using the following command, Laravel will delete the content of *storage/views*.
 
 ```bash
 php artisan view:clear
