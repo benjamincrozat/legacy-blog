@@ -6,9 +6,15 @@ Modified At: 2022-10-05
 
 # Redirect users to another page in PHP, the right way
 
+## How to redirect users to another page in PHP
+
 **To redirect users to another page in PHP, use the [`header()`](https://www.php.net/manual/en/function.header.php) function.**
 
-But if you want to understand what you're doing, we need to learn about HTTP first.
+```php
+header('Location: https://example.com/path/to/page');
+```
+
+However, if you want to understand what you're doing, we need to learn about HTTP first.
 
 ## Basics first: what is HTTP?
 
