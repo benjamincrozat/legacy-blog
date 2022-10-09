@@ -12,7 +12,7 @@ Modified At:
 
 ## The empty() function
 
-The empty() function determines if a value is empty or not. It simply return `true` if it's empty, or `false` if it's not.
+The empty() function determines if a value is empty or not. It simply returns `true` if it's empty, or `false` if it's not.
 
 This is my favorite way to check if an array is empty in PHP.
 
