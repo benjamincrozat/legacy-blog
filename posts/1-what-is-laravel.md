@@ -167,7 +167,5 @@ Also, do you prefer text content or videos? There are so many variables that it'
 I have bits of advice for you:
 
 - Contribute to open-source projects. It's one of the most efficient ways to learn. You will also learn how to work with other developers on the same codebase;
-
 - Start an actual project based on Laravel; this will also be a great source of learning;
-
 - But most importantly, **don't give up**. It doesn't matter how much time it takes. **Laravel is a good investment**.
