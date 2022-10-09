@@ -34,9 +34,29 @@ if (empty($bar)) {
 
 ## The count() function
 
+The `count()` function counts the number of entries in an array and returns it as an integer.
+
+You can even use it with [Countable](https://www.php.net/manual/en/class.countable.php) objects.
+
 ```php
 // 3    
 echo count(['Foo', 'Bar', 'Baz']);
+```
+
+For multidimensional arrays, there's a second parameter for which you can use the `COUNT_RECURSIVE` constant to recursively count the numbers of items.
+
+```php
+$array = [
+    'Foo' => [
+        'Bar' => ['Baz'],
+    ],
+];
+
+// 3
+echo count($array, COUNT_RECURSIVE);
+
+// 1
+echo count($array);
 ```
 
 ## The sizeof() function
