@@ -36,7 +36,7 @@ See the pull request on GitHub: [[10.x] Remove deprecated dispatchNow functional
 
 ## Many deprecated methods and properties have been removed
 
-Releasing a major version also means the Laravel team can finally remove what's been deprecated in Laravel 9. It also means you should carefully test any Laravel application you might want to migrate to version 10.
+Releasing a major version also means the Laravel team can finally remove features that have been deprecated in Laravel 9. It also means you should carefully test any Laravel application you might want to migrate to version 10.
 
 Here's a list of all PRs taking care of that:
 - [[10.x] Remove deprecated Route::home method](https://github.com/laravel/framework/pull/42614)
