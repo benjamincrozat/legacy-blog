@@ -86,4 +86,4 @@ That said, **the old way of writing custom validation rules will still work**.
 
 See the pull request on GitHub: [[10.x] Make invokable rules default](https://github.com/laravel/docs/pull/8165)
 
-**There's more to come until February 2023. If you're feeling awesome, [follow me on Twitter](https://twitter.com/benjamincrozat) and [subscribe to my newsletter](#newsletter)!**
+**These is what's new in Laravel. There's more to come until February 2023, though. If you're feeling awesome, [follow me on Twitter](https://twitter.com/benjamincrozat) and [subscribe to my newsletter](#newsletter)!**
