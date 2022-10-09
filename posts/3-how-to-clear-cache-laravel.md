@@ -4,13 +4,13 @@ Published At: 2022-09-10
 Modified At:
 ---
 
-# 6 kind of caches in Laravel & how to clear them for debugging
+# Clear every existing cache at once in Laravel
 
-**To clear Laravel's cache, use the `php artisan optimize:clear` command.**
+<span class="text-xl">**To clear the cache, use the `php artisan optimize:clear` command.**</span>
 
-But if you want to understand what you're doing, we need to talk more deeply about all the kind of caches there are in Laravel. Why they exist, and how to clear them individually. Because when problems happen, cache may get in the way of your debugging process.
+But if you want to understand what you're doing, we need to talk more deeply about all the kind of caches there are in Laravel.
 
-## Clear Laravel's general cache
+## Clear the general cache
 
 First, we all know the general cache in Laravel. This is where you can store all your expensive values (meaning that they take time to compute).
 
@@ -18,7 +18,7 @@ First, we all know the general cache in Laravel. This is where you can store all
 php artisan cache:clear
 ```
 
-## Clear Laravel's config cache
+## Clear the config cache
 
 Some config values are fetched from your environment file and it can be a bit slow. Luckily, Laravel can cache them to help us speed up our applications.
 
@@ -26,7 +26,7 @@ Some config values are fetched from your environment file and it can be a bit sl
 php artisan config:clear
 ```
 
-## Clear Laravel's events cache
+## Clear the events cache
 
 [Laravel's automatic event discovery](https://laravel.com/docs/9.x/events#event-discovery) is beneficial. You don't need to register listeners manually anymore thanks to this tiny change you can make in your EventServiceProvider.
 
@@ -50,7 +50,7 @@ When going into production, you can cache auto-discovered events for maximum per
 php artisan event:clear
 ```
 
-## Clear Laravel's routes cache
+## Clear the routes cache
 
 [Laravel's routes](https://laravel.com/docs/9.x/routing) are an essential part of your web application or API. Resolving a route can take time if you have a lot of them and as you guessed, caching helps for that.
 
@@ -58,7 +58,7 @@ php artisan event:clear
 php artisan route:clear
 ```
 
-## Clear Laravel's scheduled tasks cache
+## Clear the scheduled tasks cache
 
 Let's say you have a recurring task that takes so much time to complete it will overlap with its next occurrence. You can prevent it until the previous one has finished:
 
@@ -72,7 +72,7 @@ Behind the scenes, Laravel uses the application's cache to remember which task h
 php artisan schedule:clear-cache
 ```
 
-## Clear Laravel's views cache
+## Clear the views cache
 
 Blade directives are compiled and cached even in your local environment. Sometimes though, compiled views can conflict with a recent change in your code. Again, you have a command for that:
 
@@ -80,9 +80,9 @@ Blade directives are compiled and cached even in your local environment. Sometim
 php artisan view:clear
 ```
 
-## Clear every Laravel cache
+## Clear every cache at once
 
-Finally, let's see the ultimate cache-busting command.
+Finally, let's see the ultimate cache-busting command I talked about at the beginning of this article.
 
 ```bash
 php artisan optimize:clear
