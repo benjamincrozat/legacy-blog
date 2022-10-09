@@ -16,7 +16,7 @@ But if you want to understand what you're doing, we need to talk more deeply abo
 
 First, we all know the application cache in Laravel. This is where you can store all your expensive values (meaning they take time to compute).
 
-Depending on your cache driver (defined in your *.env* file and named `CACHE_DRIVER`), Laravel will clear files on your disk or data in Redis or memcached.
+Depending on your cache driver (defined in your *.env* file and named `CACHE_DRIVER`), Laravel will clear files on disk or data in Redis or memcached.
 
 ```bash
 php artisan cache:clear
@@ -34,7 +34,7 @@ php artisan config:clear
 
 ## Clear the events cache
 
-[Laravel's automatic event discovery](https://laravel.com/docs/9.x/events#event-discovery) is beneficial. You don't need to register listeners manually anymore thanks to this tiny change you can make in your EventServiceProvider. Once you're into production, you can cache every implicit listener.
+[Laravel's automatic event discovery](https://laravel.com/docs/9.x/events#event-discovery) is beneficial. You don't need to register listeners manually anymore thanks to this tiny change you can make in your EventServiceProvider. Once you're into production, you can cache every implicit listener with `php artisan event:cache`.
 
 ```php
 …
@@ -82,7 +82,7 @@ php artisan schedule:clear-cache
 
 ## Clear the views cache
 
-Blade directives are automatically compiled and cached as PHP files, even in your local environment. You can even use `php artisan view:cache` to make sure no visitor gets longer response times.
+Blade directives are automatically compiled and cached as PHP files, even in your local environment. In production, you can use `php artisan view:cache` to make sure no visitor gets longer response times.
 
 When using the following command, Laravel will delete the content of *storage/views*.
 
