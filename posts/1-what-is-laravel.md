@@ -138,6 +138,10 @@ But that's not it. Thanks to Composer and Laravel's modular package system, the 
 
 As long as you already have experience in web development, especially with PHP (PHP is an object-oriented scripting language) you shouldn't have much trouble learning Laravel.
 
+## Can I learn Laravel without PHP?
+
+Laravel is built with PHP. You have to know PHP to use Laravel. This is the way.
+
 ## How to learn Laravel?
 
 The Laravel community is highly active and releases plenty of free and paid Laravel tutorials.
