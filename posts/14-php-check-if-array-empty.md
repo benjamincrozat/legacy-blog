@@ -41,7 +41,7 @@ echo count(['Foo', 'Bar', 'Baz']);
 
 ## The sizeof() function
 
-The sizeof() function is actually an alias of count(). [PHP actually has a lot of aliases for various functions](https://www.php.net/manual/en/aliases.php).
+The sizeof() function is an alias of count(). [PHP actually has a lot of aliases for various functions](https://www.php.net/manual/en/aliases.php).
 
 There's nothing to add, [you already know how to use it](#the-count-function):
 
