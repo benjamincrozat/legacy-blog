@@ -41,7 +41,7 @@
 
                 <figcaption>
                     Post written by
-                    <a href="https://twitter.com/benjamincrozat" target="_blank" rel="noopener noreferrer" class="font-bold text-black" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">
+                    <a href="https://twitter.com/benjamincrozat" target="_blank" rel="noopener noreferrer" class="font-normal text-black" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">
                         Benjamin Crozat
                     </a>
                 </figcaption>
