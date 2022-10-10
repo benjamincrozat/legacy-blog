@@ -1,6 +1,6 @@
 ---
 Description: PHP 8.2 will be released in November and you might want to be up to date will all the new features and breaking changes introduced.
-Published At: 2022-10-10
+Published At:
 Modified At:
 ---
 
