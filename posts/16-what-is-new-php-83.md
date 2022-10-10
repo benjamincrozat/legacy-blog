@@ -16,13 +16,15 @@ If this is a bit too early for you, I also wrote about [what's new in PHP 8.2](h
 
 ## json_validate()
 
-```php
-$json = <<<JSON
-{
-    "foo": "bar"
-}
-JSON;
+Instead of using `json_decode()` to validate a JSON string, you can now use `json_validate()`. According to its [RFC](https://wiki.php.net/rfc/json_validate), it also consumes less resources.
 
-// true
-json_validate($json);
+```php
+json_validate('{ "foo": "bar", }');
+
+// Syntax error
+echo json_last_error_msg();
 ```
+
+As you can see, `json_validate()` returns a `boolean` and you can fetch the error message with `json_last_error()` or `json_last_error_msg()` for more details.
+
+Read more about `json_validate()`: [PHP RFC: json_validate](https://wiki.php.net/rfc/json_validate)
