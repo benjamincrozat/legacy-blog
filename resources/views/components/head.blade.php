@@ -1,5 +1,5 @@
 <header class="container flex items-center justify-between">
-    <a href="{{ route('home') }}" {{ $attributes->merge(['class' => 'translate-y-px text-sm sm:text-base tracking-widest uppercase']) }}>
+    <a href="{{ route('home') }}" {{ $attributes->merge(['class' => 'font-normal translate-y-px text-sm sm:text-base tracking-widest uppercase']) }}>
         Benjamin Crozat
     </a>
 
