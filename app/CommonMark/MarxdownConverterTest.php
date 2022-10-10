@@ -26,7 +26,7 @@ class MarxdownConverterTest extends TestCase
     public function test_it_does_not_add_any_attribute_to_internal_links() : void
     {
         $this->assertStringContainsString(
-            'href="' . url('/') . '"',
+            'href="' . url('/') . '">',
             Str::marxdown('[Larabiz](' . url('/') . ')')
         );
 

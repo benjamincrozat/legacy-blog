@@ -4,7 +4,7 @@
     <x-head />
 
     @if ($posts->isNotEmpty())
-        <ul class="container grid gap-12 py-16">
+        <ul class="container grid gap-12 py-12 sm:py-16">
             @foreach ($posts as $post)
                 <li><x-post :post="$post" /></li>
             @endforeach
