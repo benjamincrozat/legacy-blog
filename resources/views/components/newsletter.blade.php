@@ -1,6 +1,6 @@
 <aside {{ $attributes->merge([
     'id' => 'newsletter',
-    'class' => 'max-w-screen-sm text-center',
+    'class' => 'text-center',
 ]) }}>
     <h4 class="font-semibold text-lg sm:text-xl">
         Let me share with you what I&nbsp;learn,&nbsp;<span class="border-b border-blue-200 font-semibold text-blue-400">for&nbsp;free</span>

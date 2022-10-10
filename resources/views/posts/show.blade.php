@@ -54,7 +54,7 @@
 
         {{-- Newsletter --}}
         <div class="bg-gray-100 mt-16">
-            <aside class="container py-8 sm:py-16">
+            <aside class="container max-w-screen-sm py-8 sm:py-16">
                 <x-newsletter class="scroll-mt-8 sm:scroll-mt-16" />
             </aside>
         </div>
