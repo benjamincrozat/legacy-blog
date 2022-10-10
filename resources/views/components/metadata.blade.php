@@ -2,7 +2,7 @@
     <img src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}" width="20" height="20" alt="Benjamin Crozat's avatar." class="-translate-y-[.5px] rounded-full" />
 
     <span>
-        <span class="text-black">Benjamin Crozat</span>,
+        <a href="mailto:benjamincrozat@me.com" class="text-black" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">Benjamin Crozat</a>,
 
         @if ($modifiedAt)
             updated on
