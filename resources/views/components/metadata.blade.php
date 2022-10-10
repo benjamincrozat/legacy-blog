@@ -1,7 +1,7 @@
-<p {{ $attributes->merge(['class' => 'flex items-center gap-2 text-sm']) }}>
+<div {{ $attributes->merge(['class' => 'flex items-center gap-2 text-sm']) }}>
     <img src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}" width="20" height="20" alt="Benjamin Crozat's avatar." class="-translate-y-[.5px] rounded-full" />
 
-    <span>
+    <p>
         <a href="mailto:benjamincrozat@me.com" class="text-black" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">Benjamin Crozat</a>,
 
         @if ($modifiedAt)
@@ -13,5 +13,5 @@
         </time>
 
         —&nbsp;@choice(':count&nbsp;minute&nbsp;read|:count&nbsp;minutes&nbsp;read', $readTime)
-    </span>
-</p>
+    </p>
+</div>
