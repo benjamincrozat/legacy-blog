@@ -90,10 +90,10 @@
             "@context": "https://schema.org",
             "@type": "NewsArticle",
             "headline": "{{ $post->title }}",
-            "datePublished": "{{ $post->getPublishedAtDate()->toIso8601String() }}",
+            "datePublished": "{{ $post->getPublishedAtDate()?->toIso8601String() }}",
 
             @if ($post->getModifiedAtDate())
-                "dateModified": "{{ $post->getModifiedAtDate()->toIso8601String() }}",
+                "dateModified": "{{ $post->getModifiedAtDate()?->toIso8601String() }}",
             @endif
 
             "author": [
