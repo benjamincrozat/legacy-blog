@@ -8,7 +8,7 @@ Modified At:
 
 ## How to clear cache in Laravel?
 
-<span class="text-xl">**To clear every existing cache in Laravel, use the `php artisan optimize:clear` command.**</span>
+**To clear every existing cache in Laravel, use the `php artisan optimize:clear` command.**
 
 But if you want to understand what you're doing, we need to talk more deeply about all the kind of caches there are in Laravel.
 
