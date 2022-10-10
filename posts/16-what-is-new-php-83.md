@@ -9,3 +9,16 @@ Modified At:
 ## When will PHP 8.3 be released?
 
 **PHP 8.3 will likely be released in November 2023.**
+
+## json_validate()
+
+```php
+$json = <<<JSON
+{
+    "foo": "bar"
+}
+JSON;
+
+// true
+json_validate($json);
+```
