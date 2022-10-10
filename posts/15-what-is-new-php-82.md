@@ -10,6 +10,8 @@ Modified At:
 
 **PHP 8.2 will be released on November 24, 2022.**
 
+By the way, if PHP 8.2 is no mystery to you, I wrote [an article for version 8.3](https://benjamincrozat.com/what-is-new-php-83) already!
+
 ## Deprecated partially supported callables
 
 ```
