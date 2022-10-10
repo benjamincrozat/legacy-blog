@@ -4,7 +4,7 @@ Published At: 2022-10-10
 Modified At:
 ---
 
-# What's new in PHP 8.3? Here's everything you need to know.
+# What's new in PHP 8.3? Take a sneak peek.
 
 ## When will PHP 8.3 be released?
 
