@@ -14,6 +14,8 @@ By the way, if PHP 8.2 is no mystery to you, I wrote [an article for version 8.3
 
 ## Deprecated partially supported callables
 
+Did you ever use [`call_user_func()`](https://www.php.net/manual/fr/function.call-user-func.php) with one of the syntax below?
+
 ```
 "self::method"
 "parent::method"
@@ -25,7 +27,15 @@ By the way, if PHP 8.2 is no mystery to you, I wrote [an article for version 8.3
 [new Foo, "Bar::method"]
 ```
 
+Well, these are deprecated in PHP 8.2 and will be removed in 9.0.
+
+Learn more: [PHP RFC: Deprecate partially supported callables](https://wiki.php.net/rfc/deprecate_partially_supported_callables)
+
 ## Deprecated dynamic properties
+
+Dynamic properties in PHP have always been a source of unintentional error.
+
+Rather than allowing a dynamic property to be created (at run time), the goal is that in PHP 9.0, an error will be triggered like in most programming languages. In the meantime, PHP 8.2 will cause a simple warning. (Note that stdClass still has the ability to create dynamic properties).
 
 ```php
 class Foo {}
@@ -35,6 +45,8 @@ $foo = new Foo;
 $foo->bar = 'baz';
 ```
 
+That being said, there are always people who have specific constraints that prevent them from adopting the latest and greatest. For them, there's the possibility to use an attribute allowing the creation of dynamic properties.
+
 ```php
 #[AllowDynamicProperties]
 class Foo {}
@@ -42,6 +54,8 @@ class Foo {}
 $foo = new Foo;
 $foo->bar = 'baz';
 ```
+
+Learn more: [PHP RFC: Deprecate dynamic properties](https://wiki.php.net/rfc/deprecate_dynamic_properties)
 
 ## System locale-independent case conversion
 
