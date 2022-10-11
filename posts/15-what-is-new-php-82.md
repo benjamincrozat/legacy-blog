@@ -1,6 +1,6 @@
 ---
 Description: PHP 8.2 will be released in November and you might want to be up to date will all the new features and breaking changes introduced.
-Published At: 2022-10-10
+Published At:
 Modified At:
 ---
 
@@ -61,7 +61,7 @@ Learn more: [PHP RFC: Deprecate dynamic properties](https://wiki.php.net/rfc/dep
 
 [`strtolower()`](https://www.php.net/strtolower) and [`strtoupper()`](https://www.php.net/strtoupper) as well as others are no longer sensitive to the language of your system, but rather to the locale you set using [`setlocale()`](https://www.php.net/setlocale). 
 
-Instead, use [`mb_strtolower()`](https://www.php.net/mb_strtolower), [`mb_strtoupper()`](https://www.php.net/mb_strtoupper) and so on if you need to handle multiple languages.
+Instead, use [`mb_strtolower()`](https://www.php.net/mb_strtolower), [`mb_strtoupper()`](https://www.php.net/mb_strtoupper) and so on if you need to handle multiple languages at the same time.
 
 Learn more: [PHP RFC: Locale-independent case conversion](https://wiki.php.net/rfc/strtolower-ascii)
 
@@ -107,6 +107,12 @@ That's it, Monty Burns is now safe from the authorities.
 Learn more: [PHP RFC: Redacting parameters in back traces](https://wiki.php.net/rfc/redact_parameters_in_back_traces)
 
 ## `null`, `true` and `false` as standalone types
+
+Type safety in PHP has been an important topic in recent years. When used correctly, it can lead to stricter, but more reliable and secure code.
+
+With PHP 8.2, we can now use null, true and false as full-fledged types.
+
+For the example, let's take the cases of true and false. When you declare the return type of a function with bool in your code, you can return true, false, 0 or 1. With PHP 8.2 you can be even stricter:
 
 ```php
 function foo() : true|false
