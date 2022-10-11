@@ -94,4 +94,4 @@ See the pull request on GitHub: [[10.x] Make invokable rules default](https://gi
 
 **There's more to come until February 2023, though.**
 
-**Don't miss any update on this post, [subscribe to my newsletter](#newsletter) and [follow me on Twitter](https://twitter.com/benjamincrozat)!**
+**Don't miss any update on this post. [Subscribe to my newsletter](#newsletter) and [follow me on Twitter](https://twitter.com/benjamincrozat)!**
