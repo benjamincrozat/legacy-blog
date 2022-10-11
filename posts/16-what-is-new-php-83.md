@@ -29,6 +29,8 @@ Read more about `json_validate()`: [PHP RFC: json_validate](https://wiki.php.net
 
 ---
 
-That's it for now.
+**That's it for now. 👍**
 
-<span class="text-xl">**But there's more to come in the coming months!**</span>
+**But there's more to come in the coming months!**
+
+**[Subscribe to my newsletter](#newsletter) and [follow me on Twitter](https://twitter.com/benjamincrozat) to make sure you don't miss anything!**
