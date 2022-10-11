@@ -52,11 +52,16 @@ $array = [
     ],
 ];
 
-// 3
-echo count($array, COUNT_RECURSIVE);
-
 // 1
-echo count($array);
+$count = count($array);
+
+// 3
+$count = count($array, COUNT_RECURSIVE);
+
+// If $count is greater than zero, then your array is not empty.
+if ($count > 0) {
+    //
+}
 ```
 
 ## The sizeof() function
