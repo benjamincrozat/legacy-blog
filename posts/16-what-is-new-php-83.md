@@ -26,3 +26,5 @@ echo json_last_error_msg();
 As you can see, `json_validate()` returns a `boolean` and you can fetch the error message with `json_last_error()` or `json_last_error_msg()` for more details.
 
 Read more about `json_validate()`: [PHP RFC: json_validate](https://wiki.php.net/rfc/json_validate)
+
+<span class="text-xl">**More to come between in the coming months!**</span>
