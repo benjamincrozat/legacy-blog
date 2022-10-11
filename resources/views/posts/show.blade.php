@@ -48,7 +48,7 @@
             </figure>
 
             <p class="bg-white font-normal font-serif mt-4 p-4 rounded-lg shadow-md shadow-black/5">
-                I'm a freelance full-stack Laravel developer from the south of France. <a href="mailto:benjamincrozat@me.com" class="border-b border-blue-200 text-blue-400">Contact me</a> if you need a consultant to help your team on any Laravel project.
+                I've been a passionate full-stack web developer for 10+ years. <a href="mailto:benjamincrozat@me.com" class="border-b border-blue-200 text-blue-400">Book me</a> if you need a consultant to help your team on any Laravel project.
             </p>
         </aside>
 
