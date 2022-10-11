@@ -27,4 +27,8 @@ As you can see, `json_validate()` returns a `boolean` and you can fetch the erro
 
 Read more about `json_validate()`: [PHP RFC: json_validate](https://wiki.php.net/rfc/json_validate)
 
-<span class="text-xl">**More to come between in the coming months!**</span>
+---
+
+That's it for now.
+
+<span class="text-xl">**But there's more to come in the coming months!**</span>
