@@ -24,7 +24,7 @@ Christoph Rumpel is an active member of the Laravel community. If you're a Larav
 
 ## [freek.dev](https://freek.dev)
 
-<a href="https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1663614120/benjamincrozat.com target="_blank" rel="nofollow noopener noreferrer"/Screenshot_2022-09-19_at_21.00.55_nvjgqr.png">
+<a href="https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1663614120/benjamincrozat.com/Screenshot_2022-09-19_at_21.00.55_nvjgqr.png" target="_blank" rel="nofollow noopener noreferrer"">
     <img src="" alt="Screenshot of freek.dev." />
 </a>
 
