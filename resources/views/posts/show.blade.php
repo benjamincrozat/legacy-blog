@@ -47,9 +47,15 @@
                 </figcaption>
             </figure>
 
-            <p class="bg-white font-normal font-serif mt-4 p-4 rounded-lg shadow-md shadow-black/5">
-                I've been a passionate full-stack web developer for 10+ years. <a href="mailto:benjamincrozat@me.com" class="border-b border-blue-200 text-blue-400">Book me</a> if you need a consultant to help your team on any Laravel project.
-            </p>
+            <div class="bg-white font-normal font-serif mt-4 p-4 rounded-lg shadow-md shadow-black/5">
+                <p>
+                    I've been a passionate full-stack web developer for 10+ years.
+                </p>
+
+                <p>
+                    <a href="mailto:benjamincrozat@me.com" class="border-b border-blue-200 text-blue-400">Book me</a> if you need a consultant to help your team on any Laravel project.
+                </p>
+            </div>
         </aside>
 
         {{-- Newsletter --}}
