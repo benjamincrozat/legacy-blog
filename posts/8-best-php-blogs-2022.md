@@ -22,10 +22,10 @@ Therefore, I present you a bunch of awesome PHP blogs from community members pub
 
 Christoph Rumpel is an active member of the Laravel community. If you're a Laravel user, you might want to check out all the useful tips he shares on his blog. Recently he was one of the [Laracon Online's pre-party](https://www.youtube.com/watch?v=3Bzb5fsn4Jo).
 
-## [freek.dev](https://freek.dev)
+## [freek.dev]()
 
-<a href="https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1663614120/benjamincrozat.com/Screenshot_2022-09-19_at_21.00.55_nvjgqr.png" target="_blank" rel="nofollow noopener noreferrer"">
-    <img src="" alt="Screenshot of freek.dev." />
+<a href="https://freek.dev" target="_blank" rel="nofollow noopener noreferrer"">
+    <img src="https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1663614120/benjamincrozat.com/Screenshot_2022-09-19_at_21.00.55_nvjgqr.png" alt="Screenshot of freek.dev." />
 </a>
 
 Freek Van der Herten is a well known PHP developer in the Laravel community. He is one of [Spatie](https://spatie.be)'s co-founders, which authored a massive amount of Laravel packages to help developers get shit done quicker.
