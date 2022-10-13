@@ -4,7 +4,7 @@ Published At: 2022-10-07
 Modified At:
 ---
 
-# Learn all about the switch statement in PHP
+# The switch statement in PHP: learn all about it
 
 ## What is a switch statement in PHP?
 

@@ -1,23 +1,31 @@
 <x-app
     description="Have you ever had a question about PHP, Laravel or anything related to its ecosystem? This is the best blog to find your answer."
 >
-    <x-head />
+    <header class="container flex items-center justify-between">
+        <h1>
+            <a
+                href="{{ route('home') }}"
+                class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase"
+            >
+                Benjamin Crozat
+            </a>
+
+            <span class="block text-gray-500 text-xs tracking-widest uppercase">
+                Everything PHP & Laravel
+            </span>
+        </h1>
+
+        <x-nav />
+    </header>
 
     <section class="container mt-16">
-        <header class="text-center">
-            <h2 class="font-thin !leading-tight text-lg sm:text-xl md:text-2xl">
-                <span>Improve your <strong class="font-semibold">PHP</strong> and <strong class="font-semibold">Laravel</strong> skills in <strong class="font-semibold">2022</strong>.</span><br />
-                <span>
-                    <strong class="font-semibold">News</strong>,
-                    <strong class="font-semibold">tutorials</strong>,
-                    <strong class="font-semibold">tips</strong>
-                    and
-                    <strong class="font-semibold">tricks</strong>.
-                </span>
+        <header class="font-serif text-center">
+            <h2 class="font-light sm:font-normal md:font-light text-lg sm:text-xl md:text-2xl">
+                <span>Improve your <strong class="font-semibold">PHP</strong> & <strong class="font-semibold">Laravel</strong> skills in <strong class="font-semibold">2022</strong>
             </h2>
 
-            <h3 class="!leading-tight max-w-[480px] mt-4 mx-auto text-sm sm:text-base">
-                Some of the best PHP developers started their career thanks to the power of knowledge sharing of the Internet.
+            <h3 class="font-normal sm:font-light max-w-screen-sm mt-4 mx-auto text-sm sm:text-base">
+                The best PHP developers started their career thanks to the power of knowledge&nbsp;sharing&nbsp;of&nbsp;the&nbsp;Internet.
             </h3>
         </header>
 
