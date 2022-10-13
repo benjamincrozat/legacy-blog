@@ -2,9 +2,10 @@
     'id' => 'newsletter',
     'class' => 'text-center',
 ]) }}>
-    <h4 class="font-semibold text-lg sm:text-xl">
-        Let me share with you what I&nbsp;learn,&nbsp;<span class="border-b border-blue-200 font-semibold text-blue-400">for&nbsp;free</span>
-    </h4>
+    <h3 class="sm:text-lg md:text-xl">
+        <span class="font-semibold">Subscribe <span class="border-b border-blue-200 font-semibold text-blue-400">for free</span> to my newsletter.</span><br />
+        Receive regular updates about&nbsp;PHP&nbsp;and&nbsp;Laravel
+    </h3>
 
     <x-form method="POST" action="{{ route('subscribe') }}" class="flex gap-2 mt-8 relative">
         <input type="email" name="email" id="email" placeholder="homersimpson@example.com" required class="border-0 placeholder-gray-300 pl-6 pr-32 py-3 rounded-full w-full" x-ref="newsletter" />
