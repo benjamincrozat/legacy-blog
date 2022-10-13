@@ -1,22 +1,7 @@
 <x-app
     description="Have you ever had a question about PHP, Laravel or anything related to its ecosystem? This is the best blog to find your answer."
 >
-    <header class="container flex items-center justify-between">
-        <h1>
-            <a
-                href="{{ route('home') }}"
-                class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase"
-            >
-                Benjamin Crozat
-            </a>
-
-            <span class="block text-gray-500 text-xs tracking-widest uppercase">
-                Everything PHP & Laravel
-            </span>
-        </h1>
-
-        <x-nav />
-    </header>
+    <x-head />
 
     <section class="container mt-16">
         <header class="font-serif text-center">
@@ -24,9 +9,9 @@
                 <span>Improve your <strong class="font-semibold">PHP</strong> & <strong class="font-semibold">Laravel</strong> skills in <strong class="font-semibold">2022</strong>
             </h2>
 
-            <h3 class="font-normal sm:font-light max-w-screen-sm mt-4 mx-auto text-sm sm:text-base">
+            <p class="font-normal sm:font-light max-w-screen-sm mt-4 mx-auto text-sm sm:text-base">
                 The best PHP developers started their career thanks to the power of knowledge&nbsp;sharing&nbsp;of&nbsp;the&nbsp;Internet.
-            </h3>
+            </p>
         </header>
 
         @if ($posts->isNotEmpty())
