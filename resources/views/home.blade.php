@@ -5,7 +5,7 @@
 
     <section class="container mt-16">
         <header class="font-serif text-center">
-            <h2 class="font-light sm:font-normal md:font-light text-lg sm:text-xl md:text-2xl">
+            <h2 class="font-light sm:font-normal md:font-light text-lg sm:text-xl">
                 <span>Improve your <strong class="font-semibold">PHP</strong> & <strong class="font-semibold">Laravel</strong> skills in <strong class="font-semibold">2022</strong>
             </h2>
 

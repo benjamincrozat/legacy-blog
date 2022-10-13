@@ -1,5 +1,5 @@
 <nav {{ $attributes }}>
-    <ul class="flex items-center justify-center font-serif font-normal gap-4 xs:gap-6 sm:gap-8 text-sm sm:text-base">
+    <ul class="flex items-center justify-center font-serif font-normal gap-4 xs:gap-6 sm:gap-8 text-sm">
         <li>
             <a href="{{ route('home') }}" class="@if (Route::is('home')) text-blue-400 @endif">
                 <x-heroicon-o-home class="md:hidden w-5 h-5 translate-y-[-.5px]" />
