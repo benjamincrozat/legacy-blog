@@ -1,4 +1,4 @@
-<section {{ $attributes->merge(['class' => 'container sm:flex sm:items-center sm:gap-8 font-normal font-serif py-16']) }}>
+<section id="about" {{ $attributes->merge(['class' => 'container sm:flex sm:items-center sm:gap-8 font-normal font-serif py-16']) }}>
     <div class="flex-shrink-0 sm:order-2 text-center">
         <img
             src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256"
