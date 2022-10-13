@@ -4,12 +4,12 @@
     <x-head />
 
     <section class="container mt-16">
-        <header class="font-serif text-center">
-            <h2 class="font-light sm:font-normal md:font-light text-lg sm:text-xl">
-                <span>Improve your <strong class="font-semibold">PHP</strong> & <strong class="font-semibold">Laravel</strong> skills in <strong class="font-semibold">2022</strong>
+        <header class="text-center">
+            <h2 class="font-semibold font-serif sm:text-lg md:text-xl">
+                Improve your PHP & Laravel skills in 2022
             </h2>
 
-            <p class="font-normal sm:font-light max-w-screen-sm mt-4 mx-auto text-sm sm:text-base">
+            <p class="font-serif max-w-screen-sm mt-2 mx-auto text-sm sm:text-base">
                 The best PHP developers started their career thanks to the power of knowledge&nbsp;sharing&nbsp;of&nbsp;the&nbsp;Internet.
             </p>
         </header>
