@@ -1,43 +1,47 @@
 ---
 Description: Migrations are essential in any Laravel app using a database. I will tell you what they are, why you should use them and how you can generate them.
 Published At: 2022-09-12
-Modified At: 2022-09-15
+Modified At: 2022-10-18
 ---
 
 # How to make and use migrations in Laravel
 
-## Why should you use migrations
+## What are migrations in Laravel?
 
-Instead of changing the database manually, you should use Laravel's migrations. Migrations contain PHP code that shapes your database exactly how you want it. It means that it's added to your Git history each time you make a change.  
-Here are the benefits for your team and you:
-- Keep track of the database's schema;
+Migrations contain PHP code that shapes your database exactly how you want it.
+
+## What's the advantage of using migrations in Laravel?
+
+The advantages of using migrations in Laravel are:
+
+- Keep track of the database's schema over time thanks to your Git history;
 - Regenerate your local database to include any change that's been made;
-- Keep the production database synced as well.
+- Keep the production database synced as well;
+- Never use your MySQL client ever again.
 
-When used correctly, you should never have to open your MySQL client ever again.
+## When to use migrations?
 
-## When you should use migrations
+In case the previous point wasn’t clear enough, here’s when you should use migrations:
 
-In case the previous point wasn't clear enough, here's when you should use migrations:
 - Add a table;
 - Add a column;
 - Update a column;
 - Add an index;
 - Etc.
 
-You got it, create a migration for **EVERYTHING**.
+You got it, create a migration every time you need to make a change to your database.
 
-## How to create a migration
+## How to create migrations in Laravel ?
 
-Creating a database can be done with Artisan with the command below:
+Creating a migration can be done thanks to Artisan with the command below:
 
 ```bash
 php artisan make:migration CreatePostsTable
 ```
 
 1. Write the migration's name in camelCase;
-2. Artisan will convert it to snake_case (the file's name will be more readable);
-3. The date you created it will be added as a prefix.
+2. Artisan will convert it to snake_case (making the file's name  more readable);
+3. A timestamp will be added as a prefix.
 
 Here's an example:
 
@@ -48,6 +52,7 @@ INFO Created migration [2022_09_12_142156_create_posts_table].
 But there's more. Did you know you can pass multiple parameters?
 
 ```
+php artisan make:migration
 Options:
  --create[=CREATE] The table to be created
  --table[=TABLE] The table to migrate
@@ -76,7 +81,7 @@ php artisan make:migration Whatever --table=posts
 
 ### Create a migration with its model
 
-What I love with Artisan is to be able to create a model with its migration effortlessly. For that, we need to use another command, though.
+What I love with Artisan is the possibility to create a model with its migration effortlessly. For that, we need to use another command, though.
 
 ```bash
 php artisan make:model Post --migration
@@ -92,9 +97,7 @@ And if you look at the help, you will appreciate what Artisan can do for you eve
 
 ```bash
 php artisan make:model -h
-```
 
-```
 Description:
  Create a new Eloquent model class
 
@@ -121,6 +124,19 @@ Options:
  --pest Generate an accompanying Pest test for the Model
 ```
 
-## Where to go from there?
+## How to migrate your database?
 
-My goal was to convince you that using migrations is mandatory. Now, you can learn how to use them in details in [the official Laravel documentation](https://laravel.com/docs/migrations).
+To migrate your database, use the `php artisan migrate` command. 
+
+### Rollback migrations
+
+Rollback any change using the `php artisan migrate:rollback` command.
+
+Make sure to correctly use the `down()` method first.
+
+### Wipe out your database and migrate
+
+The `php artisan migrate:fresh` command will wipe out your database before migrating.
+
+This command won't work in production to prevent disasters. 😬
+
