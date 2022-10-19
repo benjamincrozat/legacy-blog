@@ -31,7 +31,7 @@ In case the previous point wasn’t clear enough, here’s when you should use m
 
 You got it, create a migration every time you need to make a change to your database.
 
-## How to create migrations in Laravel ?
+## How to create migrations in Laravel?
 
 Creating a migration can be done thanks to Artisan with the command below:
 
