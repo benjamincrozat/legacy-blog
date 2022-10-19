@@ -6,9 +6,9 @@ Modified At: 2022-10-05
 
 # What's new in Laravel 10? Here's all you need to know.
 
-**Laravel 10 release date is February 7, 2023.**
+First, let me remind you that **Laravel 10 release date is February 7, 2023**.
 
-Let's dive into every relevant new feature we know will be available.
+With this out of the way, let's dive into every relevant new feature we know will be available.
 
 ![Laravel's logo.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1663966984/benjamincrozat.com/laravel_umomrs.png)
 
@@ -84,13 +84,11 @@ class Uppercase implements InvokableRule
 
 The boilerplate code is considerably smaller and easier to understand. Thanks to Laravel 10, people will be less intimidated by the perspective of making custom validation rules.
 
-That said, **the old way of writing custom validation rules will still work**.
-
 See the pull request on GitHub: [[10.x] Make invokable rules default](https://github.com/laravel/docs/pull/8165)
 
 ---
 
-**This is what's new in Laravel for now.**
+**This is what's new in Laravel 10 for now.**
 
 **There's more to come until February 2023, though.**
 
