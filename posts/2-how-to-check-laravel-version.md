@@ -6,11 +6,11 @@ Modified At:
 
 # 4 easy ways to check which Laravel version you are running
 
-As soon as you get a new Laravel project to work on, the first thing you should do is to check which version you are running. For instance, you may need to install a new package and you want to make sure it is compatible with your version of Laravel.
+As soon as you get a new Laravel project to work on, the first thing you should do is to check which version you are running. 
 
-## Using Artisan, Laravel's command line tool
+For instance, you may need to install a new package and you want to make sure it is compatible with your version of Laravel.
 
-### The about command
+## Use the about command
 
 The about command gives you the Laravel version you are running as well as a lot of other information about your project.
 
@@ -43,7 +43,7 @@ Queue ................................................................. sync
 Session .............................................................. redis
 ```
 
-### The --version flag
+## Use the --version flag
 
 Before Laravel blessed us with the `about` command, it was also possible to check your project's Laravel version like so:
 
@@ -53,7 +53,7 @@ php artisan --version
 Laravel Framework 9.29.0
 ```
 
-## Check your Laravel version with the app() helper
+## Use the app() helper
 
 The [`app()`](https://laravel.com/docs/helpers#method-app) helper will give you access to many information, such as the Laravel version you are running. Try this simple code below:
 
@@ -62,7 +62,7 @@ The [`app()`](https://laravel.com/docs/helpers#method-app) helper will give you 
 app()->version();
 ```
 
-## Check your Laravel version in your composer.json and composer.lock files
+## Check inside the composer.json and composer.lock files
 
 In your *composer.json*, you will be able to get the minimum version of Laravel your project is locked on:
 
