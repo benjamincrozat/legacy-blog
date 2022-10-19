@@ -133,12 +133,16 @@ class Post implements Feedable
 
     public function getTableOfContents() : array
     {
-        preg_match_all('/(#{1,2}) (.*)/', $this->content, $headings);
+        preg_match_all('/(#{1,6}) (.*)/', $this->content, $headings);
 
         $tableOfContents = [];
 
         for ($i = 0; $i < count($headings[0]); ++$i) {
             $level = strlen($headings[1][$i]);
+
+            if ($level > 2) {
+                continue;
+            }
 
             $title = html_entity_decode(strip_tags(Str::marxdown($headings[2][$i])));
 
