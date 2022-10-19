@@ -124,7 +124,7 @@ Options:
  --pest Generate an accompanying Pest test for the Model
 ```
 
-## How to migrate your database?
+## How to migrate the database?
 
 To migrate your database, use the `php artisan migrate` command. 
 
