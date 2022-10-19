@@ -133,7 +133,7 @@ class Post implements Feedable
 
     public function getTableOfContents() : array
     {
-        preg_match_all('/(#{1,6}) (.*)/', $this->content, $headings);
+        preg_match_all('/(#{1,2}) (.*)/', $this->content, $headings);
 
         $tableOfContents = [];
 

@@ -8,7 +8,7 @@
             @endphp
 
             @foreach ($tableOfContents as $item)
-                <li class="flex items-center gap-3 text-blue-900/75" @if ($loop->index > $limit - 1) x-show="open" @endif style="margin-left: calc(1.5rem * {{ $item['level'] - 2 }})">
+                <li class="flex items-center gap-3 text-blue-900/75" @if ($loop->index > $limit - 1) x-show="open" @endif>
                     <span class="bg-blue-100/75 flex flex-shrink-0 items-center justify-center font-normal rounded-full text-xs w-6 h-6">{{ $loop->index + 1 }}</span>
 
                     <a href="#{{ $item['id'] }}">
