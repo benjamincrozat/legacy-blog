@@ -1,18 +1,16 @@
 ---
-Description: When in doubt, clear caches in Laravel. Knowing all the different types of caches will help you debug any problem you might have in your projects.
+Description: When in doubt, clear the cache. In this article, we’ll review all the manual ways to clear every cache Laravel uses.
 Published At: 2022-09-10
-Modified At:
+Modified At: 2022-09-19
 ---
 
-# Clear every existing cache at once in Laravel
+# Every Laravel Artisan cache commands explained
 
-![php artisan optimize:clear](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1665953813/benjamincrozat.com/Screenshot_2022-10-16_at_22.54.08_xmgzth.png)
+## How to manually clear the cache in Laravel?
 
-## How to clear cache in Laravel?
+**To manually clear the cache in Laravel, use the `php artisan optimize:clear` command.**
 
-**To clear every existing cache in Laravel, use the `php artisan optimize:clear` command.**
-
-If you want to dig deeper, we need to talk about all the kind of caches there are in Laravel.
+It might be overkill, though, because it clears every existing cache Laravel uses. Let's see how to do it in a more granular way.
 
 ## Clear the application cache
 
