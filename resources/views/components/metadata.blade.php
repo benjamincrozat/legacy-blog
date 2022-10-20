@@ -5,14 +5,20 @@
         <a href="mailto:benjamincrozat@me.com" class="font-normal text-black" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">Benjamin Crozat</a>
 
         —
+        
+        Published on
+        
+        <time datetime="{{ $publishedAt?->toDateString() }}" class="text-black">
+            {{ $publishedAt?->isoFormat('LL') }}
+        </time>
 
         @if ($modifiedAt)
-            updated on
+            and updated on
+            
+            <time datetime="{{ $modifiedAt?->toDateString() ?? $publishedAt?->toDateString() }}" class="text-black">
+                {{ $modifiedAt?->isoFormat('LL') ?? $publishedAt?->isoFormat('LL') }}
+            </time>
         @endif
-
-        <time datetime="{{ $modifiedAt?->toDateString() ?? $publishedAt?->toDateString() }}" class="text-black">
-            {{ $modifiedAt?->isoFormat('LL') ?? $publishedAt?->isoFormat('LL') }}
-        </time>
 
         —&nbsp;@choice(':count&nbsp;minute&nbsp;read|:count&nbsp;minutes&nbsp;read', $readTime)
     </p>
