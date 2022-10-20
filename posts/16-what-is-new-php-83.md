@@ -1,16 +1,14 @@
 ---
-Description: PHP 8.3 will be released in November 2023, and as usual, you need to be up to date with new features and breaking changes for easy transitions.
+Description: PHP 8.3 will be released in November 2023, and as usual, you need to be up to date with new features and breaking changes for easier transitions.
 Published At: 2022-10-10
 Modified At: 2022-10-19
 ---
 
 # What's new in PHP 8.3? Take a sneak peek.
 
-PHP is an open-source project. Knowing what's up for the next release only takes a minute of research. This page lists all the [accepted RFCs](https://wiki.php.net/rfc).
+According to the [preparation tasks list](https://wiki.php.net/todo/php83), **PHP 8.3 will be released on November 23, 2023**, after three alpha releases, three beta, and six release candidates. 
 
-## When will PHP 8.3 be released?
-
-According to the [official website](https://wiki.php.net/todo/php83), **PHP 8.3 will be released on November 23, 2023**, after three alpha releases, three beta, and six release candidates. 
+PHP is an open-source project. Knowing what's going on for the next version only takes a minute of research. For instance, [this page lists all the accepted RFCs for PHP 8.3](https://wiki.php.net/rfc).
 
 ## json_validate()
 
