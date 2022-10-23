@@ -1,10 +1,10 @@
 ---
 Description: There are multiple ways to check if an array is empty. Let me tell you about each of them and why and when you should use them.
 Published At: 2022-10-09
-Modified At:
+Modified At: 2022-10-23
 ---
 
-# 2 ways to check if an array is empty in PHP
+# 3 ways to check if an array is empty in PHP
 
 ## How to check if an array is empty in PHP
 
@@ -73,4 +73,16 @@ There's nothing to add, [you already know how to use it](#the-count-function):
 ```php
 // 3    
 echo sizeof(['Foo', 'Bar', 'Baz']);
+```
+
+## The not (`!`) operator
+
+This one is simple. You are probably used to the not (`!`) operator. I didn't know it could check for empty arrays, but here I am, after 16 years of PHP learning yet another basic thing.
+
+```php
+$foo = [];
+
+if (! $foo) {
+    echo '$foo is empty.';
+}
 ```
