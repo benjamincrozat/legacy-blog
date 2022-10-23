@@ -12,6 +12,14 @@ With this out of the way, let's dive into every relevant new feature we know wil
 
 ![Laravel's logo.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1663966984/benjamincrozat.com/laravel_umomrs.png)
 
+## How to install Laravel 10?
+
+Installing Laravel 10 is easy. The Laravel installer has a `--dev` flag, which installs the *master* branch from the [laravel/laravel](https://github.com/laravel/laravel) repository.
+
+```bash
+laravel new hello-world --dev
+```
+
 ## Dropped support for PHP 8.0
 
 Some people are barely adopting PHP 8.0. Meanwhile, Laravel 10 will drop support for PHP 8.0, and that's good.
