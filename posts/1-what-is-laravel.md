@@ -1,12 +1,16 @@
 ---
 Description: You heard about Laravel but don't know where to start? Don't worry, you found the best starting point for your journey.
 Published At: 2022-09-09
-Modified At:
+Modified At: 2022-10-23
 ---
 
-# What is Laravel? A complete and simplified explanation.
+# What's Laravel? A complete & simplified explanation for 2022.
 
-As a web developer, Laravel changed my life. It made me better at building web applications, taking complete control over them, and stepping up my freelance game to the point that I'm blogging about it. Here are all your answers about Laravel, without going too deep into technical details.
+As a web developer, Laravel changed my life.
+
+It made me better at building web applications, taking complete control over them, and stepping up my freelance game to the point that I'm blogging about it.
+
+Here are all the answers you were looking for about Laravel, without going too deep into technical details.
 
 ## What is Laravel?
 
