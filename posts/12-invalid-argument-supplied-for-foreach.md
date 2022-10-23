@@ -6,8 +6,6 @@ Modified At:
 
 # Quickly fix "Invalid argument supplied for foreach()" in PHP
 
-![Illustration of "Invalid argument supplied for foreach()".](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1665149763/benjamincrozat.com/warning-invalid-argument_uedqum.png)
-
 ## Why does the "Invalid argument supplied for foreach()" warning occurs?
 
 **The *"Invalid argument supplied for foreach()"* warning occurs when you pass something other than an array or an object to `foreach`.**
