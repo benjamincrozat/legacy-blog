@@ -21,7 +21,6 @@
             {{-- Metadata --}}
             <x-metadata
                 :published-at="$post->getPublishedAtDate()"
-                :modified-at="$post->getModifiedAtDate()"
                 :read-time="$post->getReadTime()"
                 class="mt-4"
             />
