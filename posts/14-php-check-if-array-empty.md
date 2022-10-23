@@ -4,7 +4,7 @@ Published At: 2022-10-09
 Modified At: 2022-10-23
 ---
 
-# 3 ways to check if an array is empty in PHP
+# 4 ways to check if an array is empty in PHP
 
 ## How to check if an array is empty in PHP
 
