@@ -6,13 +6,13 @@ Modified At:
 
 # The switch statement in PHP: learn all about it
 
-## What is a switch statement in PHP?
+## What is a `switch` statement in PHP?
 
 **The `switch` statement is similar to a `if` statement, but it is less repetitive and less prone to errors.**
 
 It should be used when you have to check a decent amounf of values. Let me explain.
 
-## Why use switch instead of if in PHP?
+## Why use `switch` instead of `if` in PHP?
 
 Sometimes, you may have to compare a variable or an expression to a significant amount of possible values. Doing it with an `if` statement can be repetitive and harder to read.
 
@@ -36,7 +36,7 @@ if ($language === 'English') {
 
 Let's now see how it looks with a `switch`.
 
-## How does the switch statement works in PHP?
+## How does the `switch` statement works in PHP?
 
 Apart from the `break` statement, `switch`'s syntax is less repetitive and easier to read.
 
@@ -63,5 +63,5 @@ switch ($language) {
 
 1. Each `case` is run in the order it's been declared;
 2. If the condition is met (in this example, `$language` equals "Français"), we run the code following the `case` statement;
-4. If the `break` statement isn't used, each case will be executed after a match. Don't forget to use it!
-3. The `default` case comes last and it has to be unique to avoid a fatal error.
+3. If the `break` statement isn't used, each case will be executed after a match. Don't forget to use it!
+4. The `default` case comes last and it has to be unique to avoid a fatal error.
