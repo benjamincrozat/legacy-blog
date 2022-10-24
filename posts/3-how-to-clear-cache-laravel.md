@@ -4,7 +4,7 @@ Published At: 2022-09-10
 Modified At: 2022-09-19
 ---
 
-# Every Laravel Artisan cache commands explained
+# 7 Laravel Artisan cache commands explained
 
 ## How to manually clear the cache in Laravel?
 
