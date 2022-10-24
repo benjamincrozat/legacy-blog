@@ -1,6 +1,7 @@
 <x-app
     :title="$post->title"
     :description="$post->description"
+    :image="$post->image"
 >
     <x-head />
 

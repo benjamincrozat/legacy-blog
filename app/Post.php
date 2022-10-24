@@ -24,6 +24,8 @@ class Post implements Feedable
 
     public readonly string $description;
 
+    public readonly string $image;
+
     public static function make(
         int $id,
         string $publishedAt,
@@ -32,6 +34,7 @@ class Post implements Feedable
         string $slug,
         string $content,
         string $description,
+        string $image,
     ) : self {
         $post = new Post;
         $post->id = $id;
@@ -41,6 +44,7 @@ class Post implements Feedable
         $post->slug = $slug;
         $post->content = $content;
         $post->description = $description;
+        $post->image = $image;
 
         return $post;
     }
@@ -88,6 +92,10 @@ class Post implements Feedable
 
         $description = $descriptionMatches[1] ?? '';
 
+        preg_match('/^Image: (\N+)$/ims', $contents, $imageMatches);
+
+        $image = $imageMatches[1] ?? '';
+
         preg_match('/^Published At: (\N+)$/ims', $contents, $publishedAtMatches);
 
         $publishedAt = $publishedAtMatches[1] ?? '';
@@ -110,6 +118,7 @@ class Post implements Feedable
             slug: $slug,
             content: $content,
             description: $description,
+            image: $image,
         );
     }
 
