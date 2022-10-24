@@ -33,30 +33,6 @@
             </div>
         </div>
 
-        {{-- Author --}}
-        <aside class="container mt-16">
-            <figure class="flex items-center gap-2">
-                <img src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}" width="24" height="24" alt="Benjamin Crozat's avatar." class="flex-shrink-0 rounded-full" />
-
-                <figcaption>
-                    Post written by
-                    <a href="https://twitter.com/benjamincrozat" target="_blank" rel="noopener noreferrer" class="font-normal text-black" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">
-                        Benjamin Crozat
-                    </a>
-                </figcaption>
-            </figure>
-
-            <div class="bg-white font-normal font-serif mt-4 p-4 rounded-lg shadow-md shadow-black/5">
-                <p>
-                    I've been a passionate full-stack web developer for 10+ years.
-                </p>
-
-                <p>
-                    <a href="mailto:benjamincrozat@me.com" class="border-b border-blue-200 text-blue-400">Book me</a> if you need a consultant to help your team on any Laravel project.
-                </p>
-            </div>
-        </aside>
-
         {{-- Newsletter --}}
         <div class="bg-gray-100 mt-16">
             <aside class="container max-w-screen-sm py-8 sm:py-16">
