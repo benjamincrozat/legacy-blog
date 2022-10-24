@@ -6,7 +6,7 @@ Modified At: 2022-10-23
 
 # Redirect users in PHP in 3 easy steps
 
-## Add the "Location" header
+## Add the "Location" header to the response
 
 The code below will add the "Location" header to the response sent to the your user's browser.
 
