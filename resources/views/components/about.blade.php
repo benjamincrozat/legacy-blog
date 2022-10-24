@@ -10,12 +10,16 @@
     </div>
 
     <div class="mt-6 sm:mt-0 sm:order-1">
-        <h1 class="text-center sm:text-left text-xl w-full">
+        <h1 class="font-semibold text-center sm:text-left text-xl">
             Welcome to my blog about PHP&nbsp;and&nbsp;Laravel!
         </h1>
 
-        <p class="mt-3">
-            I've been a passionate full-stack web developer for 10+ years. <a href="mailto:benjamincrozat@me.com" class="border-b border-blue-200 text-blue-400">Book me</a> if you need a consultant to help your team on any Laravel project.
+        <p class="mt-4">
+            I've been a passionate full-stack web developer for 10+ years.
+        </p>
+
+        <p class="mt-4">
+            <a href="mailto:benjamincrozat@me.com" class="border-b border-blue-200 text-blue-400">Book me</a> if you need a consultant to help your team on any Laravel project.
         </p>
 
         <p class="mt-4">
