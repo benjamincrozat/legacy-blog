@@ -8,10 +8,10 @@
             @endphp
 
             @foreach ($tableOfContents as $item)
-                <li class="flex items-center gap-3 text-blue-900/75" @if ($loop->index > $limit - 1) x-show="open" @endif>
-                    <span class="bg-blue-100/75 flex flex-shrink-0 items-center justify-center font-normal rounded-full text-xs w-6 h-6">{{ $loop->index + 1 }}</span>
+                <li class="text-blue-900/75" @if ($item['level'] > 1) style="margin-left: calc(1rem * {{ $item['level'] - 2 }})" @endif @if ($loop->index > $limit - 1) x-show="open" @endif>
+                    <a href="#{{ $item['id'] }}" class="flex items-center gap-2">
+                        <x-heroicon-o-hashtag class="-translate-y-[.5px] w-3 h-3 text-blue-900/40" />
 
-                    <a href="#{{ $item['id'] }}">
                         {{ $item['title'] }}
                     </a>
                 </li>

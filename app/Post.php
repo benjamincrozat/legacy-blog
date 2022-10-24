@@ -149,10 +149,6 @@ class Post implements Feedable
         for ($i = 0; $i < count($headings[0]); ++$i) {
             $level = strlen($headings[1][$i]);
 
-            if ($level > 2) {
-                continue;
-            }
-
             $title = html_entity_decode(strip_tags(Str::marxdown($headings[2][$i])));
 
             $tableOfContents[] = [
