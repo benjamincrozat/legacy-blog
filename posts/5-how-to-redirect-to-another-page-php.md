@@ -4,7 +4,7 @@ Published At: 2022-09-12
 Modified At: 2022-10-23
 ---
 
-# Redirect users to other pages in PHP
+# Redirect users in PHP in 3 easy steps
 
 **To redirect users to another page in PHP, use the [`header()`](https://www.php.net/manual/en/function.header.php) function.**
 
@@ -14,26 +14,11 @@ The code below will add the "Location" header to the response sent to the your u
 
 ```php
 header('Location: https://example.com/path/to/page');
-```tower
-
-
-## Stop code execution
-
-We can also stop code execution with the [`exit()`](https://www.php.net/exit) function.
-
-```php
-<?php
-
-header('Location: https://example.com/some/page');
-
-exit;
-
-// The following code will never be executed.
 ```
 
-## Don't output text before sending headers
+Easy, right? There's one thing to remember going forward, though.
 
-Be careful, outputing text before you send headers isn't advised!
+### Don't output text before sending headers
 
 ```php
 <?php
@@ -49,6 +34,22 @@ This will result in a warning:
 Warning: Cannot modify header information - headers already sent by
 ```
 
+## Stop code execution
+
+Most of the time, you will need to stop code execution with the [`exit()`](https://www.php.net/exit) function. Here's an example:
+
+```php
+<?php
+
+if (! empty($_POST['redirect'])) {
+    header('Location: https://example.com/some/page');
+
+    exit;
+}
+
+// The following code will never be executed thanks to exit().
+```
+
 ## Set the correct HTTP code
 
 The `header()` function can take a third parameter. Using PHP named arguments, we can set it to another HTTP code. For instance, when you add a `Location` header, the HTTP code will automatically be set to `302`. But what if we want to perform a 301 redirect instead?
@@ -59,7 +60,7 @@ header('Location: https://example.com/some/page', response_code: 301);
 
 In the next section, I will talk about the difference between HTTP codes `301` and `302`.
 
-## The difference between 301 and 302 redirects?
+### What's the difference between 301 and 302 redirects?
 
 **The HTTP `301` code means the resource has been moved permanently**; Some use cases include:
 - Redirect from HTTP to HTTPS;
