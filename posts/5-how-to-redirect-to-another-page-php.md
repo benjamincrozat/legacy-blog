@@ -1,10 +1,10 @@
 ---
-Description: Redirecting a user to another page in PHP takes one line of code. That's it.
+Description: Redirects in PHP are simple. I will guide you step by step and show you how to dodge some traps. Finally, we'll learn the nuance between 301 and 302 redirects.
 Published At: 2022-09-12
 Modified At: 2022-10-23
 ---
 
-# Redirect users in PHP in 3 easy steps
+# Redirect users with PHP in 3 easy steps
 
 ## Add the "Location" header to the response
 
