@@ -11,6 +11,8 @@
         </x-breadcrumb-item>
     </x-breadcrumb>
 
+    <div id="ezoic-pub-ad-placeholder-101"></div>
+
     <article class="mt-8">
         {{-- Post --}}
         <div class="container">
