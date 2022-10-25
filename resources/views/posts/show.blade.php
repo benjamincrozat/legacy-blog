@@ -28,12 +28,16 @@
                 class="mt-4"
             />
 
+            <div id="ezoic-pub-ad-placeholder-102"></div>
+
             <x-table-of-contents :post="$post" />
 
             {{-- Content --}}
             <div class="max-w-full mt-8 prose prose-a:border-b prose-a:border-blue-200 prose-a:text-blue-400 prose-a:no-underline">
                 {!! Illuminate\Support\Str::marxdown($post->content) !!}
             </div>
+
+            <div id="ezoic-pub-ad-placeholder-103"></div>
         </div>
 
         {{-- Newsletter --}}
