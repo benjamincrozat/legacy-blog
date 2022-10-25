@@ -1,14 +1,22 @@
 ---
 Description: When in doubt, clear the cache. In this article, we’ll review all the manual ways to clear every cache Laravel uses.
 Published At: 2022-09-10
-Modified At: 2022-09-19
+Modified At: 2022-09-25
 ---
 
-# 7 Laravel Artisan cache commands explained
+# 7 Laravel Artisan commands to clear the cache
 
-## How to manually clear the cache in Laravel?
+## How to manually clear every cache in Laravel?
 
-**To manually clear the cache in Laravel, use the `php artisan optimize:clear` command.**
+**To manually clear EVERY cache in Laravel, use the `php artisan optimize:clear` command.**
+
+This command will remove the following caches:
+- Config
+- Compiled classes cache
+- Events
+- General Cache
+- Routes
+- Views
 
 It might be overkill, though, because it clears every existing cache Laravel uses. Let's see how to do it in a more granular way.
 
@@ -88,47 +96,4 @@ When using the following command, Laravel will delete the content of *storage/vi
 
 ```bash
 php artisan view:clear
-```
-
-## Clear every cache at once
-
-Finally, let's see the ultimate cache-busting command I talked about at the beginning of this article.
-
-```bash
-php artisan optimize:clear
-```
-
-This command will remove the following caches:
-- Config
-- Compiled classes cache
-- Events
-- General Cache
-- Routes
-- Views
-
-How do I know that? Simple. I used the "Go To File" command in my code editor and searched for the "OptimizeClearCommand.php" file. Its source code is straightforward to understand, as you can see:
-
-```php
-…
-
-class OptimizeClearCommand extends Command
-{
-    …
-
-    public function handle()
-    {
-        $this->components->info('Clearing cached bootstrap files.');
-
-        collect([
-            'events' => fn () => $this->callSilent('event:clear') == 0,
-            'views' => fn () => $this->callSilent('view:clear') == 0,
-            'cache' => fn () => $this->callSilent('cache:clear') == 0,
-            'route' => fn () => $this->callSilent('route:clear') == 0,
-            'config' => fn () => $this->callSilent('config:clear') == 0,
-            'compiled' => fn () => $this->callSilent('clear-compiled') == 0,
-        ])->each(fn ($task, $description) => $this->components->task($description, $task));
-
-        $this->newLine();
-    }
-}
 ```
