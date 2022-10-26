@@ -8,7 +8,7 @@ Modified At:
 
 ## Why does the "Invalid argument supplied for foreach()" warning occurs?
 
-**The *"Invalid argument supplied for foreach()"* warning occurs when you pass something other than an array or an object to `foreach`.**
+**The *"Invalid argument supplied for foreach()"* warning occurs when you try to iterate over something other than an array or an object.**
 
 On PHP 8+, the warning has been rewritten to "foreach() argument must be of type array|object".
 

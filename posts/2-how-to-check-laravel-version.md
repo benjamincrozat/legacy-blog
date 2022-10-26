@@ -6,9 +6,9 @@ Modified At:
 
 # 4 easy ways to check which Laravel version you are running
 
-As soon as you get a new Laravel project to work on, the first thing you should do is to check which version you are running. 
+**To check which Laravel version you are using, the quickest way to do it is to use the `php artisan --version` command.**
 
-For instance, you may need to install a new package and you want to make sure it is compatible with your version of Laravel.
+But there are multiple other ways to do it. Let's review them.
 
 ## Use the about command
 
