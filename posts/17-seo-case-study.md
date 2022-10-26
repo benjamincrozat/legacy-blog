@@ -9,36 +9,44 @@ Modified At:
 
 ![Illustration of a rocket.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666719094/benjamincrozat.com/rocket_xv9mlh.png)
 
-Here's a case study example for benjamincrozat.com, which is a blog in the programming niche and also the very site you're on at this moment.
+Here's a case study example for my blog benjamincrozat.com. As you may have seen, it's a blog about programming with web technologies.
 
-Compared to my first month, **clicks on Google increased by 660%**.
+Since I started it in September 2022, **clicks on Google increased by 660%**.
 
 I'm doing web development for a living, not SEO. But I'm a fast learner and I like to learn by doing. In this article, you'll learn about everything I did to rank my blog as high as possible in as many keywords as possible.
 
 ![Screenshot of the growth.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666719321/benjamincrozat.com/Screenshot_2022-10-25_at_19.35.05_yn8slo.png)
 
+## I don't wait for Google to crawl my site
+
+The Google Search Console is an extremely valuable tool. You can get all sorts of valuable data about how your site is doing on the SERPs.
+
+But did you know you can actually "forge" Google to crawl your site as soon as you published new content?
+
+In the search field at the top of the console, just enter any new or updated URL, and Google will most of the time crawl it in a matter of hours. 
+
 ## My technical SEO is top-notch
 
 As a web developer, I have the luxury to not have to use WordPress or any other platform.
 
-This is a completely custom platform I made from A to Z. (Excluding open-source components I use like everyone else.)
+My blog lays on a a completely custom platform I coded from A to Z. (Excluding open-source components I use like everyone else.)
 
-Therefore, I can guarantee maximum scores on various benchmarks (Ahrefs, Lighthouse, etc.) since I know everything that's going on.
+Therefore, I can guarantee maximum scores on various benchmarks (Ahrefs, Lighthouse, etc.), because I know everything that's going on under the hood.
 
 ## I wrote a few articles and I update them constantly
 
-I'm not convinced you need to spam Google with dozens of new articles every month to rank in the beginning.
+I'm not convinced you need to spam Google with dozens of new articles every month to rank (in the beginning at least).
 
 For now, I have ~15 articles and that's perfectly fine.
 
-I update them regularly, based on what competitors are doing. I also structure them to be as snippets-friendly as possible.
+I update them regularly, based on what competitors are doing. I also structure them to be as snippets-friendly as possible, which can help you reach the first position in the SERPs more quickly.
 
 ## I built a few links
 
 Link building isn't most people's cup of tea. Myself included. But it needs to be done. I build links by:
 - Writing guest posts (for now, I only wrote one, which isn't enough);
 - Posting community links on various websites (used in newsletters for instance);
-- I also tried to post dofollow links on forums, but I now know **it doesn't work unless it's relevant to the conversation**. **You can be penalized for that**.
+- I also tried to post dofollow links on forums, but I now know **it doesn't work unless it's relevant to the conversation**. **You can be penalized for that**. Remove them if you can.
 
 I even naturally acquired some links from high authorities in the niche (on [Laravel.io](https://laravel.io), [Freek Van der Herten's blog](https://freek.dev) and [Larachat](https://larachat.co) for example).
 
