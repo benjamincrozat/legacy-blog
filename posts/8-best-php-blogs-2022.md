@@ -4,7 +4,7 @@ Published At: 2022-09-19
 Modified At:
 ---
 
-# The 5 Best PHP blogs to read in 2022
+# The 5 best PHP & Laravel blogs to read in 2022
 
 I think blogging is necessary. It helps the future generation of developers.
 
