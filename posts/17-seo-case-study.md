@@ -11,7 +11,7 @@ Modified At:
 
 Here's a case study example for my blog benjamincrozat.com. As you may have seen, it's a blog about programming with web technologies.
 
-Since I started it in September 2022, **clicks on Google increased by 660%**.
+Since I started it in September 2022, **clicks on Google increased by 710%**.
 
 I'm doing web development for a living, not SEO. But I'm a fast learner and I like to learn by doing. In this article, you'll learn about everything I did to rank my blog as high as possible in as many keywords as possible.
 
