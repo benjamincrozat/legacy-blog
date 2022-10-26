@@ -5,17 +5,17 @@ Published At: 2022-10-25
 Modified At:
 ---
 
-# 2022 SEO case study: programming niche (+710% increase)
+# 2022 SEO case study: programming niche (+750% increase)
 
 ![Illustration of a rocket.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666719094/benjamincrozat.com/rocket_xv9mlh.png)
 
 Here's a case study example for [benjamincrozat.com](https://benjamincrozat.com), my blog about programming with PHP and Laravel.
 
-Since I started it in September 2022, **clicks on Google increased by 710%**.
+Since I started in September 2022, **clicks on Google increased by 750%**.
 
 I'm doing web development for a living, not SEO. But I'm a fast learner and like to learn by doing. In this article, you'll also learn about everything I did to rank my blog as high as possible with many keywords.
 
-![Screenshot of the growth.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666719321/benjamincrozat.com/Screenshot_2022-10-25_at_19.35.05_yn8slo.png)
+![Screenshot of the growth.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666808172/benjamincrozat.com/Screenshot_2022-10-26_at_20.16.02_wavosu.png)
 
 ## Why should you care about SEO?
 
@@ -37,6 +37,8 @@ In the search field at the top of the console, enter any new or updated URL, and
 
 [This practice is well documented by Google](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl).
 
+![URL inspection in the Google Search Console.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666809540/benjamincrozat.com/Screenshot_2022-10-26_at_20.38.01_rbchgc.png)
+
 ### Your technical SEO should be good enough
 
 As a web developer, I have the luxury of not having to use WordPress or any other platform.
@@ -47,13 +49,25 @@ Therefore, I can guarantee maximum scores on various benchmarks (Ahrefs, Lightho
 
 If you're using something like WordPress, I recommend being careful when choosing themes and plugins, as most are low quality and can significantly impact your site's performance and, therefore, your rankings.
 
-Google cares about:
-- Performances;
+Stay calm, though. Google doesn't require perfection. It cares about:
+- Performances (your site should load under 2 seconds);
 - Mobile-friendly-ness;
 - HTTPS;
 - Good usability.
 
 Learn more about [page experience signals from Google](https://developers.google.com/search/docs/appearance/page-experience#signals).
+
+![Pagespeed Insights results for this article.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666809764/benjamincrozat.com/Screenshot_2022-10-26_at_20.42.36_hi0jgo.png)
+
+### You should do keyword research
+
+Keyword research is the process of finding words and phrases that people use when searching for information on the internet.
+
+By doing it, you can learn what people are looking for and how to make your website more visible to them.
+
+To do keyword research, you can use free means like Google's autocomplete suggestions, people also ask on the SERPs, etc. Google AdWords keyword planner also works. 👍
+
+Once you have a list of keywords, you can start writing blog posts around them. This will help your website show up more often in search results, and ultimately, get more traffic without lifting a finger.
 
 ### Write a bunch of articles and update them regularly
 
@@ -79,14 +93,14 @@ I even naturally acquired some links from high authorities in the niche (on [Lar
 
 ### October 2022 (month in progress)
 
-![Google Search Console report for October 2022.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666716303/benjamincrozat.com/Screenshot_2022-10-25_at_18.44.27_ome49t.png)
+![Google Search Console report for October 2022.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666807984/benjamincrozat.com/Screenshot_2022-10-26_at_20.12.45_ovn5oq.png)
 
 The numbers:
 
-- Clicks: **327 (+710%)**;
-- Impressions: **21.2K (+412%)**;
-- Average CTR: **1.5% (+166%)**;
-- Average position: **27 (+158%)**.
+- Clicks: **345 (+750%)**;
+- Impressions: **21.9K (+426%)**;
+- Average CTR: **1.6% (+177%)**;
+- Average position: **26.9 (+158%)**.
 
 What I did:
 
