@@ -17,7 +17,17 @@ I'm doing web development for a living, not SEO. But I'm a fast learner and I li
 
 ![Screenshot of the growth.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666719321/benjamincrozat.com/Screenshot_2022-10-25_at_19.35.05_yn8slo.png)
 
-## I don't wait for Google to crawl my site
+## Why should you care about SEO?
+
+For me, traffic is like money; it should be passive.
+
+I don't want to work my ass off for ephemeral spikes of traffic because I went viral on social media. 
+
+Therefore, I write blog posts based on what people are searching for and slowly but surely, traffic comes, grows and stays.
+
+## What to do to get more traffic from search engines
+
+### I don't wait for Google to crawl my site
 
 The [Google Search Console](https://search.google.com/search-console) is an extremely valuable tool. You can get all sorts of valuable data about how your site is doing in the SERPs (Search Engine Results Pages).
 
@@ -25,7 +35,7 @@ But did you know you can actually "force" Google to crawl your site as soon as y
 
 In the search field at the top of the console, enter any new or updated URL, and Google will (most of the time) crawl it and update its index in a matter of hours.
 
-## My technical SEO is top-notch
+### My technical SEO is top-notch
 
 As a web developer, I have the luxury to not have to use WordPress or any other platform.
 
@@ -35,7 +45,7 @@ Therefore, I can guarantee maximum scores on various benchmarks (Ahrefs, Lightho
 
 But if you're using something like WordPress, I would just recommend to be careful when choosing themes and plugins, as most of them are low quality and can significantly impact the performances of your site.
 
-## I wrote a few articles and I update them constantly
+### I wrote a few articles and I update them constantly
 
 I'm not convinced you need to spam Google with dozens of new articles every month to rank (in the beginning at least).
 
@@ -45,7 +55,7 @@ I update them regularly, based on what competitors are doing (competitors are si
 
 I also structure them to be as snippets-friendly as possible, which can help you rank first quicker.
 
-## I built a few links
+### I built a few links
 
 Link building isn't most people's cup of tea. Myself included. But it needs to be done.
 
