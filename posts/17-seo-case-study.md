@@ -19,7 +19,7 @@ I'm doing web development for a living, not SEO. But I'm a fast learner and I li
 
 ## I don't wait for Google to crawl my site
 
-The Google Search Console is an extremely valuable tool. You can get all sorts of valuable data about how your site is doing in search results.
+The [Google Search Console](https://search.google.com/search-console) is an extremely valuable tool. You can get all sorts of valuable data about how your site is doing in the SERPs (Search Engine Results Pages).
 
 But did you know you can actually "force" Google to crawl your site as soon as you published new content?
 
@@ -29,41 +29,40 @@ In the search field at the top of the console, enter any new or updated URL, and
 
 As a web developer, I have the luxury to not have to use WordPress or any other platform.
 
-My blog lays on a a completely custom platform I coded from A to Z. (Excluding open-source components I use like everyone else.)
+My blog lays on a completely custom platform I coded from A to Z. (Excluding open-source components I use like everyone else.)
 
-Therefore, I can guarantee maximum scores on various benchmarks (Ahrefs, Lighthouse, etc.), because I know everything that's going on under the hood.
+Therefore, I can guarantee maximum scores on various benchmarks (Ahrefs, Lighthouse, etc.), because I know everything what's going on under the hood.
 
 ## I wrote a few articles and I update them constantly
 
 I'm not convinced you need to spam Google with dozens of new articles every month to rank (in the beginning at least).
 
-For now, I have ~15 articles and that's perfectly fine.
+For now, I have ~15 articles that I wrote based on popular keywords and that's perfectly fine.
 
-I update them regularly, based on what competitors are doing. I also structure them to be as snippets-friendly as possible, which can help you reach the first position in the SERPs more quickly.
+I update them regularly, based on what competitors are doing (competitors are sites that are near me in the SERPs). 
+
+I also structure them to be as snippets-friendly as possible, which can help you rank first quicker.
 
 ## I built a few links
 
-Link building isn't most people's cup of tea. Myself included. But it needs to be done. I build links by:
-- Writing guest posts (for now, I only wrote one, which isn't enough);
-- Posting community links on various websites (used in newsletters for instance);
-- I also tried to post dofollow links on forums, but I now know **it doesn't work unless it's relevant to the conversation**. **You can be penalized for that**. Remove them if you can.
+Link building isn't most people's cup of tea. Myself included. But it needs to be done. I essentially build links by:
+- Posting community links on various popular websites in the niche (these links are also reused in newsletter, which is an additional channel of traffic);
+- I also tried to post dofollow links on forums, but I now know **it doesn't work unless it's relevant to the conversation**. **You can get penalized for that**. Remove them ASAP if you can.
 
 I even naturally acquired some links from high authorities in the niche (on [Laravel.io](https://laravel.io), [Freek Van der Herten's blog](https://freek.dev) and [Larachat](https://larachat.co) for example).
 
 ## Reports for each month since the beginning
 
-### October 2022
-
-October 2022 is not done yet, but I want to share the data anyway.
+### October 2022 (month in progress)
 
 ![Google Search Console report for October 2022.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666716303/benjamincrozat.com/Screenshot_2022-10-25_at_18.44.27_ome49t.png)
 
 The numbers:
 
-- Clicks: **304**;
-- Impressions: **20.4K**;
-- Average CTR: **1.5%**;
-- Average position: **27.5**.
+- Clicks: **327 (+710%)**;
+- Impressions: **21.2K (+412%)**;
+- Average CTR: **1.5% (+166%)**;
+- Average position: **27 (+158%)**.
 
 What I did:
 
