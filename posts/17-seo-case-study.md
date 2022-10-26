@@ -19,11 +19,11 @@ I'm doing web development for a living, not SEO. But I'm a fast learner and I li
 
 ## I don't wait for Google to crawl my site
 
-The Google Search Console is an extremely valuable tool. You can get all sorts of valuable data about how your site is doing on the SERPs.
+The Google Search Console is an extremely valuable tool. You can get all sorts of valuable data about how your site is doing in search results.
 
-But did you know you can actually "forge" Google to crawl your site as soon as you published new content?
+But did you know you can actually "force" Google to crawl your site as soon as you published new content?
 
-In the search field at the top of the console, just enter any new or updated URL, and Google will most of the time crawl it in a matter of hours. 
+In the search field at the top of the console, enter any new or updated URL, and Google will (most of the time) crawl it and update its index in a matter of hours. 
 
 ## My technical SEO is top-notch
 
