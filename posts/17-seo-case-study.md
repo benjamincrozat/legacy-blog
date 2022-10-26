@@ -9,11 +9,11 @@ Modified At:
 
 ![Illustration of a rocket.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666719094/benjamincrozat.com/rocket_xv9mlh.png)
 
-Here's a case study example for benjamincrozat.com, a blog about programming.
+Here's a case study example for benjamincrozat.com, my blog about programming with PHP and Laravel.
 
 Since I started it in September 2022, **clicks on Google increased by 710%**.
 
-I'm doing web development for a living, not SEO. But I'm a fast learner and I like to learn by doing. In this article, you'll learn about everything I did to rank my blog as high as possible in as many keywords as possible.
+I'm doing web development for a living, not SEO. But I'm a fast learner and I like to learn by doing. In this article, you'll also learn about everything I did to rank my blog as high as possible with as many keywords as possible.
 
 ![Screenshot of the growth.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666719321/benjamincrozat.com/Screenshot_2022-10-25_at_19.35.05_yn8slo.png)
 
@@ -35,6 +35,8 @@ But did you know you can actually "force" Google to crawl your site as soon as y
 
 In the search field at the top of the console, enter any new or updated URL, and Google will (most of the time) crawl it and update its index in a matter of hours.
 
+[This practice is well documented by Google](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl).
+
 ### Your technical SEO should be good enough
 
 As a web developer, I have the luxury to not have to use WordPress or any other platform.
@@ -43,7 +45,15 @@ My blog lays on a completely custom platform I coded from A to Z. (Excluding ope
 
 Therefore, I can guarantee maximum scores on various benchmarks (Ahrefs, Lighthouse, etc.), because I know everything that's going on under the hood.
 
-But if you're using something like WordPress, I would just recommend to be careful when choosing themes and plugins, as most of them are low quality and can significantly impact the performances of your site.
+If you're using something like WordPress, I would just recommend to be careful when choosing themes and plugins, as most of them are low quality and can significantly impact the performances of your site and therefore, your rankings.
+
+Google cares about:
+- Performances;
+- Mobile-friendly-ness;
+- HTTPS;
+- Good usability.
+
+Learn more about [page experience signals from Google](https://developers.google.com/search/docs/appearance/page-experience#signals).
 
 ### Write a bunch of articles and update them constantly
 
@@ -53,13 +63,13 @@ For now, I have more than 15 articles that I wrote based on popular keywords and
 
 I update them regularly, based on what competitors are doing (competitors are sites that are near me in the SERPs). 
 
-I also structure them to be as snippets-friendly as possible, which can help you rank first quicker.
+I also structure them to be as snippets-friendly as possible (imagine a dumb bot parsing your content), which can help you rank first quicker. [The official documentation for snippets](https://developers.google.com/search/docs/appearance/page-experience#signals) is quite vague unfortunately.
 
 ### Build backlinks
 
-Link building isn't most people's cup of tea. Myself included. But it needs to be done.
+Link building isn't most people's cup of tea. Myself included. But it needs to be done, because **it's one of the most important ranking factor**.
 
-I essentially build links posting community links on various popular websites in the niche (these links are also reused in newsletter, which is an additional channel of traffic);
+I essentially build them posting community links on various popular websites in the niche (these links are also reused in newsletter, which is an additional channel of traffic);
 
 I also tried to post dofollow links on forums, but I now know **it doesn't work unless it's relevant to the conversation**. **You can get penalized for that**. Remove them ASAP if you can.
 
