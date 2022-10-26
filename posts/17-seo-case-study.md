@@ -5,7 +5,7 @@ Published At: 2022-10-25
 Modified At:
 ---
 
-# 2022 SEO case study: programming niche (+660% increase)
+# 2022 SEO case study: programming niche (+710% increase)
 
 ![Illustration of a rocket.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666719094/benjamincrozat.com/rocket_xv9mlh.png)
 
