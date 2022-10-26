@@ -27,7 +27,7 @@ Therefore, I write blog posts based on what people are searching for and slowly 
 
 ## What to do to get more traffic from search engines
 
-### I don't wait for Google to crawl my site
+### Don't wait for Google to crawl your site
 
 The [Google Search Console](https://search.google.com/search-console) is an extremely valuable tool. You can get all sorts of valuable data about how your site is doing in the SERPs (Search Engine Results Pages).
 
@@ -35,7 +35,7 @@ But did you know you can actually "force" Google to crawl your site as soon as y
 
 In the search field at the top of the console, enter any new or updated URL, and Google will (most of the time) crawl it and update its index in a matter of hours.
 
-### My technical SEO is top-notch
+### Your technical SEO should be good enough
 
 As a web developer, I have the luxury to not have to use WordPress or any other platform.
 
@@ -45,7 +45,7 @@ Therefore, I can guarantee maximum scores on various benchmarks (Ahrefs, Lightho
 
 But if you're using something like WordPress, I would just recommend to be careful when choosing themes and plugins, as most of them are low quality and can significantly impact the performances of your site.
 
-### I wrote a few articles and I update them constantly
+### Write a bunch of articles and update them constantly
 
 I'm not convinced you need to spam Google with dozens of new articles every month to rank (in the beginning at least).
 
@@ -55,7 +55,7 @@ I update them regularly, based on what competitors are doing (competitors are si
 
 I also structure them to be as snippets-friendly as possible, which can help you rank first quicker.
 
-### I built a few links
+### Build backlinks
 
 Link building isn't most people's cup of tea. Myself included. But it needs to be done.
 
