@@ -9,11 +9,11 @@ Modified At:
 
 ![Illustration of a rocket.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666719094/benjamincrozat.com/rocket_xv9mlh.png)
 
-Here's a case study example for benjamincrozat.com, my blog about programming with PHP and Laravel.
+Here's a case study example for [benjamincrozat.com](https://benjamincrozat.com), my blog about programming with PHP and Laravel.
 
 Since I started it in September 2022, **clicks on Google increased by 710%**.
 
-I'm doing web development for a living, not SEO. But I'm a fast learner and I like to learn by doing. In this article, you'll also learn about everything I did to rank my blog as high as possible with as many keywords as possible.
+I'm doing web development for a living, not SEO. But I'm a fast learner and like to learn by doing. In this article, you'll also learn about everything I did to rank my blog as high as possible with many keywords.
 
 ![Screenshot of the growth.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666719321/benjamincrozat.com/Screenshot_2022-10-25_at_19.35.05_yn8slo.png)
 
@@ -21,17 +21,17 @@ I'm doing web development for a living, not SEO. But I'm a fast learner and I li
 
 For me, traffic is like money; it should be passive.
 
-I don't want to work my ass off for ephemeral spikes of traffic because I went viral on social media. 
+I don't want to work my ass off for brief traffic spikes because I went viral on social media. 
 
-Therefore, I write blog posts based on what people are searching for and slowly but surely, traffic comes, grows and stays.
+Therefore, I write blog posts based on what people are searching for, and slowly but surely, traffic comes, grows, and stays.
 
 ## What to do to get more traffic from search engines
 
 ### Don't wait for Google to crawl your site
 
-The [Google Search Console](https://search.google.com/search-console) is an extremely valuable tool. You can get all sorts of valuable data about how your site is doing in the SERPs (Search Engine Results Pages).
+The [Google Search Console](https://search.google.com/search-console) is a precious tool. You can get valuable data about how your site is doing in the SERPs (Search Engine Results Pages).
 
-But did you know you can actually "force" Google to crawl your site as soon as you published new content?
+But did you know you can actually "force" Google to crawl your site as soon as you publish new content?
 
 In the search field at the top of the console, enter any new or updated URL, and Google will (most of the time) crawl it and update its index in a matter of hours.
 
@@ -39,13 +39,13 @@ In the search field at the top of the console, enter any new or updated URL, and
 
 ### Your technical SEO should be good enough
 
-As a web developer, I have the luxury to not have to use WordPress or any other platform.
+As a web developer, I have the luxury of not having to use WordPress or any other platform.
 
 My blog lays on a completely custom platform I coded from A to Z. (Excluding open-source components I use like everyone else.)
 
 Therefore, I can guarantee maximum scores on various benchmarks (Ahrefs, Lighthouse, etc.), because I know everything that's going on under the hood.
 
-If you're using something like WordPress, I would just recommend to be careful when choosing themes and plugins, as most of them are low quality and can significantly impact the performances of your site and therefore, your rankings.
+If you're using something like WordPress, I recommend being careful when choosing themes and plugins, as most are low quality and can significantly impact your site's performance and, therefore, your rankings.
 
 Google cares about:
 - Performances;
@@ -55,21 +55,21 @@ Google cares about:
 
 Learn more about [page experience signals from Google](https://developers.google.com/search/docs/appearance/page-experience#signals).
 
-### Write a bunch of articles and update them constantly
+### Write a bunch of articles and update them regularly
 
-I'm not convinced you need to spam Google with dozens of new articles every month to rank (in the beginning at least).
+I'm not convinced you need to spam Google with dozens of new articles every month to rank (in the beginning, at least).
 
-For now, I have more than 15 articles that I wrote based on popular keywords and that's perfectly fine.
+For now, I have more than 15 articles that I wrote based on popular keywords, and that's perfectly fine.
 
-I update them regularly, based on what competitors are doing (competitors are sites that are near me in the SERPs). 
+I update them regularly based on what competitors are doing (competitors are sites near me in the SERPs). 
 
-I also structure them to be as snippets-friendly as possible (imagine a dumb bot parsing your content), which can help you rank first quicker. [The official documentation for snippets](https://developers.google.com/search/docs/appearance/page-experience#signals) is quite vague unfortunately.
+I also structure them to be as snippets-friendly as possible (imagine a dumb bot parsing your content), which can help you rank first quicker. [The official documentation for snippets](https://developers.google.com/search/docs/appearance/page-experience#signals) is vague, unfortunately.
 
 ### Build backlinks
 
-Link building isn't most people's cup of tea. Myself included. But it needs to be done, because **it's one of the most important ranking factor**.
+Link building isn't most people's cup of tea. Myself included. But it needs to be done, because **it's one of the most critical ranking factors**.
 
-I essentially build them posting community links on various popular websites in the niche (these links are also reused in newsletter, which is an additional channel of traffic);
+I essentially build them by posting community links on various popular websites in the niche (these links are also reused in newsletters, which is an additional channel of traffic);
 
 I also tried to post dofollow links on forums, but I now know **it doesn't work unless it's relevant to the conversation**. **You can get penalized for that**. Remove them ASAP if you can.
 
@@ -92,7 +92,7 @@ What I did:
 
 - I wrote new articles based on keyword research;
 - I updated articles based on what the competition was doing and when I felt I could structure them better;
-- I naturally got very high-quality backlinks from authorities in this niche by writing about emerging topics way ahead of anyone.
+- I naturally got high-quality backlinks from authorities in this niche by writing about emerging topics way ahead of anyone.
 
 ### September 2022
 
@@ -107,8 +107,9 @@ The numbers:
 
 What I did:
 
-- I set up a new site on a 7 years old domain that was never used for anything good;
+- I set up a new site on a 7-year-old domain that was never used for anything good;
 - I wrote a few articles based on keyword research;
 - I forced Google to crawl them;
 - I constantly updated all those articles whenever I noticed their structure could be improved;
 - I tried to build a few links on relevant websites.
+
