@@ -1,5 +1,5 @@
 ---
-Description: AI (Artificial Intelligence) is a trending topic in the programming space. It enables developer to do incredible things and lots of startups build products around it.
+Description: AI (Artificial Intelligence) is a trending topic in the programming space. It enables developers to do incredible things, and lots of startups build products around it.
 Image: https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666886355/benjamincrozat.com/robot_qxeqid.png
 Published At: 2022-10-27
 Modified At:
@@ -37,22 +37,22 @@ Many other projects are created with the help of AI. You can see it for yourself
 
 I must tell you first, though: the [**OpenAI API isn't free**](https://openai.com/api/pricing/)!
 
-But who cares? They recently lowered their prices and you can start with $18 of free credit for three months. After that, it's incredibly cheap as long as you use it for testing purposes.
+But who cares? They recently lowered their prices, and you can start with $18 of free credit for three months. After that, it's incredibly cheap as long as you use it for testing purposes.
 
-I recommend you to get up to speed by playing with GPT-3 using [OpenAI's playground](https://beta.openai.com/playground).  
-[Create an account](https://beta.openai.com/signup), mess in the playground and join me for the next step!
+I recommend you to get up to speed by playing with GPT-3 using [OpenAI's playground](https://beta.openai.com/playground). 
+[Create an account](https://beta.openai.com/signup), mess in the playground, and join me for the next step!
 
 ## How to use the OpenAI API PHP client
 
 The best way to learn is to build.
 
-When I started playing with OpenAI, I tried to make a jobs board powered by AI.
+When I started playing with OpenAI, I tried to make an automated job offers aggregator powered by AI.
 
-For this tutorial, we will make a basic version of this where we just extract unstructured data from a given job offer instead of having a crawler that does it for us.
+For this tutorial, we'll make a basic version of it where we extract unstructured data from a given job offer.
 
 ### Installation
 
-First, we will create a bare-minimum PHP project:
+First, create a bare-minimum PHP project:
 
 ```bash
 mkdir openai-test
@@ -60,7 +60,7 @@ cd openai-test
 touch index.php
 ```
 
-Next, we need to install the [OpenAI client](https://github.com/openai-php/client):
+Next, install the [OpenAI client](https://github.com/openai-php/client):
 
 ```bash
 composer require openai-php/client
@@ -80,13 +80,11 @@ $client = OpenAI::client('YOUR_API_KEY');
 
 ### Usage
 
-1. We need to copy and paste text from a job offer. It doesn't matter which one. (In the initial project the crawler was doing it for me.)
-2. We give instruction to the GPT-3 model: *"Extract the requirements for this job offer as a list."*;
+1. We need to copy and paste text from a job offer. It doesn't matter which one. (In the initial project, the crawler did it for me.)
+2. We give instructions to the GPT-3 model: *"Extract the requirements for this job offer as a list."*;
 3. Then, we call the API using PHP, which is way more convenient than manually making HTTP requests.
 
 ```php
-$client = OpenAI::client('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');
-
 $prompt = <<<TEXT
 Extract the requirements for this job offer as a list.
 
@@ -94,15 +92,15 @@ Extract the requirements for this job offer as a list.
 TEXT;
 
 $result = $client->completions()->create([
-    'model' => 'text-davinci-002', // The most expensive one, but the best.
-                                   // It will give us better results.
-    'prompt' => $prompt,
+ 'model' => 'text-davinci-002', // The most expensive one, but the best.
+ // It will give us better results.
+ 'prompt' => $prompt,
 ]);
 
 echo $result['choices'][0]['text'];
 ```
 
-Run this code and it will output:
+Run this code, and it will output:
 
 ```
 - PHP
@@ -112,12 +110,12 @@ Run this code and it will output:
 - JavaScript
 ```
 
-Now, imagine what you can do.
+Now, imagine what you could do. Make it an array, store it in a database, aggregate the job offers on a website and help thousands of developers!
 
-You could have an entirely automated jobs board, gathering the best offers from all around the internet.
+You could have an entirely automated project. And lazy people like me know these are the best kind of projects!
 
-GPT-3 is the basis for a veriety of awesome products such as [Jasper](https://www.jasper.ai), [Tweet Hunter](https://tweethunter.io) and many more.
+GPT-3 is the basis for a variety of great products such as [Jasper](https://www.jasper.ai), [Tweet Hunter](https://tweethunter.io), and many more.
 
-Your imagination is the limit. I hope you will create something amazing thanks to the power of AI!
+Your imagination is the limit. I hope you will create something unique thanks to the power of AI!
 
 Learn more about the [OpenAI API](https://beta.openai.com/docs/introduction) and the [OpenAI PHP client on GitHub](https://github.com/openai-php/client).
