@@ -6,9 +6,9 @@ Modified At: 2022-10-23
 
 # 4 ways to check if an array is empty in PHP
 
-## The empty() function
+## The `empty()` function
 
-The empty() function determines if a value is empty or not. It simply returns `true` if it's empty, or `false` if it's not.
+The [`empty()`](https://www.php.net/empty) function determines if a value is empty or not. It simply returns `true` if it's empty, or `false` if it's not.
 
 This is my favorite way to check if an array is empty in PHP.
 
@@ -28,9 +28,9 @@ if (empty($bar)) {
 }
 ```
 
-## The count() function
+## The `count()` function
 
-The `count()` function counts the number of entries in an array and returns it as an integer.
+The [`count()`](https://www.php.net/count) function counts the number of entries in an array and returns it as an integer.
 
 You can even use it with [Countable](https://www.php.net/manual/en/class.countable.php) objects.
 
@@ -60,9 +60,9 @@ if ($count > 0) {
 }
 ```
 
-## The sizeof() function
+## The `sizeof()` function
 
-[sizeof()](https://www.php.net/sizeof) is an alias of count(). [PHP actually has a lot of aliases for various functions](https://www.php.net/manual/en/aliases.php).
+[`sizeof()`](https://www.php.net/sizeof) is an alias of count(). [PHP actually has a lot of aliases for various functions](https://www.php.net/manual/en/aliases.php).
 
 There's nothing to add, [you already know how to use it](#the-count-function):
 
