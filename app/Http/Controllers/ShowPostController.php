@@ -11,7 +11,7 @@ class ShowPostController extends Controller
     {
         return view('posts.show', [
             'post' => Post::get($slug),
-            'others' => Post::all()->filter(fn ($p) => $p->slug !== $slug)->shuffle()->take(6),
+            'others' => Post::all()->filter(fn ($p) => $p->slug !== $slug)->shuffle(),
         ]);
     }
 }
