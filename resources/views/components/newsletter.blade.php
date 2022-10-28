@@ -8,7 +8,7 @@
         </p>
 
         <p class="font-thin sm:text-lg">
-            Receive updates about what it takes to build websites.
+            Receive updates about what I learn building websites.
         </p>
     </div>
 

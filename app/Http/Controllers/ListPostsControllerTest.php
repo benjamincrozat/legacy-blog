@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Tests\TestCase;
 use Illuminate\Support\Collection;
 
-class HomeControllerTest extends TestCase
+class ListPostsControllerTest extends TestCase
 {
     public function test_it_lists_posts() : void
     {

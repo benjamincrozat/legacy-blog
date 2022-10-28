@@ -1,57 +1,143 @@
 <x-app
-    description="Have you ever had a question about PHP, Laravel or anything related to its ecosystem? This is the best blog to find your answer."
+    title="Hire the Laravel consultant your company deserves"
+    class="text-indigo-50"
 >
-    <x-header />
+    <div class="bg-indigo-500">
+        <div class="container sm:flex sm:items-center sm:justify-between py-8">
+            <a href="{{ route('home') }}">
+                <span class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase">
+                    Benjamin Crozat
+                </span>
 
-    <section id="articles" class="container mt-8 sm:mt-16">
-        @if ($featured->isNotEmpty())
-            <div>
-                <a href="{{ route('posts.show', $featured->first()->slug) }}" class="block hover:opacity-50 transition-opacity">
-                    <img
-                        src="{{ $featured->first()->image }}"
-                        alt='Illustration for "{{ $featured->first()->title }}"'
-                    />
+                <span class="block opacity-75 text-xs tracking-widest uppercase">
+                    Full-stack Laravel developer
+                </span>
+            </a>
 
-                    <div
-                        class="bg-gray-800 flex items-center justify-between gap-2 leading-tight p-3 text-sm text-white"
-                        style="text-shadow: 1px 1px 1px rgba(0, 0, 0, .1)"
-                    >
-                        <span>{{ $featured->first()->title }}</span>
-                        <x-heroicon-o-arrow-right class="flex-shrink-0 w-3 h-3" />
-                    </div>
+            <nav class="mt-8 sm:mt-0">
+                <a href="{{ route('posts.index') }}" class="hover:opacity-50 text-xs tracking-widest transition-opacity uppercase">
+                    Read my blog
                 </a>
+            </nav>
+        </div>
+    </div>
 
-                <div class="grid grid-cols-2 gap-1 mt-1">
-                    @foreach ($featured->nth(1, 1)->take(2) as $post)
-                        <a href="{{ route('posts.show', $post->slug) }}" class="hover:opacity-50 transition-opacity">
-                            <img
-                                src="{{ $post->image }}"
-                                alt='Illustration for "{{ $post->title }}"'
-                            />
+    <div class="bg-indigo-400">
+        <section class="container py-8 sm:py-16">
+            <h1 class="font-thin text-5xl">
+                Hire the Laravel consultant your company <strong class="border-b font-semibold">deserves</strong>
+            </h1>
 
-                            <div
-                                class="bg-gray-800 flex items-center justify-between gap-2 leading-tight p-2 sm:p-3 text-xs sm:text-sm text-white"
-                                style="text-shadow: 1px 1px 1px rgba(0, 0, 0, .1)"
-                            >
-                                <span class="line-clamp-1">{{ $post->title }}</span>
-                                <x-heroicon-o-arrow-right class="flex-shrink-0 w-3 h-3" />
-                            </div>
-                        </a>
-                    @endforeach
+            <div class="font-thin text-3xl">
+                <p class="mt-16">
+                    Let me guide your team toward <strong class="font-semibold text-white">maintainability</strong> and <strong class="font-semibold text-white">reliability</strong>.
+                </p>
+
+                <p class="mt-8">
+                    <strong class="font-semibold text-white">Make more money</strong> on the long run by avoiding endless,<br />
+                    regressions, bug huntings and rewrites.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <div class="bg-indigo-50 text-indigo-900">
+        <section class="container py-8 sm:py-16">
+            <div class="grid sm:grid-cols-2 gap-8">
+                <div>
+                    <x-heroicon-o-users class="-translate-x-1 text-indigo-900/50 w-10 h-10" />
+                    <p class="font-bold mt-4 text-xl">
+                        Pair programming
+                    </p>
+
+                    <p class="mt-4">
+                        Pair programming is the best way for two developers to learn from each other, and <strong class="font-bold">fast</strong>.
+                    </p>
+
+                    <p class="mt-4">
+                        Whatever your team need to know about PHP and Laravel, I can help.
+                    </p>
+                </div>
+
+                <div>
+                    <x-heroicon-o-check-circle class="-translate-x-1 text-indigo-900/50 w-10 h-10" />
+
+                    <p class="font-bold mt-4 text-xl">
+                        Best practices
+                    </p>
+
+                    <p class="mt-4">
+                        When everyone follows the framework's best practices, this is what happens:
+                    </p>
+
+                    <ul class="mt-4">
+                        <li class="flex items-start gap-2">
+                            <x-heroicon-o-check-circle class="translate-y-[3.5px] text-indigo-400 w-4 h-4" />
+                            You don't need to maintain a documentation
+                        </li>
+
+                        <li class="flex items-start gap-2 mt-2">
+                            <x-heroicon-o-check-circle class="translate-y-[3.5px] text-indigo-400 w-4 h-4" />
+                            Your team always knows what to do
+                        </li>
+
+                        <li class="flex items-start gap-2 mt-2">
+                            <x-heroicon-o-check-circle class="translate-y-[3.5px] text-indigo-400 w-4 h-4" />
+                            You new hires will know what to do from day&nbsp;1
+                        </li>
+                    </ul>
+
+                    <p class="mt-4">
+                        It's time to leverage Laravel's power to over 9000!
+                    </p>
+                </div>
+
+                <div>
+                    <x-heroicon-o-computer-desktop class="-translate-x-1 text-indigo-900/50 w-10 h-10" />
+
+                    <p class="font-bold mt-4 text-xl">
+                        Automated testing
+                    </p>
+
+                    <p class="mt-4">
+                        Writing untested code is like immediately writing legacy code.
+                    </p>
+
+                    <p class="mt-4">
+                        I can help your team write tests and <strong class="font-bold">be more confident</strong> each time they deploy something new.
+                    </p>
+                </div>
+
+                <div>
+                    <x-heroicon-o-paper-airplane class="-translate-x-1 text-indigo-900/50 w-10 h-10" />
+
+                    <p class="font-bold mt-4 text-xl">
+                        Continuous integration
+                    </p>
+
+                    <p class="mt-4">
+                        Automatically and continuously deploying new code into production is a dream for any serious business that wants to please its customers.
+                    </p>
+                </div>
+
+                <div>
+                    <x-heroicon-o-eye class="-translate-x-1 text-indigo-900/50 w-10 h-10" />
+
+                    <p class="font-bold mt-4 text-xl">Errors monitoring</p>
+
+                    <p class="mt-4">
+                        What if we could <strong class="font-bold">prevent</strong> your company to loose even more money?
+                    </p>
+
+                    <p class="mt-4">
+                        We can set up a tool that monitors and logs everything wrong happening on your site instead of relying on feedback.
+                    </p>
                 </div>
             </div>
-        @endif
+        </section>
+    </div>
 
-        @if ($posts->isNotEmpty())
-            <ul class="grid gap-12 sm:gap-16 mt-16">
-                @foreach ($posts as $post)
-                    <li><x-post :post="$post" /></li>
-                @endforeach
-            </ul>
-        @endif
-    </section>
-
-    <div class="bg-gray-100 mt-16 py-16">
-        <x-newsletter class="container scroll-mt-8 sm:scroll-mt-16" />
+    <div class="bg-indigo-500 flex-grow">
+        <x-footer class="text-indigo-200" />
     </div>
 </x-app>

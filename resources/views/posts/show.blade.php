@@ -3,7 +3,27 @@
     :description="$post->description"
     :image="$post->image"
 >
-    <x-header />
+    <div class="container sm:flex sm:items-center sm:justify-between py-8">
+        <a href="{{ route('home') }}">
+            <span class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase">
+                Benjamin Crozat
+            </span>
+
+            <span class="block opacity-75 text-xs tracking-widest uppercase">
+                The web developer life
+            </span>
+        </a>
+
+        <nav class="flex items-center gap-8 mt-8 sm:mt-0">
+            <a href="{{ route('posts.index') }}" class="hover:opacity-50 text-xs tracking-widest transition-opacity uppercase">
+                Blog
+            </a>
+
+            <a href="{{ route('home') }}" class="bg-blue-400 px-3 py-2 rounded text-white tracking-widest text-xs uppercase">
+                Hire me!
+            </a>
+        </nav>
+    </div>
 
     <x-breadcrumb class="mt-16">
         <x-breadcrumb-item>
@@ -54,6 +74,10 @@
             </div>
         @endif
     </article>
+
+    <div class="bg-gray-900 flex-grow">
+        <x-footer class="text-gray-400" links-color="text-gray-300" />
+    </div>
 
     <script type="application/ld+json">
         {

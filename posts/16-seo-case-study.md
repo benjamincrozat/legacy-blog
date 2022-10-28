@@ -1,6 +1,7 @@
 ---
 Description: Here's a case study for my blog in the programming niche, where I share everything I did to increase clicks by a huge amount since the beginning.
 Image: https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666719094/benjamincrozat.com/rocket_xv9mlh.png
+Featured: true
 Published At: 2022-10-25
 Modified At:
 ---

@@ -1,13 +1,13 @@
-<header {{ $attributes->merge(['class' => 'container flex items-center justify-between']) }}>
+<header {{ $attributes->merge(['class' => 'container sm:flex sm:items-center sm:justify-between']) }}>
     <a href="{{ route('home') }}">
         <span class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase">
             Benjamin Crozat
         </span>
 
-        <span class="block text-gray-500 text-xs tracking-widest uppercase">
-            The web developer life
+        <span class="block opacity-75 text-xs tracking-widest uppercase">
+            {{ $subtitle }}
         </span>
     </a>
 
-    <x-nav />
+    <x-nav class="mt-8 sm:mt-0" :highlight-classes="$highlightClasses ?? ''" />
 </header>
