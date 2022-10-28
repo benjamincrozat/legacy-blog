@@ -33,7 +33,7 @@
                         />
 
                         <div
-                            class="bg-gray-800 flex items-center gap-2 leading-tight p-3 text-sm text-white"
+                            class="bg-gray-800 flex items-center gap-2 leading-tight p-2 sm:p-3 text-xs sm:text-sm text-white"
                             style="text-shadow: 1px 1px 1px rgba(0, 0, 0, .1)"
                         >
                             <span class="line-clamp-1">{{ $post->title }}</span>
@@ -46,7 +46,7 @@
     @endif
 
     @if ($posts->isNotEmpty())
-        <ul class="container grid gap-12 mt-8 sm:mt-16">
+        <ul class="container grid gap-8 sm:gap-16 mt-16">
             @foreach ($posts as $post)
                 <li><x-post :post="$post" /></li>
             @endforeach
