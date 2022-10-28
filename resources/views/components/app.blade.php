@@ -39,8 +39,20 @@
             <script defer src="https://save-tonight-hey-jude.benjamincrozat.com/script.js" data-site="{{ config('services.fathom.site_id') }}"></script>
         @endif
     </head>
-    <body class="bg-gray-50 font-light pt-8 text-gray-600" x-data>
-        <div class="flex flex-col min-h-screen">
+    <body class="bg-gray-50 font-lighttext-gray-600" x-data>
+        <div class="bg-gradient-to-r from-gray-800 to-gray-600 border-b text-gray-300 text-sm">
+            <div class="container grid sm:grid-cols-3 items-center gap-4 sm:gap-8 py-4">
+                <p class="sm:col-span-2 leading-tight text-center sm:text-left sm:text-base">
+                    <strong class="font-bold text-white">10+ years of experience</strong> at the service of <strong class="font-bold text-white">your</strong>&nbsp;business.
+                </p>
+
+                <a href="mailto:benjamincrozat@me.com" @click="window.fathom?.trackGoal('EWIGDNLB', 0)" class="bg-gradient-to-b from-indigo-300 to-indigo-400 sm:col-span-1 font-bold leading-tight hover:opacity-50 px-3 py-2 rounded shadow-md shadow-blue-900/10 text-center text-white transition-opacity">
+                    Get your Laravel consultant
+                </a>
+            </div>
+        </div>
+
+        <div class="flex flex-col min-h-screen mt-8">
             {{ $slot }}
 
             <div {{ $attributes->merge(['class' => 'bg-gray-900 flex-grow']) }}>
