@@ -36,7 +36,7 @@
         <link rel="canonical" href="{{ url()->current() }}" />
 
         @if (app()->isProduction())
-            <script defer src="https://cdn.usefathom.com/script.js" data-site="{{ config('services.fathom.site_id') }}"></script>
+            <script defer src="https://save-tonight-hey-jude.benjamincrozat.com/script.js" data-site="{{ config('services.fathom.site_id') }}"></script>
         @endif
     </head>
     <body class="bg-gray-50 font-light pt-8 text-gray-600" x-data>
