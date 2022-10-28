@@ -8,7 +8,7 @@
         </a>
 
         <span class="block text-gray-500 text-xs tracking-widest uppercase">
-            Everything PHP & Laravel
+            The web developer life
         </span>
     </p>
 

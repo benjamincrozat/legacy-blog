@@ -18,7 +18,7 @@
         @endif
         <meta name="twitter:title" content="{{ $title ?? config('app.name') }}" />
 
-        <title>{{ $title ?? "Benjamin Crozat's blog on everything PHP and Laravel" }}</title>
+        <title>{{ $title ?? "The web developer life of Benjamin Crozat" }}</title>
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
