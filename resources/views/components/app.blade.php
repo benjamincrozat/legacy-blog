@@ -41,7 +41,7 @@
     </head>
     <body class="bg-gray-50 font-lighttext-gray-600" x-data>
         <div class="bg-gradient-to-r from-gray-800 to-gray-600 border-b text-gray-300 text-sm">
-            <div class="container grid sm:grid-cols-3 items-center gap-4 sm:gap-8 py-4">
+            <div class="container grid sm:grid-cols-3 items-center gap-4 sm:gap-8 py-4 sm:py-3">
                 <p class="sm:col-span-2 leading-tight text-center sm:text-left sm:text-base">
                     <strong class="font-bold text-white">10+ years of experience</strong> at the service of <strong class="font-bold text-white">your</strong>&nbsp;business.
                 </p>

@@ -3,51 +3,53 @@
 >
     <x-header />
 
-    @if ($featured->isNotEmpty())
-        <div class="container mt-8 sm:mt-16">
-            <a href="{{ route('posts.show', $featured->first()->slug) }}" class="block hover:opacity-50 transition-opacity">
-                <img
-                    src="{{ $featured->first()->image }}"
-                    alt='Illustration for "{{ $featured->first()->title }}"'
-                />
+    <section id="articles" class="container mt-8 sm:mt-16">
+        @if ($featured->isNotEmpty())
+            <div>
+                <a href="{{ route('posts.show', $featured->first()->slug) }}" class="block hover:opacity-50 transition-opacity">
+                    <img
+                        src="{{ $featured->first()->image }}"
+                        alt='Illustration for "{{ $featured->first()->title }}"'
+                    />
 
-                <div
-                    class="bg-gray-800 flex items-center justify-between gap-2 leading-tight p-3 text-sm text-white"
-                    style="text-shadow: 1px 1px 1px rgba(0, 0, 0, .1)"
-                >
-                    <span>{{ $featured->first()->title }}</span>
-                    <x-heroicon-o-arrow-right class="flex-shrink-0 w-3 h-3" />
+                    <div
+                        class="bg-gray-800 flex items-center justify-between gap-2 leading-tight p-3 text-sm text-white"
+                        style="text-shadow: 1px 1px 1px rgba(0, 0, 0, .1)"
+                    >
+                        <span>{{ $featured->first()->title }}</span>
+                        <x-heroicon-o-arrow-right class="flex-shrink-0 w-3 h-3" />
+                    </div>
+                </a>
+
+                <div class="grid grid-cols-2 gap-1 mt-1">
+                    @foreach ($featured->nth(1, 1)->take(2) as $post)
+                        <a href="{{ route('posts.show', $post->slug) }}" class="hover:opacity-50 transition-opacity">
+                            <img
+                                src="{{ $post->image }}"
+                                alt='Illustration for "{{ $post->title }}"'
+                            />
+
+                            <div
+                                class="bg-gray-800 flex items-center justify-between gap-2 leading-tight p-2 sm:p-3 text-xs sm:text-sm text-white"
+                                style="text-shadow: 1px 1px 1px rgba(0, 0, 0, .1)"
+                            >
+                                <span class="line-clamp-1">{{ $post->title }}</span>
+                                <x-heroicon-o-arrow-right class="flex-shrink-0 w-3 h-3" />
+                            </div>
+                        </a>
+                    @endforeach
                 </div>
-            </a>
-
-            <div class="grid grid-cols-2 gap-1 mt-1">
-                @foreach ($featured->nth(1, 1)->take(2) as $post)
-                    <a href="{{ route('posts.show', $post->slug) }}" class="hover:opacity-50 transition-opacity">
-                        <img
-                            src="{{ $post->image }}"
-                            alt='Illustration for "{{ $post->title }}"'
-                        />
-
-                        <div
-                            class="bg-gray-800 flex items-center justify-between gap-2 leading-tight p-2 sm:p-3 text-xs sm:text-sm text-white"
-                            style="text-shadow: 1px 1px 1px rgba(0, 0, 0, .1)"
-                        >
-                            <span class="line-clamp-1">{{ $post->title }}</span>
-                            <x-heroicon-o-arrow-right class="flex-shrink-0 w-3 h-3" />
-                        </div>
-                    </a>
-                @endforeach
             </div>
-        </div>
-    @endif
+        @endif
 
-    @if ($posts->isNotEmpty())
-        <ul class="container grid gap-12 sm:gap-16 mt-16">
-            @foreach ($posts as $post)
-                <li><x-post :post="$post" /></li>
-            @endforeach
-        </ul>
-    @endif
+        @if ($posts->isNotEmpty())
+            <ul class="grid gap-12 sm:gap-16 mt-16">
+                @foreach ($posts as $post)
+                    <li><x-post :post="$post" /></li>
+                @endforeach
+            </ul>
+        @endif
+    </section>
 
     <div class="bg-gray-100 mt-16 py-16">
         <x-newsletter class="container scroll-mt-8 sm:scroll-mt-16" />
