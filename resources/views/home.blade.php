@@ -49,7 +49,7 @@
         </ul>
     @endif
 
-    <div class="bg-gray-100 mt-8 sm:mt-16 py-8 sm:py-16">
-        <x-newsletter class="container max-w-screen-sm scroll-mt-8 sm:scroll-mt-16" />
+    <div class="bg-gray-100 mt-16 py-16">
+        <x-newsletter class="container scroll-mt-8 sm:scroll-mt-16" />
     </div>
 </x-app>
