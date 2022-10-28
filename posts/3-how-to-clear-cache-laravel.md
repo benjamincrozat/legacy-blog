@@ -36,7 +36,7 @@ php artisan cache:clear
 
 Some config values are fetched from your environment file and it can be a bit slow. Luckily, Laravel can cache them to help us speed up our applications.
 
-When using the following command, Laravel will delete *bootstrap/cache/config.php*.
+When using the following command, Laravel will clear the cache by deleting *bootstrap/cache/config.php*.
 
 ```bash
 php artisan config:clear
@@ -60,7 +60,7 @@ class EventServiceProvider extends ServiceProvider
 }
 ```
 
-When using the following command, Laravel will delete *bootstrap/cache/events.php*.
+When using the following command, Laravel will clear the cache by deleting *bootstrap/cache/events.php*.
 
 ```bash
 php artisan event:clear
@@ -70,7 +70,7 @@ php artisan event:clear
 
 [Laravel's routes](https://laravel.com/docs/9.x/routing) are an essential part of your web application or API. Resolving a route can take time if you have a lot of them and as you guessed, caching helps for that.
 
-When using the following command, Laravel will delete *bootstrap/cache/routes-v7.php*.
+When using the following command, Laravel will clear the cache by deleting *bootstrap/cache/routes-v7.php*.
 
 ```bash
 php artisan route:clear
@@ -94,7 +94,7 @@ php artisan schedule:clear-cache
 
 Blade directives are automatically compiled and cached as PHP files, even in your local environment. In production, you can use `php artisan view:cache` to make sure no visitor gets longer response times.
 
-When using the following command, Laravel will delete the content of *storage/views*.
+When using the following command, Laravel will clear the cache by deleting the content of *storage/views*.
 
 ```bash
 php artisan view:clear
