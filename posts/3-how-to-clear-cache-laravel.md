@@ -99,3 +99,11 @@ When using the following command, Laravel will clear the cache by deleting the c
 ```bash
 php artisan view:clear
 ```
+
+## Bonus: turn off the cache
+
+To completely turn off the cache, change the cache driver to `null` in your *.env* file.
+
+````
+CACHE_DRIVER=null
+```
