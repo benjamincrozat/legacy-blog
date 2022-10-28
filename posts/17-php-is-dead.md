@@ -10,11 +10,7 @@ Modified At:
 
 ![Illustration about statistics.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666874742/benjamincrozat.com/statistics_a0weap.png)
 
-**Is PHP dead? Obviously, it isn't. In 2022, PHP has more than 77% market share on the web according to [W3Techs](https://w3techs.com/technologies/overview/programming_language).**
-
-This is almost 77% more than any fancy new technology some developers brag about.
-
-Whenever you hear someone telling you "PHP is dead", ignore them and look at the data.
+**In 2022, PHP is the most used server-side scripting language with more than 77% market share overall, according to [W3Techs](https://w3techs.com/technologies/overview/programming_language).**
 
 | Language     | Usage in October 2022 |
 | ------------ | --------------------- |
@@ -29,6 +25,8 @@ Whenever you hear someone telling you "PHP is dead", ignore them and look at the
 | ColdFusion   | 0.3%                  |
 | Perl         | 0.1%                  |
 | Erlang       | 0.1%                  |
+
+Whenever you hear someone telling you "PHP is dead", ignore them and look at the data.
 
 ## CMS marketshare in 2022
 
