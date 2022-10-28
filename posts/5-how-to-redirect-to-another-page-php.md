@@ -8,7 +8,7 @@ Modified At: 2022-10-23
 
 ## Add the "Location" header to the response
 
-The code below will add the "Location" header to the response sent to the your user's browser.
+The code below will add the "Location" header with an URL as a value to the response sent to the your user's browser.
 
 ```php
 header('Location: https://example.com/path/to/page');
@@ -48,9 +48,11 @@ if (! empty($_POST['redirect'])) {
 // The following code will never be executed thanks to exit().
 ```
 
+If you don't stop code execution, the user will be redirected to the new URL **after** the code has finished running.
+
 ## Set the correct HTTP code
 
-The `header()` function can take a third parameter. Using PHP named arguments, we can set it to another HTTP code. For instance, when you add a `Location` header, the HTTP code will automatically be set to `302`. But what if we want to perform a 301 redirect instead?
+The `header()` function can take a third parameter. Using PHP named arguments, we can set it to another HTTP code. For instance, when you add a `Location` header, the HTTP code will automatically be set to `302`. But what if we want to perform a 301 redirect to the new URL instead?
 
 ```php
 header('Location: https://example.com/some/page', response_code: 301);
