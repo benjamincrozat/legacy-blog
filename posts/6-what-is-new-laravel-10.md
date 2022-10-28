@@ -6,7 +6,7 @@ Modified At: 2022-10-05
 
 # What's new in Laravel 10? Here's all you need to know.
 
-![Laravel's logo.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1663966984/benjamincrozat.com/laravel_umomrs.png)
+![Laravel 10](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666972278/benjamincrozat.com/laravel-10_jow67m.jpg)
 
 ## When will Laravel 10 be released?
 
