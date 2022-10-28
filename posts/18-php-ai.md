@@ -110,7 +110,7 @@ Run this code, and it will output:
 - JavaScript
 ```
 
-And what is you ask:
+But you can ask all kind of questions as well. Here's another example:
 
 ```php
 $prompt = <<<TEXT
