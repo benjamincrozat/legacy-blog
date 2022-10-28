@@ -9,6 +9,13 @@ class HomeController extends Controller
 {
     public function __invoke() : View
     {
-        return view('home', ['posts' => Post::all()]);
+        $posts = Post::all();
+
+        $featured = $posts->filter(fn ($p) => $p->image && $p->featured);
+
+        return view('home', [
+            'featured' => $posts->filter(fn ($p) => $p->image && $p->featured),
+            'posts' => $posts->except($featured->keys()->all()),
+        ]);
     }
 }

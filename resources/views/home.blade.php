@@ -3,10 +3,6 @@
 >
     <x-header />
 
-    @php
-    $featured = $posts->filter(fn ($p) => $p->image && $p->featured);
-    @endphp
-
     @if ($featured->isNotEmpty())
         <div class="container mt-8 sm:mt-16">
             <a href="{{ route('posts.show', $featured->first()->slug) }}">
