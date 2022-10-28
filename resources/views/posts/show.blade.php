@@ -3,7 +3,7 @@
     :description="$post->description"
     :image="$post->image"
 >
-    <x-head />
+    <x-header />
 
     <x-breadcrumb class="mt-16">
         <x-breadcrumb-item>

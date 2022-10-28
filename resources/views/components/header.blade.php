@@ -1,4 +1,4 @@
-<header class="container flex items-center justify-between">
+<header {{ $attributes->merge(['class' => 'container flex items-center justify-between']) }}>
     <p>
         <a
             href="{{ route('home') }}"

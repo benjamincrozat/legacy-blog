@@ -1,6 +1,7 @@
 ---
 Description: Whether PHP is dead or not is a matter of numbers, not opinions. This article will provide you with essential statistics that will lead you to make better decisions.
 Image: https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666874742/benjamincrozat.com/statistics_a0weap.png
+Featured: true
 Published At: 2022-10-27
 Modified At:
 ---

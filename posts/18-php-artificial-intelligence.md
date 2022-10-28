@@ -1,6 +1,7 @@
 ---
 Description: AI (Artificial Intelligence) is a trending topic in the programming space. It enables developers to do incredible things, and lots of startups build products around it.
 Image: https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666886355/benjamincrozat.com/robot_qxeqid.png
+Featured: true
 Published At: 2022-10-27
 Modified At:
 ---
