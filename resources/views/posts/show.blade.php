@@ -46,7 +46,7 @@
             <div class="container py-16">
                 <h4 class="font-bold text-center text-xl">Other posts to read</h4>
 
-                <ul class="grid gap-12 mt-8">
+                <ul class="grid gap-12 sm:gap-16 mt-8">
                     @foreach ($others as $post)
                         <li><x-post :post="$post" /></li>
                     @endforeach

@@ -5,7 +5,7 @@
 
     @if ($featured->isNotEmpty())
         <div class="container mt-8 sm:mt-16">
-            <a href="{{ route('posts.show', $featured->first()->slug) }}">
+            <a href="{{ route('posts.show', $featured->first()->slug) }}" class="block hover:opacity-50 transition-opacity">
                 <img
                     src="{{ $featured->first()->image }}"
                     alt='Illustration for "{{ $featured->first()->title }}"'
@@ -22,7 +22,7 @@
 
             <div class="grid grid-cols-2 gap-1 mt-1">
                 @foreach ($featured->nth(1, 1)->take(2) as $post)
-                    <a href="{{ route('posts.show', $post->slug) }}">
+                    <a href="{{ route('posts.show', $post->slug) }}" class="hover:opacity-50 transition-opacity">
                         <img
                             src="{{ $post->image }}"
                             alt='Illustration for "{{ $post->title }}"'
@@ -42,7 +42,7 @@
     @endif
 
     @if ($posts->isNotEmpty())
-        <ul class="container grid gap-8 sm:gap-16 mt-16">
+        <ul class="container grid gap-12 sm:gap-16 mt-16">
             @foreach ($posts as $post)
                 <li><x-post :post="$post" /></li>
             @endforeach

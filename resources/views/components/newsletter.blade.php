@@ -8,7 +8,7 @@
         </p>
 
         <p class="font-thin sm:text-lg">
-            Receive updates about web development with the Laravel&nbsp;ecosystem.
+            Receive updates about what it takes to build websites.
         </p>
     </div>
 
