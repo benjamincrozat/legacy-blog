@@ -110,7 +110,29 @@ Run this code, and it will output:
 - JavaScript
 ```
 
-Now, imagine what you could do. Make it an array, store it in a database, aggregate the job offers on a website and help thousands of developers!
+And what is you ask:
+
+```php
+$prompt = <<<TEXT
+Extract the salary from this job offer.
+
+"We are seeking a PHP web developer to join our team. The ideal candidate will have experience with PHP, MySQL, HTML, CSS, and JavaScript. They will be responsible for developing and managing web applications and working with a team of developers to create high-quality and innovative software. The salary for this position is negotiable and will be based on experience."
+TEXT;
+
+$result = $client->completions()->create([
+ 'model' => 'text-davinci-002',
+ 'prompt' => $prompt,
+ 'max_tokens' => 100, // A token is a basically a word.
+]);
+```
+
+The AI will give you this:
+
+```
+The salary for this position is negotiable and will be based on experience.
+```
+
+Now, imagine what you could do. Store this in a database, aggregate the job offers on a website and help thousands of developers!
 
 You could have an entirely automated project. And lazy people like me know these are the best kind of projects!
 
