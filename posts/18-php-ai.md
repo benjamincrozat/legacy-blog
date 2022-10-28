@@ -94,7 +94,6 @@ TEXT;
 
 $result = $client->completions()->create([
  'model' => 'text-davinci-002', // The most expensive one, but the best.
- // It will give us better results.
  'prompt' => $prompt,
 ]);
 
@@ -123,7 +122,7 @@ TEXT;
 $result = $client->completions()->create([
  'model' => 'text-davinci-002',
  'prompt' => $prompt,
- 'max_tokens' => 100, // A token is a basically a word.
+ 'max_tokens' => 50, // A token is a basically a word.
 ]);
 ```
 
