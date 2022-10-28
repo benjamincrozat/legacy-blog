@@ -41,6 +41,10 @@
         </div>
     @endif
 
+    <div class="bg-gray-100 mt-16 py-16">
+        <x-newsletter class="container scroll-mt-8 sm:scroll-mt-16" />
+    </div>
+
     @if ($posts->isNotEmpty())
         <ul class="container grid gap-8 sm:gap-16 mt-16">
             @foreach ($posts as $post)
