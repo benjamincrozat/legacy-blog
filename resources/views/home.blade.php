@@ -12,11 +12,11 @@
                 />
 
                 <div
-                    class="bg-gray-800 flex items-center gap-2 leading-tight p-3 text-sm text-white"
+                    class="bg-gray-800 flex items-center justify-between gap-2 leading-tight p-3 text-sm text-white"
                     style="text-shadow: 1px 1px 1px rgba(0, 0, 0, .1)"
                 >
                     <span>{{ $featured->first()->title }}</span>
-                    <x-heroicon-o-arrow-right class="w-3 h-3" />
+                    <x-heroicon-o-arrow-right class="flex-shrink-0 w-3 h-3" />
                 </div>
             </a>
 
@@ -29,21 +29,17 @@
                         />
 
                         <div
-                            class="bg-gray-800 flex items-center gap-2 leading-tight p-2 sm:p-3 text-xs sm:text-sm text-white"
+                            class="bg-gray-800 flex items-center justify-between gap-2 leading-tight p-2 sm:p-3 text-xs sm:text-sm text-white"
                             style="text-shadow: 1px 1px 1px rgba(0, 0, 0, .1)"
                         >
                             <span class="line-clamp-1">{{ $post->title }}</span>
-                            <x-heroicon-o-arrow-right class="w-3 h-3" />
+                            <x-heroicon-o-arrow-right class="flex-shrink-0 w-3 h-3" />
                         </div>
                     </a>
                 @endforeach
             </div>
         </div>
     @endif
-
-    <div class="bg-gray-100 mt-16 py-16">
-        <x-newsletter class="container scroll-mt-8 sm:scroll-mt-16" />
-    </div>
 
     @if ($posts->isNotEmpty())
         <ul class="container grid gap-8 sm:gap-16 mt-16">

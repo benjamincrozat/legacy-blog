@@ -6,7 +6,7 @@
 
         —
 
-        <time datetime="{{ $publishedAt?->toDateString() }}" class="text-black">
+        <time datetime="{{ $publishedAt?->toDateString() }}">
             {{ $publishedAt?->isoFormat('ll') }}
         </time>
 
