@@ -51,7 +51,7 @@
                     </p>
 
                     <p class="mt-4">
-                        Pair programming is the best way for two developers to learn from each other, <strong class="font-bold">fast</strong>.
+                        Pair programming is the best way for developers to learn from each other, <strong class="font-bold">fast</strong>.
                     </p>
 
                     <p class="mt-4">
