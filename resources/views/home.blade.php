@@ -43,8 +43,7 @@
                 </p>
 
                 <p class="mt-8">
-                    <strong class="font-semibold text-white">Make more money</strong> on the long run by avoiding endless,<br />
-                    regressions, bug huntings and rewrites.
+                    <strong class="font-semibold text-white">Make more money</strong> on the long run by avoiding endless, regressions, bug huntings and rewrites of your web applications.
                 </p>
             </div>
 
@@ -113,7 +112,7 @@
 
                 <li>
                     <span class="block font-bold text-5xl sm:text-7xl text-indigo-400">100+</span>
-                    <span class="block text-indigo-900/50 text-lg sm:text-xl">websites worked on</span>
+                    <span class="block text-indigo-900/50 text-lg sm:text-xl">web applications</span>
                 </li>
             </ul>
         </section>
@@ -231,7 +230,7 @@
                     </p>
 
                     <p class="mt-4">
-                        We can set up a tool that monitors and logs everything wrong happening on your site instead of relying on feedback.
+                        We can set up a tool that monitors and logs everything wrong happening on your web applications instead of relying on feedback.
                     </p>
                 </div>
             </div>
