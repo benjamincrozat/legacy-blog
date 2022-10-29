@@ -105,7 +105,7 @@
                     </p>
 
                     <p class="mt-4">
-                        Whatever your team need to know about PHP and Laravel, I can show them.
+                        Whatever your team needs to know about PHP and Laravel, I can show them.
                     </p>
                 </div>
 
@@ -137,7 +137,7 @@
 
                         <li class="flex items-start gap-2 mt-2">
                             <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[3.5px] w-4 h-4" />
-                            Your new hires will know where to go as well from day&nbsp;1
+                            New hires will know where to go as well from day&nbsp;1
                         </li>
                     </ul>
 
