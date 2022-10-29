@@ -19,5 +19,5 @@
         {{ $post->title }}
     </a>
 
-    <p class="mt-3">{{ $post->description }}</p>
+    <p class="leading-relaxed mt-3 text-sm">{{ $post->description }}</p>
 </div>
