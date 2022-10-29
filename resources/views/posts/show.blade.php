@@ -19,7 +19,7 @@
                 Blog
             </a>
 
-            <a href="{{ route('home') }}" class="bg-blue-400 px-3 py-2 rounded text-white tracking-widest text-xs uppercase">
+            <a href="{{ route('home') }}" class="bg-indigo-400 px-3 py-2 rounded text-white tracking-widest text-xs uppercase">
                 Hire me!
             </a>
         </nav>
@@ -49,7 +49,7 @@
             <x-table-of-contents :post="$post" />
 
             {{-- Content --}}
-            <div class="max-w-full mt-8 prose prose-a:border-b prose-a:border-blue-200 prose-a:text-blue-400 prose-a:no-underline">
+            <div class="max-w-full mt-8 prose prose-a:border-b prose-a:border-indigo-200 prose-a:text-indigo-400 prose-a:no-underline">
                 {!! Illuminate\Support\Str::marxdown($post->content) !!}
             </div>
         </div>

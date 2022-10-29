@@ -4,7 +4,7 @@
     @if ($attributes->get('href'))
         <a
             href="{{ $href }}"
-            class="text-blue-400"
+            class="text-indigo-400"
             @click="window.fathom?.trackGoal('I4R3OAAU', 0)"
         >
             {{ $slot }}
