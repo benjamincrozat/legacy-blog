@@ -19,7 +19,7 @@
                 Blog
             </a>
 
-            <a href="{{ route('home') }}" class="bg-indigo-400 px-3 py-2 rounded text-white tracking-widest text-xs uppercase">
+            <a href="{{ route('home') }}" class="bg-indigo-400 hover:opacity-50 px-3 py-2 rounded text-white tracking-widest text-xs transition-opacity uppercase">
                 Hire me!
             </a>
         </nav>
