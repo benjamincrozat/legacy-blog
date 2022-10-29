@@ -50,11 +50,11 @@
         </p>
 
         @if ($posts->isNotEmpty())
-            <ul class="grid sm:grid-cols-2 gap-12 sm:gap-8 mt-8">
+            <div class="grid sm:grid-cols-2 gap-8 mt-8">
                 @foreach ($posts as $post)
-                    <li><x-post :post="$post" /></li>
+                    <x-post :post="$post" />
                 @endforeach
-            </ul>
+            </div>
         @endif
     </section>
 

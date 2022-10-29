@@ -1,5 +1,5 @@
 ---
-Description: Knowing how to get the Laravel version you are running is important before starting to write code on a project. There are multiple ways to get check it.
+Description: Knowing which Laravel version you are running is important before starting to write code on a new project. There are multiple ways to do so.
 Published At: 2022-09-10
 Modified At:
 ---

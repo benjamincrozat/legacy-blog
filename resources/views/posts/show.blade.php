@@ -70,13 +70,13 @@
         {{-- Other posts to read --}}
         @if ($others->isNotEmpty())
             <div class="container max-w-[1024px] py-16">
-                <h4 class="font-bold text-center text-xl">Other posts to read</h4>
+                <p class="font-bold text-center text-xl">Other posts to read</p>
 
-                <ul class="grid sm:grid-cols-2 gap-12 sm:gap-8 mt-8">
+                <div class="grid sm:grid-cols-2 gap-12 sm:gap-8 mt-8">
                     @foreach ($others as $post)
-                        <li><x-post :post="$post" /></li>
+                        <x-post :post="$post" />
                     @endforeach
-                </ul>
+                </div>
             </div>
         @endif
     </article>

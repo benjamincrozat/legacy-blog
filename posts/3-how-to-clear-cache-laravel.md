@@ -1,5 +1,5 @@
 ---
-Description: When in doubt, clear the cache. In this article, you'll learn about to clear every cache Laravel uses, but we'll also see how to clear them granularly.
+Description: When in doubt, clear the cache. In this article, you'll learn about how to clear every cache Laravel uses, but we'll also see how to clear them granularly.
 Published At: 2022-09-10
 Modified At: 2022-09-25
 ---

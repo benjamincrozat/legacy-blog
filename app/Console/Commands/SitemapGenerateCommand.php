@@ -18,6 +18,8 @@ class SitemapGenerateCommand extends Command
 
         $sitemap->add(route('home'));
 
+        $sitemap->add(route('posts.index'));
+
         Post::all()->each(function (Post $post) use ($sitemap) {
             $sitemap->add(route('posts.show', $post->slug));
         });

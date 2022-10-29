@@ -16,6 +16,8 @@ class SitemapGenerateCommandTest extends TestCase
 
         $this->assertStringContainsString(route('home'), $content);
 
+        $this->assertStringContainsString(route('posts.index'), $content);
+
         Post::all()->each(function (Post $post) use ($content) {
             $this->assertStringContainsString(route('posts.show', $post->slug), $content);
         });
