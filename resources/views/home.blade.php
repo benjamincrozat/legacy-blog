@@ -45,7 +45,7 @@
                 </p>
 
                 <p class="mt-8">
-                    <strong class="font-semibold text-white">Make more money</strong> on the long run by avoiding endless, regressions, bug huntings and rewrites of your web applications.
+                    <strong class="font-semibold text-white">Make more money</strong> on the long run by avoiding endless regressions, bug huntings and rewrites of your web applications.
                 </p>
             </div>
 
