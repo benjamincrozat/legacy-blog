@@ -55,7 +55,7 @@
                     </p>
 
                     <p class="mt-4">
-                        Whatever your team need to know about PHP and Laravel, I can help.
+                        Whatever your team need to know about PHP and Laravel, I can show them.
                     </p>
                 </div>
 
