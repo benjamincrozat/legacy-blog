@@ -83,17 +83,17 @@
 
                     <ul class="mt-4">
                         <li class="flex items-start gap-2">
-                            <x-heroicon-o-check-circle class="translate-y-[3.5px] text-indigo-400 w-4 h-4" />
+                            <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[3.5px] w-4 h-4" />
                             You don't need to maintain a documentation
                         </li>
 
                         <li class="flex items-start gap-2 mt-2">
-                            <x-heroicon-o-check-circle class="translate-y-[3.5px] text-indigo-400 w-4 h-4" />
+                            <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[3.5px] w-4 h-4" />
                             Your team always knows where to go
                         </li>
 
                         <li class="flex items-start gap-2 mt-2">
-                            <x-heroicon-o-check-circle class="translate-y-[3.5px] text-indigo-400 w-4 h-4" />
+                            <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[3.5px] w-4 h-4" />
                             Your new hires will know where to go as well from day&nbsp;1
                         </li>
                     </ul>
@@ -110,13 +110,25 @@
                         Automated testing
                     </p>
 
-                    <p class="mt-4">
-                        Writing untested code is like immediately writing legacy code.
+                    <p class="font-bold mt-4">
+                        Untested code is legacy code.
                     </p>
 
                     <p class="mt-4">
-                        I can help your team write tests and <strong class="font-bold">be more confident</strong> each time they deploy something new.
+                        I can help your team write tests to:
                     </p>
+
+                    <ul class="mt-4">
+                        <li class="flex items-start gap-2">
+                            <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[3.5px] w-4 h-4" />
+                            Be more confident each time they deploy something new.
+                        </li>
+
+                        <li class="flex items-start gap-2 mt-2">
+                            <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[3.5px] w-4 h-4" />
+                            Facilitate the onboarding of new team members. They won't fear breaking something they don't know.
+                        </li>
+                    </ul>
                 </div>
 
                 <div>
