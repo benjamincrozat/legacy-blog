@@ -1,5 +1,5 @@
 <a href="{{ route('posts.show', $post->slug) }}" class="group" @click="window.fathom?.trackGoal('WQ8HQTOO', 0)">
-    <p class="font-normal font-serif leading-tight group-hover:opacity-50 text-lg transition-opacity">
+    <p class="font-normal leading-tight group-hover:opacity-50 text-lg transition-opacity">
         {{ $post->title }}
     </p>
 
