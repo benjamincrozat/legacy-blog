@@ -34,7 +34,9 @@
                     a Laravel developer for <strong class="border-b font-semibold">hire</strong>
                 </h1>
 
-                <img src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=300" width="150" height="150" alt="Benjamin Crozat" class="flex-shrink-0 order-1 md:order-none rotate-2 rounded-full" />
+                <div class="flex-shrink-0 order-1 md:order-none text-center sm:text-left w-full sm:w-auto">
+                    <img src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=300" width="150" height="150" alt="Benjamin Crozat" class="inline rotate-2 rounded-full" />
+                </div>
             </div>
 
             <div class="font-thin text-xl sm:text-3xl">
