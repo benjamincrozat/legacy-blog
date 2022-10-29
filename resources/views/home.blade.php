@@ -118,6 +118,10 @@
                     <p class="mt-4">
                         Automatically and continuously deploying new code into production is a dream for any serious business that wants to please its customers.
                     </p>
+
+                    <p class="mt-4">
+                        We can make it happen <strong class="font-bold">without any infrastructure cost</strong>.
+                    </p>
                 </div>
 
                 <div>
