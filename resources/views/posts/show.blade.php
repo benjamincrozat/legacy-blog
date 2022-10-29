@@ -3,7 +3,7 @@
     :description="$post->description"
     :image="$post->image"
 >
-    <div class="container sm:flex sm:items-center sm:justify-between py-8 text-center sm:text-left">
+    <div class="container sm:flex sm:items-center sm:justify-between mt-8 text-center sm:text-left">
         <a href="{{ route('home') }}">
             <span class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase">
                 Benjamin Crozat
