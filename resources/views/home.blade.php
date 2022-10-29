@@ -26,7 +26,7 @@
         </div>
     </div>
 
-    <div class="bg-indigo-400">
+    <div class="bg-gradient-to-r from-indigo-500 to-indigo-400">
         <section class="container max-w-[1024px] py-8 sm:py-16">
             <h1 class="font-thin text-3xl sm:text-5xl">
                 Hire the Laravel consultant your company <strong class="border-b font-semibold">deserves</strong>
@@ -45,7 +45,7 @@
         </section>
     </div>
 
-    <div class="bg-indigo-50 text-indigo-900">
+    <div class="bg-gradient-to-r from-indigo-50/50 to-indigo-100/50 text-indigo-900">
         <section class="container max-w-[1024px] py-8 sm:py-16">
             <h2 class="font-bold text-3xl text-center text-indigo-400">What I can do for your business</h2>
 
