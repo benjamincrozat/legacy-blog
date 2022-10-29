@@ -1,5 +1,5 @@
 <x-app
-    title="The developer life of Benjamin Crozat"
+    title="The web developer life of Benjamin Crozat"
     description="Have you ever had a question about PHP, Laravel or anything related to its ecosystem? This is the best blog to find your answer."
     class="text-gray-600"
 >
