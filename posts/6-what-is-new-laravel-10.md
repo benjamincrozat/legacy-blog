@@ -96,6 +96,25 @@ The boilerplate code is considerably smaller and easier to understand. Thanks to
 
 See the pull request on GitHub: [[10.x] Make invokable rules default](https://github.com/laravel/docs/pull/8165)
 
+### The Laravel 10 skeleton use native types instead of docblocks
+
+Starting with Laravel 10, the skeleton will now use native types instead of docblocks.
+
+For instance, the `schedule()` method in *app/Console/Kernel.php* will look like this:
+
+```diff
+/**
+ * Define the application's command schedule.
+- * 
+- * @param  \Illuminate\Console\Scheduling\Schedule  $schedule 
+- * @return void 
+ */
+- protected function schedule($schedule)
++ protected function schedule(Schedule $schedule): void
+```
+
+See the pull request on GitHub: [[10.x] Uses PHP Native Type Declarations 🐘](https://github.com/laravel/laravel/pull/6010)
+
 ---
 
 **This is what's new in Laravel 10 for now.**
