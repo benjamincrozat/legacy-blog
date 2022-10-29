@@ -28,9 +28,13 @@
 
     <div class="bg-gradient-to-r from-indigo-500 to-indigo-400">
         <section class="container max-w-[1024px] py-8 sm:py-16">
-            <h1 class="font-thin text-3xl sm:text-5xl">
-                Hire the Laravel consultant your&nbsp;company&nbsp;<strong class="border-b font-semibold">deserves</strong>
-            </h1>
+            <div class="flex items-center gap-8">
+                <h1 class="font-thin text-3xl sm:text-5xl">
+                    Hire the Laravel consultant your&nbsp;company&nbsp;<strong class="border-b font-semibold">deserves</strong>
+                </h1>
+
+                <img src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=300" width="150" height="150" alt="Benjamin Crozat" class="flex-shrink-0 rotate-2 rounded-full" />
+            </div>
 
             <div class="font-thin text-xl sm:text-3xl">
                 <p class="mt-8 sm:mt-16">
