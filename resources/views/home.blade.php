@@ -51,7 +51,7 @@
                     </p>
 
                     <p class="mt-4">
-                        Pair programming is the best way for two developers to learn from each other, and <strong class="font-bold">fast</strong>.
+                        Pair programming is the best way for two developers to learn from each other, <strong class="font-bold">fast</strong>.
                     </p>
 
                     <p class="mt-4">
@@ -78,12 +78,12 @@
 
                         <li class="flex items-start gap-2 mt-2">
                             <x-heroicon-o-check-circle class="translate-y-[3.5px] text-indigo-400 w-4 h-4" />
-                            Your team always knows what to do
+                            Your team always knows where to go
                         </li>
 
                         <li class="flex items-start gap-2 mt-2">
                             <x-heroicon-o-check-circle class="translate-y-[3.5px] text-indigo-400 w-4 h-4" />
-                            You new hires will know what to do from day&nbsp;1
+                            Your new hires will know where to go as well from day&nbsp;1
                         </li>
                     </ul>
 
