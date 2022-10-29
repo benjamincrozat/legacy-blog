@@ -1,5 +1,5 @@
 <x-app
-    title="Hire the Laravel consultant your company deserves"
+    title="Benjamin Crozat, a Laravel developer for hire"
     class="text-indigo-50"
 >
     <div class="bg-indigo-500">
@@ -28,9 +28,10 @@
 
     <div class="bg-gradient-to-r from-indigo-500 to-indigo-400">
         <section class="container max-w-[1024px] py-8 sm:py-16">
-            <div class="flex flex-wrap md:flex-nowrap items-center justify-center md:justify-start gap-8">
+            <div class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8">
                 <h1 class="font-thin order-2 md:order-none text-3xl md:text-5xl">
-                    Hire the Laravel consultant your&nbsp;company&nbsp;<strong class="border-b font-semibold">deserves</strong>
+                    Benjamin Crozat,<br />
+                    a Laravel developer for <strong class="border-b font-semibold">hire</strong>
                 </h1>
 
                 <img src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=300" width="150" height="150" alt="Benjamin Crozat" class="flex-shrink-0 order-1 md:order-none rotate-2 rounded-full" />
@@ -38,7 +39,7 @@
 
             <div class="font-thin text-xl sm:text-3xl">
                 <p class="mt-8 sm:mt-16">
-                    Let me guide your team toward <strong class="font-semibold text-white">maintainability</strong> and <strong class="font-semibold text-white">reliability</strong>.
+                    Let me guide your team toward <strong class="font-semibold text-white">reliability</strong> and <strong class="font-semibold text-white">maintenability</strong>.
                 </p>
 
                 <p class="mt-8">
@@ -88,9 +89,39 @@
         </section>
     </div>
 
+    <div class="bg-gradient-to-r from-indigo-100/50 to-indigo-200/50 text-indigo-900">
+        <section class="container max-w-[1024px] py-8 sm:py-16">
+            <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
+                An expert Laravel developer for your business
+            </h2>
+
+            <ul class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8 sm:mt-16">
+                <li>
+                    <span class="block font-bold text-5xl sm:text-7xl text-indigo-400">15+</span>
+                    <span class="block text-indigo-900/50 text-lg sm:text-xl">years of experience</span>
+                </li>
+
+                <li>
+                    <span class="block font-bold text-5xl sm:text-7xl text-indigo-400">1M+</span>
+                    <span class="block text-indigo-900/50 text-lg sm:text-xl">lines of code written</span>
+                </li>
+
+                <li>
+                    <span class="block font-bold text-5xl sm:text-7xl text-indigo-400">30+</span>
+                    <span class="block text-indigo-900/50 text-lg sm:text-xl">clients</span>
+                </li>
+
+                <li>
+                    <span class="block font-bold text-5xl sm:text-7xl text-indigo-400">100+</span>
+                    <span class="block text-indigo-900/50 text-lg sm:text-xl">websites worked on</span>
+                </li>
+            </ul>
+        </section>
+    </div>
+
     <div class="bg-gradient-to-r from-indigo-50/50 to-indigo-100/50 text-indigo-900">
         <section class="container max-w-[1024px] py-8 sm:py-16">
-            <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">What I can do for your business</h2>
+            <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">My Laravel development services</h2>
 
             <div class="grid sm:grid-cols-2 gap-12 mt-8 sm:mt-16">
                 <div>
