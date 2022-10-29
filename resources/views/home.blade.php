@@ -29,7 +29,7 @@
     <div class="bg-gradient-to-r from-indigo-500 to-indigo-400">
         <section class="container max-w-[1024px] py-8 sm:py-16">
             <h1 class="font-thin text-3xl sm:text-5xl">
-                Hire the Laravel consultant your company <strong class="border-b font-semibold">deserves</strong>
+                Hire the Laravel consultant your&nbsp;company&nbsp;<strong class="border-b font-semibold">deserves</strong>
             </h1>
 
             <div class="font-thin text-xl sm:text-3xl">
