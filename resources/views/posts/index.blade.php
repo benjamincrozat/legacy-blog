@@ -21,7 +21,7 @@
         </nav>
     </div>
 
-    <section id="articles" class="container mt-8 sm:mt-16">
+    <section id="articles" class="container max-w-[1024px] mt-8 sm:mt-16">
         <p class="font-bold text-center text-xl">Featured posts</p>
 
         @if ($featured->isNotEmpty())

@@ -63,7 +63,7 @@
 
         {{-- Other posts to read --}}
         @if ($others->isNotEmpty())
-            <div class="container py-16">
+            <div class="container max-w-[1024px] py-16">
                 <h4 class="font-bold text-center text-xl">Other posts to read</h4>
 
                 <ul class="grid sm:grid-cols-2 gap-12 sm:gap-8 mt-8">
