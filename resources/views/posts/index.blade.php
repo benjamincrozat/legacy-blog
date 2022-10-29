@@ -34,8 +34,8 @@
                         />
 
                         <div
-                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-black/50 flex items-center justify-between gap-4 font-bold leading-tight p-4 text-white"
-                            style="text-shadow: 1px 1px 1px rgba(0, 0, 0, .1)"
+                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-black/30 flex items-center justify-between gap-4 font-bold leading-tight p-4 text-white"
+                            style="text-shadow: 0 0 3px rgba(0, 0, 0, .3)"
                         >
                             {{ $post->title }}
                             <x-heroicon-o-arrow-right class="flex-shrink-0 w-3 h-3" />
