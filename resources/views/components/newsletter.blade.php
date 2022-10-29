@@ -3,19 +3,15 @@
     'class' => 'text-center',
 ]) }}>
     <div>
-        <p class="font-normal sm:text-lg">
-            Subscribe <span class="border-b border-indigo-200 font-semibold text-indigo-400">for free</span> to my newsletter.
-        </p>
-
         <p class="font-thin sm:text-lg">
-            Receive updates about what I learn building websites.
+            I'll share with you what I learn building websites,&nbsp;<span class="border-b border-indigo-200 font-semibold text-indigo-400">for&nbsp;free</span>.
         </p>
     </div>
 
     <x-form method="POST" action="{{ route('subscribe') }}" class="flex gap-2 mt-8 relative">
-        <input type="email" name="email" id="email" placeholder="homersimpson@example.com" required class="border-0 placeholder-gray-300 pl-6 pr-32 py-3 rounded-full w-full" x-ref="newsletter" />
+        <input type="email" name="email" id="email" placeholder="homersimpson@example.com" required class="bg-gradient-to-r from-white to-gray-50/50 border-0 placeholder-gray-300 pl-6 pr-32 py-3 rounded-full shadow shadow-gray-200/50 w-full" x-ref="newsletter" />
 
-        <button type="submit" class="absolute top-1/2 -translate-y-1/2 right-0 bg-indigo-400 hover:bg-indigo-300 flex-shrink-0 font-normal h-full px-6 rounded-full text-sm text-white transition-colors">
+        <button type="submit" class="absolute top-1/2 -translate-y-1/2 right-0 bg-gradient-to-r from-indigo-400 to-indigo-300 flex-shrink-0 font-normal h-full px-6 rounded-full shadow-lg text-sm text-white transition-colors">
             Sign me up
         </button>
     </x-form>
