@@ -10,9 +10,9 @@ class ListPostsControllerTest extends TestCase
     public function test_it_lists_posts() : void
     {
         $response = $this
-            ->get(route('home'))
+            ->get(route('posts.index'))
             ->assertOk()
-            ->assertViewIs('home')
+            ->assertViewIs('posts.index')
         ;
 
         $this->assertInstanceOf(Collection::class, $response->viewData('posts'));

@@ -42,7 +42,7 @@
     </div>
 
     <div class="bg-indigo-50 text-indigo-900">
-        <section class="container py-8 sm:py-16">
+        <section class="container max-w-[1024px] py-8 sm:py-16">
             <div class="grid sm:grid-cols-2 gap-8">
                 <div>
                     <x-heroicon-o-users class="-translate-x-1 text-indigo-900/50 w-10 h-10" />
