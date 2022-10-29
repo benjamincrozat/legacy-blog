@@ -6,7 +6,7 @@
     <div class="container sm:flex sm:items-center sm:justify-between mt-8 text-center sm:text-left">
         <a href="{{ route('home') }}">
             <span class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase">
-                Benjamin Crozat
+                {{ config('app.name') }}
             </span>
 
             <span class="block opacity-75 text-xs tracking-widest uppercase">
@@ -19,9 +19,7 @@
                 Blog
             </a>
 
-            <a href="{{ route('home') }}" class="bg-indigo-400 hover:opacity-50 px-3 py-2 rounded text-white tracking-widest text-xs transition-opacity uppercase">
-                Hire me!
-            </a>
+            <x-hire-me />
         </nav>
     </div>
 

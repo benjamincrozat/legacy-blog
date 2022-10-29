@@ -15,9 +15,7 @@
         </a>
 
         <nav class="flex items-center justify-center sm:justify-start gap-8 mt-8 sm:mt-0">
-            <a href="{{ route('home') }}" class="bg-indigo-400 hover:opacity-50 px-3 py-2 rounded text-white tracking-widest transition-opacity text-xs uppercase">
-                Hire me!
-            </a>
+            <x-hire-me />
         </nav>
     </div>
 
