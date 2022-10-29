@@ -4,7 +4,7 @@
 ]) }}>
     <div>
         <p class="font-thin sm:text-lg">
-            I'll share with you what I learn building websites,&nbsp;<span class="border-b border-indigo-200 font-semibold text-indigo-400">for&nbsp;free</span>.
+            I'll share with you what I learn by building websites,&nbsp;<span class="border-b border-indigo-200 font-semibold text-indigo-400">for&nbsp;free</span>.
         </p>
     </div>
 

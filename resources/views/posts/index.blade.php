@@ -35,7 +35,7 @@
 
                         <div
                             class="absolute bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-black/30 flex items-center justify-between gap-4 font-bold leading-tight p-4 text-white"
-                            style="text-shadow: 0 0 3px rgba(0, 0, 0, .3)"
+                            style="text-shadow: 0 0 3px rgba(0, 0, 0, .1)"
                         >
                             {{ $post->title }}
                             <x-heroicon-o-arrow-right class="flex-shrink-0 w-3 h-3" />
@@ -59,7 +59,7 @@
     </section>
 
     <div class="bg-gray-100 mt-16 py-16">
-        <x-newsletter class="container scroll-mt-8 sm:scroll-mt-16" />
+        <x-newsletter class="container max-w-screen-sm scroll-mt-8 sm:scroll-mt-16" />
     </div>
 
     <div class="bg-gray-900 flex-grow">

@@ -104,6 +104,6 @@ php artisan view:clear
 
 To completely turn off the cache, change the cache driver to `null` in your *.env* file.
 
-````
+```
 CACHE_DRIVER=null
 ```

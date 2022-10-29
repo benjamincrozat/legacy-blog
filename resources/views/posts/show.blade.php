@@ -25,15 +25,18 @@
         </nav>
     </div>
 
-    <x-breadcrumb class="mt-16">
-        <x-breadcrumb-item>
+    <x-breadcrumb class="container max-w-[1024px] mt-8 sm:mt-16">
+        <x-breadcrumb-item href="{{ route('posts.index') }}">
+            Blog
+        </x-breadcrumb-item>
+
+        <x-breadcrumb-item class="truncate">
             {{ $post->title }}
         </x-breadcrumb-item>
     </x-breadcrumb>
 
-    <article class="mt-8">
-        {{-- Post --}}
-        <div class="container">
+    <div class="container md:grid md:grid-cols-3 md:gap-16 max-w-[1024px] mt-8 sm:mt-16 relative">
+        <article class="md:col-span-2">
             {{-- Title --}}
             <h1 class="font-thin text-3xl md:text-5xl">
                 {{ $post->title }}
@@ -52,34 +55,42 @@
                 </p>
             </div>
 
-            <x-table-of-contents :post="$post" />
+            <div class="md:hidden mt-8">
+                <x-table-of-contents :post="$post" />
+            </div>
 
             {{-- Content --}}
             <div class="max-w-full mt-8 prose prose-a:border-b prose-a:border-indigo-200 prose-a:text-indigo-400 prose-a:no-underline">
                 {!! Illuminate\Support\Str::marxdown($post->content) !!}
             </div>
-        </div>
+        </article>
 
-        {{-- Newsletter --}}
-        <div class="bg-gray-100 mt-16">
-            <aside class="container py-16">
-                <x-newsletter class="scroll-mt-8 sm:scroll-mt-16" />
-            </aside>
-        </div>
-
-        {{-- Other posts to read --}}
-        @if ($others->isNotEmpty())
-            <div class="container max-w-[1024px] py-16">
-                <p class="font-bold text-center text-xl">Other posts to read</p>
-
-                <div class="grid sm:grid-cols-2 gap-12 sm:gap-8 mt-8">
-                    @foreach ($others as $post)
-                        <x-post :post="$post" />
-                    @endforeach
-                </div>
+        <div class="hidden md:block md:col-span-1">
+            <div class="sticky top-8">
+                <x-table-of-contents :post="$post" />
             </div>
-        @endif
-    </article>
+        </div>
+    </div>
+
+    {{-- Newsletter --}}
+    <div class="bg-gray-100 mt-16">
+        <aside class="container max-w-screen-sm py-16">
+            <x-newsletter class="scroll-mt-8 sm:scroll-mt-16" />
+        </aside>
+    </div>
+
+    {{-- Other posts to read --}}
+    @if ($others->isNotEmpty())
+        <div class="container max-w-[1024px] py-16">
+            <p class="font-bold text-center text-xl">Other posts to read</p>
+
+            <div class="grid sm:grid-cols-2 gap-12 sm:gap-8 mt-8">
+                @foreach ($others as $post)
+                    <x-post :post="$post" />
+                @endforeach
+            </div>
+        </div>
+    @endif
 
     <div class="bg-gray-900 flex-grow">
         <x-footer class="text-gray-400" links-color="text-gray-300" />

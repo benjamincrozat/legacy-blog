@@ -1,6 +1,6 @@
 <li class="opacity-20">/</li>
 
-<li {{ $attributes->merge(['class' => 'truncate']) }}>
+<li {{ $attributes }}>
     @if ($attributes->get('href'))
         <a
             href="{{ $href }}"
