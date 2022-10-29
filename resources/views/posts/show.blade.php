@@ -103,6 +103,10 @@
             "itemListElement": [{
                 "@type": "ListItem",
                 "position": 1,
+                "name": "Blog"
+            }, {
+                "@type": "ListItem",
+                "position": 2,
                 "name": "{{ $post->title }}"
             }]
         }

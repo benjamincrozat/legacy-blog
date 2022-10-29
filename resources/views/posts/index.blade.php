@@ -65,4 +65,16 @@
     <div class="bg-gray-900 flex-grow">
         <x-footer class="text-gray-400" links-color="text-gray-300" />
     </div>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Blog"
+            }]
+        }
+    </script>
 </x-app>
