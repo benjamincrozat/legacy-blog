@@ -64,18 +64,40 @@
         </article>
 
         <div class="hidden md:block md:col-span-1">
-            <div class="sticky top-8">
-                <x-table-of-contents :post="$post" />
+            <div class="sticky top-8 text-sm">
+                <nav>
+                    <p class="font-normal">
+                        Table of contents
+                    </p>
+
+                    <x-table-of-contents :post="$post" />
+                </nav>
+
+                <div>
+                    <p class="font-normal mt-8">
+                        Learn more about building websites, <span class="text-indigo-400">for free</span>.
+                    </p>
+
+                    <x-form method="POST" action="{{ route('subscribe') }}" class="mt-4">
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="homersimpson@example.com"
+                            required
+                            class="block border-gray-200 placeholder-gray-200 rounded text-sm w-full"
+                        />
+
+                        <button type="submit" class="font-bold mt-4 mx-auto table text-indigo-400">
+                            Sign me up!
+                        </button>
+                    </x-form>
+                </div>
             </div>
         </div>
     </div>
 
-    {{-- Newsletter --}}
-    <div class="bg-gray-100 mt-16">
-        <aside class="container max-w-screen-sm py-16">
-            <x-newsletter class="scroll-mt-8 sm:scroll-mt-16" />
-        </aside>
-    </div>
+    <x-newsletter class="border-y border-gray-200/50 sm:hidden max-w-screen-sm mt-16 mx-4 py-8" />
 
     {{-- Other posts to read --}}
     @if ($others->isNotEmpty())

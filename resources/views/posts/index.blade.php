@@ -56,11 +56,11 @@
         @endif
     </section>
 
-    <div class="bg-gray-100 mt-16 py-16">
-        <x-newsletter class="container max-w-screen-sm scroll-mt-8 sm:scroll-mt-16" />
+    <div class="border-t border-gray-200/50 container max-w-[1024px] mt-16 py-8">
+        <x-newsletter class="max-w-screen-sm mx-auto" />
     </div>
 
-    <div class="bg-gray-900 flex-grow">
+    <div class="bg-gray-900 flex-grow mt-16">
         <x-footer class="text-gray-400" links-color="text-gray-300" />
     </div>
 
