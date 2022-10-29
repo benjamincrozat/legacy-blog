@@ -3,7 +3,7 @@
     description="Have you ever had a question about PHP, Laravel or anything related to its ecosystem? This is the best blog to find your answer."
     class="text-gray-600"
 >
-    <div class="container sm:flex sm:items-center sm:justify-between py-8">
+    <div class="container sm:flex sm:items-center sm:justify-between py-8 text-center sm:text-left">
         <a href="{{ route('home') }}">
             <span class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase">
                 Benjamin Crozat
@@ -14,7 +14,7 @@
             </span>
         </a>
 
-        <nav class="flex items-center gap-8 mt-8 sm:mt-0">
+        <nav class="flex items-center justify-center sm:justify-start gap-8 mt-8 sm:mt-0">
             <a href="{{ route('home') }}" class="bg-blue-400 px-3 py-2 rounded text-white tracking-widest text-xs uppercase">
                 Hire me!
             </a>

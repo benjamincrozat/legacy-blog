@@ -3,7 +3,7 @@
     class="text-indigo-50"
 >
     <div class="bg-indigo-500">
-        <div class="container sm:flex sm:items-center sm:justify-between py-8">
+        <div class="container sm:flex sm:items-center sm:justify-between py-8 text-center sm:text-left">
             <a href="{{ route('home') }}">
                 <span class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase">
                     Benjamin Crozat
@@ -24,12 +24,12 @@
 
     <div class="bg-indigo-400">
         <section class="container py-8 sm:py-16">
-            <h1 class="font-thin text-5xl">
+            <h1 class="font-thin text-3xl sm:text-5xl">
                 Hire the Laravel consultant your company <strong class="border-b font-semibold">deserves</strong>
             </h1>
 
-            <div class="font-thin text-3xl">
-                <p class="mt-16">
+            <div class="font-thin text-xl sm:text-3xl">
+                <p class="mt-8 sm:mt-16">
                     Let me guide your team toward <strong class="font-semibold text-white">maintainability</strong> and <strong class="font-semibold text-white">reliability</strong>.
                 </p>
 
@@ -45,8 +45,9 @@
         <section class="container max-w-[1024px] py-8 sm:py-16">
             <div class="grid sm:grid-cols-2 gap-8">
                 <div>
-                    <x-heroicon-o-users class="-translate-x-1 text-indigo-900/50 w-10 h-10" />
-                    <p class="font-bold mt-4 text-xl">
+                    <x-heroicon-o-users class="-translate-x-1 text-indigo-400/50 w-10 h-10" />
+
+                    <p class="font-bold mt-4 text-indigo-400 text-xl">
                         Pair programming
                     </p>
 
@@ -60,9 +61,9 @@
                 </div>
 
                 <div>
-                    <x-heroicon-o-check-circle class="-translate-x-1 text-indigo-900/50 w-10 h-10" />
+                    <x-heroicon-o-check-circle class="-translate-x-1 text-indigo-400/50 w-10 h-10" />
 
-                    <p class="font-bold mt-4 text-xl">
+                    <p class="font-bold mt-4 text-indigo-400 text-xl">
                         Best practices
                     </p>
 
@@ -93,9 +94,9 @@
                 </div>
 
                 <div>
-                    <x-heroicon-o-computer-desktop class="-translate-x-1 text-indigo-900/50 w-10 h-10" />
+                    <x-heroicon-o-computer-desktop class="-translate-x-1 text-indigo-400/50 w-10 h-10" />
 
-                    <p class="font-bold mt-4 text-xl">
+                    <p class="font-bold mt-4 text-indigo-400 text-xl">
                         Automated testing
                     </p>
 
@@ -109,9 +110,9 @@
                 </div>
 
                 <div>
-                    <x-heroicon-o-paper-airplane class="-translate-x-1 text-indigo-900/50 w-10 h-10" />
+                    <x-heroicon-o-paper-airplane class="-translate-x-1 text-indigo-400/50 w-10 h-10" />
 
-                    <p class="font-bold mt-4 text-xl">
+                    <p class="font-bold mt-4 text-indigo-400 text-xl">
                         Continuous integration
                     </p>
 
@@ -125,9 +126,9 @@
                 </div>
 
                 <div>
-                    <x-heroicon-o-eye class="-translate-x-1 text-indigo-900/50 w-10 h-10" />
+                    <x-heroicon-o-eye class="-translate-x-1 text-indigo-400/50 w-10 h-10" />
 
-                    <p class="font-bold mt-4 text-xl">Errors monitoring</p>
+                    <p class="font-bold mt-4 text-indigo-400 text-xl">Errors monitoring</p>
 
                     <p class="mt-4">
                         What if we could <strong class="font-bold">prevent</strong> your company to loose even more money?
