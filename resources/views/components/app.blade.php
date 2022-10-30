@@ -34,10 +34,6 @@
         <link rel="icon" type="image/png" sizes="96x96" href="{{ secure_asset('/img/favicons/96x96.png') }}" />
 
         <link rel="canonical" href="{{ url()->current() }}" />
-
-        @if (app()->isProduction())
-            <script defer src="https://save-tonight-hey-jude.benjamincrozat.com/script.js" data-site="{{ config('services.fathom.site_id') }}"></script>
-        @endif
     </head>
     <body {{ $attributes->merge(['class' => 'bg-gray-50 font-light']) }} x-data>
         <div class="flex flex-col min-h-screen">
@@ -45,5 +41,15 @@
         </div>
 
         <x-status />
+
+        @if (app()->isProduction())
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-X7RCWQHXPL"></script>
+            <script>
+                window.dataLayer = window.dataLayer || []
+                function gtag() { dataLayer.push(arguments) }
+                gtag('js', new Date())
+                gtag('config', 'G-X7RCWQHXPL')
+            </script>
+        @endif
     </body>
 </html>
