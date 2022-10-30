@@ -25,7 +25,7 @@
         @if ($featured->isNotEmpty())
             <div class="grid sm:grid-cols-2 gap-4 mt-8">
                 @foreach ($featured as $post)
-                    <a href="{{ route('posts.show', $post->slug) }}" class="hover:opacity-50 overflow-hidden relative rounded-xl transition-opacity">
+                    <a href="{{ route('posts.show', $post->slug) }}" class="overflow-hidden relative rounded-xl">
                         <img
                             src="{{ $post->image }}"
                             alt='Illustration for "{{ $post->title }}"'

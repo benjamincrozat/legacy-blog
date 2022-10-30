@@ -15,7 +15,7 @@
         </a>
 
         <nav class="flex items-center justify-center sm:justify-start gap-8 mt-8 sm:mt-0">
-            <a href="{{ route('posts.index') }}" class="hover:opacity-50 text-xs tracking-widest transition-opacity uppercase">
+            <a href="{{ route('posts.index') }}" class="text-xs tracking-widest uppercase">
                 Blog
             </a>
 
@@ -45,9 +45,11 @@
                 <img src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}" width="18" height="18" alt="Benjamin Crozat's avatar." class="-translate-y-[.5px] rounded-full" />
 
                 <p>
-                    <a href="https://twitter.com/benjamincrozat" target="_blank" rel="noopener noreferrer" class="font-normal" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">Benjamin Crozat</a>
+                    <a href="https://benjamincrozat.com" class="font-normal" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">
+                        Benjamin Crozat
+                    </a>
 
-                    <span class="mx-1">—</span>
+                    &nbsp;—&nbsp;
 
                     @choice(':count minute|:count minutes', $post->getReadTime()) read
                 </p>

@@ -6,7 +6,7 @@
             >
                 <a
                     href="#{{ $item['id'] }}"
-                    class="flex items-start gap-2 leading-tight text-indigo-900/75 hover:text-indigo-900/40 transition-colors"
+                    class="flex items-start gap-2 leading-tight text-indigo-900/75"
                 >
                     <x-heroicon-o-hashtag
                         class="flex-shrink-0 w-3 h-3 text-indigo-900/40 translate-y-[2px]"

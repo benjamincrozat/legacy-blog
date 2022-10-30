@@ -13,7 +13,7 @@
 
     <a
         href="{{ route('posts.show', $post->slug) }}"
-        class="font-normal inline-block mt-4 hover:opacity-50 text-indigo-600 transition-opacity"
+        class="font-normal inline-block mt-4 text-indigo-600"
         @click="window.fathom?.trackGoal('WQ8HQTOO', 0)"
     >
         {{ $post->title }}
