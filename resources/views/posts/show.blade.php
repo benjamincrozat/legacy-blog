@@ -23,7 +23,7 @@
         </nav>
     </div>
 
-    <x-breadcrumb class="container md:max-w-[1024px] mt-8 sm:mt-16">
+    <x-breadcrumb class="container mt-8 sm:mt-16">
         <x-breadcrumb-item href="{{ route('posts.index') }}">
             Blog
         </x-breadcrumb-item>
@@ -33,8 +33,8 @@
         </x-breadcrumb-item>
     </x-breadcrumb>
 
-    <div class="container md:grid md:grid-cols-3 md:gap-16 md:max-w-[1024px] mt-8 relative">
-        <article class="md:col-span-2">
+    <div class="container lg:grid lg:grid-cols-3 lg:gap-16 mt-8 relative">
+        <article class="lg:col-span-2">
             {{-- Title --}}
             <h1 class="font-thin text-3xl md:text-5xl">
                 {{ $post->title }}
@@ -47,7 +47,7 @@
                 <a href="https://benjamincrozat.com" class="font-normal underline" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">Benjamin Crozat</a> — @choice(':count minute|:count minutes', $post->getReadTime()) read
             </div>
 
-            <div class="md:hidden mt-8 text-sm">
+            <div class="lg:hidden mt-8 text-sm">
                 <p class="font-normal">
                     Table of contents
                 </p>
@@ -73,45 +73,43 @@
             </div>
         </article>
 
-        <div class="hidden md:block md:col-span-1">
-            <div class="sticky top-8 text-sm">
-                <nav>
-                    <p class="font-normal">
-                        Table of contents
-                    </p>
+        <div class="hidden md:block md:col-span-1 text-sm">
+            <nav>
+                <p class="font-normal">
+                    Table of contents
+                </p>
 
-                    <x-table-of-contents :post="$post" />
-                </nav>
+                <x-table-of-contents :post="$post" />
+            </nav>
 
-                <div>
-                    <p class="font-normal mt-8">
-                        Let me share with you my discoveries about the art of crafting websites, <span class="text-indigo-400">for free</span>.
-                    </p>
+            <div>
+                <p class="font-normal mt-8">
+                    Let me share with you my discoveries about the art of crafting websites, <span class="text-indigo-400">for free</span>.
+                </p>
 
-                    <x-form method="POST" action="{{ route('subscribe') }}" class="mt-4">
-                        <input
-                            type="email"
-                            name="email"
-                            id="email"
-                            placeholder="homersimpson@example.com"
-                            required
-                            class="block border-gray-200 placeholder-gray-200 rounded text-sm w-full"
-                        />
+                <x-form method="POST" action="{{ route('subscribe') }}" class="mt-4">
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="homersimpson@example.com"
+                        required
+                        class="block border-gray-200 placeholder-gray-200 rounded text-sm w-full"
+                    />
 
-                        <button type="submit" class="font-bold mt-4 mx-auto table text-indigo-400">
-                            Sign me up!
-                        </button>
-                    </x-form>
-                </div>
+                    <button type="submit" class="font-bold mt-4 mx-auto table text-indigo-400">
+                        Sign me up!
+                    </button>
+                </x-form>
             </div>
         </div>
     </div>
 
-    <x-newsletter class="sm:hidden md:max-w-screen-sm mt-16" />
+    <x-newsletter class="container md:hidden sm:max-w-[480px] mt-16" />
 
     {{-- Other posts to read --}}
     @if ($others->isNotEmpty())
-        <div class="container md:max-w-[1024px] py-16">
+        <div class="container py-16">
             <p class="font-bold text-center text-xl">Other posts to read</p>
 
             <div class="grid sm:grid-cols-2 gap-12 sm:gap-8 mt-8">
