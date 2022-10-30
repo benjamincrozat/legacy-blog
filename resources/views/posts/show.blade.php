@@ -81,7 +81,7 @@
 
                 <div>
                     <p class="font-normal mt-8">
-                        Learn more about building websites, <span class="text-indigo-400">for free</span>.
+                        Let me share with you my web development discoveries, <span class="text-indigo-400">for free</span>.
                     </p>
 
                     <x-form method="POST" action="{{ route('subscribe') }}" class="mt-4">
