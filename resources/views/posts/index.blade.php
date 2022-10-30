@@ -56,7 +56,7 @@
         @endif
     </section>
 
-    <div class="border-t border-gray-200/50 container max-w-[1024px] mt-16 py-8">
+    <div class="container max-w-[1024px] mt-16">
         <x-newsletter class="max-w-screen-sm mx-auto" />
     </div>
 
