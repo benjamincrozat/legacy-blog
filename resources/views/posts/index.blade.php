@@ -19,7 +19,7 @@
         </nav>
     </div>
 
-    <section id="articles" class="container max-w-[1024px] mt-8 sm:mt-16">
+    <section id="articles" class="container md:max-w-[1024px] mt-8 sm:mt-16">
         <p class="font-bold text-center text-xl">Featured posts</p>
 
         @if ($featured->isNotEmpty())
@@ -68,7 +68,7 @@
         @endif
     </section>
 
-    <div class="container max-w-[1024px] mt-16">
+    <div class="container md:max-w-[1024px] mt-16">
         <x-newsletter class="max-w-screen-sm mx-auto" />
     </div>
 

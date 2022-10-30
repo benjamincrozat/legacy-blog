@@ -28,7 +28,7 @@
     </div>
 
     <div class="bg-gradient-to-r from-indigo-500 to-indigo-400">
-        <section class="container max-w-[1024px] py-8 sm:py-16">
+        <section class="container md:max-w-[1024px] py-8 sm:py-16">
             <div class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8">
                 <h1 class="font-thin order-2 md:order-none text-3xl md:text-5xl">
                     Benjamin Crozat,<br />
@@ -98,7 +98,7 @@
     </div>
 
     <div class="bg-gradient-to-r from-indigo-100/50 to-indigo-200/50 text-indigo-900">
-        <section class="container max-w-[1024px] py-8 sm:py-16">
+        <section class="container md:max-w-[1024px] py-8 sm:py-16">
             <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
                 An expert Laravel developer for your business
             </h2>
@@ -128,7 +128,7 @@
     </div>
 
     <div class="bg-gradient-to-r from-indigo-50/50 to-indigo-100/50 text-indigo-900">
-        <section class="container max-w-[1024px] py-8 sm:py-16">
+        <section class="container md:max-w-[1024px] py-8 sm:py-16">
             <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">My Laravel development services</h2>
 
             <div class="grid sm:grid-cols-2 gap-12 mt-8 sm:mt-16">
@@ -247,7 +247,7 @@
     </div>
 
     <div class="bg-gradient-to-r from-indigo-100/50 to-indigo-200/50 text-indigo-900">
-        <section class="container max-w-[1024px] py-8 sm:py-16">
+        <section class="container md:max-w-[1024px] py-8 sm:py-16">
             <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
                 About me
             </h2>

@@ -23,7 +23,7 @@
         </nav>
     </div>
 
-    <x-breadcrumb class="container max-w-[1024px] mt-8 sm:mt-16">
+    <x-breadcrumb class="container md:max-w-[1024px] mt-8 sm:mt-16">
         <x-breadcrumb-item href="{{ route('posts.index') }}">
             Blog
         </x-breadcrumb-item>
@@ -111,7 +111,7 @@
 
     {{-- Other posts to read --}}
     @if ($others->isNotEmpty())
-        <div class="container max-w-[1024px] py-16">
+        <div class="container md:max-w-[1024px] py-16">
             <p class="font-bold text-center text-xl">Other posts to read</p>
 
             <div class="grid sm:grid-cols-2 gap-12 sm:gap-8 mt-8">
