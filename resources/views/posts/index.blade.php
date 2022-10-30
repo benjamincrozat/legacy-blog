@@ -1,6 +1,6 @@
 <x-app
     title="The web developer life of Benjamin Crozat"
-    description="Have you ever had a question about PHP, Laravel or anything related to its ecosystem? This is the best blog to find your answer."
+    description="Have you ever had a question about the art of crafting web applications? This is the best blog to find your answer."
     class="text-gray-600"
 >
     <div class="container flex justify-between mt-8">
