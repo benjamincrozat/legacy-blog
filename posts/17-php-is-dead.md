@@ -32,7 +32,7 @@ Whenever you hear someone telling you "PHP is dead", ignore them and look at the
 
 **The most used CMS in 2022 is WordPress.**
 
-Demand for content management systems (CMS) is exploding. Businesses always need to reach new customers through SEO, and a good CMS is mandatory to write all this content. This trend will likely never fade.
+Demand for content management systems (CMS) is exploding. Businesses always need to reach new customers through SEO, and a good CMS is mandatory for that. This trend will likely never fade.
 
 I'm not surprised that WordPress is so popular. It's an always-evolving CMS and it has a lot of excellent themes and plugins to help you reach your goals.
 
