@@ -241,6 +241,28 @@
         </section>
     </div>
 
+    <div class="bg-gradient-to-r from-indigo-100/50 to-indigo-200/50 text-indigo-900">
+        <section class="container max-w-[1024px] py-8 sm:py-16">
+            <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
+                About me
+            </h2>
+
+            <div class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8 mt-8 sm:text-lg md:text-xl">
+                <div class="order-2 md:order-none">
+                    <p>My name is Benjamin Crozat. I'm a passionate <strong class="font-bold">full-stack PHP and Laravel web developer from the south of France</strong>.</p>
+
+                    <p class="mt-4">I wasn't fond of the school system and had to live at some point. Therefore, I quit at the age of 15 and have educated myself on everything since then.</p>
+
+                    <div class="mt-4">The freelancer life immediately seduced me, and I quickly became interested in helping companies to work better with web developers and technology.</div>
+                </div>
+
+                <div class="flex-shrink-0 order-1 md:order-none text-center sm:text-left w-full sm:w-auto">
+                    <img src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" width="128" height="128" alt="Benjamin Crozat" class="inline rotate-2 rounded-full" />
+                </div>
+            </div>
+        </section>
+    </div>
+
     <div class="bg-indigo-500 flex-grow">
         <x-footer class="text-indigo-100" />
     </div>
