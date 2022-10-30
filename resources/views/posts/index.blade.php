@@ -32,7 +32,7 @@
                         />
 
                         <div
-                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-black/30 flex items-center justify-between gap-4 font-bold leading-tight p-4 text-white"
+                            class="absolute bottom-2 left-2 right-2 bg-black/40 backdrop-blur-md flex items-center justify-between gap-4 leading-tight p-3 rounded-md text-sm text-white"
                             style="text-shadow: 0 0 3px rgba(0, 0, 0, .1)"
                         >
                             {{ $post->title }}

@@ -2,8 +2,8 @@
     title="Benjamin Crozat, a Laravel developer for hire"
     class="text-indigo-50"
 >
-    <div class="bg-indigo-500">
-        <div class="container sm:flex sm:items-center sm:justify-between py-8 text-center sm:text-left">
+    <div class="bg-indigo-500 md:sticky top-0 z-10">
+        <div class="container sm:flex sm:items-center sm:justify-between py-4 text-center sm:text-left">
             <a href="{{ route('home') }}">
                 <span class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase">
                     Benjamin Crozat
@@ -15,18 +15,20 @@
             </a>
 
             <nav class="flex items-center justify-center sm:justify-start gap-8 mt-8 sm:mt-0">
-                <a href="{{ route('posts.index') }}" class="hover:opacity-50 text-xs tracking-widest transition-opacity uppercase">
+                <a href="{{ route('posts.index') }}" class="text-indigo-100 text-xs tracking-widest uppercase">
                     Read my blog
                 </a>
 
-                <a href="mailto:benjamincrozat@me.com" class="bg-white hover:opacity-50 px-3 py-2 rounded text-indigo-400 text-sm transition-opacity">
+                <a href="mailto:benjamincrozat@me.com" class="border-b border-white/50 font-normal leading-loose text-white text-xs tracking-widest uppercase">
                     Contact me!
                 </a>
             </nav>
         </div>
     </div>
 
-    <div class="bg-gradient-to-r from-indigo-500 to-indigo-400">
+    <div
+        class="bg-gradient-to-r from-indigo-500 to-indigo-400"
+    >
         <section class="container max-w-[1024px] py-8 sm:py-16">
             <div class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8">
                 <h1 class="font-thin order-2 md:order-none text-3xl md:text-5xl">
@@ -104,7 +106,7 @@
 
                 <li>
                     <span class="block font-bold text-5xl sm:text-7xl text-indigo-400">1M+</span>
-                    <span class="block text-indigo-900/50 text-lg sm:text-xl">lines of code written</span>
+                    <span class="block text-indigo-900/50 text-lg sm:text-xl">lines of code</span>
                 </li>
 
                 <li>
@@ -146,7 +148,7 @@
                         <path d="M87.073 97.222H66.475c-4.142 0-7.5 3.358-7.5 7.5 0 4.142 3.358 7.5 7.5 7.5h20.598c4.142 0 7.5-3.358 7.5-7.5 0-4.143-3.358-7.5-7.5-7.5zm32.197 15h67.53c4.143 0 7.5-3.358 7.5-7.5 0-4.142-3.357-7.5-7.5-7.5h-67.53c-4.142 0-7.5 3.358-7.5 7.5 0 4.141 3.358 7.5 7.5 7.5zm-32.197 30.333H66.475c-4.142 0-7.5 3.358-7.5 7.5 0 4.142 3.358 7.5 7.5 7.5h20.598c4.142 0 7.5-3.358 7.5-7.5 0-4.143-3.358-7.5-7.5-7.5zm32.197 15h67.53c4.143 0 7.5-3.358 7.5-7.5 0-4.142-3.357-7.5-7.5-7.5h-67.53c-4.142 0-7.5 3.358-7.5 7.5 0 4.141 3.358 7.5 7.5 7.5zm-32.197 30.333H66.475c-4.142 0-7.5 3.358-7.5 7.5 0 4.142 3.358 7.5 7.5 7.5h20.598c4.142 0 7.5-3.358 7.5-7.5 0-4.142-3.358-7.5-7.5-7.5zm107.227 7.5c0-4.142-3.357-7.5-7.5-7.5h-67.53c-4.142 0-7.5 3.358-7.5 7.5 0 4.142 3.358 7.5 7.5 7.5h67.53c4.143 0 7.5-3.358 7.5-7.5z"/>
                         <path d="M253.275 174.418V25.055c0-4.142-3.357-7.5-7.5-7.5H7.5c-4.142 0-7.5 3.358-7.5 7.5v250c0 4.142 3.358 7.5 7.5 7.5h238.275c29.96 0 54.334-24.374 54.334-54.334 0-27.414-20.412-50.137-46.834-53.803zM15 267.554v-235h223.275v141.849c-44.209 6.138-63.373 61.329-29.946 93.151H15zm230.775 0c-21.688 0-39.333-17.645-39.333-39.334 0-21.689 17.645-39.333 39.333-39.333s39.334 17.645 39.334 39.333c0 21.689-17.646 39.334-39.334 39.334z"/>
                         <path d="M269.02 209.137c-3.542-2.143-8.154-1.011-10.3 2.534l-14.715 24.32-11.406-10.062c-3.107-2.74-7.845-2.443-10.586.663-2.74 3.106-2.443 7.846.662 10.586l18.138 16c3.491 3.078 8.949 2.275 11.379-1.742l19.362-32c2.145-3.543 1.01-8.154-2.534-10.299z"/>
-                      </svg>
+                        </svg>
 
                     <p class="font-bold mt-4 text-indigo-400 text-lg sm:text-xl">
                         Best practices
@@ -159,17 +161,17 @@
                     <ul class="mt-4">
                         <li class="flex items-start gap-2">
                             <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[3.5px] w-4 h-4" />
-                            You don't need to maintain a documentation
+                            You don't need to maintain a documentation.
                         </li>
 
                         <li class="flex items-start gap-2 mt-2">
                             <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[3.5px] w-4 h-4" />
-                            Your team always knows where to go
+                            Your developers always knows where to go.
                         </li>
 
                         <li class="flex items-start gap-2 mt-2">
                             <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[3.5px] w-4 h-4" />
-                            New hires will know where to go as well from day&nbsp;1
+                            New hires will know where to go as well from day&nbsp;1.
                         </li>
                     </ul>
 
@@ -240,6 +242,6 @@
     </div>
 
     <div class="bg-indigo-500 flex-grow">
-        <x-footer class="text-indigo-200" />
+        <x-footer class="text-indigo-100" />
     </div>
 </x-app>
