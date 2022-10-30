@@ -53,7 +53,11 @@
                 </p>
             </div>
 
-            <div class="md:hidden mt-8">
+            <div class="md:hidden mt-8 text-sm">
+                <p class="font-normal">
+                    Table of contents
+                </p>
+
                 <x-table-of-contents :post="$post" />
             </div>
 

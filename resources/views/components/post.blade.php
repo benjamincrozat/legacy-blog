@@ -1,4 +1,4 @@
-<div class="bg-gradient-to-r from-white to-gray-50/30 p-5 rounded-lg shadow-lg shadow-gray-200">
+<div class="bg-gradient-to-r from-white to-gray-50/30 p-4 sm:p-5 rounded-lg shadow-lg shadow-gray-200">
     <div class="flex items-center gap-2 text-sm">
         <img src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}" width="18" height="18" alt="Benjamin Crozat" class="-translate-y-[.5px] rounded-full" />
 
