@@ -26,9 +26,7 @@
         </div>
     </div>
 
-    <div
-        class="bg-gradient-to-r from-indigo-500 to-indigo-400"
-    >
+    <div class="bg-gradient-to-r from-indigo-500 to-indigo-400">
         <section class="container max-w-[1024px] py-8 sm:py-16">
             <div class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8">
                 <h1 class="font-thin order-2 md:order-none text-3xl md:text-5xl">
@@ -48,6 +46,12 @@
 
                 <p class="mt-8">
                     <strong class="font-semibold text-white">Make more money</strong> on the long run by avoiding endless regressions, bug huntings and rewrites of your web applications.
+                </p>
+
+                <p class="mt-8">
+                    <a href="#about" class="border-b border-white/50 font-normal text-lg sm:text-xl text-white">
+                        Learn more about me
+                    </a>
                 </p>
             </div>
 
@@ -263,7 +267,7 @@
         </section>
     </div>
 
-    <div class="bg-indigo-500 flex-grow">
+    <div id="about" class="bg-indigo-500 flex-grow">
         <x-footer class="text-indigo-100" />
     </div>
 </x-app>
