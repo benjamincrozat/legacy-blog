@@ -136,7 +136,7 @@ Now, imagine what you could do. Store this in a database, aggregate the job offe
 
 You could have an entirely automated project. And lazy people like me know these are the best kind of projects!
 
-GPT-3 is the basis for a variety of great products such as [Jasper](https://www.jasper.ai), [Tweet Hunter](https://tweethunter.io), and many more.
+GPT-3 is the basis for a variety of great products such as [GitHub Copilot](https://github.com/features/copilot), [Jasper](https://www.jasper.ai), [Tweet Hunter](https://tweethunter.io), and many more.
 
 Your imagination is the limit. I hope you will create something unique thanks to the power of AI!
 
