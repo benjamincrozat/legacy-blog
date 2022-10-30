@@ -33,7 +33,7 @@
         </x-breadcrumb-item>
     </x-breadcrumb>
 
-    <div class="container md:grid md:grid-cols-3 md:gap-16 max-w-[1024px] mt-8 relative">
+    <div class="container md:grid md:grid-cols-3 md:gap-16 md:max-w-[1024px] mt-8 relative">
         <article class="md:col-span-2">
             {{-- Title --}}
             <h1 class="font-thin text-3xl md:text-5xl">
