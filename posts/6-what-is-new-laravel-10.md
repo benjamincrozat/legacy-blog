@@ -20,7 +20,7 @@ Installing Laravel 10 is easy. The Laravel installer has a `--dev` flag, which i
 laravel new hello-world --dev
 ```
 
-## Every new feature and change in Laravel 10
+## New features and changes in Laravel 10
 
 ### Dropped support for PHP 8.0
 
