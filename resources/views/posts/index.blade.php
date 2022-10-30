@@ -43,7 +43,7 @@
             </div>
         @endif
 
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
+        {{-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
 
         <ins
             class="adsbygoogle"
@@ -53,7 +53,7 @@
             data-ad-slot="3016389119"
         ></ins>
 
-        <script>(adsbygoogle = window.adsbygoogle || []).push({})</script>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({})</script> --}}
 
         <p class="font-bold mb-4 mt-16 text-center text-xl">
             Latest posts

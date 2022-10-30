@@ -55,7 +55,7 @@
                 <x-table-of-contents :post="$post" />
             </div>
 
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
+            {{-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
 
             <ins class="adsbygoogle"
                 style="display:block; text-align:center;"
@@ -65,7 +65,7 @@
                 data-ad-slot="9457636390"
             ></ins>
 
-            <script>(adsbygoogle = window.adsbygoogle || []).push({})</script>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({})</script> --}}
 
             {{-- Content --}}
             <div class="max-w-full mt-8 prose prose-a:border-b prose-a:border-indigo-200 prose-a:text-indigo-400 prose-a:no-underline">
