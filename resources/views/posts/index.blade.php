@@ -61,7 +61,7 @@
     </div>
 
     <div class="bg-gray-900 flex-grow mt-16">
-        <x-footer class="text-gray-400" links-color="text-gray-300" />
+        <x-footer class="text-gray-200" />
     </div>
 
     <script type="application/ld+json">
