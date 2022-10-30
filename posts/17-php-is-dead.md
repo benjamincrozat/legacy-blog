@@ -32,11 +32,11 @@ Whenever you hear someone telling you "PHP is dead", ignore them and look at the
 
 **The most used CMS in 2022 is WordPress.**
 
-In 2022, the content management system (CMS) demand is exploding. Businesses always need to reach new customers through SEO, and you need a good system in order to write all this content. This is a trend that will likely never fade.
+Demand for content management systems (CMS) is exploding. Businesses always need to reach new customers through SEO, and a good CMS is mandatory to write all this content. This trend will likely never fade.
 
-I'm not surprised that WordPress is so popular. It's an always-evolving CMS, it has a lot of excellent themes and plugins to help you reach your goals.
+I'm not surprised that WordPress is so popular. It's an always-evolving CMS and it has a lot of excellent themes and plugins to help you reach your goals.
 
-Also, if you ever want to switch away from WordPress, most alternatives offer tools to import every post you already wrote. That means WordPress is a safe choice.
+Also, if you ever want to switch away from WordPress, most alternatives offer tools to import every post you already wrote. That means WordPress is a safe choice to begin with.
 
 | CMS            | Market share in October 2022 |
 | -------------- | ---------------------------- |
@@ -59,7 +59,7 @@ Also, if you ever want to switch away from WordPress, most alternatives offer to
 
 Version 6 of WordPress is a significant update that includes a new default theme and a new block-based editor. This new editor is a major change to how WordPress works and allows for more flexibility and creativity when creating new content.
 
-This alone probably drives people to update to the latest major version and, therefore, more recent PHP versions.
+This alone probably drives people to update to the latest major version and, therefore, the latest PHP version.
 
 | WordPress Version | Usage in October 2022 |
 | ----------------- | --------------------- |
@@ -73,7 +73,7 @@ This alone probably drives people to update to the latest major version and, the
 
 **The most used PHP version in 2022 is PHP 7.**
 
-WordPress requires at least PHP 7.4 to be installed. I bet you PHP 8 usage will skyrocket once WordPress makes a move.
+WordPress requires at least PHP 7.4 to be installed. Imagine how PHP 8 usage will skyrocket once WordPress increments its minimum requirements.
 
 It's also funny to see some ancient websites still up and running thanks to PHP 4. 😅
 
@@ -88,7 +88,7 @@ It's also funny to see some ancient websites still up and running thanks to PHP 
 
 **The most popular PHP framework in 2022 is Laravel.**
 
-In my opinion, Laravel is the best PHP framework. I have used it since 2015, and it changed my life. Its pragmatic way of doing things makes it attractive to new developers. And for more experienced people, Laravel offers advanced concepts to help you build complex features at scale.
+In my opinion, Laravel is the best PHP framework. I started using it since 2015, and it changed my life. Its pragmatic way of doing things makes it attractive to new developers. And for more experienced people, Laravel offers advanced concepts to help you build complex features at scale.
 
 ### On Packagist
 
