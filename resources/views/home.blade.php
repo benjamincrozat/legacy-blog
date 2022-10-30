@@ -256,7 +256,7 @@
                 <div class="order-2 md:order-none">
                     <p>My name is Benjamin Crozat. I'm a passionate <strong class="font-bold">full-stack PHP and Laravel web developer from the south of France</strong>.</p>
 
-                    <p class="mt-4">I wasn't fond of the school system and had to live at some point. Therefore, I quit at the age of 15 and have educated myself on everything since then.</p>
+                    <p class="mt-4">I wasn't fond of the school system and had to leave at some point. Therefore, I quit at the age of 15 and have educated myself on everything since then.</p>
 
                     <div class="mt-4">The freelancer life immediately seduced me, and I quickly became interested in helping companies to work better with web developers and technology.</div>
                 </div>
