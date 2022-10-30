@@ -1,5 +1,6 @@
 <x-app
     title="Benjamin Crozat, a Laravel developer for hire"
+    description="Let me guide your team toward reliability and maintenability. Book an expert Laravel developer, TODAY!"
     class="text-indigo-50"
 >
     <div class="bg-indigo-500 md:sticky top-0 z-10">
