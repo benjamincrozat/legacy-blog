@@ -3,7 +3,7 @@
     'class' => 'text-center',
 ]) }}>
     <p class="font-thin">
-        Let me share with you my web development discoveries, <span class="border-b border-indigo-200 font-semibold text-indigo-400">for&nbsp;free</span>.
+        Let me share with you my discoveries about the art of crafting websites, <span class="border-b border-indigo-200 font-semibold text-indigo-400">for free</span>.
     </p>
 
     <x-form method="POST" action="{{ route('subscribe') }}" class="flex gap-2 mt-4 relative">
