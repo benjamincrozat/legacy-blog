@@ -6,9 +6,7 @@ Modified At:
 
 # The 5 best PHP & Laravel blogs to read in 2022
 
-I think blogging is necessary. It helps the future generation of developers.
-
-I wouldn’t be where I am today without others sharing their knowledge.
+I wouldn’t be where I am today without other developers sharing their knowledge through blogging.
 
 Therefore, I present you a bunch of awesome PHP blogs from community members publishing interesting and valuable content. Get your RSS feeds aggregator and follow me!
 
