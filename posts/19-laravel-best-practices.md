@@ -71,11 +71,11 @@ Do you know why you're using a framework?
 
 ### Use single action controllers for clarity
 
-Sometimes, it makes things easier to use [single action controllers](https://laravel.com/docs/9.x/controllers#single-action-controllers). You can't always avoid complexity and this complexity might be better off in its own file.
+Sometimes, it makes things easier to use [single action controllers](https://laravel.com/docs/controllers#single-action-controllers). You can't always avoid complexity and this complexity might be better off in its own file.
 
 ### Use policies
 
-Policies exist for a few reasons:
+[Policies](https://laravel.com/docs/authorization#creating-policies) exist for a few reasons:
 1. Reusing authorization logic across multiple controllers;
 2. Offloading code from bloated controllers;
 3. Checking out the *app/Policies* folder for everything related to authorizations is natural for everyone.
@@ -98,7 +98,7 @@ Post::with('author')->get();
 
 ### Use Eloquent's strict mode
 
-Eloquent's strict mode is a blessing for debugging. It will throw exceptions when:
+[Eloquent's strict mode](https://laravel.com/docs/eloquent#enabling-eloquent-strict-mode) is a blessing for debugging. It will throw exceptions when:
 - Lazy loading relationships;
 - Assigning non-fillable attributes;
 - Accessing attributes that don't exist (or weren't retrieved).
@@ -119,7 +119,7 @@ Lets use the simplest example possible: you have a contact form. Sending an emai
 
 What if you could delay this until the user received your server's response?
 
-That's exactly what `dispatchAfterResponse()` does:
+That's exactly what [`dispatchAfterResponse()`](https://laravel.com/docs/queues#dispatching-after-the-response-is-sent-to-browser) does:
 
 ```php
 SendContactEmail::dispatchAfterResponse($input);
@@ -133,7 +133,7 @@ Imagine you have to process images uploaded by your users. If you process every 
 
 This isn't good UX and we can change that.
 
-Laravel has a queues system that will run all those tasks sequentially or with a limited amount of parallelism.
+Laravel has a [queue system](https://laravel.com/docs/queues) that will run all those tasks sequentially or with a limited amount of parallelism.
 
 ## Testing best practices
 
@@ -147,7 +147,20 @@ There's also a `RefreshDatabase` trait, but the lazy one is more efficient, as m
 
 ### Make use of factories
 
-Factories make testing way easier. You can create one using the `php artisan make:factory` command.
+[Factories](https://laravel.com/docs/9.x/eloquent-factories) make testing way easier. You can create one using the `php artisan make:factory` command.
+
+Using them, we can create all the resources we need when writing tests.
+
+```php
+public function test_it_shows_posts()
+{
+    $post = Post::factory()->create();
+
+    $this
+        ->get(route('posts.show', $post))
+        ->assertOk();
+}
+```
 
 ### Test against the real stack whenever it's possible
 
