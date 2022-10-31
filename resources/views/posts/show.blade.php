@@ -56,7 +56,7 @@
             <script>(adsbygoogle = window.adsbygoogle || []).push({})</script> --}}
 
             {{-- Content --}}
-            <div class="max-w-full mt-8 prose prose-a:border-b prose-a:border-indigo-200 prose-a:text-indigo-400 prose-a:no-underline">
+            <div class="break-words max-w-full mt-8 prose prose-a:border-b prose-a:border-indigo-200 prose-a:text-indigo-400 prose-a:no-underline">
                 {!! Illuminate\Support\Str::marxdown($post->content) !!}
             </div>
         </article>
