@@ -149,7 +149,7 @@ class Post implements Feedable
         return 0 === $minutes ? 1 : $minutes;
     }
 
-    public function getTableOfContents() : array
+    public function getTableOfContents() : Collection
     {
         preg_match_all('/(#{1,6}) (.*)/', $this->content, $headings);
 
@@ -167,7 +167,7 @@ class Post implements Feedable
             ];
         }
 
-        return $tableOfContents;
+        return collect($tableOfContents);
     }
 
     public function toFeedItem() : FeedItem
