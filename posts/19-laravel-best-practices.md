@@ -10,7 +10,7 @@ Modified At:
 
 ![Laravel best practices: the definitive guide for 2022](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666966937/benjamincrozat.com/laravel-best-practices_xovbnu.png)
 
-**This article is a work in progress. It can still be improved and debated, and you can hit me on [Twitter](https://twitter.com/benjamincrozat) for that.**
+**This article is a work in progress. It can still be improved, and you can contact me on [Twitter](https://twitter.com/benjamincrozat) for suggestions.**
 
 For most Laravel projects, the best practices can be summarized as two points:
 - Stick to the defaults;
