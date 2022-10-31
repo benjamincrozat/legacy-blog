@@ -10,7 +10,7 @@ Modified At:
 
 ![Laravel best practices: the definitive guide for 2022](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666966937/benjamincrozat.com/laravel-best-practices_xovbnu.png)
 
-**This article is a work in progress. It can still be improved and debated and you can hit me on [Twitter](https://twitter.com/benjamincrozat) for that.**
+**This article is a work in progress. It can still be improved and debated, and you can hit me on [Twitter](https://twitter.com/benjamincrozat) for that.**
 
 For most Laravel projects, the best practices can be summarized as two points:
 - Stick to the defaults;
@@ -25,7 +25,7 @@ Now, let's see how you can apply them to your Laravel applications thanks to act
 ### Keep Laravel up to date
 
 [Keeping Laravel up to date](https://laravel.com/docs/upgrade) provides the following benefits:
-- Access to the latest and greatest time saving additions to the framework;
+- Access to the latest and greatest time-saving additions to the framework;
 - Latest bug and security fixes;
 - Compatibility with the latest official and community packages.
 
@@ -41,12 +41,12 @@ If your codebase is tested, regularly running `composer update` goes a long way 
 
 ### Keep your project tested
 
-[Writing automated tests](https://laravel.com/docs/testing) is a vast and lesser known topic among developers.
+[Writing automated tests](https://laravel.com/docs/testing) is a vast and lesser-known topic among developers.
 
 But did you know it's also the only way to ensure reliability?
 
 What are the benefits of reliability?
-- Less bugs;
+- Fewer bugs;
 - Less unhappy customers;
 - More confident developers;
 - Less unhappy clients or employers;
@@ -58,7 +58,7 @@ What are the benefits of reliability?
 Do you know why you're using a framework?
 
 1. It **frames** your **work** with a set of guidelines that you can follow to ensure every member of your team is on the same page;
-2. It provides a lot of complex, boring and battle tested features for free, so you can focus on coding what is necessary for your project.
+2. It provides many complex, tedious, and battle-tested features for free, so you can focus on coding what is necessary for your project.
 
 ## Controllers best practices
 
@@ -71,7 +71,7 @@ Do you know why you're using a framework?
 
 ### Use single action controllers for clarity
 
-Sometimes, it makes things easier to use [single action controllers](https://laravel.com/docs/controllers#single-action-controllers). You can't always avoid complexity and this complexity might be better off in its own file.
+Sometimes, it makes things easier to use [single action controllers](https://laravel.com/docs/controllers#single-action-controllers). You can't always avoid complexity, and this complexity might be better off in its own file.
 
 ### Use policies
 
@@ -90,7 +90,7 @@ Let's say you are displaying a list of 30 posts with their author:
 - Eloquent will make one query for those 30 posts;
 - Then, 30 queries for each author. It doesn't matter if one author wrote more than one post.
 
-The fix is simple: use the `with()` method and you'll go from 31 queries to only 2.
+The fix is simple: use the `with()` method, and you'll go from 31 queries to only 2.
 
 ```php
 Post::with('author')->get();
@@ -113,13 +113,13 @@ Model::shouldBeStrict(
 
 ## Performances best practices
 
-### Use `dispatchAfterResponse()` for long running tasks
+### Use `dispatchAfterResponse()` for long-running tasks
 
-Lets use the simplest example possible: you have a contact form. Sending an email may take between one or two seconds depending on the method you use.
+Let's use the most straightforward example possible: you have a contact form. Sending an email may take between one or two seconds, depending on your method.
 
-What if you could delay this until the user received your server's response?
+What if you could delay this until the user receives your server's response?
 
-That's exactly what [`dispatchAfterResponse()`](https://laravel.com/docs/queues#dispatching-after-the-response-is-sent-to-browser) does:
+That's precisely what [`dispatchAfterResponse()`](https://laravel.com/docs/queues#dispatching-after-the-response-is-sent-to-browser) does:
 
 ```php
 SendContactEmail::dispatchAfterResponse($input);
@@ -131,7 +131,7 @@ Imagine you have to process images uploaded by your users. If you process every 
 - Your server will burn;
 - Your users will have to wait in front of a loading screen.
 
-This isn't good UX and we can change that.
+This isn't good UX, and we can change that.
 
 Laravel has a [queue system](https://laravel.com/docs/queues) that will run all those tasks sequentially or with a limited amount of parallelism.
 
@@ -139,15 +139,15 @@ Laravel has a [queue system](https://laravel.com/docs/queues) that will run all 
 
 ### Lazily refresh your database
 
-When you can get away with fake data on your local environnement, the best thing to do is to test against a fresh database every time you run a test.
+When you can get away with fake data in your local environment, the best thing to do is to test against a fresh database every time you run a test.
 
 You can use the `Illuminate\Foundation\Testing\LazilyRefreshDatabase` trait in your *tests/TestCase.php*.
 
-There's also a `RefreshDatabase` trait, but the lazy one is more efficient, as migrations for unused databases won't be ran during testing.
+There's also a `RefreshDatabase` trait, but the lazy one is more efficient, as migrations for unused tables won't be ran during testing.
 
 ### Make use of factories
 
-[Factories](https://laravel.com/docs/9.x/eloquent-factories) make testing way easier. You can create one using the `php artisan make:factory` command.
+[Factories](https://laravel.com/docs/9.x/eloquent-factories) make testing way more manageable. You can create one using the `php artisan make:factory` command.
 
 Using them, we can create all the resources we need when writing tests.
 
@@ -162,7 +162,7 @@ public function test_it_shows_posts()
 }
 ```
 
-### Test against the real stack whenever it's possible
+### Test against the production stack whenever it's possible
 
 When running your web application in production, you probably use something other than SQLite like MySQL.
 
@@ -172,6 +172,8 @@ Use MySQL, or you won't be able to catch bugs that occur only with this database
 
 Are you running Redis in production as well? Same thing, don't use the array cache driver.
 
+It's more important to have a reliable tests suite than a quick one. 
+
 ### Use database transactions
 
 In one of my projects, I need to create a database filled with real data provided by CSV files on GitHub.
@@ -179,3 +181,11 @@ In one of my projects, I need to create a database filled with real data provide
 It takes time and I can't refresh my database before every test.
 
 So when my tests alter the data, I want to rollback the changes. You can do so by using the `Illuminate\Foundation\Testing\DatabaseTransactions` trait in your *tests/TestCase.php*.
+
+### Don't waste API calls, use mocks
+
+Say you have a service that makes HTTP to some web API. 
+
+Unless it's Stripe, which has a test environment, you might want to mock those calls or you will often be hit with rate limits.
+
+Laravel has a great [HTTP client](https://laravel.com/docs/http-client) with fantastic [testing helpers](https://laravel.com/docs/http-client#testing) which makes mocking a breeze.
