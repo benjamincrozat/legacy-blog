@@ -134,7 +134,22 @@ class Pokemon
 }
 ```
 
-Instead of the old way that looks like this:
+
+
+You can even cache expensive to compute values:
+
+```php
+use Illuminate\Database\Eloquent\Casts\Attribute;
+
+function someAttribute() : Attribute
+{
+    return Attribute::make(
+        fn () => /* Do something. */
+    )->shouldCache();
+}
+```
+
+The old way looks like this:
 
 ```php
 class Pokemon
