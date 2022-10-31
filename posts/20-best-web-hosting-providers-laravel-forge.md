@@ -9,7 +9,7 @@ Modified At:
 
 ![Laravel Forge](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667250224/benjamincrozat.com/forge.laravel.com__1_a56gna.png)
 
-The best web hosting providers for Laravel Forge in 2022 are:
+For people in a hurry, the best web hosting providers for Laravel Forge in 2022 are:
 
 1. **Best deal**: Vultr ([Get $100 of credit for an unlimited time](https://www.vultr.com/?ref=9270910-8H))
 2. DigitalOcean ([get $200 of credit for a limited 60 days](https://m.do.co/c/58bbdf89fc72))
@@ -22,7 +22,7 @@ I started using it many years ago and I can't live without it anymore.
 
 It offers a convenient way to create and manage web applications on your favorite web hosting provider.
 
-Laravel Forge was created by Taylor Otwell, the creator of Laravel. It is a paid service with a **free trial**.
+Laravel Forge was created by Taylor Otwell, the creator of Laravel. It's a paid service with a **free trial**.
 
 Features:
 - Push To Deploy;
