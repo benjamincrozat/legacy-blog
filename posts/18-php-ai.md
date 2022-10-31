@@ -6,7 +6,7 @@ Published At: 2022-10-27
 Modified At:
 ---
 
-# How to build your next PHP project with a touch of AI
+# Build your next PHP project with a touch of AI
 
 ![Illustration of a robot.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666886355/benjamincrozat.com/robot_qxeqid.png)
 
