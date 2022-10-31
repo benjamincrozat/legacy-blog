@@ -171,14 +171,6 @@ class Pokemon
 }
 ```
 
-<!-- ## Migrations best practices
-
-### Use anonymous migrations
-
-### Use the down method correctly
-
-## Performances best practices -->
-
 ### Use `dispatchAfterResponse()` for long-running tasks
 
 Let's use the most straightforward example possible: you have a contact form. Sending an email may take between one or two seconds, depending on your method.
