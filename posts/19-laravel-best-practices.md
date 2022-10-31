@@ -184,7 +184,7 @@ So when my tests alter the data, I want to rollback the changes. You can do so b
 
 ### Don't waste API calls, use mocks
 
-Say you have a service that makes HTTP to some web API. 
+Say you have a service that makes HTTP requests to some web API. 
 
 Unless it's Stripe, which has a test environment, you might want to mock those calls or you will often be hit with rate limits.
 
