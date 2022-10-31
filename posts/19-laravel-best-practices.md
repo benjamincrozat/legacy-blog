@@ -59,6 +59,8 @@ Do you know why you're using a framework?
 1. It **frames** your **work** with a set of guidelines that you can follow to ensure every member of your team is on the same page;
 2. It provides many complex, tedious, and battle-tested features for free, so you can focus on coding what is necessary for your project.
 
+When should you not stick to the defaults? When the size of your project **actually requires** to do things differently.
+
 ## Controllers best practices
 
 ### Use form requests
