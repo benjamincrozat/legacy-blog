@@ -37,9 +37,9 @@ Features:
 
 In order for Laravel Forge to provision and manage your servers, you need to have full power over it.
 
-**Get an hosting with SSH and admin access.** Therefore, shared hostings don't work.
+**Get a VPS (Virtual Private Server) or a dedicated machine with full SSH access.** 
 
-Prefer a VPS (Virtual Private Server) or a dedicated machine.
+Shared or managed hostings won't cut it for this job.
 
 ## The best web hosting providers for Laravel Forge
 
