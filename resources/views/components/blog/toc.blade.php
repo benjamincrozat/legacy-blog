@@ -22,7 +22,7 @@
         </ul>
 
         @if ($toc->where('level', '>', 2)->isNotEmpty())
-            <button class="flex items-center gap-2 font-bold mt-4" @click="expanded = ! expanded">
+            <button class="flex items-center gap-2 font-normal mt-4" @click="expanded = ! expanded">
                 <span x-text="expanded ? 'Hide' : 'There\'s more'"></span>
                 <x-heroicon-o-chevron-down class="w-3 h-3 transition" x-show="! expanded" />
                 <x-heroicon-o-chevron-up class="w-3 h-3 transition" x-show="expanded" />
