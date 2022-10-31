@@ -4,15 +4,7 @@
     class="text-gray-600"
 >
     <div class="container flex justify-between mt-8">
-        <a href="{{ route('home') }}">
-            <span class="font-extrabold translate-y-px text-base tracking-widest uppercase">
-                Benjamin Crozat
-            </span>
-
-            <span class="block opacity-75 text-xs tracking-widest uppercase">
-                The web developer life
-            </span>
-        </a>
+        <x-blog.title />
 
         <nav class="flex items-center gap-8">
             <x-hire-me />
@@ -20,25 +12,30 @@
     </div>
 
     <section id="articles" class="container mt-8 sm:mt-16">
-        <p class="font-bold text-center text-xl">Featured posts</p>
+        <h2 class="font-bold text-center text-xl">
+            Featured posts
+        </h2>
 
         @if ($featured->isNotEmpty())
             <div class="grid sm:grid-cols-2 gap-4 mt-8">
                 @foreach ($featured as $post)
-                    <a href="{{ route('posts.show', $post->slug) }}" class="overflow-hidden relative rounded-xl">
-                        <img
-                            src="{{ $post->image }}"
-                            alt='Illustration for "{{ $post->title }}"'
-                        />
+                    <figure>
+                        <a href="{{ route('posts.show', $post->slug) }}">
+                            <img
+                                src="{{ $post->image }}"
+                                alt='Illustration for "{{ $post->title }}"'
+                                class="rounded-md"
+                            />
+                        </a>
 
-                        <div
-                            class="absolute bottom-2 left-2 right-2 bg-black/40 backdrop-blur-md flex items-center justify-between gap-4 leading-tight p-3 rounded-md text-sm text-white"
-                            style="text-shadow: 0 0 3px rgba(0, 0, 0, .1)"
-                        >
-                            {{ $post->title }}
+                        <figcaption class="bg-gray-900 flex items-center justify-between gap-4 leading-tight mt-2 p-3 rounded-md text-sm text-white">
+                            <a href="{{ route('posts.show', $post->slug) }}" class="line-clamp-2">
+                                {{ $post->title }}
+                            </a>
+
                             <x-heroicon-o-arrow-right class="flex-shrink-0 w-3 h-3" />
-                        </div>
-                    </a>
+                        </figcaption>
+                    </figure>
                 @endforeach
             </div>
         @endif
@@ -55,9 +52,9 @@
 
         <script>(adsbygoogle = window.adsbygoogle || []).push({})</script> --}}
 
-        <p class="font-bold mb-4 mt-16 text-center text-xl">
+        <h2 class="font-bold mb-4 mt-16 text-center text-xl">
             Latest posts
-        </p>
+        </h2>
 
         @if ($posts->isNotEmpty())
             <div class="grid sm:grid-cols-2 gap-8 mt-8">
@@ -68,9 +65,7 @@
         @endif
     </section>
 
-    <div class="container max-w-screen-sm mt-16">
-        <x-newsletter />
-    </div>
+    <x-newsletter class="container max-w-screen-sm mt-16" />
 
     <div class="bg-gray-900 flex-grow mt-16">
         <x-footer class="text-gray-200" />

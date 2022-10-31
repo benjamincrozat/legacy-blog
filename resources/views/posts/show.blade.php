@@ -4,15 +4,7 @@
     :image="$post->image"
 >
     <div class="container sm:flex sm:items-center sm:justify-between mt-8 text-center sm:text-left">
-        <a href="{{ route('home') }}">
-            <span class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase">
-                {{ config('app.name') }}
-            </span>
-
-            <span class="block opacity-75 text-xs tracking-widest uppercase">
-                The web developer life
-            </span>
-        </a>
+        <x-blog.title />
 
         <nav class="flex items-center justify-center sm:justify-start gap-8 mt-8 sm:mt-0">
             <a href="{{ route('posts.index') }}" class="text-xs tracking-widest uppercase">
@@ -44,16 +36,12 @@
             <div class="flex items-center gap-2 mt-4 text-sm">
                 <img src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}" width="18" height="18" alt="Benjamin Crozat's avatar." class="-translate-y-[.5px] rounded-full" />
 
-                <a href="https://benjamincrozat.com" class="font-normal underline" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">Benjamin Crozat</a> — @choice(':count minute|:count minutes', $post->getReadTime()) read
+                <a href="https://benjamincrozat.com" class="font-normal underline" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">Benjamin Crozat</a>
+                —
+                @choice(':count minute|:count minutes', $post->getReadTime()) read
             </div>
 
-            <div class="lg:hidden mt-8 text-sm">
-                <p class="font-normal">
-                    Table of contents
-                </p>
-
-                <x-table-of-contents :post="$post" />
-            </div>
+            <x-blog.toc :toc="$post->getTableOfContents()" class="lg:hidden mt-4" />
 
             {{-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
 
@@ -74,13 +62,7 @@
         </article>
 
         <div class="hidden md:block md:col-span-1 text-sm">
-            <nav>
-                <p class="font-normal">
-                    Table of contents
-                </p>
-
-                <x-table-of-contents :post="$post" />
-            </nav>
+            <x-blog.toc :toc="$post->getTableOfContents()" />
 
             <div>
                 <p class="font-normal mt-8">
