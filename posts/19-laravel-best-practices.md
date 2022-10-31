@@ -170,7 +170,7 @@ So why are you running your tests using SQLite?
 
 Use MySQL, or you won't be able to catch bugs that occur only with this database.
 
-Are you running Redis on production? Same thing, don't use the array cache driver!
+Are you running Redis in production as well? Same thing, don't use the array cache driver.
 
 ### Use database transactions
 
