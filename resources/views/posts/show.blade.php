@@ -43,18 +43,6 @@
 
             <x-blog.toc :toc="$post->getTableOfContents()" class="lg:hidden mt-8" />
 
-            {{-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
-
-            <ins class="adsbygoogle"
-                style="display:block; text-align:center;"
-                data-ad-layout="in-article"
-                data-ad-format="fluid"
-                data-ad-client="ca-pub-3461630254419592"
-                data-ad-slot="9457636390"
-            ></ins>
-
-            <script>(adsbygoogle = window.adsbygoogle || []).push({})</script> --}}
-
             {{-- Content --}}
             <div class="break-words max-w-full mt-8 prose prose-a:border-b prose-a:border-indigo-200 prose-a:text-indigo-400 prose-a:no-underline">
                 {!! Illuminate\Support\Str::marxdown($post->content) !!}
