@@ -47,9 +47,9 @@ But did you know it's also the only way to ensure reliability?
 
 What are the benefits of reliability?
 - Fewer bugs;
-- Less unhappy customers;
+- Happier employers;
+- Happier customers;
 - More confident developers;
-- Less unhappy clients or employers;
 - More confident new team members who won't break what they don't know;
 - Etc.
 
