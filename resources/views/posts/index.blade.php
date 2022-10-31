@@ -29,9 +29,17 @@
                         </a>
 
                         <figcaption class="bg-gray-900 flex items-center justify-between gap-4 leading-tight mt-2 p-3 rounded-md text-sm text-white">
-                            <a href="{{ route('posts.show', $post->slug) }}" class="line-clamp-2">
-                                {{ $post->title }}
-                            </a>
+                            <div>
+                                <a href="{{ route('posts.show', $post->slug) }}" class="line-clamp-1">
+                                    {{ $post->title }}
+                                </a>
+
+                                <div class="mt-1 text-xs">
+                                    <a href="https://benjamincrozat.com" class="font-normal underline" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">Benjamin Crozat</a>
+                                    —
+                                    @choice(':count minute|:count minutes', $post->getReadTime()) read
+                                </div>
+                            </div>
 
                             <x-heroicon-o-arrow-right class="flex-shrink-0 w-3 h-3" />
                         </figcaption>
