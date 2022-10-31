@@ -175,6 +175,14 @@ That's precisely what [`dispatchAfterResponse()`](https://laravel.com/docs/queue
 SendContactEmail::dispatchAfterResponse($input);
 ```
 
+Or, if you prefer to dispatch jobs using anonymous functions:
+
+```php
+dispatch(function () {
+    // Do something.
+})->afterResponse();
+```
+
 ### Use queues for even longer running tasks
 
 Imagine you have to process images uploaded by your users. If you process every image as soon as they're submitted, this will happen:
