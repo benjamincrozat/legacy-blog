@@ -1,5 +1,5 @@
 ---
-Description: Learning a framework can be overwhelming. Time and practice will make you master. Here are some best practices to help you toward your goal.
+Description: Learning a framework can be overwhelming. Time and practice will make you a master. Here are some best practices to help you toward your goal.
 Image: https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666966937/benjamincrozat.com/laravel-best-practices_xovbnu.png
 Featured: true
 Published At: 2022-10-30
