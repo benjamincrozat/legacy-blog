@@ -23,18 +23,17 @@
                         <a href="{{ route('posts.show', $post->slug) }}">
                             <img
                                 src="{{ $post->image }}"
-                                alt='Illustration for "{{ $post->title }}"'
+                                alt="{{ $post->title }}"
                                 class="rounded-md"
                             />
                         </a>
 
-                        <figcaption class="bg-gray-900 flex items-center justify-between gap-4 leading-tight mt-2 p-3 rounded-md text-sm text-white">
-                            <a href="{{ route('posts.show', $post->slug) }}" class="line-clamp-1">
-                                {{ $post->title }}
-                            </a>
-
-                            <x-heroicon-o-arrow-right class="flex-shrink-0 w-3 h-3" />
-                        </figcaption>
+                        <a href="{{ route('posts.show', $post->slug) }}" class="bg-gray-900 block leading-tight mt-2 p-3 rounded-md text-sm text-white">
+                            <figcaption class="flex items-center justify-between gap-4">
+                                <span>{{ $post->title }}</span>
+                                <x-heroicon-o-arrow-right class="flex-shrink-0 w-3 h-3" />
+                            </figcaption>
+                        </a>
                     </figure>
                 @endforeach
             </div>
