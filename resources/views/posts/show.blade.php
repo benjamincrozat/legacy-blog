@@ -74,7 +74,7 @@
                         type="email"
                         name="email"
                         id="email"
-                        placeholder="homersimpson@example.com"
+                        placeholder="homer@simpson.com"
                         required
                         class="block border-gray-200 placeholder-gray-200 rounded text-sm w-full"
                     />
