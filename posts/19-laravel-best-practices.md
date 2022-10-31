@@ -111,7 +111,57 @@ Model::shouldBeStrict(
 );
 ```
 
-## Performances best practices
+### Use the new way of declaring accessors and mutators
+
+The new way of declarating [accessors and mutators](https://laravel.com/docs/eloquent-mutators) was introduced in Laravel 9.
+
+This is how you should declare them now:
+
+```php
+use Illuminate\Database\Eloquent\Casts\Attribute;
+
+class Pokemon
+{
+    function name() : Attribute
+    {
+        $locale = app()->getLocale();
+
+        return Attribute::make(
+            get: fn ($value) => $value[$locale],
+            set: fn ($value) => [$locale => $value],
+        );
+    }
+}
+```
+
+Instead of the old way that looks like this:
+
+```php
+class Pokemon
+{
+    function getNameAttribute() : string
+    {
+        $locale = app()->getLocale();
+
+        return $this->attributes['name'][$locale];
+    }
+
+    function setNameAttribute($value) : string
+    {
+        $locale = app()->getLocale();
+
+        return $this->attributes['name'][$locale] = $value;
+    }
+}
+```
+
+<!-- ## Migrations best practices
+
+### Use anonymous migrations
+
+### Use the down method correctly
+
+## Performances best practices -->
 
 ### Use `dispatchAfterResponse()` for long-running tasks
 
