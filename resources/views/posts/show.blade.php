@@ -101,7 +101,8 @@
             "itemListElement": [{
                 "@type": "ListItem",
                 "position": 1,
-                "name": "Blog"
+                "name": "Blog",
+                "item": "{{ route('posts.index') }}"
             }, {
                 "@type": "ListItem",
                 "position": 2,
