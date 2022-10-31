@@ -57,16 +57,4 @@
     <div class="bg-gray-900 flex-grow mt-16">
         <x-footer class="text-gray-200" />
     </div>
-
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [{
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Blog"
-            }]
-        }
-    </script>
 </x-app>

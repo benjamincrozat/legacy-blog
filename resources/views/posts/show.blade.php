@@ -97,23 +97,6 @@
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [{
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Blog",
-                "item": "{{ route('posts.index') }}"
-            }, {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "{{ $post->title }}"
-            }]
-        }
-    </script>
-
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
             "@type": "NewsArticle",
             "headline": "{{ $post->title }}",
             "datePublished": "{{ $post->getPublishedAtDate()?->toIso8601String() }}",
