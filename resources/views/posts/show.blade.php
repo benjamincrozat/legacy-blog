@@ -41,7 +41,7 @@
                 @choice(':count minute|:count minutes', $post->getReadTime()) read
             </div>
 
-            <x-blog.toc :toc="$post->getTableOfContents()" class="lg:hidden mt-4" />
+            <x-blog.toc :toc="$post->getTableOfContents()" class="lg:hidden mt-8" />
 
             {{-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
 
