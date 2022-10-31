@@ -41,11 +41,11 @@ If your codebase is tested, regularly running `composer update` goes a long way 
 
 ### Keep your project tested
 
-[Writing automated tests](https://laravel.com/docs/testing) is a vast and lesser-known topic among developers.
+[Writing automated tests (people often talk about unit testing)](https://laravel.com/docs/testing) is a vast and lesser-known topic among developers.
 
 But did you know it's also the only way to ensure reliability?
 
-What are the benefits of reliability?
+What are the benefits of a good tests suite?
 - Fewer bugs;
 - Happier employers;
 - Happier customers;
