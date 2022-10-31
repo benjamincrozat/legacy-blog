@@ -49,9 +49,8 @@ What are the benefits of reliability?
 - Fewer bugs;
 - Happier employers;
 - Happier customers;
-- More confident developers;
-- More confident new team members who won't break what they don't know;
-- Etc.
+- Confident developers. You won't fear breaking something when coming back to the project after a while;
+- New hires have the possibility to be productive from day one, especially if you follow Laravel's guidelines;
 
 ### Stick to the default directory structure and defer as much work as possible to Laravel
 
