@@ -28,7 +28,7 @@
                             />
                         </a>
 
-                        <a href="{{ route('posts.show', $post->slug) }}" class="bg-gray-900 block leading-tight mt-2 p-3 rounded-md text-sm text-white">
+                        <a href="{{ route('posts.show', $post->slug) }}" class="bg-gray-900 block leading-tight mt-2 p-3 rounded-md text-sm text-white" @click="window.fathom?.trackGoal('OKJIR46O', 0)">
                             <figcaption class="flex items-center justify-between gap-4">
                                 <span>{{ $post->title }}</span>
                                 <x-heroicon-o-arrow-right class="flex-shrink-0 w-3 h-3" />
