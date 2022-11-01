@@ -135,8 +135,6 @@ class Pokemon
 }
 ```
 
-
-
 You can even cache expensive to compute values:
 
 ```php
@@ -170,6 +168,8 @@ class Pokemon
     }
 }
 ```
+
+## Performances best practices
 
 ### Use `dispatchAfterResponse()` for long-running tasks
 
