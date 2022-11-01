@@ -1,5 +1,5 @@
 <aside {{ $attributes->merge(['class' => 'border p-4 rounded']) }}>
-    <a href="https://www.cloudways.com/en/?id=1242932&a_bid=b3d8379c&chan={{ $channel }}" target="_blank" rel="nofollow noopener noreferrer">
+    <a href="{{ route('affiliate', 'cloudways') }}?chan={{ $channel }}" target="_blank" rel="nofollow noopener noreferrer">
         <x-icon-cloudways class="flex-shrink-0 w-12 h-12" />
     </a>
 
@@ -9,7 +9,7 @@
         </p>
 
         <p class="mt-2">
-            <a href="https://www.cloudways.com/en/?id=1242932&a_bid=b3d8379c&chan={{ $channel }}" target="_blank" rel="nofollow noopener noreferrer" class="text-indigo-400 underline">
+            <a href="{{ route('affiliate', 'cloudways') }}?chan={{ $channel }}" target="_blank" rel="nofollow noopener noreferrer" class="text-indigo-400 underline">
                 @if (now()->lte(Illuminate\Support\Carbon::parse('2022-11-05')->endOfDay()))
                     Get started with <strong class="font-bold">limited 30% off</strong> for 3 months with promo code <strong class="font-bold italic">TREAT22</strong>.
                 @else
