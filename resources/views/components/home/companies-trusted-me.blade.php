@@ -1,3 +1,7 @@
+<h3 class="border-t border-indigo-400 font-bold mt-8 sm:mt-16 pt-8 sm:pt-16 text-xl text-center">
+    These companies trusted me
+</h3>
+
 <ul {{ $attributes->merge(['class' => 'flex flex-wrap items-center sm:justify-center gap-x-16 gap-y-8 mt-8']) }}>
     <li>
         <a href="https://www.doctissimo.fr" target="_blank" rel="nofollow noopener noreferrer">

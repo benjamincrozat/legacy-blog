@@ -1,4 +1,4 @@
-<div class="bg-gradient-to-r from-white to-gray-50/30 p-4 sm:p-5 rounded-lg shadow-lg shadow-gray-200">
+<div {{ $attributes->except(['@clicked', 'post'])->merge(['class' => 'bg-gradient-to-r from-white to-gray-50/30 p-4 sm:p-5 rounded-lg shadow-lg shadow-gray-200']) }}>
     <div class="flex items-center gap-2 text-sm">
         <img src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}" width="18" height="18" alt="Benjamin Crozat" class="rounded-full" />
 
@@ -14,7 +14,7 @@
     <a
         href="{{ route('posts.show', $post->slug) }}"
         class="font-normal inline-block mt-4 text-indigo-600"
-        @click="window.fathom?.trackGoal('WQ8HQTOO', 0)"
+        {{ $attributes->only('@clicked') }}
     >
         {{ $post->title }}
     </a>

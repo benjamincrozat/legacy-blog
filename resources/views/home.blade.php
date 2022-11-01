@@ -3,7 +3,7 @@
     description="Book an expert Laravel developer, TODAY! Let me guide your team toward reliability and maintenability."
     class="text-indigo-50"
 >
-    <x-home.nav />
+    <x-home.navigation />
 
     {{-- Hero --}}
     <x-home.section class="bg-gradient-to-r from-indigo-500 to-indigo-400">
@@ -40,11 +40,7 @@
             </p>
         </div>
 
-        <p class="border-t border-indigo-400 font-bold mt-8 sm:mt-16 pt-8 sm:pt-16 text-xl text-center">
-            These companies trusted me
-        </p>
-
-        <x-home.logos />
+        <x-home.companies-trusted-me />
     </x-home.section>
 
     {{-- Numbers --}}
