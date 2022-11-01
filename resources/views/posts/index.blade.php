@@ -43,6 +43,8 @@
             Latest posts
         </h2>
 
+        <x-affiliate channel="index" class="flex items-center justify-center gap-6" />
+
         @if ($posts->isNotEmpty())
             <div class="grid sm:grid-cols-2 gap-8 mt-8">
                 @foreach ($posts as $post)
