@@ -11,7 +11,7 @@
         <p class="mt-2">
             <a href="{{ route('affiliate', 'cloudways') }}?chan={{ $channel }}" target="_blank" rel="nofollow noopener noreferrer" class="text-indigo-400 underline">
                 @if (now()->lte(Illuminate\Support\Carbon::parse('2022-11-05')->endOfDay()))
-                    Get started with <strong class="font-bold">limited 30% off</strong> for 3 months with promo code <strong class="font-bold italic">TREAT22</strong>.
+                    Get started with <strong class="font-bold">30% off</strong> for 3 months with promo code <strong class="font-bold italic">TREAT22</strong>.
                 @else
                     Get started with a <strong class="font-bold">3-day free trial</strong> without credit card.
                 @endif
