@@ -4,7 +4,7 @@
             Table of contents
         </h4>
 
-        <ul class="border-y grid gap-3 px-3 py-4">
+        <ul class="border-y grid gap-3 p-4">
             @foreach ($toc as $item)
                 <li
                     @if ($item['level'] > 1) style="margin-left: calc(1rem * {{ $item['level'] - 2 }})" @endif
