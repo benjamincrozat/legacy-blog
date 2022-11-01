@@ -53,7 +53,7 @@ Also, if you ever want to switch away from WordPress, most alternatives offer to
 | PrestaShop     | 0.8%                         |
 | OpenCart       | 0.8%                         |
 
-## The most used WordPress version in 2022
+## Most used WordPress version in 2022
 
 **The most used WordPress version in 2022 is version 6.**
 
@@ -69,7 +69,7 @@ This alone probably drives people to update to the latest major version and, the
 | 3                 | 0.4%                  |
 | 2                 | <0.1%                 |
 
-## The most used PHP version in 2022
+## Most used PHP version in 2022
 
 **The most used PHP version in 2022 is PHP 7.**
 
@@ -84,7 +84,7 @@ It's also funny to see some ancient websites still up and running thanks to PHP 
 | 8           | 5.7%                  |
 | 4           | 0.2%                  |
 
-## The most popular PHP framework in 2022
+## Most popular PHP framework in 2022
 
 **The most popular PHP framework in 2022 is Laravel.**
 
