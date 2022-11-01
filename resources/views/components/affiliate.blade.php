@@ -13,7 +13,7 @@
                 @if (now()->lte(\Illuminate\Support\Carbon::create(2022, 11, 5)))
                     Get started with <strong class="font-bold">limited 30% off</strong> for 3 months with promo code <strong class="font-bold italic">TREAT22</strong>.
                 @else
-                    <strong class="font-bold">Set up yours</strong> right now with a <strong class="font-bold">3-day free trial</strong> without credit card.
+                    Get started with a <strong class="font-bold">3-day free trial</strong> without credit card.
                 @endif
             </a>
         </p>
