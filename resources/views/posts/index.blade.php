@@ -16,8 +16,6 @@
             Featured posts
         </h2>
 
-        <x-affiliate channel="index" class="flex items-center justify-center gap-6 mt-6" />
-
         @if ($featured->isNotEmpty())
             <div class="grid sm:grid-cols-2 gap-4 mt-8">
                 @foreach ($featured as $post)
