@@ -5,7 +5,7 @@
 
     <div>
         <p>
-            I'm working with <strong class="font-bold">Cloudways</strong> to promote <strong class="font-bold">affordable</strong>, <strong class="font-bold">easy-to-use</strong>, and <strong class="font-bold">scalable</strong> web hosting for developers.
+            <strong class="font-bold">Cloudways</strong> provides <strong class="font-bold">affordable</strong>, <strong class="font-bold">easy-to-use</strong>, and <strong class="font-bold">scalable</strong> web hosting for PHP developers.
         </p>
 
         <p class="mt-2">
