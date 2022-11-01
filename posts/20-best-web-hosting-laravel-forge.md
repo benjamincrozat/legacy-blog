@@ -5,7 +5,7 @@ Published At: 2022-10-31
 Modified At:
 ---
 
-# Best web hosting providers for Laravel Forge in 2022
+# Best web hosting for PHP developers using Laravel Forge (2022)
 
 ![Laravel Forge](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667250224/benjamincrozat.com/forge.laravel.com__1_a56gna.png)
 
@@ -16,7 +16,7 @@ For people in a hurry, the best web hosting providers for Laravel Forge in 2022 
 
 ## What is Laravel Forge?
 
-[Laravel Forge](https://forge.laravel.com) is a platform for provisioning, managing, and deploying PHP applications (whether they're based on Laravel or not).
+[Laravel Forge](https://forge .laravel.com) is a platform for provisioning, managing, and deploying PHP applications (whether they're based on Laravel or not).
 
 I started using it many years ago and I can't live without it anymore.
 
