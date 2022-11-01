@@ -169,6 +169,34 @@ class Pokemon
 }
 ```
 
+## Migrations best practices
+
+### Use anonymous migrations (Laravel 8 and above)
+
+Anonymous migrations are a great way to avoid class names conflicts.
+
+Laravel generates anonymous migrations for you as long as you're using Laravel 9 and above:
+
+```bash
+php artisan make:migration CreatePostsTable
+```
+
+This is how they look:
+
+```php
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+return new class extends Migration {
+    …
+}
+```
+
+But did you know you can also use then with Laravel 8? Just replace the class names, and you'll be good to go!
+
 ## Performances best practices
 
 ### Use `dispatchAfterResponse()` for long-running tasks
