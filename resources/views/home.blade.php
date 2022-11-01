@@ -206,7 +206,7 @@
                 <div class="mt-4">The freelancer life immediately seduced me, and I quickly became interested in helping companies to work better with web developers and technology.</div>
             </div>
 
-            <div class="flex-shrink-0 order-1 md:order-none text-center sm:text-left w-full sm:w-auto">
+            <div class="flex-shrink-0 order-1 md:order-none text-center md:text-left w-full md:w-auto">
                 <img src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" width="128" height="128" alt="Benjamin Crozat" class="inline rotate-2 rounded-full" />
             </div>
         </div>
