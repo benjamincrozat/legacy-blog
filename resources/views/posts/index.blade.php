@@ -16,6 +16,8 @@
             Featured posts
         </h2>
 
+        <x-affiliate channel="index" class="flex items-center justify-center gap-6 mt-8" />
+
         @if ($featured->isNotEmpty())
             <div class="grid sm:grid-cols-2 gap-4 mt-8">
                 @foreach ($featured as $post)
@@ -39,11 +41,11 @@
             </div>
         @endif
 
-        <h2 class="font-bold mb-4 mt-16 text-center text-xl">
+        <h2 class="font-bold mt-16 text-center text-xl">
             Latest posts
         </h2>
 
-        <x-affiliate channel="index" class="flex items-center justify-center gap-6" />
+        <x-affiliate channel="index" class="flex items-center justify-center gap-6 mt-8" />
 
         @if ($posts->isNotEmpty())
             <div class="grid sm:grid-cols-2 gap-8 mt-8">
