@@ -1,4 +1,4 @@
-<div {{ $attributes->merge(['class' => 'bg-indigo-500 md:sticky top-0 z-10']) }}>
+<div {{ $attributes->merge(['class' => 'bg-indigo-500 md:sticky md:top-0 md:z-10']) }}>
     <div class="container sm:flex sm:items-center sm:justify-between py-4 text-center sm:text-left">
         <a href="{{ route('home') }}">
             <span class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase">
