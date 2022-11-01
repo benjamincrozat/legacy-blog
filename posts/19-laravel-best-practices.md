@@ -317,3 +317,19 @@ Say you have a service that makes HTTP requests to some web API.
 Unless it's Stripe, which has a test environment, you might want to mock those calls or you will often be hit with rate limits.
 
 Laravel has a great [HTTP client](https://laravel.com/docs/http-client) with fantastic [testing helpers](https://laravel.com/docs/http-client#testing) which makes mocking a breeze.
+
+## Versioning best practices
+
+### Don't track your .env file
+
+Your *.env* file contains sensitive informations. 
+
+**Don't track it!**
+
+If you don't believe me, do a [quick search on GitHub]() and see for yourself how much people expose their credentials to the world.
+
+### Don't track your compiled CSS and JavaScript
+
+Don't track your compiled CSS and JavaScript. These files are generated based on your source files in your *resources* folder and change a lot.
+
+When deploying into production, you either compile your CSS and JavaScript on the server or you create an artifact before.
