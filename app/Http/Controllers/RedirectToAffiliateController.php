@@ -9,7 +9,7 @@ class RedirectToAffiliateController extends Controller
 {
     public function __invoke(Request $request, string $slug) : RedirectResponse
     {
-        $queryString = $request->collect()->map(fn ($value, $key) => "$key=$value")->join('&');
+        $queryString = http_build_query($request->all());
 
         switch ($slug) {
             case 'cloudways':
