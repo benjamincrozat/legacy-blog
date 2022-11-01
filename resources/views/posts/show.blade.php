@@ -56,8 +56,8 @@
 
             <x-affiliate channel="sidebar" class="flex flex-wrap justify-center gap-2 mt-8" />
 
-            <div>
-                <p class="font-normal mt-8">
+            <div class="border mt-8 p-4 rounded">
+                <p class="font-normal">
                     Let me share with you my discoveries about the art of crafting websites, <span class="text-indigo-400">for free</span>.
                 </p>
 
