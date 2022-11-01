@@ -3,7 +3,7 @@ Description: Learning a framework can be overwhelming. Time and practice will ma
 Image: https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666966937/benjamincrozat.com/laravel-best-practices_xovbnu.png
 Featured: true
 Published At: 2022-10-30
-Modified At:
+Modified At: 2022-11-01
 ---
 
 # Laravel best practices: the definitive guide for 2022
@@ -196,6 +196,40 @@ return new class extends Migration {
 ```
 
 But did you know you can also use then with Laravel 8? Just replace the class names, and you'll be good to go!
+
+### Use the `down()` method correctly
+
+The `down()` (used by the `php artisan migrate:rollback` command) is ran when you need to rollback the changes you made to your database.
+
+Some people use it, some don't.
+
+If you belong to the people who use it, you should make sure your `down()` method is implemented correctly.
+
+Basically, the `down()` method must do the opposite of the `up()` method.
+
+```php
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+return new class extends Migration {
+    public function up()
+    {
+        Schema::table('posts', function (Blueprint $table) {
+            // The column was a boolean, but we want to switch to a datetime.
+            $table->datetime('is_published')->nullable()->change();
+        });
+    }
+
+    public function down()
+    {
+        Schema::table('posts', function (Blueprint $table) {
+            // When rolling back, we have to restore the column to its previous state.
+            $table->boolean('is_published')->default(false)->change();
+        });
+    }
+}
+```
 
 ## Performances best practices
 
