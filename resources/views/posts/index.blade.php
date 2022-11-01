@@ -20,7 +20,7 @@
             <div class="grid sm:grid-cols-2 gap-4 mt-8">
                 @foreach ($featured as $post)
                     <figure>
-                        <a href="{{ route('posts.show', $post->slug) }}">
+                        <a href="{{ route('posts.show', $post->slug) }}" @click="window.fathom?.trackGoal('OKJIR46O', 0)">
                             <img
                                 src="{{ $post->image }}"
                                 alt="{{ $post->title }}"
