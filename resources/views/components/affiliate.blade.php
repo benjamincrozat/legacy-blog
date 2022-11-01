@@ -26,12 +26,12 @@
 
         <div class="mt-3">
             <p>
-                <strong class="font-bold">Focus on writing</strong> SEO optimized content to <strong class="font-bold">promote your business or your name</strong> with a reliable managed WordPress hosting.
+                <strong class="font-bold">Focus on writing</strong> to <strong class="font-bold">promote your business</strong> and let Kinsta worry about managing your WordPress.
             </p>
 
             <p class="mt-2">
                 <a href="{{ route('affiliate', 'kinsta') }}" target="_blank" rel="nofollow noopener noreferrer" class="text-indigo-400 underline">
-                    Get 2 months free with Kinsta.
+                    Get started with 2 months free.
                 </a>
             </p>
         </div>
