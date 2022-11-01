@@ -43,7 +43,7 @@
 
             <x-blog.toc :toc="$post->getTableOfContents()" class="lg:hidden mt-8" />
 
-            <x-affiliate channel="article" class="flex items-center justify-center gap-6 lg:hidden mt-8" />
+            <x-affiliate channel="article" class="flex flex-wrap justify-center gap-2 mt-8 lg:hidden" />
 
             {{-- Content --}}
             <div class="break-words max-w-full mt-8 prose prose-a:border-b prose-a:border-indigo-200 prose-a:text-indigo-400 prose-a:no-underline">
