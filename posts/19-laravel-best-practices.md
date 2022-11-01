@@ -326,7 +326,7 @@ Your *.env* file contains sensitive informations.
 
 **Don't track it!**
 
-If you don't believe me, do a [quick search on GitHub]() and see for yourself how much people expose their credentials to the world.
+Make sure it is included in your *.gitignore*.
 
 ### Don't track your compiled CSS and JavaScript
 
