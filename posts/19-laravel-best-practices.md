@@ -326,10 +326,12 @@ Your *.env* file contains sensitive informations.
 
 **Don't track it!**
 
-Make sure it is included in your *.gitignore*.
+Make sure it's included in your *.gitignore*.
 
 ### Don't track your compiled CSS and JavaScript
 
-Don't track your compiled CSS and JavaScript. These files are generated based on your source files in your *resources* folder and change a lot.
+Compiled CSS and JavaScript are generated based on your original files in your *resources* folder.
 
-When deploying into production, you either compile your CSS and JavaScript on the server or you create an artifact before.
+When deploying into production, you either compile them on the server or you create an artifact before.
+
+There's no need for tracking here.
