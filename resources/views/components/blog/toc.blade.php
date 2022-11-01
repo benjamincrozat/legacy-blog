@@ -13,6 +13,7 @@
                     <a
                         href="#{{ $item['id'] }}"
                         class="flex items-start gap-1 leading-tight text-indigo-900/75"
+                        @click="window.fathom?.trackGoal('2WUWXET3', 0)"
                     >
                         <x-heroicon-o-hashtag class="flex-shrink-0 w-3 h-3 text-indigo-900/40 translate-y-[2px]" />
                         {{ $item['title'] }}
@@ -22,7 +23,10 @@
         </ul>
 
         @if ($toc->where('level', '>', 2)->isNotEmpty())
-            <button class="flex items-center gap-2 font-normal mt-4" @click="expanded = ! expanded">
+            <button
+                class="flex items-center gap-2 font-normal mt-4"
+                @click="expanded = ! expanded; window.fathom?.trackGoal('6ID3DWJV', 0)"
+            >
                 <span x-text="expanded ? 'Hide' : 'There\'s more'"></span>
                 <x-heroicon-o-chevron-down class="w-3 h-3 transition" x-show="! expanded" />
                 <x-heroicon-o-chevron-up class="w-3 h-3 transition" x-show="expanded" />
