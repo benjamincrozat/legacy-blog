@@ -1,10 +1,10 @@
 @if (! empty($toc))
-    <nav {{ $attributes->except('toc')->merge(['class' => 'text-sm']) }} x-data="{ expanded: false }">
-        <h4 class="font-normal">
+    <nav {{ $attributes->except('toc')->merge(['class' => 'border rounded text-sm']) }} x-data="{ expanded: false }">
+        <h4 class="font-normal py-2 text-center">
             Table of contents
         </h4>
 
-        <ul class="grid gap-3 mt-4">
+        <ul class="border-y grid gap-3 px-3 py-4">
             @foreach ($toc as $item)
                 <li
                     @if ($item['level'] > 1) style="margin-left: calc(1rem * {{ $item['level'] - 2 }})" @endif
@@ -24,7 +24,7 @@
 
         @if ($toc->where('level', '>', 2)->isNotEmpty())
             <button
-                class="flex items-center gap-2 font-normal mt-4"
+                class="flex items-center justify-center gap-2 font-normal py-2 w-full"
                 @click="expanded = ! expanded; window.fathom?.trackGoal('6ID3DWJV', 0)"
             >
                 <span x-text="expanded ? 'Hide' : 'There\'s more'"></span>
