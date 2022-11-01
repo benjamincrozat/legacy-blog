@@ -280,7 +280,7 @@ There's also a `RefreshDatabase` trait, but the lazy one is more efficient, as m
 Using them, we can create all the resources we need when writing tests.
 
 ```php
-public function test_it_shows_posts()
+public function test_it_shows_a_given_post()
 {
     $post = Post::factory()->create();
 
