@@ -14,7 +14,7 @@
     <a
         href="{{ route('posts.show', $post->slug) }}"
         class="font-normal inline-block mt-4 text-indigo-600"
-        {{ $attributes->only('@clicked') }}
+        {{ $attributes->only('@click') }}
     >
         {{ $post->title }}
     </a>
