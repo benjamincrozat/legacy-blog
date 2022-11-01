@@ -88,7 +88,7 @@
 
             <div class="grid sm:grid-cols-2 gap-12 sm:gap-8 mt-8">
                 @foreach ($others as $post)
-                    <x-post :post="$post" @clicked="window.fathom?.trackGoal('LTFJEOM0', 0)" />
+                    <x-post :post="$post" @click="window.fathom?.trackGoal('LTFJEOM0', 0)" />
                 @endforeach
             </div>
         </div>
