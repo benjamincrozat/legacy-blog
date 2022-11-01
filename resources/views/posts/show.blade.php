@@ -43,7 +43,9 @@
 
             <x-blog.toc :toc="$post->getTableOfContents()" class="lg:hidden mt-8" />
 
-            <x-affiliate name="kinsta" class="flex flex-wrap justify-center gap-2 mt-8 lg:hidden" />
+            @empty ($post->hideBanners)
+                <x-affiliate name="kinsta" class="flex flex-wrap justify-center gap-2 mt-8 lg:hidden" />
+            @endempty
 
             {{-- Content --}}
             <div class="break-words max-w-full mt-8 prose prose-a:border-b prose-a:border-indigo-200 prose-a:text-indigo-400 prose-a:no-underline">
@@ -54,7 +56,9 @@
         <div class="hidden md:block md:col-span-1 text-sm">
             <x-blog.toc :toc="$post->getTableOfContents()" />
 
-            <x-affiliate name="kinsta" class="flex flex-wrap justify-center gap-2 mt-8" />
+            @empty ($post->hideBanners)
+                <x-affiliate name="kinsta" class="flex flex-wrap justify-center gap-2 mt-8" />
+            @endempty
 
             <div class="border mt-8 p-4 rounded">
                 <p class="font-normal">

@@ -28,6 +28,10 @@ class Post implements Feedable
 
     public readonly bool $featured;
 
+    public readonly bool $includeLowerLevelTitlesInTOC;
+
+    public readonly bool $hideBanners;
+
     public static function make(
         int $id,
         string $publishedAt,
@@ -38,6 +42,8 @@ class Post implements Feedable
         string $description,
         string $image,
         bool $featured,
+        bool $includeLowerLevelTitlesInTOC = false,
+        bool $hideBanners = false,
     ) : self {
         $post = new Post;
         $post->id = $id;
@@ -49,6 +55,8 @@ class Post implements Feedable
         $post->description = $description;
         $post->image = $image;
         $post->featured = $featured;
+        $post->includeLowerLevelTitlesInTOC = $includeLowerLevelTitlesInTOC;
+        $post->hideBanners = $hideBanners;
 
         return $post;
     }
@@ -112,6 +120,14 @@ class Post implements Feedable
 
         $modifiedAt = $modifiedAtMatches[1] ?? '';
 
+        preg_match('/^Hide Banners: (\N+)$/ims', $contents, $hideBannersMatches);
+
+        $hideBanners = empty($hideBannersMatches[1]) ? false : true;
+
+        preg_match('/^Hide Banners: (\N+)$/ims', $contents, $includeLowerLevelTitlesInTOCMatches);
+
+        $includeLowerLevelTitlesInTOC = empty($includeLowerLevelTitlesInTOCMatches[1]) ? false : true;
+
         preg_match_all('/^# (\N+)$\n*(.+)/ims', $contents, $matches);
 
         $title = $matches[1][0] ?? '';
@@ -128,6 +144,8 @@ class Post implements Feedable
             description: $description,
             image: $image,
             featured: $featured,
+            includeLowerLevelTitlesInTOC: $includeLowerLevelTitlesInTOC,
+            hideBanners: $hideBanners,
         );
     }
 
@@ -158,7 +176,7 @@ class Post implements Feedable
         for ($i = 0; $i < count($headings[0]); ++$i) {
             $level = strlen($headings[1][$i]);
 
-            if ($level > 2) {
+            if ($level > 2 && ! $this->includeLowerLevelTitlesInTOC) {
                 continue;
             }
 
@@ -167,6 +185,7 @@ class Post implements Feedable
             $tableOfContents[] = [
                 'id' => Str::slug($title),
                 'title' => $title,
+                'level' => $level,
             ];
         }
 
