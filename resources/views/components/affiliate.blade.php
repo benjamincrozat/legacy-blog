@@ -26,7 +26,7 @@
 
         <div class="mt-3">
             <p>
-                <strong class="font-bold">Focus on writing</strong> to <strong class="font-bold">promote your business</strong> and let Kinsta worry about managing your WordPress.
+                <strong class="font-bold">Focus on writing</strong> to promote your business, <strong class="font-bold">let Kinsta worry about managing your WordPress</strong>.
             </p>
 
             <p class="mt-2">
