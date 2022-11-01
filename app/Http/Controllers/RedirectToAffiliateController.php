@@ -14,6 +14,8 @@ class RedirectToAffiliateController extends Controller
         switch ($slug) {
             case 'cloudways':
                 return redirect()->away("https://www.cloudways.com/en/?id=1242932&$queryString");
+            case 'kinsta':
+                return redirect()->away('https://kinsta.com?kaid=AEFAUTRRTINA');
             default:
                 abort(404);
         }

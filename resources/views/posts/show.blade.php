@@ -43,7 +43,7 @@
 
             <x-blog.toc :toc="$post->getTableOfContents()" class="lg:hidden mt-8" />
 
-            <x-affiliate channel="article" class="flex flex-wrap justify-center gap-2 mt-8 lg:hidden" />
+            <x-affiliate name="kinsta" class="flex flex-wrap justify-center gap-2 mt-8 lg:hidden" />
 
             {{-- Content --}}
             <div class="break-words max-w-full mt-8 prose prose-a:border-b prose-a:border-indigo-200 prose-a:text-indigo-400 prose-a:no-underline">
@@ -54,7 +54,7 @@
         <div class="hidden md:block md:col-span-1 text-sm">
             <x-blog.toc :toc="$post->getTableOfContents()" />
 
-            <x-affiliate channel="sidebar" class="flex flex-wrap justify-center gap-2 mt-8" />
+            <x-affiliate name="kinsta" class="flex flex-wrap justify-center gap-2 mt-8" />
 
             <div class="border mt-8 p-4 rounded">
                 <p class="font-normal">

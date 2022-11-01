@@ -43,7 +43,7 @@
             Latest posts
         </h2>
 
-        <x-affiliate channel="index" class="flex items-center justify-center gap-6 mt-8" />
+        <x-affiliate name="cloudways" channel="index" class="flex flex-wrap sm:flex-nowrap sm:items-center justify-center gap-4 mt-8" />
 
         @if ($posts->isNotEmpty())
             <div class="grid sm:grid-cols-2 gap-8 mt-8">
