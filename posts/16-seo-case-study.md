@@ -6,13 +6,13 @@ Published At: 2022-10-25
 Modified At:
 ---
 
-# 2022 SEO case study: programming niche (+1121% increase)
+# 2022 SEO case study: programming niche (+1021% increase)
 
 ![Illustration of a rocket.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666719094/benjamincrozat.com/rocket_xv9mlh.png)
 
 Here's a case study example for [benjamincrozat.com](https://benjamincrozat.com), my blog about programming with PHP and Laravel.
 
-Since I started in September 2022, **clicks on Google increased by 1121%**.
+Since I started in September 2022, **clicks on Google increased by 1021%**.
 
 I'm doing web development for a living, not SEO. But I'm a fast learner and like to learn by doing. In this article, you'll also learn about everything I did to rank my blog as high as possible with many keywords.
 
@@ -98,10 +98,10 @@ I even naturally acquired some links from high authorities in the niche (on [Lar
 
 The numbers:
 
-- Clicks: **516 (+1121%)**;
-- Impressions: **28.5K (+527%)**;
-- Average CTR: **1.8% (+200%)**;
-- Average position: **25.5 (+167%)**.
+- Clicks: **516 (+1021%)**;
+- Impressions: **28.5K (+454%)**;
+- Average CTR: **1.8% (+100%)**;
+- Average position: **25.5 (+67%)**.
 
 What I did:
 
