@@ -23,7 +23,7 @@
                         <a href="{{ route('posts.show', $post->slug) }}" @click="window.fathom?.trackGoal('OKJIR46O', 0)">
                             <img
                                 loading="lazy"
-                                src="{{ $post->image }}"
+                                src="{{ str_replace('w_auto', 'w_600', $post->image) }}"
                                 alt="{{ $post->title }}"
                                 class="aspect-video object-cover rounded-md w-full"
                             />
