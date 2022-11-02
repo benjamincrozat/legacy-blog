@@ -48,6 +48,6 @@ Key features:
 - Events tracking to anonymously monitor how people use your website
 - EU traffic is automatically routed through European-owned infrastructure
 - Simple, free, and reactive uptime monitoring that sends you an email or SMS
-- Used by thousands of businesses, including some we love, like Laravel, GitHub (Microsoft), TailwindCSS, Vue.js, IBM, and more
+- Used by thousands of businesses, including some we love, like Laravel, GitHub (Microsoft), Tailwind CSS, Vue.js, IBM, and more
 
 [Get started with a 7-day trial and $10 discount on your first invoice](https://benjamincrozat.com/recommends/fathom-analytics)
