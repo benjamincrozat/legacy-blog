@@ -171,7 +171,7 @@ class Pokemon
 
 ## Migrations best practices
 
-First, please know that I wrote an article about [Laravel migrations](https://benjamincrozat.com/laravel-migrations). You might want to check it out first.
+First, please know that I wrote an article about [Laravel migrations](https://benjamincrozat.com/laravel-migrations). You might want to check it out.
 
 ### Use anonymous migrations (Laravel 8 and above)
 
