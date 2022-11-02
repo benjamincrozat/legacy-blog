@@ -1,10 +1,13 @@
 ---
 Description: There are multiple ways to check if an array is empty. Let me tell you about each of them and why and when you should use them.
+Image: https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667428917/confused_xxboi4.jpg
 Published At: 2022-10-09
 Modified At: 2022-10-23
 ---
 
 # 4 ways to check if an array is empty in PHP
+
+![Confused person.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667428917/confused_xxboi4.jpg)
 
 ## The `empty()` function
 
