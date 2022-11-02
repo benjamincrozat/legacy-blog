@@ -2,6 +2,7 @@
     @if ($name === 'cloudways')
         <a href="{{ route('affiliate', 'cloudways') }}?chan={{ $channel }}" target="_blank" rel="nofollow noopener noreferrer">
             <x-icon-cloudways class="flex-shrink-0 w-12 h-12" />
+            <span class="sr-only">Cloudways</span>
         </a>
 
         <div>
@@ -22,6 +23,7 @@
     @elseif ($name === 'fathom-analytics')
         <a href="{{ route('affiliate', 'fathom-analytics') }}" target="_blank" rel="nofollow noopener noreferrer">
             <x-icon-fathom-analytics class="flex-shrink-0 h-12 mt-2" />
+            <span class="sr-only">Fathom Analytics</span>
         </a>
 
         <div class="mt-3">
@@ -38,6 +40,7 @@
     @elseif ($name === 'kinsta')
         <a href="{{ route('affiliate', 'kinsta') }}" target="_blank" rel="nofollow noopener noreferrer">
             <x-icon-kinsta class="flex-shrink-0 h-4 mt-2" />
+            <span class="sr-only">Kinsta</span>
         </a>
 
         <div class="mt-3">
