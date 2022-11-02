@@ -31,10 +31,10 @@ Keep reading for more details about each web hosting.
 Cloudways powers more than 75.000+ businesses. It's an easy-to-use web hosting for people who want to save cost and time on DevOps matters. Enjoy the latest and greatest of the PHP ecosystem with no efforts.
 
 Key features:
-- PHP 8.x
 - SSD-based hosting
 - Automatic backups
 - Ready-to-use Redis
+- PHP 8.x and MySQL 8.x
 - Full-access to the server
 - 1-click free SSL certificate
 - Multiple providers such as AWS, DigitalOcean, GCP, Linode, Vultr and more.
@@ -56,6 +56,7 @@ Key features:
 - Awesome UI and UX
 - 27+ global locations
 - Great customer service
+- PHP 8.x and MySQL 8.x
 - NVMe SSD-based hosting
 - Can pay with Bitcoin (I think it's pretty cool, haha!)
 
@@ -71,6 +72,7 @@ Key features:
 - PHP 8.x
 - SSD-based hosting
 - 14+ global locations
+- PHP 8.x and MySQL 8.x
 - Deploy PHP apps instead of managing servers with their App Platform
 - Advanced users can still manage their own VPS
 
