@@ -11,7 +11,7 @@ Published At: 2022-11-02
 
 ![GDPR compliance](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667409628/data-security_z5tsl9.jpg)
 
-Google Analytics is a fine tool for tracking your traffic. But it's kind of clunky, even with its 4th version, and it gets blocked by all ad blockers, which is a deal breaker for most of us. 
+Google Analytics is a fine tool for tracking your traffic. That said it's kind of clunky, even with its 4th version. It gets blocked by all ad blockers, which is a deal breaker for most of us. 
 But that's not it: the biggest issue for many businesses is its total lack of GDPR compliance. 
 First, here's my listing of the best alternatives, and then I'll explain why you should care about GDPR compliance.
 
