@@ -17,7 +17,7 @@
         </h2>
 
         @if ($featured->isNotEmpty())
-            <div class="flex sm:grid sm:grid-cols-2 gap-2 sm:gap-4 mt-8 px-4 sm:px-0 overflow-x-scroll sm:overflow-x-visible snap-x sm:snap-none snap-mandatory">
+            <div class="flex sm:grid sm:grid-cols-2 gap-2 mt-8 px-4 sm:px-0 overflow-x-scroll sm:overflow-x-visible snap-x sm:snap-none snap-mandatory">
                 @foreach ($featured as $post)
                     <figure class="flex-shrink-0 snap-start sm:snap-normal scroll-ml-4 sm:scroll-ml-0 w-[90%] sm:w-auto">
                         <a href="{{ route('posts.show', $post->slug) }}" @click="window.fathom?.trackGoal('OKJIR46O', 0)">
@@ -44,7 +44,10 @@
             Latest posts
         </h2>
 
-        <x-affiliate name="cloudways" channel="index" class="flex flex-wrap sm:flex-nowrap sm:items-center justify-center gap-4 mt-8 mx-4 sm:mx-0" />
+        <x-affiliate
+            channel="index"
+            class="flex flex-wrap sm:flex-nowrap sm:items-center justify-center gap-4 sm:gap-8 mt-8 mx-4 sm:mx-0 py-6 sm:p-4"
+        />
 
         @if ($posts->isNotEmpty())
             <div class="grid sm:grid-cols-2 gap-8 mt-8 mx-4 sm:mx-0">

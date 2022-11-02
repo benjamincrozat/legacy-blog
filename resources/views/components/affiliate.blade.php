@@ -1,3 +1,11 @@
+@php
+$name = empty($name) ? ['cloudways', 'fathom-analytics', 'kinsta'] : [$name];
+
+shuffle($name);
+
+$name = $name[0];
+@endphp
+
 <aside {{ $attributes->merge(['class' => 'border p-4 rounded']) }}>
     @if ($name === 'cloudways')
         <a href="{{ route('affiliate', 'cloudways') }}?chan={{ $channel }}" target="_blank" rel="nofollow noopener noreferrer">
@@ -22,13 +30,13 @@
         </div>
     @elseif ($name === 'fathom-analytics')
         <a href="{{ route('affiliate', 'fathom-analytics') }}" target="_blank" rel="nofollow noopener noreferrer">
-            <x-icon-fathom-analytics class="flex-shrink-0 h-12 mt-2" />
+            <x-icon-fathom-analytics class="flex-shrink-0 h-12" />
             <span class="sr-only">Fathom Analytics</span>
         </a>
 
-        <div class="mt-3">
+        <div>
             <p>
-                <strong class="font-bold">Just like Laravel & GitHub</strong>, <strong class="font-bold">avoid a GDPR fine</strong> by using <strong class="font-bold">Fathom Analytics</strong>, an analytics tool that doesn't track your users.
+                <strong class="font-bold">Laravel & GitHub avoid GDPR fines</strong> using <strong class="font-bold">Fathom Analytics</strong>, an analytics tool that doesn't track users.
             </p>
 
             <p class="mt-1">
@@ -39,13 +47,13 @@
         </div>
     @elseif ($name === 'kinsta')
         <a href="{{ route('affiliate', 'kinsta') }}" target="_blank" rel="nofollow noopener noreferrer">
-            <x-icon-kinsta class="flex-shrink-0 h-4 mt-2" />
+            <x-icon-kinsta class="flex-shrink-0 h-4" />
             <span class="sr-only">Kinsta</span>
         </a>
 
-        <div class="mt-3">
+        <div>
             <p>
-                <strong class="font-bold">Focus on writing</strong> to promote your business, <strong class="font-bold">let Kinsta worry about managing your WordPress</strong>.
+                <strong class="font-bold">Focus on writing</strong>, promote your business, <strong class="font-bold">let Kinsta worry about managing WordPress</strong>.
             </p>
 
             <p class="mt-1">

@@ -44,7 +44,7 @@
             <x-blog.toc :toc="$post->getTableOfContents()" class="lg:hidden mt-8" />
 
             @empty ($post->hideBanners)
-                <x-affiliate name="fathom-analytics" class="flex flex-wrap justify-center gap-2 mt-8 lg:hidden" />
+                <x-affiliate channel="article" class="flex flex-wrap justify-center gap-4 max-w-[768px] sm:mx-auto mt-8 py-6 lg:hidden" />
             @endempty
 
             {{-- Content --}}
@@ -57,7 +57,7 @@
             <x-blog.toc :toc="$post->getTableOfContents()" />
 
             @empty ($post->hideBanners)
-                <x-affiliate name="fathom-analytics" class="flex flex-wrap justify-center gap-2 mt-8" />
+                <x-affiliate channel="sidebar" class="flex flex-wrap justify-center gap-4 max-w-[768px] sm:mx-auto mt-8 py-6" />
             @endempty
 
             <div class="border mt-8 p-4 rounded">
