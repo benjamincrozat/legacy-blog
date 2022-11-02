@@ -1,5 +1,6 @@
 ---
 Description: Laravel 10 will be released on February 7, 2023. Its development is still ongoing. Let's dive into every relevant new feature we know about already.
+Image: https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666972278/benjamincrozat.com/laravel-10_jow67m.jpg
 Include Lower Level Titles In TOC: true
 Published At: 2022-09-15
 Modified At: 2022-10-05
