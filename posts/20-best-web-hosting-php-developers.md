@@ -71,7 +71,7 @@ Key features:
 - PHP 8.x
 - SSD-based hosting
 - 14+ global locations
-- Deploy PHP apps instead of managing servers
+- Deploy PHP apps instead of managing servers with their App Platform
 - Advanced users can still manage their own VPS
 
 [**Get started with $200 of credit**](https://benjamincrozat.com/recommends/digitalocean)
