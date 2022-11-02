@@ -1,6 +1,7 @@
 ---
 Description: Looking for the best web hosting for PHP developers? I've got you covered. Here are the best web hosting providers I found.
 Hide Banners: true
+Include Lower Level Titles In TOC: true
 ---
 
 # Best web hosting for PHP developers in 2022

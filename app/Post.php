@@ -124,7 +124,7 @@ class Post implements Feedable
 
         $hideBanners = empty($hideBannersMatches[1]) ? false : true;
 
-        preg_match('/^Hide Banners: (\N+)$/ims', $contents, $includeLowerLevelTitlesInTOCMatches);
+        preg_match('/^Include Lower Level Titles in TOC: (\N+)$/ims', $contents, $includeLowerLevelTitlesInTOCMatches);
 
         $includeLowerLevelTitlesInTOC = empty($includeLowerLevelTitlesInTOCMatches[1]) ? false : true;
 
