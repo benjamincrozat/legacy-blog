@@ -16,7 +16,7 @@ I may be biased, but being a web developer is a great career choice. Being able 
 If you're in a hurry, here are my top recommendations:
 - **Easiest to use**: Cloudways ([get started with a 3-day free trial](https://benjamincrozat.com/recommends/cloudways))
 - **Best UX and good prices**: Vultr ([get started with $100 of credit](https://benjamincrozat.com/recommends/vultr))
-- DigitalOcean ([get started with $200 of credit](https://benjamincrozat.com/recommends/digitalocean))
+- **Good alternative to Vultr**: DigitalOcean ([get started with $200 of credit](https://benjamincrozat.com/recommends/digitalocean))
 
 Keep reading for more details about each web hosting.
 
