@@ -22,6 +22,10 @@ class RedirectToAffiliateController extends Controller
                 $redirect = 'https://m.do.co/c/58bbdf89fc72';
 
                 break;
+            case 'fathom-analytics':
+                $redirect = 'https://usefathom.com/ref/JTPOCN';
+
+                break;
             case 'kinsta':
                 $parameters['kaid'] = 'AEFAUTRRTINA';
 

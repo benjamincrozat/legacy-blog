@@ -19,6 +19,22 @@
                 </a>
             </p>
         </div>
+    @elseif ($name === 'fathom-analytics')
+        <a href="{{ route('affiliate', 'fathom-analytics') }}" target="_blank" rel="nofollow noopener noreferrer">
+            <x-icon-fathom-analytics class="flex-shrink-0 h-12 mt-2" />
+        </a>
+
+        <div class="mt-3">
+            <p>
+                <strong class="font-bold">Just like Laravel and GitHub</strong>, <strong class="font-bold">avoid huge GDPR fines</strong> by using <strong class="font-bold">Fathom Analytics</strong>, a privacy-first analytics tool that doesn't track your users.
+            </p>
+
+            <p class="mt-2">
+                <a href="{{ route('affiliate', 'fathom-analytics') }}" target="_blank" rel="nofollow noopener noreferrer" class="text-indigo-400 underline">
+                    Get started with a $10 discount
+                </a>
+            </p>
+        </div>
     @elseif ($name === 'kinsta')
         <a href="{{ route('affiliate', 'kinsta') }}" target="_blank" rel="nofollow noopener noreferrer">
             <x-icon-kinsta class="flex-shrink-0 h-4 mt-2" />
