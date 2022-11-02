@@ -10,11 +10,11 @@ Modified At:
 
 ![Illustration of a rocket.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666719094/benjamincrozat.com/rocket_xv9mlh.png)
 
-Here's a case study example for [benjamincrozat.com](https://benjamincrozat.com), my blog about programming with PHP and Laravel.
+Here's a case study example for this blog about programming with PHP and Laravel.
 
 Since I started in September 2022, **clicks on Google increased by 1021%**.
 
-I'm doing web development for a living, not SEO. But I'm a fast learner and like to learn by doing. In this article, you'll also learn about everything I did to rank my blog as high as possible with many keywords.
+I'm doing web development for a living, not SEO. But I'm a fast learner and like to learn by doing. In this article, you'll also learn about every best practice I tried to apply to rank my blog as high as possible with many keywords.
 
 ![Screenshot of the growth.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667399230/Screenshot_2022-11-02_at_15.26.50_y1j5w8.png)
 
@@ -24,7 +24,7 @@ For me, traffic is like money; it should be passive.
 
 I don't want to work my ass off for brief traffic spikes because I went viral on social media. 
 
-Therefore, I write blog posts based on what people are searching for, and slowly but surely, traffic comes, grows, and stays.
+Therefore, I write blog posts based on what people are searching for and applying as many best practices as possible, and slowly but surely, traffic comes, grows, and stays.
 
 ## What to do to get more traffic from search engines
 
@@ -46,7 +46,7 @@ As a web developer, I have the luxury of not having to use WordPress or any othe
 
 My blog lays on a completely custom platform I coded from A to Z. (Excluding open-source components I use like everyone else.)
 
-Therefore, I can guarantee maximum scores on various benchmarks (Ahrefs, Lighthouse, etc.), because I know everything that's going on under the hood.
+Therefore, I can guarantee maximum scores on various benchmarks (Ahrefs, Lighthouse, etc.). It's natural for me to apply all kind of web performances best practices.
 
 If you're using something like WordPress, I recommend being careful when choosing themes and plugins, as most are low quality and can significantly impact your site's performance and, therefore, your rankings.
 
@@ -72,9 +72,11 @@ Once you have a list of keywords, you can start writing blog posts around them. 
 
 ### Write a bunch of articles and update them regularly
 
-I'm not convinced you need to spam Google with dozens of new articles every month to rank (in the beginning, at least).
+I'm not convinced you need to spam Google to rank well.
 
-For now, I have more than 15 articles that I wrote based on popular keywords, and that's perfectly fine.
+It seems like writing and regularly updating a dozen of articles does way more good to your traffic than bombarding them with low-quality crap.
+
+For now, I have around 20 articles that I wrote based on popular keywords.
 
 I update them regularly based on what competitors are doing (competitors are sites near me in the SERPs). 
 
@@ -88,7 +90,7 @@ I essentially build them by posting community links on various popular websites 
 
 I also tried to post dofollow links on forums, but I now know **it doesn't work unless it's relevant to the conversation**. **You can get penalized for that**. Remove them ASAP if you can.
 
-I even naturally acquired some links from high authorities in the niche (on [Laravel.io](https://laravel.io), [Freek Van der Herten's blog](https://freek.dev) and [Larachat](https://larachat.co) for example).
+I even naturally acquired some links from high authorities in the niche (on [JetBrains' blog](https://blog.jetbrains.com/phpstorm/), [Laravel.io](https://laravel.io), [Freek Van der Herten's blog](https://freek.dev) and [Larachat](https://larachat.co) for example).
 
 ## Reports for each month since the beginning
 
@@ -117,7 +119,7 @@ I recently got picked up by Google Discover.
 
 I'm not a Google guy outside of their search engine, so I didn't know much about this service until they gave me 1.08K visitors in a day and a few hours.
 
-I read about how it works on the official documentation and things are more clear now. My [Laravel best practices: the definitive guide for 2022](https://benjamincrozat.com/laravel-best-practices) showed up becaue:
+I read about how it works on the official documentation and things are more clear now. My [Laravel best practices: the definitive guide for 2022](https://benjamincrozat.com/laravel-best-practices) showed up because:
 - I became kind of an authority in the niche thanks to a few very high quality backlinks;
 - I have an attractive image that makes you want to click (it's the only image I have by the way);
 - I wasn't clickbaity in the title.
