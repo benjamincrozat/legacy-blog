@@ -22,7 +22,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Setup database
-        run: touch database/database.sqlite
+        run: |
+            touch database/database.sqlite
+            php artisan migrate
 
       - name: Create .env file
         run: cp .env.example .env
