@@ -26,7 +26,7 @@
 
         <div class="mt-3">
             <p>
-                <strong class="font-bold">Just like Laravel and GitHub</strong>, <strong class="font-bold">avoid a huge GDPR fine</strong> by using <strong class="font-bold">Fathom Analytics</strong>, a privacy-first analytics tool that doesn't track your users.
+                <strong class="font-bold">Just like Laravel and GitHub</strong>, <strong class="font-bold">avoid a GDPR fine</strong> by using <strong class="font-bold">Fathom Analytics</strong>, an analytics tool that doesn't track your users.
             </p>
 
             <p class="mt-1">
