@@ -92,7 +92,7 @@ I even naturally acquired some links from high authorities in the niche (on [Lar
 
 ## Reports for each month since the beginning
 
-### October 2022 (month in progress)
+### October 2022
 
 ![Google Search Console report for October 2022.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667399132/Screenshot_2022-11-02_at_15.16.44_hf4yhc.png)
 
