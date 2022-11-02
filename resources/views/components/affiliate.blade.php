@@ -41,7 +41,7 @@ $name = $name[0];
 
             <p class="mt-1">
                 <a href="{{ route('affiliate', 'fathom-analytics') }}" target="_blank" rel="nofollow noopener noreferrer" class="text-indigo-400 underline">
-                    Get started with a 7-day trial & $10&nbsp;discount
+                    Get started with a <strong class="font-bold">7-day trial & $10&nbsp;discount</strong>
                 </a>
             </p>
         </div>
@@ -58,7 +58,7 @@ $name = $name[0];
 
             <p class="mt-1">
                 <a href="{{ route('affiliate', 'kinsta') }}" target="_blank" rel="nofollow noopener noreferrer" class="text-indigo-400 underline">
-                    Get started with 2 months free.
+                    Get started with <strong class="font-bold">2 months free</strong>.
                 </a>
             </p>
         </div>
