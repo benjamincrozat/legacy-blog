@@ -9,7 +9,7 @@ class NovaServiceProviderTest extends TestCase
 {
     public function test_it_works() : void
     {
-        $user = User::whereEmail('benjamincrozat@me.com')->first();
+        $user = User::factory()->create(['email' => 'benjamincrozat@me.com']);
 
         $this
             ->actingAs($user)
