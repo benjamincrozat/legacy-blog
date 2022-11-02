@@ -15,6 +15,7 @@
 
             <div class="flex-shrink-0 order-1 md:order-none text-center md:text-left w-full md:w-auto">
                 <img
+                    loading="lazy"
                     src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=300"
                     width="150"
                     height="150"
