@@ -1,10 +1,13 @@
 ---
 Description: To keep getting better with PHP, you should subscribe to as many quality blogs as possible. In this article, I share the ones I often read myself.
+Image: https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667429443/learning_h3gjog.jpg
 Published At: 2022-09-19
 Modified At:
 ---
 
 # The 5 best PHP & Laravel blogs to read in 2022
+
+![Someone learning.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667429443/learning_h3gjog.jpg)
 
 I wouldn’t be where I am today without other developers sharing their knowledge through blogging.
 

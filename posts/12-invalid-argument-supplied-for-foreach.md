@@ -1,10 +1,13 @@
 ---
 Description: Learn why the "Invalid argument supplied for foreach()" warning happens, and let me show you multiple ways to fix it.
+Image: https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667429119/programmer_rhkodr.jpg
 Published At: 2022-10-07
 Modified At:
 ---
 
 # Fix "Invalid argument supplied for foreach" in PHP & Laravel
+
+![Programmer trying to fix "Invalid argument supplied for foreach()"](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667429119/programmer_rhkodr.jpg)
 
 ## Why does the "Invalid argument supplied for foreach()" warning occurs?
 

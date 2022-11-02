@@ -1,5 +1,6 @@
 ---
 Description: Learn why and how to fix "Methods with the same name as their class will not be constructors in a future version of PHP" warnings.
+Image: https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1664415791/phpelite.com/php-elephant_y0ft3h_cmb1oc.jpg
 Published At: 2022-10-08
 Modified At:
 ---

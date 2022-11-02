@@ -1,5 +1,6 @@
 ---
 Description: Learn why the "Using $this when not in object context" error happens, and let me show you the only way to fix.
+Image: https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1665150096/benjamincrozat.com/37d84224be98def713fda53db19b3c73b2787949_xzdh4n.png
 Published At: 2022-10-07
 Modified At:
 ---
