@@ -19,7 +19,7 @@ If you're in a hurry, here are my top recommendations:
 
 Keep reading for more details about each web hosting.
 
-**I will keep updating this article as I discover new and interesting deals for PHP developers.**
+**I'll keep updating this article as I discover new and interesting deals for PHP developers.**
 
 ## What's the best web hosting for PHP developers?
 
