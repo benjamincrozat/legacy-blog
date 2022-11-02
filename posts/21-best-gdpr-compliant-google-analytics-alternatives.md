@@ -30,7 +30,7 @@ Government fines for non-compliance can be up to **€10 million, or 2% of your 
 
 ## The best GDPR-compliant Google Analytics alternatives
 
-## [Fathom Analytics](https://benjamincrozat.com/recommends/fathom-analytics)
+### [Fathom Analytics](https://benjamincrozat.com/recommends/fathom-analytics)
 
 [<img src="https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667409777/usefathom.com__ubmp2u.png" alt="Fathom Analytics" />](https://benjamincrozat.com/recommends/fathom-analytics)
 
