@@ -28,6 +28,12 @@ class RedirectToAffiliateController extends Controller
                 $redirect = 'https://kinsta.com';
 
                 break;
+            case 'vultr':
+                $parameters['ref'] = '9270910-8H';
+
+                $redirect = 'https://www.vultr.com/';
+
+                break;
             default:
                 abort(404);
         }

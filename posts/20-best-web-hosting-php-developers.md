@@ -14,7 +14,8 @@ Published At: 2022-11-02
 I may be biased, but being a web developer is a great career choice. Being able to make a good living out of it depends on your ability to promote yourself to potential clients or employers. It all starts with choosing the right web hosting.
 
 If you're in a hurry, here are my top recommendations:
-- **Best value**: Cloudways ([get started with a 3-day free trial](https://benjamincrozat.com/recommends/cloudways))
+- **Easiest to use**: Cloudways ([get started with a 3-day free trial](https://benjamincrozat.com/recommends/cloudways))
+- **Best UX and good prices**: Vultr ([get started with $100 of credit](https://benjamincrozat.com/recommends/vultr))
 - DigitalOcean ([get started with $200 of credit](https://benjamincrozat.com/recommends/digitalocean))
 
 Keep reading for more details about each web hosting.
@@ -31,14 +32,32 @@ Cloudways powers more than 75.000+ businesses. It's an easy-to-use web hosting f
 
 Key features:
 - PHP 8.x
-- SSD-Based hosting
+- SSD-based hosting
+- Automatic backups
 - Ready-to-use Redis
-- 60+ global locations
 - Full-access to the server
 - 1-click free SSL certificate
 - Multiple providers such as AWS, DigitalOcean, GCP, Linode, Vultr and more.
+- 60+ global locations (Cloudways cumulates from all their hosting providers)
 
 [**Get started with a 3-day free trial**](https://benjamincrozat.com/recommends/cloudways)
+
+### [Vultr](https://benjamincrozat.com/recommends/vultr)
+
+[<img src="https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667397258/www.vultr.com__akl39r.png" alt="Vultr" />](https://benjamincrozat.com/recommends/vultr)
+
+Key features:
+- Reliable
+- Good prices
+- DDoS protection
+- Automatic backups
+- Awesome UI and UX
+- 27+ global locations
+- Great customer service
+- NVMe SSD-based hosting
+- Can pay with Bitcoin (I think it's pretty cool, haha!)
+
+[**Get started with $100 of credit**](https://benjamincrozat.com/recommends/vultr)
 
 ### [DigitalOcean](https://benjamincrozat.com/recommends/digitalocean)
 
