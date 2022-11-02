@@ -1,7 +1,10 @@
 ---
 Description: Here are the best GDPR compliant Google Analytics alternatives that will help you avoid the GDPR penalty and keep your users safe.
+Image: https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667409628/data-security_z5tsl9.jpg
+Featured: true
 Hide Banners: true
 Include Lower Level Titles In TOC: true
+Published At: 2022-11-02
 ---
 
 # The best GDPR compliant Google Analytics alternatives in 2022
@@ -47,4 +50,4 @@ Key features:
 - Simple, free and reactive uptime monitoring that sends you an email or SMS
 - Used by thousand of businesses, including some we love like Laravel, GitHub (Microsoft), TailwindCSS, Vue.js, IBM and more
 
-[Get started with a $10 discount](https://benjamincrozat.com/recommends/fathom-analytics)
+[Get started with a 7-day trial and $10 discount on your first invoice](https://benjamincrozat.com/recommends/fathom-analytics)
