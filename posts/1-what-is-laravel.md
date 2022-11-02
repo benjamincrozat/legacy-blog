@@ -1,5 +1,6 @@
 ---
 Description: You heard about Laravel but don't know where to start? Don't worry, you found the best starting point for your journey.
+Image: https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1662796068/benjamincrozat.com/laravel.com__xwlwqg.png
 Published At: 2022-09-09
 Modified At: 2022-10-23
 ---
