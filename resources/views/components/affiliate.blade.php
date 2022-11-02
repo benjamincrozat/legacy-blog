@@ -41,7 +41,7 @@ $name = $name[0];
 
             <p class="mt-1">
                 <a href="{{ route('affiliate', 'fathom-analytics') }}" target="_blank" rel="nofollow noopener noreferrer" class="text-indigo-400 underline">
-                    Get started with a $10 discount
+                    Get started with a 7-day trial & $10 discount
                 </a>
             </p>
         </div>
