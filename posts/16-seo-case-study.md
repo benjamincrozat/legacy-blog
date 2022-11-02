@@ -94,7 +94,7 @@ I even naturally acquired some links from high authorities in the niche (on [Lar
 
 ### October 2022 (month in progress)
 
-![Google Search Console report for October 2022.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667398651/Screenshot_2022-11-02_at_15.16.44_fszfmx.png)
+![Google Search Console report for October 2022.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667399132/Screenshot_2022-11-02_at_15.16.44_hf4yhc.png)
 
 The numbers:
 
