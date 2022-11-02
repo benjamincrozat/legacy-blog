@@ -39,9 +39,7 @@ jobs:
         run: yarn build
 
       - name: Setup database
-        run: |
-            touch database/database.sqlite
-            php artisan migrate
+        run: touch database/database.sqlite
 
       - name: Run tests
         run: php vendor/bin/phpunit
