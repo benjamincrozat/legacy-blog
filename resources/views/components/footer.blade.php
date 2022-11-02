@@ -31,4 +31,8 @@
     <p class="mt-8 opacity-50 text-center text-xs tracking-widest uppercase">
         © Benjamin Crozat {{ date('Y') }}. All&nbsp;rights&nbsp;reserved.
     </p>
+
+    <p class="mt-8 md:max-w-screen-sm mx-auto opacity-[.65] text-center text-xs">
+        Some of the links on the blog are affiliate links, which can provide compensation to me at no cost to you if you decide to purchase a paid plan. These are products I've personally used and stand behind.
+    </p>
 </footer>
