@@ -83,7 +83,8 @@
 
             @if ($post->hideBanners)
                 <div class="border mt-8 p-4 rounded text-xs">
-                    <p>Sometimes, the blog uses affiliate links, which can compensate me at no cost to you if you decide to pursue the deal. I only promote products I've personally used and stand behind.</p>
+                    <p>Sometimes, the blog uses affiliate links, which can compensate me at no cost to you if you decide to pursue the deal.</p>
+                    <p class="mt-2">I only promote products I've personally used and stand behind.</p>
                 </div>
             @endif
         </div>
