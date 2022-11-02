@@ -12,11 +12,11 @@ Modified At:
 
 Here's a case study example for [benjamincrozat.com](https://benjamincrozat.com), my blog about programming with PHP and Laravel.
 
-Since I started in September 2022, **clicks on Google increased by 750%**.
+Since I started in September 2022, **clicks on Google increased by 1121%**.
 
 I'm doing web development for a living, not SEO. But I'm a fast learner and like to learn by doing. In this article, you'll also learn about everything I did to rank my blog as high as possible with many keywords.
 
-![Screenshot of the growth.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666808172/benjamincrozat.com/Screenshot_2022-10-26_at_20.16.02_wavosu.png)
+![Screenshot of the growth.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667399230/Screenshot_2022-11-02_at_15.26.50_y1j5w8.png)
 
 ## Why should you care about SEO?
 
