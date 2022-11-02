@@ -24,7 +24,7 @@
                             <img
                                 src="{{ $post->image }}"
                                 alt="{{ $post->title }}"
-                                class="rounded-md"
+                                class="aspect-video object-cover rounded-md w-full"
                             />
                         </a>
 
