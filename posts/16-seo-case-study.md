@@ -6,7 +6,7 @@ Published At: 2022-10-25
 Modified At:
 ---
 
-# 2022 SEO case study: programming niche (+750% increase)
+# 2022 SEO case study: programming niche (+1121% increase)
 
 ![Illustration of a rocket.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666719094/benjamincrozat.com/rocket_xv9mlh.png)
 
@@ -94,20 +94,20 @@ I even naturally acquired some links from high authorities in the niche (on [Lar
 
 ### October 2022 (month in progress)
 
-![Google Search Console report for October 2022.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1666807984/benjamincrozat.com/Screenshot_2022-10-26_at_20.12.45_ovn5oq.png)
+![Google Search Console report for October 2022.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667398651/Screenshot_2022-11-02_at_15.16.44_fszfmx.png)
 
 The numbers:
 
-- Clicks: **345 (+750%)**;
-- Impressions: **21.9K (+426%)**;
-- Average CTR: **1.6% (+177%)**;
-- Average position: **26.9 (+158%)**.
+- Clicks: **516 (+1121%)**;
+- Impressions: **28.5K (+527%)**;
+- Average CTR: **1.8% (+200%)**;
+- Average position: **25.5 (+167%)**.
 
 What I did:
 
 - I wrote new articles based on keyword research;
 - I updated articles based on what the competition was doing and when I felt I could structure them better;
-- I naturally got high-quality backlinks from authorities in this niche by writing about emerging topics way ahead of anyone.
+- I naturally got high-quality backlinks from authorities in this niche by writing about emerging topics ahead of anyone.
 
 ### September 2022
 
