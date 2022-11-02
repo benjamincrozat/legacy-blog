@@ -117,16 +117,16 @@ I recently got picked up by Google Discover.
 
 I'm not a Google guy outside of their search engine, so I didn't know much about this service until they gave me 1.08K visitors in a day and a few hours.
 
-So I read about how it works on the official documentation and things are more clear now. My [Laravel best practices: the definitive guide for 2022](https://benjamincrozat.com/laravel-best-practices):
+I read about how it works on the official documentation and things are more clear now. My [Laravel best practices: the definitive guide for 2022](https://benjamincrozat.com/laravel-best-practices) showed up becaue:
 - I became kind of an authority in the niche thanks to a few very high quality backlinks;
 - I have an attractive image that makes you want to click (it's the only image I have by the way);
 - I wasn't clickbaity in the title.
 
 The traffic from Google Discover dropped substantially the next day. I guess it's like spikes on social media: it's not worth it on the long run. But what do I know? Time will tell.
 
-- Clicks: 1.08K;
-- Impressions: 19.3K;
-- Average CTR: 5.6%;
+- Clicks: **1.08K**;
+- Impressions: **19.3K**;
+- Average CTR: **5.6%**;
 
 ### September 2022
 
