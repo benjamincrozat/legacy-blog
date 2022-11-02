@@ -21,11 +21,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup database
-        run: |
-            touch database/database.sqlite
-            php artisan migrate
-
       - name: Create .env file
         run: cp .env.example .env
 
@@ -42,6 +37,11 @@ jobs:
 
       - name: Build CSS and JavaScript
         run: yarn build
+
+      - name: Setup database
+        run: |
+            touch database/database.sqlite
+            php artisan migrate
 
       - name: Run tests
         run: php vendor/bin/phpunit
