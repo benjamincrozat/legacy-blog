@@ -41,7 +41,7 @@
             </p>
         </div>
 
-        <x-home.companies-trusted-me />
+        <x-home.companies-trusted-me class="border-t border-indigo-400 mt-16 pt-16" />
     </x-home.section>
 
     {{-- Numbers --}}
