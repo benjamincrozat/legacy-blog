@@ -10,7 +10,7 @@ class RedirectToAffiliateControllerTest extends TestCase
     {
         $this
             ->get(route('affiliate', ['cloudways', 'foo' => 'bar']))
-            ->assertRedirect('https://www.cloudways.com/en/?id=1242932&foo=bar')
+            ->assertRedirect('https://www.cloudways.com/en/?foo=bar&id=1242932')
         ;
     }
 

@@ -9,15 +9,31 @@ class RedirectToAffiliateController extends Controller
 {
     public function __invoke(Request $request, string $slug) : RedirectResponse
     {
-        $queryString = http_build_query($request->all());
+        $parameters = $request->all();
 
         switch ($slug) {
             case 'cloudways':
-                return redirect()->away("https://www.cloudways.com/en/?id=1242932&$queryString");
+                $parameters['id'] = '1242932';
+
+                $redirect = 'https://www.cloudways.com/en/';
+
+                break;
+            case 'digitalocean':
+                $redirect = 'https://m.do.co/c/58bbdf89fc72';
+
+                break;
             case 'kinsta':
-                return redirect()->away('https://kinsta.com?kaid=AEFAUTRRTINA');
+                $parameters['kaid'] = 'AEFAUTRRTINA';
+
+                $redirect = 'https://kinsta.com';
+
+                break;
             default:
                 abort(404);
         }
+
+        $queryString = http_build_query($parameters);
+
+        return redirect()->away("$redirect?$queryString");
     }
 }
