@@ -46,6 +46,8 @@ Key features:
 
 [<img src="https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667397258/www.vultr.com__akl39r.png" alt="Vultr" />](https://benjamincrozat.com/recommends/vultr)
 
+Vultr manages over 45 million instances deployed by thousands of clients. I love their UI and UX, they're cheaper than DigitalOcean and their customer service is top-notch.
+
 Key features:
 - Reliable
 - Good prices
