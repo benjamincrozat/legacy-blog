@@ -24,7 +24,7 @@ Keep reading for more details about each web hosting.
 
 ## What's the best web hosting for PHP developers?
 
-[<img src="https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667333031/Screenshot_2022-11-01_at_21.03.04_yaljg2.png" alt="Cloudways" />](https://benjamincrozat.com/recommends/cloudways)
+[<img loading="lazy" src="https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667333031/Screenshot_2022-11-01_at_21.03.04_yaljg2.png" alt="Cloudways" />](https://benjamincrozat.com/recommends/cloudways)
 
 ### [Cloudways](https://benjamincrozat.com/recommends/cloudways)
 
@@ -44,7 +44,7 @@ Key features:
 
 ### [Vultr](https://benjamincrozat.com/recommends/vultr)
 
-[<img src="https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667397258/www.vultr.com__akl39r.png" alt="Vultr" />](https://benjamincrozat.com/recommends/vultr)
+[<img loading="lazy" src="https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667397258/www.vultr.com__akl39r.png" alt="Vultr" />](https://benjamincrozat.com/recommends/vultr)
 
 Vultr manages over 45 million instances deployed by thousands of clients. I love their UI and UX, they're cheaper than DigitalOcean and their customer service is top-notch.
 
@@ -64,7 +64,7 @@ Key features:
 
 ### [DigitalOcean](https://benjamincrozat.com/recommends/digitalocean)
 
-[<img src="https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667393652/www.digitalocean.com__sctfdo.png" alt="DigitalOcean" />](https://benjamincrozat.com/recommends/digitalocean)
+[<img loading="lazy" src="https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667393652/www.digitalocean.com__sctfdo.png" alt="DigitalOcean" />](https://benjamincrozat.com/recommends/digitalocean)
 
 DigitalOcean is a reliable cloud hosting provider that offers a delightfully simple and intuitive user interface. Whatever you need for your PHP project, they provide at a reasonable price.
 

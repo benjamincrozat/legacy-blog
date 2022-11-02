@@ -11,15 +11,15 @@
         </nav>
     </div>
 
-    <section id="articles" class="container mt-8 sm:mt-16">
+    <section id="articles" class="mt-8 sm:mt-16">
         <h2 class="font-bold text-center text-xl">
             Featured posts
         </h2>
 
         @if ($featured->isNotEmpty())
-            <div class="grid sm:grid-cols-2 gap-4 mt-8">
+            <div class="flex gap-4 mt-8 px-4 overflow-x-scroll snap-x snap-mandatory">
                 @foreach ($featured as $post)
-                    <figure>
+                    <figure class="flex-shrink-0 snap-start scroll-ml-4 w-[90%]">
                         <a href="{{ route('posts.show', $post->slug) }}" @click="window.fathom?.trackGoal('OKJIR46O', 0)">
                             <img
                                 src="{{ $post->image }}"
@@ -30,7 +30,7 @@
 
                         <a href="{{ route('posts.show', $post->slug) }}" class="bg-gray-900 block leading-tight mt-2 p-3 rounded-md text-sm text-white" @click="window.fathom?.trackGoal('OKJIR46O', 0)">
                             <figcaption class="flex items-center justify-between gap-4">
-                                <span>{{ $post->title }}</span>
+                                <span class="truncate">{{ $post->title }}</span>
                                 <x-heroicon-o-arrow-right class="flex-shrink-0 w-3 h-3" />
                             </figcaption>
                         </a>

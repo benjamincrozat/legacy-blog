@@ -32,7 +32,7 @@ Government fines for non-compliance can be up to **€10 million, or 2% of your 
 
 ### [Fathom Analytics](https://benjamincrozat.com/recommends/fathom-analytics)
 
-[<img src="https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667409777/usefathom.com__ubmp2u.png" alt="Fathom Analytics" />](https://benjamincrozat.com/recommends/fathom-analytics)
+[<img loading="lazy" src="https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667409777/usefathom.com__ubmp2u.png" alt="Fathom Analytics" />](https://benjamincrozat.com/recommends/fathom-analytics)
 
 Fathom Analytics is a privacy-first analytics tool that doesn't track your users. It's a dead simple, lightweight, and fast alternative to Google Analytics. Of course, it's also GDPR compliant and doesn't use cookies, **which could make you avoid a huge government fine**.
 
