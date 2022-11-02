@@ -26,6 +26,10 @@
     </x-breadcrumb>
 
     <div class="container lg:grid lg:grid-cols-3 lg:gap-16 mt-8 relative">
+        @empty ($post->hideBanners)
+            <x-affiliate channel="article" class="flex flex-wrap justify-center gap-4 max-w-[768px] mb-8 py-6 lg:hidden" />
+        @endempty
+
         <article class="lg:col-span-2">
             {{-- Title --}}
             <h1 class="font-thin text-3xl md:text-5xl">
@@ -42,10 +46,6 @@
             </div>
 
             <x-blog.toc :toc="$post->getTableOfContents()" class="lg:hidden mt-8" />
-
-            @empty ($post->hideBanners)
-                <x-affiliate channel="article" class="flex flex-wrap justify-center gap-4 max-w-[768px] sm:mx-auto mt-8 py-6 lg:hidden" />
-            @endempty
 
             {{-- Content --}}
             <div class="break-words max-w-full mt-8 prose prose-a:border-b prose-a:border-indigo-200 prose-a:text-indigo-400 prose-a:no-underline">
