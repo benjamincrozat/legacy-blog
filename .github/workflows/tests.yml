@@ -18,8 +18,11 @@ jobs:
       - name: Setup Redis
         uses: zhulik/redis-action@1.1.0
 
-      - name: "Checkout code"
+      - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: Setup database
+        run: touch database/database.sqlite
 
       - name: Create .env file
         run: cp .env.example .env
