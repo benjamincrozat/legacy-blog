@@ -37,3 +37,34 @@ if (is_iterable($value)) {
     }
 }
 ```
+
+## Use Laravel's collections
+
+If you're using Laravel, you can use [collections](https://laravel.com/docs/collections) to wrap your arrays and work with safer code.
+
+Let's say you're refactoring a poor-quality codebase and have to deal with uncertain return values. Wrapping the return value in the `collect()` helper will ensure that you always get an iterable to loop over.
+
+```php
+// The safe collect() helper.
+$items = collect(
+    // The unsafe method.
+    $foo->getItems()
+);
+
+// Looping over $items will always work.
+foreach ($items as $item) {
+    //
+}
+```
+
+Of course, since you're using Laravel's collections, you could refactor to their built-in methods:
+
+```php
+$items = collect(
+    $foo->getItems()
+);
+
+$items->each(function ($item) {
+    //
+});
+```
