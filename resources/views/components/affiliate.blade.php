@@ -53,7 +53,7 @@ $name = $name[0];
 
         <div>
             <p>
-                <strong class="font-bold">Focus on writing</strong>, promote your business, <strong class="font-bold">let Kinsta worry about managing WordPress</strong>.
+                <strong class="font-bold">Focus on writing</strong>, promote your business, <strong class="font-bold">let Kinsta manage WordPress</strong>.
             </p>
 
             <p class="mt-1">
