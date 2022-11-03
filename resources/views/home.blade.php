@@ -214,7 +214,11 @@
 
                 <p class="mt-4">I wasn't fond of the school system and had to leave at some point. Therefore, I quit at the age of 15 and have educated myself on everything since then.</p>
 
-                <div class="mt-4">The freelancer life immediately seduced me, and I quickly became interested in helping companies to work better with web developers and technology.</div>
+                <p class="mt-4">The freelancer life immediately seduced me, and I quickly became interested in helping companies to work better with web developers and technology.</p>
+
+                <p class="mt-4">
+                    We can work together, <a href="mailto:benjamincrozat@me.com" class="border-b border-indigo-400 text-indigo-400" @click="window.fathom?.trackGoal('S0ZZJNPU', 0)">contact me</a>!
+                </p>
             </div>
 
             <div class="flex-shrink-0 order-1 md:order-none text-center md:text-left w-full md:w-auto">
