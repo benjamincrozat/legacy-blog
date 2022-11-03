@@ -31,6 +31,7 @@ Keep reading for more details about each web hosting.
 Cloudways powers more than 75.000+ businesses. It's an easy-to-use web hosting for people who want to save cost and time on DevOps matters. Enjoy the latest and greatest of the PHP ecosystem with no efforts.
 
 Key features:
+- Reliable
 - SSD-based hosting
 - Automatic backups
 - Ready-to-use Redis
@@ -46,7 +47,7 @@ Key features:
 
 [<img loading="lazy" src="https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667397258/www.vultr.com__akl39r.png" alt="Vultr" />](https://benjamincrozat.com/recommends/vultr)
 
-Vultr manages over 45 million instances deployed by thousands of clients. I love their UI and UX, they're cheaper than DigitalOcean and their customer service is top-notch.
+Vultr manages over 45 million cloud server instances deployed by thousands of clients. I love their UI and UX, they're cheaper than DigitalOcean and their customer service is top-notch.
 
 Key features:
 - Reliable
@@ -70,6 +71,7 @@ DigitalOcean is a reliable cloud hosting provider that offers a delightfully sim
 
 Key features:
 - PHP 8.x
+- Reliable
 - SSD-based hosting
 - 14+ global locations
 - PHP 8.x and MySQL 8.x
