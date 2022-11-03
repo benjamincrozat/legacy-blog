@@ -45,7 +45,10 @@
     </x-home.section>
 
     {{-- Numbers --}}
-    <x-home.section class="bg-gradient-to-r from-indigo-100/50 to-indigo-200/50 text-indigo-900">
+    <x-home.section
+        class="bg-gradient-to-r from-indigo-100/50 to-indigo-200/50 text-indigo-900"
+        x-intersect="window.fathom?.trackGoal('R7HDACGG', 0)"
+    >
         <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
             An expert Laravel developer for your business
         </h2>
@@ -74,7 +77,10 @@
     </x-home.section>
 
     {{-- Services --}}
-    <x-home.section class="bg-gradient-to-r from-indigo-50/50 to-indigo-100/50 text-indigo-900">
+    <x-home.section
+        class="bg-gradient-to-r from-indigo-50/50 to-indigo-100/50 text-indigo-900"
+        x-intersect="window.fathom?.trackGoal('WSVGAGQR', 0)"
+    >
         <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
             My Laravel development services
         </h2>
@@ -193,7 +199,11 @@
         </ul>
     </x-home.section>
 
-    <x-home.section id="about" class="bg-gradient-to-r from-indigo-100/50 to-indigo-200/50 text-indigo-900">
+    <x-home.section
+        id="about"
+        class="bg-gradient-to-r from-indigo-100/50 to-indigo-200/50 text-indigo-900"
+        x-intersect="window.fathom?.trackGoal('Q0JLQGBO', 0)"
+    >
         <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
             About me
         </h2>
