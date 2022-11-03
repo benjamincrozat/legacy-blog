@@ -28,7 +28,7 @@ Keep reading for more details about each web hosting.
 
 ### [Cloudways](https://benjamincrozat.com/recommends/cloudways)
 
-Cloudways powers more than 75.000+ businesses. It's an easy-to-use web hosting for people who want to save cost and time on DevOps matters. Enjoy the latest and greatest of the PHP ecosystem with no efforts.
+Cloudways powers more than 75.000+ businesses. It's an easy-to-use web hosting for people who want to save cost and time on DevOps matters. Enjoy the latest and greatest of the PHP ecosystem with no efforts. Cloudways plugs itself to your favorite hosting provider (even Amazon Web Services and Google Cloud Platform) and manages everything for you.
 
 Key features:
 - Reliable
