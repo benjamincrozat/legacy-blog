@@ -11,7 +11,7 @@ Published At: 2022-11-02
 
 ![Cloud](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667393961/cloud_xxp8u9.jpg)
 
-I may be biased, but being a web developer is a great career choice. Being able to make a good living out of it as a freelancer or employee depends on your ability to promote yourself to companies. It all starts with choosing the right web hosting.
+I may be biased, but being a web developer is a great career choice. Being able to make a good living out of it as an entrepreneur, a freelancer or an employee depends on your ability to promote yourself to potential clients and employers. It all starts with choosing the right web hosting, setting up PHP, MySQL or whatever else if your favorite technology.
 
 If you're in a hurry, here are my top recommendations:
 - **Easiest to use**: Cloudways ([get started with a 3-day free trial](https://benjamincrozat.com/recommends/cloudways))
@@ -39,7 +39,7 @@ Key features:
 - Full-access to the server
 - 1-click free SSL certificate
 - Multiple providers such as AWS, DigitalOcean, GCP, Linode, Vultr and more.
-- 60+ global locations (Cloudways cumulates from all their hosting providers)
+- 60+ global server locations (Cloudways cumulates from all their hosting providers)
 
 [**Get started with a 3-day free trial**](https://benjamincrozat.com/recommends/cloudways)
 
@@ -55,7 +55,7 @@ Key features:
 - DDoS protection
 - Automatic backups
 - Awesome UI and UX
-- 27+ global locations
+- 27+ global server locations
 - Great customer service
 - PHP 8.x and MySQL 8.x
 - NVMe SSD-based hosting
@@ -73,7 +73,7 @@ Key features:
 - PHP 8.x
 - Reliable
 - SSD-based hosting
-- 14+ global locations
+- 14+ global server locations
 - PHP 8.x and MySQL 8.x
 - Deploy PHP apps instead of managing servers with their App Platform
 - Advanced users can still manage their own VPS
