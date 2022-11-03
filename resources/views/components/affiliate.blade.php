@@ -36,7 +36,7 @@ $name = $name[0];
 
         <div>
             <p>
-                Start using <strong class="font-bold">Fathom Analytics</strong>, a privacy-first analytics tool that can <strong class="font-bold">bypass ad blockers</strong>.
+                <strong class="font-bold">Fathom Analytics</strong> is a privacy-first analytics tool that can <strong class="font-bold">bypass ad blockers</strong>.
             </p>
 
             <p class="mt-1">
