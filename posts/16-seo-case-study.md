@@ -16,7 +16,7 @@ Since I started in September 2022, **clicks on Google increased by 1021%**.
 
 I'm doing web development for a living, not SEO. But I'm a fast learner and like to learn by doing. In this article, you'll also learn about every best practice I tried to apply to rank my blog as high as possible with many keywords.
 
-![Screenshot of the growth.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667399230/Screenshot_2022-11-02_at_15.26.50_y1j5w8.png)
+![Growth in the Google Search Console](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667399230/Screenshot_2022-11-02_at_15.26.50_y1j5w8.png)
 
 ## Why should you care about SEO?
 
@@ -24,7 +24,9 @@ For me, traffic is like money; it should be passive.
 
 I don't want to work my ass off for brief traffic spikes because I went viral on social media. 
 
-Therefore, I write blog posts based on what people are searching for and applying as many best practices as possible, and slowly but surely, traffic comes, grows, and stays.
+Therefore, I write blog posts based on what people are searching for and I apply as many best practices as possible.
+
+Slowly but surely, traffic comes, grows, and stays.
 
 ## What to do to get more traffic from search engines
 
@@ -86,11 +88,11 @@ I also structure them to be as snippets-friendly as possible (imagine a dumb bot
 
 Link building isn't most people's cup of tea. Myself included. But it needs to be done, because **it's one of the most critical ranking factors**.
 
-I essentially build them by posting community links on various popular websites in the niche (these links are also reused in newsletters, which is an additional channel of traffic);
+I essentially build them by posting community links on various popular websites in the niche (these links are also reused in newsletters, which is an additional channel of traffic).
+
+That way, I even naturally acquired some links from high authorities in the niche (on [JetBrains' blog](https://blog.jetbrains.com/phpstorm/), [Laravel.io](https://laravel.io), [Freek Van der Herten's blog](https://freek.dev) and [Larachat](https://larachat.co) for example).
 
 I also tried to post dofollow links on forums, but I now know **it doesn't work unless it's relevant to the conversation**. **You can get penalized for that**. Remove them ASAP if you can.
-
-I even naturally acquired some links from high authorities in the niche (on [JetBrains' blog](https://blog.jetbrains.com/phpstorm/), [Laravel.io](https://laravel.io), [Freek Van der Herten's blog](https://freek.dev) and [Larachat](https://larachat.co) for example).
 
 ## Reports for each month since the beginning
 
@@ -119,8 +121,8 @@ I recently got picked up by Google Discover.
 
 I'm not a Google guy outside of their search engine, so I didn't know much about this service until they gave me 1.08K visitors in a day and a few hours.
 
-I read about how it works on the official documentation and things are more clear now. My [Laravel best practices: the definitive guide for 2022](https://benjamincrozat.com/laravel-best-practices) showed up because:
-- I became kind of an authority in the niche thanks to a few very high quality backlinks;
+I read about how it works on the official documentation and things became more clear. My [Laravel best practices: the definitive guide for 2022](https://benjamincrozat.com/laravel-best-practices) showed up because:
+- I became kind of an authority in the niche, thanks to a few very high quality backlinks;
 - I have an attractive image that makes you want to click (it's the only image I have by the way);
 - I wasn't clickbaity in the title.
 
@@ -145,7 +147,6 @@ What I did:
 
 - I set up a new site on a 7-year-old domain that was never used for anything good;
 - I wrote a few articles based on keyword research;
-- I forced Google to crawl them;
-- I constantly updated all those articles whenever I noticed their structure could be improved;
+- I "forced" Google to crawl them;
+- I constantly updated all those articles whenever I noticed mistakes or improvements opportunities;
 - I tried to build a few links on relevant websites.
-
