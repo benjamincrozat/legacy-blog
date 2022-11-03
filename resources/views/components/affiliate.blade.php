@@ -36,7 +36,7 @@ $name = $name[0];
 
         <div>
             <p>
-                <strong class="font-bold">Laravel & GitHub avoid GDPR fines</strong> using <strong class="font-bold">Fathom Analytics</strong>, an analytics tool that doesn't track users.
+                Start using <strong class="font-bold">Fathom Analytics</strong>, a privacy-first analytics tool that can <strong class="font-bold">bypass ad blockers</strong>.
             </p>
 
             <p class="mt-1">
