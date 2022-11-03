@@ -217,7 +217,7 @@
                 <p class="mt-4">The freelancer life immediately seduced me, and I quickly became interested in helping companies to work better with web developers and technology.</p>
 
                 <p class="mt-4">
-                    We can work together, <a href="mailto:benjamincrozat@me.com" class="border-b border-indigo-400 text-indigo-400" @click="window.fathom?.trackGoal('S0ZZJNPU', 0)">contact me</a>!
+                    We can work together, <a href="mailto:benjamincrozat@me.com" class="border-b border-indigo-400 font-normal text-indigo-400" @click="window.fathom?.trackGoal('S0ZZJNPU', 0)">contact me</a>!
                 </p>
             </div>
 
