@@ -3,13 +3,7 @@
     description="Have you ever had a question about the art of crafting web applications? This is the best blog to find your answer."
     class="text-gray-600"
 >
-    <div class="container flex justify-between mt-8">
-        <x-blog.title />
-
-        <nav class="flex items-center gap-8">
-            <x-hire-me />
-        </nav>
-    </div>
+    <x-blog.top />
 
     <section id="articles" class="sm:container mt-8 sm:mt-16">
         <h2 class="font-bold px-4 sm:px-0 text-center text-xl">

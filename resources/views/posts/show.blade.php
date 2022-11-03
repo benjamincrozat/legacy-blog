@@ -3,17 +3,7 @@
     :description="$post->description"
     :image="$post->image"
 >
-    <div class="container sm:flex sm:items-center sm:justify-between mt-8 text-center sm:text-left">
-        <x-blog.title />
-
-        <nav class="flex items-center justify-center sm:justify-start gap-8 mt-8 sm:mt-0">
-            <a href="{{ route('posts.index') }}" class="text-xs tracking-widest uppercase">
-                Blog
-            </a>
-
-            <x-hire-me />
-        </nav>
-    </div>
+    <x-blog.top />
 
     <x-breadcrumb class="container mt-8 sm:mt-16">
         <x-breadcrumb-item href="{{ route('posts.index') }}">
