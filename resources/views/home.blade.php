@@ -205,7 +205,9 @@
         x-intersect="window.fathom?.trackGoal('Q0JLQGBO', 0)"
     >
         <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
-            About me
+            <svg xml:space="preserve" viewBox="0 0 490.667 490.667" class="fill-current inline-block w-12 h-12"><circle cx="245.333" cy="362.667" r="21.333"/><path d="M245.333 0C110.059 0 0 110.059 0 245.333s110.059 245.333 245.333 245.333 245.333-110.059 245.333-245.333S380.608 0 245.333 0zm0 469.333c-123.52 0-224-100.48-224-224s100.48-224 224-224 224 100.48 224 224-100.48 224-224 224z"/><path d="M245.333 96C207.104 96 176 127.904 176 167.115c0 5.891 4.776 10.667 10.667 10.667s10.667-4.776 10.667-10.667c0-27.445 21.536-49.781 48-49.781s48 21.792 48 48.597c0 25.888-22.4 48.587-48 48.587-5.891 0-10.667 4.776-10.667 10.667V288c0 5.891 4.776 10.667 10.667 10.667s10.667-4.776 10.667-10.667v-53.013c32.736-5.333 58.667-34.805 58.667-69.056C314.667 127.371 283.563 96 245.333 96z"/></svg>
+
+            <span class="block mt-2">About me</span>
         </h2>
 
         <div class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8 mt-8 sm:text-lg md:text-xl">
