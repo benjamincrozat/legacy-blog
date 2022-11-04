@@ -28,7 +28,7 @@
                 {{ $attributes->only('@click') }}
                 class="flex-shrink-0"
             >
-                <img loading="lazy" src="{{ str_replace('w_auto', 'h_128', $post->image) }}" width="64" height="64" alt="{{ $post->title }}" class="aspect-square object-cover" />
+                <img loading="lazy" src="{{ str_replace('w_auto', 'h_128', $post->image) }}" width="64" height="64" alt="{{ $post->title }}" class="aspect-square dark:brightness-75 object-cover" />
             </a>
         @endif
     </div>
