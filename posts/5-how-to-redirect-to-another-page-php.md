@@ -61,8 +61,6 @@ The `header()` function can take a third parameter. Using PHP named arguments, w
 header('Location: https://example.com/some/page', response_code: 301);
 ```
 
-In the next section, I will talk about the difference between HTTP codes `301` and `302`.
-
 ### What's the difference between 301 and 302 redirects?
 
 **The HTTP `301` code means the resource has been moved permanently**; Some use cases include:
