@@ -38,6 +38,15 @@ class RedirectToAffiliateController extends Controller
                 $redirect = 'https://www.vultr.com/';
 
                 break;
+            case 'wp-engine':
+                $parameters['afftrack'] = '';
+                $parameters['d'] = '969073';
+                $parameters['m'] = '41388';
+                $parameters['u'] = '3391214';
+
+                $redirect = 'https://shareasale.com/u.cfm';
+
+                break;
             default:
                 abort(404);
         }

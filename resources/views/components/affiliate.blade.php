@@ -1,5 +1,5 @@
 @php
-$name = empty($name) ? ['cloudways', 'fathom-analytics', 'kinsta'] : [$name];
+$name = empty($name) ? ['cloudways', 'fathom-analytics', 'kinsta', 'wp-engine'] : [$name];
 
 shuffle($name);
 
@@ -59,6 +59,24 @@ $name = $name[0];
             <p class="mt-1">
                 <a href="{{ route('affiliate', 'kinsta') }}" target="_blank" rel="nofollow noopener noreferrer" class="text-indigo-400 underline">
                     Get started with <strong class="font-bold dark:text-indigo-300">2 months free</strong>.
+                </a>
+            </p>
+        </div>
+    @elseif ($name === 'wp-engine')
+        <a href="{{ route('affiliate', 'wp-engine') }}" target="_blank" rel="nofollow noopener noreferrer">
+            <x-icon-wp-engine-dark class="flex-shrink-0 h-7 dark:hidden" />
+            <x-icon-wp-engine-light class="flex-shrink-0 h-7 hidden dark:inline" />
+            <span class="sr-only">WP Engine</span>
+        </a>
+
+        <div>
+            <p>
+                The WordPress digital experience platform that <strong class="font-bold dark:text-white">drives your business forward faster</strong>.
+            </p>
+
+            <p class="mt-1">
+                <a href="{{ route('affiliate', 'wp-engine') }}" target="_blank" rel="nofollow noopener noreferrer" class="text-indigo-400 underline">
+                    <strong class="font-bold">4 months free on ALL annual shared plans</strong> or 20% off 1st month
                 </a>
             </p>
         </div>
