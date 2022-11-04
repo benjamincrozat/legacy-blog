@@ -36,9 +36,11 @@ Government fines for non-compliance can be up to **€10 million, or 2% of your 
 
 Fathom Analytics is a privacy-first analytics tool that doesn't track your users. It's a dead simple, lightweight, and fast alternative to Google Analytics. Of course, it's also GDPR compliant and doesn't use cookies, **which could make you avoid a huge government fine**.
 
-Actually, **Fathom is what this website uses to track its visitors**. I can't recommend this service enough!
+What I love about Fathom compared to Google Analytics is that it's easy to get the information you need. For instance, you may want to see how much visitors you acquired from Google in the past month. With Google Analytics, you have to go through a lot of steps to get that information. With Fathom, it's on the Dashboard and two clicks away.
 
-Key features:
+Did you know that **Fathom is what this website uses to track its visitors**? I can't recommend this service enough!
+
+The **pros** of Fathom Analytics:
 - Dark mode!
 - Export data to CSV
 - Extremely fast script
@@ -49,5 +51,9 @@ Key features:
 - EU traffic is automatically routed through European-owned infrastructure
 - Simple, free, and reactive uptime monitoring that sends you an email or SMS
 - Used by thousands of businesses, including some we love, like Laravel, GitHub (Microsoft), Tailwind CSS, Vue.js, IBM, and more
+
+The **cons** of Fathom Analytics:
+- The dashboard's UI could be better;
+- I noticed some bugs when you have too much filters in place.
 
 [Get started with a 7-day trial and $10 discount on your first invoice](https://benjamincrozat.com/recommends/fathom-analytics)
