@@ -40,6 +40,8 @@ What I love about Fathom compared to Google Analytics is that it's easy to get t
 
 Did you know that **Fathom is what this website uses to track its visitors**? I can't recommend this service enough!
 
+[Get started with a 7-day trial and $10 discount on your first invoice](https://benjamincrozat.com/recommends/fathom-analytics)
+
 The **pros** of Fathom Analytics:
 - Dark mode!
 - Export data to CSV
@@ -55,5 +57,3 @@ The **pros** of Fathom Analytics:
 The **cons** of Fathom Analytics:
 - The dashboard's UI could be better;
 - I noticed some bugs when you have too much filters in place.
-
-[Get started with a 7-day trial and $10 discount on your first invoice](https://benjamincrozat.com/recommends/fathom-analytics)
