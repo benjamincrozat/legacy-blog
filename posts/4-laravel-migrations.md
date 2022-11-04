@@ -18,9 +18,9 @@ Migrations contain PHP code that shapes your database exactly how you want it.
 
 Using Laravel's migrations have several advantages such as:
 - Being in sync with your team members;
-- Never use your MySQL client ever again.
+- Never use your MySQL client ever again;
 - Keeping track of the database's schema over time thanks to your Git history;
-- Regenerate your the database to include any change that's been made, no matter which environment you're in;
+- Regenerate your the database to include any change that's been made, no matter which environment you're in.
 
 ## When to use migrations?
 
