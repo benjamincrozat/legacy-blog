@@ -6,15 +6,15 @@
 >
     <x-blog.top />
 
-    <x-breadcrumb class="container mt-8 sm:mt-16">
-        <x-breadcrumb-item href="{{ route('posts.index') }}">
+    <x-blog.breadcrumb class="container mt-8 sm:mt-16">
+        <x-blog.breadcrumb-item href="{{ route('posts.index') }}">
             Blog
-        </x-breadcrumb-item>
+        </x-blog.breadcrumb-item>
 
-        <x-breadcrumb-item class="truncate">
+        <x-blog.breadcrumb-item class="truncate">
             {{ $post->title }}
-        </x-breadcrumb-item>
-    </x-breadcrumb>
+        </x-blog.breadcrumb-item>
+    </x-blog.breadcrumb>
 
     <div class="container lg:grid lg:grid-cols-3 lg:gap-16 mt-8 relative">
         <article class="lg:col-span-2">
