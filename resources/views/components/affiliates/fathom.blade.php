@@ -1,24 +1,19 @@
 <x-affiliates.base {{ $attributes }}>
-    <p class="flex items-center justify-center gap-2 font-normal leading-tight text-indigo-400">
-        <x-heroicon-o-information-circle class="-translate-y-[.5px] flex-shrink-0 w-5 sm:w-4 h-5 sm:h-4" />
+    <x-slot:header>
         Quick tip for business owners
-    </p>
+    </x-slot:header>
 
-    <p class="mt-4">
+    <p>
         Google Analytics isn't GDPR-compliant, it's clunky and hard to use.
     </p>
 
     <p class="mt-2">
-        <strong class="font-semibold"><a href="{{ route('affiliate', 'fathom') }}" class="text-indigo-400 underline" @click="window.fathom?.trackGoal('K8DBWLRF', 0)">Fathom Analytics</a> does a way better job.</strong>
+        <a href="{{ route('affiliate', 'fathom') }}" class="text-indigo-400 underline" @click="window.fathom?.trackGoal('K8DBWLRF', 0)">Fathom Analytics</a> does a way better job.
     </p>
 
-    <p class="mt-2">
-        <a
-            href="{{ route('affiliate', 'fathom') }}"
-            class="text-indigo-400 underline"
-            @click="window.fathom?.trackGoal('K8DBWLRF', 0)"
-        >
+    <p class="mt-6">
+        <x-slot:button slug="fathom">
             Get started with a <strong class="font-bold dark:text-indigo-300">7-day trial & $10&nbsp;discount</strong> on your first invoice.
-        </a>
+        </x-slot:button>
     </p>
 </x-affiliates.base>

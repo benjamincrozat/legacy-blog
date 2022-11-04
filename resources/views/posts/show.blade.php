@@ -32,7 +32,7 @@
                 @choice(':count minute|:count minutes', $post->getReadTime()) read
             </div>
 
-            <x-dynamic-component :component="$affiliates->shuffle()->first()" class="sm:hidden" />
+            <x-dynamic-component :component="$affiliates->shuffle()->first()" class="sm:hidden mt-8" />
 
             <x-blog.toc :toc="$post->getTableOfContents()" class="lg:hidden mt-8" />
 
@@ -45,7 +45,7 @@
         <div class="hidden md:block md:col-span-1 text-sm">
             <x-blog.toc :toc="$post->getTableOfContents()" />
 
-            <x-dynamic-component :component="$affiliates->shuffle()->first()" />
+            <x-dynamic-component :component="$affiliates->shuffle()->first()" class="mt-8" />
 
             <div class="border dark:border-gray-800 mt-8 p-4 rounded">
                 <p class="font-normal">
