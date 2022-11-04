@@ -14,7 +14,7 @@ Published At: 2022-11-02
 I may be biased, but being a web developer is a great career choice. Being able to make a good living out of it as an entrepreneur, a freelancer or an employee depends on your ability to promote yourself to potential clients and employers. It all starts with choosing the right web hosting, setting up PHP, MySQL or whatever else if your favorite technology.
 
 If you're in a hurry, here are my top recommendations:
-- **Easiest to use**: Cloudways ([get started with a 3-day free trial](https://benjamincrozat.com/recommends/cloudways))
+- **Easiest to use**: Cloudways, a cheaper Laravel Forge alternative ([get started with a 3-day free trial](https://benjamincrozat.com/recommends/cloudways))
 - **Best UX and good prices**: Vultr ([get started with $100 of credit](https://benjamincrozat.com/recommends/vultr))
 - **Good alternative to Vultr**: DigitalOcean ([get started with $200 of credit](https://benjamincrozat.com/recommends/digitalocean))
 
@@ -26,9 +26,9 @@ Keep reading for more details about each web hosting.
 
 [<img loading="lazy" src="https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667333031/Screenshot_2022-11-01_at_21.03.04_yaljg2.png" alt="Cloudways" />](https://benjamincrozat.com/recommends/cloudways)
 
-### [Cloudways](https://benjamincrozat.com/recommends/cloudways)
+### [Cloudways](https://benjamincrozat.com/recommends/cloudways), a cheaper Laravel Forge alternative
 
-Cloudways powers more than 75.000+ businesses. It's an easy-to-use web hosting for people who want to save cost and time on DevOps matters. Enjoy the latest and greatest of the PHP ecosystem with no efforts. Cloudways plugs itself to your favorite hosting provider (even Amazon Web Services and Google Cloud Platform) and manages everything for you.
+Cloudways is an alternative to Laravel Forge that powers more than 75.000+ businesses. It's an easy-to-use web hosting for people who want to save cost and time on DevOps matters. Enjoy the latest and greatest of the PHP ecosystem with no efforts. Cloudways plugs itself to your favorite hosting provider (even Amazon Web Services and Google Cloud Platform) and manages everything for you.
 
 Key features:
 - Reliable
