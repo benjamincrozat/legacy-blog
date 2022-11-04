@@ -33,7 +33,7 @@ class RedirectToAffiliateController extends Controller
 
                 break;
             case 'jasper':
-                $parameters['fpr'] = 'benjamin57';
+                $parameters['fpr'] = 'benjamincrozat';
 
                 $redirect = 'https://jasper.ai/?fpr=benjamin57';
 
