@@ -1,5 +1,5 @@
 ---
-Description: Are you looking for the best web hosting for PHP developers? I've got you covered. Here are the best web hosting providers I've found.
+Description: Are you looking for the best web hosting for PHP and Laravel developers? I've got you covered. Here are the best web hosting providers I've found.
 Image: https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667393961/cloud_xxp8u9.jpg
 Featured: true
 Hide Banners: true
