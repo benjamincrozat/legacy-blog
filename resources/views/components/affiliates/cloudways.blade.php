@@ -14,7 +14,7 @@
     <p class="mt-6">
         <x-slot:button slug="cloudways">
             @if (now()->lte(Illuminate\Support\Carbon::parse('2022-11-05')->endOfDay()))
-                Get started with <strong class="font-bold">30% off</strong> for 3 months with code <strong class="font-bold italic">TREAT22</strong>.
+                Get started with <strong class="font-bold">30% off</strong> for 3 months with&nbsp;code&nbsp;<strong class="font-bold italic">TREAT22</strong>.
             @else
                 Get started with a <strong class="font-bold">3-day free trial</strong> without credit card.
             @endif
