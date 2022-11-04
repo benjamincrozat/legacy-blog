@@ -37,7 +37,7 @@ For instance, [GitHub Copilot](https://github.com/features/copilot) (which I can
 
 Many other projects are created with the help of AI. You can see it for yourself on [ProductHunt](https://www.producthunt.com/search/launches?q=ai). There's no shortage of them.
 
-I must tell you first, though: the [**OpenAI API isn't free**](https://openai.com/api/pricing/)!
+I must tell you first, though: the **OpenAI API isn't free**! Here are [their pricings depending on the model](https://openai.com/api/pricing/).
 
 But who cares? They recently lowered their prices, and you can start with $18 of free credit for three months. After that, it's incredibly cheap as long as you use it for testing purposes.
 
@@ -82,7 +82,7 @@ $client = OpenAI::client('YOUR_API_KEY');
 
 ### Usage
 
-1. We need to copy and paste text from a job offer. It doesn't matter which one. (In the initial project, the crawler did it for me.)
+1. We need to copy and paste text from a job offer. It doesn't matter which one. (In the initial project, the crawler did it for me, but we need to keep this tutorial as simple as possible.)
 2. We give instructions to the GPT-3 model: *"Extract the requirements for this job offer as a list."*;
 3. Then, we call the API using PHP, which is way more convenient than manually making HTTP requests.
 
