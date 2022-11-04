@@ -44,7 +44,7 @@
         />
 
         @if ($posts->isNotEmpty())
-            <div class="grid sm:grid-cols-2 gap-8 mt-8 mx-4 sm:mx-0">
+            <div class="grid sm:grid-cols-2 gap-4 sm:gap-8 mt-8 mx-4 sm:mx-0">
                 @foreach ($posts as $post)
                     <x-post :post="$post" @click="window.fathom?.trackGoal('HH0P1ACM', 0)" />
                 @endforeach
