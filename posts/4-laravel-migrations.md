@@ -1,28 +1,29 @@
 ---
 Description: Migrations are essential in any Laravel app using a database. I will tell you what they are, why you should use them and how you can generate them.
+Image: https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667572258/data_stptpp.jpg
 Published At: 2022-09-12
 Modified At: 2022-10-18
 ---
 
 # How to make and use migrations in Laravel
 
+![Laravel migrations feeding database servers.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667572258/data_stptpp.jpg)
+
 ## What are migrations in Laravel?
 
 Migrations contain PHP code that shapes your database exactly how you want it.
 
-## What's the advantage of using migrations in Laravel?
+## What's the advantages of using migrations in Laravel?
 
-The advantages of using migrations in Laravel are:
-
-- Keep track of the database's schema over time thanks to your Git history;
-- Regenerate your local database to include any change that's been made;
-- Keep the production database synced as well;
+Using Laravel's migrations have several advantages such as:
+- Being in sync with your team members;
 - Never use your MySQL client ever again.
+- Keeping track of the database's schema over time thanks to your Git history;
+- Regenerate your the database to include any change that's been made, no matter which environment you're in;
 
 ## When to use migrations?
 
-In case the previous point wasn’t clear enough, here’s when you should use migrations:
-
+Migrations should be used when you need to:
 - Add a table;
 - Add a column;
 - Update a column;
@@ -47,6 +48,35 @@ Here's an example:
 
 ```
 INFO Created migration [2022_09_12_142156_create_posts_table]. 
+```
+
+A migration looks like this:
+
+```php
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+return new class extends Migration {
+    public function up() : void
+    {
+        Schema::create('posts', function (Blueprint $table) {
+            $table->id();
+
+            // These are the columns you want to add to your table.
+            $table->string('title');
+            $table->text('content');
+
+            // These are the "created_at" and "updated_at" columns.
+            $table->timestamps();
+        });
+    }
+
+        public function down() : void
+        {
+            Schema::dropIfExists('posts');
+        }
+};
 ```
 
 But there's more. Did you know you can pass multiple parameters?
@@ -128,15 +158,53 @@ Options:
 
 To migrate your database, use the `php artisan migrate` command. 
 
+```
+INFO  Running migrations.  
+
+2014_10_12_000000_create_users_table ................................................................................................ 4ms DONE
+2014_10_12_100000_create_password_resets_table ...................................................................................... 1ms DONE
+2018_01_01_000000_create_action_events_table ........................................................................................ 7ms DONE
+2019_05_10_000000_add_fields_to_action_events_table ................................................................................. 1ms DONE
+2019_08_19_000000_create_failed_jobs_table .......................................................................................... 1ms DONE
+```
+
 ### Rollback migrations
 
-Rollback any change using the `php artisan migrate:rollback` command.
+Rollback any change using the `php artisan migrate:rollback` command. As you can se below, migrations are rollbacked in the inverse order.
 
-Make sure to correctly use the `down()` method first.
+So make sure to correctly use the `down()` method.
+
+```
+INFO  Rolling back migrations.  
+
+2019_08_19_000000_create_failed_jobs_table .......................................................................................... 1ms DONE
+2019_05_10_000000_add_fields_to_action_events_table ................................................................................. 8ms DONE
+2018_01_01_000000_create_action_events_table ........................................................................................ 1ms DONE
+2014_10_12_100000_create_password_resets_table ...................................................................................... 1ms DONE
+2014_10_12_000000_create_users_table ................................................................................................ 1ms DONE
+```
 
 ### Wipe out your database and migrate
 
 The `php artisan migrate:fresh` command will wipe out your database before migrating.
+
+```
+Dropping all tables ................................................................................................................. 7ms DONE
+
+INFO  Preparing database.  
+
+Creating migration table ............................................................................................................ 3ms DONE
+
+INFO  Running migrations.  
+
+2014_10_12_000000_create_users_table ................................................................................................ 2ms DONE
+2014_10_12_100000_create_password_resets_table ...................................................................................... 1ms DONE
+2018_01_01_000000_create_action_events_table ........................................................................................ 6ms DONE
+2019_05_10_000000_add_fields_to_action_events_table ................................................................................. 1ms DONE
+2019_08_19_000000_create_failed_jobs_table .......................................................................................... 1ms DONE
+2021_08_25_193039_create_nova_notifications_table ................................................................................... 2ms DONE
+2022_04_26_000000_add_fields_to_nova_notifications_table ............................................................................ 1ms done
+```
 
 This command won't work in production to prevent disasters. 😬
 
