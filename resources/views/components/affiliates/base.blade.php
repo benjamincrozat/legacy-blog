@@ -1,6 +1,6 @@
 <div {{ $attributes->merge(['class' => 'border dark:border-gray-800 rounded']) }}>
     <div class="border-b dark:border-gray-800 flex items-center justify-center gap-2 font-normal leading-tight p-2 text-indigo-400">
-        <x-heroicon-o-information-circle class="-translate-y-[.5px] flex-shrink-0 w-5 sm:w-4 h-5 sm:h-4" />
+        <x-heroicon-o-information-circle class="-translate-y-[.5px] flex-shrink-0 w-4 h-5 h-4" />
         {{ $header }}
     </div>
 
