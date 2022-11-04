@@ -32,6 +32,12 @@ class RedirectToAffiliateController extends Controller
                 $redirect = 'https://kinsta.com';
 
                 break;
+            case 'jasper':
+                $parameters['fpr'] = 'benjamin57';
+
+                $redirect = 'https://jasper.ai/?fpr=benjamin57';
+
+                break;
             case 'vultr':
                 $parameters['ref'] = '9270910-8H';
 
