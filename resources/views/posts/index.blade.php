@@ -5,7 +5,7 @@
 >
     <x-blog.top />
 
-    <section id="articles" class="sm:container mt-8 sm:mt-16">
+    <section class="sm:container mt-8 sm:mt-16">
         <h2 class="font-bold px-4 sm:px-0 text-center text-xl">
             Featured posts
         </h2>
@@ -33,18 +33,17 @@
                 @endforeach
             </div>
         @endif
+    </section>
 
+    <section class="container mt-8 sm:mt-16">
         <h2 class="font-bold mt-16 px-4 sm:px-0 text-center text-xl">
             Latest posts
         </h2>
 
-        <x-affiliate
-            channel="index"
-            class="flex flex-wrap sm:flex-nowrap sm:items-center justify-center gap-4 sm:gap-8 mt-8 mx-4 sm:mx-0 py-6 sm:p-4"
-        />
+        <x-affiliates.cloudways />
 
         @if ($posts->isNotEmpty())
-            <div class="grid sm:grid-cols-2 gap-4 sm:gap-8 mt-8 mx-4 sm:mx-0">
+            <div class="grid sm:grid-cols-2 gap-4 sm:gap-8 mt-8">
                 @foreach ($posts as $post)
                     <x-post :post="$post" @click="window.fathom?.trackGoal('HH0P1ACM', 0)" />
                 @endforeach

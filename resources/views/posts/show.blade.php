@@ -17,10 +17,6 @@
     </x-breadcrumb>
 
     <div class="container lg:grid lg:grid-cols-3 lg:gap-16 mt-8 relative">
-        @empty ($post->hideBanners)
-            <x-affiliate channel="article" class="flex flex-wrap justify-center gap-4 max-w-[768px] mb-8 py-6 lg:hidden" />
-        @endempty
-
         <article class="lg:col-span-2">
             {{-- Title --}}
             <h1 class="font-thin text-3xl md:text-5xl dark:text-white">
@@ -46,10 +42,6 @@
 
         <div class="hidden md:block md:col-span-1 text-sm">
             <x-blog.toc :toc="$post->getTableOfContents()" />
-
-            @empty ($post->hideBanners)
-                <x-affiliate channel="sidebar" class="flex flex-wrap justify-center gap-4 max-w-[768px] sm:mx-auto mt-8 py-6" />
-            @endempty
 
             <div class="border dark:border-gray-800 mt-8 p-4 rounded">
                 <p class="font-normal">
