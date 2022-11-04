@@ -39,7 +39,7 @@
             <x-blog.toc :toc="$post->getTableOfContents()" class="lg:hidden mt-8" />
 
             {{-- Content --}}
-            <div class="break-words max-w-full mt-8 prose prose-a:border-b prose-a:border-indigo-200 prose-a:text-indigo-400 prose-a:no-underline prose-img:dark:brightness-75 prose-headings:dark:text-white prose-strong:dark:text-white dark:text-gray-300">
+            <div class="break-words max-w-full mt-8 prose prose-a:border-b prose-a:border-indigo-200 prose-a:text-indigo-400 prose-a:no-underline prose-img:dark:brightness-75 prose-code:dark:text-gray-300 prose-headings:dark:text-white prose-strong:dark:text-white dark:text-gray-300">
                 {!! Illuminate\Support\Str::marxdown($post->content) !!}
             </div>
         </article>
