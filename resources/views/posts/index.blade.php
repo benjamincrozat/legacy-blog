@@ -1,7 +1,7 @@
 <x-app
     title="The web developer life of Benjamin Crozat"
     description="Have you ever had a question about the art of crafting web applications? This is the best blog to find your answer."
-    class="text-gray-600"
+    class="dark:bg-gray-900 text-gray-600 dark:text-gray-300"
 >
     <x-blog.top />
 
@@ -19,11 +19,11 @@
                                 loading="lazy"
                                 src="{{ str_replace('w_auto', 'w_600', $post->image) }}"
                                 alt="{{ $post->title }}"
-                                class="aspect-video object-cover rounded-md w-full"
+                                class="aspect-video dark:brightness-75 object-cover rounded-md w-full"
                             />
                         </a>
 
-                        <a href="{{ route('posts.show', $post->slug) }}" class="bg-gray-900 block leading-tight mt-2 p-3 rounded-md text-sm text-white" @click="window.fathom?.trackGoal('OKJIR46O', 0)">
+                        <a href="{{ route('posts.show', $post->slug) }}" class="bg-gray-900 bg-gradient-to-r from-white dark:from-gray-800 to-gray-50/30 dark:to-gray-700/50 block leading-tight mt-2 p-3 rounded-md text-sm text-white dark:text-current" @click="window.fathom?.trackGoal('OKJIR46O', 0)">
                             <figcaption class="flex items-center justify-between gap-4">
                                 <span class="truncate">{{ $post->title }}</span>
                                 <x-heroicon-o-arrow-right class="flex-shrink-0 w-3 h-3" />
@@ -54,7 +54,7 @@
 
     <x-newsletter class="container max-w-screen-sm mt-16" />
 
-    <div class="bg-gray-900 flex-grow mt-16">
+    <div class="bg-gray-900 dark:bg-black flex-grow mt-16">
         <x-footer class="text-gray-200" />
     </div>
 </x-app>

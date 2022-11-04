@@ -1,4 +1,4 @@
-<div {{ $attributes->except(['@click', 'post'])->merge(['class' => 'bg-gradient-to-r from-white to-gray-50/30 p-4 sm:p-5 rounded-lg shadow-lg shadow-gray-200']) }}>
+<div {{ $attributes->except(['@click', 'post'])->merge(['class' => 'bg-gradient-to-r from-white dark:from-gray-800 to-gray-50/30 dark:to-gray-700/50 p-4 sm:p-5 rounded-lg shadow-lg dark:shadow-none shadow-gray-200']) }}>
     <div class="flex items-center justify-between gap-8">
         <div>
             <div class="flex items-center gap-2 text-sm">
@@ -15,7 +15,7 @@
 
             <a
                 href="{{ route('posts.show', $post->slug) }}"
-                class="font-normal inline-block mt-2 text-indigo-600"
+                class="font-normal inline-block mt-2 text-indigo-600 dark:text-indigo-400"
                 {{ $attributes->only('@click') }}
             >
                 {{ $post->title }}
@@ -26,8 +26,9 @@
             <a
                 href="{{ route('posts.show', $post->slug) }}"
                 {{ $attributes->only('@click') }}
+                class="flex-shrink-0"
             >
-                <img loading="lazy" src="{{ str_replace('w_auto', 'h_128', $post->image) }}" width="64" height="64" alt="{{ $post->title }}" class="aspect-square object-cover" />
+                <img loading="lazy" src="{{ str_replace('w_auto', 'h_128', $post->image) }}" width="64" height="64" alt="{{ $post->title }}" class="aspect-square dark:brightness-75 object-cover" />
             </a>
         @endif
     </div>

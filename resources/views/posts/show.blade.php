@@ -2,6 +2,7 @@
     :title="$post->title"
     :description="$post->description"
     :image="$post->image"
+    class="dark:bg-gray-900 text-gray-600 dark:text-gray-300"
 >
     <x-blog.top />
 
@@ -38,7 +39,7 @@
             <x-blog.toc :toc="$post->getTableOfContents()" class="lg:hidden mt-8" />
 
             {{-- Content --}}
-            <div class="break-words max-w-full mt-8 prose prose-a:border-b prose-a:border-indigo-200 prose-a:text-indigo-400 prose-a:no-underline">
+            <div class="break-words max-w-full mt-8 prose prose-a:border-b prose-a:border-indigo-200 prose-a:text-indigo-400 prose-a:no-underline prose-img:dark:brightness-75 prose-headings:text-white prose-strong:dark:text-gray-300 dark:text-gray-300">
                 {!! Illuminate\Support\Str::marxdown($post->content) !!}
             </div>
         </article>
@@ -50,7 +51,7 @@
                 <x-affiliate channel="sidebar" class="flex flex-wrap justify-center gap-4 max-w-[768px] sm:mx-auto mt-8 py-6" />
             @endempty
 
-            <div class="border mt-8 p-4 rounded">
+            <div class="border dark:border-gray-800 mt-8 p-4 rounded">
                 <p class="font-normal">
                     Let me share with you my discoveries about the art of crafting websites, <span class="text-indigo-400">for&nbsp;free</span>.
                 </p>
@@ -62,7 +63,7 @@
                         id="email"
                         placeholder="homer@simpson.com"
                         required
-                        class="block border-gray-200 placeholder-gray-200 rounded text-sm w-full"
+                        class="bg-gray-800 bg-gradient-to-r dark:from-gray-800 dark:to-gray-700/50 block dark:border-0 border-gray-200 placeholder-gray-200 dark:placeholder-gray-600 rounded text-sm w-full"
                     />
 
                     <button type="submit" class="font-bold mt-4 mx-auto table text-indigo-400">
@@ -95,7 +96,7 @@
         </div>
     @endif
 
-    <div class="bg-gray-900 flex-grow">
+    <div class="bg-gray-900 dark:bg-black flex-grow">
         <x-footer class="text-gray-200" />
     </div>
 
