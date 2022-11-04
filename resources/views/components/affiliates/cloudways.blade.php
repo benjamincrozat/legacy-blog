@@ -8,7 +8,7 @@
     </p>
 
     <p class="mt-2">
-        <a href="{{ route('affiliate', 'cloudways') }}" class="text-indigo-400 underline" @click="window.fathom?.trackGoal('K8DBWLRF', 0)">Cloudways</a> is here to do it for you by provisioning PHP-optimized instances within a few clicks.
+        <a href="{{ route('affiliate', 'cloudways') }}" class="text-indigo-400 underline" @click="window.fathom?.trackGoal('K8DBWLRF', 0)">Cloudways</a> is here to provision PHP-optimized instances and deploy your apps within a few clicks.
     </p>
 
     <p class="mt-6">
