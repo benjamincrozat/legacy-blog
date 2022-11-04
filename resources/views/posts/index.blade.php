@@ -19,7 +19,7 @@
                                 loading="lazy"
                                 src="{{ str_replace('w_auto', 'w_600', $post->image) }}"
                                 alt="{{ $post->title }}"
-                                class="aspect-video object-cover rounded-md w-full"
+                                class="aspect-video dark:brightness-75 object-cover rounded-md w-full"
                             />
                         </a>
 
