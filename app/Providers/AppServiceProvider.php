@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
 
         View::composer(
             '*', fn ($v) => $v->with([
-                'affiliates' => collect(['cloudways', 'fathom'])->map(fn ($i) => "affiliates.$i"),
+                'affiliates' => collect(['affiliates.cloudways', 'affiliates.fathom']),
             ])
         );
     }
