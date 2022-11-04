@@ -23,7 +23,7 @@
 
         <article class="lg:col-span-2">
             {{-- Title --}}
-            <h1 class="font-thin text-3xl md:text-5xl">
+            <h1 class="font-thin text-3xl md:text-5xl dark:text-white">
                 {{ $post->title }}
             </h1>
 
