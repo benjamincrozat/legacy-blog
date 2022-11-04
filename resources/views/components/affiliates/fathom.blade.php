@@ -9,11 +9,15 @@
     </p>
 
     <p class="mt-2">
-        <strong class="font-semibold"><a href="{{ route('affiliate', 'fathom') }}" class="text-indigo-400 underline">Fathom Analytics</a> does a way better job.</strong>
+        <strong class="font-semibold"><a href="{{ route('affiliate', 'fathom') }}" class="text-indigo-400 underline" @click="window.fathom?.trackGoal('K8DBWLRF', 0)">Fathom Analytics</a> does a way better job.</strong>
     </p>
 
     <p class="mt-2">
-        <a href="{{ route('affiliate', 'fathom') }}" class="text-indigo-400 underline">
+        <a
+            href="{{ route('affiliate', 'fathom') }}"
+            class="text-indigo-400 underline"
+            @click="window.fathom?.trackGoal('K8DBWLRF', 0)"
+        >
             Get started with a <strong class="font-bold dark:text-indigo-300">7-day trial & $10&nbsp;discount</strong> on your first invoice.
         </a>
     </p>

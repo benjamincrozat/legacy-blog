@@ -9,11 +9,15 @@
     </p>
 
     <p class="mt-2">
-        <strong class="font-semibold"><a href="{{ route('affiliate', 'cloudways') }}" class="text-indigo-400 underline">Cloudways</a> is here to do it for you</strong> by provisioning PHP-optimized instances within a few clicks.
+        <strong class="font-semibold"><a href="{{ route('affiliate', 'cloudways') }}" class="text-indigo-400 underline" @click="window.fathom?.trackGoal('K8DBWLRF', 0)">Cloudways</a> is here to do it for you</strong> by provisioning PHP-optimized instances within a few clicks.
     </p>
 
     <p class="mt-2">
-        <a href="{{ route('affiliate', 'cloudways') }}" class="text-indigo-400 underline">
+        <a
+            href="{{ route('affiliate', 'cloudways') }}"
+            class="text-indigo-400 underline"
+            @click="window.fathom?.trackGoal('K8DBWLRF', 0)"
+        >
             @if (now()->lte(Illuminate\Support\Carbon::parse('2022-11-05')->endOfDay()))
                 Get started with <strong class="font-bold">30% off</strong> for 3 months with code <strong class="font-bold italic">TREAT22</strong>.
             @else
