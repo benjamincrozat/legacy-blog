@@ -2,7 +2,7 @@
 Description: Redirects in PHP are simple. I will guide you step by step and show you how to dodge some traps. Finally, we'll learn the nuance between 301 and 302 redirects.
 Image: https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667576042/browser_stioxv.jpg
 Published At: 2022-09-12
-Modified At: 2022-10-23
+Modified At: 2022-11-04
 ---
 
 # Redirect users with PHP in 3 easy steps

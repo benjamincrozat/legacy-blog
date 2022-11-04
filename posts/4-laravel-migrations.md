@@ -3,7 +3,7 @@ Description: Migrations are essential in any Laravel app using a database. I wil
 Image: https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667572258/data_stptpp.jpg
 Include Lower Level Titles In TOC: true
 Published At: 2022-09-12
-Modified At: 2022-10-18
+Modified At: 2022-11-04
 ---
 
 # How to make and use migrations in Laravel
