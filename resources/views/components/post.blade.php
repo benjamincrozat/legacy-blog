@@ -23,7 +23,12 @@
         </div>
 
         @if ($post->image)
-            <img loading="lazy" src="{{ str_replace('w_auto', 'h_128', $post->image) }}" width="64" height="64" alt="{{ $post->title }}" class="aspect-square object-cover" />
+            <a
+                href="{{ route('posts.show', $post->slug) }}"
+                {{ $attributes->only('@click') }}
+            >
+                <img loading="lazy" src="{{ str_replace('w_auto', 'h_128', $post->image) }}" width="64" height="64" alt="{{ $post->title }}" class="aspect-square object-cover" />
+            </a>
         @endif
     </div>
 
