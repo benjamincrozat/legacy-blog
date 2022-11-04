@@ -35,7 +35,7 @@
 
         <link rel="canonical" href="{{ url()->current() }}" />
 
-        @if (app()->isProduction())
+        @if (app()->isProduction() && auth()->guest())
             <script defer src="https://save-tonight-hey-jude.benjamincrozat.com/script.js" data-site="{{ config('services.fathom.site_id') }}"></script>
         @endif
     </head>
