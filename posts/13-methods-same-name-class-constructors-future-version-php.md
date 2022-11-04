@@ -1,13 +1,13 @@
 ---
 Description: Learn why and how to fix "Methods with the same name as their class will not be constructors in a future version of PHP" warnings.
-Image: https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1664415791/phpelite.com/php-elephant_y0ft3h_cmb1oc.jpg
+Image: https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667577806/guy-coding-3_lpz0qy.jpg
 Published At: 2022-10-08
 Modified At:
 ---
 
 # How to fix "Methods with the same name as their class will not be constructors in a future version of PHP"
 
-![PHP elephant illustration.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1664415791/phpelite.com/php-elephant_y0ft3h_cmb1oc.jpg)
+![A developer fixing "Methods with the same name as their class will not be constructors in a future version of PHP"](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667577806/guy-coding-3_lpz0qy.jpg)
 
 **This warning message occurs because class constructors can't have the same name as their class. You can fix this by changing it to `__construct()`**:
 

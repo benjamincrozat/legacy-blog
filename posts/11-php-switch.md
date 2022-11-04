@@ -1,13 +1,13 @@
 ---
 Description: switch, case, and break. What are all these? When should you use it instead of if? What are its pros and cons?
-Image: https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667577806/guy-coding-3_lpz0qy.jpg
+Image: https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667577456/guy-coding_vqaqiy.jpg
 Published At: 2022-10-07
 Modified At: 2022-11-04
 ---
 
 # The switch statement in PHP: learn all about it
 
-![A developer learning to use switch in PHP.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667577806/guy-coding-3_lpz0qy.jpg)
+![A developer learning to use switch in PHP.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667577456/guy-coding_vqaqiy.jpg)
 
 ## What is a `switch` statement in PHP?
 
