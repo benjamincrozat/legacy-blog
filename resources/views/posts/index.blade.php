@@ -40,7 +40,7 @@
             Latest posts
         </h2>
 
-        <x-affiliates.cloudways />
+        <x-dynamic-component :component="$affiliates->shuffle()->first()" />
 
         @if ($posts->isNotEmpty())
             <div class="grid sm:grid-cols-2 gap-4 sm:gap-8 mt-8">
