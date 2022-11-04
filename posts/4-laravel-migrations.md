@@ -1,6 +1,7 @@
 ---
 Description: Migrations are essential in any Laravel app using a database. I will tell you what they are, why you should use them and how you can generate them.
 Image: https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667572258/data_stptpp.jpg
+Include Lower Level Titles In TOC: true
 Published At: 2022-09-12
 Modified At: 2022-10-18
 ---
@@ -125,7 +126,7 @@ php artisan make:model Post -m
 
 And if you look at the help, you will appreciate what Artisan can do for you even more.
 
-```bash
+```
 php artisan make:model -h
 
 Description:
@@ -168,23 +169,7 @@ INFO  Running migrations.
 2019_08_19_000000_create_failed_jobs_table .......................................................................................... 1ms DONE
 ```
 
-### Rollback migrations
-
-Rollback any change using the `php artisan migrate:rollback` command. As you can se below, migrations are rollbacked in the inverse order.
-
-So make sure to correctly use the `down()` method.
-
-```
-INFO  Rolling back migrations.  
-
-2019_08_19_000000_create_failed_jobs_table .......................................................................................... 1ms DONE
-2019_05_10_000000_add_fields_to_action_events_table ................................................................................. 8ms DONE
-2018_01_01_000000_create_action_events_table ........................................................................................ 1ms DONE
-2014_10_12_100000_create_password_resets_table ...................................................................................... 1ms DONE
-2014_10_12_000000_create_users_table ................................................................................................ 1ms DONE
-```
-
-### Wipe out your database and migrate
+### Wipe out your database before migrating
 
 The `php artisan migrate:fresh` command will wipe out your database before migrating.
 
@@ -208,3 +193,18 @@ INFO  Running migrations.
 
 This command won't work in production to prevent disasters. 😬
 
+## How to rollback migrations
+
+Rollback any change using the `php artisan migrate:rollback` command. As you can se below, migrations are rollbacked in the inverse order.
+
+```
+INFO  Rolling back migrations.  
+
+2019_08_19_000000_create_failed_jobs_table .......................................................................................... 1ms DONE
+2019_05_10_000000_add_fields_to_action_events_table ................................................................................. 8ms DONE
+2018_01_01_000000_create_action_events_table ........................................................................................ 1ms DONE
+2014_10_12_100000_create_password_resets_table ...................................................................................... 1ms DONE
+2014_10_12_000000_create_users_table ................................................................................................ 1ms DONE
+```
+
+So make sure to correctly use the `down()` method.
