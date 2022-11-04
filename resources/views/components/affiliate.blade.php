@@ -76,7 +76,7 @@ $name = $name[0];
 
             <p class="mt-1">
                 <a href="{{ route('affiliate', 'wp-engine') }}" target="_blank" rel="nofollow noopener noreferrer" class="text-indigo-400 underline">
-                    <strong class="font-bold">4 months free on ALL annual shared plans</strong> or 20% off 1st month
+                    <strong class="font-bold">4 months free on annual shared plans</strong> or <strong class="font-bold">20% off 1st month</strong>
                 </a>
             </p>
         </div>
