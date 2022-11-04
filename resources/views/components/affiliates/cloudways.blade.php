@@ -1,4 +1,4 @@
-<x-affiliates.base>
+<x-affiliates.base {{ $attributes }}>
     <p class="flex items-center justify-center gap-2 font-normal leading-tight text-indigo-400">
         <x-heroicon-o-information-circle class="-translate-y-[.5px] flex-shrink-0 w-5 sm:w-4 h-5 sm:h-4" />
         Quick tip for developers who think time is money

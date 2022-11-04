@@ -32,6 +32,8 @@
                 @choice(':count minute|:count minutes', $post->getReadTime()) read
             </div>
 
+            <x-affiliates.cloudways class="sm:hidden" />
+
             <x-blog.toc :toc="$post->getTableOfContents()" class="lg:hidden mt-8" />
 
             {{-- Content --}}
