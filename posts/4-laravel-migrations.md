@@ -59,7 +59,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration {
-    public function up() : void
+    public function up()
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
@@ -73,7 +73,7 @@ return new class extends Migration {
         });
     }
 
-        public function down() : void
+        public function down()
         {
             Schema::dropIfExists('posts');
         }
