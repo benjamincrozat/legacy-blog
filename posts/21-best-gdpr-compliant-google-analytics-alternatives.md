@@ -42,7 +42,7 @@ What I love about Fathom compared to Google Analytics is that it's easy to get t
 
 [Get started with a 7-day trial and $10 discount on your first invoice](https://benjamincrozat.com/recommends/fathom-analytics)
 
-The **pros** of Fathom Analytics after using for months:
+After months of usage, here are the **pros**:
 - Dark mode!
 - Doesn't use cookies
 - Export data to CSV
@@ -55,6 +55,6 @@ The **pros** of Fathom Analytics after using for months:
 - Simple, free, and reactive uptime monitoring that sends you an email or SMS
 - Used by thousands of businesses, including some we love, like Laravel, GitHub (Microsoft), Tailwind CSS, Vue.js, IBM, and more
 
-The **cons** of Fathom Analytics I discovered after extensive testing:
+The **cons**:
 - The dashboard's UI could be better;
-- I noticed some bugs when you have too much filters in place.
+- I noticed some bugs when you have too many filters in place.
