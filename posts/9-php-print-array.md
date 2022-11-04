@@ -1,10 +1,13 @@
 ---
 Description: Debugging requires dissecting everything. Here's a list of all the one-line of code built-in ways to print arrays in PHP.
+Image: https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667577263/woman-coding_xuisvu.jpg
 Published At: 2022-10-07
-Modified At:
+Modified At: 2022-11-04
 ---
 
 # Print an array in PHP and see what's hidden
+
+![Developer printing a PHP array to see what's hidden.](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667577263/woman-coding_xuisvu.jpg)
 
 **There are multiple ways to print the content of an array in PHP.**
 
