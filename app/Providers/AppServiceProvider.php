@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Client\Factory;
 use App\CommonMark\MarxdownConverter;
 use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -27,5 +28,11 @@ class AppServiceProvider extends ServiceProvider
                 return '<h' . $matches[1] . ' id="' . Str::slug($cleanedUpStringForId) . '">' . $matches[2] . '</h' . $matches[1] . '>';
             }, $html);
         });
+
+        View::composer(
+            '*', fn ($v) => $v->with([
+                'affiliates' => collect(['cloudways', 'fathom'])->map(fn ($i) => "affiliates.$i"),
+            ])
+        );
     }
 }
