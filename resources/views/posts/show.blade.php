@@ -43,6 +43,8 @@
         <div class="hidden md:block md:col-span-1 text-sm">
             <x-blog.toc :toc="$post->getTableOfContents()" />
 
+            <x-affiliates.cloudways />
+
             <div class="border dark:border-gray-800 mt-8 p-4 rounded">
                 <p class="font-normal">
                     Let me share with you my discoveries about the art of crafting websites, <span class="text-indigo-400">for&nbsp;free</span>.
