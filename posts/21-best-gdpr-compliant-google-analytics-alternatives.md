@@ -7,7 +7,7 @@ Include Lower Level Titles In TOC: true
 Published At: 2022-11-02
 ---
 
-# The best GDPR-compliant Google Analytics alternatives in 2022
+# Best GDPR-compliant Google Analytics alternatives in 2022
 
 ![GDPR compliance](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667409628/data-security_z5tsl9.jpg)
 
