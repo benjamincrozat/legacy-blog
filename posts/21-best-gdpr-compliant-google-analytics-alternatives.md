@@ -38,11 +38,11 @@ Fathom Analytics is a privacy-first analytics tool that doesn't track your users
 
 What I love about Fathom compared to Google Analytics is that it's easy to get the information you need. For instance, you may want to see how much visitors you acquired from Google in the past month. With Google Analytics, you have to go through a lot of steps to get that information. With Fathom, it's on the dashboard and two clicks away.
 
-Did you know that **Fathom is what this website uses to track its visitors**? I can't recommend this service enough!
+**Fathom is what this website uses to track its visitors**. I can't recommend this service enough!
 
 [Get started with a 7-day trial and $10 discount on your first invoice](https://benjamincrozat.com/recommends/fathom-analytics)
 
-The **pros** of Fathom Analytics:
+The **pros** of Fathom Analytics after using for months:
 - Dark mode!
 - Doesn't use cookies
 - Export data to CSV
@@ -55,6 +55,6 @@ The **pros** of Fathom Analytics:
 - Simple, free, and reactive uptime monitoring that sends you an email or SMS
 - Used by thousands of businesses, including some we love, like Laravel, GitHub (Microsoft), Tailwind CSS, Vue.js, IBM, and more
 
-The **cons** of Fathom Analytics:
+The **cons** of Fathom Analytics I discovered after extensive testing:
 - The dashboard's UI could be better;
 - I noticed some bugs when you have too much filters in place.
