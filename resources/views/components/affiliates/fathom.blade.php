@@ -4,7 +4,7 @@
     </x-slot:header>
 
     <p>
-        Google Analytics is clunk, hard to use, and isn't GDPR-compliant.
+        Google Analytics is clunky, hard to use, and isn't GDPR-compliant.
     </p>
 
     <p class="mt-2">
