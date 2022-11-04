@@ -187,8 +187,6 @@ INFO  Running migrations.
 2018_01_01_000000_create_action_events_table ........................................................................................ 6ms DONE
 2019_05_10_000000_add_fields_to_action_events_table ................................................................................. 1ms DONE
 2019_08_19_000000_create_failed_jobs_table .......................................................................................... 1ms DONE
-2021_08_25_193039_create_nova_notifications_table ................................................................................... 2ms DONE
-2022_04_26_000000_add_fields_to_nova_notifications_table ............................................................................ 1ms done
 ```
 
 This command won't work in production to prevent disasters. 😬
@@ -208,3 +206,29 @@ INFO  Rolling back migrations.
 ```
 
 So make sure to correctly use the `down()` method.
+
+Basically, the `down()` method must do the opposite of the `up()` method.
+
+```php
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+return new class extends Migration {
+    public function up()
+    {
+        Schema::table('posts', function (Blueprint $table) {
+            // The column was a boolean, but we want to switch to a datetime.
+            $table->datetime('is_published')->nullable()->change();
+        });
+    }
+
+    public function down()
+    {
+        Schema::table('posts', function (Blueprint $table) {
+            // When rolling back, we have to restore the column to its previous state.
+            $table->boolean('is_published')->default(false)->change();
+        });
+    }
+}
+```
