@@ -13,7 +13,7 @@
 
     <p class="mt-6">
         <x-slot:button slug="fathom">
-            Get started with a <strong class="font-bold dark:text-indigo-300">7-day trial & $10&nbsp;discount</strong> on your first invoice.
+            Get started with a <strong class="font-bold">7-day trial & $10&nbsp;discount</strong> on your first invoice.
         </x-slot:button>
     </p>
 </x-affiliates.base>
