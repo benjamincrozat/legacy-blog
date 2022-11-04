@@ -63,7 +63,7 @@
                         id="email"
                         placeholder="homer@simpson.com"
                         required
-                        class="bg-gray-800 bg-gradient-to-r dark:from-gray-800 dark:to-gray-700/50 block dark:border-0 border-gray-200 placeholder-gray-200 dark:placeholder-gray-600 rounded text-sm w-full"
+                        class="bg-gray-800 dark:bg-gray-800 block dark:border-0 border-gray-200 placeholder-gray-200 dark:placeholder-gray-600 rounded text-sm w-full"
                     />
 
                     <button type="submit" class="font-bold mt-4 mx-auto table text-indigo-400">
