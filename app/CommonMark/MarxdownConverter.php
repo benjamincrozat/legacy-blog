@@ -23,7 +23,6 @@ class MarxdownConverter extends \League\CommonMark\MarkdownConverter
             'default_attributes' => [
                 Image::class => [
                     'loading' => 'lazy',
-                    'class' => 'brightness-75',
                 ],
                 Link::class => [
                     'rel' => function (Link $node) {
