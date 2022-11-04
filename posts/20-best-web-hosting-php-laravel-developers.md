@@ -11,7 +11,7 @@ Published At: 2022-11-02
 
 ![Cloud](https://res.cloudinary.com/benjamin-crozat/image/upload/dpr_auto,f_auto,q_auto,w_auto/v1667393961/cloud_xxp8u9.jpg)
 
-I may be biased, but being a web developer is a great career choice. Being able to make a good living out of it as an entrepreneur, a freelancer or an employee depends on your ability to promote yourself to potential clients and employers. It all starts with choosing the right web hosting, setting up PHP, MySQL or whatever else if your favorite technology.
+I may be biased, but being a web developer is a great career choice (especially when you're using Laravel). Being able to make a good living out of it as an entrepreneur, a freelancer or an employee depends on your ability to promote yourself to potential clients and employers. It all starts with choosing the right web hosting, setting up PHP, MySQL or whatever else if your favorite technology.
 
 If you're in a hurry, here are my top recommendations:
 - **Easiest to use**: Cloudways, a cheaper Laravel Forge alternative ([get started with a 3-day free trial](https://benjamincrozat.com/recommends/cloudways))
