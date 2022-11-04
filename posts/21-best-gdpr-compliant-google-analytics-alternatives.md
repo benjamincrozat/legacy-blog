@@ -44,6 +44,7 @@ Did you know that **Fathom is what this website uses to track its visitors**? I 
 
 The **pros** of Fathom Analytics:
 - Dark mode!
+- Doesn't use cookies
 - Export data to CSV
 - Extremely fast script
 - Simple user interface
