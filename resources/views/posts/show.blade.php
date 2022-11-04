@@ -33,7 +33,7 @@
             </div>
 
             @empty ($post->hideBanners)
-                <x-dynamic-component :component="$affiliates->shuffle()->first()" class="sm:hidden mt-8" />
+                <x-dynamic-component :component="$affiliates->shuffle()->first()" class="sm:hidden mt-8 text-sm" />
             @endempty
 
             <x-blog.toc :toc="$post->getTableOfContents()" class="lg:hidden mt-8" />
