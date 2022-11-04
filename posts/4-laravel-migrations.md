@@ -73,10 +73,10 @@ return new class extends Migration {
         });
     }
 
-        public function down()
-        {
-            Schema::dropIfExists('posts');
-        }
+    public function down()
+    {
+        Schema::dropIfExists('posts');
+    }
 };
 ```
 
