@@ -227,50 +227,6 @@
         </div>
     </x-home.section>
 
-    <div class="bg-gradient-to-r from-indigo-100/50 to-indigo-200/50 text-indigo-900">
-        <section class="container py-8 sm:py-16">
-            <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">How can I help you?</h2>
-
-            <div class="bg-gradient-to-r from-white to-white/90 mt-8 sm:mt-16 px-4 py-6 sm:p-6 rounded-lg shadow-lg shadow-indigo-900/10">
-                <x-form method="POST" action="#" class="grid gap-4">
-                    <div>
-                        <label for="name" class="font-semibold text-indigo-900/75 text-sm">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Homer Simpson" class="bg-transparent block border border-gray-200 mt-1 placeholder-gray-300 rounded w-full" />
-                    </div>
-
-                    <div>
-                        <label for="company" class="font-semibold text-indigo-900/75 text-sm">Company</label>
-                        <input type="text" id="company" name="company" placeholder="Hyper-Compu-Global-Mega-Net" class="bg-transparent block border border-gray-200 mt-1 placeholder-gray-300 rounded w-full" />
-                    </div>
-
-                    <div>
-                        <label for="email" class="font-semibold text-indigo-900/75 text-sm">Email</label>
-                        <input type="email" id="email" name="email" placeholder="homersimpson@example.com" class="bg-transparent block border border-gray-200 mt-1 placeholder-gray-300 rounded w-full" />
-                    </div>
-
-                    <div>
-                        <label for="details" class="font-semibold text-indigo-900/75 text-sm">
-                            Details
-                        </label>
-
-                        <textarea
-                            id="details"
-                            name="details"
-                            class="bg-transparent block border border-gray-200 min-h-[200px] mt-1 placeholder-gray-300 resize-none rounded w-full"
-                            x-init="$el.style.height = '5px'; $el.style.height = `${$el.scrollHeight}px`"
-                            @input="$el.style.height = '5px'; $el.style.height = `${$el.scrollHeight}px`"
-                            @resize.window="$el.style.height = '5px'; $el.style.height = `${$el.scrollHeight}px`"
-                        ></textarea>
-                    </div>
-
-                    <button type="submit" class="bg-gradient-to-r from-indigo-400 to-indigo-300 font-bold mt-4 px-4 py-3 rounded text-white transition-colors">
-                        Hire me!
-                    </button>
-                </x-form>
-            </div>
-        </section>
-    </div>
-
     <div class="bg-indigo-500 flex-grow">
         <x-footer class="text-indigo-100" />
     </div>
