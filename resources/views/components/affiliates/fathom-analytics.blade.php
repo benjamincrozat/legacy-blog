@@ -12,7 +12,7 @@
     </p>
 
     <p class="mt-6">
-        <x-slot:button slug="fathom">
+        <x-slot:button slug="fathom-analytics">
             Get started with a <strong class="font-bold">7-day trial & $10&nbsp;discount</strong> on your first invoice.
         </x-slot:button>
     </p>
