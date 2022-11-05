@@ -38,6 +38,14 @@ class RedirectToAffiliateControllerTest extends TestCase
         ;
     }
 
+    public function test_it_redirects_to_tweet_hunter() : void
+    {
+        $this
+            ->get(route('affiliate', ['tweet-hunter', 'via' => 'benjamincrozat']))
+            ->assertRedirect('https://tweethunter.io/?via=benjamincrozat')
+        ;
+    }
+
     public function test_it_redirects_to_vultr() : void
     {
         $this
