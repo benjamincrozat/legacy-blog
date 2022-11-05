@@ -4,7 +4,7 @@
         {{ $header }}
     </div>
 
-    <div class="md:max-w-screen-sm mx-auto p-4">
+    <div class="md:max-w-screen-sm mx-auto p-4 sm:text-center">
         {{ $slot }}
 
         <p class="mt-6">
