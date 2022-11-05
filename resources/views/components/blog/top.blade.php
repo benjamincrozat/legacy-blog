@@ -10,11 +10,11 @@
     </div>
 
     <nav class="flex items-center gap-8">
-        @auth
+        @if (auth()->check() && 'benjamincrozat@me.com' === auth()->user()?->email)
             <a href="/nova" class="font-normal text-xs uppercase">
                 Nova
             </a>
-        @endauth
+        @endif
 
         <x-hire-me />
     </nav>
