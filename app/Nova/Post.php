@@ -97,6 +97,11 @@ HTML;
         ];
     }
 
+    public function subtitle() : string
+    {
+        return $this->slug;
+    }
+
     public function cards(NovaRequest $request) : array
     {
         return [

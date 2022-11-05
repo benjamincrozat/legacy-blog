@@ -21,7 +21,7 @@ class PostsIntent extends Partition
             })
             ->colors([
                 1 => '#49de80',
-                0 => '#a5b4fd',
+                0 => '#60a5fa',
             ]);
     }
 
