@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Tests\TestCase;
 use App\Models\Post;
+use Illuminate\Support\Collection;
 
 class ShowPostControllerTest extends TestCase
 {
@@ -18,5 +19,8 @@ class ShowPostControllerTest extends TestCase
         ;
 
         $this->assertInstanceOf(Post::class, $response->viewData('post'));
+
+        $this->assertInstanceOf(Collection::class, $response->viewData('others'));
+        $this->assertFalse($response->viewData('others')->contains($post));
     }
 }
