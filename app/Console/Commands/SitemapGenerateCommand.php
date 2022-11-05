@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands;
 
-use App\Post;
+use App\Models\Post;
 use Spatie\Sitemap\Sitemap;
 use Illuminate\Console\Command;
 
@@ -20,8 +20,8 @@ class SitemapGenerateCommand extends Command
 
         $sitemap->add(route('posts.index'));
 
-        Post::all()->each(function (Post $post) use ($sitemap) {
-            $sitemap->add(route('posts.show', $post->slug));
+        Post::latest()->get()->each(function (Post $post) use ($sitemap) {
+            $sitemap->add(route('posts.show', $post));
         });
 
         $sitemap->writeToFile(public_path('/sitemap.xml'));

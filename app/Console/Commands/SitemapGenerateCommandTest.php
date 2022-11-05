@@ -2,8 +2,8 @@
 
 namespace App\Console\Commands;
 
-use App\Post;
 use Tests\TestCase;
+use App\Models\Post;
 use Illuminate\Support\Facades\Artisan;
 
 class SitemapGenerateCommandTest extends TestCase
@@ -18,8 +18,8 @@ class SitemapGenerateCommandTest extends TestCase
 
         $this->assertStringContainsString(route('posts.index'), $content);
 
-        Post::all()->each(function (Post $post) use ($content) {
-            $this->assertStringContainsString(route('posts.show', $post->slug), $content);
+        Post::latest()->get()->each(function (Post $post) use ($content) {
+            $this->assertStringContainsString(route('posts.show', $post), $content);
         });
     }
 }
