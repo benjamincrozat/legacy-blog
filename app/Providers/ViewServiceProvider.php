@@ -11,7 +11,7 @@ class ViewServiceProvider extends ServiceProvider
     {
         View::composer(
             '*', fn ($v) => $v->with([
-                'affiliates' => collect(['affiliates.cloudways', 'affiliates.fathom', 'affiliates.jasper']),
+                'affiliates' => collect(['affiliates.cloudways', 'affiliates.fathom-analytics', 'affiliates.jasper']),
             ])
         );
     }

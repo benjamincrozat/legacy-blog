@@ -8,7 +8,7 @@
     </p>
 
     <p class="mt-2">
-        <a href="{{ route('affiliate', 'fathom') }}" class="text-indigo-400 underline" @click="window.fathom?.trackGoal('K8DBWLRF', 0)">Fathom Analytics</a> does a way better job.
+        <a href="{{ route('affiliate', 'fathom-analytics') }}" class="text-indigo-400 underline" @click="window.fathom?.trackGoal('K8DBWLRF', 0)">Fathom Analytics</a> does a way better job.
     </p>
 
     <p class="mt-6">
