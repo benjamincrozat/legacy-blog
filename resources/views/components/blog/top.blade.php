@@ -1,6 +1,6 @@
 <div class="container flex justify-between mt-8">
     <div {{ $attributes }}>
-        <span class="font-extrabold translate-y-px text-base tracking-widest uppercase">
+        <span class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase">
             Benjamin Crozat
         </span>
 
