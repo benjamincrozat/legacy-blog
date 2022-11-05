@@ -9,6 +9,7 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Badge;
 use Laravel\Nova\Fields\Stack;
 use Laravel\Nova\Fields\Boolean;
+use App\Nova\Metrics\PostsIntent;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\BelongsTo;
@@ -77,11 +78,16 @@ HTML;
                 ->sortable()
                 ->onlyOnForms(),
 
-            Badge::make('Intent', fn () => $this->promotes_affiliate_links ? 'Commercial' : 'Informational')
+            Badge::make('Intent', 'promotes_affiliate_links')
                 ->map([
-                    'Commercial' => 'success',
-                    'Informational' => 'info',
+                    true => 'success',
+                    false => 'info',
                 ])
+                ->labels([
+                    true => 'Commercial',
+                    false => 'Informational',
+                ])
+                ->sortable()
                 ->exceptOnForms(),
 
             Date::make('Modified At')
@@ -92,7 +98,9 @@ HTML;
 
     public function cards(NovaRequest $request) : array
     {
-        return [];
+        return [
+            new PostsIntent,
+        ];
     }
 
     public function filters(NovaRequest $request) : array
