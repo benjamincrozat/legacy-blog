@@ -27,7 +27,7 @@
 
                 <a href="{{ route('home') }}" class="font-normal underline" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">Benjamin Crozat</a>
                 —
-                @choice(':count minute|:count minutes', $post->read_time) read
+                <span class="opacity-75">@choice(':count minute|:count minutes', $post->read_time) read</span>
             </div>
 
             @empty ($post->promotes_affiliate_links)

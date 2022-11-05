@@ -9,7 +9,7 @@
 
                     —
 
-                    @choice(':count&nbsp;minute|:count&nbsp;minutes', $post->read_time) read
+                    <span class="opacity-75">@choice(':count&nbsp;minute|:count&nbsp;minutes', $post->read_time) read</span>
                 </p>
             </div>
 
