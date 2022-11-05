@@ -14,6 +14,7 @@ use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Panel;
 
 class Post extends Resource
 {
@@ -66,34 +67,40 @@ HTML;
 
             Text::make('Slug')
                 ->sortable()
+                ->maxlength(60)
                 ->rules('required', 'max:255')
                 ->hideFromIndex(),
 
             Markdown::make('Content')
                 ->rules('required'),
 
-            Textarea::make('Description')
-                ->rules('required', 'max:160'),
+            Panel::make('SEO', [
+                Textarea::make('Description')
+                    ->maxlength(160)
+                    ->rules('required'),
 
-            Boolean::make('Affiliate', 'Promotes Affiliate links')
-                ->sortable()
-                ->onlyOnForms(),
+                Boolean::make('Promotes affiliate links')
+                    ->sortable()
+                    ->onlyOnForms(),
 
-            Badge::make('Intent', 'promotes_affiliate_links')
-                ->map([
-                    true => 'success',
-                    false => 'info',
-                ])
-                ->labels([
-                    true => 'Commercial',
-                    false => 'Informational',
-                ])
-                ->sortable()
-                ->exceptOnForms(),
+                Badge::make('Intent', 'promotes_affiliate_links')
+                    ->map([
+                        true => 'success',
+                        false => 'info',
+                    ])
+                    ->labels([
+                        true => 'Commercial',
+                        false => 'Informational',
+                    ])
+                    ->sortable()
+                    ->exceptOnForms(),
 
-            Date::make('Modified At')
-                ->displayUsing(fn () => $this->modified_at?->isoFormat('ll'))
-                ->sortable(),
+                Date::make('Modified At')
+                    ->displayUsing(fn () => $this->modified_at?->isoFormat('ll'))
+                    ->sortable(),
+            ]),
+
+
         ];
     }
 
