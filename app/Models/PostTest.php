@@ -10,7 +10,7 @@ class PostTest extends TestCase
     {
         Post::factory()->create(['image' => 'foo']);
 
-        Post::factory()->create();
+        Post::factory()->create(['image' => null]);
 
         $this->assertCount(1, Post::featured()->get());
     }
