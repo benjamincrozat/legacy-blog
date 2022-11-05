@@ -38,6 +38,12 @@ class RedirectToAffiliateController extends Controller
                 $redirect = 'https://jasper.ai/?fpr=benjamin57';
 
                 break;
+            case 'tweet-hunter':
+                $parameters['via'] = 'benjamincrozat';
+
+                $redirect = 'https://tweethunter.io/';
+
+                break;
             case 'vultr':
                 $parameters['ref'] = '9270910-8H';
 
