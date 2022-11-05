@@ -30,7 +30,8 @@ class Post extends Resource
         return [
             ID::make()->sortable(),
 
-            BelongsTo::make('Author', 'user', User::class),
+            BelongsTo::make('Author', 'user', User::class)
+                ->sortable(),
 
             Text::make('Image')
                 ->displayUsing(function () {
