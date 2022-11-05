@@ -35,7 +35,7 @@ class RedirectToAffiliateController extends Controller
             case 'jasper':
                 $parameters['fpr'] = 'benjamincrozat';
 
-                $redirect = 'https://jasper.ai/?fpr=benjamin57';
+                $redirect = 'https://jasper.ai/';
 
                 break;
             case 'tweet-hunter':
