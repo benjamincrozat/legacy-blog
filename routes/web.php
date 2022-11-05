@@ -16,4 +16,4 @@ Route::get('/recommends/{slug}', RedirectToAffiliateController::class)->name('af
 Route::feeds();
 
 Route::get('/blog', ListPostsController::class)->name('posts.index');
-Route::get('/{slug}', ShowPostController::class)->name('posts.show');
+Route::get('/{post:slug}', ShowPostController::class)->name('posts.show');

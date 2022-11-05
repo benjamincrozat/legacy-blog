@@ -235,6 +235,8 @@ return new class extends Migration {
 
 ## Performances best practices
 
+Performances start with choosing the right hosting for your projects and I actually wrote about [the best hosting providers for Laravel projects](https://benjamincrozat.com/best-web-hosting-php-laravel-developers). But optimizing your code should be a priority.
+
 ### Use `dispatchAfterResponse()` for long-running tasks
 
 Let's use the most straightforward example possible: you have a contact form. Sending an email may take between one or two seconds, depending on your method.

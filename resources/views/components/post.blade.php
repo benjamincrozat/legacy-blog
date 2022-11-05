@@ -2,14 +2,14 @@
     <div class="flex items-center justify-between gap-8">
         <div>
             <div class="flex items-center gap-2 text-sm">
-                <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}" width="18" height="18" alt="Benjamin Crozat" class="-translate-y-[.5px] rounded-full" />
+                <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5($post->user_email) }}" width="18" height="18" alt="{{ $post->user_name }}" class="-translate-y-[.5px] rounded-full" />
 
                 <p>
-                    <a href="https://twitter.com/benjamincrozat" target="_blank" rel="noopener noreferrer" class="font-semibold" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">Benjamin Crozat</a>
+                    <a href="{{ route('home') }}" target="_blank" rel="noopener noreferrer" class="font-semibold" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">{{ $post->user_name }}</a>
 
                     —
 
-                    @choice(':count&nbsp;minute|:count&nbsp;minutes', $post->getReadTime()) read
+                    @choice(':count&nbsp;minute|:count&nbsp;minutes', $post->read_time) read
                 </p>
             </div>
 

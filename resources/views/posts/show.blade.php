@@ -29,10 +29,10 @@
 
                 <a href="{{ route('home') }}" class="font-normal underline" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">Benjamin Crozat</a>
                 —
-                @choice(':count minute|:count minutes', $post->getReadTime()) read
+                @choice(':count minute|:count minutes', $post->read_time) read
             </div>
 
-            @empty ($post->hideBanners)
+            @empty ($post->promotes_affiliate_links)
                 <x-dynamic-component :component="$affiliates->shuffle()->first()" class="sm:hidden mt-8 text-sm" />
             @endempty
 
@@ -47,7 +47,7 @@
         <div class="hidden md:block md:col-span-1 text-sm">
             <x-blog.toc :toc="$post->getTableOfContents()" />
 
-            @empty ($post->hideBanners)
+            @empty ($post->promotes_affiliate_links)
                 <x-dynamic-component :component="$affiliates->shuffle()->first()" class="mt-8" />
             @endempty
 
@@ -72,7 +72,7 @@
                 </x-form>
             </div>
 
-            @if ($post->hideBanners)
+            @if ($post->promotes_affiliate_links)
                 <div class="border mt-8 p-4 rounded text-xs">
                     <p>This article uses affiliate links, which can compensate me at no cost to you if you decide to pursue a deal.</p>
                     <p class="mt-2">I only promote products I've personally used and stand behind.</p>
@@ -105,16 +105,16 @@
             "@context": "https://schema.org",
             "@type": "NewsArticle",
             "headline": "{{ $post->title }}",
-            "datePublished": "{{ $post->getPublishedAtDate()?->toIso8601String() }}",
+            "datePublished": "{{ $post->created_at?->toIso8601String() }}",
 
-            @if ($post->getModifiedAtDate())
-                "dateModified": "{{ $post->getModifiedAtDate()?->toIso8601String() }}",
+            @if ($post->modified_at)
+                "dateModified": "{{ $post->modified_at->toIso8601String() }}",
             @endif
 
             "author": [
                 {
                     "@type": "Person",
-                    "name": "Benjamin Crozat",
+                    "name": "{{ $post->user_name }}",
                     "url": "{{ route('home') }}"
                 }
             ]

@@ -13,5 +13,19 @@ class DatabaseSeeder extends Seeder
             'name' => 'Benjamin Crozat',
             'email' => 'benjamincrozat@me.com',
         ]);
+
+        \App\Post::all()->reverse()->each(function (\App\Post $post) {
+            \App\Models\Post::create([
+                'user_id' => 1,
+                'image' => $post->image,
+                'title' => $post->title,
+                'slug' => $post->slug,
+                'content' => $post->content,
+                'description' => $post->description,
+                'promotes_affiliate_links' => $post->hideBanners,
+                'created_at' => $post->getPublishedAtDate(),
+                'modified_at' => $post->getModifiedAtDate(),
+            ]);
+        });
     }
 }

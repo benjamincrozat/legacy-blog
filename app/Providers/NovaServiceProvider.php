@@ -15,7 +15,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     {
         parent::boot();
 
-        Nova::initialPath('/resources/users');
+        Nova::initialPath('/resources/posts');
 
         Nova::userMenu(function (Request $request, Menu $menu) {
             return $menu->prepend([

@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Post;
 use Tests\TestCase;
+use App\Models\Post;
 
 class ShowPostControllerTest extends TestCase
 {
     public function test_it_shows_a_given_post() : void
     {
+        $post = Post::factory()->create();
+
         $response = $this
-            ->get(route('posts.show', 'what-is-laravel'))
+            ->get(route('posts.show', $post))
             ->assertOk()
             ->assertViewIs('posts.show')
         ;

@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Post;
+use App\Models\Post;
 use Illuminate\View\View;
 
 class ShowPostController extends Controller
 {
-    public function __invoke(string $slug) : View
+    public function __invoke(Post $post) : View
     {
         return view('posts.show', [
-            'post' => Post::get($slug),
-            'others' => Post::all()->filter(fn ($p) => $p->slug !== $slug)->shuffle(),
+            'post' => $post,
+            'others' => Post::whereNotIn('id', [$post->id])->inRandomOrder()->withUser()->get(),
         ]);
     }
 }
