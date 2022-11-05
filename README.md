@@ -1,3 +1,3 @@
-# Benjamin Crozat
+# benjamincrozat.com
 
-Benjamin Crozat's blog source code.
+benjamincrozat.com's source code.
