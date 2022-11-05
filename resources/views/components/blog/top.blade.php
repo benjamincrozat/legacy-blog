@@ -9,7 +9,7 @@
         </span>
     </div>
 
-    <nav class="flex items-center gap-8">
+    <nav class="flex items-center gap-6 sm:gap-8">
         @if (auth()->check() && 'benjamincrozat@me.com' === auth()->user()?->email)
             <a href="/nova" class="font-normal text-xs uppercase">
                 Nova
