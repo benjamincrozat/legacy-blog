@@ -63,8 +63,8 @@ class RedirectToAffiliateController extends Controller
                 abort(404);
         }
 
-        $queryString = http_build_query($parameters);
+        $queryString = ! empty($parameters) ? '?' . http_build_query($parameters) : '';
 
-        return redirect()->away("$redirect?$queryString");
+        return redirect()->away($redirect . $queryString);
     }
 }
