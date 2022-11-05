@@ -45,7 +45,7 @@ class RedirectToAffiliateController extends Controller
 
                 break;
             case 'vultr':
-                $parameters['ref'] = '9270910-8H';
+                $parameters['ref'] = '9270908';
 
                 $redirect = 'https://www.vultr.com/';
 
