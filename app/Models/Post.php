@@ -17,7 +17,7 @@ class Post extends Model implements Feedable
     use HasFactory;
 
     protected $casts = [
-        'modified_at' => 'datetime',
+        'modified_at' => 'date',
     ];
 
     public function scopeFeatured(Builder $query) : void

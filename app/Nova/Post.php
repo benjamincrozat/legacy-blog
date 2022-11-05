@@ -3,9 +3,12 @@
 namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Date;
+use Laravel\Nova\Fields\Line;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Badge;
+use Laravel\Nova\Fields\Stack;
 use Laravel\Nova\Fields\Boolean;
-use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\BelongsTo;
@@ -18,7 +21,7 @@ class Post extends Resource
     public static $title = 'title';
 
     public static $search = [
-        'id', 'title', 'content',
+        'id', 'title', 'content', 'description',
     ];
 
     public function fields(NovaRequest $request) : array
@@ -40,7 +43,24 @@ HTML;
 
             Text::make('Title')
                 ->sortable()
-                ->rules('required', 'max:60'),
+                ->rules('required', 'max:60')
+                ->hideFromIndex(),
+
+            Stack::make('Details', [
+                Line::make('Title')
+                    ->displayUsing(function () {
+                        $title = strlen($this->title) > 60
+                            ? substr($this->title, 0, 60) . '…'
+                            : $this->title;
+
+                        $link = route('posts.show', $this->resource);
+
+                        return "<a href=\"$link\" target=\"_blank\" class=\"link-default\">$title</a>";
+                    })
+                    ->asHtml(),
+                Line::make('Slug')->extraClasses('opacity-75 text-xs'),
+            ])
+            ->onlyOnIndex(),
 
             Text::make('Slug')
                 ->sortable()
@@ -53,11 +73,19 @@ HTML;
             Textarea::make('Description')
                 ->rules('required', 'max:160'),
 
-            Boolean::make('Affiliate', 'promotes_affiliate_links')
-                ->sortable(),
+            Boolean::make('Affiliate', 'Promotes Affiliate links')
+                ->sortable()
+                ->onlyOnForms(),
 
-            DateTime::make('Modified At')
-                ->displayUsing(fn () => $this->modified_at?->isoFormat('LL'))
+            Badge::make('Intent', fn () => $this->promotes_affiliate_links ? 'Commercial' : 'Informational')
+                ->map([
+                    'Commercial' => 'success',
+                    'Informational' => 'info',
+                ])
+                ->exceptOnForms(),
+
+            Date::make('Modified At')
+                ->displayUsing(fn () => $this->modified_at?->isoFormat('ll'))
                 ->sortable(),
         ];
     }
