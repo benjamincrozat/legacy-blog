@@ -9,7 +9,7 @@
 
     <p class="mt-6">
         <x-slot:button slug="jasper">
-            Get started with <strong class="font-bold">10,000 bonus credits</strong>
+            Get started with <strong class="font-bold">10,000&nbsp;bonus&nbsp;credits</strong>
         </x-slot:button>
     </p>
 </x-affiliates.base>
