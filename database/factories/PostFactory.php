@@ -14,10 +14,12 @@ class PostFactory extends Factory
     {
         return [
             'user_id' => User::factory(),
+            'image' => fake()->imageUrl(),
             'title' => fake()->sentence(),
             'slug' => fake()->slug(),
             'content' => fake()->paragraphs(5, true),
             'description' => fake()->paragraph(),
+            'promotes_affiliate_links' => fake()->boolean(),
         ];
     }
 }
