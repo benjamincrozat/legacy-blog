@@ -8,7 +8,7 @@ use Illuminate\Support\Collection;
 
 class ShowPostControllerTest extends TestCase
 {
-    public function test_it_shows_a_given_post() : void
+    public function test_it_shows_a_given_post_and_list_other_posts_to_read_excluding_the_current_one() : void
     {
         $post = Post::factory()->create();
 

@@ -10,6 +10,12 @@
     </div>
 
     <nav class="flex items-center gap-8">
+        @auth
+            <a href="/nova" class="font-normal text-xs uppercase">
+                Nova
+            </a>
+        @endauth
+
         <x-hire-me />
     </nav>
 </div>
