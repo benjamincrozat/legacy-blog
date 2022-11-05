@@ -4,7 +4,7 @@
     </x-slot:header>
 
     <p class="mt-2">
-        I use <a href="{{ route('affiliate', 'jasper') }}" class="text-indigo-400 underline" @click="window.fathom?.trackGoal('K8DBWLRF', 0)">Jasper AI</a> to create SEO-optimized blog posts 10x faster.
+        I use <a href="{{ route('affiliate', 'jasper') }}" class="text-indigo-400 underline" @click="window.fathom?.trackGoal('K8DBWLRF', 0)">Jasper AI</a> to create SEO-optimized blog posts 10x&nbsp;faster.
     </p>
 
     <p class="mt-6">
