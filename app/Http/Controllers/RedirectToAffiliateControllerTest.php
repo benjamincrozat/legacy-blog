@@ -6,11 +6,11 @@ use Tests\TestCase;
 
 class RedirectToAffiliateControllerTest extends TestCase
 {
-    public function test_it_redirects_to_affiliate_with_additional_query_string_parameters() : void
+    public function test_it_redirects_to_vultr() : void
     {
         $this
-            ->get(route('affiliate', ['cloudways', 'foo' => 'bar']))
-            ->assertRedirect('https://www.cloudways.com/en/?foo=bar&id=1242932')
+            ->get(route('affiliate', ['vultr', 'ref' => '9270908']))
+            ->assertRedirect('https://www.vultr.com/?ref=9270908')
         ;
     }
 
