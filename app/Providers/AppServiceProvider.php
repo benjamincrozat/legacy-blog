@@ -6,6 +6,7 @@ use App\ConvertKit\Client;
 use Illuminate\Support\Str;
 use Illuminate\Http\Client\Factory;
 use App\CommonMark\MarxdownConverter;
+use App\CommonMark\LightdownConverter;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 
@@ -18,6 +19,10 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot() : void
     {
+        Str::macro(
+            'lightdown', fn ($string) => (new LightdownConverter)->convert($string)
+        );
+
         Str::macro('marxdown', function (string $string) {
             $html = (string) MarxdownConverter::make()->convert($string);
 

@@ -18,12 +18,10 @@
 
     <div class="container lg:grid lg:grid-cols-3 lg:gap-16 mt-8 relative">
         <article class="lg:col-span-2">
-            {{-- Title --}}
             <h1 class="font-thin text-3xl md:text-5xl dark:text-white">
                 {{ $post->title }}
             </h1>
 
-            {{-- Metadata --}}
             <div class="flex items-center gap-2 mt-4 text-sm">
                 <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}" width="18" height="18" alt="Benjamin Crozat's avatar." class="-translate-y-[.5px] rounded-full" />
 
@@ -33,12 +31,11 @@
             </div>
 
             @empty ($post->promotes_affiliate_links)
-                <x-dynamic-component :component="$affiliates->shuffle()->first()" class="sm:hidden mt-8 text-sm" />
+                <x-banner :banner="$banners[0]" class="sm:hidden mt-8 text-sm" />
             @endempty
 
             <x-blog.toc :toc="$post->getTableOfContents()" class="lg:hidden mt-8" />
 
-            {{-- Content --}}
             <div class="break-words max-w-full mt-8 prose prose-a:border-b prose-a:border-indigo-400/50 prose-a:text-indigo-400 prose-a:no-underline prose-code:dark:text-gray-300 prose-headings:dark:text-white prose-strong:dark:text-white prose-thead:dark:border-gray-800 prose-tr:dark:border-gray-800 dark:text-gray-300">
                 {!! Illuminate\Support\Str::marxdown($post->content) !!}
             </div>
@@ -48,7 +45,7 @@
             <x-blog.toc :toc="$post->getTableOfContents()" />
 
             @empty ($post->promotes_affiliate_links)
-                <x-dynamic-component :component="$affiliates->shuffle()->first()" class="mt-8" />
+                <x-banner :banner="$banners[1]" class="mt-8" />
             @endempty
 
             <div class="border dark:border-gray-800 mt-8 p-4 rounded">

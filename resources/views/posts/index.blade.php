@@ -36,11 +36,11 @@
     </section>
 
     <section class="container mt-8 sm:mt-16">
-        <h2 class="font-bold mt-16 px-4 sm:px-0 text-center text-xl">
+        <h2 class="font-bold px-4 sm:px-0 text-center text-xl">
             Latest posts
         </h2>
 
-        <x-dynamic-component :component="$affiliates->shuffle()->first()" class="mt-8 text-sm" />
+        <x-banner :banner="$banners[0]" class="mt-8 text-center" />
 
         @if ($posts->isNotEmpty())
             <div class="grid sm:grid-cols-2 gap-4 sm:gap-8 mt-8">
