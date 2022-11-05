@@ -11,7 +11,7 @@ Route::get('/', HomeController::class)->name('home');
 
 Route::post('/subscribe', SubscribeController::class)->name('subscribe');
 
-Route::get('/recommends/{slug}', RedirectToAffiliateController::class)->name('affiliate');
+Route::get('/recommends/{affiliate:slug}', RedirectToAffiliateController::class)->name('affiliate');
 
 Route::feeds();
 

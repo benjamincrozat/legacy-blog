@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use Laravel\Nova\Panel;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Line;
@@ -14,10 +15,11 @@ use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use Laravel\Nova\Panel;
 
 class Post extends Resource
 {
+    public static $group = 'Blog';
+
     public static $model = \App\Models\Post::class;
 
     public static $title = 'title';
@@ -45,8 +47,9 @@ HTML;
                 ->asHtml(),
 
             Text::make('Title')
+                ->maxlength(60)
+                ->rules('required', 'max:255')
                 ->sortable()
-                ->rules('required', 'max:60')
                 ->hideFromIndex(),
 
             Stack::make('Details', [
@@ -66,9 +69,8 @@ HTML;
             ->onlyOnIndex(),
 
             Text::make('Slug')
-                ->sortable()
-                ->maxlength(60)
                 ->rules('required', 'max:255')
+                ->sortable()
                 ->hideFromIndex(),
 
             Markdown::make('Content')
@@ -99,8 +101,6 @@ HTML;
                     ->displayUsing(fn () => $this->modified_at?->isoFormat('ll'))
                     ->sortable(),
             ]),
-
-
         ];
     }
 
