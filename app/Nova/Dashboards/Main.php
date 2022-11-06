@@ -7,6 +7,7 @@ use App\Nova\Metrics\PostsIntent;
 use App\Nova\Metrics\AffiliateClicks;
 use App\Nova\Metrics\AffiliatesCount;
 use App\Nova\Metrics\SubscribersCount;
+use App\Nova\Metrics\ActiveBannersCount;
 
 class Main extends Dashboard
 {
@@ -16,6 +17,7 @@ class Main extends Dashboard
             new PostsIntent,
             new AffiliatesCount,
             new AffiliateClicks,
+            new ActiveBannersCount,
             new SubscribersCount,
         ];
     }

@@ -7,6 +7,7 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\BelongsTo;
+use App\Nova\Metrics\ActiveBannersCount;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Banner extends Resource
@@ -64,7 +65,9 @@ HTML;
 
     public function cards(NovaRequest $request) : array
     {
-        return [];
+        return [
+            new ActiveBannersCount,
+        ];
     }
 
     public function filters(NovaRequest $request) : array
