@@ -71,7 +71,7 @@
             </div>
         @endif
 
-        @if (app()->isProduction() && empty($disableAds) && config('services.adsense.enabled'))
+        @if (should_display_ads())
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
         @endif
     </body>

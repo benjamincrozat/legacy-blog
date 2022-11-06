@@ -1,6 +1,7 @@
 <x-app
     title="Benjamin Crozat, a Laravel developer for hire"
     description="Book an expert Laravel developer, TODAY! Let me guide your team toward reliability and maintenability."
+    :disable-ads="true"
     class="text-indigo-50"
 >
     <x-home.navigation />
