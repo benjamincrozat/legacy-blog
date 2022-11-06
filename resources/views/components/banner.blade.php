@@ -7,7 +7,7 @@
 
         <div class="grid place-items-center gap-4 p-4">
             @if ($banner->image)
-                <img src="{{ str_replace('w_auto', 'h_80', $banner->image) }}" width="80" height="80" alt="{{ $banner->affiliate->name }}" class="rounded-lg" />
+                <img src="{{ str_replace('w_auto', 'h_80', $banner->image) }}" height="80" alt="{{ $banner->affiliate->name }}" class="rounded-lg" />
             @endif
 
             <div>
