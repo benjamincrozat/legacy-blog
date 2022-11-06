@@ -40,7 +40,9 @@
             Latest posts
         </h2>
 
-        <x-banner :banner="$banners->first()" class="mt-8" />
+        @if (! config('services.adsense.enabled'))
+            <x-banner :banner="$banners->first()" class="mt-8" />
+        @endif
 
         @if ($posts->isNotEmpty())
             <div class="grid sm:grid-cols-2 gap-4 sm:gap-8 mt-8">
