@@ -2,11 +2,11 @@
 
 namespace App\Nova;
 
-use Illuminate\Support\Str;
-use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Markdown;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Banner extends Resource
@@ -37,6 +37,14 @@ class Banner extends Resource
             Text::make('Button')
                 ->rules('required', 'max:255')
                 ->hideFromIndex(),
+
+            Date::make('Start At')
+                ->rules('required')
+                ->min(now()),
+
+            Date::make('End At')
+                ->rules('nullable')
+                ->min(now()),
         ];
     }
 
