@@ -41,11 +41,13 @@ class Banner extends Resource
             DateTime::make('Start At')
                 ->rules('required')
                 ->min(now()->startOfDay())
+                ->sortable()
                 ->displayUsing(fn () => $this->start_at?->isoFormat('lll')),
 
             DateTime::make('End At')
                 ->rules('nullable')
                 ->min(now()->startOfDay())
+                ->sortable()
                 ->displayUsing(fn () => $this->end_at?->isoFormat('lll')),
         ];
     }
