@@ -18,8 +18,8 @@ class Main extends Dashboard
             new PostsCount,
             new PostsIntent,
             new AffiliatesCount,
-            new AffiliateClicks,
             new ActiveBannersCount,
+            new AffiliateClicks,
             new SubscribersCount,
         ];
     }
