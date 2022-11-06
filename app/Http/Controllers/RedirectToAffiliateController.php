@@ -14,9 +14,10 @@ class RedirectToAffiliateController extends Controller
         $link = Url::fromString($affiliate->link)
             ->withQueryParameters($request->all());
 
-        $affiliate->increment('clicks');
-
-        $affiliate->clicks()->create();
+        dispatch(function () use ($affiliate) {
+            $affiliate->increment('clicks');
+            $affiliate->clicks()->create();
+        })->afterResponse();
 
         return redirect()->away($link);
     }
