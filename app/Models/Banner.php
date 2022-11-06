@@ -17,7 +17,13 @@ class Banner extends BaseModel
 
     public function scopeActive(Builder $query) : void
     {
-        $query->where('start_at', '<=', now());
+        $query->where([
+            ['start_at', '<=', now()],
+            ['end_at', '>=', now()],
+        ])->orWhere([
+            ['start_at', '<=', now()],
+            ['end_at', null],
+        ]);
     }
 
     public function affiliate() : BelongsTo

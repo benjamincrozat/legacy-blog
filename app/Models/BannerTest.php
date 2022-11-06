@@ -12,6 +12,11 @@ class BannerTest extends TestCase
 
         Banner::factory()->create(['start_at' => null]);
 
+        Banner::factory()->create([
+            'start_at' => now()->subWeek(),
+            'end_at' => now()->subDay(),
+        ]);
+
         $this->assertCount(1, Banner::active()->get());
     }
 
