@@ -7,6 +7,7 @@ use Laravel\Nova\Fields\Line;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Stack;
 use Laravel\Nova\Fields\Number;
+use App\Nova\Metrics\TotalClicks;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Affiliate extends Resource
@@ -58,7 +59,9 @@ class Affiliate extends Resource
 
     public function cards(NovaRequest $request) : array
     {
-        return [];
+        return [
+            new TotalClicks,
+        ];
     }
 
     public function filters(NovaRequest $request) : array

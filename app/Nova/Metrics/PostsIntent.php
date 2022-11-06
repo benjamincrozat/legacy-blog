@@ -25,10 +25,7 @@ class PostsIntent extends Partition
             ]);
     }
 
-    /**
-     * @return string
-     */
-    public function uriKey()
+    public function uriKey() : string
     {
         return 'posts-intent';
     }
