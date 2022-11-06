@@ -14,7 +14,7 @@ class NovaServiceProviderTest extends TestCase
         $this
             ->actingAs($user)
             ->getJson('/nova')
-            ->assertRedirect('/nova/resources/posts')
+            ->assertRedirect('/nova/dashboards/main')
         ;
     }
 
