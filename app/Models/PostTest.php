@@ -6,6 +6,32 @@ use Tests\TestCase;
 
 class PostTest extends TestCase
 {
+    public function test_it_creates_a_redirect_when_slug_changes() : void
+    {
+        $post = Post::factory()->create();
+
+        $original = $post->slug;
+
+        $post->update(['slug' => fake()->slug()]);
+
+        $this->assertDatabaseHas(Redirect::class, [
+            'from' => $original,
+            'to' => $post->slug,
+        ]);
+    }
+
+    public function test_it_does_not_create_a_redirect_when_slug_does_not_change() : void
+    {
+        $post = Post::factory()->create();
+
+        $post->update(['slug' => $post->slug]);
+
+        $this->assertDatabaseMissing(Redirect::class, [
+            'from' => $post->slug,
+            'to' => $post->slug,
+        ]);
+    }
+
     public function test_it_has_a_featured_scope() : void
     {
         Post::factory()->create(['image' => 'foo']);

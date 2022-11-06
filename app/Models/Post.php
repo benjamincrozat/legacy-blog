@@ -19,6 +19,18 @@ class Post extends BaseModel implements Feedable
         'modified_at' => 'date',
     ];
 
+    public static function booted() : void
+    {
+        static::saved(function (Post $post) {
+            if ($post->wasChanged('slug')) {
+                Redirect::create([
+                    'from' => $post->getOriginal('slug'),
+                    'to' => $post->slug,
+                ]);
+            }
+        });
+    }
+
     public function scopeFeatured(Builder $query) : void
     {
         $query->whereNotNull('image');
