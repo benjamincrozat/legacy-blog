@@ -11,7 +11,9 @@
                     <img src="{{ str_replace('w_auto', 'h_80', $banner->image) }}" width="64" height="64" alt="{{ $banner->affiliate->name }}" class="order-1 rounded-lg" />
                 @endif
 
-                {!! Illuminate\Support\Str::lightdown($banner->content) !!}
+                <div>
+                    {!! Illuminate\Support\Str::lightdown($banner->content) !!}
+                </div>
             </div>
 
             <p class="mt-4">
