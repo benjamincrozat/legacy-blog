@@ -2,6 +2,7 @@
 
 namespace App\ConvertKit;
 
+use Illuminate\Support\Collection;
 use Illuminate\Http\Client\Factory;
 
 class Client
@@ -20,5 +21,15 @@ class Client
             ])
             ->throw()
             ->json();
+    }
+
+    public function subscribers() : Collection
+    {
+        return $this->http
+            ->get('https://api.convertkit.com/v3/subscribers', [
+                'api_secret' => config('services.convertkit.api_secret'),
+            ])
+            ->throw()
+            ->collect('subscribers');
     }
 }

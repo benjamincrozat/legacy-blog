@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Click extends BaseModel
+class Subscriber extends BaseModel
 {
     use HasFactory;
 }
