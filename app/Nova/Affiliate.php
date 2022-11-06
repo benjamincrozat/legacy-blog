@@ -46,8 +46,8 @@ class Affiliate extends Resource
                 ->rules('required', 'url'),
 
             Number::make('Clicks')
-                ->sortable()
-                ->exceptOnForms(),
+                ->rules('required', 'min:0')
+                ->sortable(),
         ];
     }
 
