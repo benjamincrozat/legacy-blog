@@ -6,6 +6,7 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Line;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Stack;
+use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Affiliate extends Resource
@@ -43,6 +44,10 @@ class Affiliate extends Resource
 
             Text::make('Link')
                 ->rules('required', 'url'),
+
+            Number::make('Clicks')
+                ->sortable()
+                ->exceptOnForms(),
         ];
     }
 

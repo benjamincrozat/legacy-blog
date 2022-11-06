@@ -7,16 +7,15 @@ use Illuminate\Database\Migrations\Migration;
 return new class extends Migration {
     public function up() : void
     {
-        Schema::create('affiliates', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('slug')->unique();
-            $table->string('link');
+        Schema::table('affiliates', function (Blueprint $table) {
+            $table->unsignedBigInteger('clicks')->default(0);
         });
     }
 
     public function down() : void
     {
-        Schema::dropIfExists('affiliates');
+        Schema::table('affiliates', function (Blueprint $table) {
+            //
+        });
     }
 };
