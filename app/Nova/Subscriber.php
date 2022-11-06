@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Gravatar;
 use App\Nova\Metrics\SubscribersCount;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -30,6 +31,10 @@ class Subscriber extends Resource
                 ->rules('required', 'email', 'max:254')
                 ->creationRules('unique:subscribers,email')
                 ->updateRules('unique:subscribers,email,{{resourceId}}'),
+
+            DateTime::make('Created At')
+                ->sortable()
+                ->exceptOnForms(),
         ];
     }
 
