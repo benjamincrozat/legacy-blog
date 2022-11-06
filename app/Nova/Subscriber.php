@@ -5,6 +5,7 @@ namespace App\Nova;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Gravatar;
+use App\Nova\Metrics\SubscribersCount;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Subscriber extends Resource
@@ -39,7 +40,9 @@ class Subscriber extends Resource
 
     public function cards(NovaRequest $request) : array
     {
-        return [];
+        return [
+            new SubscribersCount,
+        ];
     }
 
     public function filters(NovaRequest $request) : array
