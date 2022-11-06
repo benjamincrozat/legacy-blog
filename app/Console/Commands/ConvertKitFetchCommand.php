@@ -15,7 +15,7 @@ class ConvertKitFetchCommand extends Command
 
     public function handle(Client $client) : int
     {
-        $client->subscribers()->dd()->each(function (array $subscriber) {
+        $client->subscribers()->each(function (array $subscriber) {
             Subscriber::create([
                 'email' => $subscriber['email_address'],
                 'created_at' => Carbon::parse($subscriber['created_at']),
