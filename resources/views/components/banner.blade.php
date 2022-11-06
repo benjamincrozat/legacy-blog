@@ -19,7 +19,7 @@
             <p class="mt-4">
                 <a
                     href="{{ route('affiliate', $banner->affiliate) }}"
-                    class="bg-gradient-to-r from-indigo-300 dark:from-indigo-500 to-indigo-400 dark:to-indigo-600 block leading-tight sm:max-w-screen-xs mt-2 mx-auto px-4 py-3 rounded shadow-md text-center text-green-50"
+                    class="bg-gradient-to-r from-indigo-300 dark:from-indigo-500 to-indigo-400 dark:to-indigo-600 block leading-tight sm:max-w-screen-xs mx-auto px-4 py-3 rounded shadow-md text-center text-green-50"
                     @click="window.fathom?.trackGoal('K8DBWLRF', 0)"
                 >
                     {!! Illuminate\Support\Str::lightdown($banner->button) !!}
