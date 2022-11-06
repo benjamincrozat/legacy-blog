@@ -6,23 +6,23 @@
         </div>
 
         <div class="grid place-items-center gap-4 p-4">
-            @if ($banner->image)
-                <img src="{{ str_replace('w_auto', 'h_80', $banner->image) }}" height="80" alt="{{ $banner->affiliate->name }}" class="rounded-lg" />
-            @endif
+            <div class="flex items-center gap-4 md:max-w-screen-sm md:mx-auto">
+                @if (false || $banner->image)
+                    <img src="{{ str_replace('w_auto', 'h_80', $banner->image) }}" width="64" height="64" alt="{{ $banner->affiliate->name }}" class="order-1 rounded-lg" />
+                @endif
 
-            <div>
                 {!! Illuminate\Support\Str::lightdown($banner->content) !!}
-
-                <p class="mt-6">
-                    <a
-                        href="{{ route('affiliate', $banner->affiliate) }}"
-                        class="bg-gradient-to-r from-indigo-300 dark:from-indigo-500 to-indigo-400 dark:to-indigo-600 block leading-tight sm:max-w-screen-xs mt-2 mx-auto px-4 py-3 rounded shadow-md text-center text-green-50"
-                        @click="window.fathom?.trackGoal('K8DBWLRF', 0)"
-                    >
-                        {!! Illuminate\Support\Str::lightdown($banner->button) !!}
-                    </a>
-                </p>
             </div>
+
+            <p class="mt-4">
+                <a
+                    href="{{ route('affiliate', $banner->affiliate) }}"
+                    class="bg-gradient-to-r from-indigo-300 dark:from-indigo-500 to-indigo-400 dark:to-indigo-600 block leading-tight sm:max-w-screen-xs mt-2 mx-auto px-4 py-3 rounded shadow-md text-center text-green-50"
+                    @click="window.fathom?.trackGoal('K8DBWLRF', 0)"
+                >
+                    {!! Illuminate\Support\Str::lightdown($banner->button) !!}
+                </a>
+            </p>
         </div>
     </div>
 @endif
