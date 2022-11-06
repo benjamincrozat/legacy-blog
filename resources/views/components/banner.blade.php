@@ -6,9 +6,9 @@
         </div>
 
         <div class="grid place-items-center gap-4 p-4">
-            <div class="flex items-center justify-center gap-4 sm:gap-6 md:gap-8 md:max-w-screen-sm md:mx-auto">
+            <div class="flex flex-wrap sm:flex-nowrap items-center justify-center gap-4 sm:gap-6 md:gap-8 md:max-w-screen-sm md:mx-auto">
                 @if ($banner->image)
-                    <img src="{{ str_replace('w_auto', 'h_110', $banner->image) }}" width="55" height="55" alt="{{ $banner->affiliate->name }}" class="flex-shrink-0 order-1 rounded-lg" />
+                    <img src="{{ str_replace('w_auto', 'h_110', $banner->image) }}" width="55" height="55" alt="{{ $banner->affiliate->name }}" class="flex-shrink-0 sm:order-1 rounded-lg" />
                 @endif
 
                 <div>
