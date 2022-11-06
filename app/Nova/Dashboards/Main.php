@@ -3,6 +3,7 @@
 namespace App\Nova\Dashboards;
 
 use Laravel\Nova\Dashboard;
+use App\Nova\Metrics\PostsCount;
 use App\Nova\Metrics\PostsIntent;
 use App\Nova\Metrics\AffiliateClicks;
 use App\Nova\Metrics\AffiliatesCount;
@@ -14,6 +15,7 @@ class Main extends Dashboard
     public function cards() : array
     {
         return [
+            new PostsCount,
             new PostsIntent,
             new AffiliatesCount,
             new AffiliateClicks,
