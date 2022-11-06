@@ -7,7 +7,7 @@ use App\Nova\Metrics\PostsIntent;
 use App\Nova\Metrics\AffiliateClicks;
 use App\Nova\Metrics\SubscribersCount;
 
-class MainDashboard extends Dashboard
+class Main extends Dashboard
 {
     public function cards() : array
     {
@@ -16,10 +16,5 @@ class MainDashboard extends Dashboard
             new AffiliateClicks,
             new SubscribersCount,
         ];
-    }
-
-    public function uriKey() : string
-    {
-        return 'main-dashboard';
     }
 }
