@@ -43,11 +43,11 @@
         </article>
 
         <div class="hidden md:block md:col-span-1 text-sm">
-            <x-blog.toc :toc="$post->getTableOfContents()" class="mb-8" />
-
             @if (empty($post->promotes_affiliate_links) && ! config('services.adsense.enabled'))
                 <x-banner :banner="$banners->get(1)" class="mb-8" />
             @endif
+
+            <x-blog.toc :toc="$post->getTableOfContents()" class="mb-8" />
 
             <div class="border dark:border-gray-800 mb-8 p-4 rounded">
                 <p class="font-normal">
