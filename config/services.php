@@ -30,6 +30,10 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'adsense' => [
+        'enabled' => env('ADS_ENABLED', false),
+    ],
+
     'convertkit' => [
         'api_key' => env('CONVERTKIT_API_KEY'),
         'form_id' => env('CONVERTKIT_FORM_ID'),
