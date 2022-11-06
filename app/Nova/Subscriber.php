@@ -24,7 +24,7 @@ class Subscriber extends Resource
         return [
             ID::make()->sortable(),
 
-            Gravatar::make()->maxWidth(50),
+            Gravatar::make()->maxWidth(32),
 
             Text::make('Email')
                 ->sortable()
