@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .btn-green {
-    @apply bg-gradient-to-r from-emerald-400 dark:from-emerald-600 to-emerald-500 dark:to-emerald-700 block border-0 font-normal leading-tight px-4 py-3 rounded shadow-md text-center !text-white;
+    @apply bg-gradient-to-r from-emerald-400 dark:from-emerald-600 to-emerald-500 dark:to-emerald-700 block !border-0 font-normal leading-tight px-4 py-3 rounded shadow-md text-center !text-white;
 }
