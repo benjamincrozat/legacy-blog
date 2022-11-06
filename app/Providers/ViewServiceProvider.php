@@ -15,7 +15,7 @@ class ViewServiceProvider extends ServiceProvider
     {
         View::composer('*', function (\Illuminate\View\View $view) {
             $view->with([
-                'banners' => $this->banners ??= Banner::inRandomOrder()->get(),
+                'banners' => $this->banners ??= Banner::active()->inRandomOrder()->get(),
             ]);
         });
     }
