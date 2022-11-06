@@ -31,7 +31,7 @@
             </div>
 
             @empty ($post->promotes_affiliate_links)
-                <x-banner :banner="$banners[0]" class="sm:hidden mt-8 text-sm" />
+                <x-banner :banner="$banners->first()" class="sm:hidden mt-8 text-sm" />
             @endempty
 
             <x-blog.toc :toc="$post->getTableOfContents()" class="lg:hidden mt-8" />
@@ -42,13 +42,13 @@
         </article>
 
         <div class="hidden md:block md:col-span-1 text-sm">
-            <x-blog.toc :toc="$post->getTableOfContents()" />
+            <x-blog.toc :toc="$post->getTableOfContents()" class="mb-8" />
 
             @empty ($post->promotes_affiliate_links)
-                <x-banner :banner="$banners[1]" class="mt-8" />
+                <x-banner :banner="$banners->get(1)" class="mb-8" />
             @endempty
 
-            <div class="border dark:border-gray-800 mt-8 p-4 rounded">
+            <div class="border dark:border-gray-800 mb-8 p-4 rounded">
                 <p class="font-normal">
                     Let me share with you my discoveries about the art of crafting websites, <span class="text-indigo-400">for&nbsp;free</span>.
                 </p>

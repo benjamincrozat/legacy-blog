@@ -1,4 +1,4 @@
-@if (! empty($toc))
+@if ($toc->isNotEmpty())
     <nav {{ $attributes->except('toc')->merge(['class' => 'border dark:border-gray-800 rounded text-sm']) }}>
         <h4 class="font-normal py-2 text-center">
             Table of contents
