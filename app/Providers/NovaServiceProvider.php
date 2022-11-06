@@ -7,6 +7,7 @@ use Laravel\Nova\Menu\Menu;
 use Illuminate\Http\Request;
 use Laravel\Nova\Menu\MenuItem;
 use Illuminate\Support\Facades\Gate;
+use App\Nova\Dashboards\MainDashboard;
 use Laravel\Nova\NovaApplicationServiceProvider;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
@@ -46,7 +47,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 
     protected function dashboards() : array
     {
-        return [];
+        return [
+            new MainDashboard,
+        ];
     }
 
     public function tools() : array

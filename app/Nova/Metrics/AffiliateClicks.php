@@ -7,7 +7,7 @@ use Laravel\Nova\Metrics\Value;
 use Laravel\Nova\Metrics\ValueResult;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class TotalAffiliateClicks extends Value
+class AffiliateClicks extends Value
 {
     /**
      * @return mixed
