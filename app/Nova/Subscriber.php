@@ -34,6 +34,7 @@ class Subscriber extends Resource
 
             DateTime::make('Created At')
                 ->sortable()
+                ->displayUsing(fn () => $this->modified_at?->isoFormat('lll'))
                 ->exceptOnForms(),
         ];
     }
