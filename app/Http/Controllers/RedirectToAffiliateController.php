@@ -16,6 +16,8 @@ class RedirectToAffiliateController extends Controller
 
         $affiliate->increment('clicks');
 
+        $affiliate->clicks()->create();
+
         return redirect()->away($link);
     }
 }
