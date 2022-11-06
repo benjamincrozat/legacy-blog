@@ -9,8 +9,6 @@ class Affiliate extends BaseModel
 {
     use HasFactory;
 
-    public $timestamps = false;
-
     public function banners() : HasMany
     {
         return $this->hasMany(Banner::class);
