@@ -32,7 +32,7 @@
             </div>
 
             @if (empty($post->promotes_affiliate_links) && ! config('services.adsense.enabled'))
-                <x-banner :banner="$banners->first()" class="sm:hidden mt-8 text-sm" />
+                <x-banner :banner="$banners->first()" class="md:hidden mt-8 text-sm" />
             @endif
 
             <x-blog.toc :toc="$post->getTableOfContents()" class="lg:hidden mt-8" />
