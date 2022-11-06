@@ -13,7 +13,7 @@ class BannerFactory extends Factory
     public function definition() : array
     {
         return [
-            'affiliate_id' => Affiliate::inRandomOrder()->value('id'),
+            'affiliate_id' => Affiliate::factory(),
             'image' => fake()->imageUrl(160, 160),
             'title' => $this->faker->sentence(),
             'content' => $this->faker->sentences(mt_rand(2, 3), true),
