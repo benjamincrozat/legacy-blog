@@ -16,7 +16,7 @@
                 </div>
             </div>
 
-            <p class="mt-4">
+            <div>
                 <a
                     href="{{ route('affiliate', $banner->affiliate) }}"
                     class="bg-gradient-to-r from-emerald-400 dark:from-emerald-600 to-emerald-500 dark:to-emerald-700 block leading-tight sm:max-w-screen-xs mx-auto px-4 py-3 rounded shadow-md text-center text-white"
@@ -24,7 +24,7 @@
                 >
                     {!! Illuminate\Support\Str::lightdown($banner->button) !!}
                 </a>
-            </p>
+            </div>
         </div>
     </div>
 @endif
