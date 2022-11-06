@@ -10,6 +10,11 @@ class Banner extends BaseModel
 {
     use HasFactory;
 
+    protected $casts = [
+        'start_at' => 'datetime',
+        'end_at' => 'datetime',
+    ];
+
     public function scopeActive(Builder $query) : void
     {
         $query->where('start_at', '<=', now());

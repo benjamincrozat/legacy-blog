@@ -3,8 +3,8 @@
 namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -38,11 +38,11 @@ class Banner extends Resource
                 ->rules('required', 'max:255')
                 ->hideFromIndex(),
 
-            Date::make('Start At')
+            DateTime::make('Start At')
                 ->rules('required')
                 ->min(now()),
 
-            Date::make('End At')
+            DateTime::make('End At')
                 ->rules('nullable')
                 ->min(now()),
         ];
