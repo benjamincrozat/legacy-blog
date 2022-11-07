@@ -1,4 +1,4 @@
-<div {{ $attributes->merge(['class' => 'bg-indigo-500 md:sticky md:top-0 md:z-10']) }}>
+<div {{ $attributes->merge(['class' => 'bg-indigo-500 dark:bg-gray-800 md:sticky md:top-0 md:z-10']) }}>
     <div class="container sm:flex sm:items-center sm:justify-between py-4 text-center sm:text-left">
         <div>
             <span class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase">
@@ -11,7 +11,7 @@
         </div>
 
         <nav class="flex items-center justify-center sm:justify-start gap-8 mt-8 sm:mt-0">
-            <a href="{{ route('posts.index') }}" class="text-indigo-100 text-xs tracking-widest uppercase">
+            <a href="{{ route('posts.index') }}" class="text-indigo-100 dark:text-gray-50 text-xs tracking-widest uppercase">
                 Read my blog
             </a>
 
