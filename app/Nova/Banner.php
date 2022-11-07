@@ -51,7 +51,6 @@ HTML;
 
             DateTime::make('Start At')
                 ->rules('required')
-                ->min(now()->startOfDay())
                 ->sortable()
                 ->displayUsing(fn () => $this->start_at?->isoFormat('lll')),
 
