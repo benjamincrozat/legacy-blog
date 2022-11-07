@@ -75,7 +75,7 @@ class Post extends BaseModel implements Feedable
         for ($i = 0; $i < count($headings[0]); ++$i) {
             $level = strlen($headings[1][$i]);
 
-            if ($level > 2 && ! $this->expand_table_of_contents) {
+            if ((! $this->expand_table_of_contents || ! $this->promotes_affiliate_links) && $level > 2) {
                 continue;
             }
 

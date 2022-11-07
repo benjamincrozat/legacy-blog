@@ -67,4 +67,34 @@ class PostTest extends TestCase
             ->assertOk()
         ;
     }
+
+    public function test_it_expands_the_table_of_contents_if_sharing_affiliate_links() : void
+    {
+        $post = Post::factory()->create([
+            'content' => <<<MARKDOWN
+## Heading 2
+### Heading 3
+#### Heading 4
+MARKDOWN,
+            'promotes_affiliate_links' => true,
+        ]);
+
+        $this->assertCount(1, $post->getTableOfContents()->where('level', 3));
+        $this->assertCount(1, $post->getTableOfContents()->where('level', 4));
+    }
+
+    public function test_it_expands_the_table_of_contents_if_asked_explicitly() : void
+    {
+        $post = Post::factory()->create([
+            'content' => <<<MARKDOWN
+## Heading 2
+### Heading 3
+#### Heading 4
+MARKDOWN,
+            'expand_table_of_contents' => true,
+        ]);
+
+        $this->assertCount(1, $post->getTableOfContents()->where('level', 3));
+        $this->assertCount(1, $post->getTableOfContents()->where('level', 4));
+    }
 }
