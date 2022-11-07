@@ -41,7 +41,7 @@
         </h2>
 
         @if (! config('services.adsense.enabled'))
-            <x-banner :banner="$banners->first()" class="mt-8" />
+            <x-banner :banner="$banners->first()" class="mt-8 text-center" />
         @endif
 
         @if ($posts->isNotEmpty())
