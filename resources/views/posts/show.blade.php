@@ -71,7 +71,7 @@
             </div>
 
             @if ($post->promotes_affiliate_links)
-                <div class="border mt-8 p-4 rounded text-xs">
+                <div class="border dark:border-gray-800 mt-8 p-4 rounded text-xs">
                     <p>This article uses affiliate links, which can compensate me at no cost to you if you decide to pursue a deal.</p>
                     <p class="mt-2">I only promote products I've personally used and stand behind.</p>
                 </div>
