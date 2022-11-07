@@ -86,6 +86,9 @@ HTML;
                     ->sortable()
                     ->onlyOnForms(),
 
+                Boolean::make('Expand table of contents')
+                    ->hideFromIndex(),
+
                 Badge::make('Intent', 'promotes_affiliate_links')
                     ->map([
                         true => 'success',

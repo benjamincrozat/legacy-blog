@@ -20,6 +20,7 @@ class PostFactory extends Factory
             'content' => fake()->paragraphs(5, true),
             'description' => fake()->paragraph(),
             'promotes_affiliate_links' => fake()->boolean(),
+            'expand_table_of_contents' => fake()->boolean(),
         ];
     }
 }
