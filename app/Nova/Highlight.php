@@ -24,7 +24,8 @@ class Highlight extends Resource
         return [
             ID::make()->sortable(),
 
-            BelongsTo::make('Post'),
+            BelongsTo::make('Post')
+                ->searchable(),
 
             DateTime::make('Created At')
                 ->displayUsing(fn () => $this->created_at->isoFormat('lll'))
