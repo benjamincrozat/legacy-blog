@@ -10,14 +10,12 @@ use Laravel\Nova\Fields\Line;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Badge;
 use Laravel\Nova\Fields\Stack;
-use App\Nova\Metrics\PostsCount;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\HasMany;
 use App\Nova\Metrics\PostsIntent;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\BelongsTo;
-use Laravel\Nova\Fields\MorphToMany;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Post extends Resource
