@@ -65,6 +65,11 @@ HTML;
         ];
     }
 
+    public function subtitle() : string
+    {
+        return substr($this->content, 0, 140);
+    }
+
     public function cards(NovaRequest $request) : array
     {
         return [
