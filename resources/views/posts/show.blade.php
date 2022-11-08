@@ -40,7 +40,7 @@
             <div
                 class="break-words max-w-full mt-8
                 prose prose-a:border-b prose-a:border-indigo-400/50 prose-a:text-indigo-400 prose-a:no-underline
-                prose-code:dark:text-current prose-headings:dark:text-white prose-thead:dark:border-gray-800
+                prose-code:dark:text-current prose-headings:dark:text-white prose-hr:dark:border-gray-800 prose-thead:dark:border-gray-800
                 prose-strong:text-current prose-tr:dark:border-gray-800 dark:text-current"
             >
                 {!! Illuminate\Support\Str::marxdown($post->content) !!}
