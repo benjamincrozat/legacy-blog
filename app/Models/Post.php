@@ -6,6 +6,7 @@ use Spatie\Feed\Feedable;
 use Spatie\Feed\FeedItem;
 use Illuminate\Support\Str;
 use Illuminate\Support\Collection;
+use Laravel\Nova\Fields\Searchable;
 use App\Models\Traits\IsCategorizable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
@@ -15,7 +16,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Post extends BaseModel implements Feedable
 {
-    use HasFactory, IsCategorizable;
+    use HasFactory, IsCategorizable, Searchable;
 
     protected $casts = [
         'modified_at' => 'date',
