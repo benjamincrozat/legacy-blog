@@ -40,7 +40,7 @@
             Latest posts
         </h2>
 
-        @if (! config('services.adsense.enabled'))
+        @if (! should_display_ads())
             <x-banner :banner="$banners->first()" class="mt-8 text-center" />
         @endif
 
@@ -52,8 +52,6 @@
             </div>
         @endif
     </section>
-
-    <x-newsletter class="container max-w-screen-sm mt-16" />
 
     <div class="bg-gray-900 dark:bg-black flex-grow mt-16">
         <x-footer class="text-gray-200" />

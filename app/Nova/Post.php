@@ -26,7 +26,7 @@ class Post extends Resource
     public static $title = 'title';
 
     public static $search = [
-        'id', 'title', 'content', 'description',
+        'id', 'title', 'slug', 'content', 'description',
     ];
 
     public function fields(NovaRequest $request) : array
@@ -85,9 +85,6 @@ HTML;
                 Boolean::make('Promotes affiliate links')
                     ->sortable()
                     ->onlyOnForms(),
-
-                Boolean::make('Expand table of contents')
-                    ->hideFromIndex(),
 
                 Badge::make('Intent', 'promotes_affiliate_links')
                     ->map([

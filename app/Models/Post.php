@@ -73,18 +73,12 @@ class Post extends BaseModel implements Feedable
         $tableOfContents = [];
 
         for ($i = 0; $i < count($headings[0]); ++$i) {
-            $level = strlen($headings[1][$i]);
-
-            if ((! $this->expand_table_of_contents || ! $this->promotes_affiliate_links) && $level > 2) {
-                continue;
-            }
-
             $title = html_entity_decode(strip_tags(Str::marxdown($headings[2][$i])));
 
             $tableOfContents[] = [
                 'id' => str($title)->slug(),
                 'title' => $title,
-                'level' => $level,
+                'level' => strlen($headings[1][$i]),
             ];
         }
 

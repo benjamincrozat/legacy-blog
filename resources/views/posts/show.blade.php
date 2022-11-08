@@ -31,53 +31,34 @@
                 <span class="opacity-75">@choice(':count minute|:count minutes', $post->read_time) read</span>
             </div>
 
-            @if (empty($post->promotes_affiliate_links) && ! config('services.adsense.enabled'))
+            @if (! should_display_ads())
                 <x-banner :banner="$banners->first()" class="md:hidden mt-8 text-sm" />
             @endif
 
             <x-blog.toc :toc="$post->getTableOfContents()" class="lg:hidden mt-8" />
 
-            <div class="break-words max-w-full mt-8 prose prose-a:border-b prose-a:border-indigo-400/50 prose-a:text-indigo-400 prose-a:no-underline prose-code:dark:text-gray-300 prose-headings:dark:text-white prose-thead:dark:border-gray-800 prose-tr:dark:border-gray-800 dark:text-gray-300">
+            <div
+                class="break-words max-w-full mt-8
+                prose prose-a:border-b prose-a:border-indigo-400/50 prose-a:text-indigo-400 prose-a:no-underline
+              prose-code:dark:text-gray-300 prose-headings:dark:text-white prose-thead:dark:border-gray-800
+              prose-tr:dark:border-gray-800 dark:text-gray-300"
+            >
                 {!! Illuminate\Support\Str::marxdown($post->content) !!}
             </div>
         </article>
 
+        {{-- Sidebar --}}
         <div class="hidden md:block md:col-span-1 text-sm">
-            @if (empty($post->promotes_affiliate_links) && ! config('services.adsense.enabled'))
+            @if (! should_display_ads())
                 <x-banner :banner="$banners->get(1)" class="mb-8" />
             @endif
 
             <x-blog.toc :toc="$post->getTableOfContents()" class="mb-8" />
 
-            <div class="border dark:border-gray-800 rounded">
-                <h4 class="font-bold py-2 text-center">
-                    Newsletter
-                </h4>
-
-                <div class="border-t dark:border-gray-800 p-4">
-                    <p class="font-normal">
-                        Let me share with you my discoveries about the art of crafting websites, <span class="text-indigo-400">for&nbsp;free</span>.
-                    </p>
-
-                    <x-form method="POST" action="{{ route('subscribe') }}" class="mt-4">
-                        <input
-                            type="email"
-                            name="email"
-                            id="email"
-                            placeholder="homer@simpson.com"
-                            required
-                            class="dark:bg-gray-800 block dark:border-0 border-gray-200 placeholder-gray-200 dark:placeholder-gray-600 rounded text-sm w-full"
-                        />
-
-                        <button type="submit" class="bg-gradient-to-r from-purple-300 dark:from-purple-700 to-purple-400 dark:to-purple-800 block font-bold mt-4 px-3 py-2 rounded shadow-md text-center text-purple-50 w-full">
-                            Sign me up!
-                        </button>
-                    </x-form>
-                </div>
-            </div>
+            <x-newsletter class="mb-8" />
 
             @if ($post->promotes_affiliate_links)
-                <div class="border dark:border-gray-800 mt-8 p-4 rounded text-xs">
+                <div class="border dark:border-gray-800 p-4 rounded text-xs">
                     <p>This article uses affiliate links, which can compensate me at no cost to you if you decide to pursue a deal.</p>
                     <p class="mt-2">I only promote products I've personally used and stand behind.</p>
                 </div>
@@ -85,7 +66,9 @@
         </div>
     </div>
 
-    <x-newsletter class="container md:hidden sm:max-w-[480px] mt-16" />
+    <div class="container md:hidden mt-16">
+        <x-newsletter class="text-sm" />
+    </div>
 
     {{-- Other posts to read --}}
     @if ($others->isNotEmpty())

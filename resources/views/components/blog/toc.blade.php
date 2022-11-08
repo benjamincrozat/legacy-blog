@@ -1,5 +1,5 @@
 @if ($toc->isNotEmpty())
-    <nav {{ $attributes->except('toc')->merge(['class' => 'border dark:border-gray-800 rounded text-sm']) }}>
+    <nav {{ $attributes->except('toc')->merge(['class' => 'border dark:border-gray-800 rounded']) }}>
         <h4 class="font-normal py-2 text-center">
             Table of contents
         </h4>
