@@ -15,6 +15,8 @@ class Banner extends BaseModel
         'end_at' => 'datetime',
     ];
 
+    protected $with = ['affiliate'];
+
     public function scopeActive(Builder $query) : void
     {
         $query->where([

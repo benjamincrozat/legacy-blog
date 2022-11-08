@@ -9,6 +9,8 @@ class Highlight extends BaseModel
 {
     use HasFactory;
 
+    protected $with = ['post'];
+
     public function post() : BelongsTo
     {
         return $this->belongsTo(Post::class);

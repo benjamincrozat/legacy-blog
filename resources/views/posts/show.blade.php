@@ -32,7 +32,7 @@
             </div>
 
             @if (! should_display_ads() && ! $post->promotes_affiliate_links)
-                <x-banner :banner="$banners->first()" class="md:hidden mt-8 text-sm" />
+                <x-banner :banner="$banners->get(0)" class="md:hidden mt-8 text-sm" />
             @endif
 
             <x-blog.toc :toc="$post->getTableOfContents()" class="lg:hidden mt-8 text-sm" />
