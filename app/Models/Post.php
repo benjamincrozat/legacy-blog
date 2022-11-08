@@ -10,6 +10,7 @@ use Laravel\Nova\Fields\Searchable;
 use App\Models\Traits\IsCategorizable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use Laravel\Scout\Attributes\SearchUsingFullText;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -98,6 +99,12 @@ class Post extends BaseModel implements Feedable
         $query = parent::resolveRouteBindingQuery($query, $value, $field);
 
         return $query->withUser();
+    }
+
+    #[SearchUsingFullText(['title', 'content', 'description'])]
+    public function toSearchableArray() : array
+    {
+        return $this->toArray();
     }
 
     public static function getFeedItems() : Collection
