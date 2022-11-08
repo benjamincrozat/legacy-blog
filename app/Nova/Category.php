@@ -32,9 +32,11 @@ class Category extends Resource
                 ->rules('required', 'max:255')
                 ->sortable(),
 
-            MorphToMany::make('Banners'),
+            MorphToMany::make('Banners')
+                ->searchable(),
 
-            MorphToMany::make('Posts'),
+            MorphToMany::make('Posts')
+                ->searchable(),
         ];
     }
 
