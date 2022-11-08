@@ -6,7 +6,7 @@
     <x-blog.top />
 
     <div class="container md:hidden mt-8 sm:mt-16">
-        <x-newsletter />
+        <x-newsletter class="text-sm" />
     </div>
 
     <section class="md:container mt-8 sm:mt-16">
@@ -58,7 +58,7 @@
     </section>
 
     <div class="container md:hidden mt-16">
-        <x-newsletter />
+        <x-newsletter class="text-sm" />
     </div>
 
     <div class="bg-gray-900 dark:bg-black flex-grow mt-16">
