@@ -15,7 +15,6 @@ class AffiliateFactory extends Factory
             'name' => fake()->company(),
             'slug' => fake()->slug(),
             'link' => fake()->url(),
-            'clicks' => mt_rand(1, 100),
         ];
     }
 }

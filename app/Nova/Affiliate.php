@@ -6,8 +6,6 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Line;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Stack;
-use Laravel\Nova\Fields\Number;
-use App\Nova\Metrics\AffiliateClicks;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Affiliate extends Resource
@@ -45,10 +43,6 @@ class Affiliate extends Resource
 
             Text::make('Link')
                 ->rules('required', 'url'),
-
-            Number::make('Clicks')
-                ->rules('required', 'min:0')
-                ->sortable(),
         ];
     }
 
@@ -59,9 +53,7 @@ class Affiliate extends Resource
 
     public function cards(NovaRequest $request) : array
     {
-        return [
-            new AffiliateClicks,
-        ];
+        return [];
     }
 
     public function filters(NovaRequest $request) : array

@@ -13,9 +13,4 @@ class Affiliate extends BaseModel
     {
         return $this->hasMany(Banner::class);
     }
-
-    public function clicks() : HasMany
-    {
-        return $this->hasMany(Click::class);
-    }
 }

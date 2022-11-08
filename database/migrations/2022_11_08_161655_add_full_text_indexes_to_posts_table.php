@@ -8,14 +8,13 @@ return new class extends Migration {
     public function up() : void
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->fullText(['title', 'content', 'description']);
+            $table->fullText(['content', 'description']);
         });
     }
 
     public function down() : void
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->dropFullText('title');
             $table->dropFullText('content');
             $table->dropFullText('description');
         });
