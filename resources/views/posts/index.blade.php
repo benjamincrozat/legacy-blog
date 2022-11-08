@@ -5,15 +5,19 @@
 >
     <x-blog.top />
 
-    <section class="sm:container mt-8 sm:mt-16">
-        <h2 class="font-bold px-4 sm:px-0 text-center text-xl">
+    <div class="container md:hidden mt-8 sm:mt-16">
+        <x-newsletter />
+    </div>
+
+    <section class="md:container mt-8 sm:mt-16">
+        <h2 class="font-bold px-4 md:px-0 text-center text-xl">
             Featured posts
         </h2>
 
         @if ($featured->isNotEmpty())
-            <div class="flex sm:grid sm:grid-cols-2 gap-2 mt-8 px-4 sm:px-0 overflow-x-scroll sm:overflow-x-visible snap-x sm:snap-none snap-mandatory">
+            <div class="flex md:grid md:grid-cols-2 gap-2 mt-8 px-4 md:px-0 overflow-x-scroll md:overflow-x-visible snap-x md:snap-none snap-mandatory">
                 @foreach ($featured as $post)
-                    <figure class="flex-shrink-0 snap-start sm:snap-normal scroll-ml-4 sm:scroll-ml-0 w-[90%] sm:w-auto">
+                    <figure class="flex-shrink-0 snap-start sm:snap-center md:snap-normal scroll-ml-4 md:scroll-ml-0 w-[90%] sm:w-[70%] md:w-auto">
                         <a href="{{ route('posts.show', $post->slug) }}" @click="window.fathom?.trackGoal('OKJIR46O', 0)">
                             <img
                                 loading="lazy"
@@ -45,13 +49,17 @@
         @endif
 
         @if ($posts->isNotEmpty())
-            <div class="grid sm:grid-cols-2 gap-4 sm:gap-8 mt-8">
+            <div class="grid md:grid-cols-2 gap-4 md:gap-8 mt-8">
                 @foreach ($posts as $post)
                     <x-post :post="$post" @click="window.fathom?.trackGoal('HH0P1ACM', 0)" />
                 @endforeach
             </div>
         @endif
     </section>
+
+    <div class="container md:hidden mt-16">
+        <x-newsletter />
+    </div>
 
     <div class="bg-gray-900 dark:bg-black flex-grow mt-16">
         <x-footer class="text-gray-200" />

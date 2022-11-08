@@ -15,7 +15,7 @@ class BannerFactory extends Factory
         return [
             'affiliate_id' => Affiliate::factory(),
             'image' => fake()->imageUrl(160, 160),
-            'title' => $this->faker->sentence(),
+            'title' => $this->faker->sentence(mt_rand(3, 5)),
             'content' => $this->faker->sentences(mt_rand(2, 3), true),
             'button' => $this->faker->sentence(),
             'start_at' => now(),
