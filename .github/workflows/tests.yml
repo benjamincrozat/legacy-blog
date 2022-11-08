@@ -8,12 +8,28 @@ jobs:
   tests:
     runs-on: ubuntu-latest
 
+    services:
+      mysql:
+        image: mysql:latest
+        env:
+          MYSQL_ALLOW_EMPTY_PASSWORD: yes
+        ports:
+          - 3306
+        options: >-
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+
     steps:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           coverage: none
           php-version: latest
+
+      - name: Setup MySQL database
+        run: mysql -u root -h 127.0.0.1 -P ${{ job.services.mysql.ports[3306] }} -e "CREATE DATABASE benjamincrozat_test"
 
       - name: Setup Redis
         uses: zhulik/redis-action@1.1.0
@@ -37,9 +53,6 @@ jobs:
 
       - name: Build CSS and JavaScript
         run: yarn build
-
-      - name: Setup database
-        run: touch database/database.sqlite
 
       - name: Run tests
         run: php vendor/bin/phpunit
