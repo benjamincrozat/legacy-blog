@@ -39,11 +39,6 @@ class Subscriber extends Resource
         ];
     }
 
-    public function subtitle() : string
-    {
-        return $this->link;
-    }
-
     public function cards(NovaRequest $request) : array
     {
         return [
