@@ -3,11 +3,11 @@
 namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Tag;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\BelongsTo;
-use Laravel\Nova\Fields\MorphToMany;
 use App\Nova\Metrics\ActiveBannersCount;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -61,7 +61,10 @@ HTML;
                 ->sortable()
                 ->displayUsing(fn () => $this->end_at?->isoFormat('lll')),
 
-            MorphToMany::make('Categories'),
+            Tag::make('Categories')
+                ->displayAsList()
+                ->showCreateRelationButton()
+                ->withPreview(),
         ];
     }
 
