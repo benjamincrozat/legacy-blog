@@ -16,10 +16,7 @@ class Main extends Dashboard
     public function cards() : array
     {
         return [
-            new PostsCount,
             new PostsIntent,
-            new CategoriesCount,
-            new AffiliatesCount,
             new ActiveBannersCount,
             new AffiliateClicks,
             new SubscribersCount,
