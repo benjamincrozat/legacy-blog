@@ -45,7 +45,7 @@
         </h2>
 
         @if (! should_display_ads())
-            <x-banner :banner="$banners->first()" class="mt-8 text-center" />
+            <x-banner :banner="$banners->first()" class="mt-8 text-center text-sm md:text-base" />
         @endif
 
         @if ($posts->isNotEmpty())
