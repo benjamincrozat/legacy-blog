@@ -8,7 +8,7 @@
             Let me share with you my discoveries about the art of crafting websites, <span class="text-indigo-400">for&nbsp;free</span>.
         </p>
 
-        <x-form method="POST" action="{{ route('subscribe') }}" class="mt-4">
+        <x-form method="POST" action="{{ route('subscribe') }}" class="mt-3">
             <input
                 type="email"
                 name="email"
