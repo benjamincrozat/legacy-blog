@@ -30,7 +30,8 @@
         "nunomaduro/collision": "^6.1",
         "nunomaduro/laravel-mojito": "^0.2.10",
         "phpunit/phpunit": "^9.5.10",
-        "spatie/laravel-ignition": "^1.0"
+        "spatie/laravel-ignition": "^1.0",
+        "spatie/ray": "^1.36"
     },
     "autoload": {
         "psr-4": {
