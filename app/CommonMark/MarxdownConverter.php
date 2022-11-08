@@ -36,7 +36,11 @@ class MarxdownConverter extends \League\CommonMark\MarkdownConverter
                             return '_blank';
                         }
                     },
-                    '@click' => "window.fathom?.trackGoal('SMD2GKMN', 0)",
+                    '@click' => function (Link $node) {
+                        return str_contains($node->getUrl(), url('/recommends'))
+                            ? "window.fathom?.trackGoal('LBJL4VHK', 0)"
+                            : "window.fathom?.trackGoal('SMD2GKMN', 0)";
+                    },
                 ],
             ],
         ]);

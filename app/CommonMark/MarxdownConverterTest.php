@@ -31,6 +31,22 @@ class MarxdownConverterTest extends TestCase
         );
     }
 
+    public function test_it_adds_a_click_event_to_all_links() : void
+    {
+        $this->assertStringContainsString(
+            '@click',
+            Str::marxdown('[Apple](https://www.apple.com)')
+        );
+    }
+
+    public function test_it_adds_a_click_event_with_special_ID_for_affiliate_links() : void
+    {
+        $this->assertStringContainsString(
+            '@click="window.fathom?.trackGoal(\'LBJL4VHK\', 0)"',
+            Str::marxdown('[Foo](' . url('/recommends/foo') . '')
+        );
+    }
+
     public function test_it_does_not_add_any_attribute_to_internal_links() : void
     {
         $this->assertStringContainsString(
