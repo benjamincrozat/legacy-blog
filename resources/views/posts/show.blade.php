@@ -35,7 +35,7 @@
                 <x-banner :banner="$banners->first()" class="md:hidden mt-8 text-sm" />
             @endif
 
-            <x-blog.toc :toc="$post->getTableOfContents()" class="lg:hidden mt-8" />
+            <x-blog.toc :toc="$post->getTableOfContents()" class="lg:hidden mt-8 text-sm" />
 
             <div
                 class="break-words max-w-full mt-8
