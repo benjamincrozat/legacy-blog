@@ -17,7 +17,7 @@ class PostFactory extends Factory
             'image' => fake()->imageUrl(),
             'title' => fake()->sentence(),
             'slug' => fake()->slug(),
-            'content' => <<<MARKDOWN
+            'content' => app()->runningUnitTests() ? fake()->paragraphs(5, true) : <<<MARKDOWN
 # h1 Heading 8-)
 ## h2 Heading
 ### h3 Heading
