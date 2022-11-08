@@ -123,7 +123,6 @@ HTML;
     public function cards(NovaRequest $request) : array
     {
         return [
-            new PostsCount,
             new PostsIntent,
         ];
     }
