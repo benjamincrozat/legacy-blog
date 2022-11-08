@@ -9,19 +9,20 @@
         <x-newsletter class="text-sm" />
     </div>
 
-    <section class="md:container mt-8 sm:mt-16">
-        <h2 class="font-bold px-4 md:px-0 text-center text-xl">
-            Featured posts
-        </h2>
 
-        @if ($highlights->isNotEmpty())
+    @if ($highlights->isNotEmpty())
+        <section class="md:container mt-8 sm:mt-16">
+            <h2 class="font-bold px-4 md:px-0 text-center text-xl">
+                Featured posts
+            </h2>
+
             <div class="flex md:grid md:grid-cols-2 gap-2 mt-8 px-4 md:px-0 overflow-x-scroll md:overflow-x-visible snap-x md:snap-none snap-mandatory">
                 @foreach ($highlights as $highlight)
                     <x-blog.highlighted :post="$highlight->post" />
                 @endforeach
             </div>
-        @endif
-    </section>
+        </section>
+    @endif
 
     <section class="container mt-8 sm:mt-16">
         <h2 class="font-bold px-4 sm:px-0 text-center text-xl">
