@@ -30,7 +30,7 @@
         </h2>
 
         @if (! should_display_ads())
-            <x-banner :banner="$banner" class="max-w-screen-sm mt-8 mx-auto text-center text-sm md:text-base" />
+            <x-banner :banner="$banner" class="max-w-screen-sm mt-8 mx-auto text-center text-sm" />
         @endif
 
         @if ($posts->isNotEmpty())
