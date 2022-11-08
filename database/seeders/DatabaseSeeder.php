@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\Banner;
+use App\Models\Category;
 use App\Models\Redirect;
 use App\Models\Affiliate;
 use App\Models\Highlight;
@@ -21,6 +22,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Post::factory(50)->create();
+
+        Category::factory(10)->create();
 
         Highlight::factory(10)->create();
 
