@@ -23,8 +23,9 @@
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-        @googlefonts
-        @googlefonts('serif')
+        @if (! app()->runningUnitTests())
+            @googlefonts
+        @endif
 
         <x-feed-links />
 
