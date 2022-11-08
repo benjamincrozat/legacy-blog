@@ -5,7 +5,7 @@
             {{ $banner->title }}
         </div>
 
-        <div class="grid place-items-center gap-4 p-4">
+        <div class="grid gap-4 p-4">
             <div class="grid place-items-center gap-4 md:max-w-screen-sm md:mx-auto">
                 @if ($banner->image)
                     <img src="{{ str_replace('w_auto', 'h_110', $banner->image) }}" width="55" height="55" alt="{{ $banner->affiliate->name }}" class="rounded-lg" />
@@ -19,7 +19,7 @@
             <div>
                 <a
                     href="{{ route('affiliate', $banner->affiliate) }}"
-                    class="bg-gradient-to-r from-emerald-400 dark:from-emerald-700 to-emerald-500 dark:to-emerald-800 block leading-tight sm:max-w-screen-xs mx-auto px-4 py-3 rounded shadow-md text-center text-white"
+                    class="bg-gradient-to-r from-emerald-400 dark:from-emerald-700 to-emerald-500 dark:to-emerald-800 block leading-tight px-4 py-3 rounded shadow-md text-center text-white"
                     @click="window.fathom?.trackGoal('K8DBWLRF', 0)"
                 >
                     {!! Illuminate\Support\Str::lightdown($banner->button) !!}
