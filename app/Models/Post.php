@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Collection;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -54,6 +55,11 @@ class Post extends BaseModel implements Feedable
     public function user() : BelongsTo
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function highlights() : HasMany
+    {
+        return $this->hasMany(Highlight::class);
     }
 
     public function readTime() : Attribute

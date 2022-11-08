@@ -14,10 +14,10 @@
             Featured posts
         </h2>
 
-        @if ($featured->isNotEmpty())
+        @if ($highlights->isNotEmpty())
             <div class="flex md:grid md:grid-cols-2 gap-2 mt-8 px-4 md:px-0 overflow-x-scroll md:overflow-x-visible snap-x md:snap-none snap-mandatory">
-                @foreach ($featured as $post)
-                    <x-blog.featured :post="$post" />
+                @foreach ($highlights as $highlight)
+                    <x-blog.highlighted :post="$highlight->post" />
                 @endforeach
             </div>
         @endif
