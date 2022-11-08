@@ -31,7 +31,7 @@
                 <span class="opacity-75">@choice(':count minute|:count minutes', $post->read_time) read</span>
             </div>
 
-            @if (! should_display_ads())
+            @if (! should_display_ads() && ! $post->promotes_affiliate_links))
                 <x-banner :banner="$banners->first()" class="md:hidden mt-8 text-sm" />
             @endif
 
@@ -49,7 +49,7 @@
 
         {{-- Sidebar --}}
         <div class="hidden md:block md:col-span-1 text-sm">
-            @if (! should_display_ads())
+            @if (! should_display_ads() && ! $post->promotes_affiliate_links)
                 <x-banner :banner="$banners->get(1)" class="mb-8" />
             @endif
 
