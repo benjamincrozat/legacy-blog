@@ -17,23 +17,7 @@
         @if ($featured->isNotEmpty())
             <div class="flex md:grid md:grid-cols-2 gap-2 mt-8 px-4 md:px-0 overflow-x-scroll md:overflow-x-visible snap-x md:snap-none snap-mandatory">
                 @foreach ($featured as $post)
-                    <figure class="flex-shrink-0 snap-start sm:snap-center md:snap-normal scroll-ml-4 md:scroll-ml-0 w-[90%] sm:w-[70%] md:w-auto">
-                        <a href="{{ route('posts.show', $post->slug) }}" @click="window.fathom?.trackGoal('OKJIR46O', 0)">
-                            <img
-                                loading="lazy"
-                                src="{{ str_replace('w_auto', 'w_600', $post->image) }}"
-                                alt="{{ $post->title }}"
-                                class="aspect-video dark:brightness-75 object-cover rounded-md w-full"
-                            />
-                        </a>
-
-                        <a href="{{ route('posts.show', $post->slug) }}" class="bg-gray-900 dark:bg-gradient-to-r from-white dark:from-gray-800/50 to-gray-50/30 dark:to-gray-800/50 block leading-tight mt-2 p-3 rounded-md text-sm text-white dark:text-current" @click="window.fathom?.trackGoal('OKJIR46O', 0)">
-                            <figcaption class="flex items-center justify-between gap-4">
-                                <span class="truncate">{{ $post->title }}</span>
-                                <x-heroicon-o-arrow-right class="flex-shrink-0 w-3 h-3" />
-                            </figcaption>
-                        </a>
-                    </figure>
+                    <x-blog.featured :post="$post" />
                 @endforeach
             </div>
         @endif
@@ -49,7 +33,7 @@
         @endif
 
         @if ($posts->isNotEmpty())
-            <div class="grid md:grid-cols-2 gap-4 lg:gap-8 mt-8">
+            <div class="grid md:grid-cols-2 gap-4 mt-8">
                 @foreach ($posts as $post)
                     <x-post :post="$post" @click="window.fathom?.trackGoal('HH0P1ACM', 0)" />
                 @endforeach
