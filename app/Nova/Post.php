@@ -16,6 +16,7 @@ use App\Nova\Metrics\PostsIntent;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\MorphToMany;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Post extends Resource
@@ -105,6 +106,8 @@ HTML;
             ]),
 
             HasMany::make('Highlights'),
+
+            MorphToMany::make('Categories'),
         ];
     }
 

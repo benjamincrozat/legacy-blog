@@ -2,13 +2,14 @@
 
 namespace App\Models;
 
+use App\Models\Traits\IsCategorizable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Banner extends BaseModel
 {
-    use HasFactory;
+    use HasFactory, IsCategorizable;
 
     protected $casts = [
         'start_at' => 'datetime',

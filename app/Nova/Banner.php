@@ -7,6 +7,7 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\MorphToMany;
 use App\Nova\Metrics\ActiveBannersCount;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -16,7 +17,7 @@ class Banner extends Resource
 
     public static $model = \App\Models\Banner::class;
 
-    public static $title = 'name';
+    public static $title = 'title';
 
     public static $search = [
         'id', 'title', 'content', 'button',
@@ -59,6 +60,8 @@ HTML;
                 ->min(now()->startOfDay())
                 ->sortable()
                 ->displayUsing(fn () => $this->end_at?->isoFormat('lll')),
+
+            MorphToMany::make('Categories'),
         ];
     }
 
