@@ -7,6 +7,7 @@ use App\Nova\Metrics\PostsCount;
 use App\Nova\Metrics\PostsIntent;
 use App\Nova\Metrics\AffiliateClicks;
 use App\Nova\Metrics\AffiliatesCount;
+use App\Nova\Metrics\CategoriesCount;
 use App\Nova\Metrics\SubscribersCount;
 use App\Nova\Metrics\ActiveBannersCount;
 
@@ -17,6 +18,7 @@ class Main extends Dashboard
         return [
             new PostsCount,
             new PostsIntent,
+            new CategoriesCount,
             new AffiliatesCount,
             new ActiveBannersCount,
             new AffiliateClicks,
