@@ -11,7 +11,7 @@ class Category extends BaseModel
 
     public function banners() : MorphToMany
     {
-        return $this->morphedByMany(Banner::class, 'categorizable');
+        return $this->morphedByMany(Banner::class, 'categorizable')->active();
     }
 
     public function posts() : MorphToMany

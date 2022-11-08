@@ -50,7 +50,7 @@
         {{-- Sidebar --}}
         <div class="hidden md:block md:col-span-1 text-sm">
             @if (! should_display_ads() && ! $post->promotes_affiliate_links)
-                <x-banner :banner="$banners->get(1)" class="mb-8" />
+                <x-banner :banner="$banners->get(1) ?? $banners->get(0)" class="mb-8" />
             @endif
 
             <x-blog.toc :toc="$post->getTableOfContents()" class="mb-8" />
