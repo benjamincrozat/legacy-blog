@@ -17,8 +17,11 @@ return new class extends Migration {
             $table->text('content');
             $table->text('description');
             $table->boolean('promotes_affiliate_links')->default(false);
+            $table->unsignedBigInteger('views')->default(0);
             $table->timestamps();
             $table->datetime('modified_at')->nullable();
+
+            $table->fullText(['content', 'description']);
         });
     }
 

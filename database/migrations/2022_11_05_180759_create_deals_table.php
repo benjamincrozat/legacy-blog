@@ -11,9 +11,12 @@ return new class extends Migration {
         Schema::create('deals', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Affiliate::class)->constrained();
+            $table->string('image')->nullable();
             $table->string('title');
             $table->text('content');
             $table->string('button');
+            $table->timestamp('start_at')->nullable();
+            $table->timestamp('end_at')->nullable();
             $table->timestamps();
         });
     }

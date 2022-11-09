@@ -254,7 +254,6 @@ It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
 MARKDOWN,
             'description' => fake()->paragraph(),
             'promotes_affiliate_links' => fake()->boolean(),
-            'expand_table_of_contents' => fake()->boolean(),
         ];
     }
 }
