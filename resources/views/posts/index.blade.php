@@ -22,25 +22,14 @@
             </div>
         </section>
     @endif
-
-    <section class="container mt-8 sm:mt-16">
-        <h2 class="font-bold px-4 sm:px-0 text-center text-xl">
-            Most popular articles
-        </h2>
-
-        @if ($popular->isNotEmpty())
-            <div class="grid md:grid-cols-2 gap-4 mt-8">
-                @foreach ($popular as $post)
-                    <x-post :post="$post" @click="window.fathom?.trackGoal('HH0P1ACM', 0)" />
-                @endforeach
-            </div>
-        @endif
-    </section>
-
     <section class="container mt-8 sm:mt-16">
         <h2 class="font-bold px-4 sm:px-0 text-center text-xl">
             Latest articles
         </h2>
+
+        @if (! should_display_ads())
+            <x-deal :deal="$deal" class="max-w-screen-sm mt-8 mx-auto text-center text-sm" />
+        @endif
 
         @if ($posts->isNotEmpty())
             <div class="grid md:grid-cols-2 gap-4 mt-8">
