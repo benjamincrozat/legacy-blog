@@ -8,7 +8,7 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\BelongsTo;
-use App\Nova\Metrics\ActiveBannersCount;
+use App\Nova\Metrics\ActiveDealsCount;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Deal extends Resource
@@ -76,7 +76,7 @@ HTML;
     public function cards(NovaRequest $request) : array
     {
         return [
-            new ActiveBannersCount,
+            new ActiveDealsCount,
         ];
     }
 
