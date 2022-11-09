@@ -16,7 +16,7 @@ class ListPostsController extends Controller
         return view('posts.index', [
             'banner' => Banner::active()->inRandomOrder()->first(),
             'highlights' => Highlight::latest()->limit(4)->get(),
-            'popular' => $posts->sortByDesc('views'),
+            'popular' => $posts->sortByDesc('views')->take(6),
             'posts' => $posts,
         ]);
     }
