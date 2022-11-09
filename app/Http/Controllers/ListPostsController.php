@@ -11,10 +11,13 @@ class ListPostsController extends Controller
 {
     public function __invoke() : View
     {
+        $posts = Post::latest()->withUser()->get();
+
         return view('posts.index', [
             'banner' => Banner::active()->inRandomOrder()->first(),
             'highlights' => Highlight::latest()->limit(4)->get(),
-            'posts' => Post::latest()->withUser()->get(),
+            'popular' => $posts->sortByDesc('views'),
+            'posts' => $posts,
         ]);
     }
 }
