@@ -18,7 +18,7 @@
                 class="dark:bg-gray-800 block dark:border-0 border-gray-200 placeholder-gray-200 dark:placeholder-gray-600 rounded w-full"
             />
 
-            <button type="submit" class="bg-gradient-to-r from-purple-300 dark:from-purple-700 to-purple-400 dark:to-purple-800 block font-bold mt-4 px-3 py-2 rounded shadow-md text-center text-purple-50 w-full">
+            <button type="submit" class="bg-gradient-to-r from-purple-300 dark:from-purple-700 to-purple-400 dark:to-purple-800 block font-bold mt-4 px-3 py-2 rounded-sm shadow-md text-center text-purple-50 w-full">
                 Sign me up!
             </button>
         </x-form>
