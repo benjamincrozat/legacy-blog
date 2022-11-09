@@ -53,13 +53,13 @@ HTML;
             DateTime::make('Start At')
                 ->rules('required')
                 ->sortable()
-                ->displayUsing(fn () => $this->start_at?->isoFormat('lll')),
+                ->displayUsing(fn () => $this->start_at?->diffForHumans()),
 
             DateTime::make('End At')
                 ->rules('nullable')
                 ->min(now()->startOfDay())
                 ->sortable()
-                ->displayUsing(fn () => $this->end_at?->isoFormat('lll')),
+                ->displayUsing(fn () => $this->end_at?->diffForHumans()),
 
             Tag::make('Categories')
                 ->displayAsList()
