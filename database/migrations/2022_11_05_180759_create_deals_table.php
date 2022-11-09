@@ -8,7 +8,7 @@ use Illuminate\Database\Migrations\Migration;
 return new class extends Migration {
     public function up() : void
     {
-        Schema::create('banners', function (Blueprint $table) {
+        Schema::create('deals', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Affiliate::class)->constrained();
             $table->string('title');
@@ -20,6 +20,6 @@ return new class extends Migration {
 
     public function down() : void
     {
-        Schema::dropIfExists('banners');
+        Schema::dropIfExists('deals');
     }
 };

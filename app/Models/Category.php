@@ -9,9 +9,9 @@ class Category extends BaseModel
 {
     use HasFactory;
 
-    public function banners() : MorphToMany
+    public function deals() : MorphToMany
     {
-        return $this->morphedByMany(Banner::class, 'categorizable')->active();
+        return $this->morphedByMany(Deal::class, 'categorizable')->active();
     }
 
     public function posts() : MorphToMany

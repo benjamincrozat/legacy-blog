@@ -32,7 +32,7 @@ class Category extends Resource
                 ->rules('required', 'max:255')
                 ->sortable(),
 
-            MorphToMany::make('Banners')
+            MorphToMany::make('Deals')
                 ->searchable(),
 
             MorphToMany::make('Posts')

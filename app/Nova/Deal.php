@@ -11,11 +11,11 @@ use Laravel\Nova\Fields\BelongsTo;
 use App\Nova\Metrics\ActiveBannersCount;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Banner extends Resource
+class Deal extends Resource
 {
     public static $group = 'Affiliate Marketing';
 
-    public static $model = \App\Models\Banner::class;
+    public static $model = \App\Models\Deal::class;
 
     public static $title = 'title';
 

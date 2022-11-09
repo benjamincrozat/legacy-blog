@@ -2,18 +2,18 @@
 
 namespace App\Nova\Metrics;
 
-use App\Models\Banner;
+use App\Models\Deal;
 use Laravel\Nova\Metrics\Value;
 use Laravel\Nova\Metrics\ValueResult;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class ActiveBannersCount extends Value
+class ActiveDealsCount extends Value
 {
     /**
      * @return mixed
      */
     public function calculate(NovaRequest $request)
     {
-        return new ValueResult(Banner::active()->count());
+        return new ValueResult(Deal::active()->count());
     }
 }

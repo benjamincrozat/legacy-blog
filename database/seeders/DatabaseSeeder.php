@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Deal;
 use App\Models\Post;
 use App\Models\User;
-use App\Models\Banner;
 use App\Models\Category;
 use App\Models\Redirect;
 use App\Models\Affiliate;
@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
 
         Affiliate::factory(10)->create();
 
-        Banner::factory(10)->create();
+        Deal::factory(10)->create();
 
         Subscriber::factory(50)->create();
     }

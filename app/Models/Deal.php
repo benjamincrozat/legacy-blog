@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Banner extends BaseModel
+class Deal extends BaseModel
 {
     use HasFactory, IsCategorizable;
 

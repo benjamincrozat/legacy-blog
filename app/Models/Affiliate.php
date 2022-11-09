@@ -9,8 +9,8 @@ class Affiliate extends BaseModel
 {
     use HasFactory;
 
-    public function banners() : HasMany
+    public function deals() : HasMany
     {
-        return $this->hasMany(Banner::class);
+        return $this->hasMany(Deal::class);
     }
 }
