@@ -36,7 +36,7 @@ class AppServiceProvider extends ServiceProvider
         });
 
         View::composer('components.deals', function (\Illuminate\View\View $view) {
-            $deals = Deal::active()->orderByDesc('created_at', 'end_at')->get();
+            $deals = Deal::active()->orderByDesc('created_at', 'end_at')->limit(4)->get();
 
             $view->with('deals', $deals);
         });
