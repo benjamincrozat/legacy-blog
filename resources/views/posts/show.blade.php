@@ -72,7 +72,7 @@
         <div class="container mt-16">
             <h4 class="font-bold text-center text-xl">Other posts to read</h4>
 
-            <div class="grid sm:grid-cols-2 gap-4 sm:gap-8 mt-8">
+            <div class="grid md:grid-cols-2 gap-4 sm:gap-8 mt-8">
                 @foreach ($others as $post)
                     <x-post :post="$post" @click="window.fathom?.trackGoal('LTFJEOM0', 0)" />
                 @endforeach
