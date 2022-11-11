@@ -32,7 +32,7 @@
             <div class="grid md:grid-cols-2 gap-8 mt-8">
                 @foreach ($deals as $deal)
                     <div class="flex flex-col gap-2">
-                        <div class="flex flex-grow items-center gap-8">
+                        <div class="flex flex-grow items-center justify-between gap-8">
                             <div>
                                 <p class="font-bold">{{ $deal->affiliate->name }}</p>
 
