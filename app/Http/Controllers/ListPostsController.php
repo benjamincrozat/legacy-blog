@@ -12,7 +12,7 @@ class ListPostsController extends Controller
     public function __invoke() : View
     {
         return view('posts.index', [
-            'deal' => Deal::active()->inRandomOrder()->first(),
+            'deals' => Deal::latest()->active()->limit(6)->get(),
             'highlights' => Highlight::latest()->limit(4)->get(),
             'posts' => Post::latest()->withUser()->get(),
         ]);

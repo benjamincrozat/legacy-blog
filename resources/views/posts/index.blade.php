@@ -22,14 +22,46 @@
             </div>
         </section>
     @endif
+
+    <section class="container mt-8 sm:mt-16">
+        <h2 class="font-bold px-4 sm:px-0 text-center text-xl">
+            Latest deals
+        </h2>
+
+        @if ($deals->isNotEmpty())
+            <div class="grid md:grid-cols-2 gap-8 mt-8">
+                @foreach ($deals as $deal)
+                    <div class="flex flex-col gap-2">
+                        <div class="flex flex-grow items-center gap-8">
+                            <div>
+                                <p class="font-bold">{{ $deal->affiliate->name }}</p>
+
+                                <div class="text-sm">
+                                    {!! Illuminate\Support\Str::lightdown($deal->content) !!}
+                                </div>
+                            </div>
+
+                            @if ($deal->image)
+                                <img src="{{ str_replace('w_auto', 'h_110', $deal->image) }}" width="55" height="55" alt="{{ $deal->affiliate->name }}" class="rounded-lg" />
+                            @endif
+                        </div>
+
+                        <a
+                            href="{{ route('affiliate', $deal->affiliate) }}"
+                            class="bg-gradient-to-r from-emerald-400 dark:from-emerald-700 to-emerald-500 dark:to-emerald-800 block leading-tight mt-2 px-4 py-3 rounded shadow-md text-center text-sm text-white"
+                        >
+                            {!! Illuminate\Support\Str::lightdown($deal->button) !!}
+                        </a>
+                    </div>
+                @endforeach
+            </div>
+        @endif
+    </section>
+
     <section class="container mt-8 sm:mt-16">
         <h2 class="font-bold px-4 sm:px-0 text-center text-xl">
             Latest articles
         </h2>
-
-        @if (! should_display_ads())
-            <x-deal :deal="$deal" class="max-w-screen-sm mt-8 mx-auto text-center text-sm" />
-        @endif
 
         @if ($posts->isNotEmpty())
             <div class="grid md:grid-cols-2 gap-4 mt-8">
