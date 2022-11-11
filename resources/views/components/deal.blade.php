@@ -8,7 +8,7 @@
                     <span class="font-bold @if ($deal->end_at) text-orange-400 @endif">{{ $deal->affiliate->name }}</span>
 
                     @if ($deal->end_at)
-                        <span class="bg-gradient-to-r from-orange-400 to-orange-500 inline-block ml-2 px-3 py-1 rounded-full text-white text-xs">Deal ends in <span class="font-bold">@choice(':count day|:count days', $deal->end_at->diffInDays())</span></span>
+                        <span class="bg-gradient-to-r from-orange-300 dark:from-orange-400 to-orange-400 dark:to-orange-500 inline-block ml-2 px-3 py-1 rounded-full text-white text-xs">Deal ends in <span class="font-bold">@choice(':count day|:count days', $deal->end_at->diffInDays())</span></span>
                     @endif
                 </p>
 
