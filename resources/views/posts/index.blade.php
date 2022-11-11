@@ -29,9 +29,9 @@
         </h2>
 
         @if ($deals->isNotEmpty())
-            <div class="grid md:grid-cols-2 gap-8 mt-8">
+            <div class="grid md:grid-cols-2 gap-4 mt-8">
                 @foreach ($deals as $deal)
-                    <div class="flex flex-col gap-2">
+                    <div class="border dark:border-gray-800 flex flex-col gap-2 p-4 rounded">
                         <div class="flex flex-grow items-center justify-between gap-8">
                             <div>
                                 <p class="font-bold">{{ $deal->affiliate->name }}</p>
@@ -48,7 +48,7 @@
 
                         <a
                             href="{{ route('affiliate', $deal->affiliate) }}"
-                            class="bg-gradient-to-r from-emerald-400 dark:from-emerald-700 to-emerald-500 dark:to-emerald-800 block leading-tight mt-2 px-4 py-3 rounded shadow-md text-center text-sm text-white"
+                            class="bg-gradient-to-r from-emerald-400 dark:from-emerald-700 to-emerald-500 dark:to-emerald-800 block leading-tight mt-2 px-4 py-3 rounded-sm shadow-md text-center text-sm text-white"
                         >
                             {!! Illuminate\Support\Str::lightdown($deal->button) !!}
                         </a>
