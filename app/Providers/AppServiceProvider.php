@@ -2,9 +2,11 @@
 
 namespace App\Providers;
 
+use App\Models\Deal;
 use App\ConvertKit\Client;
 use Illuminate\Support\Str;
 use Illuminate\Http\Client\Factory;
+use Illuminate\Support\Facades\View;
 use App\CommonMark\MarxdownConverter;
 use App\CommonMark\LightdownConverter;
 use Illuminate\Foundation\Application;
@@ -31,6 +33,12 @@ class AppServiceProvider extends ServiceProvider
 
                 return '<h' . $matches[1] . ' id="' . Str::slug($cleanedUpStringForId) . '">' . $matches[2] . '</h' . $matches[1] . '>';
             }, $html);
+        });
+
+        View::composer('components.deals', function (\Illuminate\View\View $view) {
+            $deals = Deal::active()->orderByDesc('created_at', 'end_at')->limit(6)->get();
+
+            $view->with('deals', $deals);
         });
     }
 }

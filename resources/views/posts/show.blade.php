@@ -68,10 +68,9 @@
         <x-newsletter class="text-sm" />
     </div>
 
-    {{-- Other posts to read --}}
     @if ($others->isNotEmpty())
-        <div class="container py-16">
-            <p class="font-bold text-center text-xl">Other posts to read</p>
+        <div class="container mt-16">
+            <h4 class="font-bold text-center text-xl">Other posts to read</h4>
 
             <div class="grid sm:grid-cols-2 gap-4 sm:gap-8 mt-8">
                 @foreach ($others as $post)
@@ -81,7 +80,9 @@
         </div>
     @endif
 
-    <div class="bg-gray-900 dark:bg-black flex-grow">
+    <x-deals class="container mt-16" />
+
+    <div class="bg-gray-900 dark:bg-black flex-grow mt-8 sm:mt-16">
         <x-footer class="text-gray-200" />
     </div>
 
