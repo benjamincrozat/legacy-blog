@@ -35,7 +35,7 @@
                 <x-deal :deal="$deals->get(0)" class="md:hidden mt-8 text-sm" />
             @endif
 
-            <x-blog.toc :toc="$post->getTableOfContents()" class="lg:hidden mt-8 text-sm" />
+            <x-blog.toc :toc="$post->getTableOfContents()" class="mt-8 text-sm" />
 
             <div
                 class="break-words max-w-full mt-8
@@ -52,8 +52,6 @@
             @if (! should_display_ads() && ! $post->promotes_affiliate_links)
                 <x-deal :deal="$deals->get(1) ?? $deals->get(0)" class="mb-8" />
             @endif
-
-            <x-blog.toc :toc="$post->getTableOfContents()" class="mb-8" />
 
             <x-newsletter class="mb-8" />
 
