@@ -3,7 +3,7 @@
     description="Have you ever had a question about the art of crafting web applications? This is the best blog to find your answer."
     class="dark:bg-gray-900 text-gray-600 dark:text-gray-300"
 >
-    <div class="bg-gradient-to-r from-gray-100 dark:from-gray-900 to-gray-50 dark:to-gray-800">
+    <div class="bg-gradient-to-r from-gray-100 dark:from-gray-800/30 to-gray-50 dark:to-gray-800/30">
         <x-blog.top class="container" />
 
         <div class="mt-8 sm:mt-16 pb-16">
