@@ -2,7 +2,7 @@
     <div {{ $attributes->merge(['class' => 'border dark:border-gray-800 rounded']) }}>
         <div class="border-b dark:border-gray-800 flex items-center justify-center gap-2 font-normal leading-tight p-2 text-emerald-500">
             <x-heroicon-o-information-circle class="-translate-y-[.5px] flex-shrink-0 w-4 h-5 h-4" />
-            {{ $deal->title }}
+            {{ $deal->affiliate->name }}
         </div>
 
         <div class="grid gap-4 p-4">
