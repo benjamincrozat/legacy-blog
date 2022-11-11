@@ -3,7 +3,7 @@
     description="Have you ever had a question about the art of crafting web applications? This is the best blog to find your answer."
     class="dark:bg-gray-900 text-gray-600 dark:text-gray-300"
 >
-    <div class="bg-gradient-to-r from-gray-100 to-gray-50">
+    <div class="bg-gradient-to-r from-gray-100 dark:from-gray-900 to-gray-50 dark:to-gray-800">
         <x-blog.top class="container" />
 
         <div class="mt-8 sm:mt-16 pb-16">
@@ -15,9 +15,9 @@
                 </h2>
 
                 <x-form method="POST" action="{{ route('subscribe') }}" class="max-w-screen-xs mx-auto mt-8">
-                    <input type="email" name="email" id="email" placeholder="homer@simpson.com" class="block border-0 placeholder-gray-300 px-4 py-3 rounded-md shadow w-full" />
+                    <input type="email" name="email" id="email" placeholder="homer@simpson.com" class="bg-gray-700/40 block border-0 placeholder-gray-300 px-4 py-3 rounded-md shadow w-full" />
 
-                    <button class="bg-gradient-to-r from-purple-300 to-purple-400 block font-bold mt-4 px-4 py-3 rounded-md shadow-lg text-white w-full">
+                    <button class="bg-gradient-to-r from-purple-300 dark:from-purple-400 to-purple-400 dark:to-purple-500 block font-bold mt-4 px-4 py-3 rounded-md shadow-lg text-white w-full">
                         Subscribe
                     </button>
                 </x-form>
