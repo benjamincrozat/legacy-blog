@@ -36,7 +36,7 @@
                             <div>
                                 <p class="font-bold">{{ $deal->affiliate->name }}</p>
 
-                                <div class="text-sm">
+                                <div class="mt-2 text-sm">
                                     {!! Illuminate\Support\Str::lightdown($deal->content) !!}
                                 </div>
                             </div>
