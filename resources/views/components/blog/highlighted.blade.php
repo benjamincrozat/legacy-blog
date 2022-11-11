@@ -6,7 +6,7 @@
             width="1280"
             height="720"
             alt="{{ $post->title }}"
-            class="aspect-video dark:brightness-75 object-cover rounded-md w-full"
+            class="aspect-video object-cover rounded-md w-full"
         />
     </a>
 

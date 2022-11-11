@@ -17,7 +17,7 @@
                 <x-form method="POST" action="{{ route('subscribe') }}" class="max-w-screen-xs mx-auto mt-8">
                     <input type="email" name="email" id="email" placeholder="homer@simpson.com" class="dark:bg-gray-700/40 block border-0 placeholder-gray-300 dark:placeholder-gray-600 px-4 py-3 rounded-md shadow w-full" />
 
-                    <button class="bg-gradient-to-r from-purple-300 dark:from-purple-400 to-purple-400 dark:to-purple-500 block font-bold mt-4 px-4 py-3 rounded-md shadow-lg text-white w-full">
+                    <button class="bg-gradient-to-r from-purple-300 dark:from-purple-400 to-purple-400 dark:to-purple-500 block font-bold mt-2 px-4 py-3 rounded-md shadow-lg text-white w-full">
                         Subscribe
                     </button>
                 </x-form>

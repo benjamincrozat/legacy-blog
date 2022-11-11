@@ -21,10 +21,7 @@ class MarxdownConverter extends \League\CommonMark\MarkdownConverter
     {
         return new self([
             'default_attributes' => [
-                Image::class => [
-                    'loading' => 'lazy',
-                    'class' => 'dark:brightness-75',
-                ],
+                Image::class => ['loading' => 'lazy'],
                 Link::class => [
                     'rel' => function (Link $node) {
                         if (! str_contains($node->getUrl(), url('/')) && ! Str::startsWith($node->getUrl(), '#')) {

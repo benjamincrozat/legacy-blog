@@ -20,7 +20,7 @@
                     width="150"
                     height="150"
                     alt="Benjamin Crozat, a Laravel developer for hire"
-                    class="dark:brightness-75 inline rotate-2 rounded-full"
+                    class="inline rotate-2 rounded-full"
                 />
             </div>
         </header>
@@ -222,7 +222,7 @@
             </div>
 
             <div class="flex-shrink-0 order-1 md:order-none text-center md:text-left w-full md:w-auto">
-                <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" width="128" height="128" alt="Benjamin Crozat" class="dark:brightness-75 inline rotate-2 rounded-full" />
+                <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" width="128" height="128" alt="Benjamin Crozat" class="inline rotate-2 rounded-full" />
             </div>
         </div>
     </x-home.section>
