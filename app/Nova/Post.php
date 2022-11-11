@@ -26,10 +26,6 @@ class Post extends Resource
 
     public static $title = 'title';
 
-    public static $search = [
-        'id', 'title', 'slug', 'content', 'description',
-    ];
-
     public function fields(NovaRequest $request) : array
     {
         return [
