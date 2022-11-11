@@ -24,7 +24,7 @@
 
                 <p class="mt-4">I'm Benjamin Crozat, a web developer with more than <strong class="font-bold">15 years of experience</strong>.</p>
 
-                <p class="mt-4">Understanding the web and being able to build websites is a serious advantage nowadays. You get job security and can build a business starting with nothing. <strong class="font-bold">I want to share with you everything I learn.</strong></p>
+                <p class="mt-4">Understanding the web and being able to build websites is a serious advantage nowadays. You get job security and can build a business starting with nothing. <strong class="font-bold">I want to share with you everything I learn</strong> about it.</p>
             </section>
         </div>
     </div>
