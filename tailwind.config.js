@@ -9,6 +9,10 @@ module.exports = {
 
     darkMode: 'media',
 
+    future: {
+        hoverOnlyWhenSupported: true,
+    },
+
     theme: {
         container: {
             center: true,

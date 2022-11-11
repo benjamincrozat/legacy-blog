@@ -17,10 +17,10 @@ class Deal extends Resource
 
     public static $model = \App\Models\Deal::class;
 
-    public static $title = 'title';
+    public static $title = 'content';
 
     public static $search = [
-        'id', 'title', 'content', 'button',
+        'id', 'content', 'button',
     ];
 
     public function fields(NovaRequest $request) : array
@@ -39,9 +39,6 @@ class Deal extends Resource
 HTML;
                 })
                 ->asHtml(),
-
-            Text::make('Title')
-                ->rules('required', 'max:255'),
 
             Markdown::make('Content')
                 ->rules('required'),
