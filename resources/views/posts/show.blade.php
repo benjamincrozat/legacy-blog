@@ -17,7 +17,7 @@
         </x-blog.breadcrumb-item>
     </x-blog.breadcrumb>
 
-    <div class="container lg:grid lg:grid-cols-3 lg:gap-16 mt-8 relative">
+    <div class="container lg:grid lg:grid-cols-3 lg:gap-8 mt-8 relative">
         <article class="lg:col-span-2">
             <h1 class="font-thin text-3xl md:text-5xl dark:text-white">
                 {{ $post->title }}
