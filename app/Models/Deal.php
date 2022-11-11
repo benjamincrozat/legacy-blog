@@ -38,7 +38,7 @@ class Deal extends BaseModel
 
     public function renderedContent() : Attribute
     {
-        return Affiliate::make(function () {
+        return Attribute::make(function () {
             return Str::lightdown($this->content);
         })->shouldCache();
     }
