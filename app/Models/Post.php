@@ -94,6 +94,13 @@ class Post extends BaseModel implements Feedable
         return collect($tableOfContents);
     }
 
+    public function renderedContent() : Attribute
+    {
+        return Attribute::make(
+            fn () => Str::marxdown($this->content)
+        )->shouldCache();
+    }
+
     public function resolveRouteBindingQuery($query, $value, $field = null)
     {
         $query = parent::resolveRouteBindingQuery($query, $value, $field);
