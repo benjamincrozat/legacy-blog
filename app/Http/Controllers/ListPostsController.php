@@ -10,9 +10,11 @@ class ListPostsController extends Controller
 {
     public function __invoke() : View
     {
+        $highlights = Highlight::latest()->limit(4)->get();
+
         return view('posts.index', [
             'highlights' => Highlight::latest()->limit(4)->get(),
-            'posts' => Post::latest()->withUser()->get(),
+            'posts' => Post::latest()->withUser()->whereNotIn('id', $highlights->pluck('post.id'))->get(),
         ]);
     }
 }
