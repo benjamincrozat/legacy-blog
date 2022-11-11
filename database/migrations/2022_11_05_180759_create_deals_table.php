@@ -12,7 +12,6 @@ return new class extends Migration {
             $table->id();
             $table->foreignIdFor(Affiliate::class)->constrained();
             $table->string('image')->nullable();
-            $table->string('title');
             $table->text('content');
             $table->string('button');
             $table->timestamp('start_at')->nullable();

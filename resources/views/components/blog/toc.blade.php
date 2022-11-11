@@ -4,10 +4,10 @@
             Table of contents
         </x-slot:title>
 
-        <nav>
-            <ul>
+        <nav class="mt-3">
+            <ul class="grid gap-2">
                 @foreach ($toc as $item)
-                    <li class="mt-2">
+                    <li>
                         <a
                             href="#{{ $item['id'] }}"
                             class="flex items-start gap-1 leading-tight text-indigo-900/75 dark:text-indigo-400"
