@@ -17,6 +17,7 @@
         <a
             href="{{ route('affiliate', $deal->affiliate) }}"
             class="bg-gradient-to-r from-emerald-400 dark:from-emerald-700 to-emerald-500 dark:to-emerald-800 block leading-tight mt-2 px-4 py-3 rounded-sm shadow-md text-center text-sm text-white"
+            @click="window.fathom?.trackGoal('K8DBWLRF', 0)"
         >
             {!! Illuminate\Support\Str::lightdown($deal->button) !!}
         </a>
