@@ -1,4 +1,4 @@
-<div {{ $attributes->merge(['class' => 'flex justify-between mt-4 md:mt-8']) }}>
+<div {{ $attributes->merge(['class' => 'flex justify-between']) }}>
     <div>
         <span class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase">
             Benjamin Crozat
