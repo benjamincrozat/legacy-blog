@@ -63,9 +63,10 @@
                                 Go to site
                             </a>
 
-                            <div class="mt-4 text-center">
-                                <a href="#{{ $feature->affiliate->slug }}" class="font-bold">
+                            <div class="mt-3 text-center">
+                                <a href="#{{ $feature->affiliate->slug }}" class="flex items-center justify-center gap-2 font-bold">
                                     Read review
+                                    <x-heroicon-o-arrow-down class="w-4 h-4" />
                                 </a>
                             </div>
                         </div>
