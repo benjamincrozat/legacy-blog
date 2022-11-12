@@ -64,7 +64,7 @@
                             </a>
 
                             <div class="mt-3 text-center">
-                                <a href="#{{ $feature->affiliate->slug }}" class="flex items-center justify-center gap-2 font-bold">
+                                <a href="#{{ $feature->affiliate->slug }}" class="flex items-center justify-center gap-2 font-bold underline">
                                     Read review
                                     <x-heroicon-o-arrow-down class="w-4 h-4" />
                                 </a>
