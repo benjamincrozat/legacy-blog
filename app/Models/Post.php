@@ -99,6 +99,13 @@ class Post extends BaseModel implements Feedable
         return collect($tableOfContents);
     }
 
+    public function renderedIntroduction() : Attribute
+    {
+        return Attribute::make(
+            fn () => Str::marxdown($this->introduction)
+        )->shouldCache();
+    }
+
     public function renderedContent() : Attribute
     {
         return Attribute::make(
