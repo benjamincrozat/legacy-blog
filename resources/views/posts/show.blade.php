@@ -55,10 +55,8 @@
                                         <img loading="lazy" src="{{ $feature->affiliate->image }}" alt="{{ $feature->affiliate->name }}" width="48" height="48" class="inline rounded-lg" />
                                     @endif
 
-                                    <div class="mt-4">
-                                        <span class="border-b border-gray-200/50 dark:border-gray-300/30 font-bold">
-                                            {{ $feature->affiliate->name }}
-                                        </span>
+                                    <div class="font-bold mt-4">
+                                        {{ $feature->affiliate->name }}
                                     </div>
                                 </div>
 
@@ -99,13 +97,13 @@
         {{-- Sidebar --}}
         <div class="hidden md:block md:col-span-1 text-sm">
             @if (! should_display_ads() && ! $post->promotes_affiliate_links)
-                <x-deal :deal="$deals->get(1) ?? $deals->get(0)" class="mb-8" />
+                <x-deal :deal="$deals->get(1) ?? $deals->get(0)" class="mb-4" />
             @endif
 
-            <x-newsletter class="mb-8" />
+            <x-newsletter />
 
             @if ($post->promotes_affiliate_links)
-                <x-widget class="text-xs">
+                <x-widget class="mt-4 text-xs">
                     <p>This article uses affiliate links, which can compensate me at no cost to you if you decide to pursue a deal.</p>
                     <p class="mt-2">I only promote products I've personally used and stand behind.</p>
                 </x-widget>
