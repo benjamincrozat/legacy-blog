@@ -5,7 +5,7 @@
 >
     <x-blog.top class="container mt-4 md:mt-8" />
 
-    <section class="container lg:max-w-screen-md mt-8 sm:mt-16">
+    <section class="container lg:max-w-screen-md mt-16">
         <h2 class="font-bold sm:max-w-screen-xs mx-auto text-xl sm:text-2xl md:text-3xl text-center">
             I share everything I learn about the&nbsp;art&nbsp;of&nbsp;crafting&nbsp;websites, <span class="text-indigo-400">for&nbsp;free</span>!
         </h2>
