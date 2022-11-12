@@ -54,7 +54,7 @@
                                     </div>
                                 </div>
 
-                                <div class="mt-4 text-center sm:text-left">
+                                <div class="mt-3 text-center sm:text-left">
                                     {{ $feature->description }}
                                 </div>
                             </div>
