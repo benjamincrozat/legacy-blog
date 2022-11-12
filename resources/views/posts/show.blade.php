@@ -40,7 +40,7 @@
             @endif
 
             @if ($post->promotes_affiliate_links && $post->features->isNotEmpty())
-                <div class="grid sm:grid-cols-2 @if (2 > $post->features->count()) md:grid-cols-3 @endif gap-4 mt-8">
+                <div class="grid @if (1 > $post->features->count()) sm:grid-cols-2 @endif @if (2 > $post->features->count()) md:grid-cols-3 @endif gap-4 mt-8">
                     @foreach ($post->features as $feature)
                         <x-feature :feature="$feature" />
                     @endforeach
