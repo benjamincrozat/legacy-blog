@@ -105,6 +105,8 @@ HTML;
                     ->sortable(),
             ]),
 
+            HasMany::make('Features'),
+
             HasMany::make('Highlights'),
         ];
     }

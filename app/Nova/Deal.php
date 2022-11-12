@@ -28,7 +28,8 @@ class Deal extends Resource
         return [
             ID::make()->sortable(),
 
-            BelongsTo::make('Affiliate'),
+            BelongsTo::make('Affiliate')
+                ->sortable(),
 
             Text::make('Image')
                 ->displayUsing(function () {

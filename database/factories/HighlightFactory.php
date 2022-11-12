@@ -13,7 +13,7 @@ class HighlightFactory extends Factory
     public function definition() : array
     {
         return [
-            'post_id' => Post::factory(),
+            'post_id' => Post::inRandomOrder()->value('id'),
         ];
     }
 }

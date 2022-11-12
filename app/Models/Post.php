@@ -60,6 +60,11 @@ class Post extends BaseModel implements Feedable
         return $this->belongsTo(User::class);
     }
 
+    public function features() : HasMany
+    {
+        return $this->hasMany(Feature::class)->orderByDesc('position', 'created_at');
+    }
+
     public function highlights() : HasMany
     {
         return $this->hasMany(Highlight::class);

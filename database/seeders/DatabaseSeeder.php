@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Deal;
 use App\Models\Post;
 use App\Models\User;
+use App\Models\Feature;
 use App\Models\Category;
 use App\Models\Redirect;
 use App\Models\Affiliate;
@@ -23,15 +24,17 @@ class DatabaseSeeder extends Seeder
 
         Post::factory(50)->create();
 
-        Category::factory(10)->create();
-
         Highlight::factory(10)->create();
-
-        Redirect::factory(10)->create();
 
         Affiliate::factory(10)->create();
 
+        Feature::factory(100)->create();
+
+        Category::factory(10)->create();
+
         Deal::factory(10)->create();
+
+        Redirect::factory(10)->create();
 
         Subscriber::factory(50)->create();
     }

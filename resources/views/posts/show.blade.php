@@ -31,7 +31,39 @@
                 <span class="opacity-75">@choice(':count minute|:count minutes', $post->read_time) read</span>
             </div>
 
-            @if (! should_display_ads() && ! $post->promotes_affiliate_links)
+            @if ($post->features->isNotEmpty())
+                <div class="grid sm:grid-cols-2 gap-4 mt-8">
+                    @foreach ($post->features as $feature)
+                        <div class="border first:border-orange-300 dark:border-gray-800 dark:first:border-orange-900 flex flex-col group gap-2 p-4 rounded text-sm">
+                            <div class="text-center">
+                                <span class="bg-gradient-to-r from-emerald-400 dark:from-emerald-600 group-first:from-orange-300 to-emerald-500 dark:to-emerald-700 dark:group-first:from-orange-400 group-first:to-orange-400 dark:group-first:to-orange-500 font-bold inline-block px-3 py-1 rounded-full text-white text-xs">
+                                    {{ $feature->title }}
+                                </span>
+                            </div>
+
+                            <div class="flex-grow mt-2">
+                                <div class="text-center">
+                                    <div class="border-b border-gray-200/50 dark:border-gray-300/30 font-bold inline-block">{{ $feature->affiliate->name }}</div>
+                                </div>
+
+                                <div class="mt-4 text-center sm:text-left">
+                                    {{ $feature->description }}
+                                </div>
+                            </div>
+
+                            <a href="{{ route('affiliate', $feature->affiliate->slug) }}" target="_blank" rel="nofollow noopener noreferrer" class="bg-gradient-to-r from-emerald-400 dark:from-emerald-700 group-first:from-orange-300 dark:group-first:from-orange-400 to-emerald-500 dark:to-emerald-800 group-first:to-orange-400 dark:group-first:to-orange-500 block font-bold leading-tight mt-2 px-4 py-3 rounded-sm shadow-md text-center text-sm text-white">
+                                Go to site
+                            </a>
+
+                            <div class="mt-4 text-center">
+                                <a href="#{{ $feature->affiliate->slug }}" class="font-bold">
+                                    Read review
+                                </a>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            @elseif (! should_display_ads() && ! $post->promotes_affiliate_links)
                 <x-deal :deal="$deals->get(0)" class="md:hidden mt-8 text-sm" />
             @endif
 
