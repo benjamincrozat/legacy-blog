@@ -1,5 +1,5 @@
 @if (! empty($deal))
-    <div {{ $attributes->merge([
+    <div {{ $attributes->except('deal')->merge([
         'class' => $deal->end_at ? 'border border-orange-300 dark:border-orange-900 flex flex-col gap-2 p-4 rounded' : 'border dark:border-gray-800 flex flex-col gap-2 p-4 rounded'
     ]) }}>
         <div class="flex flex-grow items-center justify-between gap-8">
