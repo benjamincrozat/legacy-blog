@@ -13,7 +13,7 @@ class ListPostsController extends Controller
         $highlights = Highlight::latest()->limit(4)->get();
 
         return view('posts.index', [
-            'highlights' => Highlight::latest()->limit(4)->get(),
+            'highlights' => $highlights,
             'posts' => Post::latest()->withUser()->whereNotIn('id', $highlights->pluck('post.id'))->get(),
         ]);
     }
