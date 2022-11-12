@@ -43,7 +43,15 @@
 
                             <div class="flex-grow mt-2">
                                 <div class="text-center">
-                                    <div class="border-b border-gray-200/50 dark:border-gray-300/30 font-bold inline-block">{{ $feature->affiliate->name }}</div>
+                                    @if ($feature->affiliate->image)
+                                        <img loading="lazy" src="{{ $feature->affiliate->image }}" alt="{{ $feature->affiliate->name }}" width="48" height="48" class="inline rounded-lg" />
+                                    @endif
+
+                                    <div class="mt-4">
+                                        <span class="border-b border-gray-200/50 dark:border-gray-300/30 font-bold">
+                                            {{ $feature->affiliate->name }}
+                                        </span>
+                                    </div>
                                 </div>
 
                                 <div class="mt-4 text-center sm:text-left">
