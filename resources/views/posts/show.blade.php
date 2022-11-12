@@ -42,7 +42,7 @@
             @if ($post->promotes_affiliate_links && $post->features->isNotEmpty())
                 <div class="grid sm:grid-cols-2 gap-4 mt-8">
                     @foreach ($post->features as $feature)
-                        <div class="border first:border-orange-300 dark:border-gray-800 dark:first:border-orange-900 flex flex-col group gap-2 p-4 rounded text-sm">
+                        <div class="border first:border-orange-200 dark:border-gray-800 dark:first:border-orange-900 flex flex-col group gap-2 p-4 rounded text-sm">
                             <div class="text-center">
                                 <span class="bg-gradient-to-r from-emerald-400 dark:from-emerald-600 group-first:from-orange-300 to-emerald-500 dark:to-emerald-700 dark:group-first:from-orange-400 group-first:to-orange-400 dark:group-first:to-orange-500 font-bold inline-block px-3 py-1 rounded-full text-white text-xs">
                                     {{ $feature->title }}
