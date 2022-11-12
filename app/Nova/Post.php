@@ -71,6 +71,9 @@ HTML;
                 ->sortable()
                 ->hideFromIndex(),
 
+            Markdown::make('Introduction')
+                ->rules('nullable'),
+
             Markdown::make('Content')
                 ->rules('required'),
 
