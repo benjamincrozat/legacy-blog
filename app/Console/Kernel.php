@@ -14,7 +14,7 @@ class Kernel extends ConsoleKernel
     {
         $schedule
             ->command(ConvertKitFetchCommand::class)
-            ->daily();
+            ->hourly();
 
         $schedule
             ->command(FathomFetchCommand::class)
