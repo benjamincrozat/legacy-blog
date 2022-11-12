@@ -33,10 +33,8 @@ class Deal extends Resource
 
             Text::make('Image')
                 ->displayUsing(function () {
-                    $image = str_replace('w_auto', 'h_100', $this->image);
-
                     return <<<HTML
-<img src="$image" width="50" height="50" class="aspect-square" style="object-fit: cover" />
+<img src="$this->image" width="50" height="50" class="aspect-square" style="object-fit: cover" />
 HTML;
                 })
                 ->asHtml(),

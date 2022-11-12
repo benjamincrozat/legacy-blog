@@ -25,6 +25,14 @@ class Affiliate extends Resource
         return [
             ID::make()->sortable(),
 
+            Text::make('Image')
+                ->displayUsing(function () {
+                    return <<<HTML
+<img src="$this->image" width="50" height="50" class="aspect-square" style="object-fit: cover" />
+HTML;
+                })
+                ->asHtml(),
+
             Text::make('Name')
                 ->maxlength(60)
                 ->rules('required', 'max:255')
