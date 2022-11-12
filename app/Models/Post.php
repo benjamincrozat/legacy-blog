@@ -62,7 +62,7 @@ class Post extends BaseModel implements Feedable
 
     public function features() : HasMany
     {
-        return $this->hasMany(Feature::class)->latest()->orderBy('position');
+        return $this->hasMany(Feature::class)->orderBy('position');
     }
 
     public function highlights() : HasMany
