@@ -89,7 +89,7 @@ HTML;
 
                 Boolean::make('Promotes affiliate links')
                     ->sortable()
-                    ->onlyOnForms(),
+                    ->hideFromIndex(),
 
                 Badge::make('Intent', 'promotes_affiliate_links')
                     ->map([

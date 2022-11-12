@@ -39,7 +39,7 @@
                 </div>
             @endif
 
-            @if ($post->features->isNotEmpty())
+            @if ($post->promotes_affiliate_links && $post->features->isNotEmpty())
                 <div class="grid sm:grid-cols-2 gap-4 mt-8">
                     @foreach ($post->features as $feature)
                         <div class="border first:border-orange-300 dark:border-gray-800 dark:first:border-orange-900 flex flex-col group gap-2 p-4 rounded text-sm">
