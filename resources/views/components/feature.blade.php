@@ -32,7 +32,11 @@
     </a>
 
     <div class="mt-3 text-center">
-        <a href="#{{ $feature->affiliate->slug }}" class="flex items-center justify-center gap-2 font-bold underline">
+        <a
+            href="#{{ $feature->affiliate->slug }}"
+            class="flex items-center justify-center gap-2 font-bold underline"
+            @click="window.fathom?.trackGoal('JT627MAN', 0)"
+        >
             Read review
             <x-heroicon-o-arrow-down class="w-4 h-4" />
         </a>

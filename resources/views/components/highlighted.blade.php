@@ -13,7 +13,7 @@
     <a href="{{ route('posts.show', $post->slug) }}" class="bg-gray-900 dark:bg-gradient-to-r from-white dark:from-gray-800/50 to-gray-50/30 dark:to-gray-800/50 block leading-tight mt-2 p-3 rounded-md text-sm text-white dark:text-current" @click="window.fathom?.trackGoal('OKJIR46O', 0)">
         <figcaption class="flex items-center justify-between gap-4">
             <span class="truncate">{{ $post->title }}</span>
-            <x-heroicon-o-arrow-right class="flex-shrink-0 w-3 h-3" />
+            <x-heroicon-o-arrow-right class="flex-shrink-0 opacity-75 w-3 h-3" />
         </figcaption>
     </a>
 </figure>
