@@ -7,6 +7,8 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\BelongsTo;
+use App\Nova\Actions\MoveFeatureUp;
+use App\Nova\Actions\MoveFeatureDown;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Feature extends Resource
@@ -42,7 +44,7 @@ class Feature extends Resource
                 ->rules('required'),
 
             Number::make('Position')
-                ->rules('required', 'min:0')
+                ->rules('required', 'min:1')
                 ->sortable(),
         ];
     }
@@ -64,6 +66,9 @@ class Feature extends Resource
 
     public function actions(NovaRequest $request) : array
     {
-        return [];
+        return [
+            new MoveFeatureUp,
+            new MoveFeatureDown,
+        ];
     }
 }
