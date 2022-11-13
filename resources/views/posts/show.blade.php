@@ -7,15 +7,15 @@
 >
     <x-blog.top class="container mt-4 md:mt-8" />
 
-    <x-blog.breadcrumb class="container mt-8 sm:mt-16">
-        <x-blog.breadcrumb-item href="{{ route('posts.index') }}">
+    <x-breadcrumb class="container mt-8 sm:mt-16">
+        <x-breadcrumb-item href="{{ route('posts.index') }}">
             Blog
-        </x-blog.breadcrumb-item>
+        </x-breadcrumb-item>
 
-        <x-blog.breadcrumb-item class="truncate">
+        <x-breadcrumb-item class="truncate">
             {{ $post->title }}
-        </x-blog.breadcrumb-item>
-    </x-blog.breadcrumb>
+        </x-breadcrumb-item>
+    </x-breadcrumb>
 
     <article class="container mt-8" x-data="{ deal: false }">
         <h1 class="font-thin text-3xl md:text-5xl dark:text-white">
@@ -57,7 +57,7 @@
             </div>
         @endif
 
-        <x-blog.toc :toc="$post->getTableOfContents()" class="mt-8" />
+        <x-toc :toc="$post->getTableOfContents()" class="mt-8" />
 
         <div
             class="break-words max-w-full mt-8
