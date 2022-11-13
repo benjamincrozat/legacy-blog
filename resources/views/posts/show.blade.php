@@ -17,7 +17,7 @@
         </x-blog.breadcrumb-item>
     </x-blog.breadcrumb>
 
-    <article class="container mt-8">
+    <article class="container mt-8" x-data="{ deal: false }">
         <h1 class="font-thin text-3xl md:text-5xl dark:text-white">
             {{ $post->title }}
         </h1>
@@ -55,8 +55,6 @@
                     I only promote products I've personally used and stand behind.
                 </p>
             </div>
-        @elseif (! should_display_ads() && ! $post->promotes_affiliate_links)
-            <x-deal :deal="$deals->get(0)" class="sm:max-w-screen-xs mt-8 sm:mx-auto text-sm" />
         @endif
 
         <x-blog.toc :toc="$post->getTableOfContents()" class="mt-8 text-sm" />
