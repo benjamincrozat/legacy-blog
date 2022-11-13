@@ -45,6 +45,7 @@ class Feature extends Resource
 
             Number::make('Position')
                 ->rules('required', 'min:1')
+                ->default(1)
                 ->sortable(),
         ];
     }
