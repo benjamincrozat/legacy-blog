@@ -1,10 +1,10 @@
 @if ($toc->isNotEmpty())
-    <x-widget {{ $attributes->except('toc') }}>
-        <x-slot:title>
+    <div {{ $attributes->except('toc') }}>
+        <h4 class="font-bold mb-2 text-base">
             Table of contents
-        </x-slot:title>
+        </h4>
 
-        <nav class="mt-3">
+        <nav class="mt-3 text-sm">
             <ul class="grid gap-2">
                 @foreach ($toc as $item)
                     <li>
@@ -21,5 +21,5 @@
                 @endforeach
             </ul>
         </nav>
-    </x-widget>
+    </div>
 @endif

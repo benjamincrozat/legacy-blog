@@ -57,7 +57,7 @@
             </div>
         @endif
 
-        <x-blog.toc :toc="$post->getTableOfContents()" class="mt-8 text-sm" />
+        <x-blog.toc :toc="$post->getTableOfContents()" class="mt-8" />
 
         <div
             class="break-words max-w-full mt-8
