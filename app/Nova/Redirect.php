@@ -16,6 +16,11 @@ class Redirect extends Resource
         'id', 'from', 'to',
     ];
 
+    public function title() : string
+    {
+        return "/$this->from → /$this->to";
+    }
+
     public function fields(NovaRequest $request) : array
     {
         return [
@@ -31,11 +36,6 @@ class Redirect extends Resource
                 ->rules('required', 'max:255')
                 ->sortable(),
         ];
-    }
-
-    public function title() : string
-    {
-        return "{$this->from} → {$this->to}";
     }
 
     public function cards(NovaRequest $request) : array

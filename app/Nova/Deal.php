@@ -20,7 +20,7 @@ class Deal extends Resource
     public static $title = 'content';
 
     public static $search = [
-        'id', 'content', 'button',
+        'id', 'content', 'button', 'affiliate.name',
     ];
 
     public function fields(NovaRequest $request) : array
