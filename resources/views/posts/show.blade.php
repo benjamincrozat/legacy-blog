@@ -85,7 +85,7 @@
         </div>
     @endif
 
-    <x-deals class="md:container mt-16" />
+    <x-deals class="md:container md:max-w-[1024px] mt-16" />
 
     <div class="bg-gray-900 dark:bg-black flex-grow mt-8 sm:mt-16">
         <x-footer class="text-gray-200" />
