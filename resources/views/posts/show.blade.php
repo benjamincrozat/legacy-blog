@@ -17,75 +17,61 @@
         </x-blog.breadcrumb-item>
     </x-blog.breadcrumb>
 
-    <div class="container lg:grid lg:grid-cols-3 lg:gap-8 mt-8 relative">
-        <article class="lg:col-span-2">
-            <h1 class="font-thin text-3xl md:text-5xl dark:text-white">
-                {{ $post->title }}
-            </h1>
+    <article class="container mt-8">
+        <h1 class="font-thin text-3xl md:text-5xl dark:text-white">
+            {{ $post->title }}
+        </h1>
 
-            <div class="flex items-center gap-2 mt-4 text-sm">
-                <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}" width="18" height="18" alt="Benjamin Crozat's avatar." class="-translate-y-[.5px] rounded-full" />
+        <div class="flex items-center gap-2 mt-4 text-sm">
+            <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}" width="18" height="18" alt="Benjamin Crozat's avatar." class="-translate-y-[.5px] rounded-full" />
 
-                <a href="{{ route('home') }}" class="font-normal underline" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">Benjamin Crozat</a>
-                —
-                <span class="opacity-75">@choice(':count minute|:count minutes', $post->read_time) read</span>
-            </div>
-
-            @if ($post->introduction)
-                <div class="break-words max-w-full mt-8
-                prose prose-a:border-b prose-a:border-indigo-400/50 prose-a:text-indigo-400 prose-a:no-underline
-                prose-code:dark:text-current prose-headings:dark:text-white prose-hr:dark:border-gray-800 prose-thead:dark:border-gray-800 prose-strong:text-current prose-tr:dark:border-gray-800 dark:text-current">
-                    {!! $post->rendered_introduction !!}
-                </div>
-            @endif
-
-            @if ($post->promotes_affiliate_links && $post->features->isNotEmpty())
-                <div
-                    class="grid
-                    @if (1 > $post->features->count()) sm:grid-cols-2 @endif
-                    @if (2 > $post->features->count()) md:grid-cols-3 @endif
-                    gap-4 mt-8"
-                >
-                    @foreach ($post->features as $feature)
-                        <x-feature :feature="$feature" />
-                    @endforeach
-                </div>
-            @elseif (! should_display_ads() && ! $post->promotes_affiliate_links)
-                <x-deal :deal="$deals->get(0)" class="md:hidden mt-8 text-sm" />
-            @endif
-
-            <x-blog.toc :toc="$post->getTableOfContents()" class="mt-8 text-sm" />
-
-            <div
-                class="break-words max-w-full mt-8
-                prose prose-a:border-b prose-a:border-indigo-400/50 prose-a:text-indigo-400 prose-a:no-underline
-                prose-code:dark:text-current prose-headings:dark:text-white prose-hr:dark:border-gray-800 prose-thead:dark:border-gray-800
-                prose-strong:text-current prose-tr:dark:border-gray-800 dark:text-current"
-            >
-                {!! $post->rendered_content !!}
-            </div>
-        </article>
-
-        {{-- Sidebar --}}
-        <div class="hidden md:block md:col-span-1 text-sm">
-            @if (! should_display_ads() && ! $post->promotes_affiliate_links)
-                <x-deal :deal="$deals->get(1) ?? $deals->get(0)" class="mb-4" />
-            @endif
-
-            <x-newsletter />
-
-            @if ($post->promotes_affiliate_links)
-                <x-widget class="mt-4 text-xs">
-                    <p>This article uses affiliate links, which can compensate me at no cost to you if you decide to pursue a deal.</p>
-                    <p class="mt-2">I only promote products I've personally used and stand behind.</p>
-                </x-widget>
-            @endif
+            <a href="{{ route('home') }}" class="font-normal underline" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">Benjamin Crozat</a>
+            —
+            <span class="opacity-75">@choice(':count minute|:count minutes', $post->read_time) read</span>
         </div>
-    </div>
 
-    <div class="container md:hidden mt-16">
-        <x-newsletter class="text-sm" />
-    </div>
+        @if ($post->introduction)
+            <div class="break-words max-w-full mt-8
+            prose prose-a:border-b prose-a:border-indigo-400/50 prose-a:text-indigo-400 prose-a:no-underline
+            prose-code:dark:text-current prose-headings:dark:text-white prose-hr:dark:border-gray-800 prose-thead:dark:border-gray-800 prose-strong:text-current prose-tr:dark:border-gray-800 dark:text-current">
+                {!! $post->rendered_introduction !!}
+            </div>
+        @endif
+
+        @if ($post->promotes_affiliate_links && $post->features->isNotEmpty())
+            <div
+                class="grid
+                @if (1 === $post->features->count()) sm:max-w-[320px] sm:mx-auto @endif
+                @if ($post->features->count() > 1) sm:grid-cols-2 @endif
+                @if ($post->features->count() > 2) md:grid-cols-3 @endif
+                gap-4 mt-8"
+            >
+                @foreach ($post->features as $feature)
+                    <x-feature :feature="$feature" />
+                @endforeach
+
+                <p class="col-span-full opacity-75 text-center text-xs">
+                    This article uses affiliate links, which can compensate me at no cost to you if you decide to pursue a deal.<br class="hidden md:inline" />
+                    I only promote products I've personally used and stand behind.
+                </p>
+            </div>
+        @elseif (! should_display_ads() && ! $post->promotes_affiliate_links)
+            <x-deal :deal="$deals->get(0)" class="sm:max-w-screen-xs mt-8 sm:mx-auto text-sm" />
+        @endif
+
+        <x-blog.toc :toc="$post->getTableOfContents()" class="mt-8 text-sm" />
+
+        <div
+            class="break-words max-w-full mt-8
+            prose prose-a:border-b prose-a:border-indigo-400/50 prose-a:text-indigo-400 prose-a:no-underline
+            prose-code:dark:text-current prose-headings:dark:text-white prose-hr:dark:border-gray-800 prose-thead:dark:border-gray-800
+            prose-strong:text-current prose-tr:dark:border-gray-800 dark:text-current"
+        >
+            {!! $post->rendered_content !!}
+        </div>
+    </article>
+
+    <x-newsletter class="container mt-16" />
 
     @if ($others->isNotEmpty())
         <div class="container mt-16">

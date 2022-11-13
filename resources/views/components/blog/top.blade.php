@@ -11,7 +11,7 @@
 
     <nav class="flex items-center gap-6 sm:gap-8">
         @if (auth()->check() && 'benjamincrozat@me.com' === auth()->user()?->email)
-            <a href="/nova" class="font-normal text-sm sm:text-base">
+            <a href="{{ config('nova.path') }}" class="font-normal text-sm sm:text-base">
                 Nova
             </a>
         @endif

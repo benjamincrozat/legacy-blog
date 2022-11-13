@@ -1,4 +1,4 @@
-<div {{ $attributes->merge(['class' => 'border dark:border-gray-800 flex flex-col gap-2 p-4 rounded']) }}>
+<div {{ $attributes->merge(['class' => 'border dark:border-gray-800 flex flex-col gap-2 !leading-[.65rem] p-4 rounded']) }}>
     <div class="flex flex-grow items-center justify-between gap-8">
         <div>
             @if (! empty($title))

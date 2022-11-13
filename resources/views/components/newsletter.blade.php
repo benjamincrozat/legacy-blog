@@ -1,22 +1,15 @@
-<x-widget {{ $attributes }}>
-    <x-slot:title>
-        Newsletter
-    </x-slot:title>
+<section {{ $attributes }}>
+    <h2 class="font-semibold sm:max-w-screen-xs mx-auto text-xl sm:text-2xl md:text-3xl text-center">
+        I share everything I learn about the&nbsp;art&nbsp;of&nbsp;crafting&nbsp;websites, <span class="text-indigo-400">for&nbsp;free</span>!
+    </h2>
 
-    <p>I share everything I learn about the art of crafting websites, <span class="text-indigo-400">for&nbsp;free</span>.</p>
+    <x-form method="POST" action="{{ route('subscribe') }}" class="max-w-screen-xs mx-auto mt-8">
+        <input type="email" name="email" id="email" placeholder="homer@simpson.com" required class="dark:bg-gray-700/40 block border-0 placeholder-gray-300 dark:placeholder-gray-600 px-4 py-3 rounded-md shadow w-full" />
 
-    <x-form method="POST" action="{{ route('subscribe') }}" class="mt-3">
-        <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="homer@simpson.com"
-            required
-            class="dark:bg-gray-700/40 block dark:border-0 border-gray-200 placeholder-gray-300 dark:placeholder-gray-600 rounded md:text-sm w-full"
-        />
-
-        <button type="submit" class="bg-gradient-to-r from-purple-300 dark:from-purple-700 to-purple-400 dark:to-purple-800 block font-bold mt-4 px-3 py-2 rounded-sm shadow-md text-center text-purple-50 w-full">
-            Sign me up!
+        <button class="bg-gradient-to-r from-purple-300 dark:from-purple-500 to-purple-400 dark:to-purple-600 block font-bold mt-2 px-4 py-3 rounded-md shadow-lg text-white w-full">
+            Subscribe
         </button>
     </x-form>
-</x-widget>
+
+    {{ $slot }}
+</section>
