@@ -51,7 +51,7 @@
                 @endforeach
 
                 <p class="col-span-full opacity-75 text-center text-xs">
-                    This article uses affiliate links, which can compensate me at no cost to you if you decide to pursue a deal.<br class="hidden md:inline" />
+                    This article uses affiliate links, which can compensate me at no cost to you if you decide to pursue a deal. @if ($post->features->count() > 1) <br class="hidden md:inline" /> @endif
                     I only promote products I've personally used and stand behind.
                 </p>
             </div>
