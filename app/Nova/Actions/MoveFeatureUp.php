@@ -19,6 +19,11 @@ class MoveFeatureUp extends Action
     {
         $models->each(function ($model) {
             if ($model->position > 1) {
+                $model
+                    ->query()
+                    ->where('position', $model->position - 1)
+                    ->update(['position' => $model->position]);
+
                 $model->decrement('position');
             }
         });
