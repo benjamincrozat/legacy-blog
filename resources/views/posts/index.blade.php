@@ -5,7 +5,7 @@
 >
     <x-blog.top class="container mt-4 md:mt-8" />
 
-    <x-newsletter class="container lg:max-w-screen-md mt-16">
+    <x-newsletter class="container mt-16">
         <p class="mt-8">
             Hi there! 👋
         </p>
@@ -20,7 +20,7 @@
     </x-newsletter>
 
     @if ($highlights->isNotEmpty())
-        <section class="md:container mt-16">
+        <section class="md:container md:max-w-[1024px] mt-16">
             <h2 class="font-bold px-4 md:px-0 text-center text-xl">
                 Featured articles
             </h2>
@@ -33,9 +33,9 @@
         </section>
     @endif
 
-    <x-deals class="md:container mt-8 sm:mt-16" />
+    <x-deals class="md:container md:max-w-[1024px] mt-8 sm:mt-16" />
 
-    <section class="container mt-8 sm:mt-16">
+    <section class="container max-w-[1024px] mt-8 sm:mt-16">
         <h2 class="font-bold px-4 sm:px-0 text-center text-xl">
             Latest articles
         </h2>
