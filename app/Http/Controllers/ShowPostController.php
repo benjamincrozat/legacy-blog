@@ -18,7 +18,7 @@ class ShowPostController extends Controller
         return view('posts.show', [
             'deals' => $deals->isNotEmpty() ? $deals : Deal::active()->inRandomOrder()->take(2)->get(),
             'post' => $post,
-            'others' => Post::whereNotIn('id', [$post->id])->inRandomOrder()->withUser()->get(),
+            'others' => Post::whereNotIn('id', [$post->id])->inRandomOrder()->withUser()->limit(10)->get(),
         ]);
     }
 }
