@@ -71,9 +71,7 @@
         </div>
     </article>
 
-    <div class="container max-w-[1024px] mt-16">
-        <x-newsletter />
-    </div>
+    <x-newsletter class="container max-w-[1024px] mt-16" />
 
     @if ($others->isNotEmpty())
         <div class="container max-w-[1024px] mt-16">
