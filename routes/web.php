@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ShowPostController;
+use App\Http\Controllers\ListDealsController;
 use App\Http\Controllers\ListPostsController;
 use App\Http\Controllers\SubscribeController;
 use App\Http\Controllers\RedirectToAffiliateController;
@@ -12,6 +13,8 @@ Route::get('/', HomeController::class)->name('home');
 Route::post('/subscribe', SubscribeController::class)->name('subscribe');
 
 Route::get('/recommends/{affiliate:slug}', RedirectToAffiliateController::class)->name('affiliate');
+
+Route::get('/deals', ListDealsController::class)->name('deals.index');
 
 Route::feeds();
 
