@@ -36,8 +36,6 @@
             prose-code:dark:text-current prose-headings:dark:text-white prose-hr:dark:border-gray-800 prose-thead:dark:border-gray-800 prose-strong:text-current prose-tr:dark:border-gray-800 dark:text-current">
                 <x-newsletter-notice />
 
-                {!! $post->introduction !!}
-
                 @if ($post->introduction)
                     {!! $post->rendered_introduction !!}
                 @endif
