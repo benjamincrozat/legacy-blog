@@ -1,5 +1,5 @@
 <x-app
-    title="Best SaaS deals in the AI, SEO & web hosting area"
+    title="Best SaaS deals in the AI, SEO, web hosting area & more"
     description=""
 >
     <x-blog.top class="container mt-4 md:mt-8" />
@@ -16,16 +16,21 @@
 
     <section class="container max-w-[1024px] mt-16">
         <h1 class="font-bold px-4 sm:px-0 text-center text-xl">
-            Best SaaS deals in the AI, SEO & web hosting area
+            Best SaaS deals in the AI, SEO, web hosting area & more
         </h1>
 
-        @if ($deals->isNotEmpty())
+        @forelse ($categories as $category)
+            <h2 class="font-bold mt-8 sm:mt-16 px-4 sm:px-0 text-xl">
+                Best {{ $category->name }} SaaS products
+            </h2>
+
             <div class="grid sm:grid-cols-2 gap-4 mt-8">
-                @foreach ($deals as $deal)
+                @foreach ($category->deals()->latest()->orderByDesc('end_at')->get() as $deal)
                     <x-deal :deal="$deal" />
                 @endforeach
             </div>
-        @endif
+        @empty
+        @endforelse
     </section>
 
     <div class="bg-gray-900 dark:bg-black flex-grow mt-16">
