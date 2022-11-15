@@ -15,7 +15,7 @@
     </x-breadcrumb>
 
     <section class="container max-w-[1024px] mt-16">
-        <h1 class="font-bold px-4 sm:px-0 text-center text-xl">
+        <h1 class="font-thin text-3xl md:text-5xl dark:text-white">
             Best SaaS deals in the AI, SEO, web hosting area & more
         </h1>
 
