@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
 
         Category::factory(10)->create();
 
-        Deal::factory(10)->create();
+        Deal::factory(10)->withCategory()->create();
 
         Redirect::factory(10)->create();
 

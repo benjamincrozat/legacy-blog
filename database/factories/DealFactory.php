@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Deal;
+use App\Models\Category;
 use App\Models\Affiliate;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -19,5 +21,12 @@ class DealFactory extends Factory
             'button' => $this->faker->sentence(),
             'start_at' => now(),
         ];
+    }
+
+    public function withCategory() : static
+    {
+        return $this->afterCreating(function (Deal $deal) {
+            $deal->categories()->attach(Category::inRandomOrder()->value('id'));
+        });
     }
 }
