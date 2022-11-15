@@ -1,5 +1,5 @@
 <x-app
-    title="Best SaaS deals in the AI, SEO, web hosting area & more"
+    title="Best SaaS products in the AI, SEO, web hosting area & more"
     description=""
 >
     <x-blog.top class="container mt-4 md:mt-8" />
@@ -16,7 +16,7 @@
 
     <section class="container max-w-[1024px] mt-16">
         <h1 class="font-thin text-3xl md:text-5xl dark:text-white">
-            Best SaaS deals in the AI, SEO, web hosting area & more
+            Best SaaS products in the AI, SEO, web hosting area & more
         </h1>
 
         @forelse ($categories as $category)
@@ -42,7 +42,7 @@
         {
             "@context": "https://schema.org",
             "@type": "NewsArticle",
-            "headline": "Best SaaS deals in the AI, SEO, web hosting area & more",
+            "headline": "Best SaaS products in the AI, SEO, web hosting area & more",
             "datePublished": "2022-11-15 14:00:00",
             "dateModified": "2022-11-15 14:00:00",
             "author": [
