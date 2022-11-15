@@ -26,7 +26,6 @@
             <span>Article written by <a href="{{ route('home') }}" class="font-normal underline" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">Benjamin Crozat</a></span>
         </div>
 
-
         <div class="break-words max-w-full mt-8 prose prose-a:border-b prose-a:border-indigo-400/50
         prose-a:text-indigo-400 prose-a:no-underline prose-code:dark:text-current prose-headings:dark:text-white
         prose-hr:dark:border-gray-800 prose-thead:dark:border-gray-800 prose-strong:text-current
@@ -38,7 +37,7 @@
 
                 <div class="not-prose">
                     <ul class="grid sm:grid-cols-2 gap-4 mt-8">
-                        @foreach ($category->deals()->get() as $deal)
+                        @foreach ($category->deals()->highlightedFirst()->get() as $deal)
                             <li><x-deal :deal="$deal" class="h-full" /></li>
                         @endforeach
                     </ul>
