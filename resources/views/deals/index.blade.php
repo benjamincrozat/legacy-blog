@@ -1,5 +1,5 @@
 <x-app
-    title="Best SaaS products for AI writing, SEO, web hosting & more"
+    title="Best services for AI writing, SEO, web hosting & more"
     description=""
     class="dark:bg-gray-900 text-gray-600 dark:text-gray-300"
 >
@@ -17,7 +17,7 @@
 
     <article class="container max-w-[1024px] mt-8 sm:mt-16">
         <h1 class="font-thin text-3xl md:text-5xl dark:text-white">
-            Best SaaS products for AI writing, SEO, web hosting & more
+            Best services for AI writing, SEO, web hosting & more
         </h1>
 
         <div class="flex items-center gap-2 mt-4 text-sm">
@@ -28,7 +28,7 @@
 
         @forelse ($categories as $category)
             <h2 class="font-bold mt-8 sm:mt-16 text-xl">
-                Best {{ $category->name }} SaaS products
+                Best {{ $category->name }} services
             </h2>
 
             <div class="break-words max-w-full mt-8 prose prose-a:border-b prose-a:border-indigo-400/50
@@ -70,7 +70,7 @@
         {
             "@context": "https://schema.org",
             "@type": "NewsArticle",
-            "headline": "Best SaaS products for AI writing, SEO, web hosting & more",
+            "headline": "Best services for AI writing, SEO, web hosting & more",
             "datePublished": "2022-11-15 14:00:00",
             "dateModified": "2022-11-15 14:00:00",
             "author": [
