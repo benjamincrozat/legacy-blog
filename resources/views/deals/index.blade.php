@@ -32,11 +32,11 @@
                 {!! $category->rendered_description !!}
             </div>
 
-            <div class="grid sm:grid-cols-2 gap-4 mt-8">
+            <ul class="grid sm:grid-cols-2 gap-4 mt-8">
                 @foreach ($category->deals()->orderByDesc('end_at')->orderByDesc('created_at')->get() as $deal)
-                    <x-deal :deal="$deal" />
+                    <li><x-deal :deal="$deal" /></li>
                 @endforeach
-            </div>
+            </ul>
         @empty
             <p class="mt-8 sm:mt-16 text-center text-gray-400">There's no deal yet.</p>
         @endforelse
