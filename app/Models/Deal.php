@@ -34,8 +34,14 @@ class Deal extends BaseModel
     public function scopeHighlightedFirst(Builder $query) : void
     {
         $query
-            ->orderByRaw('CASE WHEN end_at != null THEN end_at END DESC')
-            ->orderByRaw('CASE WHEN highlighted = 1 THEN highlighted END DESC');
+            ->orderByRaw(<<<SQL
+CASE WHEN highlighted = 1 AND end_at IS NOT NULL THEN
+    highlighted
+END DESC,
+CASE WHEN highlighted = 1 AND end_at IS NOT NULL THEN
+    end_at
+END ASC
+SQL);
     }
 
     public function affiliate() : BelongsTo
