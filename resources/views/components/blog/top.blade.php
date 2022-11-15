@@ -9,16 +9,18 @@
         </span>
     </div>
 
-    <nav class="flex items-center gap-6 sm:gap-8">
-        <a
-            href="{{ route('deals.index') }}"
-            class="font-normal relative text-sm sm:text-base text-indigo-400"
-            @click="window.fathom?.trackGoal('Y4RZQNDR', 0)"
-        >
-            <span>Deals</span>
-            <span class="absolute -top-4 -right-6 bg-gradient-to-r from-orange-300 dark:from-orange-400 to-orange-400 dark:to-orange-500 font-bold inline-block leading-tight px-2 py-1 rounded-full text-white text-xs transform scale-75">New</span>
-        </a>
+    @if (! Route::is('deals.index'))
+        <nav class="flex items-center gap-6 sm:gap-8">
+            <a
+                href="{{ route('deals.index') }}"
+                class="font-normal relative text-sm sm:text-base text-indigo-400"
+                @click="window.fathom?.trackGoal('Y4RZQNDR', 0)"
+            >
+                <span>Deals</span>
+                <span class="absolute -top-4 -right-6 bg-gradient-to-r from-orange-300 dark:from-orange-400 to-orange-400 dark:to-orange-500 font-bold inline-block leading-tight px-2 py-1 rounded-full text-white text-xs transform scale-75">New</span>
+            </a>
 
-        <x-hire-me />
-    </nav>
+            <x-hire-me />
+        </nav>
+    @endif
 </div>
