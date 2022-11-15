@@ -12,7 +12,7 @@
     <nav class="flex items-center gap-6 sm:gap-8">
         <a
             href="{{ route('deals.index') }}"
-            class="font-normal relative text-sm sm:text-base"
+            class="font-normal relative text-sm sm:text-base text-indigo-400"
             @click="window.fathom?.trackGoal('Y4RZQNDR', 0)"
         >
             <span>Deals</span>
