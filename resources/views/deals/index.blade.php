@@ -30,6 +30,7 @@
                 @endforeach
             </div>
         @empty
+            <p class="mt-8 sm:mt-16 text-center text-gray-400">There's no deal yet.</p>
         @endforelse
     </section>
 

@@ -11,7 +11,7 @@ class ListDealsController extends Controller
     public function __invoke(Request $request) : View
     {
         return view('deals.index', [
-            'categories' => Category::orderBy('name')->get(),
+            'categories' => Category::query()->orderBy('name')->whereHas('deals')->get(),
         ]);
     }
 }
