@@ -6,6 +6,7 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Line;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Stack;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Affiliate extends Resource
@@ -19,6 +20,11 @@ class Affiliate extends Resource
     public static $search = [
         'id', 'name', 'slug', 'link',
     ];
+
+    public static function indexQuery(NovaRequest $request, $query)
+    {
+        return $query->withCount('deals');
+    }
 
     public function fields(NovaRequest $request) : array
     {
@@ -51,6 +57,11 @@ HTML;
 
             Text::make('Link')
                 ->rules('required', 'url'),
+
+            Text::make('Deals Count')
+                ->onlyOnIndex(),
+
+            HasMany::make('Deals'),
         ];
     }
 
