@@ -1,5 +1,5 @@
 <x-app
-    title="Best SaaS products in the AI, SEO, web hosting area & more"
+    title="Best SaaS products for AI, SEO, web hosting & more"
     description=""
     class="dark:bg-gray-900 text-gray-600 dark:text-gray-300"
 >
@@ -17,7 +17,7 @@
 
     <section class="container max-w-[1024px] mt-16">
         <h1 class="font-thin text-3xl md:text-5xl dark:text-white">
-            Best SaaS products in the AI, SEO, web hosting area & more
+            Best SaaS products for AI, SEO, web hosting & more
         </h1>
 
         @forelse ($categories as $category)
