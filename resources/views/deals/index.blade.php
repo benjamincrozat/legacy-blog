@@ -15,7 +15,7 @@
         </x-breadcrumb-item>
     </x-breadcrumb>
 
-    <section class="container max-w-[1024px] mt-16">
+    <section class="container max-w-[1024px] mt-8 sm:mt-16">
         <h1 class="font-thin text-3xl md:text-5xl dark:text-white">
             Best SaaS products for AI writing, SEO, web hosting & more
         </h1>
