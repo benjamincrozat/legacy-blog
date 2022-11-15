@@ -14,7 +14,7 @@ class Category extends BaseModel
     public function renderedDescription() : Attribute
     {
         return Attribute::make(
-            fn () => Str::marxdown($this->description)
+            fn () => Str::marxdown($this->description ?? '')
         )->shouldCache();
     }
 
