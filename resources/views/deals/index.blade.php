@@ -26,24 +26,25 @@
             Article written by <a href="{{ route('home') }}" class="font-normal underline" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">Benjamin Crozat</a>
         </div>
 
-        @forelse ($categories as $category)
-            <div class="break-words max-w-full mt-8 prose prose-a:border-b prose-a:border-indigo-400/50
-            prose-a:text-indigo-400 prose-a:no-underline prose-code:dark:text-current prose-headings:dark:text-white
-            prose-hr:dark:border-gray-800 prose-thead:dark:border-gray-800 prose-strong:text-current
-            prose-tr:dark:border-gray-800 dark:text-current">
+
+        <div class="break-words max-w-full mt-8 prose prose-a:border-b prose-a:border-indigo-400/50
+        prose-a:text-indigo-400 prose-a:no-underline prose-code:dark:text-current prose-headings:dark:text-white
+        prose-hr:dark:border-gray-800 prose-thead:dark:border-gray-800 prose-strong:text-current
+        prose-tr:dark:border-gray-800 dark:text-current">
+            @foreach ($categories as $category)
                 <h2>Best {{ $category->name }} services</h2>
 
                 {!! $category->rendered_description !!}
-            </div>
 
-            <ul class="grid sm:grid-cols-2 gap-4 mt-8">
-                @foreach ($category->deals()->orderByDesc('end_at')->orderByDesc('created_at')->get() as $deal)
-                    <li><x-deal :deal="$deal" class="h-full" /></li>
-                @endforeach
-            </ul>
-        @empty
-            <p class="mt-8 sm:mt-16 text-center text-gray-400">There's no deal yet.</p>
-        @endforelse
+                <div class="not-prose">
+                    <ul class="grid sm:grid-cols-2 gap-4 mt-8">
+                        @foreach ($category->deals()->orderByDesc('end_at')->orderByDesc('created_at')->get() as $deal)
+                            <li><x-deal :deal="$deal" class="h-full" /></li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endforeach
+        </div>
     </article>
 
     <x-newsletter class="container max-w-[1024px] mt-16" />
