@@ -33,9 +33,27 @@
         </section>
     @endif
 
-    <x-deals class="md:container md:max-w-[1024px] mt-8 sm:mt-16" />
+    <section class="md:container md:max-w-[1024px] mt-8 sm:mt-16">
+        <h2 class="font-bold px-4 sm:px-0 text-center text-xl">
+            Best SaaS deals in the AI, SEO & web hosting area
+        </h2>
 
-    <section class="container max-w-[1024px] mt-8 sm:mt-16">
+        @if ($deals->isNotEmpty())
+            <div class="flex md:grid md:grid-cols-2 gap-4 mt-8 px-4 md:px-0 overflow-x-scroll md:overflow-x-visible snap-x md:snap-none snap-mandatory">
+                @foreach ($deals as $deal)
+                    <x-deal :deal="$deal" class="flex-shrink-0 snap-start sm:snap-center md:snap-normal scroll-ml-4 md:scroll-ml-0 w-[90%] sm:w-[70%] md:w-auto" />
+                @endforeach
+            </div>
+        @endif
+
+        <div class="container mt-8 sm:mt-4 text-center">
+            <a href="{{ route('deals.index') }}" class="bg-gradient-to-r from-indigo-300 dark:from-indigo-500 to-indigo-400 dark:to-indigo-600 block sm:inline-block font-bold px-8 py-3 rounded shadow-md text-center text-white">
+                See all deals
+            </a>
+        </div>
+    </section>
+
+    <section class="container max-w-[1024px] mt-16">
         <h2 class="font-bold px-4 sm:px-0 text-center text-xl">
             Latest articles
         </h2>
