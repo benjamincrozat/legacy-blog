@@ -3,15 +3,15 @@
 namespace App\Models;
 
 use Illuminate\Support\Str;
-use App\Models\Traits\IsCategorizable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
 class Deal extends BaseModel
 {
-    use HasFactory, IsCategorizable;
+    use HasFactory;
 
     protected $casts = [
         'start_at' => 'datetime',
@@ -34,6 +34,11 @@ class Deal extends BaseModel
     public function affiliate() : BelongsTo
     {
         return $this->belongsTo(Affiliate::class);
+    }
+
+    public function categories() : MorphToMany
+    {
+        return $this->morphToMany(Category::class, 'categorizable');
     }
 
     public function renderedContent() : Attribute

@@ -4,7 +4,6 @@ namespace App\Nova;
 
 use Laravel\Nova\Panel;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Tag;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Line;
 use Laravel\Nova\Fields\Text;
@@ -81,11 +80,6 @@ HTML;
                 Textarea::make('Description')
                     ->maxlength(160)
                     ->rules('required'),
-
-                Tag::make('Categories')
-                    ->displayAsList()
-                    ->showCreateRelationButton()
-                    ->withPreview(),
 
                 Boolean::make('Promotes affiliate links')
                     ->sortable()

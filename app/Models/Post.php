@@ -7,7 +7,6 @@ use Spatie\Feed\FeedItem;
 use Illuminate\Support\Str;
 use Laravel\Scout\Searchable;
 use Illuminate\Support\Collection;
-use App\Models\Traits\IsCategorizable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Laravel\Scout\Attributes\SearchUsingFullText;
@@ -17,7 +16,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Post extends BaseModel implements Feedable
 {
-    use HasFactory, IsCategorizable, Searchable;
+    use HasFactory, Searchable;
 
     protected $casts = [
         'modified_at' => 'date',

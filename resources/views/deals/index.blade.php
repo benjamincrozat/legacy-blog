@@ -37,4 +37,21 @@
     <div class="bg-gray-900 dark:bg-black flex-grow mt-16">
         <x-footer class="text-gray-200" />
     </div>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "NewsArticle",
+            "headline": "Best SaaS deals in the AI, SEO, web hosting area & more",
+            "datePublished": "2022-11-15 14:00:00",
+            "dateModified": "2022-11-15 14:00:00",
+            "author": [
+                {
+                    "@type": "Person",
+                    "name": "Benjamin Crozat",
+                    "url": "https://benjamincrozat.com"
+                }
+            ]
+        }
+    </script>
 </x-app>
