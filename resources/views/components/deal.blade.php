@@ -1,13 +1,13 @@
 @if (! empty($deal))
     <aside {{ $attributes->except('deal')->merge([
-        'class' => $deal->end_at ? 'border border-orange-200 dark:border-orange-900 flex flex-col gap-2 p-4 rounded' : 'border dark:border-gray-800 flex flex-col gap-2 p-4 rounded'
+        'class' => $deal->end_at && $deal->highlighted ? 'border border-orange-200 dark:border-orange-900 flex flex-col gap-2 p-4 rounded' : 'border dark:border-gray-800 flex flex-col gap-2 p-4 rounded'
     ]) }}>
         <div class="flex flex-grow items-center justify-between gap-8">
             <div>
                 <p>
-                    <span class="border-b font-bold @if ($deal->end_at) border-orange-400/30 text-orange-400 @else border-gray-200/30 @endif">{{ $deal->affiliate->name }}</span>
+                    <span class="border-b font-bold @if ($deal->end_at && $deal->highlighted) border-orange-400/30 text-orange-400 @else border-gray-200/30 @endif">{{ $deal->affiliate->name }}</span>
 
-                    @if ($deal->end_at)
+                    @if ($deal->end_at && $deal->highlighted)
                         <span class="bg-gradient-to-r from-orange-300 dark:from-orange-400 to-orange-400 dark:to-orange-500 inline-block ml-2 px-3 py-1 rounded-full text-white text-xs"><span class="font-bold">@choice(':count day|:count days', $deal->end_at->diffInDays())</span> left</span>
                     @endif
                 </p>

@@ -20,6 +20,22 @@ class DealTest extends TestCase
         $this->assertCount(1, Deal::active()->get());
     }
 
+    public function test_has_an_highlighted_scope() : void
+    {
+        $deal = Deal::factory()->forAffiliate()->create([
+            'highlighted' => true,
+            'end_at' => now()->addWeek(),
+        ]);
+
+        Deal::factory()->forAffiliate()->create([
+            'end_at' => now()->addWeek(),
+        ]);
+
+        $firstDeal = Deal::active()->highlightedFirst()->first();
+
+        $this->assertTrue($firstDeal->is($deal));
+    }
+
     public function test_has_an_affiliate_relationship() : void
     {
         $deal = Deal::factory()->forAffiliate()->create();

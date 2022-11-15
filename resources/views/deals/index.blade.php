@@ -38,7 +38,7 @@
 
                 <div class="not-prose">
                     <ul class="grid sm:grid-cols-2 gap-4 mt-8">
-                        @foreach ($category->deals()->orderByDesc('end_at')->orderByDesc('created_at')->get() as $deal)
+                        @foreach ($category->deals()->get() as $deal)
                             <li><x-deal :deal="$deal" class="h-full" /></li>
                         @endforeach
                     </ul>

@@ -31,6 +31,13 @@ class Deal extends BaseModel
         ]);
     }
 
+    public function scopeHighlightedFirst(Builder $query) : void
+    {
+        $query
+            ->orderByDesc('end_at')
+            ->orderByDesc('highlighted');
+    }
+
     public function affiliate() : BelongsTo
     {
         return $this->belongsTo(Affiliate::class);

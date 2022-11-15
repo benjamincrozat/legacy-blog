@@ -15,7 +15,7 @@ class ListPostsController extends Controller
 
         return view('posts.index', [
             'deals' => Deal::active()
-                ->orderByDesc('end_at')
+                ->highlightedFirst()
                 ->orderByDesc('created_at')
                 ->limit(6)
                 ->get(),
