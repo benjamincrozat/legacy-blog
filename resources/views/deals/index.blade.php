@@ -25,7 +25,7 @@
             </h2>
 
             <div class="grid sm:grid-cols-2 gap-4 mt-4">
-                @foreach ($category->deals()->latest()->orderByDesc('end_at')->get() as $deal)
+                @foreach ($category->deals()->orderByDesc('end_at')->get() as $deal)
                     <x-deal :deal="$deal" />
                 @endforeach
             </div>
