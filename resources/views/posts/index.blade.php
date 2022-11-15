@@ -47,7 +47,7 @@
         @endif
 
         <div class="container mt-4 text-center">
-            <a href="{{ route('deals.index') }}" class="bg-gradient-to-r from-indigo-300 dark:from-indigo-500 to-indigo-400 dark:to-indigo-600 block sm:inline-block font-bold px-8 py-3 rounded shadow-md text-center text-white">
+            <a href="{{ route('deals.index') }}" class="bg-gradient-to-r from-indigo-300 dark:from-indigo-500 to-indigo-400 dark:to-indigo-600 block sm:inline-block font-bold px-4 sm:px-16 py-3 rounded shadow-md text-center text-white">
                 See all deals
             </a>
         </div>
