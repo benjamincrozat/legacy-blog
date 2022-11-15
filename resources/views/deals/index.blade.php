@@ -21,7 +21,7 @@
         </h1>
 
         @forelse ($categories as $category)
-            <h2 class="font-bold mt-8 sm:mt-16 px-4 sm:px-0 text-xl">
+            <h2 class="font-bold mt-8 sm:mt-16 text-xl">
                 Best {{ $category->name }} SaaS products
             </h2>
 
