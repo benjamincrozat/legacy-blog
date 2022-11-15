@@ -15,7 +15,7 @@
         </x-breadcrumb-item>
     </x-breadcrumb>
 
-    <article class="container max-w-[1024px] mt-8 sm:mt-16">
+    <article class="container mt-8 sm:mt-16">
         <h1 class="font-thin text-3xl md:text-5xl dark:text-white">
             Best services for AI writing, SEO, web&nbsp;hosting&nbsp;&&nbsp;more
         </h1>
