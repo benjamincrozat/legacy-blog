@@ -1,5 +1,5 @@
 <x-app
-    title="Deals for SaaS products in the AI, SEO & web hosting areas"
+    title="Best SaaS deals in the AI, SEO & web hosting area"
     description=""
 >
     <x-blog.top class="container mt-4 md:mt-8" />
@@ -16,7 +16,7 @@
 
     <section class="container max-w-[1024px] mt-16">
         <h1 class="font-bold px-4 sm:px-0 text-center text-xl">
-            Deals for SaaS products in the AI, SEO & web hosting areas
+            Best SaaS deals in the AI, SEO & web hosting area
         </h1>
 
         @if ($deals->isNotEmpty())
