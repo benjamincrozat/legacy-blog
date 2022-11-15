@@ -27,14 +27,12 @@
         </div>
 
         @forelse ($categories as $category)
-            <h2 class="font-bold mt-8 sm:mt-16 text-xl">
-                Best {{ $category->name }} services
-            </h2>
-
             <div class="break-words max-w-full mt-8 prose prose-a:border-b prose-a:border-indigo-400/50
             prose-a:text-indigo-400 prose-a:no-underline prose-code:dark:text-current prose-headings:dark:text-white
             prose-hr:dark:border-gray-800 prose-thead:dark:border-gray-800 prose-strong:text-current
             prose-tr:dark:border-gray-800 dark:text-current">
+                <h2>Best {{ $category->name }} services</h2>
+
                 {!! $category->rendered_description !!}
             </div>
 
