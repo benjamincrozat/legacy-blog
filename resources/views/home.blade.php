@@ -4,7 +4,29 @@
     :disable-ads="true"
     class="text-indigo-50 dark:text-gray-300"
 >
-    <x-home.navigation />
+    <div class="bg-indigo-500 dark:bg-gray-800 md:sticky md:top-0 md:z-10">
+        <div class="container sm:flex sm:items-center sm:justify-between py-4 text-center sm:text-left">
+            <div>
+                <span class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase">
+                    Benjamin Crozat
+                </span>
+
+                <span class="block opacity-75 text-xs tracking-widest uppercase">
+                    Full-stack Laravel developer
+                </span>
+            </div>
+
+            <nav class="flex items-center justify-center sm:justify-start gap-8 mt-8 sm:mt-0">
+                <a href="{{ route('posts.index') }}" class="text-indigo-100 dark:text-gray-50 text-xs tracking-widest uppercase">
+                    Read my blog
+                </a>
+
+                <a href="mailto:benjamincrozat@me.com" class="border-b border-white/50 font-normal leading-loose text-white text-xs tracking-widest uppercase" @click="window.fathom?.trackGoal('EWIGDNLB', 0)">
+                    Contact me!
+                </a>
+            </nav>
+        </div>
+    </div>
 
     <x-home.section class="bg-gradient-to-r from-indigo-500 dark:from-gray-800 to-indigo-400 dark:to-gray-700">
         <header class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8">
@@ -41,7 +63,48 @@
             </p>
         </div>
 
-        <x-home.companies-trusted-me class="border-t border-indigo-400 dark:border-gray-600 mt-16 pt-16" />
+        <div class="border-t border-indigo-400 dark:border-gray-600 mt-16 pt-16">
+            <h3 class="font-bold text-xl text-center">
+                These companies trusted me
+            </h3>
+
+            <ul class="flex flex-wrap items-center justify-center gap-x-16 gap-y-8 mt-8">
+                <li>
+                    <a href="https://www.doctissimo.fr" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
+                        <x-icon-doctissimo class="fill-current h-6 text-white" />
+                        <span class="sr-only">Doctissimo</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.iconosquare.com" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
+                        <x-icon-iconosquare class="fill-current h-8 text-white" />
+                        <span class="sr-only">Iconosquare</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://jetfly.com" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
+                        <x-icon-jetfly class="fill-current h-12 text-white" />
+                        <span class="sr-only">Jetfly</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://mym.fans" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
+                        <x-icon-mym class="fill-current h-6 text-white" />
+                        <span class="sr-only">MYM</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://qwant.com" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
+                        <x-icon-qwant class="fill-current w-16 text-white" />
+                        <span class="sr-only">Qwant</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </x-home.section>
 
     <x-home.section
