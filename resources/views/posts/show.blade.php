@@ -35,7 +35,7 @@
             prose prose-a:border-b prose-a:border-indigo-400/50 prose-a:text-indigo-400 prose-a:no-underline
             prose-code:dark:text-current prose-headings:dark:text-white prose-hr:dark:border-gray-800 prose-thead:dark:border-gray-800 prose-strong:text-current prose-tr:dark:border-gray-800 dark:text-current">
                 <p class="italic text-xl">
-                    Before you start reading this article, did you know I have a <a href="#newsletter">free newsletter</a> you can subscribe to?
+                    Before you start reading this article, did you know I have a <a href="#newsletter" class="font-bold">free newsletter</a> you can subscribe to?
                 </p>
 
                 @if ($post->introduction)
