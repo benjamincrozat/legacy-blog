@@ -17,8 +17,8 @@
                 </div>
             </div>
 
-            @if ($deal->image)
-                <img src="{{ str_replace('w_auto', 'h_96', $deal->image) }}" width="48" height="48" alt="{{ $deal->affiliate->name }}" class="flex-shrink-0 rounded-lg" />
+            @if ($deal->affiliate->image)
+                <img src="{{ str_replace('w_auto', 'h_96', $deal->affiliate->image) }}" width="48" height="48" alt="{{ $deal->affiliate->name }}" class="flex-shrink-0 rounded-lg" />
             @endif
         </div>
 
