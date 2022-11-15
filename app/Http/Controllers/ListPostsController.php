@@ -17,7 +17,7 @@ class ListPostsController extends Controller
             'deals' => Deal::active()
                 ->orderByDesc('end_at')
                 ->orderByDesc('created_at')
-                ->limit(4)
+                ->limit(6)
                 ->get(),
             'highlights' => $highlights,
             'posts' => Post::latest()->withUser()->whereNotIn('id', $highlights->pluck('post.id'))->get(),
