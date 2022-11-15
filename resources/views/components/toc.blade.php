@@ -1,10 +1,10 @@
 @if ($toc->isNotEmpty())
     <div {{ $attributes->except('toc') }}>
-        <h4 class="font-bold mb-2 text-base">
+        <div class="font-bold mb-2">
             Table of contents
-        </h4>
+        </div>
 
-        <nav class="mt-3 text-sm">
+        <nav class="mt-3">
             <ul class="grid gap-2">
                 @foreach ($toc as $item)
                     <li>
