@@ -11,7 +11,7 @@
 
     <nav class="flex items-center gap-6 sm:gap-8">
         <a
-            href="{{ config('deals.index') }}"
+            href="{{ route('deals.index') }}"
             class="font-normal relative text-sm sm:text-base"
             @click="window.fathom?.trackGoal('Y4RZQNDR', 0)"
         >
