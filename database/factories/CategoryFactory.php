@@ -14,6 +14,7 @@ class CategoryFactory extends Factory
         return [
             'name' => ucfirst(fake()->word()),
             'slug' => fake()->slug(),
+            'description' => fake()->paragraphs(3, true),
         ];
     }
 }

@@ -2,12 +2,21 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Str;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
 class Category extends BaseModel
 {
     use HasFactory;
+
+    public function renderedDescription() : Attribute
+    {
+        return Attribute::make(
+            fn () => Str::marxdown($this->description)
+        )->shouldCache();
+    }
 
     public function deals() : MorphToMany
     {
