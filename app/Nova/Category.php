@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\MorphToMany;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -31,6 +32,9 @@ class Category extends Resource
             Text::make('Slug')
                 ->rules('required', 'max:255')
                 ->sortable(),
+
+            Markdown::make('Description')
+                ->rules('nullable'),
 
             MorphToMany::make('Deals')
                 ->searchable(),
