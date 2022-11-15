@@ -36,7 +36,7 @@ class DealTest extends TestCase
         $deals = Deal::active()->highlightedFirst()->get();
 
         $this->assertTrue($deals[0]->is($first));
-        $this->assertTrue($deals[1]->is($second));
+        $this->assertFalse($deals[1]->is($second));
     }
 
     public function test_has_an_affiliate_relationship() : void
