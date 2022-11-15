@@ -17,7 +17,7 @@
 
     <article class="container max-w-[1024px] mt-8 sm:mt-16">
         <h1 class="font-thin text-3xl md:text-5xl dark:text-white">
-            Best services for AI writing, SEO, web hosting & more
+            Best services for AI writing, SEO, web&nbsp;hosting&nbsp;&&nbsp;more
         </h1>
 
         <div class="flex items-center gap-2 mt-4 text-sm">
