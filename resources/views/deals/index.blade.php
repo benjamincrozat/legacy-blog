@@ -1,6 +1,7 @@
 <x-app
     title="Best SaaS products in the AI, SEO, web hosting area & more"
     description=""
+    class="dark:bg-gray-900 text-gray-600 dark:text-gray-300"
 >
     <x-blog.top class="container mt-4 md:mt-8" />
 
