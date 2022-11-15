@@ -30,15 +30,15 @@
             <span class="opacity-75">@choice(':count minute|:count minutes', $post->read_time) read</span>
         </div>
 
-        @if ($post->introduction || ! $post->promotes_affiliate_links)
+        @if (! $post->promotes_affiliate_links)
+            <x-newsletter-notice class="mt-8" />
+        @endif
+
+        @if ($post->introduction)
             <div class="break-words max-w-full mt-8
             prose prose-a:border-b prose-a:border-indigo-400/50 prose-a:text-indigo-400 prose-a:no-underline
             prose-code:dark:text-current prose-headings:dark:text-white prose-hr:dark:border-gray-800 prose-thead:dark:border-gray-800 prose-strong:text-current prose-tr:dark:border-gray-800 dark:text-current">
-                <x-newsletter-notice />
-
-                @if ($post->introduction)
-                    {!! $post->rendered_introduction !!}
-                @endif
+                {!! $post->rendered_introduction !!}
             </div>
         @endif
 
