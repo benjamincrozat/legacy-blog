@@ -2,14 +2,13 @@
 
 namespace App\Providers;
 
-use App\Models\Deal;
 use App\ConvertKit\Client;
+use App\Models\Subscriber;
 use Illuminate\Support\Str;
 use Illuminate\Http\Client\Factory;
 use Illuminate\Support\Facades\View;
 use App\CommonMark\MarxdownConverter;
 use App\CommonMark\LightdownConverter;
-use App\Models\Subscriber;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 
@@ -37,9 +36,7 @@ class AppServiceProvider extends ServiceProvider
         });
 
         View::composer('components.newsletter-notice', function (\Illuminate\View\View $view) {
-            $deals = ;
-
-            $view->with('deals', ['subscribers_count' => Subscriber::count()]);
+            $view->with('subscribersCount', Subscriber::count());
         });
     }
 }
