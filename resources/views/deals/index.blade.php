@@ -27,7 +27,7 @@
         </div>
 
         <div class="content">
-            <p>This article promotes <strong>the best products I ever used</strong>. <strong>I stand behind them</strong>. Most propose <strong>exclusive deals</strong> through my links. When you choose to subscribe, I earn a commission, which motives me even more to keep this blog alive and fresh with quality content.</p>
+            <p>This article promotes <strong>the best products I ever used</strong>. <strong>I stand behind them</strong>. Most propose <strong>exclusive deals</strong> through my links. When you choose to subscribe, I earn a commission, which motivates me even more to keep this blog alive and fresh with quality content.</p>
         </div>
 
         <x-toc :toc="$toc" class="mt-8" />
