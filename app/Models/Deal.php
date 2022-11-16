@@ -40,7 +40,8 @@ CASE WHEN highlighted = 1 AND end_at IS NOT NULL THEN
 END DESC,
 CASE WHEN highlighted = 1 AND end_at IS NOT NULL THEN
     end_at
-END ASC
+END ASC,
+created_at DESC
 SQL);
     }
 
