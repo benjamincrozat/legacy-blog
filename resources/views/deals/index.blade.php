@@ -26,6 +26,10 @@
             <span>Article written by <a href="{{ route('home') }}" class="font-normal underline" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">Benjamin Crozat</a></span>
         </div>
 
+        <div class="content">
+            <p>This article promotes <strong>the best products I ever used</strong>. <strong>I stand behind them</strong>. Most propose <strong>exclusive deals</strong> through my links. When you choose to subscribe, I earn a commission, which motives me even more to keep this blog alive and fresh with quality content.</p>
+        </div>
+
         <x-toc :toc="$toc" class="mt-8" />
 
         <div class="content mt-8">
