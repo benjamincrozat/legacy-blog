@@ -10,7 +10,7 @@
                     <li>
                         <a
                             href="#{{ $item['id'] }}"
-                            class="flex items-start gap-1 leading-tight text-indigo-900/75 dark:text-indigo-400"
+                            class="inline-flex items-start gap-1 leading-tight text-indigo-900/75 dark:text-indigo-400"
                             @if ($item['level'] > 2) style="margin-left: calc(1rem * {{ $item['level'] - 2 }})" @endif
                             @click="window.fathom?.trackGoal('2WUWXET3', 0)"
                         >
