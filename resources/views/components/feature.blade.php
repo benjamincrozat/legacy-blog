@@ -17,7 +17,7 @@
         </div>
 
         <div class="mt-3 text-center sm:text-left">
-            {{ Illuminate\Support\Str::marxdown($feature->description) }}
+            {!! Illuminate\Support\Str::marxdown($feature->description) !!}
         </div>
     </div>
 
