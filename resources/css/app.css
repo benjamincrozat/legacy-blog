@@ -3,10 +3,7 @@
 @tailwind utilities;
 
 .content {
-    @apply break-words max-w-full prose prose-a:border-b prose-a:border-indigo-400/50
-    prose-a:text-indigo-400 prose-a:no-underline prose-code:dark:text-current prose-headings:dark:text-white
-    prose-hr:dark:border-gray-800 prose-thead:dark:border-gray-800 prose-strong:text-current
-    prose-tr:dark:border-gray-800 dark:text-current;
+    @apply break-words max-w-full prose prose-a:border-b prose-a:no-underline prose-code:dark:text-current prose-strong:text-current prose-a:border-indigo-400/50 prose-a:text-indigo-400 prose-headings:dark:text-white prose-headings:scroll-m-4 prose-hr:dark:border-gray-800 prose-thead:dark:border-gray-800 prose-tr:dark:border-gray-800 dark:text-current;
 }
 
 .btn-green {
