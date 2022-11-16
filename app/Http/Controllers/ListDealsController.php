@@ -15,7 +15,7 @@ class ListDealsController extends Controller
         $categories = Category::query()->orderBy('name')->whereHas('deals')->get();
 
         $toc = TableOfContentsGenerator::generate($categories->map(function (Category $category) {
-            return "## $category->name";
+            return "## Best $category->name services";
         })->join("\n\n"));
 
         return view('deals.index', [
