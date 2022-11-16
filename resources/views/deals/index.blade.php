@@ -11,7 +11,7 @@
         </x-breadcrumb-item>
 
         <x-breadcrumb-item>
-            Deals
+            Offers
         </x-breadcrumb-item>
     </x-breadcrumb>
 
