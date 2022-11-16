@@ -7,6 +7,7 @@ use Spatie\Feed\FeedItem;
 use Illuminate\Support\Str;
 use Laravel\Scout\Searchable;
 use Illuminate\Support\Collection;
+use App\Support\TableOfContentsGenerator;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Laravel\Scout\Attributes\SearchUsingFullText;
@@ -79,23 +80,9 @@ class Post extends BaseModel implements Feedable
         });
     }
 
-    public function getTableOfContents() : Collection
+    public function tableOfContents() : Attribute
     {
-        preg_match_all('/(#{1,6}) (.*)/', $this->content, $headings);
-
-        $tableOfContents = [];
-
-        for ($i = 0; $i < count($headings[0]); ++$i) {
-            $title = html_entity_decode(strip_tags(Str::marxdown($headings[2][$i])));
-
-            $tableOfContents[] = [
-                'id' => str($title)->slug(),
-                'title' => $title,
-                'level' => strlen($headings[1][$i]),
-            ];
-        }
-
-        return collect($tableOfContents);
+        return Attribute::make(fn () => TableOfContentsGenerator::generate($this->content));
     }
 
     public function renderedIntroduction() : Attribute

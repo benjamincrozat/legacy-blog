@@ -26,6 +26,8 @@
             <span>Article written by <a href="{{ route('home') }}" class="font-normal underline" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">Benjamin Crozat</a></span>
         </div>
 
+        <x-toc :toc="$toc" class="mt-8" />
+
         <div class="content mt-8">
             @foreach ($categories as $category)
                 <h2>Best {{ $category->name }} services</h2>

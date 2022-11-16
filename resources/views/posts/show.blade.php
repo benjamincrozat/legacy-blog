@@ -59,11 +59,9 @@
             </div>
         @endif
 
-        <x-toc :toc="$post->getTableOfContents()" class="mt-8" />
+        <x-toc :toc="$post->table_of_contents" class="mt-8" />
 
-        <div
-            class="content mt-8"
-        >
+        <div class="content mt-8">
             {!! $post->rendered_content !!}
         </div>
     </article>
