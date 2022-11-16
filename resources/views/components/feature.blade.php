@@ -28,7 +28,7 @@
         class="bg-gradient-to-r from-emerald-400 dark:from-emerald-700 group-first:from-orange-300 dark:group-first:from-orange-400 to-emerald-500 dark:to-emerald-800 group-first:to-orange-400 dark:group-first:to-orange-500 block font-bold leading-tight mt-2 px-4 py-3 rounded-sm shadow-md text-center text-sm text-white"
         @click="window.fathom?.trackGoal('XMLHWVO2', 0)"
     >
-        Go to site
+        Click for best prices
     </a>
 
     <div class="mt-3 text-center">
