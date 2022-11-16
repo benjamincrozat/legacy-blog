@@ -4,7 +4,6 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Tag;
-use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Markdown;
@@ -35,7 +34,7 @@ class Deal extends Resource
             Markdown::make('Content')
                 ->rules('required'),
 
-            Text::make('Button')
+            Markdown::make('Button')
                 ->rules('required', 'max:255')
                 ->hideFromIndex(),
 
