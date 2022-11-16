@@ -1,4 +1,8 @@
-<div {{ $attributes->merge(['class' => 'flex justify-between']) }}>
+<div {{ $attributes->merge([
+    'class' => ! Route::is('deals.index')
+        ? 'flex justify-between'
+        : 'flex justify-center text-center',
+]) }}>
     <div>
         <span class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase">
             Benjamin Crozat
