@@ -16,7 +16,7 @@
                 class="font-normal relative text-sm sm:text-base"
                 @click="window.fathom?.trackGoal('Y4RZQNDR', 0)"
             >
-                <span>Deals</span>
+                <span>Offers</span>
                 <span class="absolute -top-4 -right-6 bg-gradient-to-r from-orange-300 dark:from-orange-400 to-orange-400 dark:to-orange-500 font-bold inline-block leading-tight px-2 py-1 rounded-full text-white text-xs transform scale-75">New</span>
             </a>
 
