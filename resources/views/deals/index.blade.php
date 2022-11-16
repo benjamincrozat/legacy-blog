@@ -15,30 +15,32 @@
         </x-breadcrumb-item>
     </x-breadcrumb>
 
-    <article class="container max-w-[960px] mt-8">
-        <h1 class="font-thin text-3xl md:text-5xl dark:text-white">
+    <article class="mt-8">
+        <h1 class="container font-thin text-3xl md:text-5xl dark:text-white">
             Best services for AI writing, SEO, web&nbsp;hosting&nbsp;&&nbsp;more
         </h1>
 
-        <div class="flex items-center gap-2 mt-4 text-sm">
+        <div class="container flex items-center gap-2 mt-4 text-sm">
             <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}" width="18" height="18" alt="Benjamin Crozat's avatar." class="-translate-y-[.5px] rounded-full" />
 
             <span>Article written by <a href="{{ route('home') }}" class="font-normal underline" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">Benjamin Crozat</a></span>
         </div>
 
-        <div class="content">
+        <div class="!container content">
             <p>This article promotes <strong>the best products I ever used</strong>. <strong>I stand behind them</strong>. Most propose <strong>exclusive deals</strong> through my links. When you choose to subscribe, I earn a commission, which motivates me even more to keep this blog alive and fresh with quality content.</p>
         </div>
 
-        <x-toc :toc="$toc" class="mt-8" />
+        <x-toc :toc="$toc" class="container mt-8" />
 
         <div class="content mt-8">
             @foreach ($categories as $category)
-                <h2 id="{{ $category->slug }}">Best {{ $category->name }} services</h2>
+                <div class="container">
+                    <h2 id="{{ $category->slug }}">Best {{ $category->name }} services</h2>
 
-                {!! $category->rendered_description !!}
+                    {!! $category->rendered_description !!}
+                </div>
 
-                <div class="not-prose">
+                <div class="container max-w-[1024px] not-prose">
                     <ul class="grid sm:grid-cols-2 gap-4 mt-8">
                         @foreach ($category->deals()->highlightedFirst()->get() as $deal)
                             <li><x-deal :deal="$deal" class="h-full" /></li>
