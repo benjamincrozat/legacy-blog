@@ -35,7 +35,7 @@
 
     <section class="md:container md:max-w-[1024px] mt-8 sm:mt-16">
         <h2 class="font-bold px-4 sm:px-0 text-center text-xl">
-            Best SaaS deals in the AI, SEO & web hosting area
+            Best services for AI writing, SEO, web hosting & more
         </h2>
 
         @if ($deals->isNotEmpty())
