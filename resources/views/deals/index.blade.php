@@ -26,10 +26,7 @@
             <span>Article written by <a href="{{ route('home') }}" class="font-normal underline" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">Benjamin Crozat</a></span>
         </div>
 
-        <div class="break-words max-w-full mt-8 prose prose-a:border-b prose-a:border-indigo-400/50
-        prose-a:text-indigo-400 prose-a:no-underline prose-code:dark:text-current prose-headings:dark:text-white
-        prose-hr:dark:border-gray-800 prose-thead:dark:border-gray-800 prose-strong:text-current
-        prose-tr:dark:border-gray-800 dark:text-current">
+        <div class="content mt-8">
             @foreach ($categories as $category)
                 <h2>Best {{ $category->name }} services</h2>
 
