@@ -95,7 +95,9 @@ class Post extends BaseModel implements Feedable
 
     public function tableOfContents() : Attribute
     {
-        return Attribute::make(fn () => TableOfContentsGenerator::generate($this->content));
+        return Attribute::make(
+            fn () => TableOfContentsGenerator::generate($this->introduction . $this->content)
+        );
     }
 
     public function renderedIntroduction() : Attribute
