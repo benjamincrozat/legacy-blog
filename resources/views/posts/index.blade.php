@@ -35,7 +35,7 @@
 
     <section class="md:container md:max-w-[1024px] mt-8 sm:mt-16">
         <h2 class="font-bold px-4 sm:px-0 text-center text-xl">
-            Best services for AI writing, SEO, web hosting & more
+            Discover awesome products that will help you grow your business
         </h2>
 
         @if ($deals->isNotEmpty())
@@ -52,7 +52,7 @@
                 class="bg-gradient-to-r from-indigo-300 dark:from-indigo-500 to-indigo-400 dark:to-indigo-600 block sm:inline-block font-bold px-4 sm:px-16 py-3 rounded shadow-md text-center text-white"
                 @click="window.fathom?.trackGoal('3JGZ4TJG', 0)"
             >
-                See all deals
+                See all awesome products
             </a>
         </div>
     </section>
