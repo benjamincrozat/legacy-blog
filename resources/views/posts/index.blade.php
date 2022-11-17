@@ -52,7 +52,7 @@
                 class="bg-gradient-to-r from-indigo-300 dark:from-indigo-500 to-indigo-400 dark:to-indigo-600 block sm:inline-block font-bold px-4 sm:px-16 py-3 rounded shadow-md text-center text-white"
                 @click="window.fathom?.trackGoal('3JGZ4TJG', 0)"
             >
-                See all awesome products
+                Get more good deals
             </a>
         </div>
     </section>
