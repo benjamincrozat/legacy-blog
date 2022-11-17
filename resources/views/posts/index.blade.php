@@ -33,7 +33,7 @@
         </section>
     @endif
 
-    <section class="md:container md:max-w-[1024px] mt-8 sm:mt-16">
+    <section class="md:container md:max-w-[1024px] mt-16">
         <h2 class="font-bold px-4 sm:px-0 text-center text-xl">
             Discover awesome products that will help you grow your business
         </h2>
