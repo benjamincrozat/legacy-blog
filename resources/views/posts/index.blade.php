@@ -19,7 +19,7 @@
         </p>
     </x-newsletter>
 
-    @if (($highlighted = $posts->where('is_highlighted'))->isNotEmpty())
+    @if ($highlighted->isNotEmpty())
         <section class="md:container md:max-w-[1024px] mt-16">
             <h2 class="font-bold px-4 md:px-0 text-center text-xl">
                 Featured articles

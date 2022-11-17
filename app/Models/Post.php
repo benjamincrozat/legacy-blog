@@ -47,6 +47,9 @@ class Post extends BaseModel implements Feedable
                 'is_highlighted' => Highlight::select('id')
                     ->whereColumn('post_id', 'posts.id')
                     ->limit(1),
+                'highlighted_at' => Highlight::select('created_at')
+                    ->whereColumn('post_id', 'posts.id')
+                    ->limit(1),
             ]);
     }
 

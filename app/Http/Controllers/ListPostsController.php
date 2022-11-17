@@ -12,7 +12,8 @@ class ListPostsController extends Controller
     {
         return view('posts.index', [
             'deals' => Deal::active()->highlightedFirst()->limit(6)->get(),
-            'posts' => Post::latest()->withHighlighted()->withUser()->get(),
+            'posts' => $posts = Post::latest()->withHighlighted()->withUser()->get(),
+            'highlighted' => $posts->where('is_highlighted')->sortByDesc('highlighted_at'),
         ]);
     }
 }
