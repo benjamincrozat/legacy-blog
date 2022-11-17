@@ -40,6 +40,16 @@ class Post extends BaseModel implements Feedable
         $query->whereNotNull('image');
     }
 
+    public function scopeWithHighlighted(Builder $query) : void
+    {
+        $query
+            ->addSelect([
+                'is_highlighted' => Highlight::select('id')
+                    ->whereColumn('post_id', 'posts.id')
+                    ->limit(1),
+            ]);
+    }
+
     public function scopeWithUser(Builder $query) : void
     {
         $query
