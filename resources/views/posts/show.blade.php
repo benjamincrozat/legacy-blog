@@ -17,7 +17,7 @@
         </x-breadcrumb-item>
     </x-breadcrumb>
 
-    <article class="container mt-8" x-data="{ deal: false }">
+    <article class="container mt-8">
         <h1 class="font-thin text-3xl md:text-5xl dark:text-white">
             {{ $post->title }}
         </h1>
@@ -40,20 +40,20 @@
             </div>
         @endif
 
-        @if ($post->promotes_affiliate_links && $post->features->isNotEmpty())
+        @if ($post->promotes_affiliate_links && ($features = $post->features()->with('affiliate')->get())->isNotEmpty())
             <div
                 class="grid
-                @if (1 === $post->features->count()) sm:max-w-[320px] sm:mx-auto @endif
-                @if ($post->features->count() > 1) sm:grid-cols-2 @endif
-                @if ($post->features->count() > 2) md:grid-cols-3 @endif
+                @if (1 === $features->count()) sm:max-w-[320px] sm:mx-auto @endif
+                @if ($features->count() > 1) sm:grid-cols-2 @endif
+                @if ($features->count() > 2) md:grid-cols-3 @endif
                 gap-4 mt-8"
             >
-                @foreach ($post->features as $feature)
+                @foreach ($features as $feature)
                     <x-feature :feature="$feature" />
                 @endforeach
 
                 <p class="col-span-full opacity-75 text-center text-xs">
-                    This article uses affiliate links, which can compensate me at no cost to you if you decide to pursue a deal. @if ($post->features->count() > 1) <br class="hidden md:inline" /> @endif
+                    This article uses affiliate links, which can compensate me at no cost to you if you decide to pursue a deal. @if ($features->count() > 1) <br class="hidden md:inline" /> @endif
                     I only promote products I've personally used and stand behind.
                 </p>
             </div>
