@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-        <meta name='ir-site-verification-token' value='237053620'>
         <meta name="description" content="{{ $description ?? '' }}" />
         <meta property="og:title" content="{{ $title ?? config('app.name') }}" />
         @if (! empty($image))
@@ -44,8 +43,6 @@
         @if (should_display_ads())
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
         @endif
-
-        {{-- D9188A05-BF4B-49E9-9518-2ADEBA01CA1B --}}
     </head>
     <body {{ $attributes->merge(['class' => 'bg-gray-50 font-light']) }} x-data>
         <div class="flex flex-col min-h-screen">
