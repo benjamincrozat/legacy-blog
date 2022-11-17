@@ -20,7 +20,7 @@ class Category extends BaseModel
 
     public function deals() : MorphToMany
     {
-        return $this->morphedByMany(Deal::class, 'categorizable')->active();
+        return $this->morphedByMany(Deal::class, 'categorizable')->active()->highlightedFirst();
     }
 
     public function posts() : MorphToMany

@@ -42,7 +42,7 @@
 
                 <div class="container max-w-[1024px] not-prose">
                     <ul class="grid sm:grid-cols-2 gap-4">
-                        @foreach ($category->deals()->highlightedFirst()->get() as $deal)
+                        @foreach ($category->deals as $deal)
                             <li><x-deal :deal="$deal" class="h-full" /></li>
                         @endforeach
                     </ul>

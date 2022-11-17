@@ -14,6 +14,7 @@ class ListDealsControllerTest extends TestCase
 
         $response = $this
             ->get(route('deals.index'))
+            ->assertOk()
             ->assertViewIs('deals.index')
         ;
 

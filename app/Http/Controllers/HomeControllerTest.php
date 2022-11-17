@@ -10,6 +10,7 @@ class HomeControllerTest extends TestCase
     {
         $this
             ->get(route('home'))
+            ->assertOk()
             ->assertViewIs('home')
         ;
     }
