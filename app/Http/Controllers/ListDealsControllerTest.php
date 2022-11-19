@@ -4,13 +4,16 @@ namespace App\Http\Controllers;
 
 use Tests\TestCase;
 use App\Models\Post;
+use App\Models\Category;
 use Illuminate\Support\Collection;
 
 class ListDealsControllerTest extends TestCase
 {
     public function test_it_works() : void
     {
-        Post::factory(30)->create();
+        Category::factory(10)->create();
+
+        Post::factory(15)->create();
 
         $response = $this
             ->get(route('deals.index'))

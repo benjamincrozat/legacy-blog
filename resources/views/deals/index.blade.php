@@ -35,7 +35,7 @@
         <div class="content mt-8">
             @foreach ($categories as $category)
                 <div class="container">
-                    <h2 id="{{ $category->slug }}">Best {{ $category->name }} services</h2>
+                    <h2 id="{{ $category->slug }}">Best {{ $category->name }} Services</h2>
 
                     {!! $category->rendered_description !!}
                 </div>
