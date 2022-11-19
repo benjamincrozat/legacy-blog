@@ -17,12 +17,12 @@
         </x-breadcrumb-item>
     </x-breadcrumb>
 
-    <article class="container mt-8">
-        <h1 class="font-thin text-3xl md:text-5xl dark:text-white">
+    <article class="mt-8">
+        <h1 class="container font-thin text-3xl md:text-5xl dark:text-white">
             {{ $post->title }}
         </h1>
 
-        <div class="flex items-center gap-2 mt-4 text-sm">
+        <div class="container flex items-center gap-2 mt-4 text-sm">
             <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}" width="18" height="18" alt="Benjamin Crozat's avatar." class="-translate-y-[.5px] rounded-full" />
 
             <a href="{{ route('home') }}" class="font-normal underline" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">Benjamin Crozat</a>
@@ -31,37 +31,31 @@
         </div>
 
         @if (! $post->promotes_affiliate_links)
-            <x-newsletter-notice class="mt-8" />
+            <x-newsletter-notice class="container mt-8" />
         @endif
 
         @if ($post->introduction)
-            <div class="content mt-8">
+            <div class="!container content mt-8">
                 {!! $post->rendered_introduction !!}
             </div>
         @endif
 
         @if ($post->promotes_affiliate_links && ($features = $post->features()->with('affiliate')->get())->isNotEmpty())
-            <div
-                class="grid
-                @if (1 === $features->count()) sm:max-w-[320px] sm:mx-auto @endif
-                @if ($features->count() > 1) sm:grid-cols-2 @endif
-                @if ($features->count() > 2) md:grid-cols-3 @endif
-                gap-4 mt-8"
-            >
+            <div class="container grid sm:grid-cols-2 md:grid-cols-3 lg:flex lg:flex-wrap gap-4 max-w-[1280px] mt-8">
                 @foreach ($features as $feature)
-                    <x-feature :feature="$feature" />
+                    <x-feature :feature="$feature" class="lg:flex-1" />
                 @endforeach
 
-                <p class="col-span-full opacity-75 text-center text-xs">
+                <p class="col-span-full opacity-75 text-center text-xs w-full">
                     This article uses affiliate links, which can compensate me at no cost to you if you decide to pursue a deal. @if ($features->count() > 1) <br class="hidden md:inline" /> @endif
                     I only promote products I've personally used and stand behind.
                 </p>
             </div>
         @endif
 
-        <x-toc :toc="$post->table_of_contents" class="mt-8" />
+        <x-toc :toc="$post->table_of_contents" class="container mt-8" />
 
-        <div class="content mt-8">
+        <div class="!container content mt-8">
             {!! $post->rendered_content !!}
         </div>
     </article>
