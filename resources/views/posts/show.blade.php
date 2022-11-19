@@ -5,10 +5,10 @@
     :disable-ads="$post->promotes_affiliate_links"
     class="dark:bg-gray-900 text-gray-600 dark:text-gray-300"
 >
-    <x-blog-nav class="container mt-4 sm:mt-8" />
+    <x-blog-nav class="container mt-4 sm:my-8" />
 
     @if (! $post->promotes_affiliate_links)
-        <x-breadcrumb class="container mt-8 sm:mt-16">
+        <x-breadcrumb class="container mt-8">
             <x-breadcrumb-item href="{{ route('posts.index') }}">
                 Blog
             </x-breadcrumb-item>

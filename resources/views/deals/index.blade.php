@@ -5,17 +5,7 @@
 >
     <x-blog-nav class="container mt-4 md:mt-8" />
 
-    <x-breadcrumb class="container mt-8 sm:mt-16">
-        <x-breadcrumb-item href="{{ route('posts.index') }}">
-            Blog
-        </x-breadcrumb-item>
-
-        <x-breadcrumb-item>
-            Offers
-        </x-breadcrumb-item>
-    </x-breadcrumb>
-
-    <article class="mt-8">
+    <article class="mt-8 sm:mt-16">
         <h1 class="container font-thin text-3xl md:text-5xl dark:text-white">
             Best services for AI writing, SEO, web&nbsp;hosting&nbsp;&&nbsp;more
         </h1>
