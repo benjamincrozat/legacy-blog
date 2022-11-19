@@ -5,17 +5,19 @@
     :disable-ads="$post->promotes_affiliate_links"
     class="dark:bg-gray-900 text-gray-600 dark:text-gray-300"
 >
-    <x-blog-nav class="container mt-4 md:mt-8" />
+    <x-blog-nav class="container mt-4 sm:mt-8" />
 
-    <x-breadcrumb class="container mt-8 sm:mt-16">
-        <x-breadcrumb-item href="{{ route('posts.index') }}">
-            Blog
-        </x-breadcrumb-item>
+    @if (! $post->promotes_affiliate_links)
+        <x-breadcrumb class="container mt-8 sm:mt-16">
+            <x-breadcrumb-item href="{{ route('posts.index') }}">
+                Blog
+            </x-breadcrumb-item>
 
-        <x-breadcrumb-item class="truncate">
-            {{ $post->title }}
-        </x-breadcrumb-item>
-    </x-breadcrumb>
+            <x-breadcrumb-item class="truncate">
+                {{ $post->title }}
+            </x-breadcrumb-item>
+        </x-breadcrumb>
+    @endif
 
     <article class="container mt-8">
         <h1 class="font-thin text-3xl md:text-5xl dark:text-white">
