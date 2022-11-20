@@ -1,6 +1,6 @@
 <x-app
     title="Best services for AI writing, SEO, web hosting & more"
-    description=""
+    description="If you're looking for the best deals on digital products that will help you grow a business, you've come to the right place!"
     class="dark:bg-gray-900 text-gray-600 dark:text-gray-300"
 >
     <x-blog-nav class="container mt-4 md:mt-8" />
