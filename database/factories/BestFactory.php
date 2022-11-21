@@ -7,9 +7,9 @@ use App\Models\Affiliate;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Feature>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Best>
  */
-class FeatureFactory extends Factory
+class BestFactory extends Factory
 {
     public function definition() : array
     {

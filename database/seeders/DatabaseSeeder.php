@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\Best;
 use App\Models\Deal;
 use App\Models\Post;
 use App\Models\User;
-use App\Models\Feature;
 use App\Models\Category;
 use App\Models\Redirect;
 use App\Models\Affiliate;
@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
 
         Affiliate::factory(10)->create();
 
-        Feature::factory(100)->create();
+        Best::factory(100)->create();
 
         Category::factory(10)->create();
 

@@ -15,7 +15,5 @@ abstract class TestCase extends BaseTestCase
         parent::setUp();
 
         Http::preventStrayRequests();
-
-        $this->withoutVite();
     }
 }

@@ -6,11 +6,10 @@ use Illuminate\Bus\Queueable;
 use Laravel\Nova\Actions\Action;
 use Illuminate\Support\Collection;
 use Laravel\Nova\Fields\ActionFields;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Queue\InteractsWithQueue;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class MoveFeatureDown extends Action
+class MoveBestUp extends Action
 {
     use InteractsWithQueue, Queueable;
 
@@ -18,13 +17,15 @@ class MoveFeatureDown extends Action
 
     public function handle(ActionFields $fields, Collection $models)
     {
-        $models->each(function (Model $model) {
-            $model
-                ->query()
-                ->where('position', $model->position + 1)
-                ->update(['position' => $model->position]);
+        $models->each(function ($model) {
+            if ($model->position > 1) {
+                $model
+                    ->query()
+                    ->where('position', $model->position - 1)
+                    ->update(['position' => $model->position]);
 
-            $model->increment('position');
+                $model->decrement('position');
+            }
         });
     }
 

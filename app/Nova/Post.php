@@ -102,7 +102,7 @@ HTML;
                     ->sortable(),
             ]),
 
-            HasMany::make('Features'),
+            HasMany::make('Bests'),
 
             HasMany::make('Highlights'),
         ];

@@ -17,8 +17,8 @@ class TableOfContentsGenerator
             $title = html_entity_decode(strip_tags(Str::marxdown($headings[2][$i])));
 
             $tableOfContents[] = [
-                'id' => str($title)->slug(),
-                'title' => $title,
+                'id' => str($title)->slug()->toString(),
+                'title' => trim($title),
                 'level' => strlen($headings[1][$i]),
             ];
         }

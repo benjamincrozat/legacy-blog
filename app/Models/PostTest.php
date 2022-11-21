@@ -32,15 +32,6 @@ class PostTest extends TestCase
         ]);
     }
 
-    public function test_it_has_a_featured_scope() : void
-    {
-        Post::factory()->create(['image' => 'foo']);
-
-        Post::factory()->create(['image' => null]);
-
-        $this->assertCount(1, Post::featured()->get());
-    }
-
     public function test_it_has_a_with_user_scope() : void
     {
         Post::factory()->create();

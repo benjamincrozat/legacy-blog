@@ -35,11 +35,6 @@ class Post extends BaseModel implements Feedable
         });
     }
 
-    public function scopeFeatured(Builder $query) : void
-    {
-        $query->whereNotNull('image');
-    }
-
     public function scopeWithHighlighted(Builder $query) : void
     {
         $query
@@ -73,9 +68,9 @@ class Post extends BaseModel implements Feedable
         return $this->belongsTo(User::class);
     }
 
-    public function features() : HasMany
+    public function bests() : HasMany
     {
-        return $this->hasMany(Feature::class)->orderBy('position');
+        return $this->hasMany(Best::class)->orderBy('position');
     }
 
     public function highlights() : HasMany

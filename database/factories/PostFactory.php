@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Post;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -256,5 +257,10 @@ MARKDOWN,
             'description' => fake()->paragraph(),
             'promotes_affiliate_links' => fake()->boolean(),
         ];
+    }
+
+    public function highlighted() : static
+    {
+        return $this->afterCreating(fn (Post $post) => $post->highlights()->create());
     }
 }

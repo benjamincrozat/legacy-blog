@@ -5,17 +5,17 @@ namespace App\Nova;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Number;
+use App\Nova\Actions\MoveBestUp;
 use Laravel\Nova\Fields\Markdown;
+use App\Nova\Actions\MoveBestDown;
 use Laravel\Nova\Fields\BelongsTo;
-use App\Nova\Actions\MoveFeatureUp;
-use App\Nova\Actions\MoveFeatureDown;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Feature extends Resource
+class Best extends Resource
 {
     public static $group = 'Blog';
 
-    public static $model = \App\Models\Feature::class;
+    public static $model = \App\Models\Best::class;
 
     public static $search = [
         'id', 'post.title', 'affiliate.name',
@@ -68,8 +68,8 @@ class Feature extends Resource
     public function actions(NovaRequest $request) : array
     {
         return [
-            new MoveFeatureUp,
-            new MoveFeatureDown,
+            new MoveBestUp,
+            new MoveBestDown,
         ];
     }
 }
