@@ -9,7 +9,7 @@
 
     @if (! $post->promotes_affiliate_links)
         <x-breadcrumb class="container mt-8">
-            <x-breadcrumb-item href="{{ route('posts.index') }}">
+            <x-breadcrumb-item href="{{ route('home') }}">
                 Blog
             </x-breadcrumb-item>
 

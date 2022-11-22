@@ -18,9 +18,7 @@ class SitemapGenerateCommand extends Command
 
         $sitemap->add(route('home'));
 
-        $sitemap->add(route('posts.index'));
-
-        $sitemap->add(route('deals.index'));
+        $sitemap->add(route('consulting'));
 
         Post::latest()->get()->each(function (Post $post) use ($sitemap) {
             $sitemap->add(route('posts.show', $post));

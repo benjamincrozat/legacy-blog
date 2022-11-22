@@ -1,292 +1,53 @@
 <x-app
-    title="Benjamin Crozat, a Laravel developer for hire"
-    description="Book an expert Laravel developer, TODAY! Let me guide your team toward reliability and maintenability."
-    :disable-ads="true"
-    class="text-indigo-50 dark:text-gray-300"
+    title="The web developer life of Benjamin Crozat"
+    description="Have you ever had a question about the art of crafting web applications? This is the best blog to find your answer."
+    class="dark:bg-gray-900 text-gray-600 dark:text-gray-300"
 >
-    <div class="bg-indigo-500 dark:bg-gray-800 md:sticky md:top-0 md:z-10">
-        <div class="container sm:flex sm:items-center sm:justify-between py-4 text-center sm:text-left">
-            <div>
-                <span class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase">
-                    Benjamin Crozat
-                </span>
+    <x-blog-nav class="container mt-4 md:mt-8" />
 
-                <span class="block opacity-75 text-xs tracking-widest uppercase">
-                    Full-stack Laravel developer
-                </span>
+    <x-newsletter class="container mt-16">
+        <p class="mt-8">
+            Hi there! 👋
+        </p>
+
+        <p class="mt-4">
+            I'm Benjamin Crozat, a web developer with more than <strong class="font-bold dark:text-white">15 years of experience</strong>.
+        </p>
+
+        <p class="mt-4">
+            Understanding the web and being able to build websites is a serious advantage nowadays. You get job security and can build a business starting with nothing. <strong class="font-bold dark:text-white">I want to share with you everything I learn</strong> about it.
+        </p>
+    </x-newsletter>
+
+    @if ($highlighted->isNotEmpty())
+        <section class="md:container md:max-w-[1024px] mt-16">
+            <h2 class="font-bold px-4 md:px-0 text-center text-xl">
+                Highlighted articles
+            </h2>
+
+            <div class="flex md:grid md:grid-cols-2 gap-2 mt-8 px-4 md:px-0 overflow-x-scroll md:overflow-x-visible snap-x md:snap-none snap-mandatory">
+                @foreach ($highlighted as $post)
+                    <x-highlighted :post="$post" :first="$loop->first" />
+                @endforeach
             </div>
+        </section>
+    @endif
 
-            <nav class="flex items-center justify-center sm:justify-start gap-8 mt-8 sm:mt-0">
-                <a href="{{ route('posts.index') }}" class="text-indigo-100 dark:text-gray-50 text-xs tracking-widest uppercase">
-                    Read my blog
-                </a>
-
-                <a href="mailto:benjamincrozat@me.com" class="border-b border-white/50 font-normal leading-loose text-white text-xs tracking-widest uppercase" @click="window.fathom?.trackGoal('EWIGDNLB', 0)">
-                    Contact me!
-                </a>
-            </nav>
-        </div>
-    </div>
-
-    <x-home.section class="bg-gradient-to-r from-indigo-500 dark:from-gray-800 to-indigo-400 dark:to-gray-700">
-        <header class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8">
-            <h1 class="font-thin order-2 md:order-none text-3xl md:text-5xl">
-                Benjamin Crozat,<br />
-                a Laravel developer for <strong class="border-b font-semibold">hire</strong>
-            </h1>
-
-            <div class="flex-shrink-0 order-1 md:order-none text-center md:text-left w-full md:w-auto">
-                <img
-                    loading="lazy"
-                    src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=300"
-                    width="150"
-                    height="150"
-                    alt="Benjamin Crozat, a Laravel developer for hire"
-                    class="inline rotate-2 rounded-full"
-                />
-            </div>
-        </header>
-
-        <div class="font-thin text-xl sm:text-3xl">
-            <p class="mt-8 sm:mt-16">
-                Let me guide your team toward <strong class="font-semibold text-white">reliability</strong> and <strong class="font-semibold text-white">maintenability</strong>.
-            </p>
-
-            <p class="mt-8">
-                <strong class="font-semibold text-white">Make more money</strong> on the long run by avoiding endless regressions, bug huntings and rewrites of your web applications.
-            </p>
-
-            <p class="mt-8">
-                <a href="#about" class="border-b border-white/50 font-normal text-lg sm:text-xl text-white">
-                    Learn more about me
-                </a>
-            </p>
-        </div>
-
-        <div class="border-t border-indigo-400 dark:border-gray-600 mt-16 pt-16">
-            <h3 class="font-bold text-xl text-center">
-                These companies trusted me
-            </h3>
-
-            <ul class="flex flex-wrap items-center justify-center gap-x-16 gap-y-8 mt-8">
-                <li>
-                    <a href="https://www.doctissimo.fr" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
-                        <x-icon-doctissimo class="fill-current h-6 text-white" />
-                        <span class="sr-only">Doctissimo</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://www.iconosquare.com" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
-                        <x-icon-iconosquare class="fill-current h-8 text-white" />
-                        <span class="sr-only">Iconosquare</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://jetfly.com" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
-                        <x-icon-jetfly class="fill-current h-12 text-white" />
-                        <span class="sr-only">Jetfly</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://mym.fans" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
-                        <x-icon-mym class="fill-current h-6 text-white" />
-                        <span class="sr-only">MYM</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://qwant.com" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
-                        <x-icon-qwant class="fill-current w-16 text-white" />
-                        <span class="sr-only">Qwant</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </x-home.section>
-
-    <x-home.section
-        class="bg-gradient-to-r from-indigo-100/50 dark:from-gray-800/[.9] to-indigo-200/50 dark:to-gray-700/[.9]"
-        x-intersect="window.fathom?.trackGoal('R7HDACGG', 0)"
-    >
-        <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
-            <x-icon-connected-dots class="inline-block fill-current w-12 sm:w-16 h-12 sm:h-16" />
-            <span class="block mt-4 dark:text-indigo-300">An expert Laravel developer for your&nbsp;business</span>
+    <section class="container max-w-[1024px] mt-16">
+        <h2 class="font-bold px-4 sm:px-0 text-center text-xl">
+            Latest articles
         </h2>
 
-        <ul class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8 sm:mt-16">
-            <li>
-                <span class="block font-bold text-5xl sm:text-7xl text-indigo-400">15+</span>
-                <span class="block text-indigo-900/50 dark:text-indigo-200/50 text-lg sm:text-xl">years of experience</span>
-            </li>
-
-            <li>
-                <span class="block font-bold text-5xl sm:text-7xl text-indigo-400">1M+</span>
-                <span class="block text-indigo-900/50 dark:text-indigo-200/50 text-lg sm:text-xl">lines of code</span>
-            </li>
-
-            <li>
-                <span class="block font-bold text-5xl sm:text-7xl text-indigo-400">30+</span>
-                <span class="block text-indigo-900/50 dark:text-indigo-200/50 text-lg sm:text-xl">clients</span>
-            </li>
-
-            <li>
-                <span class="block font-bold text-5xl sm:text-7xl text-indigo-400">100+</span>
-                <span class="block text-indigo-900/50 dark:text-indigo-200/50 text-lg sm:text-xl">web applications</span>
-            </li>
-        </ul>
-    </x-home.section>
-
-    <x-home.section
-        class="bg-gradient-to-r from-indigo-50/50 dark:from-gray-800 to-indigo-100/50 dark:to-gray-700 text-indigo-900 dark:text-current"
-        x-intersect="window.fathom?.trackGoal('WSVGAGQR', 0)"
-    >
-        <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
-            <x-icon-connected-people class="inline-block fill-current w-12 sm:w-16 h-12 sm:h-16" />
-            <div class="block mt-4 dark:text-indigo-300">My Laravel development services</div>
-        </h2>
-
-        <ul class="grid sm:grid-cols-2 gap-12 mt-8 sm:mt-16">
-            <li>
-                <x-icon-pair-programming class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
-
-                <p class="font-bold mt-4 text-indigo-400 dark:text-indigo-300 text-lg sm:text-xl">
-                    Pair programming
-                </p>
-
-                <p class="mt-4">
-                    Pair programming is the best way for developers to learn from each other, <strong class="font-bold">fast</strong>.
-                </p>
-
-                <p class="mt-4">
-                    Whatever your team needs to know about PHP and Laravel, I can show them.
-                </p>
-            </li>
-
-            <li>
-                <x-icon-best-practices class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
-
-                <p class="font-bold mt-4 text-indigo-400 dark:text-indigo-300 text-lg sm:text-xl">
-                    Best practices
-                </p>
-
-                <p class="mt-4">
-                    When everyone follows the framework's best practices, this is what happens:
-                </p>
-
-                <ul class="mt-4">
-                    <li class="flex items-start gap-2">
-                        <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 dark:text-indigo-300 translate-y-[3.5px] w-4 h-4" />
-                        You don't need to maintain a documentation.
-                    </li>
-
-                    <li class="flex items-start gap-2 mt-2">
-                        <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 dark:text-indigo-300 translate-y-[3.5px] w-4 h-4" />
-                        Your developers always knows where to go.
-                    </li>
-
-                    <li class="flex items-start gap-2 mt-2">
-                        <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 dark:text-indigo-300 translate-y-[3.5px] w-4 h-4" />
-                        New hires will know where to go as well from day&nbsp;1.
-                    </li>
-                </ul>
-
-                <p class="mt-4">
-                    It's time to leverage Laravel's power to over 9000!
-                </p>
-            </li>
-
-            <li>
-                <x-icon-automated-testing class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
-
-                <p class="font-bold mt-4 text-indigo-400 dark:text-indigo-300 text-lg sm:text-xl">
-                    Automated testing
-                </p>
-
-                <p class="font-bold mt-4">
-                    Untested code is legacy code.
-                </p>
-
-                <p class="mt-4">
-                    I can help your team write tests to:
-                </p>
-
-                <ul class="mt-4">
-                    <li class="flex items-start gap-2">
-                        <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 dark:text-indigo-300 translate-y-[3.5px] w-4 h-4" />
-                        Be more confident each time they deploy something new.
-                    </li>
-
-                    <li class="flex items-start gap-2 mt-2">
-                        <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 dark:text-indigo-300 translate-y-[3.5px] w-4 h-4" />
-                        Facilitate the onboarding of new team members. They won't fear breaking something they don't know.
-                    </li>
-                </ul>
-            </li>
-
-            <li>
-                <x-icon-continuous-integration class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
-
-                <p class="font-bold mt-4 text-indigo-400 dark:text-indigo-300 text-lg sm:text-xl">
-                    Continuous integration
-                </p>
-
-                <p class="mt-4">
-                    Automatically and continuously deploying new code into production is a dream for any serious business that wants to please its customers.
-                </p>
-
-                <p class="mt-4">
-                    We can make it happen <strong class="font-bold">without any infrastructure cost</strong>.
-                </p>
-            </li>
-
-            <li>
-                <x-icon-errors-monitoring class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
-
-                <p class="font-bold mt-4 text-indigo-400 dark:text-indigo-300 text-lg sm:text-xl">Errors monitoring</p>
-
-                <p class="mt-4">
-                    What if we could <strong class="font-bold">prevent</strong> your company to loose even more money?
-                </p>
-
-                <p class="mt-4">
-                    We can set up a tool that monitors and logs everything wrong happening on your web applications instead of relying on feedback.
-                </p>
-            </li>
-        </ul>
-    </x-home.section>
-
-    <x-home.section
-        class="bg-gradient-to-r from-indigo-100/50 dark:from-gray-800/[.9] to-indigo-200/50 dark:to-gray-700/[.9] text-indigo-900 dark:text-gray-300"
-        x-intersect="window.fathom?.trackGoal('Q0JLQGBO', 0)"
-    >
-        <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
-            <x-icon-question-circle class="fill-current inline-block w-12 sm:w-16 h-12 sm:h-16" />
-            <span class="block mt-4 dark:text-indigo-300">About me</span>
-        </h2>
-
-        <div class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8 mt-8 sm:text-lg md:text-xl">
-            <div class="order-2 md:order-none">
-                <p>My name is Benjamin Crozat. I'm a passionate <strong class="font-bold dark:text-white">full-stack PHP and Laravel web developer from the south of France</strong> with 15+ years of experience.</p>
-
-                <p class="mt-4">I wasn't fond of the school system and had to leave at some point. Therefore, I quit at the age of 15 and have educated myself on everything since then.</p>
-
-                <p class="mt-4">The freelancer life immediately seduced me, and I quickly became interested in helping companies to work better with web developers and technology.</p>
-
-                <p class="mt-4">
-                    We can work together, <a href="mailto:benjamincrozat@me.com" class="border-b border-indigo-400/50 dark:border-indigo-300/50 font-normal text-indigo-400 dark:text-indigo-300" @click="window.fathom?.trackGoal('S0ZZJNPU', 0)">contact me</a>!
-                </p>
+        @if ($posts->isNotEmpty())
+            <div class="grid md:grid-cols-2 gap-4 mt-8">
+                @foreach ($posts->whereNotIn('id', $highlighted->pluck('id')) as $post)
+                    <x-post :post="$post" @click="window.fathom?.trackGoal('HH0P1ACM', 0)" />
+                @endforeach
             </div>
+        @endif
+    </section>
 
-            <div class="flex-shrink-0 order-1 md:order-none text-center md:text-left w-full md:w-auto">
-                <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" width="128" height="128" alt="Benjamin Crozat" class="inline rotate-2 rounded-full" />
-            </div>
-        </div>
-    </x-home.section>
-
-    <div id="about" class="bg-indigo-500 dark:bg-gray-900 flex-grow">
-        <x-footer class="text-indigo-100" />
+    <div class="bg-gray-900 dark:bg-black flex-grow mt-16">
+        <x-footer class="text-gray-200" />
     </div>
 </x-app>
