@@ -19,8 +19,6 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Post extends Resource
 {
-    public static $group = 'Blog';
-
     public static $model = \App\Models\Post::class;
 
     public static $title = 'title';

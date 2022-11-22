@@ -9,8 +9,6 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Highlight extends Resource
 {
-    public static $group = 'Blog';
-
     public static $model = \App\Models\Highlight::class;
 
     public static $title = 'post.title';

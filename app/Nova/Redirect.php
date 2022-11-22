@@ -8,8 +8,6 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Redirect extends Resource
 {
-    public static $group = 'Blog';
-
     public static $model = \App\Models\Redirect::class;
 
     public static $search = [

@@ -13,7 +13,7 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Best extends Resource
 {
-    public static $group = 'Blog';
+    public static $displayInNavigation = false;
 
     public static $model = \App\Models\Best::class;
 

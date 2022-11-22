@@ -10,8 +10,6 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Affiliate extends Resource
 {
-    public static $group = 'Affiliate Marketing';
-
     public static $model = \App\Models\Affiliate::class;
 
     public static $title = 'name';

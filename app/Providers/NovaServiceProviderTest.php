@@ -14,8 +14,7 @@ class NovaServiceProviderTest extends TestCase
         $this
             ->actingAs($user)
             ->getJson('/nova')
-            ->assertRedirect('/nova/dashboards/main')
-        ;
+            ->assertRedirect('/nova/resources/posts');
     }
 
     public function test_it_disallows_users() : void
