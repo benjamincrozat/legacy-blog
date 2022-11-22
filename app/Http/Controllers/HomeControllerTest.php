@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Tests\TestCase;
-use App\Models\Deal;
 use App\Models\Post;
 use Illuminate\Support\Collection;
 

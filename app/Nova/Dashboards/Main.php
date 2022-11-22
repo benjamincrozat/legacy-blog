@@ -4,7 +4,6 @@ namespace App\Nova\Dashboards;
 
 use Laravel\Nova\Dashboard;
 use App\Nova\Metrics\PostsIntent;
-use App\Nova\Metrics\ActiveDealsCount;
 use App\Nova\Metrics\SubscribersCount;
 
 class Main extends Dashboard
@@ -13,7 +12,6 @@ class Main extends Dashboard
     {
         return [
             new PostsIntent,
-            new ActiveDealsCount,
             new SubscribersCount,
         ];
     }
