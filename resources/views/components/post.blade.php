@@ -5,7 +5,7 @@
                 <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5($post->user_email) }}" width="18" height="18" alt="{{ $post->user_name }}" class="-translate-y-[.5px] rounded-full" />
 
                 <p>
-                    <a href="{{ route('home') }}" target="_blank" rel="noopener noreferrer" class="font-semibold" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">{{ $post->user_name }}</a>
+                    <a href="{{ route('consulting') }}" target="_blank" rel="noopener noreferrer" class="font-semibold" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">{{ $post->user_name }}</a>
 
                     —
 
