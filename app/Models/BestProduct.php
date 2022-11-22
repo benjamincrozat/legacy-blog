@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Best extends BaseModel
+class BestProduct extends BaseModel
 {
     use HasFactory;
 

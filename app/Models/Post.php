@@ -68,9 +68,9 @@ class Post extends BaseModel implements Feedable
         return $this->belongsTo(User::class);
     }
 
-    public function bests() : HasMany
+    public function bestProducts() : HasMany
     {
-        return $this->hasMany(Best::class)->orderBy('position');
+        return $this->hasMany(BestProduct::class)->orderBy('position');
     }
 
     public function highlights() : HasMany

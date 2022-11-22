@@ -100,7 +100,7 @@ HTML;
                     ->sortable(),
             ]),
 
-            HasMany::make('Bests'),
+            HasMany::make('Best products'),
 
             HasMany::make('Highlights'),
         ];

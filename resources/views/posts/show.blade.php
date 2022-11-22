@@ -42,20 +42,20 @@
             </div>
         @endif
 
-        @if ($post->promotes_affiliate_links && ($bests = $post->bests()->with('affiliate')->get())->isNotEmpty())
+        @if ($post->promotes_affiliate_links && ($bestProducts = $post->bestProducts()->with('affiliate')->get())->isNotEmpty())
             <div
                 class="grid
-                @if (1 === $bests->count()) sm:max-w-[320px] sm:mx-auto @endif
-                @if ($bests->count() > 1) sm:grid-cols-2 @endif
-                @if ($bests->count() > 2) md:grid-cols-3 @endif
+                @if (1 === $bestProducts->count()) sm:max-w-[320px] sm:mx-auto @endif
+                @if ($bestProducts->count() > 1) sm:grid-cols-2 @endif
+                @if ($bestProducts->count() > 2) md:grid-cols-3 @endif
                 gap-4 mt-8"
             >
-                @foreach ($bests as $best)
-                    <x-best :best="$best" />
+                @foreach ($bestProducts as $bestProduct)
+                    <x-best-product :best-product="$bestProduct" />
                 @endforeach
 
                 <p class="col-span-full opacity-75 text-center text-xs">
-                    This article uses affiliate links, which can compensate me at no cost to you if you decide to pursue a deal. @if ($bests->count() > 1) <br class="hidden md:inline" /> @endif
+                    This article uses affiliate links, which can compensate me at no cost to you if you decide to pursue a deal. @if ($bestProducts->count() > 1) <br class="hidden md:inline" /> @endif
                     I only promote products I've personally used and stand behind.
                 </p>
             </div>

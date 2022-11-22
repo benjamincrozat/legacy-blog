@@ -2,13 +2,13 @@
 
 namespace Database\Seeders;
 
-use App\Models\Best;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\Redirect;
 use App\Models\Affiliate;
 use App\Models\Highlight;
 use App\Models\Subscriber;
+use App\Models\BestProduct;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
 
         Affiliate::factory(10)->create();
 
-        Best::factory(100)->create();
+        BestProduct::factory(100)->create();
 
         Redirect::factory(10)->create();
 

@@ -9,7 +9,7 @@ use Illuminate\Database\Migrations\Migration;
 return new class extends Migration {
     public function up() : void
     {
-        Schema::create('bests', function (Blueprint $table) {
+        Schema::create('best_products', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Post::class)->constrained();
             $table->foreignIdFor(Affiliate::class)->constrained();
@@ -22,6 +22,6 @@ return new class extends Migration {
 
     public function down() : void
     {
-        Schema::dropIfExists('bests');
+        Schema::dropIfExists('best_products');
     }
 };

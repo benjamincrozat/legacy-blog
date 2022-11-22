@@ -5,17 +5,15 @@ namespace App\Nova;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Number;
-use App\Nova\Actions\MoveBestUp;
 use Laravel\Nova\Fields\Markdown;
-use App\Nova\Actions\MoveBestDown;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Best extends Resource
+class BestProduct extends Resource
 {
     public static $displayInNavigation = false;
 
-    public static $model = \App\Models\Best::class;
+    public static $model = \App\Models\BestProduct::class;
 
     public static $search = [
         'id', 'post.title', 'affiliate.name',
@@ -67,9 +65,6 @@ class Best extends Resource
 
     public function actions(NovaRequest $request) : array
     {
-        return [
-            new MoveBestUp,
-            new MoveBestDown,
-        ];
+        return [];
     }
 }
