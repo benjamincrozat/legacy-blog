@@ -40,7 +40,7 @@
             <script defer src="https://save-tonight-hey-jude.benjamincrozat.com/script.js" data-site="{{ config('services.fathom.site_id') }}"></script>
         @endif
 
-        @if (should_display_ads($disableAds ?? false) && auth()->guest())
+        @if (should_display_ads($disableAds ?? false))
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
         @endif
     </head>
