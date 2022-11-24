@@ -31,7 +31,7 @@
             <x-newsletter-notice class="mt-8" />
 
             @if ($post->image)
-                <img src="{{ $post->image }}" alt="{{ $post->title }}" class="mt-8" />
+                <img src="{{ $post->image }}" width="1280" height="720" alt="{{ $post->title }}" class="aspect-square mt-8 object-cover" />
             @endif
         @endif
 
