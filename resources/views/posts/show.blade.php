@@ -73,7 +73,7 @@
                 @foreach ($others as $post)
                     <x-post :post="$post" @click="window.fathom?.trackGoal('LTFJEOM0', 0)" />
 
-                    @if (should_display_ads() && $loop->even && mt_rand(0, 1))
+                    @if (should_display_ads() && $loop->index === 0)
                         <div class="bg-white !h-auto overflow-hidden rounded-lg shadow-lg shadow-gray-200 dark:shadow-black/10">
                             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
 
