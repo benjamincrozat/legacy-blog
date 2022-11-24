@@ -5,7 +5,6 @@ namespace App\Console\Commands;
 use Tests\TestCase;
 use App\Models\Subscriber;
 use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Artisan;
 
 class ConvertKitFetchCommandTest extends TestCase
 {
@@ -21,7 +20,11 @@ class ConvertKitFetchCommandTest extends TestCase
 
         $this->assertDatabaseCount(Subscriber::class, 0);
 
-        Artisan::call(ConvertKitFetchCommand::class);
+        $this
+            ->artisan(ConvertKitFetchCommand::class)
+            ->expectsOutput("Imported $email")
+            ->assertSuccessful()
+        ;
 
         $this->assertDatabaseHas(Subscriber::class, compact('email'));
     }
