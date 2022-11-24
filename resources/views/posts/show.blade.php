@@ -71,7 +71,7 @@
 
     @if ($others->isNotEmpty())
         <div class="container max-w-[1024px] mt-16">
-            <h4 class="font-bold text-center text-xl">Other posts to read</h4>
+            <p class="font-bold text-center text-xl">Other posts to read</p>
 
             <div class="grid md:grid-cols-2 gap-4 sm:gap-8 mt-8">
                 @foreach ($others as $post)
