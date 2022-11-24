@@ -71,15 +71,7 @@
 
             <div class="grid md:grid-cols-2 gap-4 sm:gap-8 mt-8">
                 @foreach ($others as $post)
-                    @if (should_display_ads() && $loop->last)
-                        <x-in-feed-ad />
-                    @endif
-
                     <x-post :post="$post" @click="window.fathom?.trackGoal('LTFJEOM0', 0)" />
-
-                    @if (should_display_ads() && ($loop->first || $loop->index === 4))
-                        <x-in-feed-ad />
-                    @endif
                 @endforeach
             </div>
         </div>
