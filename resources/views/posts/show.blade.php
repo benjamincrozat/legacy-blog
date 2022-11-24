@@ -73,13 +73,15 @@
                 @foreach ($others as $post)
                     <x-post :post="$post" @click="window.fathom?.trackGoal('LTFJEOM0', 0)" />
 
-                    <div class="bg-gradient-to-r from-white dark:from-gray-800/50 to-gray-50/30 dark:to-gray-800/50 rounded-lg shadow-lg shadow-gray-200 dark:shadow-black/10">
-                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
+                    @if ($loop->index === 1 || $loop->index === 5 || $loop->index === 9)
+                        <div class="bg-gradient-to-r from-white dark:from-gray-800/50 to-gray-50/30 dark:to-gray-800/50 rounded-lg shadow-lg shadow-gray-200 dark:shadow-black/10">
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
 
-                        <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-g7-2g+18-3y+kz" data-ad-client="ca-pub-3461630254419592" data-ad-slot="1205956294"></ins>
+                            <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-g7-2g+18-3y+kz" data-ad-client="ca-pub-3461630254419592" data-ad-slot="1205956294"></ins>
 
-                        <script>(adsbygoogle = window.adsbygoogle || []).push({})</script>
-                    </div>
+                            <script>(adsbygoogle = window.adsbygoogle || []).push({})</script>
+                        </div>
+                    @endif
                 @endforeach
             </div>
         </div>
