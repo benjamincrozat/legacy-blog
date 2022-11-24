@@ -71,16 +71,14 @@
 
             <div class="grid md:grid-cols-2 gap-4 sm:gap-8 mt-8">
                 @foreach ($others as $post)
+                    @if (should_display_ads() && $loop->last)
+                        <x-in-feed-ad />
+                    @endif
+
                     <x-post :post="$post" @click="window.fathom?.trackGoal('LTFJEOM0', 0)" />
 
-                    @if (should_display_ads() && $loop->index === 0)
-                        <div class="bg-[#f9fafb] !h-auto overflow-hidden rounded-lg shadow-lg shadow-gray-200 dark:shadow-black/10">
-                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
-
-                            <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-g7-2g+18-3y+kz" data-ad-client="ca-pub-3461630254419592" data-ad-slot="1205956294"></ins>
-
-                            <script>(adsbygoogle = window.adsbygoogle || []).push({})</script>
-                        </div>
+                    @if (should_display_ads() && $loop->first)
+                        <x-in-feed-ad />
                     @endif
                 @endforeach
             </div>
