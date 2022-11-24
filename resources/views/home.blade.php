@@ -47,7 +47,7 @@
         @endif
     </section>
 
-    <div class="bg-gray-900 dark:bg-black flex-grow mt-16">
+    <div class="bg-gray-900 dark:bg-black mt-16">
         <x-footer class="text-gray-200" />
     </div>
 </x-app>

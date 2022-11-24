@@ -45,9 +45,7 @@
         @endif
     </head>
     <body {{ $attributes->merge(['class' => 'bg-gray-50 font-light']) }} x-data>
-        <div class="flex flex-col min-h-screen">
-            {{ $slot }}
-        </div>
+        {{ $slot }}
 
         @if (session('status') || request()->convertkit)
             <div

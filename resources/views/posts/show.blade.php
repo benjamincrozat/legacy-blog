@@ -87,7 +87,7 @@
         </div>
     @endif
 
-    <div class="bg-gray-900 dark:bg-black flex-grow mt-8 sm:mt-16">
+    <div class="bg-gray-900 dark:bg-black mt-8 sm:mt-16">
         <x-footer class="text-gray-200" />
     </div>
 
