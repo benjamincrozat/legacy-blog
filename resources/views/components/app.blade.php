@@ -41,7 +41,7 @@
         @endif
 
         @if (should_display_ads())
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
+            <script defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
         @endif
     </head>
     <body {{ $attributes->merge(['class' => 'bg-gray-50 font-light']) }} x-data>
