@@ -29,10 +29,10 @@
 
         @if (! $post->promotes_affiliate_links)
             <x-newsletter-notice class="mt-8" />
-        @endif
 
-        @if ($post->image)
-            <img src="{{ $post->image }}" alt="{{ $post->title }}" class="mt-8" />
+            @if ($post->image)
+                <img src="{{ $post->image }}" alt="{{ $post->title }}" class="mt-8" />
+            @endif
         @endif
 
         @if ($post->introduction)
