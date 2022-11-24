@@ -74,7 +74,7 @@
                     <x-post :post="$post" @click="window.fathom?.trackGoal('LTFJEOM0', 0)" />
 
                     @if (should_display_ads() && $loop->even && mt_rand(0, 1))
-                        <div class="bg-gradient-to-r from-white dark:from-gray-800/50 to-gray-50/30 dark:to-gray-800/50 !h-auto overflow-hidden rounded-lg shadow-lg shadow-gray-200 dark:shadow-black/10">
+                        <div class="bg-white dark:bg-gray-800/50 flex items-center !h-auto overflow-hidden rounded-lg shadow-lg shadow-gray-200 dark:shadow-black/10">
                             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
 
                             <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-g7-2g+18-3y+kz" data-ad-client="ca-pub-3461630254419592" data-ad-slot="1205956294"></ins>
