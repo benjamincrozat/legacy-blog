@@ -77,7 +77,7 @@
 
                     <x-post :post="$post" @click="window.fathom?.trackGoal('LTFJEOM0', 0)" />
 
-                    @if (should_display_ads() && ($loop->first || $loop->index === 5))
+                    @if (should_display_ads() && ($loop->first || $loop->index === 4))
                         <x-in-feed-ad />
                     @endif
                 @endforeach
