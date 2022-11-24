@@ -2,7 +2,6 @@
     :title="$post->title"
     :description="$post->description"
     :image="$post->image"
-    :disable-ads="$post->promotes_affiliate_links"
     class="dark:bg-gray-900 text-gray-600 dark:text-gray-300"
 >
     <x-blog-nav class="container mt-4 sm:my-8" />

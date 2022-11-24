@@ -2,7 +2,6 @@
     title="The web developer life of Benjamin Crozat"
     description="Have you ever had a question about the art of crafting web applications? This is the best blog to find your answer."
     class="dark:bg-gray-900 text-gray-600 dark:text-gray-300"
-    :disable-ads="true"
 >
     <x-blog-nav class="container mt-4 md:mt-8" />
 
