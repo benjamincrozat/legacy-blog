@@ -72,10 +72,5 @@
                 </div>
             </div>
         @endif
-
-        @if (app()->isProduction() && auth()->guest())
-            <script data-collect-dnt="true" async defer src="https://torrential-rain.benjamincrozat.com/latest.js"></script>
-            <noscript><img src="https://torrential-rain.benjamincrozat.com/noscript.gif?collect-dnt=true" referrerpolicy="no-referrer-when-downgrade" /></noscript>
-        @endif
     </body>
 </html>
