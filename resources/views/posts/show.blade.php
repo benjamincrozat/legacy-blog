@@ -72,6 +72,12 @@
             <div class="grid md:grid-cols-2 gap-4 sm:gap-8 mt-8">
                 @foreach ($others as $post)
                     <x-post :post="$post" @click="window.fathom?.trackGoal('LTFJEOM0', 0)" />
+
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
+
+                    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-g7-2g+18-3y+kz" data-ad-client="ca-pub-3461630254419592" data-ad-slot="1205956294"></ins>
+
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({})</script>
                 @endforeach
             </div>
         </div>
