@@ -41,6 +41,6 @@ class Client
             ++$page;
         } while ($response['page'] < $response['total_pages']);
 
-        return $subscribers->dd();
+        return $subscribers;
     }
 }
