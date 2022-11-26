@@ -12,6 +12,8 @@ class ConvertKitFetchCommandTest extends TestCase
     {
         Http::fakeSequence()
             ->push([
+                'page' => 1,
+                'total_pages' => 1,
                 'subscribers' => [[
                     'email_address' => $email = fake()->safeEmail(),
                     'created_at' => now()->toDateTimeString(),
