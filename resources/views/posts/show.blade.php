@@ -77,21 +77,17 @@
             <div class="grid md:grid-cols-2 gap-4 sm:gap-8 mt-8">
                 @foreach ($others as $other)
                     @if (should_display_ads($post->promotes_affiliate_links) && ($loop->last || $loop->iteration === $loop->count / 2))
-                        <template x-if="window.adsbygoogle !== undefined">
-                            <div class="bg-[#f9fafb] !h-auto overflow-hidden rounded-lg shadow-lg shadow-gray-200 dark:shadow-black/10">
-                                <x-in-feed-ad />
-                            </div>
-                        </template>
+                        <div class="bg-[#f9fafb] !h-auto overflow-hidden rounded-lg shadow-lg shadow-gray-200 dark:shadow-black/10">
+                            <x-in-feed-ad />
+                        </div>
                     @endif
 
                     <x-post :post="$other" @click="window.fathom?.trackGoal('LTFJEOM0', 0)" />
 
                     @if (should_display_ads($post->promotes_affiliate_links) && $loop->first)
-                        <template x-if="window.adsbygoogle !== undefined">
-                            <div class="bg-[#f9fafb] !h-auto overflow-hidden rounded-lg shadow-lg shadow-gray-200 dark:shadow-black/10">
-                                <x-in-feed-ad />
-                            </div>
-                        </template>
+                        <div class="bg-[#f9fafb] !h-auto overflow-hidden rounded-lg shadow-lg shadow-gray-200 dark:shadow-black/10">
+                            <x-in-feed-ad />
+                        </div>
                     @endif
                 @endforeach
             </div>
