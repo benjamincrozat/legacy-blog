@@ -42,21 +42,17 @@
             <div class="grid md:grid-cols-2 gap-4 mt-8">
                 @foreach ($posts->whereNotIn('id', $highlighted->pluck('id')) as $post)
                     @if (should_display_ads() && $loop->last)
-                        <template x-if="window.adsbygoogle !== undefined">
-                            <div class="bg-[#f9fafb] !h-auto overflow-hidden rounded-lg shadow-lg shadow-gray-200 dark:shadow-black/10">
-                                <x-in-feed-ad />
-                            </div>
-                        </template>
+                        <div class="bg-[#f9fafb] !h-auto overflow-hidden rounded-lg shadow-lg shadow-gray-200 dark:shadow-black/10" x-show="window.adsbygoogle !== undefined">
+                            <x-in-feed-ad />
+                        </div>
                     @endif
 
                     <x-post :post="$post" @click="window.fathom?.trackGoal('HH0P1ACM', 0)" />
 
                     @if (should_display_ads() && ($loop->first || $loop->iteration === $loop->count / 2))
-                        <template x-if="window.adsbygoogle !== undefined">
-                            <div class="bg-[#f9fafb] !h-auto overflow-hidden rounded-lg shadow-lg shadow-gray-200 dark:shadow-black/10">
-                                <x-in-feed-ad />
-                            </div>
-                        </template>
+                        <div class="bg-[#f9fafb] !h-auto overflow-hidden rounded-lg shadow-lg shadow-gray-200 dark:shadow-black/10" x-show="window.adsbygoogle !== undefined">
+                            <x-in-feed-ad />
+                        </div>
                     @endif
                 @endforeach
             </div>
