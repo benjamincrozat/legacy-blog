@@ -27,7 +27,7 @@
         </div>
     </div>
 
-    <x-home.section class="bg-gradient-to-r from-indigo-500 dark:from-gray-800 to-indigo-400 dark:to-gray-700">
+    <x-consulting.section class="bg-gradient-to-r from-indigo-500 dark:from-gray-800 to-indigo-400 dark:to-gray-700">
         <header class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8">
             <h1 class="font-thin order-2 md:order-none text-3xl md:text-5xl">
                 Benjamin Crozat,<br />
@@ -104,9 +104,9 @@
                 </li>
             </ul>
         </div>
-    </x-home.section>
+    </x-consulting.section>
 
-    <x-home.section
+    <x-consulting.section
         class="bg-gradient-to-r from-indigo-100/50 dark:from-gray-800/[.9] to-indigo-200/50 dark:to-gray-700/[.9]"
         x-intersect="window.fathom?.trackGoal('R7HDACGG', 0)"
     >
@@ -136,9 +136,9 @@
                 <span class="block text-indigo-900/50 dark:text-indigo-200/50 text-lg sm:text-xl">web applications</span>
             </li>
         </ul>
-    </x-home.section>
+    </x-consulting.section>
 
-    <x-home.section
+    <x-consulting.section
         class="bg-gradient-to-r from-indigo-50/50 dark:from-gray-800 to-indigo-100/50 dark:to-gray-700 text-indigo-900 dark:text-current"
         x-intersect="window.fathom?.trackGoal('WSVGAGQR', 0)"
     >
@@ -255,9 +255,9 @@
                 </p>
             </li>
         </ul>
-    </x-home.section>
+    </x-consulting.section>
 
-    <x-home.section
+    <x-consulting.section
         class="bg-gradient-to-r from-indigo-100/50 dark:from-gray-800/[.9] to-indigo-200/50 dark:to-gray-700/[.9] text-indigo-900 dark:text-gray-300"
         x-intersect="window.fathom?.trackGoal('Q0JLQGBO', 0)"
     >
@@ -283,7 +283,7 @@
                 <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" width="128" height="128" alt="Benjamin Crozat" class="inline rotate-2 rounded-full" />
             </div>
         </div>
-    </x-home.section>
+    </x-consulting.section>
 
     <div id="about" class="bg-indigo-500 dark:bg-gray-900 flex-grow">
         <x-footer class="text-indigo-100" />
