@@ -50,9 +50,11 @@
                     <x-post :post="$post" @click="window.fathom?.trackGoal('HH0P1ACM', 0)" />
 
                     @if (should_display_ads() && ($loop->first || $loop->iteration === $loop->count / 2))
-                        <div class="bg-[#f9fafb] !h-auto overflow-hidden rounded-lg shadow-lg shadow-gray-200 dark:shadow-black/10">
-                            <x-in-feed-ad />
-                        </div>
+                        <template x-if="window.adsbygoogle !== undefined">
+                            <div class="bg-[#f9fafb] !h-auto overflow-hidden rounded-lg shadow-lg shadow-gray-200 dark:shadow-black/10">
+                                <x-in-feed-ad />
+                            </div>
+                        </template>
                     @endif
                 @endforeach
             </div>
