@@ -39,6 +39,8 @@
             </div>
         @endif
 
+        <div id="ezoic-pub-ad-placeholder-117"></div>
+
         @if (! $post->promotes_affiliate_links && $post->image)
             <img src="{{ $post->image }}" width="1280" height="720" alt="{{ $post->title }}" class="aspect-video mt-8 object-cover" />
         @endif
@@ -82,6 +84,8 @@
             </div>
         </div>
     @endif
+
+    <div id="ezoic-pub-ad-placeholder-116"></div>
 
     <div class="bg-gray-900 dark:bg-black mt-8 sm:mt-16">
         <x-footer class="text-gray-200" />
