@@ -31,8 +31,6 @@
             <x-newsletter-notice class="mt-8" />
         @endif
 
-        <div id="ezoic-pub-ad-placeholder-115"></div>
-
         @if ($post->introduction)
             <div class="content mt-8">
                 {!! $post->rendered_introduction !!}
