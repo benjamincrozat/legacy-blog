@@ -14,6 +14,6 @@
     </nav>
 </div>
 
-@if (should_display_ads() && ! Route::is('home'))
+@if (! Route::is('home'))
     <div id="ezoic-pub-ad-placeholder-114"></div>
 @endif
