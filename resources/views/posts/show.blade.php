@@ -27,18 +27,18 @@
             <span class="opacity-75">@choice(':count minute|:count minutes', $post->read_time) read</span>
         </div>
 
-        @if (! $post->promotes_affiliate_links)
-            <x-newsletter-notice class="mt-8" />
-        @endif
-
         @if ($post->introduction)
             <div class="content mt-8">
                 {!! $post->rendered_introduction !!}
             </div>
         @endif
 
-        @if (! $post->promotes_affiliate_links && $post->image)
-            <img src="{{ $post->image }}" width="1280" height="720" alt="{{ $post->title }}" class="aspect-video mt-8 object-cover" />
+        @if (! $post->promotes_affiliate_links)
+            <x-newsletter-notice class="mt-8" />
+
+            @if ($post->image)
+                <img src="{{ $post->image }}" width="1280" height="720" alt="{{ $post->title }}" class="aspect-video mt-8 object-cover" />
+            @endif
         @endif
 
         @if ($post->promotes_affiliate_links && ($bestProducts = $post->bestProducts()->with('affiliate')->get())->isNotEmpty())
