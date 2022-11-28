@@ -31,7 +31,9 @@
             <x-newsletter-notice class="mt-8" />
         @endif
 
-        <div id="ezoic-pub-ad-placeholder-115"></div>
+        @if (should_display_ads())
+            <div id="ezoic-pub-ad-placeholder-115"></div>
+        @endif
 
         @if ($post->introduction)
             <div class="content mt-8">
@@ -39,7 +41,9 @@
             </div>
         @endif
 
-        <div id="ezoic-pub-ad-placeholder-117"></div>
+        @if (should_display_ads())
+            <div id="ezoic-pub-ad-placeholder-117"></div>
+        @endif
 
         @if (! $post->promotes_affiliate_links && $post->image)
             <img src="{{ $post->image }}" width="1280" height="720" alt="{{ $post->title }}" class="aspect-video mt-8 object-cover" />
@@ -66,7 +70,9 @@
 
         <x-toc :toc="$post->table_of_contents" class="mt-8" />
 
-        <div id="ezoic-pub-ad-placeholder-118"></div>
+        @if (should_display_ads())
+            <div id="ezoic-pub-ad-placeholder-118"></div>
+        @endif
 
         <div class="content mt-8">
             {!! $post->rendered_content !!}
@@ -87,7 +93,9 @@
         </div>
     @endif
 
-    <div id="ezoic-pub-ad-placeholder-116"></div>
+    @if (should_display_ads())
+        <div id="ezoic-pub-ad-placeholder-116"></div>
+    @endif
 
     <div class="bg-gray-900 dark:bg-black mt-8 sm:mt-16">
         <x-footer class="text-gray-200" />
