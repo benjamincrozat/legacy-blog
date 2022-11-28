@@ -66,6 +66,8 @@
 
         <x-toc :toc="$post->table_of_contents" class="mt-8" />
 
+        <div id="ezoic-pub-ad-placeholder-118"></div>
+
         <div class="content mt-8">
             {!! $post->rendered_content !!}
         </div>
