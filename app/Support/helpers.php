@@ -7,6 +7,6 @@ if (! function_exists('should_display_ads')) {
             return false;
         }
 
-        return app()->isProduction() && config('services.adsense.enabled');
+        return app()->isProduction() && config('services.ads.enabled');
     }
 }

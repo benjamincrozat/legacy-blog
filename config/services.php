@@ -30,7 +30,7 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
-    'adsense' => [
+    'ads' => [
         'enabled' => env('ADS_ENABLED', false),
     ],
 
