@@ -13,3 +13,7 @@
         <x-hire-me />
     </nav>
 </div>
+
+@if (! Route::is('home'))
+    <div id="ezoic-pub-ad-placeholder-114" class="bg-black h-[200px]"></div>
+@endif
