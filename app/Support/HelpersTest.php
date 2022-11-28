@@ -13,7 +13,7 @@ class HelpersTest extends TestCase
 
     public function test_it_does_not_show_ads_outside_production_even_when_enabled() : void
     {
-        config(['services.ads.enabled' => true]);
+        config(['services.adsense.enabled' => true]);
 
         $this->assertFalse(should_display_ads());
     }
@@ -22,7 +22,7 @@ class HelpersTest extends TestCase
     {
         app()['env'] = 'production';
 
-        config(['services.ads.enabled' => true]);
+        config(['services.adsense.enabled' => true]);
 
         $this->assertTrue(should_display_ads());
     }
