@@ -308,7 +308,7 @@
                                 {{ $post->title }}
                             </a>
 
-                            <div>@choice(':count&nbsp;minute|:count&nbsp;minutes', $post->read_time) read</div>
+                            <div class="opacity-75 text-sm">@choice(':count&nbsp;minute|:count&nbsp;minutes', $post->read_time) read</div>
                         </div>
                     </li>
                 @endforeach
