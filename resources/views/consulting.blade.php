@@ -113,7 +113,7 @@
     >
         <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
             <x-icon-connected-dots class="inline-block fill-current w-12 sm:w-16 h-12 sm:h-16" />
-            <span class="block mt-4 dark:text-indigo-300">A Laravel expert for your&nbsp;business</span>
+            <div class="mt-4 dark:text-indigo-300">A Laravel expert for your&nbsp;business</div>
         </h2>
 
         <ul class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8 sm:mt-16">
@@ -145,7 +145,7 @@
     >
         <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
             <x-icon-connected-people class="inline-block fill-current w-12 sm:w-16 h-12 sm:h-16" />
-            <div class="block mt-4 dark:text-indigo-300">Laravel consulting services I provide</div>
+            <div class="mt-4 dark:text-indigo-300">Laravel consulting services I provide</div>
         </h2>
 
         <ul class="grid sm:grid-cols-2 gap-12 mt-8 sm:mt-16">
@@ -264,7 +264,7 @@
     >
         <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
             <x-icon-question-circle class="fill-current inline-block w-12 sm:w-16 h-12 sm:h-16" />
-            <span class="block mt-4 dark:text-indigo-300">About me</span>
+            <div class="mt-4 dark:text-indigo-300">About me</div>
         </h2>
 
         <div class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8 mt-8 sm:text-lg md:text-xl">
