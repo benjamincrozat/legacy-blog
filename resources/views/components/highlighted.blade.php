@@ -1,4 +1,4 @@
-<figure {{ $attributes->merge(['class' => 'flex-shrink-0 snap-start sm:snap-center md:snap-normal scroll-ml-4 md:scroll-ml-0 w-[90%] sm:w-[70%] md:w-auto']) }}>
+<figure {{ $attributes->except('post')->merge(['class' => 'flex-shrink-0 snap-start sm:snap-center md:snap-normal scroll-ml-4 md:scroll-ml-0 w-[90%] sm:w-[70%] md:w-auto']) }}>
     <a href="{{ route('posts.show', $post->slug) }}" @click="window.fathom?.trackGoal('OKJIR46O', 0)">
         <img
             @if (empty($first)) loading="lazy" @endif
