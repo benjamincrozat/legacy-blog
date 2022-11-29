@@ -27,7 +27,7 @@ class MarxdownConverterTest extends TestCase
     {
         $this->assertStringContainsString(
             'href="' . url('/') . '">',
-            Str::marxdown('[Larabiz](' . url('/') . ')')
+            Str::marxdown('[Foo](' . url('/') . ')')
         );
 
         $this->assertStringContainsString(
@@ -44,7 +44,7 @@ class MarxdownConverterTest extends TestCase
         );
     }
 
-    public function test_it_adds_a_alpine_click_event_attribute_to_links_to_send_a_fathom_event() : void
+    public function test_it_adds_a_alpine_click_event_attribute_to_external_links_to_send_a_fathom_event() : void
     {
         $this->assertStringContainsString(
             "window.fathom?.trackGoal('SMD2GKMN', 0)",

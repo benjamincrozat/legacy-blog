@@ -24,16 +24,27 @@ class MarxdownConverter extends \League\CommonMark\MarkdownConverter
                 Image::class => ['loading' => 'lazy'],
                 Link::class => [
                     'rel' => function (Link $node) {
-                        if (! str_contains($node->getUrl(), url('/')) && ! Str::startsWith($node->getUrl(), '#')) {
+                        if (
+                            // Is an external link.
+                            ! str_contains($node->getUrl(), url('/')) &&
+                            // And not an anchor.
+                            ! Str::startsWith($node->getUrl(), '#')
+                        ) {
                             return 'nofollow noopener noreferrer';
                         }
                     },
                     'target' => function (Link $node) {
-                        if (! str_contains($node->getUrl(), url('/')) && ! Str::startsWith($node->getUrl(), '#')) {
+                        if (
+                            // Is an external link.
+                            ! str_contains($node->getUrl(), url('/')) &&
+                            // And not an anchor.
+                            ! Str::startsWith($node->getUrl(), '#')
+                        ) {
                             return '_blank';
                         }
                     },
                     '@click' => function (Link $node) {
+                        // Is an affiliate link.
                         return str_contains($node->getUrl(), url('/recommends'))
                             ? "window.fathom?.trackGoal('LBJL4VHK', 0)"
                             : "window.fathom?.trackGoal('SMD2GKMN', 0)";
