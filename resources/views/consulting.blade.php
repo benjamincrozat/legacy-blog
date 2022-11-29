@@ -55,12 +55,6 @@
             <p class="mt-8">
                 <strong class="font-semibold text-white">Make more money</strong> on the long run by avoiding endless regressions, bug huntings and rewrites of your web applications.
             </p>
-
-            <p class="mt-8">
-                <a href="#about" class="border-b border-white/50 font-normal text-lg sm:text-xl text-white">
-                    Learn more about me
-                </a>
-            </p>
         </div>
 
         <div class="border-t border-indigo-400 dark:border-gray-600 mt-16 pt-16">
