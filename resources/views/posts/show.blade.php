@@ -2,7 +2,6 @@
     :title="$post->title"
     :description="$post->description"
     :image="$post->image"
-    :disable-ads="$post->promotes_affiliate_links"
     class="dark:bg-gray-900 text-gray-600 dark:text-gray-300"
 >
     <x-blog-nav class="container mt-4 sm:my-8" />
@@ -76,19 +75,7 @@
 
             <div class="grid md:grid-cols-2 gap-4 sm:gap-8 mt-8">
                 @foreach ($others as $other)
-                    @if (should_display_ads($post->promotes_affiliate_links) && ($loop->last || $loop->iteration === $loop->count / 2))
-                        <div class="bg-[#f9fafb] !h-auto overflow-hidden rounded-lg shadow-lg shadow-gray-200 dark:shadow-black/10">
-                            <x-in-feed-ad />
-                        </div>
-                    @endif
-
                     <x-post :post="$other" @click="window.fathom?.trackGoal('LTFJEOM0', 0)" />
-
-                    @if (should_display_ads($post->promotes_affiliate_links) && $loop->first)
-                        <div class="bg-[#f9fafb] !h-auto overflow-hidden rounded-lg shadow-lg shadow-gray-200 dark:shadow-black/10">
-                            <x-in-feed-ad />
-                        </div>
-                    @endif
                 @endforeach
             </div>
         </div>
