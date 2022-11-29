@@ -296,7 +296,11 @@
 
             <ul class="grid gap-2 mt-8">
                 @foreach ($posts as $post)
-                    <li>
+                    <li class="flex items-center gap-4">
+                        <a href="{{ route('posts.show', $post) }}">
+                            <img loading="lazy" src="{{ str_replace('w_auto', 'h_96', $post->image) }}" width="48" height="48" alt="{{ $post->title }}" class="aspect-square object-cover" />
+                        </a>
+
                         <a href="{{ route('posts.show', $post) }}" class="font-bold underline">
                             {{ $post->title }}
                         </a>
