@@ -285,22 +285,24 @@
             </div>
         </div>
 
-        <h2 class="font-bold mt-8 sm:mt-16 text-xl sm:text-3xl text-center text-indigo-400">Proper education changes lives</h2>
+        <div class="border-t border-indigo-200/50 pt-8 sm:pt-16 mt-8 sm:mt-16">
+            <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">Proper education changes lives</h2>
 
-        <div class="mt-8 sm:text-lg md:text-xl">
-            <p>
-                In addition of my consulting work, I write educational content on my blog to help as much developers as possible to grow their skills and improve their lives.
-            </p>
+            <div class="mt-8 sm:text-lg md:text-xl">
+                <p>
+                    In addition of my consulting work, I contribute to the community by writing educational content on my blog to help as much developers as possible to grow their skills and improve their lives.
+                </p>
 
-            <ul class="grid gap-2 mt-8">
-                @foreach ($posts as $post)
-                    <li>
-                        <a href="{{ route('posts.show', $post) }}" class="font-bold underline">
-                            {{ $post->title }}
-                        </a>
-                    </li>
-                @endforeach
-            </ul>
+                <ul class="grid gap-2 mt-8">
+                    @foreach ($posts as $post)
+                        <li>
+                            <a href="{{ route('posts.show', $post) }}" class="font-bold underline">
+                                {{ $post->title }}
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
         </div>
     </x-consulting.section>
 
