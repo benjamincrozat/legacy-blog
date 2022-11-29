@@ -294,7 +294,7 @@
                 In addition to my consulting work, I contribute to the community by writing educational content on my blog to help as many developers as possible to grow their skills and improve their lives.
             </p>
 
-            <ul class="grid gap-2 mt-8">
+            <ul class="grid sm:grid-cols-2 gap-4 mt-8">
                 @foreach ($posts as $post)
                     <li class="border border-indigo-200/50 flex items-center gap-4 p-4 rounded text-base">
                         @if ($post->image)
