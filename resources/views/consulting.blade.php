@@ -284,28 +284,31 @@
                 <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" width="128" height="128" alt="Benjamin Crozat" class="inline rotate-2 rounded-full" />
             </div>
         </div>
+    </x-consulting.section>
 
-        <div class="border-t border-indigo-200/50 pt-8 sm:pt-16 mt-8 sm:mt-16">
-            <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
-                <x-icon-student class="fill-current inline-block w-12 sm:w-16 h-12 sm:h-16" />
-                <div class="mt-4 dark:text-indigo-300">Proper education changes lives</div>
-            </h2>
+    <x-consulting.section
+        class="bg-gradient-to-r from-indigo-50/50 dark:from-gray-800 to-indigo-100/50 dark:to-gray-700 text-indigo-900 dark:text-current"
+        x-intersect="window.fathom?.trackGoal('Q0JLQGBO', 0)"
+    >
+        <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
+            <x-icon-student class="fill-current inline-block w-12 sm:w-16 h-12 sm:h-16" />
+            <div class="mt-4 dark:text-indigo-300">Proper education changes lives</div>
+        </h2>
 
-            <div class="mt-8 sm:text-lg md:text-xl">
-                <p>
-                    In addition to my consulting work, I contribute to the community by writing educational content on my blog to help as many developers as possible to grow their skills and improve their lives.
-                </p>
+        <div class="mt-8 sm:text-lg md:text-xl">
+            <p>
+                In addition to my consulting work, I contribute to the community by writing educational content on my blog to help as many developers as possible to grow their skills and improve their lives.
+            </p>
 
-                <ul class="grid gap-2 mt-8">
-                    @foreach ($posts as $post)
-                        <li>
-                            <a href="{{ route('posts.show', $post) }}" class="font-bold underline">
-                                {{ $post->title }}
-                            </a>
-                        </li>
-                    @endforeach
-                </ul>
-            </div>
+            <ul class="grid gap-2 mt-8">
+                @foreach ($posts as $post)
+                    <li>
+                        <a href="{{ route('posts.show', $post) }}" class="font-bold underline">
+                            {{ $post->title }}
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
         </div>
     </x-consulting.section>
 
