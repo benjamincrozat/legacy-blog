@@ -284,6 +284,24 @@
                 <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" width="128" height="128" alt="Benjamin Crozat" class="inline rotate-2 rounded-full" />
             </div>
         </div>
+
+        <h2 class="font-bold mt-8 sm:mt-16 text-xl sm:text-3xl text-center text-indigo-400">Proper education changes lives</h2>
+
+        <div class="mt-8 sm:text-lg md:text-xl">
+            <p>
+                In addition of my consulting work, I write educational content on my blog to help as much developers as possible to grow their skills and improve their lives.
+            </p>
+
+            <ul class="grid gap-2 mt-8">
+                @foreach ($posts as $post)
+                    <li>
+                        <a href="{{ route('posts.show', $post) }}" class="font-bold underline">
+                            {{ $post->title }}
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
     </x-consulting.section>
 
     <div id="about" class="bg-indigo-500 dark:bg-gray-900 flex-grow">

@@ -4,11 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ShowPostController;
 use App\Http\Controllers\SubscribeController;
+use App\Http\Controllers\ConsultingController;
 use App\Http\Controllers\RedirectToAffiliateController;
 
 Route::get('/', HomeController::class)->name('home');
 
-Route::view('/consulting', 'consulting')->name('consulting');
+Route::get('/consulting', ConsultingController::class)->name('consulting');
 
 Route::post('/subscribe', SubscribeController::class)->name('subscribe');
 
