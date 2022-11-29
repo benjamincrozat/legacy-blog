@@ -21,7 +21,7 @@
                 </a>
 
                 <a href="mailto:benjamincrozat@me.com" class="bg-white font-bold px-4 py-2 rounded text-indigo-400" @click="window.fathom?.trackGoal('EWIGDNLB', 0)">
-                    Contact me!
+                    Contact me
                 </a>
             </nav>
         </div>
