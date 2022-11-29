@@ -286,7 +286,10 @@
         </div>
 
         <div class="border-t border-indigo-200/50 pt-8 sm:pt-16 mt-8 sm:mt-16">
-            <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">Proper education changes lives</h2>
+            <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
+                <x-icon-student class="fill-current inline-block w-12 sm:w-16 h-12 sm:h-16" />
+                <div class="mt-4 dark:text-indigo-300">Proper education changes lives</div>
+            </h2>
 
             <div class="mt-8 sm:text-lg md:text-xl">
                 <p>
