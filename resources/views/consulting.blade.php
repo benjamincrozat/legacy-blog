@@ -1,5 +1,5 @@
 <x-app
-    title="Benjamin Crozat, a Laravel developer for hire"
+    title="Laravel developer for hire: Benjamin Crozat"
     description="Book an expert Laravel developer, TODAY! Let me guide your team toward reliability and maintenability."
     class="text-indigo-50 dark:text-gray-300"
 >
@@ -30,8 +30,8 @@
     <x-consulting.section class="bg-gradient-to-r from-indigo-500 dark:from-gray-800 to-indigo-400 dark:to-gray-700">
         <header class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8">
             <h1 class="font-thin order-2 md:order-none text-3xl md:text-5xl">
-                Benjamin Crozat,<br />
-                a Laravel developer for <strong class="border-b font-semibold">hire</strong>
+                Laravel developer for <strong class="border-b font-semibold">hire</strong>:<br />
+                Benjamin Crozat
             </h1>
 
             <div class="flex-shrink-0 order-1 md:order-none text-center md:text-left w-full md:w-auto">
@@ -47,9 +47,10 @@
         </header>
 
         <div class="font-thin text-xl sm:text-3xl">
-            <p class="mt-8 sm:mt-16">
-                Let me guide your team toward <strong class="font-semibold text-white">reliability</strong> and <strong class="font-semibold text-white">maintenability</strong>.
-            </p>
+            <h2 class="mt-8 sm:mt-16">
+                Hire a dedicated Laravel developer to guide your team<br class="hidden sm:inline" />
+                toward <strong class="font-semibold text-white">reliability</strong> and <strong class="font-semibold text-white">maintenability</strong>.
+            </h2>
 
             <p class="mt-8">
                 <strong class="font-semibold text-white">Make more money</strong> on the long run by avoiding endless regressions, bug huntings and rewrites of your web applications.
@@ -112,7 +113,7 @@
     >
         <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
             <x-icon-connected-dots class="inline-block fill-current w-12 sm:w-16 h-12 sm:h-16" />
-            <span class="block mt-4 dark:text-indigo-300">An expert Laravel developer for your&nbsp;business</span>
+            <span class="block mt-4 dark:text-indigo-300">A Laravel expert for your&nbsp;business</span>
         </h2>
 
         <ul class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8 sm:mt-16">
@@ -144,7 +145,7 @@
     >
         <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
             <x-icon-connected-people class="inline-block fill-current w-12 sm:w-16 h-12 sm:h-16" />
-            <div class="block mt-4 dark:text-indigo-300">My Laravel development services</div>
+            <div class="block mt-4 dark:text-indigo-300">Laravel consulting services I provide</div>
         </h2>
 
         <ul class="grid sm:grid-cols-2 gap-12 mt-8 sm:mt-16">
