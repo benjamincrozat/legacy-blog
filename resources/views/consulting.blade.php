@@ -300,7 +300,7 @@
 
             <ul class="grid sm:grid-cols-2 gap-4 mt-8">
                 @foreach ($posts as $post)
-                    <li class="border border-indigo-200/50 dark:border-gray-700 flex items-center gap-4 p-4 rounded text-base">
+                    <li class="border border-indigo-200/50 dark:border-gray-700 flex items-center gap-4 p-2 sm:p-4 rounded text-base">
                         @if ($post->image)
                             <a href="{{ route('posts.show', $post) }}" class="flex-shrink-0">
                                 <img loading="lazy" src="{{ str_replace('w_auto', 'h_96', $post->image) }}" width="48" height="48" alt="{{ $post->title }}" class="aspect-square object-cover" />
