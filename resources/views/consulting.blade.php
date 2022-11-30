@@ -288,17 +288,19 @@
         </h2>
 
         <div class="mt-8 sm:text-lg md:text-xl">
-            <p>
-                I love to contribute to the community by writing educational content on my blog.
-            </p>
+            <div class="sm:text-center">
+                <p>
+                    I love to contribute to the community by writing educational content on my blog.
+                </p>
 
-            <p class="mt-4">
-                My mission is to help as many developers as possible to get better at what they do.
-            </p>
+                <p class="mt-4">
+                    My mission is to help as many developers as possible to get better at what they do.
+                </p>
+            </div>
 
             <ul class="grid sm:grid-cols-2 gap-4 mt-8">
                 @foreach ($posts as $post)
-                    <li class="border border-indigo-200/50 flex items-center gap-4 p-4 rounded text-base">
+                    <li class="border border-indigo-200/50 dark:border-gray-800 flex items-center gap-4 p-4 rounded text-base">
                         @if ($post->image)
                             <a href="{{ route('posts.show', $post) }}" class="flex-shrink-0">
                                 <img loading="lazy" src="{{ str_replace('w_auto', 'h_96', $post->image) }}" width="48" height="48" alt="{{ $post->title }}" class="aspect-square object-cover" />
