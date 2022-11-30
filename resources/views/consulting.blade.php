@@ -265,7 +265,7 @@
             <div class="order-2 md:order-none">
                 <p>My name is Benjamin Crozat. I'm a passionate <strong class="font-bold dark:text-white">full-stack PHP and Laravel web developer from the south of France</strong> with 15+ years of experience.</p>
 
-                <p class="mt-4">I'm a self-taught developer and I was immediately seduced by the freelancer life. I quickly became interested in helping companies to work better with web developers and technology.</p>
+                <p class="mt-4">I'm a self-taught developer and was immediately seduced by the freelancer life. I quickly became interested in helping companies to work better with web developers and technology.</p>
 
                 <p class="mt-4">
                     We can work together as well, <a href="mailto:benjamincrozat@me.com" class="border-b border-indigo-400/50 dark:border-indigo-300/50 font-normal text-indigo-400 dark:text-indigo-300" @click="window.fathom?.trackGoal('S0ZZJNPU', 0)">contact me</a>!
