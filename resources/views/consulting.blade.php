@@ -107,7 +107,7 @@
     >
         <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
             <x-icon-connected-dots class="inline-block fill-current w-12 sm:w-16 h-12 sm:h-16" />
-            <div class="mt-4 dark:text-indigo-300">A Laravel expert for your&nbsp;business</div>
+            <div class="mt-4 dark:text-indigo-300">An expert Laravel developer for your&nbsp;business</div>
         </h2>
 
         <ul class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8 sm:mt-16">
@@ -151,7 +151,7 @@
                 </p>
 
                 <p class="mt-4">
-                    Pair programming is the best way for developers to learn from each other, <strong class="font-bold">fast</strong>.
+                    Pair programming is the best way for Laravel developers to learn from each other, <strong class="font-bold">fast</strong>.
                 </p>
 
                 <p class="mt-4">
@@ -263,7 +263,7 @@
 
         <div class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8 mt-8 sm:text-lg md:text-xl">
             <div class="order-2 md:order-none">
-                <p>My name is Benjamin Crozat. I'm a passionate <strong class="font-bold dark:text-white">full-stack PHP and Laravel web developer from the south of France</strong> with 15+ years of experience.</p>
+                <p>My name is Benjamin Crozat. I'm a passionate <strong class="font-bold dark:text-white">full-stack PHP and Laravel developer from the south of France</strong> with 15+ years of experience.</p>
 
                 <p class="mt-4">I'm a self-taught developer and was immediately seduced by the freelancer life. I quickly became interested in helping companies to work better with web developers and technology.</p>
 
