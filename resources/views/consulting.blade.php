@@ -20,7 +20,7 @@
                     Read my blog
                 </a>
 
-                <a href="mailto:benjamincrozat@me.com" class="bg-white font-bold px-4 py-2 rounded text-indigo-400" @click="window.fathom?.trackGoal('EWIGDNLB', 0)">
+                <a href="mailto:benjamincrozat@me.com" class="bg-white font-bold px-4 py-2 rounded text-indigo-400 dark:text-gray-600" @click="window.fathom?.trackGoal('EWIGDNLB', 0)">
                     Contact me
                 </a>
             </nav>
