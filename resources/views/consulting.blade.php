@@ -289,7 +289,11 @@
 
         <div class="mt-8 sm:text-lg md:text-xl">
             <p>
-                In addition to my consulting work, I contribute to the community by writing educational content on my blog to help as many developers as possible to grow their skills and improve their lives.
+                I love to contribute to the community by writing educational content on my blog.
+            </p>
+
+            <p class="mt-4">
+                My mission is to help as many developers as possible to get better at what they do.
             </p>
 
             <ul class="grid sm:grid-cols-2 gap-4 mt-8">
