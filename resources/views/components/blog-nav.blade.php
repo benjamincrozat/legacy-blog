@@ -10,6 +10,6 @@
     </a>
 
     <nav class="flex items-center gap-6 sm:gap-8">
-        <x-hire-me />
+        <x-book-me />
     </nav>
 </div>
