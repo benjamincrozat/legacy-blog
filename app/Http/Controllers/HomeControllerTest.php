@@ -8,11 +8,11 @@ use Illuminate\Support\Collection;
 
 class HomeControllerTest extends TestCase
 {
-    public function test_it_lists_highlighted_posts() : void
+    public function test_it_lists_pinned_posts() : void
     {
         Post::factory(10)->create();
 
-        Post::factory(10)->highlighted()->create();
+        Post::factory(10)->pinned()->create();
 
         $response = $this
             ->get(route('home'))
@@ -20,8 +20,8 @@ class HomeControllerTest extends TestCase
             ->assertViewIs('home')
         ;
 
-        $this->assertInstanceOf(Collection::class, $response->viewData('highlighted'));
-        $this->assertCount(4, $response->viewData('highlighted'));
+        $this->assertInstanceOf(Collection::class, $response->viewData('pinned'));
+        $this->assertCount(4, $response->viewData('pinned'));
     }
 
     public function test_it_lists_posts() : void

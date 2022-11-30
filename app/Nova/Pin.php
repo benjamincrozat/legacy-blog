@@ -7,9 +7,9 @@ use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Highlight extends Resource
+class Pin extends Resource
 {
-    public static $model = \App\Models\Highlight::class;
+    public static $model = \App\Models\Pin::class;
 
     public static $title = 'post.title';
 

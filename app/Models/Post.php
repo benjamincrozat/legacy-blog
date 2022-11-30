@@ -35,14 +35,14 @@ class Post extends BaseModel implements Feedable
         });
     }
 
-    public function scopeWithHighlighted(Builder $query) : void
+    public function scopeWithPinned(Builder $query) : void
     {
         $query
             ->addSelect([
-                'is_highlighted' => Highlight::select('id')
+                'is_pinned' => Pin::select('id')
                     ->whereColumn('post_id', 'posts.id')
                     ->limit(1),
-                'highlighted_at' => Highlight::select('created_at')
+                'pinned_at' => Pin::select('created_at')
                     ->whereColumn('post_id', 'posts.id')
                     ->limit(1),
             ]);
@@ -73,9 +73,9 @@ class Post extends BaseModel implements Feedable
         return $this->hasMany(BestProduct::class)->orderBy('position');
     }
 
-    public function highlights() : HasMany
+    public function pins() : HasMany
     {
-        return $this->hasMany(Highlight::class);
+        return $this->hasMany(Pin::class);
     }
 
     public function readTime() : Attribute

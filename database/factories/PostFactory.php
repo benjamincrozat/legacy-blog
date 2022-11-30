@@ -259,8 +259,8 @@ MARKDOWN,
         ];
     }
 
-    public function highlighted() : static
+    public function pinned() : static
     {
-        return $this->afterCreating(fn (Post $post) => $post->highlights()->create());
+        return $this->afterCreating(fn (Post $post) => $post->pins()->create());
     }
 }

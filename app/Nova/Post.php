@@ -102,7 +102,7 @@ HTML;
 
             HasMany::make('Best products'),
 
-            HasMany::make('Highlights'),
+            HasMany::make('Pins'),
         ];
     }
 

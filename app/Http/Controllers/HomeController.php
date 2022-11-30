@@ -9,10 +9,10 @@ class HomeController extends Controller
 {
     public function __invoke() : View
     {
-        $posts = Post::latest()->withHighlighted()->withUser()->get();
+        $posts = Post::latest()->withPinned()->withUser()->get();
 
-        $highlighted = $posts->where('is_highlighted')->take(4)->sortByDesc('highlighted_at');
+        $pinned = $posts->where('is_pinned')->take(4)->sortByDesc('pinned_at');
 
-        return view('home', compact('posts', 'highlighted'));
+        return view('home', compact('posts', 'pinned'));
     }
 }

@@ -8,7 +8,7 @@ use Illuminate\Database\Migrations\Migration;
 return new class extends Migration {
     public function up() : void
     {
-        Schema::create('highlights', function (Blueprint $table) {
+        Schema::create('pins', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Post::class)->constrained();
             $table->timestamps();
@@ -17,6 +17,6 @@ return new class extends Migration {
 
     public function down() : void
     {
-        Schema::dropIfExists('highlights');
+        Schema::dropIfExists('pins');
     }
 };

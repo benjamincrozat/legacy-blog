@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Models\Pin;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\Redirect;
 use App\Models\Affiliate;
-use App\Models\Highlight;
 use App\Models\Subscriber;
 use App\Models\BestProduct;
 use Illuminate\Database\Seeder;
@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
 
         Post::factory(50)->create();
 
-        Highlight::factory(10)->create();
+        Pin::factory(10)->create();
 
         Affiliate::factory(10)->create();
 

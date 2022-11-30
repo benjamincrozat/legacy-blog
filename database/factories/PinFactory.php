@@ -6,9 +6,9 @@ use App\Models\Post;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Highlight>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Pin>
  */
-class HighlightFactory extends Factory
+class PinFactory extends Factory
 {
     public function definition() : array
     {
