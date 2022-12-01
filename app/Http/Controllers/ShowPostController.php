@@ -11,7 +11,7 @@ class ShowPostController extends Controller
     {
         return view('posts.show', [
             'post' => $post,
-            'others' => Post::whereNotIn('id', [$post->id])->inRandomOrder()->withUser()->limit(10)->get(),
+            'others' => Post::whereNotIn('id', [$post->id])->inRandomOrder()->limit(10)->get(),
         ]);
     }
 }
