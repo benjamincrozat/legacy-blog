@@ -98,14 +98,14 @@ class Post extends BaseModel implements Feedable
     public function renderedIntroduction() : Attribute
     {
         return Attribute::make(
-            fn () => Str::marxdown($this->introduction)
+            fn () => Str::marxdown($this->introduction ?? '')
         )->shouldCache();
     }
 
     public function renderedContent() : Attribute
     {
         return Attribute::make(
-            fn () => Str::marxdown($this->content)
+            fn () => Str::marxdown($this->content ?? '')
         )->shouldCache();
     }
 
