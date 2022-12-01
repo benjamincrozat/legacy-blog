@@ -113,7 +113,7 @@
             "author": [
                 {
                     "@type": "Person",
-                    "name": "{{ $post->user_name }}",
+                    "name": "{{ $post->user->name }}",
                     "url": "{{ route('home') }}"
                 }
             ]
