@@ -71,7 +71,7 @@
         <aside class="border-y dark:border-gray-800 flex flex-wrap sm:flex-nowrap items-center gap-4 sm:gap-8 py-8 sm:py-16">
             <div class="order-2 sm:order-none">
                 <p class="font-bold text-xl">
-                    {{ $post->user->name }}
+                    Article written by {{ $post->user->name }}
                 </p>
 
                 <div class="content !leading-normal">
