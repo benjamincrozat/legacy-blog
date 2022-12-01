@@ -6,10 +6,15 @@
     @apply break-words max-w-none prose prose-a:border-b prose-a:no-underline prose-code:dark:text-current prose-strong:text-current prose-a:border-indigo-400/50 prose-a:text-indigo-400 prose-headings:dark:text-white prose-headings:scroll-m-8 prose-hr:dark:border-gray-800 prose-thead:dark:border-gray-800 prose-tr:dark:border-gray-800 dark:text-current;
 }
 
+.btn-indigo {
+    @apply bg-gradient-to-r from-indigo-300 dark:from-indigo-700 to-indigo-400 dark:to-indigo-800 block !border-0 font-normal leading-tight px-4 py-3 rounded shadow-md text-center !text-indigo-50;
+}
+
 .btn-green {
     @apply bg-gradient-to-r from-emerald-400 dark:from-emerald-700 to-emerald-500 dark:to-emerald-800 block !border-0 font-normal leading-tight px-4 py-3 rounded shadow-md text-center !text-emerald-50;
 }
 
+.btn-indigo strong,
 .btn-green strong {
     @apply text-white;
 }

@@ -20,9 +20,9 @@
         </h1>
 
         <div class="flex items-center gap-2 mt-4 text-sm">
-            <img src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}" width="18" height="18" alt="Benjamin Crozat's avatar." class="-translate-y-[.5px] rounded-full" />
+            <img src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}" width="18" height="18" alt="{{ $post->user->name }}" class="-translate-y-[.5px] rounded-full" />
 
-            <a href="{{ route('consulting') }}" class="font-normal underline" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">Benjamin Crozat</a>
+            <a href="{{ route('consulting') }}" class="font-normal underline" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">{{ $post->user->name }}</a>
             —
             <span class="opacity-75">@choice(':count minute|:count minutes', $post->read_time) read</span>
         </div>
@@ -67,7 +67,21 @@
         </div>
     </article>
 
-    <x-newsletter class="container max-w-[1024px] mt-16" />
+    <div class="container mt-8 sm:mt-16">
+        <aside class="border-y dark:border-gray-800 flex flex-wrap sm:flex-nowrap items-center gap-4 sm:gap-8 py-8 sm:py-16">
+            <div class="order-2 sm:order-none">
+                <p class="font-bold text-xl">
+                    {{ $post->user->name }}
+                </p>
+
+                <div class="content !leading-normal">
+                    {!! $post->user->rendered_description !!}
+                </div>
+            </div>
+
+            <img src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}" width="64" height="64" alt="{{ $post->user->name }}" class="-translate-y-[.5px] flex-shrink-0 order-1 sm:order-none rounded-full" />
+        </aside>
+    </div>
 
     @if ($others->isNotEmpty())
         <div class="container max-w-[1024px] mt-16">

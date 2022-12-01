@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Str;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -38,5 +40,12 @@ class User extends Authenticatable
     public function posts() : HasMany
     {
         return $this->hasMany(Post::class);
+    }
+
+    public function renderedDescription() : Attribute
+    {
+        return Attribute::make(
+            fn () => Str::marxdown($this->description)
+        )->shouldCache();
     }
 }
