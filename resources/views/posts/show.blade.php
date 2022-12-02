@@ -67,8 +67,7 @@
         </div>
     </article>
 
-    <div class="container mt-8 sm:mt-16">
-        <aside class="border-y dark:border-gray-800 flex flex-wrap sm:flex-nowrap items-center gap-4 sm:gap-8 py-8 sm:py-16">
+        <aside class="container mt-8 sm:mt-16 flex flex-wrap sm:flex-nowrap items-center gap-4 sm:gap-8">
             <div class="order-2 sm:order-none">
                 <p class="font-bold text-xl">
                     Article written by {{ $post->user->name }}
@@ -81,7 +80,6 @@
 
             <img src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}" width="64" height="64" alt="{{ $post->user->name }}" class="-translate-y-[.5px] flex-shrink-0 order-1 sm:order-none rounded-full" />
         </aside>
-    </div>
 
     @if ($others->isNotEmpty())
         <div class="container max-w-[1024px] mt-16">
