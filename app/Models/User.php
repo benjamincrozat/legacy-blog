@@ -45,7 +45,7 @@ class User extends Authenticatable
     public function renderedDescription() : Attribute
     {
         return Attribute::make(
-            fn () => Str::marxdown($this->description ?? '')
+            fn () => Str::markdown($this->description ?? '')
         )->shouldCache();
     }
 }
