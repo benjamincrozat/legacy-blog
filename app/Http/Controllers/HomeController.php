@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function __invoke() : View
     {
-        $posts = Post::latest()->withPinned()->withUser()->get();
+        $posts = Post::latest()->withPinned()->get();
 
         $pinned = $posts->where('is_pinned')->take(4)->sortByDesc('pinned_at');
 
