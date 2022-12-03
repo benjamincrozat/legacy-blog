@@ -8,10 +8,8 @@ use Illuminate\Support\Collection;
 
 class HomeControllerTest extends TestCase
 {
-    public function test_it_lists_pins_and_posts() : void
+    public function test_it_lists_pins() : void
     {
-        Post::factory(10)->create();
-
         Post::factory(10)->pinned()->create();
 
         $response = $this
