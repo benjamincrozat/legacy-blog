@@ -19,15 +19,15 @@
         </p>
     </x-newsletter>
 
-    @if ($pinned->isNotEmpty())
+    @if ($pins->isNotEmpty())
         <section class="md:container md:max-w-[1024px] mt-16">
             <h2 class="font-bold px-4 md:px-0 text-center text-xl">
                 Pinned articles
             </h2>
 
             <div class="flex md:grid md:grid-cols-2 gap-2 mt-8 px-4 md:px-0 overflow-x-scroll md:overflow-x-visible snap-x md:snap-none snap-mandatory">
-                @foreach ($pinned as $post)
-                    <x-pinned-post :post="$post" :first="$loop->first" />
+                @foreach ($pins as $pin)
+                    <x-pinned-post :post="$pin->post" :first="$loop->first" />
                 @endforeach
             </div>
         </section>
@@ -40,7 +40,7 @@
 
         @if ($posts->isNotEmpty())
             <div class="grid md:grid-cols-2 gap-4 mt-8">
-                @foreach ($posts->whereNotIn('id', $pinned->pluck('id')) as $post)
+                @foreach ($posts as $post)
                     <x-post :post="$post" @click="window.fathom?.trackGoal('HH0P1ACM', 0)" />
                 @endforeach
             </div>

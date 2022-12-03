@@ -8,7 +8,7 @@ use Illuminate\Support\Collection;
 
 class HomeControllerTest extends TestCase
 {
-    public function test_it_lists_pinned_posts() : void
+    public function test_it_lists_pins_and_posts() : void
     {
         Post::factory(10)->create();
 
@@ -20,8 +20,8 @@ class HomeControllerTest extends TestCase
             ->assertViewIs('home')
         ;
 
-        $this->assertInstanceOf(Collection::class, $response->viewData('pinned'));
-        $this->assertCount(4, $response->viewData('pinned'));
+        $this->assertInstanceOf(Collection::class, $response->viewData('pins'));
+        $this->assertCount(4, $response->viewData('pins'));
     }
 
     public function test_it_lists_posts() : void
