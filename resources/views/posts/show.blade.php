@@ -87,7 +87,7 @@
                 </div>
             </div>
 
-            <img src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}?s=192" width="96" height="96" alt="{{ $post->user->name }}" class="-translate-y-[.5px] flex-shrink-0 h-16 sm:h-24 order-1 sm:order-none rounded-full" />
+            <img src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}?s=192" width="96" height="96" alt="{{ $post->user->name }}" class="-translate-y-[.5px] flex-shrink-0 w-16 h-16 sm:w-24 sm:h-24 order-1 sm:order-none rounded-full" />
         </aside>
     </div>
 
