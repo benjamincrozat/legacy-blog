@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\View\View;
+use App\Models\Subscriber;
 
 class HomeController extends Controller
 {
@@ -13,6 +14,8 @@ class HomeController extends Controller
 
         $pinned = $posts->where('is_pinned')->take(4)->sortByDesc('pinned_at');
 
-        return view('home', compact('posts', 'pinned'));
+        return view('home', compact('posts', 'pinned') + [
+            'subscribersCount' => Subscriber::count(),
+        ]);
     }
 }

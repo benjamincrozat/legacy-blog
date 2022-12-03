@@ -4,7 +4,7 @@
     :image="$post->image"
     class="dark:bg-gray-900 text-gray-600 dark:text-gray-300"
 >
-    <x-blog-nav class="container mt-4 sm:my-8" />
+    <x-nav class="container mt-4 sm:my-8" />
 
     @if (! $post->promotes_affiliate_links)
         <x-breadcrumb class="container mt-8">
@@ -28,7 +28,15 @@
         </div>
 
         @if (! $post->promotes_affiliate_links)
-            <x-newsletter-notice class="mt-8" />
+            <div class="border dark:border-gray-800 italic not-prose mt-8 p-4 rounded">
+                <p>
+                    Before you start reading this article, did you know <strong class="font-bold">@choice(':count person|:count persons', $subscribersCount) subscribed to my newsletter</strong>?
+                </p>
+
+                <p>
+                    <a href="{{ route('home') }}" class="border-b border-indigo-400/50 font-bold text-indigo-400">Join them and enjoy free content</a> about the art of crafting websites!
+                </p>
+            </div>
 
             @if ($post->image)
                 <img src="{{ $post->image }}" width="1280" height="720" alt="{{ $post->title }}" class="aspect-video mt-8 object-cover" />

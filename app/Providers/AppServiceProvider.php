@@ -3,10 +3,8 @@
 namespace App\Providers;
 
 use App\ConvertKit\Client;
-use App\Models\Subscriber;
 use Illuminate\Support\Str;
 use Illuminate\Http\Client\Factory;
-use Illuminate\Support\Facades\View;
 use App\CommonMark\MarxdownConverter;
 use App\CommonMark\LightdownConverter;
 use Illuminate\Foundation\Application;
@@ -33,10 +31,6 @@ class AppServiceProvider extends ServiceProvider
 
                 return '<h' . $matches[1] . ' id="' . Str::slug($cleanedUpStringForId) . '">' . $matches[2] . '</h' . $matches[1] . '>';
             }, $html);
-        });
-
-        View::composer('components.newsletter-notice', function (\Illuminate\View\View $view) {
-            $view->with('subscribersCount', Subscriber::count());
         });
     }
 }

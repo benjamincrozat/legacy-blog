@@ -3,8 +3,6 @@
         <img
             @if (empty($first)) loading="lazy" @endif
             src="{{ str_replace('w_auto', 'w_600', $post->image) }}"
-            width="1280"
-            height="720"
             alt="{{ $post->title }}"
             class="aspect-video object-cover rounded-md w-full"
         />

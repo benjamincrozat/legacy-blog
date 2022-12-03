@@ -3,7 +3,7 @@
     description="Have you ever had a question about the art of crafting web applications? This is the best blog to find your answer."
     class="dark:bg-gray-900 text-gray-600 dark:text-gray-300"
 >
-    <x-blog-nav class="container mt-4 md:mt-8" />
+    <x-nav class="container mt-4 md:mt-8" />
 
     <x-newsletter class="container mt-16">
         <p class="mt-8">

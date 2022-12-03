@@ -1,7 +1,7 @@
 <section id="newsletter" {{ $attributes->merge(['class' => 'scroll-m-8']) }}>
-    <h2 class="font-semibold !leading-tight sm:max-w-screen-xs mx-auto text-xl text-center">
+    <p class="font-semibold !leading-tight sm:max-w-screen-xs mx-auto text-xl text-center">
         I share everything I learn about the&nbsp;art&nbsp;of&nbsp;crafting&nbsp;websites, <span class="text-indigo-400">for&nbsp;free</span>!
-    </h2>
+    </p>
 
     <x-form method="POST" action="{{ route('subscribe') }}" class="max-w-screen-xs mx-auto mt-4">
         <input type="email" name="email" id="email" placeholder="homer@simpson.com" required class="dark:bg-gray-700/40 block border-0 placeholder-gray-300 dark:placeholder-gray-600 px-4 py-3 rounded-md shadow w-full" />

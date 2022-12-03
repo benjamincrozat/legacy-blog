@@ -2,14 +2,17 @@
     <div class="flex items-center justify-between gap-8">
         <div>
             <div class="flex items-center gap-2 text-sm">
-                <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5($post->user_email) }}" width="18" height="18" alt="{{ $post->user_name }}" class="-translate-y-[.5px] rounded-full" />
+                <img
+                    loading="lazy"
+                    src="https://www.gravatar.com/avatar/{{ md5($post->user_email) }}"
+                    width="18"
+                    height="18"
+                    alt="{{ $post->user_name }}"
+                    class="-translate-y-[.5px] rounded-full"
+                />
 
                 <p>
-                    <a href="{{ route('consulting') }}" target="_blank" rel="noopener noreferrer" class="font-semibold" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">{{ $post->user_name }}</a>
-
-                    —
-
-                    <span class="opacity-75">@choice(':count&nbsp;minute|:count&nbsp;minutes', $post->read_time) read</span>
+                    <a href="{{ route('consulting') }}" target="_blank" rel="noopener noreferrer" class="font-semibold" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">{{ $post->user_name }}</a> — <span class="opacity-75">@choice(':count&nbsp;minute|:count&nbsp;minutes', $post->read_time) read</span>
                 </p>
             </div>
 
@@ -28,7 +31,14 @@
                 {{ $attributes->only('@click') }}
                 class="flex-shrink-0"
             >
-                <img loading="lazy" src="{{ str_replace('w_auto', 'h_128', $post->image) }}" width="64" height="64" alt="{{ $post->title }}" class="aspect-square object-cover" />
+                <img
+                    loading="lazy"
+                    src="{{ str_replace('w_auto', 'h_128', $post->image) }}"
+                    width="64"
+                    height="64"
+                    alt="{{ $post->title }}"
+                    class="aspect-square object-cover"
+                />
             </a>
         @endif
     </div>
