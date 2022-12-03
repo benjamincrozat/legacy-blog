@@ -68,7 +68,7 @@
     </article>
 
     <div class="container mt-16">
-        <aside class="border dark:border-gray-900 flex flex-wrap sm:flex-nowrap items-center gap-4 sm:gap-8 px-4 py-8 sm:p-8">
+        <aside class="border dark:border-gray-900 flex flex-wrap sm:flex-nowrap items-center gap-4 sm:gap-8 px-4 py-6 sm:p-6">
             <div class="order-2 sm:order-none">
                 <p class="font-bold text-xl">
                     Article written by {{ $post->user->name }}
