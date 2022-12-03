@@ -67,19 +67,21 @@
         </div>
     </article>
 
-    <aside class="container flex flex-wrap sm:flex-nowrap items-center gap-4 sm:gap-8 mt-16">
-        <div class="order-2 sm:order-none">
-            <p class="font-bold text-xl">
-                Article written by {{ $post->user->name }}
-            </p>
+    <div class="container mt-16">
+        <aside class="border dark:border-gray-900 flex flex-wrap sm:flex-nowrap items-center gap-4 sm:gap-8 px-4 py-8 sm:p-8">
+            <div class="order-2 sm:order-none">
+                <p class="font-bold text-xl">
+                    Article written by {{ $post->user->name }}
+                </p>
 
-            <div class="content !leading-normal">
-                {!! $post->user->rendered_description !!}
+                <div class="content !leading-normal">
+                    {!! $post->user->rendered_description !!}
+                </div>
             </div>
-        </div>
 
-        <img src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}" width="64" height="64" alt="{{ $post->user->name }}" class="-translate-y-[.5px] flex-shrink-0 order-1 sm:order-none rounded-full" />
-    </aside>
+            <img src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}" width="64" height="64" alt="{{ $post->user->name }}" class="-translate-y-[.5px] flex-shrink-0 order-1 sm:order-none rounded-full" />
+        </aside>
+    </div>
 
     @if ($others->isNotEmpty())
         <div class="container max-w-[1024px] mt-16">
