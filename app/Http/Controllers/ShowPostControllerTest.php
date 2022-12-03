@@ -10,10 +10,10 @@ class ShowPostControllerTest extends TestCase
 {
     public function test_it_shows_a_given_post_and_list_other_posts_to_read_excluding_the_current_one() : void
     {
-        $post = Post::factory()->create();
+        $posts = Post::factory(30)->create();
 
         $response = $this
-            ->get(route('posts.show', $post))
+            ->get(route('posts.show', $post = $posts->first()))
             ->assertOk()
             ->assertViewIs('posts.show')
         ;

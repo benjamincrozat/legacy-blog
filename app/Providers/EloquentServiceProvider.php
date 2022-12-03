@@ -9,6 +9,8 @@ class EloquentServiceProvider extends ServiceProvider
 {
     public function boot() : void
     {
+        Model::preventAccessingMissingAttributes(! app()->isProduction());
+
         Model::unguard();
     }
 }
