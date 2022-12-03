@@ -1,4 +1,5 @@
 User-agent: *
-Disallow:
+
+Disallow: /recommends/*
 
 Sitemap: https://benjamincrozat.com/sitemap.xml
