@@ -250,7 +250,7 @@
             <div class="mt-8 sm:mt-16 text-center">
                 <a
                     href="https://savvycal.com/benjamincrozat/3-hrs-consulting"
-                    class="bg-gradient-to-b from-emerald-400 to-emerald-500 inline-flex items-center justify-center gap-2 font-normal sm:font-light mt-10 px-8 py-4 rounded shadow-xl shadow-emerald-600/[.15] text-base text-center text-emerald-50 w-full sm:w-auto"
+                    class="bg-gradient-to-b from-emerald-400 to-emerald-500 inline-flex items-center justify-center gap-2 font-normal sm:font-light px-8 py-4 rounded shadow-xl shadow-emerald-600/[.15] text-base text-center text-emerald-50 w-full sm:w-auto"
                     @click="window.fathom?.trackGoal('BCXCNHU1', 0)"
                 >
                     <span>Book <span class="font-bold text-white">3 hours</span> for <span class="font-bold text-white">$500</span></span>
@@ -292,27 +292,29 @@
         </section>
     @endif
 
-    <section
-        class="container max-w-[768px] py-8 sm:py-16"
-        x-intersect="window.fathom?.trackGoal('Q0JLQGBO', 0)"
-    >
-        <h2 class="font-bold text-xl sm:text-2xl text-center text-indigo-400">
-            <x-icon-question-circle class="fill-current inline-block h-8 sm:w-12 h-8 sm:h-12" />
-            <div class="mt-2">About me</div>
-        </h2>
+    <div class="bg-indigo-50/30 text-indigo-900">
+        <section
+            class="container max-w-[768px] py-8 sm:py-16"
+            x-intersect="window.fathom?.trackGoal('Q0JLQGBO', 0)"
+        >
+            <h2 class="font-bold text-xl sm:text-2xl text-center text-indigo-400">
+                <x-icon-question-circle class="fill-current inline-block h-8 sm:w-12 h-8 sm:h-12" />
+                <div class="mt-2">About me</div>
+            </h2>
 
-        <div class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8 mt-8">
-            <div class="order-2 md:order-none">
-                <p>My name is Benjamin Crozat. I'm a passionate <strong class="font-bold">full-stack PHP and Laravel developer from the south of France</strong> with 10+ years of experience.</p>
+            <div class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8 mt-8">
+                <div class="order-2 md:order-none">
+                    <p>My name is Benjamin Crozat. I'm a passionate <strong class="font-bold">full-stack PHP and Laravel developer from the south of France</strong> with 10+ years of experience.</p>
 
-                <p class="mt-4">I'm a self-taught developer and was immediately seduced by the freelancer life. I quickly became interested in helping companies to work better with web developers and technology.</p>
+                    <p class="mt-4">I'm a self-taught developer and was immediately seduced by the freelancer life. I quickly became interested in helping companies to work better with web developers and technology.</p>
+                </div>
+
+                <div class="flex-shrink-0 order-1 md:order-none text-center md:text-left w-full md:w-auto">
+                    <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" width="96" height="96" alt="Benjamin Crozat" class="inline rotate-2 rounded-full" />
+                </div>
             </div>
-
-            <div class="flex-shrink-0 order-1 md:order-none text-center md:text-left w-full md:w-auto">
-                <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" width="96" height="96" alt="Benjamin Crozat" class="inline rotate-2 rounded-full" />
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <div id="about" class="bg-indigo-500 flex-grow">
         <x-footer class="max-w-[1024px] text-indigo-100" />
