@@ -283,57 +283,11 @@
                 <p>My name is Benjamin Crozat. I'm a passionate <strong class="font-bold dark:text-white">full-stack PHP and Laravel developer from the south of France</strong> with 15+ years of experience.</p>
 
                 <p class="mt-4">I'm a self-taught developer and was immediately seduced by the freelancer life. I quickly became interested in helping companies to work better with web developers and technology.</p>
-
-                <p class="mt-4">
-                    We can work together as well, <a href="mailto:benjamincrozat@me.com" class="border-b border-indigo-400/50 dark:border-indigo-300/50 font-normal text-indigo-400 dark:text-indigo-300" @click="window.fathom?.trackGoal('S0ZZJNPU', 0)">book me</a>!
-                </p>
             </div>
 
             <div class="flex-shrink-0 order-1 md:order-none text-center md:text-left w-full md:w-auto">
                 <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" width="128" height="128" alt="Benjamin Crozat" class="inline rotate-2 rounded-full" />
             </div>
-        </div>
-    </x-consulting.section>
-
-    <x-consulting.section
-        class="bg-gradient-to-r from-indigo-50/50 dark:from-gray-800 to-indigo-100/50 dark:to-gray-700 text-indigo-900 dark:text-current"
-        x-intersect="window.fathom?.trackGoal('Q0JLQGBO', 0)"
-    >
-        <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
-            <x-icon-student class="fill-current inline-block w-12 sm:w-16 h-12 sm:h-16" />
-            <div class="mt-4 dark:text-indigo-300">Proper education changes lives</div>
-        </h2>
-
-        <div class="mt-8 sm:text-lg md:text-xl">
-            <div class="sm:text-center">
-                <p>
-                    I love to contribute to the community by writing educational content on my blog.
-                </p>
-
-                <p class="mt-4">
-                    My mission is to help as many developers as possible to get better at what they do.
-                </p>
-            </div>
-
-            <ul class="grid sm:grid-cols-2 gap-4 mt-8">
-                @foreach ($posts as $post)
-                    <li class="border border-indigo-200/50 dark:border-gray-700 flex items-center gap-4 p-2 sm:p-4 rounded text-base">
-                        @if ($post->image)
-                            <a href="{{ route('posts.show', $post) }}" class="flex-shrink-0">
-                                <img loading="lazy" src="{{ str_replace('w_auto', 'h_96', $post->image) }}" width="48" height="48" alt="{{ $post->title }}" class="aspect-square object-cover" />
-                            </a>
-                        @endif
-
-                        <div>
-                            <a href="{{ route('posts.show', $post) }}" class="font-bold line-clamp-1">
-                                {{ $post->title }}
-                            </a>
-
-                            <div class="opacity-75 text-sm">@choice(':count&nbsp;minute|:count&nbsp;minutes', $post->read_time) read</div>
-                        </div>
-                    </li>
-                @endforeach
-            </ul>
         </div>
     </x-consulting.section>
 
