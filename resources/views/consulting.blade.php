@@ -263,11 +263,13 @@
         <div class="mt-8 sm:mt-16 text-center">
             <a
                 href="https://savvycal.com/benjamincrozat/consulting"
-                class="bg-gradient-to-r from-emerald-400 dark:from-emerald-600 to-emerald-500 dark:to-emerald-700 font-normal inline-block px-8 py-3 rounded shadow-md text-center text-white"
+                class="bg-gradient-to-r from-emerald-400 dark:from-emerald-600 to-emerald-500 dark:to-emerald-700 inline-block px-8 py-4 rounded shadow-md text-center text-xl text-white"
                 @click="window.fathom?.trackGoal('BCXCNHU1', 0)"
             >
                 Book <span class="font-bold">3 hours</span> for <span class="line-through">$600</span> <span class="font-bold">$500</span>
             </a>
+
+            <p class="mt-4">Or start with <a href="#" class="font-bold text-indigo-400 underline" @click.prevent="alert('Soon!')">1 hour for $200</a>.</p>
         </div>
     </x-consulting.section>
 
