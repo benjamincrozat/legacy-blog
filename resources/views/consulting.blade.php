@@ -17,11 +17,11 @@
 
             <nav class="flex items-center justify-center sm:justify-start gap-8 mt-8 sm:mt-0">
                 <a href="{{ route('home') }}" class="text-indigo-100 dark:text-gray-50 text-xs tracking-widest uppercase">
-                    Read my blog
+                    Blog
                 </a>
 
-                <a href="mailto:benjamincrozat@me.com" class="bg-white font-bold px-4 py-2 rounded text-indigo-400 dark:text-gray-600" @click="window.fathom?.trackGoal('EWIGDNLB', 0)">
-                    Book me
+                <a href="https://savvycal.com/benjamincrozat/consulting" class="bg-white font-bold px-4 py-2 rounded text-indigo-400 dark:text-gray-600" @click="window.fathom?.trackGoal('EWIGDNLB', 0)">
+                    Book <span class="font-bold">3 hours</span> for <span class="font-bold">$500</span>
                 </a>
             </nav>
         </div>
@@ -250,6 +250,12 @@
                 </p>
             </li>
         </ul>
+
+        <div class="mt-8 sm:mt-16 text-center">
+            <a href="https://savvycal.com/benjamincrozat/consulting" class="bg-gradient-to-r from-emerald-400 dark:from-emerald-600 to-emerald-500 dark:to-emerald-700 font-normal inline-block px-8 py-3 rounded shadow-md text-center text-white">
+                Book <span class="font-bold">3 hours</span> for <span class="line-through">$600</span> <span class="font-bold">$500</span>
+            </a>
+        </div>
     </x-consulting.section>
 
     <x-consulting.section
