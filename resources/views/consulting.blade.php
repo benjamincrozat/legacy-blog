@@ -42,12 +42,12 @@
         <ul class="grid gap-2 mt-4">
             <li class="flex items-center gap-2">
                 <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 opacity-75 w-5 h-5" />
-                Any question answered
+                <span>Any question answered</span>
             </li>
 
             <li class="flex items-center gap-2">
                 <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 opacity-75 w-5 h-5" />
-                I <strong class="font-bold text-white">pair program</strong> with your developers
+                <span>I <strong class="font-bold text-white">pair program</strong> with your developers</span>
             </li>
 
             <li class="flex items-center gap-2">
@@ -57,12 +57,12 @@
 
             <li class="flex items-center gap-2">
                 <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 opacity-75 w-5 h-5" />
-                Learn how you can <strong class="font-bold text-white">prevent regressions</strong>
+                <span>Learn how you can <strong class="font-bold text-white">prevent regressions</strong></span>
             </li>
 
             <li class="flex items-center gap-2">
                 <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 opacity-75 w-5 h-5" />
-                Finally, we set up <strong class="font-bold text-white">a tool that alerts you when your app fails</strong>
+                <span>Finally, we set up <strong class="font-bold text-white">a tool that alerts you when your app fails</strong></span>
             </li>
         </ul>
 
