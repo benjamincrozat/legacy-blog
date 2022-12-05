@@ -52,7 +52,7 @@
 
             <li class="flex items-center gap-2">
                 <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 opacity-75 w-5 h-5" />
-                See which Laravel best practices could improve new hires' onboarding time
+                See which best practices could improve new hires' onboarding time
             </li>
 
             <li class="flex items-center gap-2">
