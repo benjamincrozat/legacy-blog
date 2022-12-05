@@ -53,7 +53,7 @@
 
             <li class="flex items-center gap-2">
                 <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 opacity-75 w-5 h-5" />
-                <span>See which best practices can <strong class="font-bold text-white">10x new team members' productivity</strong></span>
+                <span>See which best practices can <strong class="font-bold text-white">boost new team members' productivity</strong></span>
             </li>
 
             <li class="flex items-center gap-2">
@@ -134,7 +134,7 @@
             x-intersect="window.fathom?.trackGoal('WSVGAGQR', 0)"
         >
             <h2 class="font-bold text-xl sm:text-2xl text-center text-indigo-400">
-                <x-icon-connected-people class="inline-block fill-current w-12 h-12" />
+                <x-icon-connected-people class="inline-block fill-current w-12 sm:w-14 h-12 sm:h-14" />
                 <div class="mt-4">The Laravel consulting services I provide</div>
             </h2>
 
@@ -247,7 +247,7 @@
                 </li>
             </ul>
 
-            <div class="mt-8 sm:mt-16 text-center">
+            <div class="mt-16 text-center">
                 <a
                     href="https://savvycal.com/benjamincrozat/3-hrs-consulting"
                     class="bg-gradient-to-b from-emerald-400 to-emerald-500 inline-flex items-center justify-center gap-2 font-normal sm:font-light px-8 py-4 rounded shadow-xl shadow-emerald-600/[.15] text-base text-center text-emerald-50 w-full sm:w-auto"
