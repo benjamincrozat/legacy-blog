@@ -30,16 +30,21 @@
                     width="150"
                     height="150"
                     alt="Benjamin Crozat, a Laravel developer for hire"
-                    class="inline rotate-2 rounded-full w-[96px] h-[96px] md:w-[115px] md:h-[115px]"
+                    class="inline rounded-full w-[96px] h-[96px] md:w-[115px] md:h-[115px]"
                 />
             </div>
         </header>
 
-        <p class="mt-8 text-indigo-50">
-            I <strong class="font-bold">reply to your questions</strong> and <strong class="font-bold">help you implement these improvements</strong>.
+        <p class="font-bold mt-8 text-white">
+            A package giant-packed with value!
         </p>
 
         <ul class="grid gap-2 mt-4">
+            <li class="flex items-center gap-2">
+                <x-heroicon-o-check-circle class="-translate-y-px opacity-75 w-5 h-5" />
+                Any question answered
+            </li>
+
             <li class="flex items-center gap-2">
                 <x-heroicon-o-check-circle class="-translate-y-px opacity-75 w-5 h-5" />
                 Pair programming
