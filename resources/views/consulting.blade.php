@@ -1,9 +1,8 @@
 <x-app
     title="Hire a Laravel consultant for an audit"
     description="Book an expert Laravel developer, TODAY! Let me guide your team toward reliability and maintenability."
-    class="text-indigo-50"
 >
-    <div class="bg-indigo-500 py-4 text-center">
+    <div class="bg-indigo-500 py-4 text-center text-indigo-50">
         <a href="{{ route('home') }}">
             <span class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase">
                 Benjamin Crozat
@@ -15,7 +14,7 @@
         </a>
     </div>
 
-    <x-consulting.section class="bg-gradient-to-r from-indigo-500 to-indigo-400">
+    <x-consulting.section class="bg-gradient-to-r from-indigo-500 to-indigo-400 text-indigo-50">
         <header class="flex items-center gap-8">
             <h1 class="hidden">Hire a Laravel consultant for an audit</h1>
 
@@ -128,195 +127,193 @@
         </div>
     </x-consulting.section>
 
-    <x-consulting.section
-        class="bg-gradient-to-r from-indigo-100/50 to-indigo-200/50"
-        x-intersect="window.fathom?.trackGoal('R7HDACGG', 0)"
-    >
-        <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
-            <x-icon-connected-dots class="inline-block fill-current w-12 sm:w-16 h-12 sm:h-16" />
-            <div class="mt-4">An expert Laravel developer for your&nbsp;business</div>
-        </h2>
+    <div class="bg-indigo-50 text-indigo-900">
+        <section
+            class="container py-8 sm:py-16"
+            x-intersect="window.fathom?.trackGoal('WSVGAGQR', 0)"
+        >
+            <h2 class="font-extrabold text-xl sm:text-2xl text-center text-indigo-400">
+                <x-icon-connected-people class="inline-block fill-current w-12 h-12" />
+                <div class="mt-4">The Laravel consulting services I provide in details</div>
+            </h2>
 
-        <ul class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8 sm:mt-16">
-            <li>
-                <span class="block font-bold text-5xl sm:text-7xl text-indigo-400">15+</span>
-                <span class="block text-indigo-900/50 text-lg sm:text-xl">years of experience</span>
-            </li>
+            <ul class="grid sm:grid-cols-2 gap-12 mt-8 sm:mt-16">
+                <li>
+                    <x-icon-pair-programming class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
 
-            <li>
-                <span class="block font-bold text-5xl sm:text-7xl text-indigo-400">1M+</span>
-                <span class="block text-indigo-900/50 text-lg sm:text-xl">lines of code</span>
-            </li>
+                    <p class="font-bold mt-4 text-indigo-400 text-xl">
+                        Pair programming
+                    </p>
 
-            <li>
-                <span class="block font-bold text-5xl sm:text-7xl text-indigo-400">30+</span>
-                <span class="block text-indigo-900/50 text-lg sm:text-xl">clients</span>
-            </li>
+                    <p class="mt-4">
+                        Pair programming is the best way for Laravel developers to learn from each other, <strong class="font-bold">fast</strong>.
+                    </p>
 
-            <li>
-                <span class="block font-bold text-5xl sm:text-7xl text-indigo-400">100+</span>
-                <span class="block text-indigo-900/50 text-lg sm:text-xl">web applications</span>
-            </li>
-        </ul>
-    </x-consulting.section>
+                    <p class="mt-4">
+                        Whatever your team needs to know about PHP and Laravel, I can show them.
+                    </p>
+                </li>
 
-    <x-consulting.section
-        class="bg-gradient-to-r from-indigo-50/50 to-indigo-100/50 text-indigo-900"
-        x-intersect="window.fathom?.trackGoal('WSVGAGQR', 0)"
-    >
-        <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
-            <x-icon-connected-people class="inline-block fill-current w-12 sm:w-16 h-12 sm:h-16" />
-            <div class="mt-4">Laravel consulting services I provide</div>
-        </h2>
+                <li>
+                    <x-icon-best-practices class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
 
-        <ul class="grid sm:grid-cols-2 gap-12 mt-8 sm:mt-16">
-            <li>
-                <x-icon-pair-programming class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
+                    <p class="font-bold mt-4 text-indigo-400 text-xl">
+                        Best practices
+                    </p>
 
-                <p class="font-bold mt-4 text-indigo-400 text-lg sm:text-xl">
-                    Pair programming
-                </p>
+                    <p class="mt-4">
+                        When everyone follows the framework's best practices, this is what happens:
+                    </p>
 
-                <p class="mt-4">
-                    Pair programming is the best way for Laravel developers to learn from each other, <strong class="font-bold">fast</strong>.
-                </p>
+                    <ul class="mt-4">
+                        <li class="flex items-start gap-2">
+                            <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[1.5px] w-5 h-5" />
+                            You don't need to maintain a documentation.
+                        </li>
 
-                <p class="mt-4">
-                    Whatever your team needs to know about PHP and Laravel, I can show them.
-                </p>
-            </li>
+                        <li class="flex items-start gap-2 mt-2">
+                            <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[1.5px] w-5 h-5" />
+                            Your developers always knows where to go.
+                        </li>
 
-            <li>
-                <x-icon-best-practices class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
+                        <li class="flex items-start gap-2 mt-2">
+                            <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[1.5px] w-5 h-5" />
+                            New hires will know where to go as well from day&nbsp;1.
+                        </li>
+                    </ul>
 
-                <p class="font-bold mt-4 text-indigo-400 text-lg sm:text-xl">
-                    Best practices
-                </p>
+                    <p class="mt-4">
+                        It's time to leverage Laravel's power to over 9000!
+                    </p>
+                </li>
 
-                <p class="mt-4">
-                    When everyone follows the framework's best practices, this is what happens:
-                </p>
+                <li>
+                    <x-icon-automated-testing class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
 
-                <ul class="mt-4">
-                    <li class="flex items-start gap-2">
-                        <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[3.5px] w-4 h-4" />
-                        You don't need to maintain a documentation.
-                    </li>
+                    <p class="font-bold mt-4 text-indigo-400 text-xl">
+                        Automated testing
+                    </p>
 
-                    <li class="flex items-start gap-2 mt-2">
-                        <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[3.5px] w-4 h-4" />
-                        Your developers always knows where to go.
-                    </li>
+                    <p class="font-bold mt-4">
+                        Untested code is legacy code.
+                    </p>
 
-                    <li class="flex items-start gap-2 mt-2">
-                        <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[3.5px] w-4 h-4" />
-                        New hires will know where to go as well from day&nbsp;1.
-                    </li>
-                </ul>
+                    <p class="mt-4">
+                        I can help your team write tests to:
+                    </p>
 
-                <p class="mt-4">
-                    It's time to leverage Laravel's power to over 9000!
-                </p>
-            </li>
+                    <ul class="mt-4">
+                        <li class="flex items-start gap-2">
+                            <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[1.5px] w-5 h-5" />
+                            Be more confident each time they deploy something new.
+                        </li>
 
-            <li>
-                <x-icon-automated-testing class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
+                        <li class="flex items-start gap-2 mt-2">
+                            <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[1.5px] w-5 h-5" />
+                            Facilitate the onboarding of new team members. They won't fear breaking something they don't know.
+                        </li>
+                    </ul>
+                </li>
 
-                <p class="font-bold mt-4 text-indigo-400 text-lg sm:text-xl">
-                    Automated testing
-                </p>
+                <li>
+                    <x-icon-continuous-integration class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
 
-                <p class="font-bold mt-4">
-                    Untested code is legacy code.
-                </p>
+                    <p class="font-bold mt-4 text-indigo-400 text-xl">
+                        Continuous integration
+                    </p>
 
-                <p class="mt-4">
-                    I can help your team write tests to:
-                </p>
+                    <p class="mt-4">
+                        Automatically and continuously deploying new code into production is a dream for any serious business that wants to please its customers.
+                    </p>
 
-                <ul class="mt-4">
-                    <li class="flex items-start gap-2">
-                        <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[3.5px] w-4 h-4" />
-                        Be more confident each time they deploy something new.
-                    </li>
+                    <p class="mt-4">
+                        We can make it happen <strong class="font-bold">without any infrastructure cost</strong>.
+                    </p>
+                </li>
 
-                    <li class="flex items-start gap-2 mt-2">
-                        <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[3.5px] w-4 h-4" />
-                        Facilitate the onboarding of new team members. They won't fear breaking something they don't know.
-                    </li>
-                </ul>
-            </li>
+                <li>
+                    <x-icon-errors-monitoring class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
 
-            <li>
-                <x-icon-continuous-integration class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
+                    <p class="font-bold mt-4 text-indigo-400 text-xl">Errors monitoring</p>
 
-                <p class="font-bold mt-4 text-indigo-400 text-lg sm:text-xl">
-                    Continuous integration
-                </p>
+                    <p class="mt-4">
+                        What if we could <strong class="font-bold">prevent</strong> your company to loose even more money?
+                    </p>
 
-                <p class="mt-4">
-                    Automatically and continuously deploying new code into production is a dream for any serious business that wants to please its customers.
-                </p>
+                    <p class="mt-4">
+                        We can set up a tool that monitors and logs everything wrong happening on your web applications instead of relying on feedback.
+                    </p>
+                </li>
+            </ul>
 
-                <p class="mt-4">
-                    We can make it happen <strong class="font-bold">without any infrastructure cost</strong>.
-                </p>
-            </li>
-
-            <li>
-                <x-icon-errors-monitoring class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
-
-                <p class="font-bold mt-4 text-indigo-400 text-lg sm:text-xl">Errors monitoring</p>
+            <div class="mt-8 sm:mt-16 text-center">
+                <a
+                    href="https://savvycal.com/benjamincrozat/3-hrs-consulting"
+                    class="bg-gradient-to-r from-indigo-300 to-indigo-400 block p-4 rounded shadow-md text-center text-white"
+                    @click="window.fathom?.trackGoal('BCXCNHU1', 0)"
+                >
+                    Book <span class="font-bold">3 hours</span> for <span class="font-bold">$500</span>
+                    <span class="block text-sm">And save 17%!</span>
+                </a>
 
                 <p class="mt-4">
-                    What if we could <strong class="font-bold">prevent</strong> your company to loose even more money?
+                    Or start with <a href="https://savvycal.com/benjamincrozat/1-hr-consulting" class="font-bold text-indigo-400 underline">1 hour for $200</a>.
                 </p>
-
-                <p class="mt-4">
-                    We can set up a tool that monitors and logs everything wrong happening on your web applications instead of relying on feedback.
-                </p>
-            </li>
-        </ul>
-
-        <div class="mt-8 sm:mt-16 text-center">
-            <a
-                href="https://savvycal.com/benjamincrozat/3-hrs-consulting"
-                class="bg-gradient-to-r from-emerald-400 to-emerald-500 inline-block px-8 py-4 rounded shadow-md text-center text-xl text-white"
-                @click="window.fathom?.trackGoal('BCXCNHU1', 0)"
-            >
-                Book <span class="font-bold">3 hours</span> for <span class="line-through">$600</span> <span class="font-bold">$500</span>
-                <span class="block text-sm">And save 17%!</span>
-            </a>
-
-            <p class="mt-4">
-                Or start with <a href="https://savvycal.com/benjamincrozat/1-hr-consulting" class="font-bold text-indigo-400 underline">1 hour for $200</a>.
-            </p>
-        </div>
-    </x-consulting.section>
-
-    <x-consulting.section
-        class="bg-gradient-to-r from-indigo-100/50/[.9] to-indigo-200/50/[.9] text-indigo-900"
-        x-intersect="window.fathom?.trackGoal('Q0JLQGBO', 0)"
-    >
-        <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
-            <x-icon-question-circle class="fill-current inline-block w-12 sm:w-16 h-12 sm:h-16" />
-            <div class="mt-4">About me</div>
-        </h2>
-
-        <div class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8 mt-8 sm:text-lg md:text-xl">
-            <div class="order-2 md:order-none">
-                <p>My name is Benjamin Crozat. I'm a passionate <strong class="font-bold">full-stack PHP and Laravel developer from the south of France</strong> with 10+ years of experience.</p>
-
-                <p class="mt-4">I'm a self-taught developer and was immediately seduced by the freelancer life. I quickly became interested in helping companies to work better with web developers and technology.</p>
             </div>
+        </section>
+    </div>
 
-            <div class="flex-shrink-0 order-1 md:order-none text-center md:text-left w-full md:w-auto">
-                <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" width="128" height="128" alt="Benjamin Crozat" class="inline rotate-2 rounded-full" />
-            </div>
+    <section class="container max-w-[1024px] py-8 sm:py-16">
+        <h2 class="font-extrabold text-xl sm:text-2xl text-center text-indigo-400">
+            <span class="text-gray-600">You will be satisfied</span><br />
+            But don't take my word for it
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-4 mt-8">
+            @foreach (range(1, 6) as $i)
+                <div class="bg-gray-200/50 p-6 rounded-lg text-gray-600">
+                    <blockquote>
+                        {{ fake()->sentences(mt_rand(2, 3), true) }}
+
+                        <div class="flex items-center gap-4 mt-4">
+                            <img src="https://i.pravatar.cc/30{{ $i }}" width="55" height="55" alt="{{ $name = fake()->name() }}" class="rounded-full" />
+
+                            <cite>
+                                <span class="font-bold">{{ $name }}</span><br />
+                                from <span class="font-bold">{{ fake()->company() }}</span>
+                            </cite>
+                        </div>
+                    </blockquote>
+                </div>
+            @endforeach
         </div>
-    </x-consulting.section>
+    </section>
+
+    <div class="bg-indigo-50 text-indigo-900">
+        <section
+            class="container max-w-[768px] py-8 sm:py-16"
+            x-intersect="window.fathom?.trackGoal('Q0JLQGBO', 0)"
+        >
+            <h2 class="font-bold text-xl sm:text-2xl text-center text-indigo-400">
+                <x-icon-question-circle class="fill-current inline-block h-8 sm:w-12 h-8 sm:h-12" />
+                <div class="mt-2">About me</div>
+            </h2>
+
+            <div class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8 mt-8">
+                <div class="order-2 md:order-none">
+                    <p>My name is Benjamin Crozat. I'm a passionate <strong class="font-bold">full-stack PHP and Laravel developer from the south of France</strong> with 10+ years of experience.</p>
+
+                    <p class="mt-4">I'm a self-taught developer and was immediately seduced by the freelancer life. I quickly became interested in helping companies to work better with web developers and technology.</p>
+                </div>
+
+                <div class="flex-shrink-0 order-1 md:order-none text-center md:text-left w-full md:w-auto">
+                    <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" width="96" height="96" alt="Benjamin Crozat" class="inline rotate-2 rounded-full" />
+                </div>
+            </div>
+        </section>
+    </div>
 
     <div id="about" class="bg-indigo-500 flex-grow">
-        <x-footer class="text-indigo-100" />
+        <x-footer class="max-w-[1024px] text-indigo-100" />
     </div>
 </x-app>
