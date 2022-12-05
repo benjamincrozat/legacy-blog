@@ -3,29 +3,16 @@
     description="Book an expert Laravel developer, TODAY! Let me guide your team toward reliability and maintenability."
     class="text-indigo-50 dark:text-gray-300"
 >
-    <div class="bg-indigo-500 dark:bg-gray-800">
-        <div class="container sm:flex sm:items-center sm:justify-between py-4 text-center sm:text-left">
-            <a href="{{ route('home') }}">
-                <span class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase">
-                    Benjamin Crozat
-                </span>
+    <div class="bg-indigo-500 dark:bg-gray-800 py-4 text-center">
+        <a href="{{ route('home') }}">
+            <span class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase">
+                Benjamin Crozat
+            </span>
 
-                <span class="block opacity-75 text-xs tracking-widest uppercase">
-                    Full-stack Laravel developer
-                </span>
-            </a>
-
-            <nav class="flex items-center justify-center sm:justify-start gap-8 mt-8 sm:mt-0">
-                <a href="{{ route('home') }}" class="text-indigo-100 dark:text-gray-50 text-xs tracking-widest uppercase">
-                    Blog
-                </a>
-
-                <a href="https://savvycal.com/benjamincrozat/consulting" class="bg-gradient-to-b from-white dark:from-gray-600 to-indigo-50 dark:to-gray-700 flex items-center gap-2 font-normal leading-tight px-4 py-3 relative rounded shadow-md shadow-indigo-900/10 text-center text-indigo-400 dark:text-gray-600" @click="window.fathom?.trackGoal('EWIGDNLB', 0)">
-                    <span>Book <span class="font-bold">3 <span class="sm:hidden">hrs</span><span class="hidden sm:inline">hours</span></span> for $500</span>
-                    <span class="bg-indigo-400 px-3 py-1 rounded-full text-white text-xs">17% off</span>
-                </a>
-            </nav>
-        </div>
+            <span class="block opacity-75 text-xs tracking-widest uppercase">
+                Full-stack Laravel developer
+            </span>
+        </a>
     </div>
 
     <x-consulting.section class="bg-gradient-to-r from-indigo-500 dark:from-gray-800 to-indigo-400 dark:to-gray-700">
