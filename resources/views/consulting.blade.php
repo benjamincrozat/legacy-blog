@@ -211,7 +211,7 @@
 
                         <li class="flex items-start gap-2 mt-2">
                             <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[1.5px] w-5 h-5" />
-                            Facilitate onboarding of new team members. They won't fear screwing everything up their first day.
+                            Facilitate onboarding of new team members. They won't fear screwing everything up on their first day.
                         </li>
                     </ul>
                 </li>
