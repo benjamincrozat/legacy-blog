@@ -147,7 +147,7 @@
                     </p>
 
                     <p class="mt-4">
-                        Pair programming is the best way for Laravel developers to learn from each other, <strong class="font-bold">fast</strong>.
+                        Pair programming is the best way for Laravel developers to learn from each other, <strong class="font-semibold">fast</strong>.
                     </p>
 
                     <p class="mt-4">
