@@ -53,6 +53,10 @@
                 <span>Book <span class="font-bold">3 hours</span> for <span class="font-bold">$500</span></span>
                 <span class="bg-indigo-400 px-3 py-1 rounded-full text-white text-xs">17% off</span>
             </a>
+
+            <p class="mt-4">
+                Or start with <a href="#" class="font-bold text-white underline" @click.prevent="alert('Soon!')">1 hour for $200</a>.
+            </p>
         </div>
 
         <div class="border-t border-indigo-400 dark:border-gray-600 mt-16 pt-16">
