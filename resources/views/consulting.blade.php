@@ -36,7 +36,7 @@
         </header>
 
         <p class="mt-8 text-indigo-50">
-            I <strong class="font-bold">reply to your questions</strong> and <strong class="font-bold">help you implement improvements</strong>.
+            I <strong class="font-bold">reply to your questions</strong> and <strong class="font-bold">help you implement these improvements</strong>.
         </p>
 
         <ul class="grid gap-2 mt-4">
@@ -127,51 +127,51 @@
     </x-consulting.section>
 
     <x-consulting.section
-        class="bg-gradient-to-r from-indigo-100/50 dark:from-gray-800/[.9] to-indigo-200/50 dark:to-gray-700/[.9]"
+        class="bg-gradient-to-r from-indigo-100/50 to-indigo-200/50"
         x-intersect="window.fathom?.trackGoal('R7HDACGG', 0)"
     >
         <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
             <x-icon-connected-dots class="inline-block fill-current w-12 sm:w-16 h-12 sm:h-16" />
-            <div class="mt-4 dark:text-indigo-300">An expert Laravel developer for your&nbsp;business</div>
+            <div class="mt-4">An expert Laravel developer for your&nbsp;business</div>
         </h2>
 
         <ul class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8 sm:mt-16">
             <li>
                 <span class="block font-bold text-5xl sm:text-7xl text-indigo-400">15+</span>
-                <span class="block text-indigo-900/50 dark:text-indigo-200/50 text-lg sm:text-xl">years of experience</span>
+                <span class="block text-indigo-900/50 text-lg sm:text-xl">years of experience</span>
             </li>
 
             <li>
                 <span class="block font-bold text-5xl sm:text-7xl text-indigo-400">1M+</span>
-                <span class="block text-indigo-900/50 dark:text-indigo-200/50 text-lg sm:text-xl">lines of code</span>
+                <span class="block text-indigo-900/50 text-lg sm:text-xl">lines of code</span>
             </li>
 
             <li>
                 <span class="block font-bold text-5xl sm:text-7xl text-indigo-400">30+</span>
-                <span class="block text-indigo-900/50 dark:text-indigo-200/50 text-lg sm:text-xl">clients</span>
+                <span class="block text-indigo-900/50 text-lg sm:text-xl">clients</span>
             </li>
 
             <li>
                 <span class="block font-bold text-5xl sm:text-7xl text-indigo-400">100+</span>
-                <span class="block text-indigo-900/50 dark:text-indigo-200/50 text-lg sm:text-xl">web applications</span>
+                <span class="block text-indigo-900/50 text-lg sm:text-xl">web applications</span>
             </li>
         </ul>
     </x-consulting.section>
 
     <x-consulting.section
-        class="bg-gradient-to-r from-indigo-50/50 dark:from-gray-800 to-indigo-100/50 dark:to-gray-700 text-indigo-900 dark:text-current"
+        class="bg-gradient-to-r from-indigo-50/50 to-indigo-100/50 text-indigo-900"
         x-intersect="window.fathom?.trackGoal('WSVGAGQR', 0)"
     >
         <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
             <x-icon-connected-people class="inline-block fill-current w-12 sm:w-16 h-12 sm:h-16" />
-            <div class="mt-4 dark:text-indigo-300">Laravel consulting services I provide</div>
+            <div class="mt-4">Laravel consulting services I provide</div>
         </h2>
 
         <ul class="grid sm:grid-cols-2 gap-12 mt-8 sm:mt-16">
             <li>
                 <x-icon-pair-programming class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
 
-                <p class="font-bold mt-4 text-indigo-400 dark:text-indigo-300 text-lg sm:text-xl">
+                <p class="font-bold mt-4 text-indigo-400 text-lg sm:text-xl">
                     Pair programming
                 </p>
 
@@ -187,7 +187,7 @@
             <li>
                 <x-icon-best-practices class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
 
-                <p class="font-bold mt-4 text-indigo-400 dark:text-indigo-300 text-lg sm:text-xl">
+                <p class="font-bold mt-4 text-indigo-400 text-lg sm:text-xl">
                     Best practices
                 </p>
 
@@ -197,17 +197,17 @@
 
                 <ul class="mt-4">
                     <li class="flex items-start gap-2">
-                        <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 dark:text-indigo-300 translate-y-[3.5px] w-4 h-4" />
+                        <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[3.5px] w-4 h-4" />
                         You don't need to maintain a documentation.
                     </li>
 
                     <li class="flex items-start gap-2 mt-2">
-                        <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 dark:text-indigo-300 translate-y-[3.5px] w-4 h-4" />
+                        <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[3.5px] w-4 h-4" />
                         Your developers always knows where to go.
                     </li>
 
                     <li class="flex items-start gap-2 mt-2">
-                        <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 dark:text-indigo-300 translate-y-[3.5px] w-4 h-4" />
+                        <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[3.5px] w-4 h-4" />
                         New hires will know where to go as well from day&nbsp;1.
                     </li>
                 </ul>
@@ -220,7 +220,7 @@
             <li>
                 <x-icon-automated-testing class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
 
-                <p class="font-bold mt-4 text-indigo-400 dark:text-indigo-300 text-lg sm:text-xl">
+                <p class="font-bold mt-4 text-indigo-400 text-lg sm:text-xl">
                     Automated testing
                 </p>
 
@@ -234,12 +234,12 @@
 
                 <ul class="mt-4">
                     <li class="flex items-start gap-2">
-                        <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 dark:text-indigo-300 translate-y-[3.5px] w-4 h-4" />
+                        <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[3.5px] w-4 h-4" />
                         Be more confident each time they deploy something new.
                     </li>
 
                     <li class="flex items-start gap-2 mt-2">
-                        <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 dark:text-indigo-300 translate-y-[3.5px] w-4 h-4" />
+                        <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[3.5px] w-4 h-4" />
                         Facilitate the onboarding of new team members. They won't fear breaking something they don't know.
                     </li>
                 </ul>
@@ -248,7 +248,7 @@
             <li>
                 <x-icon-continuous-integration class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
 
-                <p class="font-bold mt-4 text-indigo-400 dark:text-indigo-300 text-lg sm:text-xl">
+                <p class="font-bold mt-4 text-indigo-400 text-lg sm:text-xl">
                     Continuous integration
                 </p>
 
@@ -264,7 +264,7 @@
             <li>
                 <x-icon-errors-monitoring class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
 
-                <p class="font-bold mt-4 text-indigo-400 dark:text-indigo-300 text-lg sm:text-xl">Errors monitoring</p>
+                <p class="font-bold mt-4 text-indigo-400 text-lg sm:text-xl">Errors monitoring</p>
 
                 <p class="mt-4">
                     What if we could <strong class="font-bold">prevent</strong> your company to loose even more money?
@@ -279,7 +279,7 @@
         <div class="mt-8 sm:mt-16 text-center">
             <a
                 href="https://savvycal.com/benjamincrozat/3-hrs-consulting"
-                class="bg-gradient-to-r from-emerald-400 dark:from-emerald-600 to-emerald-500 dark:to-emerald-700 inline-block px-8 py-4 rounded shadow-md text-center text-xl text-white"
+                class="bg-gradient-to-r from-emerald-400 to-emerald-500 inline-block px-8 py-4 rounded shadow-md text-center text-xl text-white"
                 @click="window.fathom?.trackGoal('BCXCNHU1', 0)"
             >
                 Book <span class="font-bold">3 hours</span> for <span class="line-through">$600</span> <span class="font-bold">$500</span>
@@ -293,17 +293,17 @@
     </x-consulting.section>
 
     <x-consulting.section
-        class="bg-gradient-to-r from-indigo-100/50 dark:from-gray-800/[.9] to-indigo-200/50 dark:to-gray-700/[.9] text-indigo-900 dark:text-gray-300"
+        class="bg-gradient-to-r from-indigo-100/50/[.9] to-indigo-200/50/[.9] text-indigo-900"
         x-intersect="window.fathom?.trackGoal('Q0JLQGBO', 0)"
     >
         <h2 class="font-bold text-xl sm:text-3xl text-center text-indigo-400">
             <x-icon-question-circle class="fill-current inline-block w-12 sm:w-16 h-12 sm:h-16" />
-            <div class="mt-4 dark:text-indigo-300">About me</div>
+            <div class="mt-4">About me</div>
         </h2>
 
         <div class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8 mt-8 sm:text-lg md:text-xl">
             <div class="order-2 md:order-none">
-                <p>My name is Benjamin Crozat. I'm a passionate <strong class="font-bold dark:text-white">full-stack PHP and Laravel developer from the south of France</strong> with 15+ years of experience.</p>
+                <p>My name is Benjamin Crozat. I'm a passionate <strong class="font-bold">full-stack PHP and Laravel developer from the south of France</strong> with 15+ years of experience.</p>
 
                 <p class="mt-4">I'm a self-taught developer and was immediately seduced by the freelancer life. I quickly became interested in helping companies to work better with web developers and technology.</p>
             </div>
@@ -314,7 +314,7 @@
         </div>
     </x-consulting.section>
 
-    <div id="about" class="bg-indigo-500 dark:bg-gray-900 flex-grow">
+    <div id="about" class="bg-indigo-500 flex-grow">
         <x-footer class="text-indigo-100" />
     </div>
 </x-app>
