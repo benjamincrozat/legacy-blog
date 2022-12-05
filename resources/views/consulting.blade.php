@@ -267,9 +267,12 @@
                 @click="window.fathom?.trackGoal('BCXCNHU1', 0)"
             >
                 Book <span class="font-bold">3 hours</span> for <span class="line-through">$600</span> <span class="font-bold">$500</span>
+                <span class="block text-sm">And save 17%!</span>
             </a>
 
-            <p class="mt-4">Or start with <a href="#" class="font-bold text-indigo-400 underline" @click.prevent="alert('Soon!')">1 hour for $200</a>.</p>
+            <p class="mt-4">
+                Or start with <a href="#" class="font-bold text-indigo-400 underline" @click.prevent="alert('Soon!')">1 hour for $200</a>.
+            </p>
         </div>
     </x-consulting.section>
 
