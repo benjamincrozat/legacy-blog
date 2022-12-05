@@ -1,5 +1,5 @@
 <x-app
-    title="Laravel developer for hire: Benjamin Crozat"
+    title="Hire a Laravel consultant for an audit"
     description="Book an expert Laravel developer, TODAY! Let me guide your team toward reliability and maintenability."
     class="text-indigo-50"
 >
@@ -17,11 +17,13 @@
 
     <x-consulting.section class="bg-gradient-to-r from-indigo-500 to-indigo-400">
         <header class="flex items-center gap-8">
-            <h1 class="sm:font-thin text-xl sm:text-2xl md:text-4xl text-indigo-50">
+            <h1 class="hidden">Hire a Laravel consultant for an audit</h1>
+
+            <h2 class="sm:font-thin text-xl sm:text-2xl md:text-4xl text-indigo-50">
                 Book <span class="font-normal text-white">right now</span><br />
                 10+ years of experience<br />
                 with PHP and Laravel
-            </h1>
+            </h2>
 
             <div class="flex-shrink-0">
                 <img
