@@ -228,7 +228,7 @@
                     </p>
 
                     <p class="mt-4">
-                        We can make it happen <strong class="font-semibold">without any infrastructure cost</strong>.
+                        We can make it happen <strong class="font-semibold">without any infrastructure or DevOps cost</strong>.
                     </p>
                 </li>
 
