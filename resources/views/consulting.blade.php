@@ -15,7 +15,7 @@
     </div>
 
     <x-consulting.section class="bg-gradient-to-r from-indigo-500 to-indigo-400 text-indigo-50">
-        <header class="flex items-center gap-8">
+        <header class="flex items-center justify-between gap-8">
             <h1 class="hidden">Hire a Laravel consultant for an audit</h1>
 
             <h2 class="sm:font-thin text-xl sm:text-2xl md:text-4xl text-indigo-50">
@@ -254,7 +254,7 @@
                     @click="window.fathom?.trackGoal('BCXCNHU1', 0)"
                 >
                     <span>Book <span class="font-bold text-white">3 hours</span> for <span class="font-bold text-white">$500</span></span>
-                    <span class="bg-gradient-to-b from-emerald-100/30 to-emerald-100/40 font-bold px-3 py-1 rounded-full text-emerald-900/75 text-xs">17% off</span>
+                    <span class="bg-gradient-to-b from-emerald-900/50 to-emerald-800/50 font-bold px-3 py-1 rounded-full text-emerald-100 text-xs">17% off</span>
                 </a>
 
                 <p class="mt-4">
