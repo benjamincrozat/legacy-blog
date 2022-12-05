@@ -46,15 +46,24 @@
             </div>
         </header>
 
-        <div class="font-thin text-xl sm:text-3xl">
-            <h2 class="mt-8 sm:mt-16">
-                Hire a dedicated Laravel developer to guide your team<br class="hidden sm:inline" />
-                toward <strong class="font-semibold text-white">reliability</strong> and <strong class="font-semibold text-white">maintenability</strong>.
-            </h2>
+        <div>
+            <div class="font-thin text-xl sm:text-3xl">
+                <h2 class="mt-8 sm:mt-16">
+                    Hire a dedicated Laravel developer to guide your team<br class="hidden sm:inline" />
+                    toward <strong class="font-semibold text-white">reliability</strong> and <strong class="font-semibold text-white">maintenability</strong>.
+                </h2>
 
-            <p class="mt-8">
-                <strong class="font-semibold text-white">Make more money</strong> on the long run by avoiding endless regressions, bug huntings and rewrites of your web applications.
-            </p>
+                <p class="mt-8">
+                    <strong class="font-semibold text-white">Make more money</strong> on the long run by avoiding endless regressions, bug huntings and rewrites of your web applications.
+                </p>
+            </div>
+
+            <a
+                href="https://savvycal.com/benjamincrozat/consulting"
+                class="bg-gradient-to-b from-white dark:from-gray-600 to-indigo-50 dark:to-gray-700 font-light inline-block mt-10 px-8 py-4 rounded shadow-xl shadow-indigo-900/20 text-center text-indigo-400 text-xl w-full sm:w-auto"
+            >
+                Book <span class="font-bold">3 hours</span> for <span class="font-bold">$500</span>
+            </a>
         </div>
 
         <div class="border-t border-indigo-400 dark:border-gray-600 mt-16 pt-16">
