@@ -163,23 +163,23 @@
                     </p>
 
                     <p class="mt-4">
-                        When everyone follows the framework's best practices, this is what happens:
+                        When everyone follows the framework's best practices, this happens:
                     </p>
 
                     <ul class="mt-4">
                         <li class="flex items-start gap-2">
                             <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[1.5px] w-5 h-5" />
-                            You don't need to maintain a documentation.
+                            You don't need to maintain a documentation
                         </li>
 
                         <li class="flex items-start gap-2 mt-2">
                             <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[1.5px] w-5 h-5" />
-                            Your developers always know where to go.
+                            Your developers always know where to go
                         </li>
 
                         <li class="flex items-start gap-2 mt-2">
                             <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[1.5px] w-5 h-5" />
-                            New hires will be productive from day one.
+                            New hires will be productive from day one
                         </li>
                     </ul>
 
@@ -206,12 +206,12 @@
                     <ul class="mt-4">
                         <li class="flex items-start gap-2">
                             <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[1.5px] w-5 h-5" />
-                            Boost confidence each time they deploy something new.
+                            Boost confidence each time they deploy something new
                         </li>
 
                         <li class="flex items-start gap-2 mt-2">
                             <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[1.5px] w-5 h-5" />
-                            Facilitate onboarding of new team members. They won't fear screwing everything up on their first day.
+                            Facilitate onboarding of new team members. They won't fear screwing everything up on their first day
                         </li>
                     </ul>
                 </li>
