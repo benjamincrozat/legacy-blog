@@ -20,7 +20,7 @@
                     Blog
                 </a>
 
-                <a href="https://savvycal.com/benjamincrozat/consulting" class="bg-white font-bold px-4 py-2 rounded text-indigo-400 dark:text-gray-600" @click="window.fathom?.trackGoal('EWIGDNLB', 0)">
+                <a href="https://savvycal.com/benjamincrozat/consulting" class="bg-white font-bold px-4 py-2 rounded text-indigo-400 dark:text-gray-600" @click="window.fathom?.trackGoal('BCXCNHU1', 0)">
                     Book <span class="font-bold">3 hours</span> for <span class="font-bold">$500</span>
                 </a>
             </nav>
