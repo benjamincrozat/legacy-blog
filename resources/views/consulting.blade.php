@@ -249,15 +249,15 @@
             <div class="mt-8 sm:mt-16 text-center">
                 <a
                     href="https://savvycal.com/benjamincrozat/3-hrs-consulting"
-                    class="bg-gradient-to-r from-indigo-300 to-indigo-400 block p-4 rounded shadow-md text-center text-white"
+                    class="bg-gradient-to-b from-emerald-400 to-emerald-500 inline-flex items-center justify-center gap-2 font-normal sm:font-light mt-10 px-8 py-4 rounded shadow-xl shadow-emerald-600/[.15] text-base text-center text-emerald-50 w-full sm:w-auto"
                     @click="window.fathom?.trackGoal('BCXCNHU1', 0)"
                 >
-                    Book <span class="font-bold">3 hours</span> for <span class="font-bold">$500</span>
-                    <span class="block text-sm">And save 17%!</span>
+                    <span>Book <span class="font-bold text-white">3 hours</span> for <span class="font-bold text-white">$500</span></span>
+                    <span class="bg-gradient-to-b from-emerald-100/30 to-emerald-100/40 font-bold px-3 py-1 rounded-full text-emerald-900/75 text-xs">17% off</span>
                 </a>
 
                 <p class="mt-4">
-                    Or start with <a href="https://savvycal.com/benjamincrozat/1-hr-consulting" class="font-bold text-indigo-400 underline">1 hour for $200</a>.
+                    Or start with <a href="https://savvycal.com/benjamincrozat/1-hr-consulting" class="font-bold text-emerald-600 underline">1 hour for $200</a>.
                 </p>
             </div>
         </section>
