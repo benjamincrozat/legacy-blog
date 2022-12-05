@@ -36,7 +36,7 @@
             </div>
         </header>
 
-        <p class="font-bold mt-8 text-white">
+        <p class="font-semibold mt-8 text-white">
             Take back control of the technical side of your business.
         </p>
 
@@ -48,22 +48,22 @@
 
             <li class="flex items-center gap-2">
                 <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 opacity-75 w-5 h-5" />
-                <span>I <strong class="font-bold text-white">pair program</strong> with your developers</span>
+                <span>I <strong class="font-semibold text-white">pair program</strong> with your developers</span>
             </li>
 
             <li class="flex items-center gap-2">
                 <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 opacity-75 w-5 h-5" />
-                <span>See which best practices can <strong class="font-bold text-white">boost the productivity of new hires</strong></span>
+                <span>See which best practices can <strong class="font-semibold text-white">boost the productivity of new hires</strong></span>
             </li>
 
             <li class="flex items-center gap-2">
                 <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 opacity-75 w-5 h-5" />
-                <span>Learn how you can <strong class="font-bold text-white">prevent regressions</strong></span>
+                <span>Learn how you can <strong class="font-semibold text-white">prevent regressions</strong></span>
             </li>
 
             <li class="flex items-center gap-2">
                 <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 opacity-75 w-5 h-5" />
-                <span>Finally, we set up <strong class="font-bold text-white">a tool that alerts you when your app fails in production</strong></span>
+                <span>Finally, we set up <strong class="font-semibold text-white">a tool that alerts you when your app fails in production</strong></span>
             </li>
         </ul>
 
@@ -77,10 +77,10 @@
         </a>
 
         <p class="mt-4 text-center sm:text-left">
-            Or start with <a href="https://savvycal.com/benjamincrozat/1-hr-consulting" class="border-b border-white/50 font-bold text-white">1 hour for $200</a>.
+            Or start with <a href="https://savvycal.com/benjamincrozat/1-hr-consulting" class="border-b border-white/50 font-semibold text-white">1 hour for $200</a>.
         </p>
 
-        <p class="border-t border-indigo-400 mt-4 pt-4 text-center sm:text-left text-indigo-200 text-xs">
+        <p class="border-t border-indigo-400 font-semibold mt-4 pt-4 text-center sm:text-left text-indigo-200 text-xs">
             100% money-back guarantee if I can't help you.
         </p>
 
