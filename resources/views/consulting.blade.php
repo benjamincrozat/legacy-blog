@@ -133,9 +133,9 @@
             class="container py-8 sm:py-16"
             x-intersect="window.fathom?.trackGoal('WSVGAGQR', 0)"
         >
-            <h2 class="font-extrabold text-xl sm:text-2xl text-center text-indigo-400">
+            <h2 class="font-bold text-xl sm:text-2xl text-center text-indigo-400">
                 <x-icon-connected-people class="inline-block fill-current w-12 h-12" />
-                <div class="mt-4">The Laravel consulting services I provide in details</div>
+                <div class="mt-4">The Laravel consulting services I provide</div>
             </h2>
 
             <ul class="grid sm:grid-cols-2 gap-12 mt-8 sm:mt-16">
@@ -174,12 +174,12 @@
 
                         <li class="flex items-start gap-2 mt-2">
                             <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[1.5px] w-5 h-5" />
-                            Your developers always knows where to go.
+                            Your developers always know where to go.
                         </li>
 
                         <li class="flex items-start gap-2 mt-2">
                             <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[1.5px] w-5 h-5" />
-                            New hires will know where to go as well from day&nbsp;1.
+                            New hires will be productive from day one.
                         </li>
                     </ul>
 
@@ -195,7 +195,7 @@
                         Automated testing
                     </p>
 
-                    <p class="font-bold mt-4">
+                    <p class="font-semibold mt-4">
                         Untested code is legacy code.
                     </p>
 
@@ -206,12 +206,12 @@
                     <ul class="mt-4">
                         <li class="flex items-start gap-2">
                             <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[1.5px] w-5 h-5" />
-                            Be more confident each time they deploy something new.
+                            Boost confidence each time they deploy something new.
                         </li>
 
                         <li class="flex items-start gap-2 mt-2">
                             <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[1.5px] w-5 h-5" />
-                            Facilitate the onboarding of new team members. They won't fear breaking something they don't know.
+                            Facilitate onboarding of new team members. They won't fear screwing everything up their first day.
                         </li>
                     </ul>
                 </li>
@@ -224,11 +224,11 @@
                     </p>
 
                     <p class="mt-4">
-                        Automatically and continuously deploying new code into production is a dream for any serious business that wants to please its customers.
+                        Automatically and continuously deploy new code into production is a dream for any serious business that wants to move forward.
                     </p>
 
                     <p class="mt-4">
-                        We can make it happen <strong class="font-bold">without any infrastructure cost</strong>.
+                        We can make it happen <strong class="font-semibold">without any infrastructure cost</strong>.
                     </p>
                 </li>
 
@@ -238,11 +238,11 @@
                     <p class="font-bold mt-4 text-indigo-400 text-xl">Errors monitoring</p>
 
                     <p class="mt-4">
-                        What if we could <strong class="font-bold">prevent</strong> your company to loose even more money?
+                        What if we could react fast any time a block bug occurs in production?
                     </p>
 
                     <p class="mt-4">
-                        We can set up a tool that monitors and logs everything wrong happening on your web applications instead of relying on feedback.
+                        We can set up a tool that monitors and logs everything wrong happening on your applications instead of relying on user feedback.
                     </p>
                 </li>
             </ul>
