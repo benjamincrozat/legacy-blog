@@ -20,8 +20,9 @@
                     Blog
                 </a>
 
-                <a href="https://savvycal.com/benjamincrozat/consulting" class="bg-white font-bold px-4 py-2 rounded text-indigo-400 dark:text-gray-600" @click="window.fathom?.trackGoal('EWIGDNLB', 0)">
-                    Book <span class="font-bold">3 hours</span> for <span class="font-bold">$500</span>
+                <a href="https://savvycal.com/benjamincrozat/consulting" class="bg-gradient-to-b from-white dark:from-gray-600 to-indigo-50 dark:to-gray-700 flex items-center gap-2 font-normal leading-tight px-4 py-3 relative rounded shadow-md shadow-indigo-900/10 text-center text-indigo-400 dark:text-gray-600" @click="window.fathom?.trackGoal('EWIGDNLB', 0)">
+                    <span>Book <span class="font-bold">3 <span class="sm:hidden">hrs</span><span class="hidden sm:inline">hours</span></span> for $500</span>
+                    <span class="bg-indigo-400 px-3 py-1 rounded-full text-white text-xs">17% off</span>
                 </a>
             </nav>
         </div>
@@ -60,9 +61,10 @@
 
             <a
                 href="https://savvycal.com/benjamincrozat/consulting"
-                class="bg-gradient-to-b from-white dark:from-gray-600 to-indigo-50 dark:to-gray-700 font-light inline-block mt-10 px-8 py-4 rounded shadow-xl shadow-indigo-900/20 text-center text-indigo-400 text-xl w-full sm:w-auto"
+                class="bg-gradient-to-b from-white dark:from-gray-600 to-indigo-50 dark:to-gray-700 inline-flex items-center justify-center gap-2 font-light mt-10 px-8 py-4 rounded shadow-xl shadow-indigo-900/20 text-center text-indigo-400 w-full sm:w-auto"
             >
-                Book <span class="font-bold">3 hours</span> for <span class="font-bold">$500</span>
+                <span>Book <span class="font-bold">3 hours</span> for <span class="font-bold">$500</span></span>
+                <span class="bg-indigo-400 px-3 py-1 rounded-full text-white text-xs">17% off</span>
             </a>
         </div>
 
