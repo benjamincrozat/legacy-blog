@@ -304,7 +304,7 @@
 
             <div class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8 mt-8">
                 <div class="order-2 md:order-none">
-                    <p>My name is Benjamin Crozat. I'm a passionate <strong class="font-bold">full-stack PHP and Laravel developer from the south of France</strong> with 10+ years of experience.</p>
+                    <p>I'm a passionate <strong class="font-semibold">full-stack PHP and Laravel developer</strong> from the south of France with <strong class="font-semibold">10+ years of experience</strong>.</p>
 
                     <p class="mt-4">I'm a self-taught developer and was immediately seduced by the freelancer life. I quickly became interested in helping companies to work better with web developers and technology.</p>
                 </div>
