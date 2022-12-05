@@ -52,7 +52,7 @@
 
             <li class="flex items-center gap-2">
                 <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 opacity-75 w-5 h-5" />
-                See which best practices could improve the onboarding time of new team members
+                See which best practices can 10x new team members' productivity
             </li>
 
             <li class="flex items-center gap-2">
