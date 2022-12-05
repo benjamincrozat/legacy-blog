@@ -133,9 +133,8 @@
             class="container py-8 sm:py-16"
             x-intersect="window.fathom?.trackGoal('WSVGAGQR', 0)"
         >
-            <h2 class="font-bold text-xl sm:text-2xl text-center text-indigo-400">
-                <x-icon-connected-people class="inline-block fill-current w-12 sm:w-14 h-12 sm:h-14" />
-                <div class="mt-4">The Laravel consulting services I provide</div>
+            <h2 class="font-semibold text-xl sm:text-3xl text-center">
+                The Laravel consulting services I&nbsp;provide
             </h2>
 
             <ul class="grid sm:grid-cols-2 gap-12 mt-8 sm:mt-16">
@@ -266,9 +265,8 @@
 
     @if (false)
         <section class="container max-w-[1024px] py-8 sm:py-16">
-            <h2 class="font-extrabold text-xl sm:text-2xl text-center text-indigo-400">
-                <span class="text-gray-600">You will be satisfied</span><br />
-                But don't take my word for it
+            <h2 class="font-semibold text-xl sm:text-3xl text-center text-indigo-900">
+                You will be satisfied, but don't take my word for it
             </h2>
 
             <div class="grid md:grid-cols-2 gap-4 mt-8">
@@ -297,9 +295,8 @@
             class="container py-8 sm:py-16"
             x-intersect="window.fathom?.trackGoal('Q0JLQGBO', 0)"
         >
-            <h2 class="font-bold text-xl sm:text-2xl text-center text-indigo-400">
-                <x-icon-question-circle class="fill-current inline-block h-8 sm:w-12 h-8 sm:h-12" />
-                <div class="mt-2">About me</div>
+            <h2 class="font-semibold text-xl sm:text-3xl text-center">
+                About me
             </h2>
 
             <div class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8 mt-8">
