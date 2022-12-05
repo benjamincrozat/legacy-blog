@@ -36,7 +36,7 @@
         </header>
 
         <p class="font-bold mt-8 text-white">
-            A package giant-packed with value!
+            A package filled to the top with value!
         </p>
 
         <ul class="grid gap-2 mt-4">
