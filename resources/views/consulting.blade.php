@@ -16,7 +16,7 @@
     </div>
 
     <x-consulting.section class="bg-gradient-to-r from-indigo-500 to-indigo-400">
-        <header class="flex items-center justify-between gap-4 sm:gap-8 md:gap-16">
+        <header class="flex items-center gap-8">
             <h1 class="sm:font-thin text-xl sm:text-2xl md:text-4xl text-indigo-50">
                 Book <span class="font-normal text-white">right now</span><br />
                 10+ years of experience<br />
