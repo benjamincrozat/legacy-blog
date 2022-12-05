@@ -47,7 +47,7 @@
             </div>
 
             <a
-                href="https://savvycal.com/benjamincrozat/consulting"
+                href="https://savvycal.com/benjamincrozat/3-hrs-consulting"
                 class="bg-gradient-to-b from-white dark:from-gray-600 to-indigo-50 dark:to-gray-700 inline-flex items-center justify-center gap-2 font-light mt-10 px-8 py-4 rounded shadow-xl shadow-indigo-900/20 text-center text-indigo-400 w-full sm:w-auto"
             >
                 <span>Book <span class="font-bold">3 hours</span> for <span class="font-bold">$500</span></span>
@@ -55,7 +55,7 @@
             </a>
 
             <p class="mt-4">
-                Or start with <a href="#" class="font-bold text-white underline" @click.prevent="alert('Soon!')">1 hour for $200</a>.
+                Or start with <a href="https://savvycal.com/benjamincrozat/1-hr-consulting" class="font-bold text-white underline">1 hour for $200</a>.
             </p>
         </div>
 
@@ -255,7 +255,7 @@
 
         <div class="mt-8 sm:mt-16 text-center">
             <a
-                href="https://savvycal.com/benjamincrozat/consulting"
+                href="https://savvycal.com/benjamincrozat/3-hrs-consulting"
                 class="bg-gradient-to-r from-emerald-400 dark:from-emerald-600 to-emerald-500 dark:to-emerald-700 inline-block px-8 py-4 rounded shadow-md text-center text-xl text-white"
                 @click="window.fathom?.trackGoal('BCXCNHU1', 0)"
             >
@@ -264,7 +264,7 @@
             </a>
 
             <p class="mt-4">
-                Or start with <a href="#" class="font-bold text-indigo-400 underline" @click.prevent="alert('Soon!')">1 hour for $200</a>.
+                Or start with <a href="https://savvycal.com/benjamincrozat/1-hr-consulting" class="font-bold text-indigo-400 underline">1 hour for $200</a>.
             </p>
         </div>
     </x-consulting.section>
