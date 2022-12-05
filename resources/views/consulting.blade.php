@@ -69,7 +69,7 @@
 
         <a
             href="https://savvycal.com/benjamincrozat/3-hrs-consulting"
-            class="bg-gradient-to-b from-white to-indigo-50 inline-flex items-center justify-center gap-2 font-normal sm:font-light mt-10 px-8 py-4 rounded shadow-xl shadow-indigo-900/[.15] text-base text-center text-indigo-400 w-full sm:w-auto"
+            class="bg-gradient-to-b from-white to-indigo-50 inline-flex items-center justify-center gap-2 font-normal sm:font-light mt-10 px-8 py-4 rounded shadow-xl shadow-indigo-900/[.15] text-base text-center text-indigo-500 w-full sm:w-auto"
             @click="window.fathom?.trackGoal('BEYT9BXR', 0)"
         >
             <span>Book <span class="font-bold">3 hours</span> for <span class="font-bold">$500</span></span>
