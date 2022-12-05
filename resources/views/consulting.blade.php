@@ -294,7 +294,7 @@
 
     <div class="bg-indigo-50/30 text-indigo-900">
         <section
-            class="container max-w-[768px] py-8 sm:py-16"
+            class="container py-8 sm:py-16"
             x-intersect="window.fathom?.trackGoal('Q0JLQGBO', 0)"
         >
             <h2 class="font-bold text-xl sm:text-2xl text-center text-indigo-400">
