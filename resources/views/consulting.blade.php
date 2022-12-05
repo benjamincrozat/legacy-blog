@@ -47,22 +47,22 @@
 
             <li class="flex items-center gap-2">
                 <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 opacity-75 w-5 h-5" />
-                I pair program with your developers
+                I <strong class="font-bold text-white">pair program</strong> with your developers
             </li>
 
             <li class="flex items-center gap-2">
                 <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 opacity-75 w-5 h-5" />
-                See which best practices can 10x new team members' productivity
+                <span>See which best practices can <strong class="font-bold text-white">10x new team members' productivity</strong></span>
             </li>
 
             <li class="flex items-center gap-2">
                 <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 opacity-75 w-5 h-5" />
-                Learn how you can prevent regressions
+                Learn how you can <strong class="font-bold text-white">prevent regressions</strong>
             </li>
 
             <li class="flex items-center gap-2">
                 <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 opacity-75 w-5 h-5" />
-                Finally, we set up a tool that warns you when your app fails
+                Finally, we set up <strong class="font-bold text-white">a tool that alerts you when your app fails</strong>
             </li>
         </ul>
 
