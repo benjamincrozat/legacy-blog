@@ -270,7 +270,7 @@
         </h2>
 
         <div class="grid md:grid-cols-2 gap-4 mt-8">
-            @foreach (range(1, 6) as $i)
+            @foreach (range(1, 4) as $i)
                 <div class="bg-gray-200/50 p-6 rounded-lg text-gray-600">
                     <blockquote>
                         {{ fake()->sentences(mt_rand(2, 3), true) }}
