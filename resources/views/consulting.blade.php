@@ -36,7 +36,7 @@
         </header>
 
         <p class="font-bold mt-8 text-white">
-            Take back control of your business.
+            Take back control of the technical side of your business.
         </p>
 
         <ul class="grid gap-2 mt-4">
