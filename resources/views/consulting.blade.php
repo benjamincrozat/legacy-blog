@@ -62,7 +62,7 @@
 
             <li class="flex items-center gap-2">
                 <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 opacity-75 w-5 h-5" />
-                <span>Finally, we set up <strong class="font-bold text-white">a tool that alerts you when your app fails</strong></span>
+                <span>Finally, we set up <strong class="font-bold text-white">a tool that alerts you when your app fails</strong> in production</span>
             </li>
         </ul>
 
