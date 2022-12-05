@@ -3,7 +3,7 @@
     description="Book an expert Laravel developer, TODAY! Let me guide your team toward reliability and maintenability."
     class="text-indigo-50 dark:text-gray-300"
 >
-    <div class="bg-indigo-500 dark:bg-gray-800 md:sticky md:top-0 md:z-10">
+    <div class="bg-indigo-500 dark:bg-gray-800">
         <div class="container sm:flex sm:items-center sm:justify-between py-4 text-center sm:text-left">
             <a href="{{ route('home') }}">
                 <span class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase">
