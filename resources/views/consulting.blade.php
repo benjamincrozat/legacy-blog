@@ -72,7 +72,7 @@
             class="bg-gradient-to-b from-white to-indigo-50 inline-flex items-center justify-center gap-2 font-normal sm:font-light mt-10 px-8 py-4 rounded shadow-xl shadow-indigo-900/[.15] text-base text-center text-indigo-400 w-full sm:w-auto"
         >
             <span>Book <span class="font-bold">3 hours</span> for <span class="font-bold">$500</span></span>
-            <span class="bg-indigo-50 font-bold px-3 py-1 rounded-full text-indigo-900/75 text-xs">17% off</span>
+            <span class="bg-indigo-100 font-bold px-3 py-1 rounded-full text-indigo-900/75 text-xs">17% off</span>
         </a>
 
         <p class="mt-4 text-center sm:text-left">
@@ -263,31 +263,33 @@
         </section>
     </div>
 
-    <section class="container max-w-[1024px] py-8 sm:py-16">
-        <h2 class="font-extrabold text-xl sm:text-2xl text-center text-indigo-400">
-            <span class="text-gray-600">You will be satisfied</span><br />
-            But don't take my word for it
-        </h2>
+    @if (false)
+        <section class="container max-w-[1024px] py-8 sm:py-16">
+            <h2 class="font-extrabold text-xl sm:text-2xl text-center text-indigo-400">
+                <span class="text-gray-600">You will be satisfied</span><br />
+                But don't take my word for it
+            </h2>
 
-        <div class="grid md:grid-cols-2 gap-4 mt-8">
-            @foreach (range(1, 4) as $i)
-                <div class="bg-gray-200/50 p-6 rounded-lg text-gray-600">
-                    <blockquote>
-                        {{ fake()->sentences(mt_rand(2, 3), true) }}
+            <div class="grid md:grid-cols-2 gap-4 mt-8">
+                @foreach (range(1, 4) as $i)
+                    <div class="bg-gray-200/50 p-6 rounded-lg text-gray-600">
+                        <blockquote>
+                            {{ fake()->sentences(mt_rand(2, 3), true) }}
 
-                        <div class="flex items-center gap-4 mt-4">
-                            <img src="https://i.pravatar.cc/30{{ $i }}" width="55" height="55" alt="{{ $name = fake()->name() }}" class="rounded-full" />
+                            <div class="flex items-center gap-4 mt-4">
+                                <img src="https://i.pravatar.cc/30{{ $i }}" width="55" height="55" alt="{{ $name = fake()->name() }}" class="rounded-full" />
 
-                            <cite>
-                                <span class="font-bold">{{ $name }}</span><br />
-                                from <span class="font-bold">{{ fake()->company() }}</span>
-                            </cite>
-                        </div>
-                    </blockquote>
-                </div>
-            @endforeach
-        </div>
-    </section>
+                                <cite>
+                                    <span class="font-bold">{{ $name }}</span><br />
+                                    from <span class="font-bold">{{ fake()->company() }}</span>
+                                </cite>
+                            </div>
+                        </blockquote>
+                    </div>
+                @endforeach
+            </div>
+        </section>
+    @endif
 
     <div class="bg-indigo-50 text-indigo-900">
         <section
