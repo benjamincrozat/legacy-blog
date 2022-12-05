@@ -1,9 +1,9 @@
 <x-app
     title="Laravel developer for hire: Benjamin Crozat"
     description="Book an expert Laravel developer, TODAY! Let me guide your team toward reliability and maintenability."
-    class="text-indigo-50 dark:text-gray-300"
+    class="text-indigo-50"
 >
-    <div class="bg-indigo-500 dark:bg-gray-800 py-4 text-center">
+    <div class="bg-indigo-500 py-4 text-center">
         <a href="{{ route('home') }}">
             <span class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase">
                 Benjamin Crozat
@@ -15,7 +15,7 @@
         </a>
     </div>
 
-    <x-consulting.section class="bg-gradient-to-r from-indigo-500 dark:from-gray-800 to-indigo-400 dark:to-gray-700">
+    <x-consulting.section class="bg-gradient-to-r from-indigo-500 to-indigo-400">
         <header class="flex items-center justify-between gap-4 sm:gap-8 md:gap-16">
             <h1 class="sm:font-thin text-2xl sm:text-3xl md:text-4xl text-indigo-50">
                 Book <span class="font-normal text-white">right now</span><br />
@@ -68,7 +68,7 @@
 
         <a
             href="https://savvycal.com/benjamincrozat/3-hrs-consulting"
-            class="bg-gradient-to-b from-white dark:from-gray-600 to-indigo-50 dark:to-gray-700 inline-flex items-center justify-center gap-2 font-light mt-10 px-8 py-4 rounded shadow-xl shadow-indigo-900/20 text-base text-center text-indigo-400 w-full sm:w-auto"
+            class="bg-gradient-to-b from-white to-indigo-50 inline-flex items-center justify-center gap-2 font-light mt-10 px-8 py-4 rounded shadow-xl shadow-indigo-900/20 text-base text-center text-indigo-400 w-full sm:w-auto"
         >
             <span>Book <span class="font-bold">3 hours</span> for <span class="font-bold">$500</span></span>
             <span class="bg-gradient-to-b from-emerald-400/5 to-emerald-400/10 font-bold px-3 py-1 rounded-full text-emerald-400 text-xs">17% off</span>
@@ -87,7 +87,7 @@
                 These companies trusted me
             </h3>
 
-            <ul class="flex flex-wrap items-center justify-center gap-8 mt-8">
+            <ul class="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 mt-8">
                 <li>
                     <a href="https://www.doctissimo.fr" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
                         <x-icon-doctissimo class="fill-current h-6 text-white" />
