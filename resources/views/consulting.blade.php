@@ -71,11 +71,11 @@
             class="bg-gradient-to-b from-white to-indigo-50 inline-flex items-center justify-center gap-2 font-normal sm:font-light mt-10 px-8 py-4 rounded shadow-xl shadow-indigo-900/[.15] text-base text-center text-indigo-400 w-full sm:w-auto"
         >
             <span>Book <span class="font-bold">3 hours</span> for <span class="font-bold">$500</span></span>
-            <span class="bg-gradient-to-b from-emerald-400/5 to-emerald-400/10 font-bold px-3 py-1 rounded-full text-emerald-400 text-xs">17% off</span>
+            <span class="bg-indigo-50 font-bold px-3 py-1 rounded-full text-indigo-900/75 text-xs">17% off</span>
         </a>
 
         <p class="mt-4 text-center sm:text-left">
-            Or start with <a href="https://savvycal.com/benjamincrozat/1-hr-consulting" class="font-bold text-white underline">1 hour for $200</a>.
+            Or start with <a href="https://savvycal.com/benjamincrozat/1-hr-consulting" class="border-b border-white/50 font-bold text-white">1 hour for $200</a>.
         </p>
 
         <p class="border-t border-indigo-400 mt-4 pt-4 text-center sm:text-left text-indigo-200 text-xs">
