@@ -41,27 +41,27 @@
 
         <ul class="grid gap-2 mt-4">
             <li class="flex items-center gap-2">
-                <x-heroicon-o-check-circle class="-translate-y-px opacity-75 w-5 h-5" />
+                <x-heroicon-o-check-circle class="-translate-y-px flex-shrink-0 opacity-75 w-5 h-5" />
                 Any question answered
             </li>
 
             <li class="flex items-center gap-2">
-                <x-heroicon-o-check-circle class="-translate-y-px opacity-75 w-5 h-5" />
+                <x-heroicon-o-check-circle class="-translate-y-px flex-shrink-0 opacity-75 w-5 h-5" />
                 I pair program with your developers
             </li>
 
             <li class="flex items-center gap-2">
-                <x-heroicon-o-check-circle class="-translate-y-px opacity-75 w-5 h-5" />
+                <x-heroicon-o-check-circle class="-translate-y-px flex-shrink-0 opacity-75 w-5 h-5" />
                 We list Laravel best practices that could improve new hires' onboarding time
             </li>
 
             <li class="flex items-center gap-2">
-                <x-heroicon-o-check-circle class="-translate-y-px opacity-75 w-5 h-5" />
+                <x-heroicon-o-check-circle class="-translate-y-px flex-shrink-0 opacity-75 w-5 h-5" />
                 Learn how you can prevent regressions
             </li>
 
             <li class="flex items-center gap-2">
-                <x-heroicon-o-check-circle class="-translate-y-px opacity-75 w-5 h-5" />
+                <x-heroicon-o-check-circle class="-translate-y-px flex-shrink-0 opacity-75 w-5 h-5" />
                 Finally, we set up a tool that warns you when your app fails
             </li>
         </ul>
