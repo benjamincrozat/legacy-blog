@@ -53,7 +53,7 @@
 
             <li class="flex items-center gap-2">
                 <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 opacity-75 w-5 h-5" />
-                <span>See which best practices can <strong class="font-bold text-white">boost new team members' productivity</strong></span>
+                <span>See which best practices can <strong class="font-bold text-white">boost the productivity of new hires</strong></span>
             </li>
 
             <li class="flex items-center gap-2">
