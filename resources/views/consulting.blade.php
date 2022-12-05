@@ -317,6 +317,6 @@
     </div>
 
     <div id="about" class="bg-indigo-500 flex-grow">
-        <x-footer class="max-w-[1024px] text-indigo-100" />
+        <x-footer class="text-indigo-100" />
     </div>
 </x-app>
