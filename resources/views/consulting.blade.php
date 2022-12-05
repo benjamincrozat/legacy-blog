@@ -238,7 +238,7 @@
                     <p class="font-bold mt-4 text-indigo-400 text-xl">Errors monitoring</p>
 
                     <p class="mt-4">
-                        What if we could react fast any time a block bug occurs in production?
+                        What if we could react fast any time a blocking bug occurs in production?
                     </p>
 
                     <p class="mt-4">
