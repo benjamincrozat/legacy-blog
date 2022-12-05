@@ -16,55 +16,78 @@
     </div>
 
     <x-consulting.section class="bg-gradient-to-r from-indigo-500 dark:from-gray-800 to-indigo-400 dark:to-gray-700">
-        <header class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8">
-            <h1 class="font-thin order-2 md:order-none text-3xl md:text-5xl">
-                Laravel developer for <strong class="border-b font-semibold">hire</strong>:<br />
-                Benjamin Crozat
+        <header class="flex items-center justify-between gap-4 sm:gap-8 md:gap-16">
+            <h1 class="sm:font-thin text-2xl sm:text-3xl md:text-4xl text-indigo-50">
+                Book <span class="font-normal text-white">right now</span><br />
+                10+ years of experience<br />
+                with PHP and Laravel
             </h1>
 
-            <div class="flex-shrink-0 order-1 md:order-none text-center md:text-left w-full md:w-auto">
+            <div class="flex-shrink-0">
                 <img
                     loading="lazy"
                     src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=300"
                     width="150"
                     height="150"
                     alt="Benjamin Crozat, a Laravel developer for hire"
-                    class="inline rotate-2 rounded-full"
+                    class="inline rotate-2 rounded-full w-[96px] h-[96px] md:w-[115px] md:h-[115px]"
                 />
             </div>
         </header>
 
-        <div>
-            <div class="font-thin text-xl sm:text-3xl">
-                <h2 class="mt-8 sm:mt-16">
-                    Hire a dedicated Laravel developer to guide your team<br class="hidden sm:inline" />
-                    toward <strong class="font-semibold text-white">reliability</strong> and <strong class="font-semibold text-white">maintenability</strong>.
-                </h2>
+        <p class="mt-8 text-indigo-50">
+            I <strong class="font-bold">reply to your questions</strong> and <strong class="font-bold">help you implement improvements</strong>.
+        </p>
 
-                <p class="mt-8">
-                    <strong class="font-semibold text-white">Make more money</strong> on the long run by avoiding endless regressions, bug huntings and rewrites of your web applications.
-                </p>
-            </div>
+        <ul class="grid gap-2 mt-4">
+            <li class="flex items-center gap-2">
+                <x-heroicon-o-check-circle class="-translate-y-px opacity-75 w-5 h-5" />
+                Pair programming
+            </li>
 
-            <a
-                href="https://savvycal.com/benjamincrozat/3-hrs-consulting"
-                class="bg-gradient-to-b from-white dark:from-gray-600 to-indigo-50 dark:to-gray-700 inline-flex items-center justify-center gap-2 font-light mt-10 px-8 py-4 rounded shadow-xl shadow-indigo-900/20 text-center text-indigo-400 w-full sm:w-auto"
-            >
-                <span>Book <span class="font-bold">3 hours</span> for <span class="font-bold">$500</span></span>
-                <span class="bg-indigo-400 px-3 py-1 rounded-full text-white text-xs">17% off</span>
-            </a>
+            <li class="flex items-center gap-2">
+                <x-heroicon-o-check-circle class="-translate-y-px opacity-75 w-5 h-5" />
+                Framework best practices
+            </li>
 
-            <p class="mt-4">
-                Or start with <a href="https://savvycal.com/benjamincrozat/1-hr-consulting" class="font-bold text-white underline">1 hour for $200</a>.
-            </p>
-        </div>
+            <li class="flex items-center gap-2">
+                <x-heroicon-o-check-circle class="-translate-y-px opacity-75 w-5 h-5" />
+                Automated testing
+            </li>
 
-        <div class="border-t border-indigo-400 dark:border-gray-600 mt-16 pt-16">
+            <li class="flex items-center gap-2">
+                <x-heroicon-o-check-circle class="-translate-y-px opacity-75 w-5 h-5" />
+                Continuous integration
+            </li>
+
+            <li class="flex items-center gap-2">
+                <x-heroicon-o-check-circle class="-translate-y-px opacity-75 w-5 h-5" />
+                Errors monitoring
+            </li>
+        </ul>
+
+        <a
+            href="https://savvycal.com/benjamincrozat/3-hrs-consulting"
+            class="bg-gradient-to-b from-white dark:from-gray-600 to-indigo-50 dark:to-gray-700 inline-flex items-center justify-center gap-2 font-light mt-10 px-8 py-4 rounded shadow-xl shadow-indigo-900/20 text-base text-center text-indigo-400 w-full sm:w-auto"
+        >
+            <span>Book <span class="font-bold">3 hours</span> for <span class="font-bold">$500</span></span>
+            <span class="bg-gradient-to-b from-emerald-400/5 to-emerald-400/10 font-bold px-3 py-1 rounded-full text-emerald-400 text-xs">17% off</span>
+        </a>
+
+        <p class="mt-4 text-center sm:text-left">
+            Or start with <a href="https://savvycal.com/benjamincrozat/1-hr-consulting" class="font-bold text-white underline">1 hour for $200</a>.
+        </p>
+
+        <p class="border-t border-indigo-400 mt-4 pt-4 text-center sm:text-left text-indigo-200 text-xs">
+            100% money-back guarantee if I can't help you.
+        </p>
+
+        <div class="mt-16">
             <h3 class="font-bold text-xl text-center">
                 These companies trusted me
             </h3>
 
-            <ul class="flex flex-wrap items-center justify-center gap-x-16 gap-y-8 mt-8">
+            <ul class="flex flex-wrap items-center justify-center gap-8 mt-8">
                 <li>
                     <a href="https://www.doctissimo.fr" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
                         <x-icon-doctissimo class="fill-current h-6 text-white" />
