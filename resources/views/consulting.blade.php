@@ -404,7 +404,7 @@
             <div class="grid gap-8 mt-8">
                 <details>
                     <summary class="font-bold text-xl">When is my credit card charged?</summary>
-                    <p class="mt-4">Immediately. You pay upfront, then I do the work.</p>
+                    <p class="mt-4">Your credit card will be charged immediately after you schedule our call.</p>
                 </details>
 
                 <details>
@@ -474,7 +474,7 @@
                     "name": "When is my credit card charged?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Immediately. You pay upfront, then I do the work."
+                        "text": "Your credit card will be charged immediately after you schedule our call."
                     }
                 },
                 {
