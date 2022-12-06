@@ -15,7 +15,7 @@
     </div>
 
     <x-consulting.section class="bg-gradient-to-r from-indigo-500 to-indigo-400 text-indigo-50">
-        <header class="flex items-center justify-between gap-8">
+        <header class="flex items-center gap-8">
             <h1 class="hidden">Hire a Laravel consultant for an audit</h1>
 
             <h2 class="sm:font-thin text-xl sm:text-2xl md:text-4xl text-indigo-50">
@@ -37,7 +37,7 @@
         </header>
 
         <p class="font-semibold mt-8 text-white">
-            Take back control of the technical side of your business.
+            Regain control of the technical side of your business.
         </p>
 
         <ul class="grid gap-2 mt-4">
