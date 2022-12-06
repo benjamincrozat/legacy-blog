@@ -402,7 +402,7 @@
             </h2>
 
             <div class="grid gap-8 mt-8">
-                <details>
+                <details open>
                     <summary class="font-bold text-xl">When is my credit card charged?</summary>
                     <p class="mt-4">Your credit card will be charged immediately after you schedule our call.</p>
                 </details>
