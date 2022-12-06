@@ -39,10 +39,10 @@
         </div>
 
         <div class="container max-w-[1024px] grid md:grid-cols-2 place-items-center gap-8 md:gap-4 mt-8">
-            <div class="bg-gradient-to-r from-white/95 to-white/75 px-6 py-8 rounded-lg shadow-xl shadow-indigo-900/10 text-indigo-900">
-                <h3 class="font-bold text-center text-2xl">7 days of consulting</h3>
+            <div class="bg-gradient-to-r from-white/95 to-white/75 px-4 py-6 sm:px-6 sm:py-8 rounded-lg shadow-xl shadow-indigo-900/10 text-indigo-900">
+                <h3 class="font-bold text-center text-xl sm:text-2xl">7 days of consulting</h3>
 
-                <ul class="grid gap-2 mt-8">
+                <ul class="grid gap-2 mt-4 sm:mt-8">
                     <li class="flex items-center gap-2">
                         <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 text-emerald-500 w-5 h-5" />
                         <span><strong class="font-semibold">I answer any question</strong> you have</span>
@@ -169,7 +169,7 @@
             </div>
         </div>
 
-        <div class="mt-12">
+        <div class="container mt-12">
             <h3 class="font-bold text-xl text-center">
                 These companies trusted me
             </h3>
