@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+summary::-webkit-details-marker {
+    @apply hidden;
+}
+
 .content {
     @apply break-words max-w-none prose prose-a:border-b prose-a:no-underline prose-code:dark:text-current prose-strong:text-current prose-a:border-indigo-400/50 prose-a:text-indigo-400 prose-headings:dark:text-white prose-headings:scroll-mt-8 prose-hr:dark:border-gray-800 prose-thead:dark:border-gray-800 prose-tr:dark:border-gray-800 dark:text-current;
 }
