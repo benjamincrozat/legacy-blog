@@ -14,87 +14,162 @@
         </a>
     </div>
 
-    <x-consulting.section class="bg-gradient-to-r from-indigo-500 to-indigo-400 text-indigo-50">
-        <header class="flex items-center gap-8">
-            <h1 class="hidden">Hire a Laravel consultant for an audit</h1>
+    <div class="bg-gradient-to-r from-indigo-500 to-indigo-400 pb-16 text-indigo-50">
+        <h1 class="hidden">Hire a Laravel consultant for an audit</h1>
 
-            <h2 class="sm:font-thin text-xl sm:text-2xl md:text-4xl text-indigo-50">
-                Book <span class="font-normal text-white">right now</span><br />
-                10+ years of experience<br />
-                with PHP and Laravel
-            </h2>
+        <div class="container flex items-center justify-between gap-4 max-w-[640px] pt-8">
+            <img
+                loading="lazy"
+                src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=192"
+                width="96"
+                height="96"
+                alt="Benjamin Crozat"
+                class="flex-shrink-0 inline order-2 rotate-2 rounded-full w-[64px] h-[64px] sm:w-[96px] sm:h-[96px]"
+            />
 
-            <div class="flex-shrink-0">
-                <img
-                    loading="lazy"
-                    src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=300"
-                    width="150"
-                    height="150"
-                    alt="Benjamin Crozat, a Laravel developer for hire"
-                    class="inline rounded-full w-[96px] h-[96px] md:w-[115px] md:h-[115px]"
-                />
+            <div class="order-1 sm:text-xl">
+                <h2 class="text-white">
+                    Book 10+ years of experience
+                </h2>
+
+                <h3 class="font-semibold mt-1 text-white">
+                    Regain control of the technical side of your&nbsp;business.
+                </h3>
             </div>
-        </header>
+        </div>
 
-        <p class="font-semibold mt-8 text-white">
-            Regain control of the technical side of your business.
-        </p>
+        <div class="container max-w-[1024px] grid md:grid-cols-2 place-items-center gap-8 md:gap-4 mt-8">
+            <div class="bg-gradient-to-r from-white/95 to-white/75 px-6 py-8 rounded-lg shadow-xl shadow-indigo-900/10 text-indigo-900">
+                <h3 class="font-bold text-center text-2xl">7 days of consulting</h3>
 
-        <ul class="grid gap-2 mt-4">
-            <li class="flex items-center gap-2">
-                <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 opacity-75 w-5 h-5" />
-                <span>Any question answered</span>
-            </li>
+                <ul class="grid gap-2 mt-8">
+                    <li class="flex items-center gap-2">
+                        <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 text-emerald-500 w-5 h-5" />
+                        <span><strong class="font-semibold">I answer any question</strong> you have</span>
+                    </li>
 
-            <li class="flex items-center gap-2">
-                <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 opacity-75 w-5 h-5" />
-                <span>I <strong class="font-semibold text-white">pair program</strong> with your developers</span>
-            </li>
+                    <li class="flex items-center gap-2">
+                        <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 text-emerald-500 w-5 h-5" />
+                        <span><strong class="font-semibold">I pair program</strong> with your developers</span>
+                    </li>
 
-            <li class="flex items-center gap-2">
-                <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 opacity-75 w-5 h-5" />
-                <span>See which best practices can <strong class="font-semibold text-white">boost the productivity of new hires</strong></span>
-            </li>
+                    <li class="flex items-center gap-2">
+                        <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 text-emerald-500 w-5 h-5" />
+                        <span><strong class="font-semibold">I complete any feature or bug fix</strong> you need done</span>
+                    </li>
 
-            <li class="flex items-center gap-2">
-                <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 opacity-75 w-5 h-5" />
-                <span>Learn how you can <strong class="font-semibold text-white">prevent regressions</strong></span>
-            </li>
+                    <li class="flex items-center gap-2">
+                        <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 text-emerald-500 w-5 h-5" />
+                        <span><strong class="font-semibold">I fix performance issues</strong> that make you lose sales</span>
+                    </li>
 
-            <li class="flex items-center gap-2">
-                <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 opacity-75 w-5 h-5" />
-                <span>Finally, we set up <strong class="font-semibold text-white">a tool that alerts you when your app fails in production</strong></span>
-            </li>
-        </ul>
+                    <li class="flex items-center gap-2">
+                        <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 text-emerald-500 w-5 h-5" />
+                        <span><strong class="font-semibold">I enforce best practices</strong> to make sure new hires will be productive from day one</span>
+                    </li>
 
-        <a
-            href="https://savvycal.com/benjamincrozat/3-hrs-consulting"
-            class="bg-gradient-to-b from-white to-indigo-50 inline-flex items-center justify-center gap-4 font-normal sm:font-light mt-10 px-8 py-4 rounded shadow-xl shadow-indigo-900/[.15] text-base text-center text-indigo-500 w-full sm:w-auto"
-            @click="window.fathom?.trackGoal('BEYT9BXR', 0)"
-        >
-            <span class="flex items-center gap-2">
-                <span>Book <span class="font-bold">3 hours</span> for</span>
+                    <li class="flex items-center gap-2">
+                        <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 text-emerald-500 w-5 h-5" />
+                        <span>I make sure to <strong class="font-semibold">prevent as many regressions as possible</strong> in the long run</span>
+                    </li>
 
-                <span class="leading-none translate-y-px">
-                    <span class="font-bold">$500</span>
-                    <span class="block line-through opacity-75 text-xs">$600</span>
-                </span>
-            </span>
+                    <li class="flex items-center gap-2">
+                        <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 text-emerald-500 w-5 h-5" />
+                        <span>I set up <strong class="font-semibold">a tool that alerts you when your app fails in production</strong></span>
+                    </li>
+                </ul>
 
-            <span class="bg-indigo-100 font-bold px-3 py-1 rounded-full text-indigo-900/75 text-xs">
-                17% off
-            </span>
-        </a>
+                <a
+                    href="https://savvycal.com/benjamincrozat/7-days-consulting"
+                    class="bg-gradient-to-r from-indigo-300 to-indigo-400 inline-flex items-center justify-center gap-4 font-normal sm:font-light mt-8 px-8 py-4 rounded shadow-lg shadow-indigo-900/[.15] text-base text-center text-white w-full"
+                    @click="window.fathom?.trackGoal('BEYT9BXR', 0)"
+                >
+                    <span class="flex items-center gap-2">
+                        <span>Book <span class="font-bold">7 days</span> for</span>
 
-        <p class="mt-4 text-center sm:text-left">
-            Or start with <a href="https://savvycal.com/benjamincrozat/1-hr-consulting" class="border-b border-white/50 font-semibold text-white">1 hour for $200</a>.
-        </p>
+                        <span class="leading-none translate-y-px">
+                            <span class="font-bold">$5000</span>
+                            <span class="block line-through opacity-75 text-xs">$7000</span>
+                        </span>
+                    </span>
 
-        <p class="border-t border-indigo-400 font-semibold mt-4 pt-4 text-center sm:text-left text-indigo-200 text-xs">
-            100% money-back guarantee if I can't help you.
-        </p>
+                    <span class="bg-indigo-100 font-bold px-3 py-1 rounded-full text-indigo-900/75 text-xs">
+                        20% off
+                    </span>
+                </a>
 
-        <div class="mt-16">
+                <p class="mt-4 text-center">
+                    Or start with <a href="https://savvycal.com/benjamincrozat/3-days-consulting" class="border-b border-indigo-400/50 font-semibold text-indigo-400">3 days for $3000</a>.
+                </p>
+            </div>
+
+            <div class="border border-white/20 p-4 rounded-lg">
+                <h3 class="font-bold text-center text-lg">3 hours of consulting</h3>
+
+                <ul class="grid gap-2 mt-4">
+                    <li class="flex items-center gap-2">
+                        <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 text-indigo-200 w-5 h-5" />
+                        <span><strong class="font-semibold">I answer any question</strong> you have</span>
+                    </li>
+
+                    <li class="flex items-center gap-2">
+                        <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 text-indigo-200 w-5 h-5" />
+                        <span>I <strong class="font-semibold">pair program</strong> with your developers</span>
+                    </li>
+
+                    <li class="flex items-center gap-2">
+                        <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 text-indigo-200 w-5 h-5" />
+                        <span><strong class="font-semibold">I diagnose performance issues</strong> that make you lose sales</span>
+                    </li>
+
+                    <li class="flex items-center gap-2">
+                        <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 text-indigo-200 w-5 h-5" />
+                        <span>I show you how best practices can <strong class="font-semibold">boost the productivity of new hires</strong></span>
+                    </li>
+
+                    <li class="flex items-center gap-2">
+                        <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 text-indigo-200 w-5 h-5" />
+                        <span>I show you how you can <strong class="font-semibold">prevent regressions</strong></span>
+                    </li>
+
+                    <li class="flex items-center gap-2">
+                        <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 text-indigo-200 w-5 h-5" />
+                        <span>I help setting up <strong class="font-semibold">a tool that alerts you when your app fails in production</strong></span>
+                    </li>
+                </ul>
+
+                <a
+                    href="https://savvycal.com/benjamincrozat/3-hrs-consulting"
+                    class="bg-indigo-900/50 inline-flex items-center justify-center gap-4 font-normal sm:font-light mt-8 px-8 py-4 rounded text-base text-center text-white w-full"
+                    @click="window.fathom?.trackGoal('BEYT9BXR', 0)"
+                >
+                    <span class="flex items-center gap-2">
+                        <span>Book <span class="font-bold">3 hours</span> for</span>
+
+                        <span class="leading-none translate-y-px">
+                            <span class="font-bold">$500</span>
+                            <span class="block line-through opacity-75 text-xs">$600</span>
+                        </span>
+                    </span>
+
+                    <span class="bg-indigo-900/50 font-bold px-3 py-1 rounded-full text-indigo-100 text-xs">
+                        17% off
+                    </span>
+                </a>
+
+                <div class="mt-4 text-center">
+                    <p class="text-indigo-200">
+                        Or start with <a href="https://savvycal.com/benjamincrozat/1-hr-consulting" class="border-b border-white/30 font-semibold text-white">1 hour for $200</a>.
+                    </p>
+
+                    <p class="border-t border-indigo-400 mt-4 pt-4 text-indigo-200 text-xs">
+                        100% money-back guarantee if I can't help you.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-12">
             <h3 class="font-bold text-xl text-center">
                 These companies trusted me
             </h3>
@@ -136,7 +211,7 @@
                 </li>
             </ul>
         </div>
-    </x-consulting.section>
+    </div>
 
     <div class="bg-indigo-50 text-indigo-900">
         <section
@@ -258,25 +333,12 @@
 
             <div class="mt-16 text-center">
                 <a
-                    href="https://savvycal.com/benjamincrozat/3-hrs-consulting"
-                    class="bg-gradient-to-b from-emerald-400 to-emerald-500 inline-flex items-center justify-center gap-4 font-normal sm:font-light px-8 py-4 rounded shadow-xl shadow-emerald-600/[.15] text-base text-center text-emerald-50 w-full sm:w-auto"
+                    href="#"
+                    class="bg-gradient-to-b from-emerald-400 to-emerald-500 px-8 py-4 rounded shadow-xl shadow-emerald-600/[.15] text-base text-center text-emerald-50 w-full sm:w-auto"
                     @click="window.fathom?.trackGoal('BCXCNHU1', 0)"
                 >
-                    <span class="flex items-center gap-2">
-                        <span>Book <span class="font-bold">3 hours</span> for</span>
-
-                        <span class="leading-none translate-y-px">
-                            <span class="font-bold">$500</span>
-                            <span class="block line-through opacity-75 text-xs">$600</span>
-                        </span>
-                    </span>
-
-                    <span class="bg-gradient-to-b from-emerald-900/50 to-emerald-800/50 font-bold px-3 py-1 rounded-full text-emerald-100 text-xs">17% off</span>
+                    Convinced? <strong class="font-bold">Book me.</strong>
                 </a>
-
-                <p class="mt-4">
-                    Or start with <a href="https://savvycal.com/benjamincrozat/1-hr-consulting" class="font-bold text-emerald-600 underline">1 hour for $200</a>.
-                </p>
             </div>
         </section>
     </div>
