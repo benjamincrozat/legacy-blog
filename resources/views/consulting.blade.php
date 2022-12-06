@@ -456,11 +456,10 @@
         {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
-            "itemListElement": [
-            {
+            "itemListElement": [{
                 "@type": "ListItem",
                 "position": 1,
-                "name": "Consulting",
+                "name": "Consulting"
             }]
         }
     </script>
