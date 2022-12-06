@@ -69,11 +69,21 @@
 
         <a
             href="https://savvycal.com/benjamincrozat/3-hrs-consulting"
-            class="bg-gradient-to-b from-white to-indigo-50 inline-flex items-center justify-center gap-2 font-normal sm:font-light mt-10 px-8 py-4 rounded shadow-xl shadow-indigo-900/[.15] text-base text-center text-indigo-500 w-full sm:w-auto"
+            class="bg-gradient-to-b from-white to-indigo-50 inline-flex items-center justify-center gap-4 font-normal sm:font-light mt-10 px-8 py-4 rounded shadow-xl shadow-indigo-900/[.15] text-base text-center text-indigo-500 w-full sm:w-auto"
             @click="window.fathom?.trackGoal('BEYT9BXR', 0)"
         >
-            <span>Book <span class="font-bold">3 hours</span> for <span class="font-bold">$500</span></span>
-            <span class="bg-indigo-100 font-bold px-3 py-1 rounded-full text-indigo-900/75 text-xs">17% off</span>
+            <span class="flex items-center gap-2">
+                <span>Book <span class="font-bold">3 hours</span> for</span>
+
+                <span class="leading-none translate-y-px">
+                    <span class="font-bold">$500</span>
+                    <span class="block line-through opacity-75 text-xs">$600</span>
+                </span>
+            </span>
+
+            <span class="bg-indigo-100 font-bold px-3 py-1 rounded-full text-indigo-900/75 text-xs">
+                17% off
+            </span>
         </a>
 
         <p class="mt-4 text-center sm:text-left">
@@ -89,38 +99,38 @@
                 These companies trusted me
             </h3>
 
-            <ul class="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 mt-8">
+            <ul class="flex flex-wrap items-center justify-center gap-x-8 md:gap-x-12 gap-y-4 md:gap-y-8 mt-4">
                 <li>
                     <a href="https://www.doctissimo.fr" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
-                        <x-icon-doctissimo class="fill-current h-6 text-white" />
+                        <x-icon-doctissimo class="fill-current h-3 md:h-5 text-white" />
                         <span class="sr-only">Doctissimo</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="https://www.iconosquare.com" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
-                        <x-icon-iconosquare class="fill-current h-8 text-white" />
+                        <x-icon-iconosquare class="fill-current h-6 md:h-8 text-white" />
                         <span class="sr-only">Iconosquare</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="https://jetfly.com" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
-                        <x-icon-jetfly class="fill-current h-12 text-white" />
+                        <x-icon-jetfly class="fill-current h-8 md:h-10 text-white" />
                         <span class="sr-only">Jetfly</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="https://mym.fans" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
-                        <x-icon-mym class="fill-current h-6 text-white" />
+                        <x-icon-mym class="fill-current h-4 md:h-6 text-white" />
                         <span class="sr-only">MYM</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="https://qwant.com" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
-                        <x-icon-qwant class="fill-current w-16 text-white" />
+                        <x-icon-qwant class="fill-current w-12 md:w-16 text-white" />
                         <span class="sr-only">Qwant</span>
                     </a>
                 </li>
@@ -249,10 +259,18 @@
             <div class="mt-16 text-center">
                 <a
                     href="https://savvycal.com/benjamincrozat/3-hrs-consulting"
-                    class="bg-gradient-to-b from-emerald-400 to-emerald-500 inline-flex items-center justify-center gap-2 font-normal sm:font-light px-8 py-4 rounded shadow-xl shadow-emerald-600/[.15] text-base text-center text-emerald-50 w-full sm:w-auto"
+                    class="bg-gradient-to-b from-emerald-400 to-emerald-500 inline-flex items-center justify-center gap-4 font-normal sm:font-light px-8 py-4 rounded shadow-xl shadow-emerald-600/[.15] text-base text-center text-emerald-50 w-full sm:w-auto"
                     @click="window.fathom?.trackGoal('BCXCNHU1', 0)"
                 >
-                    <span>Book <span class="font-bold text-white">3 hours</span> for <span class="font-bold text-white">$500</span></span>
+                    <span class="flex items-center gap-2">
+                        <span>Book <span class="font-bold">3 hours</span> for</span>
+
+                        <span class="leading-none translate-y-px">
+                            <span class="font-bold">$500</span>
+                            <span class="block line-through opacity-75 text-xs">$600</span>
+                        </span>
+                    </span>
+
                     <span class="bg-gradient-to-b from-emerald-900/50 to-emerald-800/50 font-bold px-3 py-1 rounded-full text-emerald-100 text-xs">17% off</span>
                 </a>
 
