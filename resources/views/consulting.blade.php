@@ -86,7 +86,7 @@
 
                     <a
                         href="https://savvycal.com/benjamincrozat/7-days-consulting"
-                        class="bg-gradient-to-r from-emerald-400 to-emerald-500 inline-flex items-center justify-center gap-4 font-normal sm:font-light mt-8 px-8 py-4 rounded shadow-lg shadow-emerald-900/[.15] text-base text-center text-white w-full"
+                        class="bg-gradient-to-r from-emerald-400 to-emerald-500 inline-flex items-center justify-center gap-4 font-normal sm:font-light mt-8 px-8 py-4 rounded shadow-lg shadow-emerald-600/[.15] text-base text-center text-white w-full"
                         @click="window.fathom?.trackGoal('BEYT9BXR', 0)"
                     >
                         <span class="flex items-center gap-2">
