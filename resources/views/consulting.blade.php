@@ -402,4 +402,45 @@
     <div id="about" class="bg-indigo-500 flex-grow">
         <x-footer class="text-indigo-100" />
     </div>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "When is my credit card charged?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Immediately. You pay upfront, then I do the work."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can I get my money back if something goes wrong?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Of course. If I'm unavailable, you're immediately refunded. If I see I can't help you with your project because I don't have sufficient experience, you will also be refunded."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "My developers are busy. Can you do the work if I book you for 3 hours?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Unfortunately, 3 hours is too short to do anything meaningful. I can only help you if you book me for at least 3 days."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "I want to book you for a different period of time. Is that possible?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "You can book me for 7 days, 3 days, 3 hours or 1 hour. You cannot book me for something in between these options, but you can cumulate if you need me for longer."
+                    }
+                }
+            ]
+        }
+    </script>
 </x-app>
