@@ -401,25 +401,25 @@
                 Frequently Asked Questions (FAQ)
             </h2>
 
-            <div class="mt-8">
+            <div class="grid gap-8 mt-8">
                 <details>
-                    <summary>When is my credit card charged?</summary>
-                    <p>Immediately. You pay upfront, then I do the work.</p>
+                    <summary class="font-bold text-xl">When is my credit card charged?</summary>
+                    <p class="mt-4">Immediately. You pay upfront, then I do the work.</p>
                 </details>
 
                 <details>
-                    <summary>Can I get my money back if something goes wrong?</summary>
-                    <p>If I'm unavailable, you're immediately refunded. If I see I can't help you with your project because I don't have sufficient experience, you will also be refunded.</p>
+                    <summary class="font-bold text-xl">Can I get my money back if something goes wrong?</summary>
+                    <p class="mt-4">If I'm unavailable, you're immediately refunded. If I see I can't help you with your project because I don't have sufficient experience, you will also be refunded.</p>
                 </details>
 
                 <details>
-                    <summary>My developers are busy. Can you do the work if I book you for 3 hours?</summary>
-                    <p>Unfortunately, 3 hours is too short to do anything meaningful. I can only help you if you book me for at least 3 days.</p>
+                    <summary class="font-bold text-xl">My developers are busy. Can you fix everything if I book you for 3 hours?</summary>
+                    <p class="mt-4">Unfortunately, 3 hours is too short to do anything meaningful. I can only do it if you book me for at least 3 days.</p>
                 </details>
 
                 <details>
-                    <summary>I want to book you for a different period of time. Is that possible?</summary>
-                    <p>You can book me for 7 days, 3 days, 3 hours or 1 hour. You cannot book me for something in between these options, but you can cumulate if you need me for longer.</p>
+                    <summary class="font-bold text-xl">I want to book you for a different period of time. Is that possible?</summary>
+                    <p class="mt-4">You can book me for 7 days, 3 days, 3 hours or 1 hour. You cannot book me for something in between these options, but you can cumulate if you need me for longer.</p>
                 </details>
             </div>
         </section>
