@@ -402,24 +402,48 @@
             </h2>
 
             <div class="grid gap-8 mt-8">
-                <details open>
-                    <summary class="font-bold text-xl">When is my credit card charged?</summary>
-                    <p class="mt-4">Your credit card will be charged immediately after you schedule our call.</p>
+                <details class="group" open>
+                    <summary class="flex items-center gap-2 font-bold text-xl">
+                        <x-heroicon-o-chevron-right class="-translate-y-[2px] group-open:-translate-y-px inline group-open:rotate-90 transition w-5 h-5" />
+                        When is my credit card charged?
+                    </summary>
+
+                    <p class="mt-2">
+                        Your credit card will be charged immediately after you schedule our call.
+                    </p>
                 </details>
 
-                <details>
-                    <summary class="font-bold text-xl">Can I get my money back if something goes wrong?</summary>
-                    <p class="mt-4">If I'm unavailable, you're immediately refunded. If I see I can't help you with your project because I don't have sufficient experience, you will also be refunded.</p>
+                <details class="group">
+                    <summary class="font-bold text-xl">
+                        <x-heroicon-o-chevron-right class="-translate-y-[2px] group-open:-translate-y-px inline group-open:rotate-90 transition w-5 h-5" />
+                        Can I get my money back if something goes wrong?
+                    </summary>
+
+                    <p class="mt-2">
+                        If I'm unavailable, you're immediately refunded. If I see I can't help you with your project because I don't have sufficient experience, you will also be refunded.
+                    </p>
                 </details>
 
-                <details>
-                    <summary class="font-bold text-xl">My developers are busy. Can you fix everything if I book you for 3 hours?</summary>
-                    <p class="mt-4">Unfortunately, 3 hours is too short to do anything meaningful. I can only do it if you book me for at least 3 days.</p>
+                <details class="group">
+                    <summary class="font-bold text-xl">
+                        <x-heroicon-o-chevron-right class="-translate-y-[2px] group-open:-translate-y-px inline group-open:rotate-90 transition w-5 h-5" />
+                        My developers are busy. Can you fix everything if I book you for 3 hours?
+                    </summary>
+
+                    <p class="mt-2">
+                        Unfortunately, 3 hours is too short to do anything meaningful. I can only do it if you book me for at least 3 days.
+                    </p>
                 </details>
 
-                <details>
-                    <summary class="font-bold text-xl">I want to book you for a different period of time. Is that possible?</summary>
-                    <p class="mt-4">You can book me for 7 days, 3 days, 3 hours or 1 hour. You cannot book me for something in between these options, but you can cumulate if you need me for longer.</p>
+                <details class="group">
+                    <summary class="font-bold text-xl">
+                        <x-heroicon-o-chevron-right class="-translate-y-[2px] group-open:-translate-y-px inline group-open:rotate-90 transition w-5 h-5" />
+                        I want to book you for a different period of time. Is that possible?
+                    </summary>
+
+                    <p class="mt-2">
+                        You can book me for 7 days, 3 days, 3 hours or 1 hour. You cannot book me for something in between these options, but you can cumulate if you need me for longer.
+                    </p>
                 </details>
             </div>
         </section>
