@@ -382,6 +382,39 @@
             x-intersect="window.fathom?.trackGoal('Q0JLQGBO', 0)"
         >
             <h2 class="font-semibold text-xl sm:text-3xl text-center">
+                Frequently Asked Questions (FAQ)
+            </h2>
+
+            <div class="mt-8">
+                <details>
+                    <summary>When is my credit card charged?</summary>
+                    <p>Immediately. You pay upfront, then I do the work.</p>
+                </details>
+
+                <details>
+                    <summary>Can I get my money back if something goes wrong?</summary>
+                    <p>If I'm unavailable, you're immediately refunded. If I see I can't help you with your project because I don't have sufficient experience, you will also be refunded.</p>
+                </details>
+
+                <details>
+                    <summary>My developers are busy. Can you do the work if I book you for 3 hours?</summary>
+                    <p>Unfortunately, 3 hours is too short to do anything meaningful. I can only help you if you book me for at least 3 days.</p>
+                </details>
+
+                <details>
+                    <summary>I want to book you for a different period of time. Is that possible?</summary>
+                    <p>You can book me for 7 days, 3 days, 3 hours or 1 hour. You cannot book me for something in between these options, but you can cumulate if you need me for longer.</p>
+                </details>
+            </div>
+        </section>
+    </div>
+
+    <div class="bg-indigo-50 text-indigo-900">
+        <section
+            class="container py-8 sm:py-16"
+            x-intersect="window.fathom?.trackGoal('Q0JLQGBO', 0)"
+        >
+            <h2 class="font-semibold text-xl sm:text-3xl text-center">
                 About me
             </h2>
 
@@ -402,6 +435,19 @@
     <div id="about" class="bg-indigo-500 flex-grow">
         <x-footer class="text-indigo-100" />
     </div>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Consulting",
+            }]
+        }
+    </script>
 
     <script type="application/ld+json">
         {
