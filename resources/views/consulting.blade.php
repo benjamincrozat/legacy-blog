@@ -279,6 +279,22 @@
                 </li>
 
                 <li>
+                    <x-icon-speedometer class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
+
+                    <p class="font-bold mt-4 text-indigo-400 text-xl">
+                        Performances
+                    </p>
+
+                    <p class="mt-4">
+                        Good performances on any web application are critical. Users won't wait forever and could leave for your competitors.
+                    </p>
+
+                    <p class="mt-4">
+                        I can diagnose and fix major bottlenecks in your codebase.
+                    </p>
+                </li>
+
+                <li>
                     <x-icon-automated-testing class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
 
                     <p class="font-bold mt-4 text-indigo-400 text-xl">
