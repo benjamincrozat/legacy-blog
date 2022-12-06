@@ -130,7 +130,7 @@
 
                 <li>
                     <a href="https://qwant.com" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
-                        <x-icon-qwant class="fill-current w-12 md:w-16 text-white" />
+                        <x-icon-qwant class="fill-current w-12 md:w-14 text-white" />
                         <span class="sr-only">Qwant</span>
                     </a>
                 </li>
