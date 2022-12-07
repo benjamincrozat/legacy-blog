@@ -16,20 +16,28 @@ class Kernel extends ConsoleKernel
     {
         $schedule
             ->command(ConvertKitFetchCommand::class)
-            ->hourly();
+            ->hourly()
+            ->thenPing('http://beats.envoyer.io/heartbeat/0OF0imcmjbELTUR');
 
         $schedule
             ->command(FathomFetchCommand::class)
-            ->hourly();
+            ->hourly()
+            ->thenPing('http://beats.envoyer.io/heartbeat/317ooOw84HNC2XI');
 
         $schedule
             ->command(SitemapGenerateCommand::class)
             ->daily()
             ->thenPing('http://beats.envoyer.io/heartbeat/wd65Mos3cOmSZS0');
 
-        $schedule->command(CleanupCommand::class)->daily()->at('01:00');
+        $schedule->command(CleanupCommand::class)
+            ->daily()
+            ->at('01:00')
+            ->thenPing('http://beats.envoyer.io/heartbeat/iUQp12hbGnbfa5p');
 
-        $schedule->command(BackupCommand::class)->daily()->at('01:30');
+        $schedule->command(BackupCommand::class)
+            ->daily()
+            ->at('01:30')
+            ->thenPing('http://beats.envoyer.io/heartbeat/XEc4v1JxeZ7NX0O');
     }
 
     protected function commands() : void
