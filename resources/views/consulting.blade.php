@@ -103,9 +103,15 @@
                         </span>
                     </a>
 
-                    <p class="mt-4 text-center">
-                        Or start with <a href="https://savvycal.com/benjamincrozat/3-days-consulting" class="border-b border-emerald-600/30 font-semibold text-emerald-600">3 days for $2250</a>.
-                    </p>
+                    <div class="mt-4 text-center">
+                        <p>
+                            Or start with <a href="https://savvycal.com/benjamincrozat/3-days-consulting" class="border-b border-emerald-600/30 font-semibold text-emerald-600">3 days for $2250</a>.
+                        </p>
+
+                        <p class="border-t border-indigo-200/50 mt-4 pt-4 text-xs">
+                            100% money-back guarantee if I can't help you.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="border border-white/20 p-4 rounded-lg">
