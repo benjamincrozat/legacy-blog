@@ -158,7 +158,7 @@
                         </span>
 
                         <span class="bg-indigo-900/50 font-bold px-3 py-1 rounded-full text-indigo-100 text-xs">
-                            17% off
+                            $100 off
                         </span>
                     </a>
 
