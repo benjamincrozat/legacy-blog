@@ -1,5 +1,5 @@
 <x-app
-    title="A Laravel developer for hire: Benjamin Crozat"
+    title="Laravel developer for hire: Benjamin Crozat"
     description="Book an expert Laravel developer, TODAY! Let me guide your team toward reliability and maintenability."
 >
     <div class="bg-indigo-500 py-4 text-center text-indigo-50">
