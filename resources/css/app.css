@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 summary {
-    @apply hidden;
+    @apply list-none;
 }
 
 summary::-webkit-details-marker {
