@@ -94,17 +94,17 @@
 
                             <span class="leading-none translate-y-px">
                                 <span class="font-bold">$5000</span>
-                                <span class="block line-through opacity-75 text-xs">$7000</span>
+                                <span class="block line-through opacity-75 text-xs">$5250</span>
                             </span>
                         </span>
 
                         <span class="bg-emerald-200 font-bold px-3 py-1 rounded-full text-emerald-700 text-xs">
-                            20% off
+                            $250 off
                         </span>
                     </a>
 
                     <p class="mt-4 text-center">
-                        Or start with <a href="https://savvycal.com/benjamincrozat/3-days-consulting" class="border-b border-emerald-600/30 font-semibold text-emerald-600">3 days for $3000</a>.
+                        Or start with <a href="https://savvycal.com/benjamincrozat/3-days-consulting" class="border-b border-emerald-600/30 font-semibold text-emerald-600">3 days for $2250</a>.
                     </p>
                 </div>
 
