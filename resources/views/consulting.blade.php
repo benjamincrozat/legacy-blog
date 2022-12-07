@@ -539,6 +539,14 @@
                         "@type": "Answer",
                         "text": "You can book me for 7 days, 3 days, 3 hours or 1 hour. You cannot book me for something in between these options, but you can cumulate if you need me for longer."
                     }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Your page says "Laravel developer for hire". Would you be interested in a full-time job?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "I only work as a freelancer. I'm not interested in a full-time job."
+                    }
                 }
             ]
         }
