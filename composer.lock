@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "627188afadf4f3d2031ec0ee0c2357db",
+    "content-hash": "63f15c6c5cd82edc5bc819ddad56db9c",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -79,70 +79,6 @@
                 "source": "https://github.com/algolia/algoliasearch-client-php/tree/3.3.2"
             },
             "time": "2022-09-22T08:21:13+00:00"
-        },
-        {
-            "name": "benjamincrozat/laravel-dropbox-driver",
-            "version": "4.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/benjamincrozat/laravel-dropbox-driver.git",
-                "reference": "929a2634feb095d9ff7c6649071aece01ccade9a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/benjamincrozat/laravel-dropbox-driver/zipball/929a2634feb095d9ff7c6649071aece01ccade9a",
-                "reference": "929a2634feb095d9ff7c6649071aece01ccade9a",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "^5.0|^6.0|^7.0|^8.0|^9.0",
-                "php": "^5.6|^7.0|^8.0|^8.1",
-                "spatie/flysystem-dropbox": "^1.2|^2.0"
-            },
-            "require-dev": {
-                "nunomaduro/collision": "^6.0",
-                "orchestra/testbench": "^5.0|^6.0|^7.0",
-                "pestphp/pest": "^1.21",
-                "pestphp/pest-plugin-laravel": "^1.1",
-                "phpunit/phpunit": "^9.5"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "BenjaminCrozat\\Laravel\\Dropbox\\DropboxServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "BenjaminCrozat\\Laravel\\Dropbox\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "WTFPL"
-            ],
-            "authors": [
-                {
-                    "name": "Benjamin Crozat",
-                    "email": "hello@benjamincrozat.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Dropbox storage driver for Laravel.",
-            "homepage": "https://github.com/benjamincrozat/laravel-dropbox-driver",
-            "keywords": [
-                "driver",
-                "dropbox",
-                "laravel",
-                "storage"
-            ],
-            "support": {
-                "issues": "https://github.com/benjamincrozat/laravel-dropbox-driver/issues",
-                "source": "https://github.com/benjamincrozat/laravel-dropbox-driver/tree/4.0.1"
-            },
-            "time": "2022-12-07T15:45:46+00:00"
         },
         {
             "name": "blade-ui-kit/blade-heroicons",
