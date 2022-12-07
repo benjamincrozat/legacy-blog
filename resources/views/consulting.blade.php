@@ -1,6 +1,6 @@
 <x-app
     title="Laravel developer for hire: Benjamin Crozat"
-    description="Book an expert Laravel developer, TODAY! Let me guide your team toward reliability and maintenability."
+    description="Book an expert Laravel developer, TODAY. Benjamin Crozat is a Laravel developer available for hire."
 >
     <div class="bg-indigo-500 py-4 text-center text-indigo-50">
         <a href="{{ route('home') }}">
