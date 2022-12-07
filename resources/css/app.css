@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+summary {
+    @apply hidden;
+}
+
 summary::-webkit-details-marker {
     @apply hidden;
 }
