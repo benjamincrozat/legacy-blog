@@ -9,7 +9,7 @@ use App\Http\Controllers\RedirectToAffiliateController;
 
 Route::get('/', HomeController::class)->name('home');
 
-Route::get('/consulting', ConsultingController::class)->name('consulting');
+Route::get('/laravel-developer-for-hire', ConsultingController::class)->name('consulting');
 
 Route::post('/subscribe', SubscribeController::class)->name('subscribe');
 
