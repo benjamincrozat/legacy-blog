@@ -5,7 +5,7 @@
         </span>
 
         <span class="block opacity-75 text-xs tracking-widest uppercase">
-            The web developer life
+            The art of crafting websites
         </span>
     </a>
 

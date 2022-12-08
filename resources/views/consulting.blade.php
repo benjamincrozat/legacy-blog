@@ -394,58 +394,58 @@
                 Frequently Asked Questions (FAQ)
             </h2>
 
-            <div class="grid gap-8 mt-8">
+            <div class="border border-indigo-100 grid mt-8 rounded">
                 <details class="group" open>
-                    <summary class="flex items-center gap-2 font-bold text-xl">
-                        <x-heroicon-o-chevron-right class="-translate-y-[2px] group-open:-translate-y-px inline group-open:rotate-90 transition w-5 h-5" />
+                    <summary class="border-b border-indigo-100 flex items-center gap-2 font-semibold p-4">
+                        <x-heroicon-o-chevron-right class="-translate-y-px group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
                         When is my credit card charged?
                     </summary>
 
-                    <p class="mt-2">
-                        Your credit card will be charged immediately after you schedule our call.
+                    <p class="border-b border-indigo-100 p-4">
+                        Your credit card will be charged immediately after you schedule a consulting call.
                     </p>
                 </details>
 
                 <details class="group">
-                    <summary class="font-bold text-xl">
-                        <x-heroicon-o-chevron-right class="-translate-y-[2px] group-open:-translate-y-px inline group-open:rotate-90 transition w-5 h-5" />
+                    <summary class="border-b border-indigo-100 flex items-center gap-2 font-semibold p-4">
+                        <x-heroicon-o-chevron-right class="-translate-y-px group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
                         Can I get my money back if something goes wrong?
                     </summary>
 
-                    <p class="mt-2">
-                        If I'm unavailable, you're immediately refunded. If I see I can't help you with your project because I don't have sufficient experience, you will also be refunded.
+                    <p class="border-b border-indigo-100 p-4">
+                        If I'm unavailable and we can't reschedule, you're refunded. If you don't show up to the call, you're refunded. If I see I can't help you with your project because I don't have sufficient experience, you will also be refunded.
                     </p>
                 </details>
 
                 <details class="group">
-                    <summary class="font-bold text-xl">
-                        <x-heroicon-o-chevron-right class="-translate-y-[2px] group-open:-translate-y-px inline group-open:rotate-90 transition w-5 h-5" />
+                    <summary class="border-b border-indigo-100 flex items-center gap-2 font-semibold p-4">
+                        <x-heroicon-o-chevron-right class="-translate-y-px group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
                         My developers are busy. Can you fix everything if I book you for 3 hours?
                     </summary>
 
-                    <p class="mt-2">
+                    <p class="border-b border-indigo-100 p-4">
                         Unfortunately, 3 hours is too short to do anything meaningful. I can only do it if you book me for at least 3 days.
                     </p>
                 </details>
 
                 <details class="group">
-                    <summary class="font-bold text-xl">
-                        <x-heroicon-o-chevron-right class="-translate-y-[2px] group-open:-translate-y-px inline group-open:rotate-90 transition w-5 h-5" />
+                    <summary class="border-b border-indigo-100 flex items-center gap-2 font-semibold p-4">
+                        <x-heroicon-o-chevron-right class="-translate-y-px group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
                         I want to book you for a different period of time. Is that possible?
                     </summary>
 
-                    <p class="mt-2">
+                    <p class="border-b border-indigo-100 p-4">
                         You can book me for 7 days, 3 days, 3 hours or 1 hour. You cannot book me for something in between these options, but you can cumulate if you need me for longer.
                     </p>
                 </details>
 
                 <details class="group">
-                    <summary class="font-bold text-xl">
-                        <x-heroicon-o-chevron-right class="-translate-y-[2px] group-open:-translate-y-px inline group-open:rotate-90 transition w-5 h-5" />
+                    <summary class="flex items-center gap-2 font-bold p-4">
+                        <x-heroicon-o-chevron-right class="-translate-y-px group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
                         Your page says "Laravel developer for hire". Would you be interested in a full-time job?
                     </summary>
 
-                    <p class="mt-2">
+                    <p class="border-t border-indigo-100 p-4">
                         I only work as a freelancer. I'm not interested in a full-time job.
                     </p>
                 </details>

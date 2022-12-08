@@ -1,9 +1,11 @@
 <x-app
-    title="The web developer life of Benjamin Crozat"
-    description="Have you ever had a question about the art of crafting web applications? This is the best blog to find your answer."
+    title="The blog of Benjamin Crozat: PHP, Laravel and its ecosystem"
+    description="Have you ever had a question about the art of crafting web applications with PHP, Laravel and its ecosystem? This is the best blog to find your answer."
     class="dark:bg-gray-900 text-gray-600 dark:text-gray-300"
 >
     <x-nav class="container mt-4 md:mt-8" />
+
+    <h1 class="hidden">The blog of Benjamin Crozat: PHP, Laravel and its ecosystem</h1>
 
     <x-newsletter class="container mt-16">
         <p class="mt-8">
@@ -21,9 +23,9 @@
 
     @if ($pins->isNotEmpty())
         <section class="md:container md:max-w-[1024px] mt-16">
-            <h2 class="font-bold px-4 md:px-0 text-center text-xl">
+            <div class="font-bold px-4 md:px-0 text-center text-xl">
                 Pinned articles
-            </h2>
+            </div>
 
             <div class="flex md:grid md:grid-cols-2 gap-2 mt-8 px-4 md:px-0 overflow-x-scroll md:overflow-x-visible snap-x md:snap-none snap-mandatory">
                 @foreach ($pins as $pin)
@@ -34,9 +36,9 @@
     @endif
 
     <section class="container max-w-[1024px] mt-16">
-        <h2 class="font-bold px-4 sm:px-0 text-center text-xl">
+        <div class="font-bold px-4 sm:px-0 text-center text-xl">
             Latest articles
-        </h2>
+        </div>
 
         @if ($posts->isNotEmpty())
             <div class="grid md:grid-cols-2 gap-4 mt-8">
