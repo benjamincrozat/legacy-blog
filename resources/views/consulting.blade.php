@@ -2,7 +2,7 @@
     title="Laravel developer for hire: Benjamin Crozat"
     description="Book an expert Laravel developer, TODAY. Benjamin Crozat is a Laravel developer available for hire."
 >
-    <div class="bg-indigo-500 py-4 text-center text-indigo-50">
+    <div class="bg-indigo-500 py-6 text-center text-indigo-50">
         <a href="{{ route('home') }}">
             <span class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase">
                 Benjamin Crozat
@@ -12,6 +12,10 @@
                 Full-stack Laravel developer
             </span>
         </a>
+
+        <span class="bg-gradient-to-r from-yellow-400 to-yellow-500 font-bold inline-block mt-4 px-3 py-1 rounded-full shadow shadow-indigo-900/[.15] text-yellow-800 text-xs">
+            10+ years of experience
+        </span>
     </div>
 
     <div class="bg-gradient-to-r from-indigo-500 to-indigo-400 pb-16 text-indigo-50">
@@ -26,15 +30,9 @@
             />
 
             <div class="order-1 sm:text-xl">
-                <div>
-                    <span class="bg-gradient-to-r from-yellow-400 to-yellow-500 font-bold px-3 py-1 rounded-full shadow shadow-indigo-900/[.15] text-yellow-800 text-xs">
-                        10+ years of experience
-                    </span>
-
-                    <h1 class="mt-2 text-white">
-                        Laravel developer for hire: Benjamin Crozat
-                    </h1>
-                </div>
+                <h1 class="mt-2 text-white">
+                    Laravel developer for hire: Benjamin Crozat
+                </h1>
             </div>
         </div>
 
