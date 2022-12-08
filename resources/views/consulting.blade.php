@@ -181,6 +181,18 @@
             </div>
         </div>
 
+        <div class="container mt-16">
+            <div class="border border-white/20 flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-between gap-4 p-4 pb-5 sm:p-6 rounded">
+                <p>
+                    <strong class="font-bold">Need more information</strong>? Let's <strong class="font-bold">jump into a quick call</strong> in <strong class="font-bold">English or French</strong>.
+                </p>
+
+                <a href="https://savvycal.com/benjamincrozat/ask-me-anything" class="bg-gradient-to-b from-white to-indigo-50 font-bold px-6 py-3 rounded shadow-lg shadow-indigo-500 text-center text-indigo-400 w-full sm:w-auto">
+                    Book a call
+                </a>
+            </div>
+        </div>
+
         <div class="container mt-12">
             <h3 class="font-bold text-xl text-center">
                 These companies trusted me
@@ -362,41 +374,16 @@
             <div class="mt-16 text-center">
                 <a
                     href="#"
-                    class="bg-gradient-to-b from-emerald-400 to-emerald-500 px-8 py-4 rounded shadow-xl shadow-emerald-600/[.15] text-base text-center text-emerald-50 w-full sm:w-auto"
+                    class="bg-gradient-to-b from-emerald-400 to-emerald-500 inline-block px-8 py-4 rounded shadow-xl shadow-emerald-600/[.15] text-base text-center text-emerald-50 w-full sm:w-auto"
                     @click="window.fathom?.trackGoal('BCXCNHU1', 0)"
                 >
                     Convinced? <strong class="font-bold">Book me.</strong>
                 </a>
+
+                <p class="mt-4">Or let's <a href="#" class="border-b border-indigo-400/30 font-bold text-indigo-400">jump into a quick call</a>.</p>
             </div>
         </section>
     </div>
-
-    @if (false)
-        <section class="container max-w-[1024px] py-8 sm:py-16">
-            <h2 class="font-semibold text-xl sm:text-3xl text-center text-indigo-900">
-                You will be satisfied, but don't take my word for it
-            </h2>
-
-            <div class="grid md:grid-cols-2 gap-4 mt-8">
-                @foreach (range(1, 4) as $i)
-                    <div class="bg-gray-200/50 p-6 rounded-lg text-gray-600">
-                        <blockquote>
-                            {{ fake()->sentences(mt_rand(2, 3), true) }}
-
-                            <div class="flex items-center gap-4 mt-4">
-                                <img src="https://i.pravatar.cc/30{{ $i }}" width="55" height="55" alt="{{ $name = fake()->name() }}" class="rounded-full" />
-
-                                <cite>
-                                    <span class="font-bold">{{ $name }}</span><br />
-                                    from <span class="font-bold">{{ fake()->company() }}</span>
-                                </cite>
-                            </div>
-                        </blockquote>
-                    </div>
-                @endforeach
-            </div>
-        </section>
-    @endif
 
     <div class="bg-indigo-50/30 text-indigo-900">
         <section
