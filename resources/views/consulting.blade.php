@@ -18,14 +18,14 @@
         </span>
     </div>
 
-    <div class="bg-gradient-to-r from-indigo-500 to-indigo-400 pb-16 pt-8 text-indigo-50">
+    <div class="bg-gradient-to-r from-indigo-500 to-indigo-400 pb-16 pt-8 sm:py-16 text-indigo-50">
         <div class="container text-center text-white">
             <h2 class="font-bold leading-tight text-xl md:text-2xl">
                 Regain control of the technical side of your&nbsp;business.
             </h2>
         </div>
 
-        <div class="container md:max-w-[1024px] mt-8">
+        <div class="container md:max-w-[1024px] mt-8 sm:mt-16">
             <div class="grid md:grid-cols-2 md:place-items-center gap-8 md:gap-4 mt-6 sm:mt-8">
                 <div class="bg-gradient-to-r from-white/95 to-white/75 px-4 py-6 sm:px-6 sm:py-8 rounded-lg shadow-xl shadow-indigo-900/10 text-indigo-900">
                     <h4 class="font-bold text-center text-xl sm:text-2xl">7 days of consulting</h4>
