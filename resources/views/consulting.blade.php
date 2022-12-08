@@ -458,17 +458,13 @@
             class="container py-8 sm:py-16"
             x-intersect="window.fathom?.trackGoal('Q0JLQGBO', 0)"
         >
-            <p class="font-semibold text-xl text-center">
-                Benjamin Crozat
-            </p>
-
             <h2 class="font-semibold text-xl sm:text-3xl text-center">
-                Laravel developer for hire
+                I am a Laravel developer for hire
             </h2>
 
             <div class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8 mt-8">
                 <div class="order-2 md:order-none">
-                    <p>I'm a passionate <strong class="font-semibold">full-stack PHP and Laravel developer</strong> from the south of France with <strong class="font-semibold">10+ years of experience</strong>.</p>
+                    <p>I'm Benjamin Crozat and I'm a passionate <strong class="font-semibold">full-stack PHP and Laravel developer</strong> from the south of France with <strong class="font-semibold">10+ years of experience</strong>.</p>
 
                     <p class="mt-4">I'm self-taught and was immediately seduced by the freelancer life. I quickly became interested in helping companies to work better with web developers and technology.</p>
                 </div>
