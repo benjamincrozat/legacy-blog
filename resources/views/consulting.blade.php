@@ -380,7 +380,7 @@
                     Convinced? <strong class="font-bold">Book me.</strong>
                 </a>
 
-                <p class="mt-4">Or let's <a href="#" class="border-b border-indigo-400/30 font-bold text-indigo-400">jump into a quick call</a>.</p>
+                <p class="mt-4">Or let's <a href="https://savvycal.com/benjamincrozat/ask-me-anything" class="border-b border-indigo-400/30 font-bold text-indigo-400">jump into a quick call</a>.</p>
             </div>
         </section>
     </div>
