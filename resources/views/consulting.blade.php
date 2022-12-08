@@ -440,7 +440,7 @@
                 </details>
 
                 <details class="group">
-                    <summary class="flex items-center gap-2 font-bold p-4">
+                    <summary class="flex items-center gap-2 font-semibold p-4">
                         <x-heroicon-o-chevron-right class="-translate-y-px group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
                         Your page says "Laravel developer for hire". Would you be interested in a full-time job?
                     </summary>
