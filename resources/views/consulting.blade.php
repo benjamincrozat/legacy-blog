@@ -145,7 +145,7 @@
 
                         <li class="flex items-center gap-2">
                             <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 text-indigo-200 w-5 h-5" />
-                            <span>I help setting up <strong class="font-semibold">a tool that alerts you when your app fails in production</strong></span>
+                            <span>I help set up <strong class="font-semibold">a tool that alerts you when your app fails in production</strong></span>
                         </li>
                     </ul>
 
