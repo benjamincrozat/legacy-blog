@@ -27,7 +27,7 @@
 
             <div class="order-1 sm:text-xl">
                 <div>
-                    <span class="bg-white font-bold px-3 py-1 rounded-full text-indigo-900/75 text-xs">
+                    <span class="bg-gradient-to-r from-yellow-400 to-yellow-500 font-bold px-3 py-1 rounded-full shadow shadow-indigo-900/[.15] text-yellow-800 text-xs">
                         10+ years of experience
                     </span>
 
@@ -396,7 +396,7 @@
 
             <div class="border border-indigo-100 grid mt-8 rounded">
                 <details class="group" open>
-                    <summary class="border-b border-indigo-100 flex items-center gap-2 font-semibold p-4">
+                    <summary class="border-b border-indigo-100 cursor-default flex items-center gap-2 font-semibold p-4">
                         <x-heroicon-o-chevron-right class="-translate-y-px group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
                         When is my credit card charged?
                     </summary>
@@ -407,7 +407,7 @@
                 </details>
 
                 <details class="group">
-                    <summary class="border-b border-indigo-100 flex items-center gap-2 font-semibold p-4">
+                    <summary class="border-b border-indigo-100 cursor-default flex items-center gap-2 font-semibold p-4">
                         <x-heroicon-o-chevron-right class="-translate-y-px group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
                         Can I get my money back if something goes wrong?
                     </summary>
@@ -418,7 +418,7 @@
                 </details>
 
                 <details class="group">
-                    <summary class="border-b border-indigo-100 flex items-center gap-2 font-semibold p-4">
+                    <summary class="border-b border-indigo-100 cursor-default flex items-center gap-2 font-semibold p-4">
                         <x-heroicon-o-chevron-right class="-translate-y-px group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
                         My developers are busy. Can you fix everything if I book you for 3 hours?
                     </summary>
@@ -429,7 +429,7 @@
                 </details>
 
                 <details class="group">
-                    <summary class="border-b border-indigo-100 flex items-center gap-2 font-semibold p-4">
+                    <summary class="border-b border-indigo-100 cursor-default flex items-center gap-2 font-semibold p-4">
                         <x-heroicon-o-chevron-right class="-translate-y-px group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
                         I want to book you for a different period of time. Is that possible?
                     </summary>
