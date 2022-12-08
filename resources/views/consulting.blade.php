@@ -18,29 +18,14 @@
         </span>
     </div>
 
-    <div class="bg-gradient-to-r from-indigo-500 to-indigo-400 pb-16 text-indigo-50">
-        <div class="container flex items-center justify-between gap-4 pt-8">
-            <img
-                loading="lazy"
-                src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=192"
-                width="96"
-                height="96"
-                alt="Laravel developer for hire"
-                class="flex-shrink-0 inline order-2 rotate-2 rounded-full w-[64px] h-[64px] sm:w-[80px] sm:h-[80px]"
-            />
-
-            <div class="order-1 text-white">
-                <h1 class="text-indigo-100 text-sm xs:text-base sm:text-lg md:text-xl">
-                    Laravel developer for hire: <strong class="text-white">Benjamin Crozat</strong>
-                </h1>
-
-                <h2 class="font-bold leading-tight mt-2 sm:text-xl md:text-2xl">
-                    Regain control of the technical side of your&nbsp;business.
-                </h2>
-            </div>
+    <div class="bg-gradient-to-r from-indigo-500 to-indigo-400 pb-16 pt-8 text-indigo-50">
+        <div class="container text-center text-white">
+            <h2 class="font-bold leading-tight text-xl md:text-2xl">
+                Regain control of the technical side of your&nbsp;business.
+            </h2>
         </div>
 
-        <div class="container md:max-w-[1024px] mt-6 sm:mt-8">
+        <div class="container md:max-w-[1024px] mt-8">
             <div class="grid md:grid-cols-2 md:place-items-center gap-8 md:gap-4 mt-6 sm:mt-8">
                 <div class="bg-gradient-to-r from-white/95 to-white/75 px-4 py-6 sm:px-6 sm:py-8 rounded-lg shadow-xl shadow-indigo-900/10 text-indigo-900">
                     <h4 class="font-bold text-center text-xl sm:text-2xl">7 days of consulting</h4>
@@ -180,9 +165,18 @@
         </div>
 
         <div class="container mt-6 sm:mt-8 md:mt-16">
-            <div class="border border-white/20 flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-between gap-4 p-4 pb-5 sm:p-6 rounded">
-                <p>
-                    <strong class="font-bold">Need more information</strong>? Let's <strong class="font-bold">jump into a quick call</strong> in <strong class="font-bold">English or French</strong>.
+            <div class="border border-white/20 flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-between gap-6 p-4 pb-5 sm:p-6 rounded">
+                <img
+                    loading="lazy"
+                    src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=128"
+                    width="64"
+                    height="64"
+                    alt="Laravel developer for hire"
+                    class="flex-shrink-0 rotate-2 rounded-full w-[64px] h-[64px]"
+                />
+
+                <p class="text-indigo-100">
+                    <strong class="font-semibold text-white">Need more information</strong>? Let's <strong class="font-semibold text-white">jump into a quick call</strong> in <strong class="font-semibold text-white">English or French</strong>.
                 </p>
 
                 <a href="https://savvycal.com/benjamincrozat/ask-me-anything" class="bg-gradient-to-b from-white to-indigo-50 flex-shrink-0 font-bold px-6 py-3 rounded shadow-lg shadow-indigo-500 text-center text-indigo-400 w-full sm:w-auto">
