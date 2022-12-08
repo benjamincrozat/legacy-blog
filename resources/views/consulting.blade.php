@@ -548,7 +548,7 @@
                 },
                 {
                     "@type": "Question",
-                    "name": "Your page says "Laravel developer for hire". Would you be interested in a full-time job?",
+                    "name": "Your page says \"Laravel developer for hire\". Would you be interested in a full-time job?",
                     "acceptedAnswer": {
                         "@type": "Answer",
                         "text": "I only work as a freelancer. I'm not interested in a full-time job."
