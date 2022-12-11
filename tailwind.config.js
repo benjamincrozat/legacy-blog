@@ -21,7 +21,7 @@ module.exports = {
 
         extend: {
             fontFamily: {
-                sans: ['Nunito Sans', ...defaultTheme.fontFamily.sans],
+                sans: ['Outfit', ...defaultTheme.fontFamily.sans],
             },
         },
 

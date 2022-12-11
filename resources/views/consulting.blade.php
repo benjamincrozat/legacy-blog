@@ -1,6 +1,7 @@
 <x-app
     title="Laravel developer for hire: Benjamin Crozat"
     description="Book an expert Laravel developer, TODAY. Benjamin Crozat is a Laravel developer available for hire."
+    class="font-outfit"
 >
     <div class="bg-indigo-500 py-6 text-center text-indigo-50">
         <a href="{{ route('home') }}">
@@ -16,30 +17,30 @@
 
     <div class="bg-gradient-to-r from-indigo-500 to-indigo-400 pb-16 pt-8 sm:py-16 text-indigo-50">
         <div class="container text-center text-white">
-            <h2 class="font-bold leading-tight text-xl md:text-2xl">
-                <span class="border-b-4 border-white/50">Regain control</span> of the technical side of your&nbsp;business.
+            <h2 class="leading-tight text-xl md:text-2xl text-indigo-100">
+                <span class="font-bold text-white">Regain control</span> of the technical side of your&nbsp;business.
             </h2>
         </div>
 
         <div class="container max-w-[1024px] mt-8 sm:mt-16">
             <div class="grid sm:grid-cols-3 gap-4 sm:gap-0 mt-6 sm:mt-8">
-                <div class="bg-gradient-to-r from-indigo-400/0 to-indigo-400 sm:my-8 p-8 rounded-l-xl text-center">
-                    <div class="text-xl">3 hours <strong class="border-b border-white/50 font-bold">audit</strong></div>
+                <div class="bg-gradient-to-r from-white/0 via-white/[.15] to-white/0 sm:my-8 p-6 sm:p-8 text-center">
+                    <div class="text-lg sm:text-lg md:text-xl">3 hours <strong class="border-b border-white/50 font-bold">audit</strong></div>
 
-                    <div class="font-black mt-4 text-5xl">
+                    <div class="font-black mt-4 text-4xl md:text-5xl">
                         <span class="inline-flex items-center">750<span class="font-light opacity-75 text-3xl">€</span></span>
                     </div>
 
-                    <a href="https://savvycal.com/benjamincrozat/3-hrs-consulting" class="bg-white/10 font-bold inline-block mt-6 px-8 py-3 rounded text-white">
+                    <a href="https://savvycal.com/benjamincrozat/3-hrs-consulting" class="bg-white/[.15] font-bold inline-block mt-6 px-8 py-3 rounded text-white">
                         Get started
                     </a>
                 </div>
 
-                <div class="bg-gradient-to-r from-white to-indigo-50 grid place-items-center p-8 rounded-xl shadow-xl shadow-indigo-500 text-center text-indigo-400">
+                <div class="bg-gradient-to-r from-white to-indigo-50 grid place-items-center py-6 sm:p-8 rounded-xl shadow-xl shadow-indigo-500 text-center text-indigo-400">
                     <div>
-                        <div class="text-xl">3 days <span class="border-b border-indigo-400/50 font-bold">audit & help</span></div>
+                        <div class="text-lg sm:text-lg md:text-xl">3 days <span class="border-b border-indigo-400/50 font-bold">audit & help</span></div>
 
-                        <div class="font-black mt-4 text-5xl">
+                        <div class="font-black mt-4 text-4xl md:text-5xl">
                             <span class="inline-flex items-center">2,250<span class="font-light opacity-75 text-3xl">€</span></span>
                         </div>
 
@@ -49,14 +50,14 @@
                     </div>
                 </div>
 
-                <div class="bg-gradient-to-r from-indigo-400 to-indigo-400/0 sm:my-8 p-8 rounded-r-xl text-center">
-                    <div class="text-xl">7 days <span class="border-b border-white/50 font-bold">audit & help</span></div>
+                <div class="bg-gradient-to-r from-white/0 via-white/[.15] to-white/0 sm:my-8 p-6 sm:p-8 text-center">
+                    <div class="text-lg sm:text-lg md:text-xl">7 days <span class="border-b border-white/50 font-bold">audit & help</span></div>
 
-                    <div class="font-black mt-4 text-5xl">
+                    <div class="font-black mt-4 text-4xl md:text-5xl">
                         <span class="inline-flex items-center">5,000<span class="font-light opacity-75 text-3xl">€</span></span>
                     </div>
 
-                    <a href="https://savvycal.com/benjamincrozat/7-days-consulting" class="bg-white/10 font-bold inline-block mt-6 px-8 py-3 rounded text-white">
+                    <a href="https://savvycal.com/benjamincrozat/7-days-consulting" class="bg-white/[.15] font-bold inline-block mt-6 px-8 py-3 rounded text-white">
                         Get started
                     </a>
                 </div>
@@ -96,7 +97,7 @@
                 </li>
             </ul>
 
-            <div class="bg-gradient-to-r from-transparent to-white/10 flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-between gap-6 mt-16 p-6 rounded-lg">
+            <div class="bg-gradient-to-b sm:bg-gradient-to-r from-transparent to-white/10 flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-between gap-6 mt-16 p-6 rounded-lg">
                 <img
                     loading="lazy"
                     src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=128"
