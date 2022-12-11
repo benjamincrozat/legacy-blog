@@ -14,7 +14,7 @@
                             @if ($item['level'] > 2) style="margin-left: calc(1rem * {{ $item['level'] - 2 }})" @endif
                             @click="window.fathom?.trackGoal('2WUWXET3', 0)"
                         >
-                            <x-heroicon-o-hashtag class="flex-shrink-0 w-3 h-3 text-indigo-900/40 dark:text-indigo-400/50 translate-y-[2px]" />
+                            <x-heroicon-o-hashtag class="flex-shrink-0 w-3 h-3 text-indigo-900/40 dark:text-indigo-400/50 translate-y-[1px]" />
                             {{ $item['title'] }}
                         </a>
                     </li>
