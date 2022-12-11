@@ -436,7 +436,7 @@
                     "name": "When is my credit card charged?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Your credit card will be charged immediately after you schedule our call."
+                        "text": "Your credit card will be charged immediately after you schedule a consulting call."
                     }
                 },
                 {
@@ -444,7 +444,7 @@
                     "name": "Can I get my money back if something goes wrong?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Of course. If I'm unavailable, you're immediately refunded. If I see I can't help you with your project because I don't have sufficient experience, you will also be refunded."
+                        "text": "If I'm unavailable and we can't reschedule, you're refunded. If you don't show up to the call, you're refunded. If I see I can't help you with your project because I don't have sufficient experience, you will also be refunded."
                     }
                 },
                 {
@@ -452,7 +452,7 @@
                     "name": "My developers are busy. Can you do the work if I book you for 3 hours?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Unfortunately, 3 hours is too short to do anything meaningful. I can only help you if you book me for at least 3 days."
+                        "text": "Unfortunately, 3 hours is too short to do anything meaningful. I can only do it if you book me for at least 3 days."
                     }
                 },
                 {
