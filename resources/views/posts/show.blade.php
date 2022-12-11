@@ -28,7 +28,7 @@
         </div>
 
         @if (! $post->promotes_affiliate_links)
-            <div class="border dark:border-gray-800 italic not-prose mt-8 p-4 rounded">
+            <div class="border dark:border-gray-800 not-prose mt-8 p-4 rounded">
                 <p>
                     Before you start reading this article, did you know <strong class="font-semibold">@choice(':count person|:count persons', $subscribersCount) subscribed to my newsletter</strong>?
                 </p>
