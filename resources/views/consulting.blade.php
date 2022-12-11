@@ -53,7 +53,7 @@
 
                 <div class="bg-gradient-to-r from-white/0 via-white/[.15] to-white/0 grid place-items-center sm:my-8 p-6 sm:p-8 text-center">
                     <div>
-                        <div class="bg-gradient-to-r from-orange-400 to-yellow-400 font-medium inline-block px-4 py-2 rounded-full text-black/75 text-xs uppercase">
+                        <div class="bg-yellow-400 font-medium inline-block px-4 py-2 rounded-full text-black/75 text-xs uppercase">
                             750€ off
                         </div>
 
