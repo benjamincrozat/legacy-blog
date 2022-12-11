@@ -308,7 +308,7 @@
             <div class="mt-16 text-center">
                 <a
                     href="#"
-                    class="bg-gradient-to-b from-emerald-400 to-emerald-500 inline-block px-8 py-4 rounded shadow-xl shadow-emerald-600/[.15] text-base text-center text-emerald-50 w-full sm:w-auto"
+                    class="bg-emerald-400 inline-block px-8 py-4 rounded text-base text-center text-white w-full sm:w-auto"
                     @click="window.fathom?.trackGoal('BCXCNHU1', 0)"
                 >
                     Convinced? <strong class="font-semibold">Book me.</strong>
