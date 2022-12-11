@@ -67,7 +67,7 @@
             <ul class="grid gap-4 mt-16 sm:text-lg md:text-xl">
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
-                    <span>I answer any question you have</span>
+                    <span>I answer any questions you have</span>
                 </li>
 
                 <li class="flex items-center gap-2">
