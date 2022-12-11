@@ -22,7 +22,7 @@
         </div>
 
         <div class="container max-w-[1024px] mt-8 sm:mt-16">
-            <div class="grid sm:grid-cols-3 gap-4 mt-6 sm:mt-8">
+            <div class="grid sm:grid-cols-3 gap-4 sm:gap-0 mt-6 sm:mt-8">
                 <div class="bg-gradient-to-r from-indigo-400/0 to-indigo-400 sm:my-8 p-8 rounded-l-xl text-center">
                     <div class="text-xl">3 hours <strong class="border-b border-white/50 font-bold">audit</strong></div>
 
