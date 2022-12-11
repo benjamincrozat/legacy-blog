@@ -102,6 +102,11 @@
                     <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
                     <span>I set up a tool that alerts you when your app fails in production</span>
                 </li>
+
+                <li class="flex items-center gap-2">
+                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
+                    <span>100% money-back guarantee if I can't help you with anything</span>
+                </li>
             </ul>
 
             <div class="bg-gradient-to-b sm:bg-gradient-to-r from-transparent to-white/10 flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-between gap-6 mt-16 p-6 rounded-lg">
@@ -123,11 +128,7 @@
                 </a>
             </div>
         </div>
-
-        <div class="container mt-8 md:mt-16">
-        </div>
-
-        <div class="container mt-12">
+        <div class="container mt-16">
             <h3 class="font-semibold text-xl text-center">
                 These companies trusted me
             </h3>
@@ -374,7 +375,7 @@
                 </details>
 
                 <details class="group">
-                    <summary class="flex items-center gap-2 font-medium p-4">
+                    <summary class="cursor-default flex items-center gap-2 font-medium p-4">
                         <x-heroicon-o-chevron-right class="-translate-y-px group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
                         Your page says "Laravel developer for hire". Would you be interested in a full-time job?
                     </summary>
