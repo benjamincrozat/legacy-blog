@@ -4,7 +4,7 @@
 >
     <div class="bg-indigo-500 py-6 text-center text-indigo-50">
         <a href="{{ route('home') }}">
-            <span class="font-extrabold translate-y-px text-sm sm:text-base tracking-widest uppercase">
+            <span class="font-bold translate-y-px text-sm sm:text-base tracking-widest uppercase">
                 Benjamin Crozat
             </span>
 

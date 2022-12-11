@@ -1,6 +1,6 @@
 @if ($toc->isNotEmpty())
     <div {{ $attributes->except('toc') }}>
-        <div class="font-bold mb-2">
+        <div class="font-semibold mb-2">
             Table of contents
         </div>
 

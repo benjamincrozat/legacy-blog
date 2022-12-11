@@ -13,17 +13,17 @@
         </p>
 
         <p class="mt-4">
-            I'm Benjamin Crozat, a web developer with more than <strong class="font-bold dark:text-white">15 years of experience</strong>.
+            I'm Benjamin Crozat, a web developer with more than <strong class="font-semibold dark:text-white">15 years of experience</strong>.
         </p>
 
         <p class="mt-4">
-            Understanding the web and being able to build websites is a serious advantage nowadays. You get job security and can build a business starting with nothing. <strong class="font-bold dark:text-white">I want to share with you everything I learn</strong> about it.
+            Understanding the web and being able to build websites is a serious advantage nowadays. You get job security and can build a business starting with nothing. <strong class="font-semibold dark:text-white">I want to share with you everything I learn</strong> about it.
         </p>
     </x-newsletter>
 
     @if ($pins->isNotEmpty())
         <section class="md:container md:max-w-[1024px] mt-16">
-            <div class="font-bold px-4 md:px-0 text-center text-xl">
+            <div class="font-semibold px-4 md:px-0 text-center text-xl">
                 Pinned articles
             </div>
 
@@ -36,7 +36,7 @@
     @endif
 
     <section class="container max-w-[1024px] mt-16">
-        <div class="font-bold px-4 sm:px-0 text-center text-xl">
+        <div class="font-semibold px-4 sm:px-0 text-center text-xl">
             Latest articles
         </div>
 

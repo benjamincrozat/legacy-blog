@@ -1,6 +1,6 @@
 <div {{ $attributes->merge(['class' => 'flex flex-wrap justify-between gap-8']) }}>
     <a href="{{ route('home') }}">
-        <span class="font-bold translate-y-px text-sm sm:text-base tracking-widest uppercase">
+        <span class="font-semibold translate-y-px text-sm sm:text-base tracking-widest uppercase">
             Benjamin Crozat
         </span>
 

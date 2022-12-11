@@ -15,11 +15,11 @@ summary::-webkit-details-marker {
 }
 
 .btn-indigo {
-    @apply bg-gradient-to-r from-indigo-300 dark:from-indigo-700 to-indigo-400 dark:to-indigo-800 block !border-0 font-normal leading-tight px-4 py-3 rounded shadow-md text-center !text-indigo-50;
+    @apply bg-gradient-to-r from-indigo-300 dark:from-indigo-700 to-indigo-400 dark:to-indigo-800 block !border-0 leading-tight px-4 py-3 rounded shadow-md text-center !text-indigo-50;
 }
 
 .btn-green {
-    @apply bg-gradient-to-r from-emerald-400 dark:from-emerald-700 to-emerald-500 dark:to-emerald-800 block !border-0 font-normal leading-tight px-4 py-3 rounded shadow-md text-center !text-emerald-50;
+    @apply bg-gradient-to-r from-emerald-400 dark:from-emerald-700 to-emerald-500 dark:to-emerald-800 block !border-0 leading-tight px-4 py-3 rounded shadow-md text-center !text-emerald-50;
 }
 
 .btn-indigo strong,
