@@ -12,8 +12,7 @@ class HomeController extends Controller
     {
         $pins = Pin::latest()->limit(4)->get();
 
-        $posts = Post::with('user')
-            ->whereNotIn('id', $pins->pluck('post.id'))
+        $posts = Post::whereNotIn('id', $pins->pluck('post.id'))
             ->latest()
             ->get();
 

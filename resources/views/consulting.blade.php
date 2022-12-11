@@ -17,20 +17,20 @@
     <div class="bg-gradient-to-r from-indigo-500 to-indigo-400 pb-16 pt-8 sm:py-16 text-indigo-50">
         <div class="container text-center text-white">
             <h2 class="font-bold leading-tight text-xl md:text-2xl">
-                Regain control of the technical side of your&nbsp;business.
+                <span class="border-b-4 border-white/50">Regain control</span> of the technical side of your&nbsp;business.
             </h2>
         </div>
 
         <div class="container max-w-[1024px] mt-8 sm:mt-16">
-            <div class="grid grid-cols-3 mt-6 sm:mt-8">
-                <div class="border border-white/20 my-8 p-8 rounded-l-xl text-center">
+            <div class="grid sm:grid-cols-3 gap-4 mt-6 sm:mt-8">
+                <div class="bg-gradient-to-r from-indigo-400/0 to-indigo-400 sm:my-8 p-8 rounded-l-xl text-center">
                     <div class="text-xl">3 hours <strong class="border-b border-white/50 font-bold">audit</strong></div>
 
                     <div class="font-black mt-4 text-5xl">
                         <span class="inline-flex items-center">750<span class="font-light opacity-75 text-3xl">€</span></span>
                     </div>
 
-                    <a href="#" class="border border-white/20 font-bold inline-block mt-6 px-8 py-3 rounded text-white">
+                    <a href="https://savvycal.com/benjamincrozat/3-hrs-consulting" class="bg-white/10 font-bold inline-block mt-6 px-8 py-3 rounded text-white">
                         Get started
                     </a>
                 </div>
@@ -43,20 +43,20 @@
                             <span class="inline-flex items-center">2,250<span class="font-light opacity-75 text-3xl">€</span></span>
                         </div>
 
-                        <a href="#" class="bg-emerald-400 font-bold inline-block mt-6 px-8 py-3 rounded text-white">
+                        <a href="https://savvycal.com/benjamincrozat/3-days-consulting" class="bg-emerald-400 font-bold inline-block mt-6 px-8 py-3 rounded text-white">
                             Get started
                         </a>
                     </div>
                 </div>
 
-                <div class="border border-white/20 my-8 p-8 rounded-r-xl text-center">
+                <div class="bg-gradient-to-r from-indigo-400 to-indigo-400/0 sm:my-8 p-8 rounded-r-xl text-center">
                     <div class="text-xl">7 days <span class="border-b border-white/50 font-bold">audit & help</span></div>
 
                     <div class="font-black mt-4 text-5xl">
                         <span class="inline-flex items-center">5,000<span class="font-light opacity-75 text-3xl">€</span></span>
                     </div>
 
-                    <a href="#" class="border border-white/20 font-bold inline-block mt-6 px-8 py-3 rounded text-white">
+                    <a href="https://savvycal.com/benjamincrozat/7-days-consulting" class="bg-white/10 font-bold inline-block mt-6 px-8 py-3 rounded text-white">
                         Get started
                     </a>
                 </div>
@@ -64,27 +64,55 @@
         </div>
 
         <div class="container">
-            <div class="-mt-8 border border-t-0 border-white/20 p-8 pt-16 rounded-b-xl">
-                <p>Et incididunt labore pariatur eu duis occaecat aute consequat consequat laborum consectetur sint exercitation Lorem. Ea Lorem quis cillum velit deserunt excepteur anim velit nulla culpa non sunt exercitation amet. Aute duis commodo eu ullamco Lorem ea. Amet aliqua voluptate adipisicing sint commodo esse Lorem est id sint et ad sit. Cupidatat id anim sit dolore aliqua excepteur tempor.</p>
+            <ul class="grid gap-4 mt-16 sm:text-lg md:text-xl">
+                <li class="flex items-center gap-2">
+                    <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
+                    <span>I answer any question you have</span>
+                </li>
 
-                <div class="flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-between gap-6 mt-16">
-                    <img
-                        loading="lazy"
-                        src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=128"
-                        width="64"
-                        height="64"
-                        alt="Laravel developer for hire"
-                        class="flex-shrink-0 rotate-2 rounded-full w-[64px] h-[64px]"
-                    />
+                <li class="flex items-center gap-2">
+                    <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
+                    <span>I pair program with your developers</span>
+                </li>
 
-                    <p class="text-indigo-100">
-                        <strong class="font-semibold text-white">Need more information</strong>? Let's <strong class="font-semibold text-white">jump into a quick call</strong> in <strong class="font-semibold text-white">English or French</strong>.
-                    </p>
+                <li class="flex items-center gap-2">
+                    <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
+                    <span>Discover best practices that make new hires immediately productive</span>
+                </li>
 
-                    <a href="https://savvycal.com/benjamincrozat/ask-me-anything" class="bg-white flex-shrink-0 font-bold px-6 py-3 rounded text-center text-indigo-400 w-full sm:w-auto">
-                        Book a call
-                    </a>
-                </div>
+                <li class="flex items-center gap-2">
+                    <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
+                    <span>Stop losing sales over bad performances</span>
+                </li>
+
+                <li class="flex items-center gap-2">
+                    <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
+                    <span>Prevent as many regressions as possible</span>
+                </li>
+
+                <li class="flex items-center gap-2">
+                    <x-heroicon-o-check-circle class="-translate-y-[.5px] flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
+                    <span>I set up a tool that alerts you when your app fails in production</span>
+                </li>
+            </ul>
+
+            <div class="bg-gradient-to-r from-transparent to-white/10 flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-between gap-6 mt-16 p-6 rounded-lg">
+                <img
+                    loading="lazy"
+                    src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=128"
+                    width="64"
+                    height="64"
+                    alt="Laravel developer for hire"
+                    class="flex-shrink-0 rotate-2 rounded-full w-[64px] h-[64px]"
+                />
+
+                <p class="text-indigo-100">
+                    <strong class="font-semibold text-white">Need more information</strong>? Let's <strong class="font-semibold text-white">jump into a quick call</strong> in <strong class="font-semibold text-white">English or French</strong>.
+                </p>
+
+                <a href="https://savvycal.com/benjamincrozat/ask-me-anything" class="bg-white flex-shrink-0 font-bold ml-4 px-6 py-3 rounded text-center text-indigo-400 w-full sm:w-auto">
+                    Book a call
+                </a>
             </div>
         </div>
 
