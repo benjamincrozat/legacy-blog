@@ -57,14 +57,14 @@
 
                 <div class="bg-gradient-to-r from-white/0 via-white/[.15] to-white/0 grid place-items-center sm:my-8 p-6 sm:p-8 text-center">
                     <div>
-                        <div class="bg-yellow-400 font-medium inline-block px-4 py-2 rounded-full text-black/75 text-xs uppercase">
-                            750€ off
-                        </div>
-
-                        <div class="mt-2 text-lg sm:text-lg md:text-xl">7 days <span class="border-b border-white/50 font-semibold">audit & help</span></div>
+                        <div class="text-lg sm:text-lg md:text-xl">7 days <span class="border-b border-white/50 font-semibold">audit & help</span></div>
 
                         <div class="font-black mt-4 text-4xl md:text-5xl">
                             <span class="inline-flex items-center">6,000<span class="font-light opacity-75 text-xl sm:text-3xl">€</span></span>
+                        </div>
+
+                        <div class="line-through text-xl">
+                            <span class="inline-flex items-center">6,750<span class="font-light opacity-75 text-sm">€</span></span>
                         </div>
 
                         <a href="https://savvycal.com/benjamincrozat/7-days-consulting" class="bg-white/[.15] font-semibold inline-block mt-6 px-8 py-3 rounded text-white">
