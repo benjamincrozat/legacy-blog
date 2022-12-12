@@ -388,7 +388,8 @@
             x-intersect="window.fathom?.trackGoal('Q0JLQGBO', 0)"
         >
             <h2 class="font-medium text-xl sm:text-3xl text-center">
-                I am a Laravel developer for hire
+                My name is Benjamin Crozat<br />
+                And I am a Laravel developer for hire
             </h2>
 
             <div class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8 mt-8">
