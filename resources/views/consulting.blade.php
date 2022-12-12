@@ -119,7 +119,7 @@
                     src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=128"
                     width="64"
                     height="64"
-                    alt="Laravel developer for hire"
+                    alt="Benjamin Crozat"
                     class="flex-shrink-0 rotate-2 rounded-full w-[64px] h-[64px]"
                 />
 
@@ -399,7 +399,7 @@
                 </div>
 
                 <div class="flex-shrink-0 order-1 md:order-none text-center md:text-left w-full md:w-auto">
-                    <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" width="96" height="96" alt="Laravel developer for hire" class="inline rotate-2 rounded-full" />
+                    <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" width="96" height="96" alt="Benjamin Crozat" class="inline rotate-2 rounded-full" />
                 </div>
             </div>
         </section>
