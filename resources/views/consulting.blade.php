@@ -60,11 +60,11 @@
                         <div class="text-lg sm:text-lg md:text-xl">7 days <span class="border-b border-white/50 font-semibold">audit & help</span></div>
 
                         <div class="font-black mt-4 text-4xl md:text-5xl">
-                            <span class="inline-flex items-center">6,000<span class="font-light opacity-75 text-xl sm:text-3xl">€</span></span>
+                            <span class="inline-flex items-center">5,000<span class="font-light opacity-75 text-xl sm:text-3xl">€</span></span>
                         </div>
 
                         <div class="line-through text-xl">
-                            <span class="inline-flex items-center">6,750<span class="font-light opacity-75 text-sm">€</span></span>
+                            <span class="inline-flex items-center">5,250<span class="font-light opacity-75 text-sm">€</span></span>
                         </div>
 
                         <a href="https://savvycal.com/benjamincrozat/7-days-consulting" class="bg-white/[.15] font-semibold inline-block mt-6 px-8 py-3 rounded text-white">
