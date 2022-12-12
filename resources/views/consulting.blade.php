@@ -35,6 +35,12 @@
                             <span class="inline-flex items-center">750<span class="font-light opacity-75 text-xl sm:text-3xl">€</span></span>
                         </div>
 
+                        <div class="mt-2 text-center">
+                            <x-heroicon-o-arrow-down class="inline opacity-50 w-8 h-8" />
+
+                            <p class="mt-2">Huge amount of value for you and your&nbsp;team.</p>
+                        </div>
+
                         <a href="https://savvycal.com/benjamincrozat/3-hrs-consulting" class="bg-white/[.15] font-semibold inline-block mt-6 px-8 py-3 rounded text-white">
                             Get started
                         </a>
@@ -47,6 +53,12 @@
 
                         <div class="font-black mt-4 text-4xl md:text-5xl">
                             <span class="inline-flex items-center">2,250<span class="font-light opacity-75 text-xl sm:text-3xl">€</span></span>
+                        </div>
+
+                        <div class="mt-2 text-center">
+                            <x-heroicon-o-arrow-down class="inline opacity-50 w-8 h-8" />
+
+                            <p class="mt-2">Even more value for you and your&nbsp;team.</p>
                         </div>
 
                         <a href="https://savvycal.com/benjamincrozat/3-days-consulting" class="bg-emerald-400 font-semibold inline-block mt-6 px-8 py-3 rounded text-white">
@@ -65,6 +77,12 @@
 
                         <div class="line-through text-xl">
                             <span class="inline-flex items-center">5,250<span class="font-light opacity-75 text-sm">€</span></span>
+                        </div>
+
+                        <div class="mt-2 text-center">
+                            <x-heroicon-o-arrow-down class="inline opacity-50 w-8 h-8" />
+
+                            <p class="mt-2">Even more value for you and your&nbsp;team.</p>
                         </div>
 
                         <a href="https://savvycal.com/benjamincrozat/7-days-consulting" class="bg-white/[.15] font-semibold inline-block mt-6 px-8 py-3 rounded text-white">
