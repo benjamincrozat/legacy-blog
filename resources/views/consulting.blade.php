@@ -109,7 +109,7 @@
 
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
-                    <span>100% money-back guarantee if I can't help you with anything</span>
+                    <span>100% money-back guarantee if you don't get any value from this.</span>
                 </li>
             </ul>
 
