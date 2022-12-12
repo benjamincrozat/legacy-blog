@@ -16,9 +16,13 @@
 
     <div class="bg-gradient-to-r from-indigo-500 to-indigo-400 pb-16 pt-8 sm:py-16 text-indigo-50">
         <div class="container text-center text-white">
-            <h1 class="leading-tight text-xl md:text-2xl text-indigo-100">
-                <span class="font-semibold text-white">Regain control</span> of the technical side of your&nbsp;business.
+            <h1 class="font-semibold leading-tight text-xl md:text-2xl">
+                Laravel developer for hire
             </h1>
+
+            <h2 class="leading-tight text-xl md:text-2xl text-indigo-100">
+                <span class="font-semibold text-white">Regain control</span> of the technical side of your&nbsp;business.
+            </h2>
         </div>
 
         <div class="container max-w-[1024px] mt-8 sm:mt-16">
