@@ -377,17 +377,6 @@
                         You can book me for 7 days, 3 days, 3 hours or 1 hour. You cannot book me for something in between these options, but you can cumulate if you need me for longer.
                     </p>
                 </details>
-
-                <details class="group">
-                    <summary class="cursor-default flex items-center gap-2 font-medium p-4">
-                        <x-heroicon-o-chevron-right class="-translate-y-px group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
-                        Your page says "Laravel developer for hire". Would you be interested in a full-time job?
-                    </summary>
-
-                    <p class="border-t border-indigo-100 p-4">
-                        I only work as a freelancer. I'm not interested in a full-time job.
-                    </p>
-                </details>
             </div>
         </section>
     </div>
