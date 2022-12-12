@@ -29,16 +29,16 @@
             <div class="grid sm:grid-cols-3 gap-4 sm:gap-0 mt-6 sm:mt-8">
                 <div class="bg-gradient-to-r from-white/0 via-white/[.15] to-white/0 grid place-items-center sm:my-8 p-6 sm:p-8 text-center">
                     <div>
-                        <div class="text-lg sm:text-lg md:text-xl">3 hours <strong class="border-b border-white/50 font-semibold">audit</strong></div>
+                        <div>
+                            <div class="text-lg sm:text-lg md:text-xl">
+                                3 hours <strong class="border-b border-white/50 font-semibold">audit</strong>
+                            </div>
+
+                            <div class="mt-1 text-sm">Maximum value for you and your team</div>
+                        </div>
 
                         <div class="font-black mt-4 text-4xl md:text-5xl">
                             <span class="inline-flex items-center">750<span class="font-light opacity-75 text-xl sm:text-3xl">€</span></span>
-                        </div>
-
-                        <div class="mt-2 text-center">
-                            <x-heroicon-o-arrow-down class="inline opacity-50 w-8 h-8" />
-
-                            <p class="mt-2">Huge amount of value for you and your&nbsp;team.</p>
                         </div>
 
                         <a href="https://savvycal.com/benjamincrozat/3-hrs-consulting" class="bg-white/[.15] font-semibold inline-block mt-6 px-8 py-3 rounded text-white">
@@ -49,16 +49,16 @@
 
                 <div class="bg-gradient-to-r from-white to-indigo-50 grid place-items-center py-6 sm:p-8 rounded-xl shadow-xl shadow-indigo-500 text-center text-indigo-400">
                     <div>
-                        <div class="text-lg sm:text-lg md:text-xl">3 days <span class="border-b border-indigo-400/50 font-semibold">audit & help</span></div>
+                        <div>
+                            <div class="text-lg sm:text-lg md:text-xl">
+                                3 days <span class="border-b border-indigo-400/50 font-semibold">audit & help</span>
+                            </div>
+
+                            <div class="mt-1 text-sm">Maximum value for you and your team</div>
+                        </div>
 
                         <div class="font-black mt-4 text-4xl md:text-5xl">
                             <span class="inline-flex items-center">2,250<span class="font-light opacity-75 text-xl sm:text-3xl">€</span></span>
-                        </div>
-
-                        <div class="mt-2 text-center">
-                            <x-heroicon-o-arrow-down class="inline opacity-50 w-8 h-8" />
-
-                            <p class="mt-2">Even more value for you and your&nbsp;team.</p>
                         </div>
 
                         <a href="https://savvycal.com/benjamincrozat/3-days-consulting" class="bg-emerald-400 font-semibold inline-block mt-6 px-8 py-3 rounded text-white">
@@ -69,7 +69,13 @@
 
                 <div class="bg-gradient-to-r from-white/0 via-white/[.15] to-white/0 grid place-items-center sm:my-8 p-6 sm:p-8 text-center">
                     <div>
-                        <div class="text-lg sm:text-lg md:text-xl">7 days <span class="border-b border-white/50 font-semibold">audit & help</span></div>
+                        <div>
+                            <div class="text-lg sm:text-lg md:text-xl">
+                                7 days <span class="border-b border-white/50 font-semibold">audit & help</span>
+                            </div>
+
+                            <div class="mt-1 text-sm">Maximum value for you and your team</div>
+                        </div>
 
                         <div class="font-black mt-4 text-4xl md:text-5xl">
                             <span class="inline-flex items-center">5,000<span class="font-light opacity-75 text-xl sm:text-3xl">€</span></span>
@@ -77,12 +83,6 @@
 
                         <div class="line-through text-xl">
                             <span class="inline-flex items-center">5,250<span class="font-light opacity-75 text-sm">€</span></span>
-                        </div>
-
-                        <div class="mt-2 text-center">
-                            <x-heroicon-o-arrow-down class="inline opacity-50 w-8 h-8" />
-
-                            <p class="mt-2">Even more value for you and your&nbsp;team.</p>
                         </div>
 
                         <a href="https://savvycal.com/benjamincrozat/7-days-consulting" class="bg-white/[.15] font-semibold inline-block mt-6 px-8 py-3 rounded text-white">
