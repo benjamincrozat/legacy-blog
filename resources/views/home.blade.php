@@ -7,7 +7,11 @@
 
     <h1 class="hidden">The blog of Benjamin Crozat: PHP, Laravel and its ecosystem</h1>
 
-    <x-newsletter class="container mt-16">
+    <div class="container sm:max-w-screen-xs md:max-w-screen-sm mt-16 text-center">
+        <x-icon-logos />
+    </div>
+
+    <x-newsletter class="container mt-8">
         <p class="mt-8">
             Hi there! 👋
         </p>
