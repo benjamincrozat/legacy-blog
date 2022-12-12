@@ -1,6 +1,6 @@
 <x-app
     title="Laravel developer for hire: Benjamin Crozat"
-    description="Book an expert Laravel developer, TODAY. Benjamin Crozat is a Laravel developer for hire."
+    description="Book an expert of the Laravel framework, TODAY. Benjamin Crozat is a Laravel developer for hire."
 >
     <div class="bg-indigo-500 py-6 text-center text-indigo-50">
         <a href="{{ route('home') }}">
@@ -182,7 +182,8 @@
             x-intersect="window.fathom?.trackGoal('WSVGAGQR', 0)"
         >
             <h2 class="font-medium text-xl sm:text-3xl text-center">
-                The Laravel consulting services I&nbsp;provide
+                Laravel experts are not easy to find.<br />
+                Here are the details of what I can do for your business.
             </h2>
 
             <ul class="grid sm:grid-cols-2 gap-12 mt-8 sm:mt-16">
@@ -210,28 +211,28 @@
                     </p>
 
                     <p class="mt-4">
-                        When everyone follows the framework's best practices, this happens:
+                        The Laravel framework can do miracles when everyone follow the best practices.
                     </p>
 
                     <ul class="mt-4">
                         <li class="flex items-start gap-2">
-                            <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[1.5px] w-5 h-5" />
+                            <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[2px] w-5 h-5" />
                             You don't need to maintain a documentation
                         </li>
 
                         <li class="flex items-start gap-2 mt-2">
-                            <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[1.5px] w-5 h-5" />
+                            <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[2px] w-5 h-5" />
                             Your developers always know where to go
                         </li>
 
                         <li class="flex items-start gap-2 mt-2">
-                            <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[1.5px] w-5 h-5" />
+                            <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[2px] w-5 h-5" />
                             New hires will be productive from day one
                         </li>
                     </ul>
 
                     <p class="mt-4">
-                        It's time to leverage Laravel's power to over 9000!
+                        With me, your team will become true Laravel experts and leverage its power to over 9000!
                     </p>
                 </li>
 
@@ -268,12 +269,12 @@
 
                     <ul class="mt-4">
                         <li class="flex items-start gap-2">
-                            <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[1.5px] w-5 h-5" />
+                            <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[2px] w-5 h-5" />
                             Boost confidence each time they deploy something new
                         </li>
 
                         <li class="flex items-start gap-2 mt-2">
-                            <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[1.5px] w-5 h-5" />
+                            <x-heroicon-o-check-circle class="flex-shrink-0 text-indigo-400 translate-y-[2px] w-5 h-5" />
                             Facilitate onboarding of new team members. They won't fear screwing everything up on their first day
                         </li>
                     </ul>
@@ -455,14 +456,6 @@
                     "acceptedAnswer": {
                         "@type": "Answer",
                         "text": "You can book me for 7 days, 3 days, 3 hours or 1 hour. You cannot book me for something in between these options, but you can cumulate if you need me for longer."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Your page says \"Laravel developer for hire\". Would you be interested in a full-time job?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "I only work as a freelancer. I'm not interested in a full-time job."
                     }
                 }
             ]
