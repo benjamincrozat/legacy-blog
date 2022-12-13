@@ -12,7 +12,7 @@
     </div>
 
     <x-newsletter class="container mt-8">
-        <div class="flex items-center gap-8 mt-8">
+        <div class="flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-start gap-6 sm:gap-8 mt-8">
             <div>
                 <p>
                     Hi there! 👋
