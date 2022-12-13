@@ -12,17 +12,23 @@
     </div>
 
     <x-newsletter class="container mt-8">
-        <p class="mt-8">
-            Hi there! 👋
-        </p>
+        <div class="flex items-center gap-8 mt-8">
+            <div>
+                <p>
+                    Hi there! 👋
+                </p>
 
-        <p class="mt-4">
-            I'm Benjamin Crozat, a web developer with more than <strong class="font-semibold dark:text-white">10 years of experience</strong>.
-        </p>
+                <p class="mt-4">
+                    <strong class="font-semibold">I'm Benjamin Crozat</strong>, a web developer with more than <strong class="font-semibold dark:text-white">10 years of experience</strong>.
+                </p>
 
-        <p class="mt-4">
-            Understanding the web and being able to build websites is a serious advantage nowadays. You get job security and can build a business starting with nothing. <strong class="font-semibold dark:text-white">I want to share with you everything I learn</strong> about it.
-        </p>
+                <p class="mt-4">
+                    Understanding the web and being able to build websites is a serious advantage nowadays. You get job security and can build a business starting with nothing. <strong class="font-semibold dark:text-white">I want to share with you everything I learn</strong> about it.
+                </p>
+            </div>
+
+            <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" width="96" height="96" alt="Benjamin Crozat" class="rotate-2 rounded-full" />
+        </div>
     </x-newsletter>
 
     @if ($pins->isNotEmpty())
