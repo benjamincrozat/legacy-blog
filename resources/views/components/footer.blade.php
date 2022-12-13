@@ -1,8 +1,6 @@
 <footer {{ $attributes->merge(['class' => 'container py-8 text-sm']) }} x-intersect="window.fathom?.trackGoal('08VVENFW', 0)">
     <div class="flex items-center justify-between">
-        <a href="{{ route('home') }}" class="tracking-widest uppercase">
-            Benjamin Crozat
-        </a>
+        <x-icon-logo class="h-6 sm:h-7 md:h-8 translate-y-[2px]" />
 
         <ul class="flex items-center gap-1 sm:gap-2">
             <li>
