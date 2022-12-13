@@ -17,7 +17,7 @@
         </p>
 
         <p class="mt-4">
-            I'm Benjamin Crozat, a web developer with more than <strong class="font-semibold dark:text-white">15 years of experience</strong>.
+            I'm Benjamin Crozat, a web developer with more than <strong class="font-semibold dark:text-white">10 years of experience</strong>.
         </p>
 
         <p class="mt-4">
