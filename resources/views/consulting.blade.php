@@ -4,13 +4,7 @@
 >
     <div class="bg-indigo-500 py-6 text-center text-indigo-50">
         <a href="{{ route('home') }}">
-            <span class="font-bold translate-y-px text-sm sm:text-base tracking-widest uppercase">
-                Benjamin Crozat
-            </span>
-
-            <span class="block opacity-75 text-xs tracking-widest uppercase">
-                Full-stack Laravel developer
-            </span>
+            <x-icon-logo-alt class="fill-current h-20 inline" />
         </a>
     </div>
 
