@@ -1,6 +1,6 @@
 <div {{ $attributes->merge(['class' => 'flex flex-wrap justify-between gap-8']) }}>
     <a href="{{ route('home') }}">
-        <x-icon-logo class="h-9" />
+        <x-icon-logo class="h-8 md:h-9 translate-y-[2px]" />
     </a>
 
     <nav class="flex items-center gap-6 sm:gap-8">
