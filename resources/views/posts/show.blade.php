@@ -76,7 +76,7 @@
     </article>
 
     <div class="container mt-16">
-        <aside class="border dark:border-gray-900 flex flex-wrap sm:flex-nowrap items-center gap-4 sm:gap-8 px-4 py-6 sm:p-6 rounded">
+        <aside class="border dark:border-gray-900 flex flex-wrap sm:flex-nowrap items-center justify-between gap-4 sm:gap-8 px-4 py-6 sm:p-6 rounded">
             <div class="order-2 sm:order-none">
                 <p class="font-semibold text-xl">
                     Article written by {{ $post->user->name }}

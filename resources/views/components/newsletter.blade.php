@@ -1,5 +1,9 @@
 <section id="newsletter" {{ $attributes->merge(['class' => 'scroll-mt-8']) }}>
-    <p class="font-medium !leading-tight sm:max-w-screen-xs mx-auto text-xl text-center">
+    <div class="container sm:max-w-screen-xs md:max-w-screen-sm text-center">
+        <x-icon-logos />
+    </div>
+
+    <p class="font-medium !leading-tight sm:max-w-screen-xs mt-8 mx-auto text-xl text-center">
         I share everything I learn about the&nbsp;art&nbsp;of&nbsp;crafting&nbsp;websites, <span class="text-indigo-400">for&nbsp;free</span>!
     </p>
 
