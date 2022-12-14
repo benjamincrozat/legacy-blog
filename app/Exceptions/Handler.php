@@ -2,7 +2,6 @@
 
 namespace App\Exceptions;
 
-use Throwable;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
@@ -43,7 +42,7 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
-        $this->reportable(function (Throwable $e) {
+        $this->reportable(function (\Throwable $e) {
             //
         });
     }

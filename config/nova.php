@@ -1,14 +1,13 @@
 <?php
 
 use Laravel\Nova\Actions\ActionResource;
-use Laravel\Nova\Http\Middleware\Authenticate;
 use Laravel\Nova\Http\Middleware\Authorize;
 use Laravel\Nova\Http\Middleware\BootTools;
-use Laravel\Nova\Http\Middleware\DispatchServingNovaEvent;
+use Laravel\Nova\Http\Middleware\Authenticate;
 use Laravel\Nova\Http\Middleware\HandleInertiaRequests;
+use Laravel\Nova\Http\Middleware\DispatchServingNovaEvent;
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Nova License Key
@@ -202,5 +201,4 @@ return [
         'started' => '/',
         'stopped' => '/',
     ],
-
 ];

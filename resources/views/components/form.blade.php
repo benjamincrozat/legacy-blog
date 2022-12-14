@@ -1,5 +1,5 @@
-<form method="{{ $method === 'GET' ? $method : 'POST' }}" {{ $attributes->except(['method']) }}>
-    @if ($method !== 'GET')
+<form method="{{ 'GET' === $method ? $method : 'POST' }}" {{ $attributes->except(['method']) }}>
+    @if ('GET' !== $method)
         @csrf
     @endif
 
