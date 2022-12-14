@@ -34,6 +34,7 @@ return [
         'api_key' => env('CONVERTKIT_API_KEY'),
         'api_secret' => env('CONVERTKIT_API_SECRET'),
         'form_id' => env('CONVERTKIT_FORM_ID'),
+        'main_tag_id' => env('CONVERTKIT_MAIN_TAG_ID'),
     ],
 
     'fathom' => [
