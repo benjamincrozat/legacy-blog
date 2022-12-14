@@ -19,7 +19,7 @@
                 </p>
 
                 <p class="mt-4">
-                    Understanding the web and being able to build websites is a serious advantage nowadays. You get job security and can build a business starting with nothing. <strong class="font-semibold dark:text-white">I want to share with you everything I learn</strong> about it.
+                    Understanding the web and being able to build websites is a serious advantage nowadays. You get job security and can build a business starting with nothing. <strong class="font-semibold dark:text-white">I want to share with you everything I learn</strong>.
                 </p>
             </div>
 
