@@ -15,7 +15,7 @@ Route::post('/subscribe', SubscribeController::class)->name('subscribe');
 
 Route::get('/recommends/{affiliate:slug}', RedirectToAffiliateController::class)->name('affiliate');
 
-Route::view('seo-wizardry', 'seo-wizardry');
+Route::view('seo-wizardry', 'seo-wizardry')->middleware('auth');
 
 Route::feeds();
 
