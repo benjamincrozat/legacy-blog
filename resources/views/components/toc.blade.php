@@ -1,4 +1,4 @@
-@if ($toc->isNotEmpty())
+@if ($toc->isNotEmpty() && $toc->count() > 1)
     <div {{ $attributes->except('toc') }}>
         <div class="font-semibold mb-2">
             Table of contents
