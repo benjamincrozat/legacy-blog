@@ -3,7 +3,7 @@
     description="Book an expert of the Laravel framework, TODAY. Benjamin Crozat is a Laravel developer for hire."
 >
     <div class="bg-indigo-500 py-6 text-center text-indigo-50">
-        <a href="{{ route('home') }}">
+        <a href="{{ route('home') }}" class="inline-block">
             <x-icon-logo-alt class="fill-current h-20 inline" />
         </a>
     </div>
