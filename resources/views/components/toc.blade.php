@@ -22,7 +22,4 @@
             </ul>
         </nav>
     </div>
-
-
-    <div id="ezoic-pub-ad-placeholder-118"></div>
 @endif
