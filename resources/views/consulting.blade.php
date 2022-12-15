@@ -338,7 +338,7 @@
             x-intersect="window.fathom?.trackGoal('WSVGAGQR', 0)"
         >
             <h2 class="font-medium text-xl sm:text-3xl text-center">
-                Make sure I'm the right fit with these hiring&nbsp;tips
+                Hire dedicated Laravel developers: the ultimate guide
             </h2>
 
             <div class="leading-relaxed mt-6">
