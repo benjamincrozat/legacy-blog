@@ -14,6 +14,8 @@
         </x-breadcrumb>
     @endif
 
+    <div id="ezoic-pub-ad-placeholder-114"></div>
+
     <article class="container mt-8">
         <h1 class="font-thin text-3xl md:text-5xl dark:text-white">
             {{ $post->title }}
@@ -43,10 +45,14 @@
             @endif
         @endif
 
+        <div id="ezoic-pub-ad-placeholder-115"></div>
+
         @if ($post->introduction)
             <div class="content mt-8">
                 {!! $post->rendered_introduction !!}
             </div>
+
+            <div id="ezoic-pub-ad-placeholder-117"></div>
         @endif
 
         @if ($post->promotes_affiliate_links && ($bestProducts = $post->bestProducts()->with('affiliate')->get())->isNotEmpty())
@@ -89,6 +95,10 @@
 
             <img src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}?s=192" width="96" height="96" alt="{{ $post->user->name }}" class="-translate-y-[.5px] flex-shrink-0 w-16 h-16 sm:w-24 sm:h-24 order-1 sm:order-none rounded-full" />
         </aside>
+    </div>
+
+    <div class="container">
+        <div id="ezoic-pub-ad-placeholder-116"></div>
     </div>
 
     @if ($others->isNotEmpty())
