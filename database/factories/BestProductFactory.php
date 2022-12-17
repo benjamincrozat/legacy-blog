@@ -21,7 +21,7 @@ class BestProductFactory extends Factory
                 'Best for beginners',
                 'Best overall',
                 'Best value',
-            ])->shuffle()->first(),
+            ])->random(),
             'description' => fake()->sentences(mt_rand(1, 2), true),
         ];
     }

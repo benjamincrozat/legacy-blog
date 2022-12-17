@@ -342,7 +342,7 @@
             </h2>
 
             <div class="leading-relaxed mt-6">
-                <h3 class="font-bold">Check for real-world Laravel experience</h3>
+                <h3 class="font-medium text-lg">Check for real-world Laravel experience</h3>
 
                 <p class="mt-4">If you don't have time to coach young developers, make sure they have real-world experience.</p>
 
@@ -356,7 +356,7 @@
                     <li class="mt-2">Even an inactive GitHub account is a good sign. A basic comprehension of open source reinforces the previous point.</li>
                 </ul>
 
-                <h3 class="font-bold mt-8">Don't hire senior developers to work on basic tasks</h3>
+                <h3 class="font-medium mt-8 text-lg">Don't hire senior developers to work on basic tasks</h3>
 
                 <p class="mt-4">A senior developer is expensive, and for good reasons. Years of experience made them a master at what they do. You want them to work on something other than simple interface changes or bug fixes, or they'll get bored and leave as soon as possible.</p>
 
@@ -364,7 +364,7 @@
 
                 <p class="mt-4">That's exactly what I do after more than 10 years in this industry. Clients book me so I can help their team head in the right direction.</p>
 
-                <h3 class="font-bold mt-8">Get good communicators</h3>
+                <h3 class="font-medium mt-8 text-lg">Get good communicators</h3>
 
                 <p class="mt-4">Communication is critical for any relationship. In a working environment, you need a clear view of the progression to plan what's next.</p>
 
@@ -385,7 +385,7 @@
             <div class="border border-indigo-100 grid mt-8 rounded">
                 <details class="group" open>
                     <summary class="border-b border-indigo-100 cursor-default flex items-center gap-2 font-medium p-4">
-                        <x-heroicon-o-chevron-right class="-translate-y-px group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
+                        <x-heroicon-o-chevron-right class="-translate-y-px flex-shrink-0 group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
                         When is my credit card charged?
                     </summary>
 
@@ -396,7 +396,7 @@
 
                 <details class="group">
                     <summary class="border-b border-indigo-100 cursor-default flex items-center gap-2 font-medium p-4">
-                        <x-heroicon-o-chevron-right class="-translate-y-px group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
+                        <x-heroicon-o-chevron-right class="-translate-y-px flex-shrink-0 group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
                         Can I get my money back if something goes wrong?
                     </summary>
 
@@ -407,7 +407,7 @@
 
                 <details class="group">
                     <summary class="border-b border-indigo-100 cursor-default flex items-center gap-2 font-medium p-4">
-                        <x-heroicon-o-chevron-right class="-translate-y-px group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
+                        <x-heroicon-o-chevron-right class="-translate-y-px flex-shrink-0 group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
                         My developers are busy. Can you fix everything if I book you for 3 hours?
                     </summary>
 
@@ -418,7 +418,7 @@
 
                 <details class="group">
                     <summary class="border-b border-indigo-100 cursor-default flex items-center gap-2 font-medium p-4">
-                        <x-heroicon-o-chevron-right class="-translate-y-px group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
+                        <x-heroicon-o-chevron-right class="-translate-y-px flex-shrink-0 group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
                         I want to book you for a different period of time. Is that possible?
                     </summary>
 

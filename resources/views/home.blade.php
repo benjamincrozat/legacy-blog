@@ -15,11 +15,15 @@
                 </p>
 
                 <p class="mt-4">
-                    <strong class="font-semibold">I'm Benjamin Crozat</strong>, a web developer with more than <strong class="font-semibold dark:text-white">10 years of experience</strong>.
+                    <strong class="font-semibold">I'm Benjamin Crozat</strong> and I have <strong class="font-semibold">10+ years of expertise</strong> in web development.
                 </p>
 
                 <p class="mt-4">
-                    Understanding the web and being able to build websites is a serious advantage nowadays. You get job security and can build a business starting with nothing. <strong class="font-semibold dark:text-white">I want to share with you everything I learn</strong>.
+                    Understanding and building for the web can give you a significant advantage. It provides job security and allows you to start a business from scratch.
+                </p>
+
+                <p class="mt-4">
+                    I want to share with you everything I learn, <strong class="font-semibold">for free</strong>.
                 </p>
             </div>
 
