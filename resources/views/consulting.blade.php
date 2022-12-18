@@ -44,12 +44,12 @@
 
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
-                    <span>I set up a tool that alerts you when your app fails in production</span>
+                    <span>Be notified when your app fails in production</span>
                 </li>
 
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
-                    <span><strong class="font-semibold">100% money-back guarantee</strong> if you don't get any value from this.</span>
+                    <span><strong class="font-bold">100% money-back guarantee</strong> if you don't get any value from this.</span>
                 </li>
             </ul>
 
@@ -64,7 +64,7 @@
                 />
 
                 <p class="text-indigo-100">
-                    <strong class="font-medium text-white">Jump into a call with me</strong> to discuss about your project, your goals and how I can help, in <strong class="font-medium text-white">English or French</strong>.
+                    <strong class="font-medium text-white">Let's discuss</strong> about your project, your goals and how I can help, in <strong class="font-medium text-white">English or French</strong>.
                 </p>
 
                 <a href="https://savvycal.com/benjamincrozat/ask-me-anything" class="bg-white flex-shrink-0 font-semibold sm:ml-4 px-6 py-3 rounded text-center text-indigo-400 w-full sm:w-auto">
