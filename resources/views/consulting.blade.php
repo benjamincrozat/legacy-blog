@@ -16,7 +16,7 @@
         </div>
 
         <div class="container">
-            <ul class="grid gap-4 mt-16 sm:text-lg md:text-xl">
+            <ul class="grid gap-4 mt-8 sm:text-lg md:text-xl">
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
                     <span>I answer any questions you have</span>
@@ -73,13 +73,13 @@
             </div>
         </div>
 
-        <div class="container mt-8 sm:mt-16 text-center text-white">
+        <div class="container mt-16 text-center text-white">
             <h1 class="leading-tight text-xl md:text-2xl text-indigo-100">
                 Choose a package and let's get started
             </h1>
         </div>
 
-        <div class="container max-w-[1024px] mt-8 sm:mt-16">
+        <div class="container max-w-[1024px] mt-8">
             <div class="grid sm:grid-cols-3 gap-4 sm:gap-0 mt-6 sm:mt-8">
                 <div class="bg-gradient-to-r from-white/0 via-white/[.15] to-white/0 grid place-items-center sm:my-8 p-6 sm:p-8 text-center">
                     <div>
