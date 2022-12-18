@@ -15,6 +15,70 @@
             </h1>
         </div>
 
+        <div class="container">
+            <ul class="grid gap-4 mt-16 sm:text-lg md:text-xl">
+                <li class="flex items-center gap-2">
+                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
+                    <span>I answer any questions you have</span>
+                </li>
+
+                <li class="flex items-center gap-2">
+                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
+                    <span>I pair program with your developers</span>
+                </li>
+
+                <li class="flex items-center gap-2">
+                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
+                    <span>Discover best practices that make new hires immediately productive</span>
+                </li>
+
+                <li class="flex items-center gap-2">
+                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
+                    <span>Stop losing sales over bad performances</span>
+                </li>
+
+                <li class="flex items-center gap-2">
+                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
+                    <span>Prevent as many regressions as possible</span>
+                </li>
+
+                <li class="flex items-center gap-2">
+                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
+                    <span>I set up a tool that alerts you when your app fails in production</span>
+                </li>
+
+                <li class="flex items-center gap-2">
+                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
+                    <span><strong class="font-semibold">100% money-back guarantee</strong> if you don't get any value from this.</span>
+                </li>
+            </ul>
+
+            <div class="bg-gradient-to-b sm:bg-gradient-to-r from-transparent to-white/10 flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-between gap-6 mt-8 p-6 rounded-lg">
+                <img
+                    loading="lazy"
+                    src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=128"
+                    width="64"
+                    height="64"
+                    alt="Benjamin Crozat"
+                    class="flex-shrink-0 rotate-2 rounded-full w-[64px] h-[64px]"
+                />
+
+                <p class="text-indigo-100">
+                    <strong class="font-medium text-white">Jump into a call with me</strong> to discuss about your project, your goals and how I can help, in <strong class="font-medium text-white">English or French</strong>.
+                </p>
+
+                <a href="https://savvycal.com/benjamincrozat/ask-me-anything" class="bg-white flex-shrink-0 font-semibold sm:ml-4 px-6 py-3 rounded text-center text-indigo-400 w-full sm:w-auto">
+                    Book a call
+                </a>
+            </div>
+        </div>
+
+        <div class="container mt-8 sm:mt-16 text-center text-white">
+            <h1 class="leading-tight text-xl md:text-2xl text-indigo-100">
+                Then, choose a package and let's get started
+            </h1>
+        </div>
+
         <div class="container max-w-[1024px] mt-8 sm:mt-16">
             <div class="grid sm:grid-cols-3 gap-4 sm:gap-0 mt-6 sm:mt-8">
                 <div class="bg-gradient-to-r from-white/0 via-white/[.15] to-white/0 grid place-items-center sm:my-8 p-6 sm:p-8 text-center">
@@ -83,63 +147,6 @@
             </div>
         </div>
 
-        <div class="container">
-            <ul class="grid gap-4 mt-16 sm:text-lg md:text-xl">
-                <li class="flex items-center gap-2">
-                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
-                    <span>I answer any questions you have</span>
-                </li>
-
-                <li class="flex items-center gap-2">
-                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
-                    <span>I pair program with your developers</span>
-                </li>
-
-                <li class="flex items-center gap-2">
-                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
-                    <span>Discover best practices that make new hires immediately productive</span>
-                </li>
-
-                <li class="flex items-center gap-2">
-                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
-                    <span>Stop losing sales over bad performances</span>
-                </li>
-
-                <li class="flex items-center gap-2">
-                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
-                    <span>Prevent as many regressions as possible</span>
-                </li>
-
-                <li class="flex items-center gap-2">
-                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
-                    <span>I set up a tool that alerts you when your app fails in production</span>
-                </li>
-
-                <li class="flex items-center gap-2">
-                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
-                    <span>100% money-back guarantee if you don't get any value from this.</span>
-                </li>
-            </ul>
-
-            <div class="bg-gradient-to-b sm:bg-gradient-to-r from-transparent to-white/10 flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-between gap-6 mt-16 p-6 rounded-lg">
-                <img
-                    loading="lazy"
-                    src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=128"
-                    width="64"
-                    height="64"
-                    alt="Benjamin Crozat"
-                    class="flex-shrink-0 rotate-2 rounded-full w-[64px] h-[64px]"
-                />
-
-                <p class="text-indigo-100">
-                    <strong class="font-medium text-white">Need more information</strong>? Let's <strong class="font-medium text-white">jump into a quick call</strong> in <strong class="font-medium text-white">English or French</strong>.
-                </p>
-
-                <a href="https://savvycal.com/benjamincrozat/ask-me-anything" class="bg-white flex-shrink-0 font-semibold sm:ml-4 px-6 py-3 rounded text-center text-indigo-400 w-full sm:w-auto">
-                    Book a call
-                </a>
-            </div>
-        </div>
         <div class="container mt-16">
             <h3 class="font-semibold text-xl text-center">
                 These companies trusted me
