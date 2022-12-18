@@ -73,7 +73,7 @@
             </div>
         </div>
 
-        <div class="container mt-16 text-center text-white">
+        <div id="pricing" class="container mt-16 text-center text-white">
             <h1 class="leading-tight text-xl md:text-2xl text-indigo-100">
                 Choose a package and get started
             </h1>
@@ -327,14 +327,16 @@
 
             <div class="mt-16 text-center">
                 <a
-                    href="#"
+                    href="https://savvycal.com/benjamincrozat/ask-me-anything"
                     class="bg-emerald-400 inline-block px-8 py-4 rounded text-base text-center text-white w-full sm:w-auto"
                     @click="window.fathom?.trackGoal('BCXCNHU1', 0)"
                 >
-                    Convinced? <strong class="font-semibold">Book me.</strong>
+                    Convinced? <strong class="font-semibold">Let's talk.</strong>
                 </a>
 
-                <p class="mt-4">Or let's <a href="https://savvycal.com/benjamincrozat/ask-me-anything" class="border-b border-indigo-400/30 font-semibold text-indigo-400">jump into a quick call</a>.</p>
+                <p class="mt-4">
+                    Or <a href="#pricing" class="border-b border-indigo-400/30 font-semibold text-indigo-400">purchase a package right now</a>.
+                </p>
             </div>
         </section>
     </div>
