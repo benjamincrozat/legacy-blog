@@ -75,7 +75,7 @@
 
         <div class="container mt-8 sm:mt-16 text-center text-white">
             <h1 class="leading-tight text-xl md:text-2xl text-indigo-100">
-                Then, choose a package and let's get started
+                Choose a package and let's get started
             </h1>
         </div>
 
