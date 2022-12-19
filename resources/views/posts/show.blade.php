@@ -37,10 +37,6 @@
                     <a href="{{ route('home') }}" class="border-b border-indigo-400/50 font-semibold text-indigo-400">Join them and enjoy free content</a> about the art of crafting websites!
                 </p>
             </div>
-
-            @if ($post->image)
-                <img src="{{ $post->image }}" width="1280" height="720" alt="{{ $post->title }}" class="aspect-video mt-8 object-cover" />
-            @endif
         @endif
 
         @if ($post->introduction)
@@ -69,6 +65,10 @@
         @endif
 
         <x-toc :toc="$post->table_of_contents" class="mt-8" />
+
+        @if (! $post->promotes_affiliate_links && $post->image)
+            <img src="{{ $post->image }}" width="1280" height="720" alt="{{ $post->title }}" class="aspect-video mt-8 object-cover" />
+        @endif
 
         <div class="content mt-8">
             {!! $post->rendered_content !!}
