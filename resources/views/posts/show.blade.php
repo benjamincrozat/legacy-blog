@@ -28,7 +28,7 @@
         </div>
 
         @if (! $post->promotes_affiliate_links)
-            <div class="sm:max-w-screen-xs mt-10 sm:mt-18 sm:mx-auto text-center text-sm md:text-base">
+            <div class="sm:max-w-screen-xs my-16 sm:mx-auto text-center text-sm md:text-base">
                 <x-icon-logos class="mx-auto w-4/5 md:w-auto" />
 
                 <p class="mt-4">
