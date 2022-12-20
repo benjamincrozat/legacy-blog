@@ -28,7 +28,7 @@
         </div>
 
         @if (! $post->promotes_affiliate_links)
-            <div class="border dark:border-gray-800 not-prose mt-8 px-4 py-6 rounded-md text-center">
+            <div class="border dark:border-gray-800 mt-10 px-4 py-6 rounded-md text-center">
                 <x-icon-logos class="sm:mx-auto sm:w-4/5 md:w-2/3" />
 
                 <p class="mt-4">
