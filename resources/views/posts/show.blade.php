@@ -28,14 +28,20 @@
         </div>
 
         @if (! $post->promotes_affiliate_links)
-            <div class="border dark:border-gray-800 not-prose mt-8 p-4 rounded">
-                <p>
-                    Before you start reading this article, did you know <strong class="font-semibold">@choice(':count person|:count persons', $subscribersCount) subscribed to my newsletter</strong>?
+            <div class="border dark:border-gray-800 not-prose mt-8 px-4 py-6 rounded-md text-center">
+                <x-icon-logos class="sm:mx-auto sm:w-4/5 md:w-2/3" />
+
+                <p class="mt-4">
+                    Did you know <strong class="font-semibold">@choice(':count person|:count persons', $subscribersCount) subscribed to my newsletter</strong>?<br class="hidden sm:inline" /> Join them and enjoy free content about the art of crafting websites!
                 </p>
 
-                <p>
-                    <a href="{{ route('home') }}" class="border-b border-indigo-400/50 font-semibold text-indigo-400">Join them and enjoy free content</a> about the art of crafting websites!
-                </p>
+                <x-form method="POST" action="{{ route('subscribe') }}" class="mt-4 sm:mt-6">
+                    <input type="email" name="email" id="email" placeholder="homer@simpson.com" required class="dark:bg-gray-700/40 block border-0 placeholder-gray-300 dark:placeholder-gray-600 px-4 py-3 rounded-md shadow w-full" />
+
+                    <button class="bg-gradient-to-r from-purple-300 dark:from-purple-500 to-purple-400 dark:to-purple-600 block font-semibold mt-2 px-4 py-3 rounded shadow-lg text-white w-full">
+                        Subscribe
+                    </button>
+                </x-form>
             </div>
         @endif
 
