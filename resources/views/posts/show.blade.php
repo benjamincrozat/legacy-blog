@@ -29,7 +29,7 @@
 
         @if (! $post->promotes_affiliate_links)
             <div class="sm:max-w-screen-xs mt-8 sm:mx-auto text-center text-sm md:text-base">
-                <div class="border-b-4 border-dotted border-gray-200 mx-auto w-[100px]"></div>
+                <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mx-auto w-[100px]"></div>
 
                 <x-icon-logos class="mt-8 mx-auto w-4/5 md:w-auto" />
 
@@ -45,7 +45,7 @@
                     </button>
                 </x-form>
 
-                <div class="border-b-4 border-dotted border-gray-200 mt-8 mx-auto w-[100px]"></div>
+                <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mt-8 mx-auto w-[100px]"></div>
             </div>
         @endif
 
