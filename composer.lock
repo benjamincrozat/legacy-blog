@@ -1801,16 +1801,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v9.45.0",
+            "version": "v9.45.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "f2c51fdfcb0c50c19cdc49c2e82690ad1a21eafe"
+                "reference": "faeb20d3fc61b69790068161ab42bcf2d5faccbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/f2c51fdfcb0c50c19cdc49c2e82690ad1a21eafe",
-                "reference": "f2c51fdfcb0c50c19cdc49c2e82690ad1a21eafe",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/faeb20d3fc61b69790068161ab42bcf2d5faccbc",
+                "reference": "faeb20d3fc61b69790068161ab42bcf2d5faccbc",
                 "shasum": ""
             },
             "require": {
@@ -1983,7 +1983,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-12-20T14:16:06+00:00"
+            "time": "2022-12-21T19:37:46+00:00"
         },
         {
             "name": "laravel/nova",
@@ -3367,16 +3367,16 @@
         },
         {
             "name": "openspout/openspout",
-            "version": "v4.10.0",
+            "version": "v4.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/openspout/openspout.git",
-                "reference": "cbf753126f43095112a099eff23ba4f0a47245eb"
+                "reference": "c130bc9a4b4e6d754d779775abab7abc5e89f9de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openspout/openspout/zipball/cbf753126f43095112a099eff23ba4f0a47245eb",
-                "reference": "cbf753126f43095112a099eff23ba4f0a47245eb",
+                "url": "https://api.github.com/repos/openspout/openspout/zipball/c130bc9a4b4e6d754d779775abab7abc5e89f9de",
+                "reference": "c130bc9a4b4e6d754d779775abab7abc5e89f9de",
                 "shasum": ""
             },
             "require": {
@@ -3444,7 +3444,7 @@
             ],
             "support": {
                 "issues": "https://github.com/openspout/openspout/issues",
-                "source": "https://github.com/openspout/openspout/tree/v4.10.0"
+                "source": "https://github.com/openspout/openspout/tree/v4.10.1"
             },
             "funding": [
                 {
@@ -3456,7 +3456,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-12-17T07:17:20+00:00"
+            "time": "2022-12-22T09:56:07+00:00"
         },
         {
             "name": "phpoption/phpoption",
