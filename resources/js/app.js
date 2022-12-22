@@ -1,7 +1,10 @@
 import Alpine from 'alpinejs'
 import Intersect from '@alpinejs/intersect'
 
+import.meta.glob(['../img/**'])
+
 Alpine.plugin(Intersect)
+
 Alpine.start()
 
 if (typeof ezConsentCategories == 'object' && typeof __ezconsent == 'object') {
