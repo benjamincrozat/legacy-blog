@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function __invoke() : View
     {
-        $pins = Pin::latest()->limit(4)->get();
+        $pins = Pin::latest()->limit(4)->get()-shuffle();
 
         $posts = Post::whereNotIn('id', $pins->pluck('post.id'))
             ->latest()
