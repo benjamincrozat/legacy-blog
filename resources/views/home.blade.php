@@ -3,7 +3,7 @@
     description="Have you ever had a question about the art of crafting web applications with PHP, Laravel and its ecosystem? This is the best blog to find your answer."
     class="dark:bg-gray-900 text-gray-600 dark:text-gray-300"
 >
-    <x-nav class="container mt-4 md:mt-6" />
+    <x-nav class="container mt-6" />
 
     <h1 class="hidden">The blog of Benjamin Crozat: PHP, Laravel and its ecosystem</h1>
 
