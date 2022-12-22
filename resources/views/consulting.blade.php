@@ -3,13 +3,17 @@
     description="Book an expert of the Laravel framework, TODAY. Benjamin Crozat is a Laravel developer for hire."
 >
     <div class="bg-gradient-to-r from-indigo-500 to-indigo-400 pb-16 pt-6 text-indigo-50">
-        <div class="text-center">
-            <a href="{{ route('home') }}" class="inline-block">
+        <nav class="container flex items-center justify-between">
+            <a href="{{ route('consulting') }}" class="inline-block">
                 <x-icon-logo class="h-8 md:h-9" />
             </a>
-        </div>
 
-        <div class="container mt-7 text-center text-white">
+            <a href="{{ route('home') }}" class="border border-white/50 px-2 py-1 rounded text-sm">
+                Read my blog
+            </a>
+        </nav>
+
+        <div class="container mt-16 text-center text-white">
             <h1 class="leading-tight text-lg md:text-xl text-indigo-100">
                 Hire an <span class="font-semibold text-white">expert Laravel developer</span>
             </h1>
