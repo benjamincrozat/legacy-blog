@@ -4,9 +4,7 @@
 >
     <div class="bg-gradient-to-r from-indigo-500 to-indigo-400 pb-16 pt-6 text-indigo-50">
         <nav class="container flex items-center justify-between">
-            <a href="{{ route('consulting') }}" class="inline-block">
-                <x-icon-logo class="h-8 md:h-9" />
-            </a>
+            <x-icon-logo class="h-8 md:h-9" />
 
             <a href="{{ route('home') }}" class="border border-white/50 px-2 py-1 rounded text-sm">
                 Read my blog
