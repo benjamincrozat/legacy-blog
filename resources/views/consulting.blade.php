@@ -115,7 +115,7 @@
                     <div>
                         <div>
                             <div class="text-lg sm:text-lg md:text-xl">
-                                3 days <span class="border-b border-indigo-400/50 font-semibold">audit & hands-on</span>
+                                3 days <span class="border-b border-indigo-400/50 font-semibold">audit + hands-on</span>
                             </div>
 
                             <div class="mt-1 text-sm">Maximum value for you and your team</div>
@@ -135,7 +135,7 @@
                     <div>
                         <div>
                             <div class="text-lg sm:text-lg md:text-xl">
-                                7 days <span class="border-b border-white/50 font-semibold">audit & hands-on</span>
+                                7 days <span class="border-b border-white/50 font-semibold">audit + hands-on</span>
                             </div>
 
                             <div class="mt-1 text-sm">Maximum value for you and your team</div>
