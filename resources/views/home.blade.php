@@ -8,7 +8,9 @@
     <h1 class="hidden">The blog of Benjamin Crozat: PHP, Laravel and its ecosystem</h1>
 
     <x-newsletter class="container mt-16">
-        <div class="flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-start gap-6 sm:gap-8 mt-8">
+        <div class="md:flex md:items-center mt-8">
+            <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" width="96" height="96" alt="Benjamin Crozat" class="float-right md:float-none mb-4 ml-4 mt-4 md:m-0 md:order-1 rotate-2 rounded-full w-[80px] h-[80px] md:w-[96px] md:h-[96px]" />
+
             <div>
                 <p>
                     Hi there! 👋
@@ -26,8 +28,6 @@
                     I want to share with you everything I learn, <strong class="font-semibold">for free</strong>.
                 </p>
             </div>
-
-            <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" width="96" height="96" alt="Benjamin Crozat" class="rotate-2 rounded-full" />
         </div>
     </x-newsletter>
 
