@@ -39,23 +39,23 @@ class Short extends Resource
                 ->displayUsing(fn () => 'https://' . config('app.shorts_domain') . '/' . $this->slug)
                 ->exceptOnForms(),
 
-            Text::make('Campaign name')
+            Text::make('UTM source')
                 ->rules('nullable', 'max:255')
                 ->hideFromIndex(),
 
-            Text::make('Campaign source')
+            Text::make('UTM medium')
                 ->rules('nullable', 'max:255')
                 ->hideFromIndex(),
 
-            Text::make('Campaign medium')
+            Text::make('UTM campaign')
                 ->rules('nullable', 'max:255')
                 ->hideFromIndex(),
 
-            Text::make('Campaign content')
+            Text::make('UTM term')
                 ->rules('nullable', 'max:255')
                 ->hideFromIndex(),
 
-            Text::make('Campaign term')
+            Text::make('UTM content')
                 ->rules('nullable', 'max:255')
                 ->hideFromIndex(),
         ];
