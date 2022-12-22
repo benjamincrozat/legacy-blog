@@ -2,14 +2,22 @@
 
 namespace App\Models;
 
+use Spatie\Url\Url;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Spatie\Url\Url;
 
 class Short extends Model
 {
     use HasFactory;
+
+    public static function booted() : void
+    {
+        static::creating(function (Short $short) {
+            $short->slug ??= Str::random(5);
+        });
+    }
 
     public function url() : Attribute
     {
