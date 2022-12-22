@@ -1,15 +1,21 @@
 <x-app
-    title="Laravel developer for hire: Benjamin Crozat"
+    title="Hire an expert Laravel developer: Benjamin Crozat    "
     description="Book an expert of the Laravel framework, TODAY. Benjamin Crozat is a Laravel developer for hire."
 >
-    <div class="bg-gradient-to-r from-indigo-500 to-indigo-400 pb-16 pt-8 text-indigo-50">
+    <div class="bg-gradient-to-r from-indigo-500 to-indigo-400 pb-16 pt-6 text-indigo-50">
         <div class="text-center">
             <a href="{{ route('home') }}" class="inline-block">
-                <x-icon-logo-alt class="fill-current h-20 inline" />
+                <x-icon-logo class="h-8 md:h-9" />
             </a>
         </div>
 
-        <div class="container mt-16 text-center text-white">
+        <div class="container mt-7 text-center text-white">
+            <h1 class="leading-tight text-lg md:text-xl text-indigo-100">
+                Hire an <span class="font-semibold text-white">expert Laravel developer</span>
+            </h1>
+
+            <div class="border-b-4 border-dotted border-white/50 mx-auto my-4 w-[60px]"></div>
+
             <h1 class="leading-tight text-xl md:text-2xl text-indigo-100">
                 <span class="font-semibold text-white">Regain control</span> of the technical side of your&nbsp;business.
             </h1>
@@ -105,7 +111,7 @@
                     <div>
                         <div>
                             <div class="text-lg sm:text-lg md:text-xl">
-                                3 days <span class="border-b border-indigo-400/50 font-semibold">audit & help</span>
+                                3 days <span class="border-b border-indigo-400/50 font-semibold">audit & hands-on</span>
                             </div>
 
                             <div class="mt-1 text-sm">Maximum value for you and your team</div>
@@ -125,7 +131,7 @@
                     <div>
                         <div>
                             <div class="text-lg sm:text-lg md:text-xl">
-                                7 days <span class="border-b border-white/50 font-semibold">audit & help</span>
+                                7 days <span class="border-b border-white/50 font-semibold">audit & hands-on</span>
                             </div>
 
                             <div class="mt-1 text-sm">Maximum value for you and your team</div>
