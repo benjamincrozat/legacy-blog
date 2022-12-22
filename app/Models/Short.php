@@ -14,7 +14,7 @@ class Short extends Model
     public function url() : Attribute
     {
         return Attribute::make(function ($value) {
-            return $value ?? Url::fromString($value)
+            return is_string($value) ? Url::fromString($value)
                 ->withQueryParameters([
                     'utm_campaign' => $this->utm_campaign,
                     'utm_content' => $this->utm_content,
@@ -22,7 +22,7 @@ class Short extends Model
                     'utm_source' => $this->utm_source,
                     'utm_term' => $this->utm_term,
                 ])
-                ->__toString();
+                ->__toString() : null;
         });
     }
 }
