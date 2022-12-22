@@ -29,10 +29,10 @@
         <x-feed-links />
 
         <link rel="apple-touch-icon" sizes="180x180" href="{{ secure_asset('/img/apple-touch-icon.png') }}" />
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ secure_asset('/img/favicons/16x16.png') }}" />
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ secure_asset('/img/favicons/32x32.png') }}" />
-        <link rel="icon" type="image/png" sizes="48x48" href="{{ secure_asset('/img/favicons/48x48.png') }}" />
-        <link rel="icon" type="image/png" sizes="96x96" href="{{ secure_asset('/img/favicons/96x96.png') }}" />
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ secure_asset('/img/16x16.png') }}" />
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ secure_asset('/img/32x32.png') }}" />
+        <link rel="icon" type="image/png" sizes="48x48" href="{{ secure_asset('/img/48x48.png') }}" />
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ secure_asset('/img/96x96.png') }}" />
 
         <link rel="canonical" href="{{ url()->current() }}" />
 
