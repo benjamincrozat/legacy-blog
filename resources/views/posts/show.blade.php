@@ -27,6 +27,12 @@
             <span class="opacity-75">@choice(':count minute|:count minutes', $post->read_time) read</span>
         </div>
 
+        @if ($post->introduction)
+            <div class="content mt-8">
+                {!! $post->rendered_introduction !!}
+            </div>
+        @endif
+
         @if (! $post->promotes_affiliate_links)
             <div class="sm:max-w-screen-xs mt-8 sm:mx-auto text-center text-sm md:text-base">
                 <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mx-auto w-[100px]"></div>
@@ -46,12 +52,6 @@
                 </x-form>
 
                 <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mt-8 mx-auto w-[100px]"></div>
-            </div>
-        @endif
-
-        @if ($post->introduction)
-            <div class="content mt-8">
-                {!! $post->rendered_introduction !!}
             </div>
         @endif
 
