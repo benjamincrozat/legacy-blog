@@ -1,5 +1,5 @@
 <div {{ $attributes->except('bestProduct')->merge(['class' => 'border first:border-orange-200 dark:border-gray-800 dark:first:border-orange-900 flex flex-col group gap-2 p-4 rounded text-sm']) }}>
-    <h2 class="bg-gradient-to-r from-emerald-400 dark:from-emerald-600 group-first:from-orange-300 to-emerald-500 dark:to-emerald-700 dark:group-first:from-orange-400 group-first:to-orange-400 dark:group-first:to-orange-500 font-semibold inline-block px-3 py-1 rounded-full text-center text-white text-xs">
+    <h2 class="bg-gradient-to-r from-emerald-400 dark:from-emerald-600 group-first:from-orange-300 to-emerald-500 dark:to-emerald-700 dark:group-first:from-orange-400 group-first:to-orange-400 dark:group-first:to-orange-500 font-semibold inline px-3 py-1 rounded-full text-center text-white text-xs">
         {{ $bestProduct->title }}
     </h2>
 
