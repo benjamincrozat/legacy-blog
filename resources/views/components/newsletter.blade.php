@@ -4,7 +4,7 @@
     </div>
 
     <p class="font-medium !leading-tight sm:max-w-screen-xs mt-8 mx-auto text-xl text-center">
-        I share everything I learn about the&nbsp;art&nbsp;of&nbsp;crafting&nbsp;websites, <span class="text-indigo-400">for&nbsp;free</span>!
+        <span class="bg-clip-text bg-gradient-to-r from-gray-600 to-gray-900"><span class="text-transparent">I share everything I learn about the&nbsp;art&nbsp;of&nbsp;crafting&nbsp;websites,</span></span> <span class="bg-clip-text bg-gradient-to-r from-indigo-300 to-indigo-400"><span class="text-transparent">for&nbsp;free</span></span>!
     </p>
 
     <x-form method="POST" action="{{ route('subscribe') }}" class="max-w-screen-xs mx-auto mt-4">
