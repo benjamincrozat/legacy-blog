@@ -34,7 +34,7 @@
                 <x-icon-logos class="mt-8 mx-auto w-4/5 md:w-auto" />
 
                 <p class="mt-4">
-                    <strong class="font-semibold">@choice(':count person|:count persons', $subscribersCount) subscribed to my newsletter</strong>.<br class="hidden sm:inline" /> Join them and enjoy free content about the art of crafting websites!
+                    <strong class="font-semibold">@choice(':count person|:count persons', $subscribersCount) subscribed to my newsletter</strong>.<br /> Join them and enjoy free content about the art of crafting websites!
                 </p>
 
                 <x-form method="POST" action="{{ route('subscribe') }}" class="flex items-stretch gap-2 mt-4 sm:mt-6">
