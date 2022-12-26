@@ -83,20 +83,24 @@
         </div>
     </article>
 
-    <div class="container mt-16">
-        <aside class="border dark:border-gray-800 flex flex-wrap sm:flex-nowrap items-center justify-between gap-4 sm:gap-8 px-4 py-6 sm:p-6 rounded">
-            <div class="order-2 sm:order-none">
-                <p class="font-semibold text-xl">
-                    Article written by {{ $post->user->name }}
-                </p>
+    <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mt-8 mx-auto w-[100px]"></div>
 
-                <div class="content !leading-normal">
-                    {!! $post->user->rendered_description !!}
-                </div>
+    <aside class="container flex flex-wrap sm:flex-nowrap items-center justify-between gap-4 sm:gap-8 mt-8">
+        <div class="order-2 sm:order-none">
+            <p class="font-semibold text-xl">
+                Article written by {{ $post->user->name }}
+            </p>
+
+            <div class="content !leading-normal">
+                {!! $post->user->rendered_description !!}
             </div>
+        </div>
 
-            <img src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}?s=192" width="96" height="96" alt="{{ $post->user->name }}" class="-translate-y-[.5px] flex-shrink-0 w-16 h-16 sm:w-24 sm:h-24 order-1 sm:order-none rounded-full" />
-        </aside>
+        <img src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}?s=192" width="96" height="96" alt="{{ $post->user->name }}" class="-translate-y-[.5px] flex-shrink-0 w-16 h-16 sm:w-24 sm:h-24 order-1 sm:order-none rounded-full" />
+    </aside>
+
+    <div class="-mt-4">
+        <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mt-8 mx-auto w-[100px]"></div>
     </div>
 
     @if ($others->isNotEmpty())
