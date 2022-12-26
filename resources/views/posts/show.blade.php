@@ -28,17 +28,17 @@
         </div>
 
         @if (! $post->promotes_affiliate_links)
-            <div class="sm:max-w-screen-xs mt-10 sm:mx-auto text-center text-sm md:text-base">
+            <div class="sm:max-w-screen-xs mt-10 sm:mx-auto text-center text-sm">
                 <x-icon-logos class="mx-auto w-4/5 md:w-auto" />
 
                 <p class="mt-4">
-                    <strong class="font-semibold">@choice(':count person|:count persons', $subscribersCount) subscribed to my newsletter</strong>.<br /> Join them and enjoy free content about the art of crafting websites!
+                    <strong class="font-semibold">@choice(':count person|:count persons', $subscribersCount) subscribed to my newsletter</strong>.<br /> Join them and enjoy free content about the art of crafting&nbsp;websites!
                 </p>
 
-                <x-form method="POST" action="{{ route('subscribe') }}" class="flex items-stretch gap-2 mt-4 sm:mt-6">
-                    <input type="email" name="email" id="email" placeholder="homer@simpson.com" required class="dark:bg-gray-700/40 block border-0 placeholder-gray-300 dark:placeholder-gray-600 px-3 md:px-4 py-2 md:py-3 rounded shadow text-sm md:text-base w-full" />
+                <x-form method="POST" action="{{ route('subscribe') }}" class="grid gap-2 mt-4 sm:mt-6">
+                    <input type="email" name="email" id="email" placeholder="homer@simpson.com" required class="dark:bg-gray-700/40 block border-0 placeholder-gray-300 dark:placeholder-gray-600 px-3 py-2 rounded shadow text-sm w-full" />
 
-                    <button class="bg-gradient-to-r from-purple-300 dark:from-purple-500 to-purple-400 dark:to-purple-600 block font-semibold px-3 md:px-4 py-2 md:py-3 rounded shadow text-white">
+                    <button class="bg-gradient-to-r from-purple-300 dark:from-purple-500 to-purple-400 dark:to-purple-600 block font-semibold py-2 rounded shadow text-white">
                         Subscribe
                     </button>
                 </x-form>
