@@ -4,7 +4,7 @@
     :image="$post->image"
     class="dark:bg-gray-900 text-gray-600 dark:text-gray-300"
 >
-    <x-nav class="container mt-4 sm:mb-8 sm:mt-6" />
+    <x-nav class="container mt-6" />
 
     @if (! $post->promotes_affiliate_links)
         <x-breadcrumb class="container mt-8">
