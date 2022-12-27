@@ -25,5 +25,6 @@ Route::domain(preg_replace('/https?:\/\//', '', config('app.url')))->group(funct
 });
 
 Route::domain(config('app.shorts_domain'))->group(function () {
+    Route::redirect('/', 'https://benjamincrozat.com');
     Route::get('/{short:slug}', RedirectToUrlController::class)->name('shorts.show');
 });
