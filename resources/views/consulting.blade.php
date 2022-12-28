@@ -6,7 +6,7 @@
         <nav class="container flex items-center justify-between">
             <x-icon-logo class="h-8 md:h-9" />
 
-            <a href="{{ route('home') }}" class="border border-white/50 px-2 py-1 rounded text-sm">
+            <a href="{{ route('home') }}" class="border border-white/50 px-3 py-1 rounded text-xs">
                 Read my blog
             </a>
         </nav>
