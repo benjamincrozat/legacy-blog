@@ -14,9 +14,9 @@ class ConsultingControllerTest extends TestCase
         Post::factory(15)->create(['promotes_affiliate_links' => false]);
 
         $response = $this
-            ->get(route('consulting'))
+            ->get(route('laravel-consulting'))
             ->assertOk()
-            ->assertViewIs('consulting')
+            ->assertViewIs('laravel-consulting')
         ;
 
         $this->assertInstanceOf(Collection::class, $response->viewData('posts'));

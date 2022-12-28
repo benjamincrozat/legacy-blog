@@ -5,12 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\View\View;
 
-class ConsultingController extends Controller
+class LaravelConsultingController extends Controller
 {
     public function __invoke() : View
     {
-        // The consulting page displays my last 10 posts.
-        return view('consulting', [
+        return view('laravel-consulting', [
             'posts' => Post::latest()
                 ->where('promotes_affiliate_links', false)
                 ->limit(10)

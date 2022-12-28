@@ -22,7 +22,7 @@
         <div class="flex items-center gap-2 mt-4 text-sm">
             <img src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}" width="18" height="18" alt="{{ $post->user->name }}" class="rounded-full" />
 
-            <a href="{{ route('consulting') }}" class="font-normal underline" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">{{ $post->user->name }}</a>
+            <a href="{{ route('laravel-consulting') }}" class="font-normal underline" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">{{ $post->user->name }}</a>
             —
             <span class="opacity-75">@choice(':count minute|:count minutes', $post->read_time) read</span>
         </div>

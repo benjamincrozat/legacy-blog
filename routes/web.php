@@ -4,14 +4,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ShowPostController;
 use App\Http\Controllers\SubscribeController;
-use App\Http\Controllers\ConsultingController;
 use App\Http\Controllers\RedirectToUrlController;
+use App\Http\Controllers\LaravelConsultingController;
 use App\Http\Controllers\RedirectToAffiliateController;
 
 Route::domain(preg_replace('/https?:\/\//', '', config('app.url')))->group(function () {
     Route::get('/', HomeController::class)->name('home');
 
-    Route::get('/laravel-developer-for-hire', ConsultingController::class)->name('consulting');
+    Route::get('/laravel-developer-for-hire', LaravelConsultingController::class)->name('laravel-consulting');
 
     Route::post('/subscribe', SubscribeController::class)->name('subscribe');
 
