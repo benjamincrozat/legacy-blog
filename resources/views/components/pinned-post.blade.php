@@ -7,7 +7,7 @@
             class="aspect-video object-cover w-full"
         />
 
-        <figcaption class="absolute bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-black flex items-center justify-between gap-4 font-bold px-4 py-3 text-white">
+        <figcaption class="absolute bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-black/75 flex items-center justify-between gap-4 font-bold px-4 py-3 text-white">
             <span class="truncate">{{ $post->title }}</span>
             <x-heroicon-o-arrow-right class="flex-shrink-0 opacity-75 w-3 h-3" />
         </figcaption>
