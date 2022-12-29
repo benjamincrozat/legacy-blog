@@ -1,10 +1,10 @@
-<a href="{{ route('posts.show', $post->slug) }}" @click="window.fathom?.trackGoal('OKJIR46O', 0)" class="block flex-shrink-0 relative snap-start sm:snap-center md:snap-normal scroll-ml-4 md:scroll-ml-0 w-[90%] sm:w-[70%] md:w-auto">
+<a href="{{ route('posts.show', $post->slug) }}" @click="window.fathom?.trackGoal('OKJIR46O', 0)" class="block flex-shrink-0 overflow-hidden relative rounded-md snap-start sm:snap-center md:snap-normal scroll-ml-4 md:scroll-ml-0 w-[90%] sm:w-[70%] md:w-auto">
     <figure {{ $attributes->except('post') }}>
         <img
             @if (empty($first)) loading="lazy" @endif
             src="{{ str_replace('w_auto', 'w_600', $post->image) }}"
             alt="{{ $post->title }}"
-            class="aspect-video object-cover rounded-md w-full"
+            class="aspect-video object-cover w-full"
         />
 
         <figcaption class="absolute bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-black flex items-center justify-between gap-4 font-bold px-4 py-3 text-white">
