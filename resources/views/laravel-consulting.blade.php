@@ -75,7 +75,7 @@
                     <strong class="font-medium text-white">Let's discuss</strong> about your project, your goals and how I can help, in <strong class="font-medium text-white">English or French</strong>.
                 </p>
 
-                <a href="https://savvycal.com/benjamincrozat/ask-me-anything" class="bg-white flex-shrink-0 font-semibold sm:ml-4 px-6 py-3 rounded text-center text-indigo-400 w-full sm:w-auto">
+                <a href="https://savvycal.com/benjamincrozat/ask-me-anything" class="bg-white hover:bg-white/75 flex-shrink-0 font-semibold sm:ml-4 px-6 py-3 rounded text-center text-indigo-400 transition-colors w-full sm:w-auto">
                     Book a call
                 </a>
             </div>
@@ -103,7 +103,7 @@
                             <span class="inline-flex items-center">750<span class="font-light opacity-75 text-xl sm:text-3xl">€</span></span>
                         </div>
 
-                        <a href="https://savvycal.com/benjamincrozat/3-hrs-consulting" class="bg-white/[.15] font-semibold inline-block mt-6 px-8 py-3 rounded text-white">
+                        <a href="https://savvycal.com/benjamincrozat/3-hrs-consulting" class="bg-white/[.15] hover:bg-white/30 font-semibold inline-block mt-6 px-8 py-3 rounded text-white transition-colors">
                             Get started
                         </a>
                     </div>
@@ -123,7 +123,7 @@
                             <span class="inline-flex items-center">2,250<span class="font-light opacity-75 text-xl sm:text-3xl">€</span></span>
                         </div>
 
-                        <a href="https://savvycal.com/benjamincrozat/3-days-consulting" class="bg-emerald-400 font-semibold inline-block mt-6 px-8 py-3 rounded text-white">
+                        <a href="https://savvycal.com/benjamincrozat/3-days-consulting" class="bg-emerald-400 hover:bg-emerald-300 font-semibold inline-block mt-6 px-8 py-3 rounded text-white transition-colors">
                             Get started
                         </a>
                     </div>
@@ -147,7 +147,7 @@
                             <span class="inline-flex items-center">5,250<span class="font-light opacity-75 text-sm">€</span></span>
                         </div>
 
-                        <a href="https://savvycal.com/benjamincrozat/7-days-consulting" class="bg-white/[.15] font-semibold inline-block mt-6 px-8 py-3 rounded text-white">
+                        <a href="https://savvycal.com/benjamincrozat/7-days-consulting" class="bg-white/[.15] hover:bg-white/30 font-semibold inline-block mt-6 px-8 py-3 rounded text-white transition-colors">
                             Get started
                         </a>
                     </div>
@@ -162,7 +162,8 @@
 
             <ul class="flex flex-wrap items-center justify-center gap-x-8 md:gap-x-12 gap-y-4 md:gap-y-8 mt-4">
                 <li>
-                    <a href="https://www.doctissimo.fr" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
+                    <a
+                        href="https://www.doctissimo.fr" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
                         <x-icon-doctissimo class="fill-current h-3 md:h-5 text-white" />
                         <span class="sr-only">Doctissimo</span>
                     </a>
@@ -336,7 +337,7 @@
             <div class="mt-16 text-center">
                 <a
                     href="https://savvycal.com/benjamincrozat/ask-me-anything"
-                    class="bg-emerald-400 inline-block px-8 py-4 rounded text-base text-center text-white w-full sm:w-auto"
+                    class="bg-emerald-400 hover:bg-emerald-300 inline-block px-8 py-4 rounded text-base text-center text-white transition-colors w-full sm:w-auto"
                     @click="window.fathom?.trackGoal('BCXCNHU1', 0)"
                 >
                     Convinced? <strong class="font-semibold">Let's talk.</strong>
