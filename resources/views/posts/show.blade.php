@@ -83,7 +83,7 @@
         </div>
     </article>
 
-    <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mt-8 mx-auto w-[100px]"></div>
+    <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mt-8 sm:mt-16 mx-auto w-[100px]"></div>
 
     <aside class="container flex flex-wrap sm:flex-nowrap items-center justify-between gap-4 sm:gap-8 mt-8">
         <div class="order-2 sm:order-none">
