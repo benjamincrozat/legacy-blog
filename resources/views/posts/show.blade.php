@@ -104,7 +104,7 @@
     </div>
 
     @if ($others->isNotEmpty())
-        <div class="container max-w-[1024px] mt-16">
+        <div class="container max-w-[1024px] mt-8 sm:mt-16">
             <p class="font-semibold text-center text-xl">Other posts to read</p>
 
             <div class="grid md:grid-cols-2 gap-4 sm:gap-8 mt-8">
