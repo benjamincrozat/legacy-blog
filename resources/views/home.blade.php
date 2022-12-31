@@ -57,6 +57,13 @@
         @endif
     </section>
 
+    <x-newsletter class="container mt-16">
+        <x-slot:headline>
+            Want more content?<br />
+            Subscribe to my <span class="bg-clip-text bg-gradient-to-r from-indigo-300 to-indigo-400"><span class="text-transparent">free</span></span> newsletter!
+        </x-slot:headline>
+    </x-newsletter>
+
     <div class="bg-gray-900 dark:bg-black mt-16">
         <x-footer class="text-gray-200" />
     </div>
