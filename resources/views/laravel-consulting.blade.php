@@ -178,7 +178,7 @@
 
                 <li>
                     <a href="https://jetfly.com" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
-                        <x-icon-jetfly class="fill-current h-8 md:h-10 text-white" />
+                        <x-icon-jetfly class="fill-current h-6 sm:h-8 md:h-10 text-white" />
                         <span class="sr-only">Jetfly</span>
                     </a>
                 </li>
@@ -192,7 +192,7 @@
 
                 <li>
                     <a href="https://qwant.com" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
-                        <x-icon-qwant class="fill-current w-12 md:w-14 text-white" />
+                        <x-icon-qwant class="fill-current w-10 sm:w-12 md:w-14 text-white" />
                         <span class="sr-only">Qwant</span>
                     </a>
                 </li>
