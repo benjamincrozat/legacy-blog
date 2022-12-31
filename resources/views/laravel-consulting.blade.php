@@ -160,7 +160,7 @@
                 These companies trusted me
             </h3>
 
-            <ul class="flex flex-wrap items-center justify-center gap-x-6 sm:gap-x-8 md:gap-x-12 gap-y-4 md:gap-y-8 mt-4">
+            <ul class="flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-8 md:gap-x-12 gap-y-4 md:gap-y-8 mt-4">
                 <li>
                     <a
                         href="https://www.doctissimo.fr" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
