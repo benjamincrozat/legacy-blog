@@ -6,7 +6,7 @@
     <nav class="flex items-center gap-6 sm:gap-8">
         <a
             href="{{ route('laravel-consulting') }}"
-            class="bg-gradient-to-r from-indigo-300 dark:from-indigo-500 to-indigo-400 dark:to-indigo-600 hover:-hue-rotate-90 transition-all font-semibold px-4 sm:px-6 py-2 rounded shadow-lg text-sm text-white w-full"
+            class="bg-gradient-to-r from-indigo-300 dark:from-indigo-500 to-indigo-400 dark:to-indigo-600 hover:-hue-rotate-90 duration-500 transition-all font-semibold px-4 sm:px-6 py-2 rounded shadow-lg text-sm text-white w-full"
             @click="window.fathom?.trackGoal('SJKONFQC', 0)"
         >
             Book me
