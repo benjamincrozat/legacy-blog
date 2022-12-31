@@ -185,14 +185,14 @@
 
                 <li>
                     <a href="https://mym.fans" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
-                        <x-icon-mym class="fill-current h-4 md:h-6 text-white" />
+                        <x-icon-mym class="fill-current h-3 sm:h-4 md:h-6 text-white" />
                         <span class="sr-only">MYM</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="https://qwant.com" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
-                        <x-icon-qwant class="fill-current w-10 sm:w-12 md:w-14 text-white" />
+                        <x-icon-qwant class="fill-current w-8 sm:w-12 md:w-14 text-white" />
                         <span class="sr-only">Qwant</span>
                     </a>
                 </li>
