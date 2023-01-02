@@ -155,48 +155,12 @@
             </div>
         </div>
 
-        <div class="container mt-16">
-            <h3 class="font-semibold text-xl text-center">
+        <div class="container mt-16 text-center">
+            <h3 class="font-semibold text-xl">
                 These companies trusted me
             </h3>
 
-            <ul class="flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-8 md:gap-x-12 gap-y-4 md:gap-y-8 mt-4">
-                <li>
-                    <a
-                        href="https://www.doctissimo.fr" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
-                        <x-icon-doctissimo class="fill-current h-3 md:h-5 text-white" />
-                        <span class="sr-only">Doctissimo</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://www.iconosquare.com" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
-                        <x-icon-iconosquare class="fill-current h-6 md:h-8 text-white" />
-                        <span class="sr-only">Iconosquare</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://jetfly.com" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
-                        <x-icon-jetfly class="fill-current h-6 sm:h-8 md:h-10 text-white" />
-                        <span class="sr-only">Jetfly</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://mym.fans" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
-                        <x-icon-mym class="fill-current h-3 sm:h-4 md:h-6 text-white" />
-                        <span class="sr-only">MYM</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://qwant.com" target="_blank" rel="nofollow noopener noreferrer" @click="window.fathom?.trackGoal('XODHVE6D', 0)">
-                        <x-icon-qwant class="fill-current w-8 sm:w-12 md:w-14 text-white" />
-                        <span class="sr-only">Qwant</span>
-                    </a>
-                </li>
-            </ul>
+            <x-icon-clients class="fill-current inline-block mt-8 text-white w-full" />
         </div>
     </div>
 
