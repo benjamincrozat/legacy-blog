@@ -40,7 +40,7 @@
             <script defer src="https://save-tonight-hey-jude.benjamincrozat.com/script.js" data-site="{{ config('services.fathom.site_id') }}"></script>
         @endif
     </head>
-    <body {{ $attributes->merge(['class' => 'bg-gray-50 font-light']) }} x-data>
+    <body {{ $attributes->merge(['class' => 'bg-gray-50 font-light', 'x-data' => '']) }}>
         {{ $slot }}
 
         @if (session('status') || request()->convertkit)
