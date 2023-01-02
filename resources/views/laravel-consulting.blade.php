@@ -84,14 +84,14 @@
             </div>
         </div>
 
-        <div class="mt-8 text-center">
-            <button class="border border-white/30 font-semibold inline-flex items-center gap-2 px-6 py-3 rounded transition-all" @click="open = ! open">
-                <span x-text="open ? `Hide pricing and packages` : `See pricing and packages`"></span>
-                <x-heroicon-o-chevron-down class="h-4 transition-all translate-y-px" x-bind:class="{ 'rotate-180': open }" />
+        <div class="container mt-8 text-center" x-show="! open">
+            <button class="border border-white/30 font-semibold inline-flex items-center justify-center gap-2 px-6 py-3 rounded transition-all w-full sm:w-auto" @click="open = true">
+                See pricing and packages
+                <x-heroicon-o-chevron-down class="h-4 translate-y-px" />
             </button>
         </div>
 
-        <div id="pricing" class="mt-16 text-white" x-show="open">
+        <div id="pricing" class="mt-16 text-white" x-show="open" x-transition>
             <div class="container max-w-[1024px]">
                 <h1 class="leading-tight text-xl md:text-2xl text-center text-indigo-100">
                     Choose a package and get started
