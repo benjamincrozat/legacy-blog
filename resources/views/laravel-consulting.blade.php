@@ -85,7 +85,7 @@
         </div>
 
         <div class="container mt-8 text-center" x-show="! open">
-            <button class="border border-white/30 font-semibold inline-flex items-center justify-center gap-2 px-6 py-3 rounded transition-all w-full sm:w-auto" @click="open = true">
+            <button class="border border-white/30 font-semibold inline-flex items-center justify-center gap-2 px-6 py-3 rounded transition-all w-full sm:w-auto" @click="open = true; window.fathom?.trackGoal('CSUE9AJ3', 0)">
                 See pricing and packages
                 <x-heroicon-o-chevron-down class="h-4 translate-y-px" />
             </button>
