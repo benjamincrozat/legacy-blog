@@ -25,42 +25,46 @@
         </div>
 
         <div class="container">
-            <ul class="grid gap-4 mt-8 sm:text-lg md:text-xl">
+            <ul class="grid sm:grid-cols-2 gap-4 mt-8">
                 <li class="flex items-center gap-2">
-                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
+                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 h-5" />
                     <span>I answer any questions you have</span>
                 </li>
 
                 <li class="flex items-center gap-2">
-                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
+                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 h-5" />
                     <span>I pair program with your developers</span>
                 </li>
 
                 <li class="flex items-center gap-2">
-                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
-                    <span>Discover best practices that make new hires immediately productive</span>
+                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 h-5" />
+                    <span>Discover best practices that make new hires productive</span>
                 </li>
 
                 <li class="flex items-center gap-2">
-                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
+                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 h-5" />
                     <span>Stop losing sales over bad performances</span>
                 </li>
 
                 <li class="flex items-center gap-2">
-                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
+                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 h-5" />
                     <span>Prevent as many regressions as possible</span>
                 </li>
 
                 <li class="flex items-center gap-2">
-                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
+                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 h-5" />
                     <span>Be notified when your app fails in production</span>
                 </li>
 
                 <li class="flex items-center gap-2">
-                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 md:w-6 h-5 md:h-6" />
-                    <span><strong class="font-bold">100% money-back guarantee</strong> if you don't get any value from this.</span>
+                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 h-5" />
+                    <span><strong class="font-bold">100% money-back guarantee</strong> if you don't get any value</span>
                 </li>
             </ul>
+        </div>
+
+        <div class="container">
+
 
             <div class="bg-gradient-to-b sm:bg-gradient-to-l from-transparent to-white/10 flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-between gap-6 mt-16 mx-auto pb-6 px-6 sm:p-6 rounded-lg">
                 <div class="order-2 sm:order-none">
@@ -68,9 +72,18 @@
                         <strong class="font-medium text-white">Let's discuss</strong> about your project, your goals and how I can help. I speak <strong class="font-medium text-white">English</strong> and <strong class="font-medium text-white">French</strong>.
                     </p>
 
-                    <a href="https://savvycal.com/benjamincrozat/ask-me-anything" class="bg-white hover:bg-white/75 font-semibold inline-block mt-4 px-4 py-2 rounded text-center text-indigo-400 transition-colors w-full sm:w-auto">
-                        Book a call
-                    </a>
+                    <div class="flex items-center gap-2 mt-4">
+                        <button
+                            class="border border-white/30 font-semibold px-4 py-2 rounded transition-colors w-full sm:w-auto"
+                            @click="open = ! open; window.fathom?.trackGoal('CSUE9AJ3', 0)"
+                        >
+                            <span x-text="open ? 'Hide pricing' : 'See pricing'"></span>
+                        </button>
+
+                        <a href="https://savvycal.com/benjamincrozat/ask-me-anything" class="bg-white hover:bg-white/75 border border-white font-semibold inline-block px-4 py-2 rounded text-center text-indigo-400 transition-colors w-full sm:w-auto">
+                            Book a call
+                        </a>
+                    </div>
                 </div>
 
                 <img
@@ -82,13 +95,6 @@
                     class="flex-shrink-0 order-1 sm:order-none rounded-full w-[64px] h-[64px]"
                 />
             </div>
-        </div>
-
-        <div class="container mt-8 text-center" x-show="! open">
-            <button class="border border-white/30 font-semibold inline-flex items-center justify-center gap-2 px-6 py-3 rounded transition-all w-full sm:w-auto" @click="open = true; window.fathom?.trackGoal('CSUE9AJ3', 0)">
-                See pricing and packages
-                <x-heroicon-o-chevron-down class="h-4 translate-y-px" />
-            </button>
         </div>
 
         <div id="pricing" class="mt-16 text-white" x-show="open" x-transition>
