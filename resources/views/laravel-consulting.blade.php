@@ -14,14 +14,14 @@
 
         <div class="container mt-16 text-center text-white">
             <h1 class="leading-tight text-lg md:text-xl text-indigo-100">
-                Hire an <span class="font-semibold text-white">expert Laravel developer</span>
+                <span class="font-semibold text-white">Hire Laravel expert</span> with 10+ years of experience, today!
             </h1>
 
             <div class="border-b-4 border-dotted border-white/50 mx-auto my-4 w-[60px]"></div>
 
-            <h1 class="leading-tight text-xl md:text-2xl text-indigo-100">
+            <h2 class="leading-tight text-xl md:text-2xl text-indigo-100">
                 <span class="font-semibold text-white">Regain control</span> of the technical side of your&nbsp;business.
-            </h1>
+            </h2>
         </div>
 
         <div class="container">
