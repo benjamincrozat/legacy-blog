@@ -298,7 +298,7 @@
             x-intersect="window.fathom?.trackGoal('WSVGAGQR', 0)"
         >
             <h2 class="font-medium text-xl sm:text-3xl text-center">
-                What to look for when hiring a dedicated Laravel developer?
+                Want to hire a Laravel developer? Here's what to look for
             </h2>
 
             <div class="leading-relaxed mt-6">
@@ -316,9 +316,9 @@
                     <li class="mt-2">Even an inactive GitHub account is a good sign. A basic comprehension of open source reinforces the previous point.</li>
                 </ul>
 
-                <h3 class="font-medium mt-8 text-lg">Don't hire senior developers to work on basic tasks</h3>
+                <h3 class="font-medium mt-8 text-lg">Don't hire Laravel specialists to work on basic tasks</h3>
 
-                <p class="mt-4">A senior developer is expensive, and for good reasons. Years of experience made them a master at what they do. You want them to work on something other than simple interface changes or bug fixes, or they'll get bored and leave as soon as possible.</p>
+                <p class="mt-4">A Laravel expert is expensive, and for good reasons. Years of experience made them a master at what they do. You want them to work on something other than simple interface changes or bug fixes, or they'll get bored and leave as soon as possible.</p>
 
                 <p class="mt-4">Senior developers want to work on complex issues that will make your project easier to maintain, more stable, and more profitable in the long run.</p>
 
