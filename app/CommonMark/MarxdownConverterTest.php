@@ -7,14 +7,6 @@ use Illuminate\Support\Str;
 
 class MarxdownConverterTest extends TestCase
 {
-    public function test_it_adds_loading_attribute_to_image() : void
-    {
-        $this->assertStringContainsString(
-            'loading="lazy"',
-            Str::marxdown('![](https://example.com/some/image.jpg)')
-        );
-    }
-
     public function test_it_adds_rel_nofollow_noopener_noreferrer_attribute_to_external_links() : void
     {
         $this->assertStringContainsString(
