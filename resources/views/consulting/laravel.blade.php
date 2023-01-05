@@ -1,5 +1,5 @@
 <x-app
-    title="Hire an expert Laravel developer: Benjamin Crozat    "
+    title="Hire an expert Laravel developer: Benjamin Crozat"
     description="Book an expert of the Laravel framework, TODAY. Benjamin Crozat is a Laravel developer for hire."
     x-data="{ open: false }"
 >
@@ -24,11 +24,6 @@
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 h-5" />
                     <span>I answer any questions you have</span>
-                </li>
-
-                <li class="flex items-center gap-2">
-                    <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 h-5" />
-                    <span>I pair program with your developers</span>
                 </li>
 
                 <li class="flex items-center gap-2">
@@ -85,66 +80,44 @@
     <div id="pricing" class="bg-gradient-to-r from-indigo-600 to-indigo-400 py-16 text-indigo-50">
         <div class="container max-w-[1024px]">
             <h2 class="font-semibold leading-tight text-xl md:text-2xl text-center">
-                Pricing
+                No scope to define.<br />
+                Simple pricing.
             </h2>
 
-            <div class="mt-5 text-center sm:text-lg md:text-xl">
-                <p>
-                    Before we work together, I want to know you better. <a href="https://savvycal.com/benjamincrozat/ask-me-anything" class="font-semibold underline text-white">Let's meet</a>.<br class="hidden sm:inline" />
-                    Budget planning is important, though. Here are all the packages you will be able to purchase.
-                </p>
-            </div>
-
-            <div class="grid sm:grid-cols-3 gap-4 sm:gap-0 mt-8">
-                <div class="bg-gradient-to-r from-white/0 via-white/[.15] to-white/0 grid place-items-center sm:my-8 p-6 sm:p-8 text-center">
-                    <div>
-                        <div>
-                            <div class="text-lg sm:text-lg md:text-xl">
-                                3 hours <strong class="border-b border-white/50 font-semibold">audit</strong>
-                            </div>
-
-                            <div class="mt-1 text-sm">Maximum value for you and your team</div>
-                        </div>
-
-                        <div class="font-black mt-4 text-4xl md:text-5xl">
-                            <span class="inline-flex items-center">750<span class="font-light opacity-75 text-xl sm:text-3xl">€</span></span>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="grid sm:grid-cols-2 gap-4 sm:gap-0 mt-8">
                 <div class="bg-gradient-to-r from-white to-indigo-50 grid place-items-center py-6 sm:p-8 rounded-xl shadow-xl shadow-indigo-500 text-center text-indigo-400">
                     <div>
                         <div>
-                            <div class="text-lg sm:text-lg md:text-xl">
-                                3 days <span class="border-b border-indigo-400/50 font-semibold">audit + hands-on</span>
+                            <div class="font-semibold text-lg sm:text-lg md:text-xl">
+                                Audit + Hands-on
                             </div>
 
-                            <div class="mt-1 text-sm">Maximum value for you and your team</div>
-                        </div>
-
-                        <div class="font-black mt-4 text-4xl md:text-5xl">
-                            <span class="inline-flex items-center">2,250<span class="font-light opacity-75 text-xl sm:text-3xl">€</span></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-gradient-to-r from-white/0 via-white/[.15] to-white/0 grid place-items-center sm:my-8 p-6 sm:p-8 text-center">
-                    <div>
-                        <div>
-                            <div class="text-lg sm:text-lg md:text-xl">
-                                7 days <span class="border-b border-white/50 font-semibold">audit + hands-on</span>
-                            </div>
-
-                            <div class="mt-1 text-sm">Maximum value for you and your team</div>
+                            <div>I help improve your product.</div>
                         </div>
 
                         <div class="font-black mt-4 text-4xl md:text-5xl">
                             <span class="inline-flex items-center">5,000<span class="font-light opacity-75 text-xl sm:text-3xl">€</span></span>
                         </div>
 
-                        <div class="line-through text-xl">
-                            <span class="inline-flex items-center">5,250<span class="font-light opacity-75 text-sm">€</span></span>
+                        <a href="https://savvycal.com/benjamincrozat/ask-me-anything" class="font-semibold inline-block mt-4 underline">Book a call</a>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-white/0 via-white/[.15] to-white/0 grid place-items-center sm:my-8 p-6 sm:p-8 text-center">
+                    <div>
+                        <div>
+                            <div class="font-semibold text-lg sm:text-lg md:text-xl">
+                                Audit
+                            </div>
+
+                            <div>I will tell you how to fix your product.</div>
                         </div>
+
+                        <div class="font-black mt-4 text-4xl md:text-5xl">
+                            <span class="inline-flex items-center">1,000<span class="font-light opacity-75 text-xl sm:text-3xl">€</span></span>
+                        </div>
+
+                        <a href="https://savvycal.com/benjamincrozat/ask-me-anything" class="font-semibold inline-block mt-4 underline">Book a call</a>
                     </div>
                 </div>
             </div>
@@ -293,7 +266,7 @@
                     class="bg-emerald-400 hover:bg-emerald-300 inline-block px-8 py-4 rounded text-base text-center text-white transition-colors w-full sm:w-auto"
                     @click="window.fathom?.trackGoal('BCXCNHU1', 0)"
                 >
-                    Convinced? <strong class="font-semibold">Let's talk.</strong>
+                    Convinced? <strong class="font-semibold">Book a call.</strong>
                 </a>
             </div>
         </section>

@@ -12,7 +12,7 @@
                 />
 
                 <p>
-                    <a href="{{ route('laravel-consulting') }}" target="_blank" rel="noopener noreferrer" class="font-medium" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">{{ $post->user->name }}</a> — <span class="opacity-75">@choice(':count&nbsp;minute|:count&nbsp;minutes', $post->read_time) read</span>
+                    <a href="{{ route('consulting.laravel') }}" target="_blank" rel="noopener noreferrer" class="font-medium" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">{{ $post->user->name }}</a> — <span class="opacity-75">@choice(':count&nbsp;minute|:count&nbsp;minutes', $post->read_time) read</span>
                 </p>
             </div>
 

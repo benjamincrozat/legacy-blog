@@ -10,11 +10,11 @@ use App\Http\Controllers\RedirectToAffiliateController;
 Route::domain(preg_replace('/https?:\/\//', '', config('app.url')))->group(function () {
     Route::get('/', HomeController::class)->name('home');
 
-    Route::view('/laravel-developer-for-hire', 'laravel-consulting')->name('laravel-consulting');
+    Route::view('/laravel-developer-for-hire', 'consulting.laravel')->name('consulting.laravel');
+
+    Route::view('/seo-consulting', 'consulting.seo')->name('consulting.seo');
 
     Route::post('/subscribe', SubscribeController::class)->name('subscribe');
-
-    Route::view('/seo-wizardry', 'seo-wizardry')->middleware('auth');
 
     Route::get('/recommends/{affiliate:slug}', RedirectToAffiliateController::class)->name('affiliate');
 
