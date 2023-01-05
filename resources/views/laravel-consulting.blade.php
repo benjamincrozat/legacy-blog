@@ -298,7 +298,8 @@
             x-intersect="window.fathom?.trackGoal('WSVGAGQR', 0)"
         >
             <h2 class="font-medium text-xl sm:text-3xl text-center">
-                Want to hire a Laravel developer? Here's what to look for
+                Want to hire a Laravel developer?<br />
+                Here's what to look for.
             </h2>
 
             <div class="leading-relaxed mt-6">
