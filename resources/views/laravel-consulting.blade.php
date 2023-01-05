@@ -84,11 +84,18 @@
 
     <div id="pricing" class="bg-gradient-to-r from-indigo-600 to-indigo-400 py-16 text-indigo-50">
         <div class="container max-w-[1024px]">
-            <h2 class="leading-tight text-xl md:text-2xl text-center">
+            <h2 class="font-semibold leading-tight text-xl md:text-2xl text-center">
                 Pricing
             </h2>
 
-            <div class="grid sm:grid-cols-3 gap-4 sm:gap-0 mt-6 sm:mt-8">
+            <div class="mt-5 text-center sm:text-lg md:text-xl">
+                <p>
+                    Before we work together, I want to know you better. <a href="https://savvycal.com/benjamincrozat/ask-me-anything" class="font-semibold underline text-white">Let's meet</a>.<br class="hidden sm:inline" />
+                    Budget planning is important, though. Here are all the packages you will be able to purchase.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-3 gap-4 sm:gap-0 mt-8">
                 <div class="bg-gradient-to-r from-white/0 via-white/[.15] to-white/0 grid place-items-center sm:my-8 p-6 sm:p-8 text-center">
                     <div>
                         <div>
@@ -408,7 +415,7 @@
                 </div>
 
                 <div class="flex-shrink-0 order-1 md:order-none text-center md:text-left w-full md:w-auto">
-                    <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" width="96" height="96" alt="Benjamin Crozat" class="inline rotate-2 rounded-full" />
+                    <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" width="96" height="96" alt="Benjamin Crozat" class="inline rounded-full" />
                 </div>
             </div>
         </section>
