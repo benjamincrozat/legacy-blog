@@ -12,20 +12,15 @@
             </a>
         </nav>
 
-        <div class="container mt-16 text-center text-white">
-            <h1 class="leading-tight text-lg md:text-xl text-indigo-100">
-                <span class="font-semibold text-white">Hire Laravel expert</span> with 10+ years of experience, today!
+        <div class="container mt-16">
+            <h1 class="leading-tight text-lg sm:text-xl md:text-2xl text-center text-indigo-100">
+                <span class="font-medium text-white">Hire a Laravel expert</span>.<br />
+                10+&nbsp;years&nbsp;of&nbsp;experience at your service.
             </h1>
-
-            <div class="border-b-4 border-dotted border-white/50 mx-auto my-4 w-[60px]"></div>
-
-            <h2 class="leading-tight text-xl md:text-2xl text-indigo-100">
-                <span class="font-semibold text-white">Regain control</span> of the technical side of your&nbsp;business.
-            </h2>
         </div>
 
         <div class="container">
-            <ul class="grid sm:grid-cols-2 gap-4 mt-8">
+            <ul class="grid gap-4 mt-8 sm:text-lg md:text-xl">
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 h-5" />
                     <span>I answer any questions you have</span>
@@ -63,27 +58,16 @@
             </ul>
         </div>
 
-        <div class="container">
-
-
-            <div class="bg-gradient-to-b sm:bg-gradient-to-l from-transparent to-white/10 flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-between gap-6 mt-16 mx-auto pb-6 px-6 sm:p-6 rounded-lg">
+        <div class="container max-w-screen-sm">
+            <div class="border border-white/30 flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-between gap-6 mt-16 p-6 rounded-lg">
                 <div class="order-2 sm:order-none">
                     <p class="text-indigo-100">
                         <strong class="font-medium text-white">Let's discuss</strong> about your project, your goals and how I can help. I speak <strong class="font-medium text-white">English</strong> and <strong class="font-medium text-white">French</strong>.
                     </p>
 
-                    <div class="flex items-center gap-2 mt-4">
-                        <button
-                            class="border border-white/30 font-semibold px-4 py-2 rounded transition-colors w-full sm:w-auto"
-                            @click="open = ! open; window.fathom?.trackGoal('CSUE9AJ3', 0)"
-                        >
-                            <span x-text="open ? 'Hide pricing' : 'See pricing'"></span>
-                        </button>
-
-                        <a href="https://savvycal.com/benjamincrozat/ask-me-anything" class="bg-white hover:bg-white/75 border border-white font-semibold inline-block px-4 py-2 rounded text-center text-indigo-400 transition-colors w-full sm:w-auto">
-                            Book a call
-                        </a>
-                    </div>
+                    <a href="https://savvycal.com/benjamincrozat/ask-me-anything" class="bg-white hover:bg-white/75 border border-white font-semibold inline-block mt-4 px-4 py-2 rounded text-center text-indigo-400 transition-colors w-full sm:w-auto">
+                        Book a call
+                    </a>
                 </div>
 
                 <img
@@ -96,87 +80,69 @@
                 />
             </div>
         </div>
+    </div>
 
-        <div id="pricing" class="mt-16 text-white" x-show="open" x-transition>
-            <div class="container max-w-[1024px]">
-                <h1 class="leading-tight text-xl md:text-2xl text-center text-indigo-100">
-                    Choose a package and get started
-                </h1>
+    <div id="pricing" class="bg-gradient-to-r from-indigo-600 to-indigo-400 py-16 text-indigo-50">
+        <div class="container max-w-[1024px]">
+            <h2 class="leading-tight text-xl md:text-2xl text-center">
+                Pricing
+            </h2>
 
-                <div class="grid sm:grid-cols-3 gap-4 sm:gap-0 mt-6 sm:mt-8">
-                    <div class="bg-gradient-to-r from-white/0 via-white/[.15] to-white/0 grid place-items-center sm:my-8 p-6 sm:p-8 text-center">
+            <div class="grid sm:grid-cols-3 gap-4 sm:gap-0 mt-6 sm:mt-8">
+                <div class="bg-gradient-to-r from-white/0 via-white/[.15] to-white/0 grid place-items-center sm:my-8 p-6 sm:p-8 text-center">
+                    <div>
                         <div>
-                            <div>
-                                <div class="text-lg sm:text-lg md:text-xl">
-                                    3 hours <strong class="border-b border-white/50 font-semibold">audit</strong>
-                                </div>
-
-                                <div class="mt-1 text-sm">Maximum value for you and your team</div>
+                            <div class="text-lg sm:text-lg md:text-xl">
+                                3 hours <strong class="border-b border-white/50 font-semibold">audit</strong>
                             </div>
 
-                            <div class="font-black mt-4 text-4xl md:text-5xl">
-                                <span class="inline-flex items-center">750<span class="font-light opacity-75 text-xl sm:text-3xl">€</span></span>
-                            </div>
+                            <div class="mt-1 text-sm">Maximum value for you and your team</div>
+                        </div>
 
-                            <a href="https://savvycal.com/benjamincrozat/3-hrs-consulting" class="bg-white/[.15] hover:bg-white/30 font-semibold inline-block mt-6 px-8 py-3 rounded text-white transition-colors">
-                                Get started
-                            </a>
+                        <div class="font-black mt-4 text-4xl md:text-5xl">
+                            <span class="inline-flex items-center">750<span class="font-light opacity-75 text-xl sm:text-3xl">€</span></span>
                         </div>
                     </div>
+                </div>
 
-                    <div class="bg-gradient-to-r from-white to-indigo-50 grid place-items-center py-6 sm:p-8 rounded-xl shadow-xl shadow-indigo-500 text-center text-indigo-400">
+                <div class="bg-gradient-to-r from-white to-indigo-50 grid place-items-center py-6 sm:p-8 rounded-xl shadow-xl shadow-indigo-500 text-center text-indigo-400">
+                    <div>
                         <div>
-                            <div>
-                                <div class="text-lg sm:text-lg md:text-xl">
-                                    3 days <span class="border-b border-indigo-400/50 font-semibold">audit + hands-on</span>
-                                </div>
-
-                                <div class="mt-1 text-sm">Maximum value for you and your team</div>
+                            <div class="text-lg sm:text-lg md:text-xl">
+                                3 days <span class="border-b border-indigo-400/50 font-semibold">audit + hands-on</span>
                             </div>
 
-                            <div class="font-black mt-4 text-4xl md:text-5xl">
-                                <span class="inline-flex items-center">2,250<span class="font-light opacity-75 text-xl sm:text-3xl">€</span></span>
-                            </div>
+                            <div class="mt-1 text-sm">Maximum value for you and your team</div>
+                        </div>
 
-                            <a href="https://savvycal.com/benjamincrozat/3-days-consulting" class="bg-emerald-400 hover:bg-emerald-300 font-semibold inline-block mt-6 px-8 py-3 rounded text-white transition-colors">
-                                Get started
-                            </a>
+                        <div class="font-black mt-4 text-4xl md:text-5xl">
+                            <span class="inline-flex items-center">2,250<span class="font-light opacity-75 text-xl sm:text-3xl">€</span></span>
                         </div>
                     </div>
+                </div>
 
-                    <div class="bg-gradient-to-r from-white/0 via-white/[.15] to-white/0 grid place-items-center sm:my-8 p-6 sm:p-8 text-center">
+                <div class="bg-gradient-to-r from-white/0 via-white/[.15] to-white/0 grid place-items-center sm:my-8 p-6 sm:p-8 text-center">
+                    <div>
                         <div>
-                            <div>
-                                <div class="text-lg sm:text-lg md:text-xl">
-                                    7 days <span class="border-b border-white/50 font-semibold">audit + hands-on</span>
-                                </div>
-
-                                <div class="mt-1 text-sm">Maximum value for you and your team</div>
+                            <div class="text-lg sm:text-lg md:text-xl">
+                                7 days <span class="border-b border-white/50 font-semibold">audit + hands-on</span>
                             </div>
 
-                            <div class="font-black mt-4 text-4xl md:text-5xl">
-                                <span class="inline-flex items-center">5,000<span class="font-light opacity-75 text-xl sm:text-3xl">€</span></span>
-                            </div>
+                            <div class="mt-1 text-sm">Maximum value for you and your team</div>
+                        </div>
 
-                            <div class="line-through text-xl">
-                                <span class="inline-flex items-center">5,250<span class="font-light opacity-75 text-sm">€</span></span>
-                            </div>
+                        <div class="font-black mt-4 text-4xl md:text-5xl">
+                            <span class="inline-flex items-center">5,000<span class="font-light opacity-75 text-xl sm:text-3xl">€</span></span>
+                        </div>
 
-                            <a href="https://savvycal.com/benjamincrozat/7-days-consulting" class="bg-white/[.15] hover:bg-white/30 font-semibold inline-block mt-6 px-8 py-3 rounded text-white transition-colors">
-                                Get started
-                            </a>
+                        <div class="line-through text-xl">
+                            <span class="inline-flex items-center">5,250<span class="font-light opacity-75 text-sm">€</span></span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="container mt-16 text-center">
-            <h3 class="font-semibold text-xl">
-                These companies trusted me
-            </h3>
-
-            <x-icon-clients class="fill-current inline-block mt-8 text-white w-full" />
+            <x-icon-clients class="fill-current max-w-screen-sm mt-16 mx-auto text-indigo-200" />
         </div>
     </div>
 
@@ -186,7 +152,7 @@
             x-intersect="window.fathom?.trackGoal('WSVGAGQR', 0)"
         >
             <h2 class="font-medium text-xl sm:text-3xl text-center">
-                Here are the Laravel services I provide in details
+                The Laravel services I provide in details
             </h2>
 
             <ul class="grid sm:grid-cols-2 gap-12 mt-8 sm:mt-16">
@@ -322,10 +288,6 @@
                 >
                     Convinced? <strong class="font-semibold">Let's talk.</strong>
                 </a>
-
-                <p class="mt-4">
-                    Or <a href="#pricing" class="border-b border-indigo-400/30 font-semibold text-indigo-400">purchase a package right now</a>.
-                </p>
             </div>
         </section>
     </div>
