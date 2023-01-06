@@ -17,10 +17,10 @@
         </button>
 
         <span
-            class="absolute -top-4 -right-4 sm:-right-6 bg-gradient-to-r from-orange-400 to-yellow-400 group-hover:-hue-rotate-90
-            leading-none px-3 py-2 rounded-full scale-75 shadow text-xs translate-y-px transition-colors"
+            class="absolute -top-4 -right-4 sm:-right-6 bg-gradient-to-r from-yellow-400 to-orange-400 group-hover:-hue-rotate-90
+            leading-none px-3 py-2 rounded-full scale-75 shadow text-xs translate-y-px transition-colors uppercase"
         >
-            New!
+            New
         </span>
 
         <ul
