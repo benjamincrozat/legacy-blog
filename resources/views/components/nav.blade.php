@@ -10,7 +10,7 @@
                 'bg-gradient-to-r from-indigo-300 dark:from-indigo-500 to-indigo-400 dark:to-indigo-600 hover:-hue-rotate-90 rounded shadow-lg': ! open,
                 'bg-gray-800 rounded-t': open,
             }"
-            @click="open = ! open"
+            @click="open = ! open; window.fathom?.trackGoal('AT7WQBDZ', 0)"
         >
             Products
             <x-heroicon-o-chevron-down class="w-3 h-3 translate-y-px transition-transform duration-500" x-bind:class="{ 'rotate-180': open }" />
