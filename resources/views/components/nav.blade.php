@@ -17,7 +17,7 @@
         </button>
 
         <span
-            class="absolute -top-4 -right-4 sm:-right-6 bg-gradient-to-r from-yellow-400 to-orange-400 group-hover:-hue-rotate-90
+            class="absolute -top-4 -right-4 sm:-right-6 bg-gradient-to-r from-yellow-500 to-orange-500 group-hover:-hue-rotate-90
             leading-none px-3 py-2 rounded-full scale-75 shadow text-xs translate-y-px transition-colors uppercase"
         >
             New
