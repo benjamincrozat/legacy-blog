@@ -56,7 +56,7 @@
 
             <li>
                 <a
-                    href="#"
+                    href="https://savvycal.com/benjamincrozat/ask-me-anything"
                     class="hover:bg-blue-400 block px-4 py-2 hover:text-white transition-colors"
                 >
                     SEO
