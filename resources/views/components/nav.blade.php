@@ -16,6 +16,13 @@
             <x-heroicon-o-chevron-down class="w-3 h-3 translate-y-px transition-transform duration-500" x-bind:class="{ 'rotate-180': open }" />
         </button>
 
+        <span
+            class="absolute -top-4 -right-4 sm:-right-6 bg-gradient-to-r from-orange-400 to-yellow-400 group-hover:-hue-rotate-90
+            leading-none px-3 py-2 rounded-full scale-75 shadow text-xs translate-y-px transition-colors"
+        >
+            New!
+        </span>
+
         <ul
             class="absolute top-full right-0 hidden bg-gray-800 dark:bg-black min-w-[320px] py-2 rounded rounded-tr-none shadow-xl text-sm"
             x-bind:class="{ '!block': open }"
