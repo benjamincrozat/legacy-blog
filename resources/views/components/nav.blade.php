@@ -29,7 +29,7 @@
                 <a
                     href="#"
                     class="hover:bg-blue-400 flex items-center gap-1 group px-4 py-2 hover:text-white transition-colors"
-                    @click="window.fathom?.trackGoal('SJKONFQC', 0)"
+                    @click="window.fathom?.trackGoal('FDAGEMV8', 0)"
                 >
                     SEO Wizardry for Developers
                     <span
