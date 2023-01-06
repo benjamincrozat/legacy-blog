@@ -28,7 +28,7 @@
             <li>
                 <a
                     href="#"
-                    class="hover:bg-blue-500 flex items-center gap-1 group px-4 py-2 hover:text-white transition-colors"
+                    class="hover:bg-blue-500 dark:hover:bg-blue-900/50 flex items-center gap-1 group px-4 py-2 hover:text-white transition-colors"
                     @click="window.fathom?.trackGoal('FDAGEMV8', 0)"
                 >
                     SEO Wizardry for Developers
@@ -47,7 +47,7 @@
             <li>
                 <a
                     href="{{ route('consulting.laravel') }}"
-                    class="hover:bg-blue-500 block px-4 py-2 hover:text-white transition-colors"
+                    class="hover:bg-blue-500 dark:hover:bg-blue-900/50 block px-4 py-2 hover:text-white transition-colors"
                     @click="window.fathom?.trackGoal('SJKONFQC', 0)"
                 >
                     Laravel
@@ -57,7 +57,7 @@
             <li>
                 <a
                     href="https://savvycal.com/benjamincrozat/ask-me-anything"
-                    class="hover:bg-blue-500 block px-4 py-2 hover:text-white transition-colors"
+                    class="hover:bg-blue-500 dark:hover:bg-blue-900/50 block px-4 py-2 hover:text-white transition-colors"
                 >
                     SEO
                 </a>
