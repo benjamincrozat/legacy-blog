@@ -24,7 +24,7 @@
         </span>
 
         <ul
-            class="absolute top-full right-0 hidden bg-gray-800 dark:bg-black min-w-[320px] py-2 rounded rounded-tr-none shadow-xl text-sm"
+            class="absolute top-full right-0 hidden bg-gray-800 dark:bg-black min-w-[320px] py-2 rounded rounded-tr-none shadow-xl text-sm z-10"
             x-bind:class="{ '!block': open }"
             x-transition
         >
