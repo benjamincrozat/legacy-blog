@@ -24,8 +24,7 @@ class NovaServiceProviderTest extends TestCase
         $this
             ->actingAs($user)
             ->getJson('/nova')
-            ->assertForbidden()
-        ;
+            ->assertForbidden();
     }
 
     public function test_it_disallows_guests() : void
@@ -33,7 +32,6 @@ class NovaServiceProviderTest extends TestCase
         $this
             ->assertGuest()
             ->getJson('/nova')
-            ->assertUnauthorized()
-        ;
+            ->assertUnauthorized();
     }
 }

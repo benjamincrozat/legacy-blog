@@ -11,7 +11,6 @@ class LaravelConsultingTest extends TestCase
         $this
             ->get(route('consulting.laravel'))
             ->assertOk()
-            ->assertViewIs('consulting.laravel')
-        ;
+            ->assertViewIs('consulting.laravel');
     }
 }

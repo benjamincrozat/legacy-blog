@@ -17,7 +17,6 @@ class RedirectIfExistsTest extends TestCase
         $this
             ->get($redirect->from)
             ->assertStatus(301)
-            ->assertRedirect($redirect->to)
-        ;
+            ->assertRedirect($redirect->to);
     }
 }

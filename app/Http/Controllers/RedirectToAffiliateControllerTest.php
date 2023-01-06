@@ -20,7 +20,6 @@ class RedirectToAffiliateControllerTest extends TestCase
     {
         $this
             ->get(route('affiliate', 'foo'))
-            ->assertNotFound()
-        ;
+            ->assertNotFound();
     }
 }

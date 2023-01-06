@@ -55,7 +55,6 @@ class PostTest extends TestCase
 
         $this
             ->getJson('/feed')
-            ->assertOk()
-        ;
+            ->assertOk();
     }
 }

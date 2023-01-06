@@ -25,8 +25,7 @@ class ConvertKitFetchCommandTest extends TestCase
         $this
             ->artisan(ConvertKitFetchCommand::class)
             ->expectsOutput("Imported $email")
-            ->assertSuccessful()
-        ;
+            ->assertSuccessful();
 
         $this->assertDatabaseHas(Subscriber::class, compact('email'));
     }

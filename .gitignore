@@ -2,8 +2,7 @@
 .env
 .env.backup
 .fleet
-.php-cs-fixer.cache
-.phpunit.result.cache
+*.cache
 *.log
 /.idea
 /.vscode

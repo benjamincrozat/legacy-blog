@@ -39,7 +39,7 @@ class Client
 
             $subscribers = $subscribers->concat($response['subscribers']);
 
-            ++$page;
+            $page++;
         } while ($response['page'] < $response['total_pages']);
 
         return $subscribers;

@@ -15,8 +15,7 @@ class ShowPostControllerTest extends TestCase
         $response = $this
             ->get(route('posts.show', $post = $posts->first()))
             ->assertOk()
-            ->assertViewIs('posts.show')
-        ;
+            ->assertViewIs('posts.show');
 
         $this->assertInstanceOf(Post::class, $response->viewData('post'));
 

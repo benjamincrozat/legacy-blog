@@ -10,7 +10,7 @@ use League\CommonMark\Extension\InlinesOnly\InlinesOnlyExtension;
 class LightdownConverter extends \League\CommonMark\MarkdownConverter
 {
     /**
-     * @param array<string, mixed> $config
+     * @param  array<string, mixed>  $config
      */
     public function __construct(array $config = [])
     {

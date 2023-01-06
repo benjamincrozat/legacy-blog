@@ -15,8 +15,7 @@ class HomeControllerTest extends TestCase
         $response = $this
             ->get(route('home'))
             ->assertOk()
-            ->assertViewIs('home')
-        ;
+            ->assertViewIs('home');
 
         $this->assertInstanceOf(Collection::class, $response->viewData('pins'));
         $this->assertCount(4, $response->viewData('pins'));
@@ -29,8 +28,7 @@ class HomeControllerTest extends TestCase
         $response = $this
             ->get(route('home'))
             ->assertOk()
-            ->assertViewIs('home')
-        ;
+            ->assertViewIs('home');
 
         $this->assertInstanceOf(Collection::class, $response->viewData('posts'));
         $this->assertCount(10, $response->viewData('posts'));
