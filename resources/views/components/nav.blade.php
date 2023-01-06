@@ -8,7 +8,7 @@
             class="flex items-center gap-2 pl-4 pr-3 py-2 text-sm w-full"
             :class="{
                 'bg-gradient-to-r from-indigo-300 dark:from-indigo-500 to-indigo-400 dark:to-indigo-600 hover:-hue-rotate-90 rounded shadow-lg': ! open,
-                'bg-gray-800 rounded-t': open,
+                'bg-gray-800 dark:bg-black rounded-t': open,
             }"
             @click="open = ! open; window.fathom?.trackGoal('AT7WQBDZ', 0)"
         >
@@ -17,7 +17,7 @@
         </button>
 
         <ul
-            class="absolute top-full right-0 hidden bg-gray-800 min-w-[320px] py-2 rounded rounded-tr-none shadow-xl text-sm"
+            class="absolute top-full right-0 hidden bg-gray-800 dark:bg-black min-w-[320px] py-2 rounded rounded-tr-none shadow-xl text-sm"
             x-bind:class="{ '!block': open }"
             x-transition
         >
