@@ -42,7 +42,7 @@
                     <span
                         class="bg-gradient-to-r from-indigo-300 to-indigo-500 group-hover:-hue-rotate-90 leading-none px-3 py-2 rounded-full scale-75 text-xs translate-y-px transition-colors"
                     >
-                        FREE
+                        Soon
                     </span>
                 </a>
             </li>
