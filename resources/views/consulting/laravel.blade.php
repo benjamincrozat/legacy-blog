@@ -101,7 +101,7 @@
 
                         <a
                             href="https://savvycal.com/benjamincrozat/ask-me-anything"
-                            class="border border-indigo-400/50 font-normal inline-block mt-8 px-8 py-3 rounded"
+                            class="border border-indigo-400/50 font-semibold inline-block mt-8 px-8 py-2 rounded"
                         >
                             Book a call
                         </a>
@@ -124,7 +124,7 @@
 
                         <a
                             href="https://savvycal.com/benjamincrozat/ask-me-anything"
-                            class="border border-white/30 font-normal inline-block mt-8 px-8 py-3 rounded"
+                            class="border border-white/30 font-semibold inline-block mt-8 px-8 py-2 rounded"
                         >
                             Book a call
                         </a>
