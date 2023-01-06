@@ -39,6 +39,8 @@
         @if (app()->isProduction() && auth()->guest())
             <script defer src="https://save-tonight-hey-jude.benjamincrozat.com/script.js" data-site="{{ config('services.fathom.site_id') }}"></script>
         @endif
+
+        <script defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </head>
     <body {{ $attributes->merge(['class' => 'bg-gray-50 font-light', 'x-data' => '']) }}>
         {{ $slot }}
