@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\View;
 use App\CommonMark\MarxdownConverter;
 use App\CommonMark\LightdownConverter;
 use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -36,6 +37,8 @@ class AppServiceProvider extends ServiceProvider
             }, $html);
         });
 
-        View::share('subscribersCount', Subscriber::count());
+        if (Schema::hasTable('subscribers')) {
+            View::share('subscribersCount', Subscriber::count());
+        }
     }
 }
