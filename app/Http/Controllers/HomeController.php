@@ -8,11 +8,12 @@ use Illuminate\View\View;
 
 class HomeController extends Controller
 {
-    public function __invoke() : View
+    public function __invoke(): View
     {
         $pins = Pin::latest()->limit(4)->get()->shuffle();
 
-        $posts = Post::whereNotIn('id', $pins->pluck('post.id'))
+        $posts = Post::with('user')
+            ->whereNotIn('id', $pins->pluck('post.id'))
             ->latest()
             ->get();
 
