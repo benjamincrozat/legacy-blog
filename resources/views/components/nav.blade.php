@@ -3,11 +3,11 @@
         <x-icon-logo class="h-8 md:h-9" />
     </a>
 
-    <nav class="flex items-center gap-6 sm:gap-8 font-semibold relative text-white" x-data="{ open: false }" @click.away="open = false">
+    <nav class="flex items-center gap-6 sm:gap-8 relative text-white" x-data="{ open: false }" @click.away="open = false">
         <button
             class="flex items-center gap-2 pl-4 pr-3 py-2 text-xs sm:text-sm w-full"
             :class="{
-                'bg-gradient-to-r from-indigo-300 dark:from-indigo-500 to-indigo-400 dark:to-indigo-600 hover:-hue-rotate-90 font-normal rounded shadow-lg': ! open,
+                'bg-gradient-to-r from-indigo-300 dark:from-indigo-500 to-indigo-400 dark:to-indigo-600 hover:-hue-rotate-90 rounded shadow-lg': ! open,
                 'bg-gray-800 dark:bg-black rounded-t': open,
             }"
             @click="open = ! open; window.fathom?.trackGoal('AT7WQBDZ', 0)"

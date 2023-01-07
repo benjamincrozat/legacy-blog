@@ -48,7 +48,7 @@
 
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="flex-shrink-0 text-emerald-400 w-5 h-5" />
-                    <span><strong class="font-bold">100% money-back guarantee</strong> if you don't get any value</span>
+                    <span><strong class="font-semibold">100% money-back guarantee</strong> if you don't get any value</span>
                 </li>
             </ul>
         </div>
