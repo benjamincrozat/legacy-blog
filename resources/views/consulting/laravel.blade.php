@@ -327,7 +327,7 @@
     <div class="bg-indigo-50 text-indigo-900">
         <section
             class="container py-8 sm:py-16"
-            x-intersect="window.fathom?.trackGoal('Q0JLQGBO', 0)"
+            x-intersect="window.fathom?.trackGoal('GNBHJW7B', 0)"
         >
             <h2 class="font-medium text-xl sm:text-3xl text-center">
                 Frequently Asked Questions
@@ -335,7 +335,7 @@
 
             <div class="border border-indigo-100 grid mt-8 rounded">
                 <details class="group" open>
-                    <summary class="border-b border-indigo-100 cursor-default flex items-center gap-2 font-medium p-4">
+                    <summary class="border-b border-indigo-100 cursor-default flex items-center gap-2 font-medium p-4" @click="window.fathom?.trackGoal('XV5G8R8A', 0)">
                         <x-heroicon-o-chevron-right class="-translate-y-px flex-shrink-0 group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
                         When is my credit card charged?
                     </summary>
@@ -346,7 +346,7 @@
                 </details>
 
                 <details class="group">
-                    <summary class="border-b border-indigo-100 cursor-default flex items-center gap-2 font-medium p-4">
+                    <summary class="border-b border-indigo-100 cursor-default flex items-center gap-2 font-medium p-4" @click="window.fathom?.trackGoal('XV5G8R8A', 0)">
                         <x-heroicon-o-chevron-right class="-translate-y-px flex-shrink-0 group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
                         Can I get my money back if something goes wrong?
                     </summary>
@@ -357,7 +357,7 @@
                 </details>
 
                 <details class="group">
-                    <summary class="border-b border-indigo-100 cursor-default flex items-center gap-2 font-medium p-4">
+                    <summary class="border-b border-indigo-100 cursor-default flex items-center gap-2 font-medium p-4" @click="window.fathom?.trackGoal('XV5G8R8A', 0)">
                         <x-heroicon-o-chevron-right class="-translate-y-px flex-shrink-0 group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
                         My developers are busy. Can you fix everything if I book you for 3 hours?
                     </summary>
@@ -368,7 +368,7 @@
                 </details>
 
                 <details class="group">
-                    <summary class="border-b border-indigo-100 cursor-default flex items-center gap-2 font-medium p-4">
+                    <summary class="border-b border-indigo-100 cursor-default flex items-center gap-2 font-medium p-4" @click="window.fathom?.trackGoal('XV5G8R8A', 0)">
                         <x-heroicon-o-chevron-right class="-translate-y-px flex-shrink-0 group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
                         I want to book you for a different period of time. Is that possible?
                     </summary>
