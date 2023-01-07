@@ -1,6 +1,6 @@
 <footer {{ $attributes->merge(['class' => 'container py-8 text-sm']) }} x-intersect="window.fathom?.trackGoal('08VVENFW', 0)">
     <div class="flex items-center justify-between">
-        <x-icon-logo class="h-7 sm:h-8 translate-y-[2px]" />
+        <x-icon-logo class="h-8" />
 
         <ul class="flex items-center gap-1 sm:gap-2">
             <li>
