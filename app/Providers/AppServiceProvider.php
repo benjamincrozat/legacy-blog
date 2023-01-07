@@ -37,8 +37,9 @@ class AppServiceProvider extends ServiceProvider
             }, $html);
         });
 
-        if (Schema::hasTable('subscribers')) {
-            View::share('subscribersCount', Subscriber::count());
-        }
+        View::composer(
+            'components.newsletter',
+            fn ($v) => $v->with('subscribersCount', Subscriber::count())
+        );
     }
 }

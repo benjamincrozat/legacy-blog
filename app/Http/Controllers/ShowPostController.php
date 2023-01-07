@@ -13,6 +13,7 @@ class ShowPostController extends Controller
         return view('posts.show', [
             'post' => $post,
             'others' => Post::with('user')->whereNotIn('id', [$post->id])->inRandomOrder()->limit(10)->get(),
+            'subscribersCount' => Subscriber::count(),
         ]);
     }
 }
