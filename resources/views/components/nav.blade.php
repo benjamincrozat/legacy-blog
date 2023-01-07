@@ -1,9 +1,16 @@
-<div {{ $attributes->merge(['class' => 'flex flex-wrap items-center justify-between gap-8']) }}>
+@php
+$promotesAffiliateLinks = request()->route()->post?->promotes_affiliate_links;
+
+<div {{ $attributes->merge([
+    'class' => $promotesAffiliateLinks
+        ? 'flex flex-wrap items-center justify-center gap-8'
+        : 'flex flex-wrap items-center justify-between gap-8'
+]) }}>
     <a href="{{ route('home') }}">
         <x-icon-logo class="h-8 md:h-9" />
     </a>
 
-    @if (! request()->route()->post?->promotes_affiliate_links)
+    @if (! $promotesAffiliateLinks)
         <nav class="flex items-center gap-6 sm:gap-8 relative text-white" x-data="{ open: false }" @click.away="open = false">
             <button
                 class="flex items-center gap-2 pl-4 pr-3 py-2 text-xs sm:text-sm w-full"
