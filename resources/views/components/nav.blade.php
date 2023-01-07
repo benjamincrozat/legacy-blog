@@ -17,8 +17,8 @@
         </button>
 
         <span
-            class="absolute -top-4 -right-4 sm:-right-6 bg-gradient-to-r from-yellow-500 to-orange-500 group-hover:-hue-rotate-90
-            leading-none px-3 py-2 rounded-full scale-75 shadow text-xs translate-y-px transition-colors uppercase"
+            class="absolute -top-2 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 group-hover:-hue-rotate-90
+            leading-none px-2 py-1 rounded-full scale-75 shadow-lg text-xs translate-y-px transition-colors"
         >
             New
         </span>
@@ -33,18 +33,17 @@
             </li>
 
             <li>
-                <a
-                    href="#"
-                    class="hover:bg-blue-500 dark:hover:bg-blue-900/50 flex items-center gap-1 group px-4 py-2 hover:text-white transition-colors"
+                <span
+                    class="flex items-center gap-1 group px-4 py-2 hover:text-white transition-colors"
                     @click="window.fathom?.trackGoal('FDAGEMV8', 0)"
                 >
                     SEO Wizardry for Developers
                     <span
-                        class="bg-gradient-to-r from-indigo-300 to-indigo-500 group-hover:-hue-rotate-90 leading-none px-3 py-2 rounded-full scale-75 text-xs translate-y-px transition-colors"
+                        class="bg-gradient-to-r from-indigo-300 to-indigo-500 leading-none px-2 py-1 rounded-full scale-75 text-xs translate-y-px transition-colors"
                     >
                         Soon
                     </span>
-                </a>
+                </span>
             </li>
 
             <li class="font-light text-gray-400 my-2 px-4 text-xs uppercase">
@@ -62,12 +61,16 @@
             </li>
 
             <li>
-                <a
-                    href="https://savvycal.com/benjamincrozat/ask-me-anything"
-                    class="hover:bg-blue-500 dark:hover:bg-blue-900/50 block px-4 py-2 hover:text-white transition-colors"
+                <span
+                    class="flex items-center gap-1 px-4 py-2 hover:text-white transition-colors"
                 >
                     SEO
-                </a>
+                    <span
+                        class="bg-gradient-to-r from-indigo-300 to-indigo-500 leading-none px-2 py-1 rounded-full scale-75 text-xs transition-colors"
+                    >
+                        Soon
+                    </span>
+                </span>
             </li>
         </ul>
     </nav>
