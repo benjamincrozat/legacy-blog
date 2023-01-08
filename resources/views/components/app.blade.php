@@ -71,5 +71,37 @@
                 </div>
             </div>
         @endif
+
+        <div
+            class="fixed inset-0 backdrop-blur-md bg-black/50 grid place-items-center dark:text-gray"
+            x-cloak
+            x-data="{
+                open: false,
+                query: '',
+            }"
+            x-init="$watch('open', value => $nextTick(() => { if (value) $refs.input.focus()}))"
+            x-show="open"
+            x-transition.opacity
+            @keyup.escape.window="open = false"
+            @keydown.meta.k.window="open = ! open"
+        >
+            <div class="container md:max-w-screen-sm" @click.away="open = false">
+                <div class="bg-white dark:bg-gray-800 pb-2 rounded-lg shadow-xl">
+                    <input
+                        type="search"
+                        x-model="query"
+                        x-ref="input"
+                        placeholder="How to check if a model is soft deleted?"
+                        class="bg-transparent border-transparent focus:border-transparent placeholder-gray-300 dark:placeholder-gray-600 px-4 py-3 focus:ring-0 w-full"
+                    />
+
+                    <p class="text-center text-xs">
+                        <a href="#">
+                            <span class="opacity-50">Powered by</span> <x-icon-algolia class="h-4 inline" />
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
