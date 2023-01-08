@@ -41,6 +41,10 @@
         @endif
 
         <script defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        @if (should_display_ads())
+            <script defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
+        @endif
     </head>
     <body {{ $attributes->merge(['class' => 'bg-gray-50 font-light', 'x-data' => '']) }}>
         {{ $slot }}
@@ -72,8 +76,5 @@
             </div>
         @endif
 
-        @if (should_display_ads())
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
-        @endif
     </body>
 </html>
