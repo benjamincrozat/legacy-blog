@@ -28,7 +28,7 @@
         </div>
 
         @if (! $post->promotes_affiliate_links)
-            <div class="sm:max-w-screen-xs mt-10 sm:mx-auto text-center text-sm">
+            <div class="sm:max-w-screen-xs mt-10 sm:mx-auto text-center text-sm" x-data="{ hide: false }" x-show="! hide">
                 <x-icon-logos class="mx-auto w-4/5 md:w-auto" />
 
                 <p class="mt-4">
@@ -42,6 +42,13 @@
                         Subscribe
                     </button>
                 </x-form>
+
+                <button
+                    class="font-normal inline-block mt-4 text-indigo-400"
+                    @click="hide = true"
+                >
+                    Maybe later, thanks.
+                </button>
 
                 <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mt-10 mx-auto w-[100px]"></div>
             </div>
