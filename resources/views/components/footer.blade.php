@@ -30,6 +30,11 @@
         <span class="opacity-50">Hosting by</span> <a href="https://benjamincrozat.com/recommends/digitalocean" target="_blank" rel="nofollow noopener noreferrer">DigitalOcean</a> <span class="opacity-50">and analytics by</span> <a href="https://benjamincrozat.com/recommends/fathom-analytics" target="_blank" rel="nofollow noopener noreferrer">Fathom</a><span class="opacity-50">.</span>
     </p>
 
+    <p class="mt-2 opacity-50 text-center text-xs">
+        My blog uses affiliate links (like the ones above), which can compensate me at no cost to you if you decide to pursue a deal.<br class="hidden md:inline" />
+        I only promote products I've personally used and stand behind.
+    </p>
+
     <p class="mt-8 opacity-50 text-center text-xs tracking-widest uppercase">
         © Benjamin Crozat {{ date('Y') }}. All&nbsp;rights&nbsp;reserved.
     </p>
