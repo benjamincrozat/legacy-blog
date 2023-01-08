@@ -2,12 +2,8 @@
 $promotesAffiliateLinks = request()->route()->post?->promotes_affiliate_links;
 @endphp
 
-<div {{ $attributes->merge([
-    'class' => $promotesAffiliateLinks
-        ? 'flex flex-wrap items-center justify-center gap-8'
-        : 'flex flex-wrap items-center justify-between gap-8'
-]) }}>
-    @if (! $promotesAffiliateLinks)
+@if (! $promotesAffiliateLinks)
+    <div {{ $attributes->merge(['class' => 'flex flex-wrap items-center justify-between gap-8']) }}>
         <a href="{{ route('home') }}">
             <x-icon-logo class="h-8 md:h-9" />
         </a>
@@ -87,9 +83,11 @@ $promotesAffiliateLinks = request()->route()->post?->promotes_affiliate_links;
                 </li>
             </ul>
         </nav>
-    @else
+    </div>
+@else
+    <div {{ $attributes->merge(['class' => 'text-center']) }}>
         <a href="{{ route('home') }}">
-            <x-icon-logo-alt class="h-20 sm:h-24" />
+            <x-icon-logo-alt class="h-20 inline" />
         </a>
-    @endif
-</div>
+    </div>
+@endif
