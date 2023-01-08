@@ -28,19 +28,14 @@
         </div>
 
         @if (! $post->promotes_affiliate_links)
-            <div
-                class="sm:max-w-screen-xs mt-10 sm:mx-auto text-center text-sm"
-                x-data="{ hide: $persist(false) }"
-                x-show="! hide"
-                x-cloak
-            >
+            <div class="sm:max-w-screen-xs mt-10 sm:mx-auto text-center text-sm">
                 <x-icon-logos class="mx-auto w-4/5 md:w-auto" />
 
                 <p class="mt-4">
                     <strong class="font-semibold">@choice(':count person|:count persons', $subscribersCount) subscribed to my newsletter</strong>.<br /> Join them and enjoy free content about the art of crafting&nbsp;websites!
                 </p>
 
-                <x-form method="POST" action="{{ route('subscribe') }}" class="grid gap-2 mt-4 sm:mt-6">
+                <x-form method="POST" action="{{ route('subscribe') }}" class="grid gap-2 mt-4 sm:mt-6" @submit="hide = true">
                     <input type="email" name="email" id="email" placeholder="homer@simpson.com" required class="dark:bg-gray-700/40 block border-0 placeholder-gray-300 dark:placeholder-gray-600 px-3 py-2 rounded shadow text-sm w-full" />
 
                     <button class="bg-gradient-to-r from-purple-300 dark:from-purple-500 to-purple-400 dark:to-purple-600 hover:-hue-rotate-90 duration-500 transition-all block font-semibold py-2 rounded shadow text-white">
@@ -48,12 +43,9 @@
                     </button>
                 </x-form>
 
-                <button
-                    class="font-normal inline-block mt-4 text-indigo-400"
-                    @click="hide = true; window.fathom?.trackGoal('1I5ITD2M', 0)"
-                >
-                    Maybe later, thanks.
-                </button>
+                <p class="flex items-center justify-center mt-4">
+                    <a href="{{ route('affiliate', 'convertkit') }}" target="_blank" rel="nofollow noopener noreferrer">Powered by <x-icon-convertkit class="-translate-y-px h-4 inline" />.</a>
+                </p>
 
                 <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mt-10 mx-auto w-[100px]"></div>
             </div>
