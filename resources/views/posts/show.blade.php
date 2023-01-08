@@ -50,7 +50,7 @@
 
                 <button
                     class="font-normal inline-block mt-4 text-indigo-400"
-                    @click="hide = true"
+                    @click="hide = true; window.fathom?.trackGoal('1I5ITD2M', 0)"
                 >
                     Maybe later, thanks.
                 </button>
