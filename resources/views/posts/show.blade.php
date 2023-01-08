@@ -28,7 +28,11 @@
         </div>
 
         @if (! $post->promotes_affiliate_links)
-            <div class="sm:max-w-screen-xs mt-10 sm:mx-auto text-center text-sm" x-data="{ hide: false }" x-show="! hide">
+            <div
+                class="sm:max-w-screen-xs mt-10 sm:mx-auto text-center text-sm"
+                x-data="{ hide: $persist(false) }"
+                x-show="! hide"
+            >
                 <x-icon-logos class="mx-auto w-4/5 md:w-auto" />
 
                 <p class="mt-4">

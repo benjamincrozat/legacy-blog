@@ -7,6 +7,11 @@
   resolved "https://registry.yarnpkg.com/@alpinejs/intersect/-/intersect-3.10.5.tgz#4a37b6633f8e4ce87aa4efa5fc3c545250ef9d2f"
   integrity sha512-4i9zrQ5mZJXtLf2ZRI5Fc4t8kBlierIsNZzwG38BWzduD4dLhBvU3+mFiLl/rgIwvFuJ080duIb4S9/XW81nBQ==
 
+"@alpinejs/persist@^3.10.5":
+  version "3.10.5"
+  resolved "https://registry.yarnpkg.com/@alpinejs/persist/-/persist-3.10.5.tgz#c87809eb5a9df4463c0b738028aece1007a9d407"
+  integrity sha512-5kFmnWck6rVCoXjgby/8MoeDf7F9DvIzUOtaTge5pLkrbNh4m0vRBRIXLcOILKz9wtrSJ4mOOW11IC/hRPId/g==
+
 "@esbuild/android-arm@0.15.18":
   version "0.15.18"
   resolved "https://registry.yarnpkg.com/@esbuild/android-arm/-/android-arm-0.15.18.tgz#266d40b8fdcf87962df8af05b76219bc786b4f80"

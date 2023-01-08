@@ -12,6 +12,7 @@
     },
     "dependencies": {
         "@alpinejs/intersect": "^3.10.3",
+        "@alpinejs/persist": "^3.10.5",
         "@tailwindcss/container-queries": "^0.1.0",
         "@tailwindcss/forms": "^0.5.3",
         "@tailwindcss/line-clamp": "^0.4.2",
