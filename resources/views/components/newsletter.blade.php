@@ -22,7 +22,7 @@
     </x-form>
 
     <p class="flex items-center justify-center mt-4">
-        <a href="{{ route('affiliate', 'convertkit') }}" target="_blank" rel="nofollow noopener noreferrer">Powered by <x-icon-convertkit class="-translate-y-[1.5px] h-5 inline" />.</a>
+        <a href="{{ route('affiliate', 'convertkit') }}" target="_blank" rel="nofollow noopener noreferrer">Powered by <x-icon-convertkit class="-translate-y-[1.5px] h-5 inline" /></a>
     </p>
 
     {{ $slot }}

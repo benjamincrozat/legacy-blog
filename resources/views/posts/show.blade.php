@@ -44,7 +44,7 @@
                 </x-form>
 
                 <p class="flex items-center justify-center mt-4">
-                    <a href="{{ route('affiliate', 'convertkit') }}" target="_blank" rel="nofollow noopener noreferrer">Powered by <x-icon-convertkit class="-translate-y-px h-4 inline" />.</a>
+                    <a href="{{ route('affiliate', 'convertkit') }}" target="_blank" rel="nofollow noopener noreferrer">Powered by <x-icon-convertkit class="-translate-y-px h-4 inline" /></a>
                 </p>
 
                 <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mt-10 mx-auto w-[100px]"></div>
