@@ -32,6 +32,7 @@
                 class="sm:max-w-screen-xs mt-10 sm:mx-auto text-center text-sm"
                 x-data="{ hide: $persist(false) }"
                 x-show="! hide"
+                x-cloak
             >
                 <x-icon-logos class="mx-auto w-4/5 md:w-auto" />
 

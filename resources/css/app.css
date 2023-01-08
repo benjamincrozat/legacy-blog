@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+[x-cloak] {
+    @apply !hidden;
+}
+
 summary {
     @apply list-none;
 }

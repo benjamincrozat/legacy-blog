@@ -14,11 +14,8 @@ $promotesAffiliateLinks = request()->route()->post?->promotes_affiliate_links;
             x-data="{ open: false }"
         >
             <button
-                class="flex items-center gap-2 pl-4 pr-3 py-2 text-xs sm:text-sm w-full"
-                :class="{
-                    'bg-gradient-to-r from-indigo-300 dark:from-indigo-500 to-indigo-400 dark:to-indigo-600 hover:-hue-rotate-90 rounded shadow-lg': ! open,
-                    'bg-gray-800 dark:bg-black rounded-t': open,
-                }"
+                class="bg-gradient-to-r from-indigo-300 dark:from-indigo-500 to-indigo-400 dark:to-indigo-600 hover:-hue-rotate-90 flex items-center gap-2 pl-4 pr-3 py-2 rounded shadow-lg text-xs sm:text-sm w-full"
+                :class="{ 'bg-gray-800 hover:hue-rotate-0 dark:bg-black bg-none rounded-none rounded-t': open }"
                 @click="open = ! open; window.fathom?.trackGoal('AT7WQBDZ', 0)"
             >
                 Learn
@@ -33,9 +30,9 @@ $promotesAffiliateLinks = request()->route()->post?->promotes_affiliate_links;
             </span>
 
             <ul
-                class="absolute top-full right-0 hidden bg-gray-800 dark:bg-black min-w-[320px] py-2 rounded rounded-tr-none shadow-xl text-sm z-10"
-                x-bind:class="{ '!block': open }"
-                x-transition
+                class="absolute top-full right-0 bg-gray-800 dark:bg-black min-w-[320px] py-2 rounded rounded-tr-none shadow-xl text-sm z-10"
+                x-cloak
+                x-show="open"
             >
                 <li class="font-light text-gray-400 my-2 px-4 text-xs uppercase">
                     Courses

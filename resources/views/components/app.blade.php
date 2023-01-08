@@ -51,6 +51,7 @@
                 x-init="setTimeout(() => open = false, 5000)"
                 x-data="{ open: true }"
                 x-show="open"
+                x-cloak
             >
                 <div class="container mb-4">
                     <div class="bg-gray-800 flex items-center justify-between gap-5 px-5 py-4 rounded-lg shadow-lg text-white">
