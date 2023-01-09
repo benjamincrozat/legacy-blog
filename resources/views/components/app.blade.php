@@ -105,7 +105,12 @@
                 <div class="bg-white dark:bg-gray-800 pb-2 rounded-lg shadow-xl">
                     <input
                         type="search"
-                        placeholder="How to check if a model is soft deleted?"
+                        placeholder="{{ collect([
+                            "Getting started with Tailwind CSS",
+                            "How to check if a model is soft deleted?",
+                            "What's new in Laravel 10?",
+                            "What's new in PHP 8.3?",
+                        ])->random() }}"
                         tabindex="-1"
                         class="bg-transparent border-transparent focus:border-transparent placeholder-gray-300 dark:placeholder-gray-600 px-4 py-3 focus:ring-0 w-full"
                         x-model.debounce="query"
