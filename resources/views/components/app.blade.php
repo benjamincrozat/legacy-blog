@@ -83,6 +83,8 @@
                 $nextTick(() => {
                     if (value) {
                         $refs.input.focus()
+                    } else {
+                        $refs.input.blur()
                     }
                 })
             }); $watch('query', async value => {
@@ -107,6 +109,8 @@
                         x-ref="input"
                         placeholder="How to check if a model is soft deleted?"
                         class="bg-transparent border-transparent focus:border-transparent placeholder-gray-300 dark:placeholder-gray-600 px-4 py-3 focus:ring-0 w-full"
+                        @focus="$refs.input.select()"
+                        @click="$refs.input.focus(); $refs.input.select()"
                     />
 
                     <p class="text-center text-xs">
