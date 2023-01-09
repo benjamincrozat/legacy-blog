@@ -95,7 +95,7 @@
 
                     index.setSettings({
                         attributesToHighlight: ['title', 'content:100'],
-                        highlightPreTag: `<em class='bg-yellow-300/75 dark:bg-indigo-400/30 !not-italic !text-yellow-800 dark:!text-white'>`,
+                        highlightPreTag: `<em class='bg-yellow-300/75 dark:bg-indigo-400/30 dark:group-focus:bg-white/10 !not-italic !text-yellow-800 dark:!text-white'>`,
                         highlightPostTag: `</em>`,
                     })
 
