@@ -88,7 +88,7 @@
                     }
                 })
             }); $watch('query', async value => {
-                if ('' === value || value.length < 3) {
+                if ('' === value || value.length < 3) {
                     hits = []
                 } else {
                     const results = await Algolia.initIndex(window.postsIndexName).search(value)
@@ -105,10 +105,11 @@
                 <div class="bg-white dark:bg-gray-800 pb-2 rounded-lg shadow-xl">
                     <input
                         type="search"
+                        placeholder="How to check if a model is soft deleted?"
+                        tabindex="-1"
+                        class="bg-transparent border-transparent focus:border-transparent placeholder-gray-300 dark:placeholder-gray-600 px-4 py-3 focus:ring-0 w-full"
                         x-model.debounce="query"
                         x-ref="input"
-                        placeholder="How to check if a model is soft deleted?"
-                        class="bg-transparent border-transparent focus:border-transparent placeholder-gray-300 dark:placeholder-gray-600 px-4 py-3 focus:ring-0 w-full"
                         @focus="$refs.input.select()"
                         @click="$refs.input.focus(); $refs.input.select()"
                     />
