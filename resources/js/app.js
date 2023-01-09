@@ -1,5 +1,6 @@
 import algoliasearch from 'algoliasearch'
 import Alpine from 'alpinejs'
+import Focus from '@alpinejs/focus'
 import Intersect from '@alpinejs/intersect'
 import Persist from '@alpinejs/persist'
 
@@ -9,6 +10,7 @@ window.Algolia = algoliasearch(import.meta.env.VITE_ALGOLIA_APP_ID, import.meta.
 window.postsIndexName = `${import.meta.env.VITE_APP_ENV}_posts`
 window.appUrl = import.meta.env.VITE_APP_URL
 
+Alpine.plugin(Focus)
 Alpine.plugin(Intersect)
 Alpine.plugin(Persist)
 

@@ -82,7 +82,7 @@
             x-init="$watch('searching', value => {
                 $nextTick(() => {
                     if (value) {
-                        $refs.input.focus()
+                        $focus.focus($refs.input)
                     } else {
                         $refs.input.blur()
                     }
@@ -105,12 +105,17 @@
                 }
             })"
             x-show="searching"
+            x-trap="searching"
             x-transition.opacity
             @keyup.escape.window="searching = false"
             @keydown.meta.k.window="searching = ! searching"
         >
             <div class="container md:max-w-screen-sm pb-20 pt-4 sm:py-4" @click.away="searching = false">
-                <div class="bg-white dark:bg-gray-800 pb-2 rounded-lg shadow-xl">
+                <div
+                    class="bg-white dark:bg-gray-800 pb-2 rounded-lg shadow-xl"
+                    @keyup.up="$focus.previous()"
+                    @keyup.down="$focus.next()"
+                >
                     <input
                         type="search"
                         placeholder="{{ collect([
@@ -120,17 +125,15 @@
                             "What's new in Laravel 10?",
                             "What's new in PHP 8.3?",
                         ])->random() }}"
-                        class="bg-transparent border-transparent focus:border-transparent placeholder-gray-300 dark:placeholder-gray-600 px-4 py-3 focus:ring-0 w-full"
+                        class="bg-transparent border-transparent focus:border-transparent placeholder-gray-300 dark:placeholder-gray-600 px-4 py-3 focus:ring-0 scroll-mt-4 w-full"
                         x-model.debounce="query"
                         x-ref="input"
-                        @focus="$refs.input.select()"
-                        @click="$refs.input.focus(); $refs.input.select()"
+                        @focus="$refs.input.select(); $refs.input.scrollIntoView()"
+                        @click="$focus.focus($refs.input); $refs.input.select()"
                     />
 
                     <p class="text-center text-xs">
-                        <a href="#">
-                            <span class="opacity-50">Powered by</span> <x-icon-algolia class="h-[.85rem] inline" />
-                        </a>
+                        <span class="opacity-50">Powered by</span> <x-icon-algolia class="h-[.85rem] inline" />
                     </p>
 
                     <template x-if="! hits.length && query.length >= 3">
@@ -140,16 +143,16 @@
                     </template>
 
                     <template x-if="hits.length">
-                        <ul class="mt-4">
+                        <ul x-ref="results" class="mt-4">
                             <template x-for="hit in hits">
                                 <li class="border-t border-gray-200/50 dark:border-gray-700/50">
                                     <a
                                         :href="`${appUrl}/${hit.slug}`"
-                                        class="hover:bg-gray-200/50 dark:hover:bg-gray-700/50 flex items-center justify-between gap-8 p-4 transition-colors"
+                                        class="hover:bg-gray-200/50 dark:hover:bg-gray-700/50 focus:bg-blue-400 dark:focus:bg-blue-400/50 flex items-center justify-between gap-8 group p-4 transition-colors focus:outline-none"
                                     >
                                         <div>
-                                            <div class="font-normal inline-block text-indigo-600 dark:text-indigo-400" x-html="hit._highlightResult.title.value"></div>
-                                            <div class="leading-relaxed mt-2 text-sm" x-html="hit._highlightResult.content.value"></div>
+                                            <div class="font-normal inline-block text-indigo-600 dark:text-indigo-400 group-focus:text-white transition-colors" x-html="hit._highlightResult.title.value"></div>
+                                            <div class="leading-relaxed mt-2 text-sm group-focus:text-white/75 transition-colors" x-html="hit._highlightResult.content.value"></div>
                                         </div>
 
                                         <img
