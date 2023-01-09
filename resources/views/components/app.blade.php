@@ -73,7 +73,7 @@
         @endif
 
         <div
-            class="fixed inset-0 backdrop-blur-md bg-black/50 grid place-items-center overflow-scroll dark:text-gray z-20"
+            class="fixed inset-0 backdrop-blur-md backdrop-brightness-110 backdrop-saturate-150 bg-black/50 grid place-items-center overflow-scroll dark:text-gray z-20"
             x-cloak
             x-data="{
                 hits: [],
@@ -128,7 +128,7 @@
                         class="bg-transparent border-transparent focus:border-transparent placeholder-gray-300 dark:placeholder-gray-600 px-4 py-3 focus:ring-0 scroll-mt-4 w-full"
                         x-model.debounce="query"
                         x-ref="input"
-                        @focus="$refs.input.select(); $refs.input.scrollIntoView()"
+                        @focus="$refs.input.select()"
                         @click="$focus.focus($refs.input); $refs.input.select()"
                     />
 
