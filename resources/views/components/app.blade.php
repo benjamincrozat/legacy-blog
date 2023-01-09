@@ -115,8 +115,8 @@
                         class="bg-transparent border-transparent focus:border-transparent placeholder-gray-300 dark:placeholder-gray-600 px-4 py-3 focus:ring-0 w-full"
                         x-model.debounce="query"
                         x-ref="input"
-                        @focus="setTimeout(() => $refs.input.select(), 100)"
-                        @click="setTimeout(() => $refs.input.focus(); $refs.input.select(), 100)"
+                        @focus="setTimeout(() => $refs.input.select(), 500)"
+                        @click="setTimeout(() => $refs.input.focus(); $refs.input.select(), 500)"
                     />
 
                     <p class="text-center text-xs">
