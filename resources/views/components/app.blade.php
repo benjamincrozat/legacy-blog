@@ -101,7 +101,7 @@
             @keyup.escape.window="searching = false"
             @keydown.meta.k.window="searching = ! searching"
         >
-            <div class="container md:max-w-screen-sm py-4" @click.away="searching = false">
+            <div class="container md:max-w-screen-sm pb-20 pt-4 sm:py-4" @click.away="searching = false">
                 <div class="bg-white dark:bg-gray-800 pb-2 rounded-lg shadow-xl">
                     <input
                         type="search"
