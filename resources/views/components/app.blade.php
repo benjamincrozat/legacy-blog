@@ -137,13 +137,13 @@
                     </p>
 
                     <template x-if="! hits.length && query.length >= 3">
-                        <p class="mt-4 opacity-50 text-center">
+                        <p class="mt-2 opacity-50 text-center">
                             No results found for your query.
                         </p>
                     </template>
 
                     <template x-if="hits.length">
-                        <ul x-ref="results" class="mt-4">
+                        <ul x-ref="results" class="mt-2">
                             <template x-for="hit in hits">
                                 <li class="border-t border-gray-200/50 dark:border-gray-700/50">
                                     <a
