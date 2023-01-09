@@ -152,6 +152,14 @@
                         </ul>
                     </template>
                 </div>
+
+                <button
+                    class="-translate-x-1/2 fixed bottom-4 left-1/2 backdrop-blur-md bg-white/50 dark:bg-black/50 grid place-items-center sm:hidden p-3 rounded-full shadow-lg"
+                    @click="searching = false"
+                >
+                    <x-heroicon-o-x-mark class="w-5 h-5" />
+                    <span class="sr-only">Close</span>
+                </button>
             </div>
         </div>
     </body>
