@@ -73,23 +73,38 @@
         @endif
 
         <div
-            class="fixed inset-0 backdrop-blur-md bg-black/50 grid place-items-center dark:text-gray"
+            class="fixed inset-0 backdrop-blur-md bg-black/50 grid place-items-center overflow-scroll dark:text-gray"
             x-cloak
             x-data="{
+                hits: [],
                 open: false,
                 query: '',
             }"
-            x-init="$watch('open', value => $nextTick(() => { if (value) $refs.input.focus()}))"
+            x-init="$watch('open', value => {
+                $nextTick(() => {
+                    if (value) {
+                        $refs.input.focus()
+                    }
+                })
+            }); $watch('query', async value => {
+                if ('' === value || value.length < 3) {
+                    hits = []
+                } else {
+                    const results = await Algolia.initIndex(window.postsIndexName).search(value)
+
+                    hits = results.hits
+                }
+            })"
             x-show="open"
             x-transition.opacity
             @keyup.escape.window="open = false"
             @keydown.meta.k.window="open = ! open"
         >
-            <div class="container md:max-w-screen-sm" @click.away="open = false">
+            <div class="container md:max-w-screen-sm py-4" @click.away="open = false">
                 <div class="bg-white dark:bg-gray-800 pb-2 rounded-lg shadow-xl">
                     <input
                         type="search"
-                        x-model="query"
+                        x-model.debounce="query"
                         x-ref="input"
                         placeholder="How to check if a model is soft deleted?"
                         class="bg-transparent border-transparent focus:border-transparent placeholder-gray-300 dark:placeholder-gray-600 px-4 py-3 focus:ring-0 w-full"
@@ -100,6 +115,39 @@
                             <span class="opacity-50">Powered by</span> <x-icon-algolia class="h-4 inline" />
                         </a>
                     </p>
+
+                    <template x-if="! hits.length && query.length >= 3">
+                        <p class="mt-4 opacity-50 text-center">
+                            No results found for your query.
+                        </p>
+                    </template>
+
+                    <template x-if="hits.length">
+                        <ul class="mt-4">
+                            <template x-for="hit in hits">
+                                <li class="border-t border-gray-200/50 dark:border-gray-700/50">
+                                    <a
+                                        :href="`${appUrl}/${hit.slug}`"
+                                        class="hover:bg-gray-300 dark:hover:bg-gray-700/50 flex items-center justify-between gap-8 p-4 transition-colors"
+                                    >
+                                        <div>
+                                            <div class="font-normal inline-block text-indigo-600 dark:text-indigo-400" x-text="hit.title"></div>
+                                            <div class="leading-relaxed mt-2 text-sm" x-text="hit.description"></div>
+                                        </div>
+
+                                        <img
+                                            loading="lazy"
+                                            :src="hit.image.replace('w_auto', 'h_128')"
+                                            width="64"
+                                            height="64"
+                                            :alt="hit.title"
+                                            class="aspect-square object-cover"
+                                        />
+                                    </a>
+                                </li>
+                            </template>
+                        </ul>
+                    </template>
                 </div>
             </div>
         </div>
