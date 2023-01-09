@@ -107,8 +107,8 @@
             x-show="searching"
             x-trap="searching"
             x-transition.opacity
-            @keyup.escape.window="searching = false"
-            @keydown.meta.k.window="searching = ! searching; window.fathom.trackGoal('XEDJAZWO', 0)"
+            @keyup.escape.window="query = ''; searching = false"
+            @keydown.meta.k.window="searching = ! searching; if (! searching) { query = '' }; window.fathom.trackGoal('XEDJAZWO', 0)"
         >
             <div class="container md:max-w-screen-sm pb-20 pt-4 sm:py-4" @click.away="searching = false">
                 <div
