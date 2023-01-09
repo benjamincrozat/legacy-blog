@@ -108,6 +108,7 @@
                         placeholder="{{ collect([
                             "Getting started with Tailwind CSS",
                             "How to check if a model is soft deleted?",
+                            "How to use soft deletes in Laravel?",
                             "What's new in Laravel 10?",
                             "What's new in PHP 8.3?",
                         ])->random() }}"
