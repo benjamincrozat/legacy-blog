@@ -111,13 +111,11 @@
                             "What's new in Laravel 10?",
                             "What's new in PHP 8.3?",
                         ])->random() }}"
-                        tabindex="-1"
                         class="bg-transparent border-transparent focus:border-transparent placeholder-gray-300 dark:placeholder-gray-600 px-4 py-3 focus:ring-0 w-full"
                         x-model.debounce="query"
                         x-ref="input"
-                        @focus="$refs.input.select()"
-                        @click="$refs.input.focus(); $refs.input.select()"
-                        @touchstart="$refs.input.focus(); $refs.input.select()"
+                        @focus="setTimeout(() => $refs.input.select(), 100)"
+                        @click="setTimeout(() => $refs.input.focus(); $refs.input.select(), 100)"
                     />
 
                     <p class="text-center text-xs">
