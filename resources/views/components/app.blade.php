@@ -73,7 +73,7 @@
         @endif
 
         <div
-            class="fixed inset-0 backdrop-blur-md bg-black/50 grid place-items-center overflow-scroll dark:text-gray"
+            class="fixed inset-0 backdrop-blur-md bg-black/50 grid place-items-center overflow-scroll dark:text-gray z-20"
             x-cloak
             x-data="{
                 hits: [],
