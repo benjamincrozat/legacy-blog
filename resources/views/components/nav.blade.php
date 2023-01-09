@@ -9,12 +9,12 @@ $promotesAffiliateLinks = request()->route()->post?->promotes_affiliate_links;
         </a>
 
         <nav
-            class="flex items-center gap-6 text-xs sm:text-sm"
+            class="flex items-center gap-4 sm:gap-6 text-xs sm:text-sm"
             @click.away="open = false"
             x-data="{ open: false }"
         >
             <button class="hover:text-indigo-400 transition-colors" @click="searching = true">
-                <x-heroicon-o-magnifying-glass class="h-5 inline" />
+                <x-heroicon-o-magnifying-glass class="h-4 sm:h-5 inline" />
                 <span class="sr-only">Search</span>
             </button>
 
