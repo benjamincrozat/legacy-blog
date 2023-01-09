@@ -13,7 +13,7 @@ $promotesAffiliateLinks = request()->route()->post?->promotes_affiliate_links;
             @click.away="open = false"
             x-data="{ open: false }"
         >
-            <button class="hover:text-indigo-400 transition-colors" @click="searching = true">
+            <button class="hover:text-indigo-400 transition-colors" @click="searching = true; window.fathom?.trackGoal('NV4ZNM3W', 0)">
                 <x-heroicon-o-magnifying-glass class="h-5 inline" />
                 <span class="sr-only">Search</span>
             </button>
