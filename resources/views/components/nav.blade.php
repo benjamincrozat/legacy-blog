@@ -14,7 +14,7 @@ $promotesAffiliateLinks = request()->route()->post?->promotes_affiliate_links;
             x-data="{ open: false }"
         >
             <button class="hover:text-indigo-400 transition-colors" @click="searching = true">
-                <x-heroicon-o-magnifying-glass class="h-4 sm:h-5 inline" />
+                <x-heroicon-o-magnifying-glass class="h-5 inline" />
                 <span class="sr-only">Search</span>
             </button>
 
