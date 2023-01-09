@@ -112,6 +112,7 @@
                         x-ref="input"
                         @focus="$refs.input.select()"
                         @click="$refs.input.focus(); $refs.input.select()"
+                        @touchstart="$refs.input.focus(); $refs.input.select()"
                     />
 
                     <p class="text-center text-xs">
