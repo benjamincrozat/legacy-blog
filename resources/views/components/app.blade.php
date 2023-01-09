@@ -42,7 +42,7 @@
 
         @stack('head')
     </head>
-    <body {{ $attributes->merge(['class' => 'bg-gray-50 font-light', 'x-data' => '']) }}>
+    <body {{ $attributes->merge(['class' => 'bg-gray-50 font-light', 'x-data' => '{ searching: false }']) }}>
         {{ $slot }}
 
         @if (session('status') || request()->convertkit)
@@ -77,10 +77,9 @@
             x-cloak
             x-data="{
                 hits: [],
-                open: false,
                 query: '',
             }"
-            x-init="$watch('open', value => {
+            x-init="$watch('searching', value => {
                 $nextTick(() => {
                     if (value) {
                         $refs.input.focus()
@@ -95,12 +94,12 @@
                     hits = results.hits
                 }
             })"
-            x-show="open"
+            x-show="searching"
             x-transition.opacity
-            @keyup.escape.window="open = false"
-            @keydown.meta.k.window="open = ! open"
+            @keyup.escape.window="searching = false"
+            @keydown.meta.k.window="searching = ! searching"
         >
-            <div class="container md:max-w-screen-sm py-4" @click.away="open = false">
+            <div class="container md:max-w-screen-sm py-4" @click.away="searching = false">
                 <div class="bg-white dark:bg-gray-800 pb-2 rounded-lg shadow-xl">
                     <input
                         type="search"
@@ -128,7 +127,7 @@
                                 <li class="border-t border-gray-200/50 dark:border-gray-700/50">
                                     <a
                                         :href="`${appUrl}/${hit.slug}`"
-                                        class="hover:bg-gray-300 dark:hover:bg-gray-700/50 flex items-center justify-between gap-8 p-4 transition-colors"
+                                        class="hover:bg-gray-200/50 dark:hover:bg-gray-700/50 flex items-center justify-between gap-8 p-4 transition-colors"
                                     >
                                         <div>
                                             <div class="font-normal inline-block text-indigo-600 dark:text-indigo-400" x-text="hit.title"></div>
