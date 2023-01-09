@@ -21,10 +21,6 @@ summary::-webkit-details-marker {
     @apply hidden
 }
 
-.algolia-highlight em {
-    @apply bg-yellow-200/75
-}
-
 .content {
     @apply break-words max-w-none prose prose-a:border-b prose-a:font-light prose-a:no-underline prose-a:border-indigo-400/50 prose-a:text-indigo-400 prose-code:dark:text-current prose-headings:dark:text-white prose-headings:scroll-mt-8 prose-hr:dark:border-gray-800 prose-strong:text-current prose-thead:dark:border-gray-800 prose-tr:dark:border-gray-800 dark:text-current
 }

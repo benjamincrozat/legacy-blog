@@ -91,9 +91,15 @@
                 if ('' === value || value.length < 3) {
                     hits = []
                 } else {
-                    const results = await Algolia.initIndex(window.postsIndexName).search(value)
+                    const index = Algolia.initIndex(window.postsIndexName)
 
-                    console.log(results.hits)
+                    index.setSettings({
+                        attributesToHighlight: ['title', 'content:100'],
+                        highlightPreTag: `<em class='bg-yellow-300/75 dark:bg-indigo-400/30 !not-italic !text-yellow-800 dark:!text-white'>`,
+                        highlightPostTag: `</em>`,
+                    })
+
+                    const results = await index.search(value)
 
                     hits = results.hits
                 }
@@ -123,7 +129,7 @@
 
                     <p class="text-center text-xs">
                         <a href="#">
-                            <span class="opacity-50">Powered by</span> <x-icon-algolia class="h-4 inline" />
+                            <span class="opacity-50">Powered by</span> <x-icon-algolia class="h-[.85rem] inline" />
                         </a>
                     </p>
 
@@ -142,8 +148,8 @@
                                         class="hover:bg-gray-200/50 dark:hover:bg-gray-700/50 flex items-center justify-between gap-8 p-4 transition-colors"
                                     >
                                         <div>
-                                            <div class="algolia-highlight font-normal inline-block text-indigo-600 dark:text-indigo-400" x-html="hit._highlightResult.title.value"></div>
-                                            <div class="leading-relaxed mt-2 text-sm" x-text="hit.description"></div>
+                                            <div class="font-normal inline-block text-indigo-600 dark:text-indigo-400" x-html="hit._highlightResult.title.value"></div>
+                                            <div class="leading-relaxed mt-2 text-sm" x-html="hit._highlightResult.content.value"></div>
                                         </div>
 
                                         <img

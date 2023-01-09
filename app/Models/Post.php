@@ -124,7 +124,7 @@ class Post extends BaseModel implements Feedable
             'title' => $this->title,
             'slug' => $this->slug,
             'introduction' => $this->rendered_introduction,
-            'content' => $this->rendered_content,
+            'content' => strip_tags($this->rendered_content),
             'description' => $this->description,
             'image' => $this->image,
         ];
