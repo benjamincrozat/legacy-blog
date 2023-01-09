@@ -93,6 +93,8 @@
                 } else {
                     const results = await Algolia.initIndex(window.postsIndexName).search(value)
 
+                    console.log(results.hits)
+
                     hits = results.hits
                 }
             })"
@@ -140,7 +142,7 @@
                                         class="hover:bg-gray-200/50 dark:hover:bg-gray-700/50 flex items-center justify-between gap-8 p-4 transition-colors"
                                     >
                                         <div>
-                                            <div class="font-normal inline-block text-indigo-600 dark:text-indigo-400" x-text="hit.title"></div>
+                                            <div class="algolia-highlight font-normal inline-block text-indigo-600 dark:text-indigo-400" x-html="hit._highlightResult.title.value"></div>
                                             <div class="leading-relaxed mt-2 text-sm" x-text="hit.description"></div>
                                         </div>
 
