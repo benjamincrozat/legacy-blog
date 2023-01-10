@@ -15,7 +15,7 @@
         <div class="container mt-16">
             <h1 class="leading-tight text-lg sm:text-xl md:text-2xl text-center text-indigo-100">
                 <span class="font-medium text-white">Hire a Laravel expert</span>.<br />
-                An on-demand CTO with 10+&nbsp;years&nbsp;of&nbsp;experience.
+                On-demand CTO with 10+&nbsp;years&nbsp;of&nbsp;experience.
             </h1>
         </div>
 
