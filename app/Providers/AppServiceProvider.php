@@ -27,15 +27,10 @@ class AppServiceProvider extends ServiceProvider
             fn ($string) => (new LightdownConverter())->convert($string)
         );
 
-        Str::macro('marxdown', function (string $string) {
-            $html = (string) MarxdownConverter::make()->convert($string);
-
-            return preg_replace_callback('/<h(\d)>(.*)<\/h\d>/', function ($matches) {
-                $cleanedUpStringForId = html_entity_decode(strip_tags($matches[2]));
-
-                return '<h' . $matches[1] . ' id="' . Str::slug($cleanedUpStringForId) . '">' . $matches[2] . '</h' . $matches[1] . '>';
-            }, $html);
-        });
+        Str::macro(
+            'marxdown',
+            fn ($string) => (new MarxdownConverter())->convert($string)
+        );
 
         View::composer(
             'components.newsletter',

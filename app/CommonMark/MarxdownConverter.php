@@ -3,10 +3,12 @@
 namespace App\CommonMark;
 
 use Illuminate\Support\Str;
+use League\CommonMark\Node\Node;
 use League\CommonMark\Environment\Environment;
 use Torchlight\Commonmark\V2\TorchlightExtension;
 use League\CommonMark\Extension\Table\TableExtension;
 use League\CommonMark\Extension\CommonMark\Node\Inline\Link;
+use League\CommonMark\Extension\CommonMark\Node\Block\Heading;
 use League\CommonMark\Extension\Attributes\AttributesExtension;
 use League\CommonMark\Extension\SmartPunct\SmartPunctExtension;
 use League\CommonMark\Extension\GithubFlavoredMarkdownExtension;
@@ -16,10 +18,22 @@ use League\CommonMark\Extension\DefaultAttributes\DefaultAttributesExtension;
 
 class MarxdownConverter extends \League\CommonMark\MarkdownConverter
 {
-    public static function make()
+    public function __construct(array $config = [])
     {
-        return new self([
+        $environment = new Environment([
             'default_attributes' => [
+                Heading::class => [
+                    'id' => function (Heading $node) {
+                        $text = $this->childrenToText($node);
+
+                        return Str::slug($text);
+                    },
+                    'x-intersect' => function (Heading $node) {
+                        $text = $this->childrenToText($node);
+
+                        return "\$dispatch('toc.section.changed', `$text`)";
+                    },
+                ],
                 Link::class => [
                     'rel' => function (Link $node) {
                         if (
@@ -50,23 +64,26 @@ class MarxdownConverter extends \League\CommonMark\MarkdownConverter
                 ],
             ],
         ]);
-    }
-
-    /**
-     * @param  array<string, mixed>  $config
-     */
-    public function __construct(array $config = [])
-    {
-        $environment = new Environment($config);
-        $environment->addExtension(new AttributesExtension);
-        $environment->addExtension(new CommonMarkCoreExtension);
-        $environment->addExtension(new DefaultAttributesExtension);
-        $environment->addExtension(new DescriptionListExtension);
-        $environment->addExtension(new GithubFlavoredMarkdownExtension);
-        $environment->addExtension(new SmartPunctExtension);
-        $environment->addExtension(new TableExtension);
-        $environment->addExtension(new TorchlightExtension);
+        $environment->addExtension(new AttributesExtension());
+        $environment->addExtension(new CommonMarkCoreExtension());
+        $environment->addExtension(new DefaultAttributesExtension());
+        $environment->addExtension(new DescriptionListExtension());
+        $environment->addExtension(new GithubFlavoredMarkdownExtension());
+        $environment->addExtension(new SmartPunctExtension());
+        $environment->addExtension(new TableExtension());
+        $environment->addExtension(new TorchlightExtension());
 
         parent::__construct($environment);
+    }
+
+    protected function childrenToText(Node $node): string
+    {
+        $text = '';
+
+        foreach ($node->children() as $child) {
+            $text .= $child?->getLiteral() ?? '';
+        }
+
+        return $text;
     }
 }
