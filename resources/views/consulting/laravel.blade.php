@@ -15,7 +15,7 @@
         <div class="container mt-16">
             <h1 class="leading-tight text-lg sm:text-xl md:text-2xl text-center text-indigo-100">
                 <span class="font-medium text-white">Hire a Laravel expert</span>.<br />
-                A CTO on-demand with 10+&nbsp;years&nbsp;of&nbsp;experience.
+                An on-demand CTO with 10+&nbsp;years&nbsp;of&nbsp;experience.
             </h1>
         </div>
 
@@ -142,7 +142,7 @@
             x-intersect="window.fathom?.trackGoal('WSVGAGQR', 0)"
         >
             <h2 class="font-medium text-xl sm:text-3xl text-center">
-                The Laravel services I provide in details
+                The Laravel CTO services I provide in details
             </h2>
 
             <ul class="grid sm:grid-cols-2 gap-12 mt-8 sm:mt-16">
@@ -355,28 +355,6 @@
                         If I'm unavailable and we can't reschedule, you're refunded. If you don't show up to the call, you're refunded. If I see I can't help you with your project because I don't have sufficient experience, you will also be refunded.
                     </p>
                 </details>
-
-                <details class="group">
-                    <summary class="border-b border-indigo-100 cursor-default flex items-center gap-2 font-medium p-4" @click="window.fathom?.trackGoal('XV5G8R8A', 0)">
-                        <x-heroicon-o-chevron-right class="-translate-y-px flex-shrink-0 group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
-                        My developers are busy. Can you fix everything if I book you for 3 hours?
-                    </summary>
-
-                    <p class="border-b border-indigo-100 p-4">
-                        Unfortunately, 3 hours is too short to do anything meaningful. I can only do it if you book me for at least 3 days.
-                    </p>
-                </details>
-
-                <details class="group">
-                    <summary class="border-b border-indigo-100 cursor-default flex items-center gap-2 font-medium p-4" @click="window.fathom?.trackGoal('XV5G8R8A', 0)">
-                        <x-heroicon-o-chevron-right class="-translate-y-px flex-shrink-0 group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
-                        I want to book you for a different period of time. Is that possible?
-                    </summary>
-
-                    <p class="border-b border-indigo-100 p-4">
-                        You can book me for 7 days, 3 days, 3 hours or 1 hour. You cannot book me for something in between these options, but you can cumulate if you need me for longer.
-                    </p>
-                </details>
             </div>
         </section>
     </div>
@@ -439,22 +417,6 @@
                     "acceptedAnswer": {
                         "@type": "Answer",
                         "text": "If I'm unavailable and we can't reschedule, you're refunded. If you don't show up to the call, you're refunded. If I see I can't help you with your project because I don't have sufficient experience, you will also be refunded."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "My developers are busy. Can you do the work if I book you for 3 hours?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Unfortunately, 3 hours is too short to do anything meaningful. I can only do it if you book me for at least 3 days."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "I want to book you for a different period of time. Is that possible?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "You can book me for 7 days, 3 days, 3 hours or 1 hour. You cannot book me for something in between these options, but you can cumulate if you need me for longer."
                     }
                 }
             ]
