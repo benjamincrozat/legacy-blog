@@ -105,12 +105,8 @@
 
                 <div class="bg-gradient-to-r from-white/0 via-white/[.15] to-white/0 grid place-items-center sm:my-8 p-6 sm:p-8 text-center">
                     <div>
-                        <div>
-                            <div class="font-semibold text-lg sm:text-lg md:text-xl">
-                                Audit
-                            </div>
-
-                            <div>I will tell you how to fix your product.</div>
+                        <div class="font-semibold text-lg sm:text-lg md:text-xl">
+                            Audit
                         </div>
 
                         <div class="font-black mt-4 text-4xl md:text-5xl">
