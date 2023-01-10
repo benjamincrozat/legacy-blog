@@ -4,6 +4,7 @@ namespace App\CommonMark;
 
 use Illuminate\Support\Str;
 use League\CommonMark\Node\Node;
+use League\CommonMark\Node\Inline\Text;
 use League\CommonMark\Environment\Environment;
 use Torchlight\Commonmark\V2\TorchlightExtension;
 use League\CommonMark\Extension\Table\TableExtension;
@@ -81,7 +82,11 @@ class MarxdownConverter extends \League\CommonMark\MarkdownConverter
         $text = '';
 
         foreach ($node->children() as $child) {
-            $text .= $child?->getLiteral() ?? '';
+            if ($child instanceof Text) {
+                $text .= $child->getLiteral();
+            } else {
+                $text .= $this->childrenToText($child);
+            }
         }
 
         return $text;
