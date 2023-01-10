@@ -126,7 +126,7 @@
                             "What's new in PHP 8.3?",
                         ])->random() }}"
                         class="bg-transparent border-transparent focus:border-transparent placeholder-gray-300 dark:placeholder-gray-600 px-4 py-3 focus:ring-0 scroll-mt-4 w-full"
-                        x-model.debounce="query"
+                        x-model="query"
                         x-ref="input"
                         @focus="$refs.input.select()"
                         @click="$focus.focus($refs.input); $refs.input.select()"
