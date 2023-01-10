@@ -1,8 +1,4 @@
-@php
-$promotesAffiliateLinks = request()->route()->post?->promotes_affiliate_links;
-@endphp
-
-@if (! $promotesAffiliateLinks)
+@if (! $promotesAffiliateLinks = request()->route()->post?->promotes_affiliate_links)
     <div {{ $attributes->merge(['class' => 'flex flex-wrap items-center justify-between gap-8']) }}>
         <a href="{{ route('home') }}">
             <x-icon-logo class="h-7 sm:h-8 md:h-9" />
@@ -44,18 +40,15 @@ $promotesAffiliateLinks = request()->route()->post?->promotes_affiliate_links;
                         Courses
                     </li>
 
-                    <li>
-                        <span
-                            class="flex items-center gap-1 group px-4 py-2 hover:text-white transition-colors"
-                            @click="window.fathom?.trackGoal('FDAGEMV8', 0)"
-                        >
+                    <li class="group px-4 py-2 hover:text-white transition-colors">
+                        <span class="flex items-center gap-1">
                             SEO Wizardry for Developers
-                            <span
-                                class="bg-gradient-to-r from-indigo-300 to-indigo-500 leading-none px-2 py-1 rounded-full scale-75 text-xs translate-y-px transition-colors"
-                            >
+                            <span class="bg-gradient-to-r from-indigo-300 to-indigo-500 leading-none px-2 py-1 rounded-full scale-75 text-xs translate-y-px transition-colors">
                                 Soon
                             </span>
                         </span>
+
+                        <span class="opacity-75 text-xs">Escape the ghost town. Create content for humans.</span>
                     </li>
 
                     <li class="font-light text-gray-400 my-2 px-4 text-xs uppercase">
@@ -69,19 +62,15 @@ $promotesAffiliateLinks = request()->route()->post?->promotes_affiliate_links;
                             @click="window.fathom?.trackGoal('SJKONFQC', 0)"
                         >
                             Laravel
+                            <span class="block opacity-75 text-xs">It's like getting a CTO, but on-demand.</span>
                         </a>
                     </li>
 
-                    <li>
-                        <span
-                            class="flex items-center gap-1 px-4 py-2 hover:text-white transition-colors"
-                        >
-                            SEO
-                            <span
-                                class="bg-gradient-to-r from-indigo-300 to-indigo-500 leading-none px-2 py-1 rounded-full scale-75 text-xs transition-colors"
-                            >
-                                Soon
-                            </span>
+                    <li class="flex items-center gap-1 px-4 py-2 hover:text-white transition-colors">
+                        SEO
+
+                        <span class="bg-gradient-to-r from-indigo-300 to-indigo-500 leading-none px-2 py-1 rounded-full scale-75 text-xs transition-colors">
+                            Soon
                         </span>
                     </li>
                 </ul>
