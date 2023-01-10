@@ -1,5 +1,5 @@
 <x-app
-    title="Hire an expert Laravel developer: Benjamin Crozat"
+    title="Hire an expert Laravel developer. A CTO on-demand."
     description="Book an expert of the Laravel framework, TODAY. Benjamin Crozat is a Laravel developer for hire."
     x-data="{ open: false }"
 >
@@ -15,7 +15,7 @@
         <div class="container mt-16">
             <h1 class="leading-tight text-lg sm:text-xl md:text-2xl text-center text-indigo-100">
                 <span class="font-medium text-white">Hire a Laravel expert</span>.<br />
-                10+&nbsp;years&nbsp;of&nbsp;experience at your service.
+                A CTO on-demand with 10+&nbsp;years&nbsp;of&nbsp;experience.
             </h1>
         </div>
 
