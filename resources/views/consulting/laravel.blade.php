@@ -1,6 +1,6 @@
 <x-app
     title="Hire an expert Laravel developer. A CTO on-demand."
-    description="Book an expert of the Laravel framework, TODAY. Benjamin Crozat is a Laravel developer for hire."
+    description="Book your Laravel CTO, TODAY. Benjamin Crozat is a Laravel developer with 10+ years of experience."
     x-data="{ open: false }"
 >
     <div class="bg-gradient-to-r from-indigo-500 to-indigo-400 pb-16 pt-6 text-indigo-50">
