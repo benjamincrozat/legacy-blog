@@ -12,7 +12,7 @@ class SitemapGenerateCommand extends Command
 
     protected $description = 'Generate sitemap';
 
-    public function handle() : int
+    public function handle(): int
     {
         $sitemap = Sitemap::create();
 
@@ -20,9 +20,7 @@ class SitemapGenerateCommand extends Command
 
         $sitemap->add(route('consulting.laravel'));
 
-        Post::latest()->get()->each(function (Post $post) use ($sitemap) {
-            $sitemap->add(route('posts.show', $post));
-        });
+        Post::latest()->get()->each(fn ($p) => $sitemap->add(route('posts.show', $p)));
 
         $sitemap->writeToFile(public_path('/sitemap.xml'));
 

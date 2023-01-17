@@ -12,13 +12,14 @@ class FathomFetchCommand extends Command
 
     protected $description = 'Fetch Fathom data';
 
-    public function handle(Client $client) : int
+    public function handle(Client $client): int
     {
         $client
             ->views()
-            ->each(function (array $item) {
-                Post::where('slug', trim($item['pathname'], '/'))->update(['views' => $item['pageviews']]);
-            });
+            ->each(
+                fn ($i) => Post::where('slug', trim($i['pathname'], '/'))
+                    ->update(['views' => $i['pageviews']])
+            );
 
         $this->info('Fathom views data fetched successfully.');
 
