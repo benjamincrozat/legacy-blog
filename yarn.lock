@@ -107,21 +107,21 @@
     "@algolia/requester-common" "4.14.3"
 
 "@alpinejs/focus@^3.10.5":
-  version "3.10.5"
-  resolved "https://registry.yarnpkg.com/@alpinejs/focus/-/focus-3.10.5.tgz#770e9ac1219cd0f219f718454be3fb7f9cf32e1f"
-  integrity sha512-i/mqaxlWvVKuIHqqZh0kQ/sQ8CfeTTo6763sp+WvhBnRY5pBWhLzG3gfdtEtxL5psH/hksT9sRUtrH9/a01wAw==
+  version "3.11.1"
+  resolved "https://registry.yarnpkg.com/@alpinejs/focus/-/focus-3.11.1.tgz#8f18bf6099814e9dd45e1c8645bc1d971484e471"
+  integrity sha512-5gbkgwLlxFfYomCt4cHda5DxBwIdBagmA1AXiOuUytix7AHPtspJBjAULLglz4D82Xdz7bWyau4vZfLr/PhbXQ==
   dependencies:
     focus-trap "^6.6.1"
 
 "@alpinejs/intersect@^3.10.3":
-  version "3.10.5"
-  resolved "https://registry.yarnpkg.com/@alpinejs/intersect/-/intersect-3.10.5.tgz#4a37b6633f8e4ce87aa4efa5fc3c545250ef9d2f"
-  integrity sha512-4i9zrQ5mZJXtLf2ZRI5Fc4t8kBlierIsNZzwG38BWzduD4dLhBvU3+mFiLl/rgIwvFuJ080duIb4S9/XW81nBQ==
+  version "3.11.1"
+  resolved "https://registry.yarnpkg.com/@alpinejs/intersect/-/intersect-3.11.1.tgz#858e0aa5689c459fbd22442bbe06c65b00fa4786"
+  integrity sha512-kY8MBSZhfgaaEQC94flhCUVX04RAEXpZRZSKFb8cToDNDFbVhVFF8HNPEAwH+SQOAI45A0LFjGbVaO9m89egVw==
 
 "@alpinejs/persist@^3.10.5":
-  version "3.10.5"
-  resolved "https://registry.yarnpkg.com/@alpinejs/persist/-/persist-3.10.5.tgz#c87809eb5a9df4463c0b738028aece1007a9d407"
-  integrity sha512-5kFmnWck6rVCoXjgby/8MoeDf7F9DvIzUOtaTge5pLkrbNh4m0vRBRIXLcOILKz9wtrSJ4mOOW11IC/hRPId/g==
+  version "3.11.1"
+  resolved "https://registry.yarnpkg.com/@alpinejs/persist/-/persist-3.11.1.tgz#87d6f461ab6da89b894701a9ddb896ab8eecdddb"
+  integrity sha512-x+vkIMexCYo5x/T1mvy/wZ1hg/y1k34Kk/dcXEfDiUF2iQ/hjusWO+54o+5FR6QUrQpPsjLfX2J1vf0XUsBlLA==
 
 "@esbuild/android-arm@0.15.18":
   version "0.15.18"
@@ -172,9 +172,9 @@
   integrity sha512-HFzAQuqYCjyy/SX9sLGB1lroPzmcnWv1FHkIpmypte10hptf4oPUfucryMKovZh2u0uiS9U5Ty3GghWfEJGwVw==
 
 "@tailwindcss/typography@^0.5.7":
-  version "0.5.8"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.5.8.tgz#8fb31db5ab0590be6dfa062b1535ac86ad9d12bf"
-  integrity sha512-xGQEp8KXN8Sd8m6R4xYmwxghmswrd0cPnNI2Lc6fmrC3OojysTBJJGSIVwPV56q4t6THFUK3HJ0EaWwpglSxWw==
+  version "0.5.9"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.5.9.tgz#027e4b0674929daaf7c921c900beee80dbad93e8"
+  integrity sha512-t8Sg3DyynFysV9f4JDOVISGsjazNb48AeIYQwcL+Bsq5uf4RYL75C1giZ43KISjeDGBaTN3Kxh7Xj/vRSMJUUg==
   dependencies:
     lodash.castarray "^4.4.0"
     lodash.isplainobject "^4.0.6"
@@ -233,9 +233,9 @@ algoliasearch@^4.14.3:
     "@algolia/transporter" "4.14.3"
 
 alpinejs@^3.10.3:
-  version "3.10.5"
-  resolved "https://registry.yarnpkg.com/alpinejs/-/alpinejs-3.10.5.tgz#59ca09ad42293cc8e0bbbdf4c7696fc22c6df700"
-  integrity sha512-qlvnal44Gof2XVfm/lef8fYpXKxR9fjdSki7aFB/9THyFvbsRKZ6lM5SjxXpIs7B0faJt7bgpK2K25gzrraXJw==
+  version "3.11.1"
+  resolved "https://registry.yarnpkg.com/alpinejs/-/alpinejs-3.11.1.tgz#8675083411bb8a18e618a646cd64cb9bdf76a75e"
+  integrity sha512-0Y+4WKQcEZrvpfS98qeSOXCPXFPorULQ+1hc8lQrx+1HHzkUofD4HzjTfz+wimA5tSsGnpXz/SoF2P9saiXZCw==
   dependencies:
     "@vue/reactivity" "~3.1.1"
 
@@ -292,9 +292,9 @@ camelcase-css@^2.0.1:
   integrity sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==
 
 caniuse-lite@^1.0.30001400, caniuse-lite@^1.0.30001426:
-  version "1.0.30001442"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001442.tgz#40337f1cf3be7c637b061e2f78582dc1daec0614"
-  integrity sha512-239m03Pqy0hwxYPYR5JwOIxRJfLTWtle9FV8zosfV5pHg+/51uD4nxcUlM8+mWWGfwKtt8lJNHnD3cWw9VZ6ow==
+  version "1.0.30001445"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001445.tgz#cf2d4eb93f2bcdf0310de9dd6d18be271bc0b447"
+  integrity sha512-8sdQIdMztYmzfTMO6KfLny878Ln9c2M0fc7EH60IjlP4Dc4PiCy7K2Vl3ITmWgOyPgVQKa5x+UP/KqFsxj4mBg==
 
 chokidar@^3.5.3:
   version "3.5.3"
@@ -730,9 +730,9 @@ postcss-value-parser@^4.0.0, postcss-value-parser@^4.2.0:
   integrity sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==
 
 postcss@^8.1.14, postcss@^8.4.18:
-  version "8.4.20"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.20.tgz#64c52f509644cecad8567e949f4081d98349dc56"
-  integrity sha512-6Q04AXR1212bXr5fh03u8aAwbLxAQNGQ/Q1LNa0VfOI06ZAlhPHtQvE4OIdpj4kLThXilalPnmDSOD65DcHt+g==
+  version "8.4.21"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.21.tgz#c639b719a57efc3187b13a1d765675485f4134f4"
+  integrity sha512-tP7u/Sn/dVxK2NnruI4H9BG+x+Wxz6oeZ1cJ8P6G/PZY0IKk4k/63TDsQf2kQq3+qoJeLm2kIBUNlZe3zgb4Zg==
   dependencies:
     nanoid "^3.3.4"
     picocolors "^1.0.0"

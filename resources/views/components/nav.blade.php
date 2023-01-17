@@ -14,67 +14,12 @@
                 <span class="sr-only">Search</span>
             </button>
 
-            <div class="relative text-white">
-                <button
-                    class="bg-gradient-to-r from-indigo-300 dark:from-indigo-500 to-indigo-400 dark:to-indigo-600 hover:-hue-rotate-90 flex items-center gap-2 pl-4 pr-3 py-2 rounded shadow-lg w-full"
-                    :class="{ 'bg-gray-800 hover:hue-rotate-0 dark:bg-black bg-none rounded-none rounded-t': open }"
-                    @click="open = ! open; window.fathom?.trackGoal('AT7WQBDZ', 0)"
-                >
-                    Learn
-                    <x-heroicon-o-chevron-down class="w-3 h-3 translate-y-px transition-transform duration-500" x-bind:class="{ 'rotate-180': open }" />
-                </button>
-
-                <span
-                    class="absolute -top-2 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 group-hover:-hue-rotate-90
-                    leading-none px-2 py-1 rounded-full scale-75 shadow-lg text-xs translate-y-px transition-colors"
-                >
-                    New
-                </span>
-
-                <ul
-                    class="absolute top-full right-0 bg-gray-800 dark:bg-black min-w-[320px] py-2 rounded rounded-tr-none shadow-xl text-sm z-10"
-                    x-cloak
-                    x-show="open"
-                >
-                    <li class="font-light text-gray-400 my-2 px-4 text-xs uppercase">
-                        Courses
-                    </li>
-
-                    <li class="group px-4 py-2 hover:text-white transition-colors">
-                        <span class="flex items-center gap-1">
-                            SEO Wizardry for Developers
-                            <span class="bg-gradient-to-r from-indigo-300 to-indigo-500 leading-none px-2 py-1 rounded-full scale-75 text-xs translate-y-px transition-colors">
-                                Soon
-                            </span>
-                        </span>
-
-                        <span class="opacity-75 text-xs">Escape the ghost town. Create content for humans.</span>
-                    </li>
-
-                    <li class="font-light text-gray-400 my-2 px-4 text-xs uppercase">
-                        Consulting
-                    </li>
-
-                    <li>
-                        <a
-                            href="{{ route('consulting.laravel') }}"
-                            class="hover:bg-blue-500 dark:hover:bg-blue-900/50 block px-4 py-2 hover:text-white transition-colors"
-                            @click="window.fathom?.trackGoal('SJKONFQC', 0)"
-                        >
-                            Laravel
-                            <span class="block opacity-75 text-xs">It's like getting a CTO, but on-demand.</span>
-                        </a>
-                    </li>
-
-                    <li class="flex items-center gap-1 px-4 py-2 hover:text-white transition-colors">
-                        SEO
-
-                        <span class="bg-gradient-to-r from-indigo-300 to-indigo-500 leading-none px-2 py-1 rounded-full scale-75 text-xs transition-colors">
-                            Soon
-                        </span>
-                    </li>
-                </ul>
-            </div>
+            <a
+                href="{{ route('consulting.laravel') }}"
+                class="bg-gradient-to-r from-indigo-300 dark:from-indigo-500 to-indigo-400 dark:to-indigo-600 hover:-hue-rotate-90 flex items-center gap-2 font-medium px-4 py-2 rounded shadow-lg text-white transition-all"
+            >
+                Consult me
+            </a>
         </nav>
     </div>
 @else
