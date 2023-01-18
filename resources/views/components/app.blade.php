@@ -38,6 +38,12 @@
 
         @if (app()->isProduction() && auth()->guest())
             <script defer src="https://save-tonight-hey-jude.benjamincrozat.com/script.js" data-site="{{ config('services.fathom.site_id') }}"></script>
+
+            <script defer src="https://api.pirsch.io/pirsch.js" id="pirschjs" data-code="5N2hIsUQsCVX1LQtvPdJ3AGwQZHGxtt5"></script>
+
+            <script defer src="https://api.pirsch.io/pirsch-events.js" id="pirscheventsjs" data-code="5N2hIsUQsCVX1LQtvPdJ3AGwQZHGxtt5"></script>
+
+            <script defer src="https://api.pirsch.io/pirsch-sessions.js" id="pirschsessionsjs" data-code="5N2hIsUQsCVX1LQtvPdJ3AGwQZHGxtt5"></script>
         @endif
 
         @stack('head')
