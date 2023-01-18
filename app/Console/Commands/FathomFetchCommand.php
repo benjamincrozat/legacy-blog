@@ -12,7 +12,7 @@ class FathomFetchCommand extends Command
 
     protected $description = 'Fetch Fathom data';
 
-    public function handle(Client $client): int
+    public function handle(Client $client) : int
     {
         $client
             ->views()

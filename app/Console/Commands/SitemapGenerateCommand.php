@@ -12,7 +12,7 @@ class SitemapGenerateCommand extends Command
 
     protected $description = 'Generate sitemap';
 
-    public function handle(): int
+    public function handle() : int
     {
         $sitemap = Sitemap::create();
 

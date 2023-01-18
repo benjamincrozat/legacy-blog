@@ -42,7 +42,7 @@ class Subscriber extends Resource
     public function cards(NovaRequest $request) : array
     {
         return [
-            new SubscribersCount,
+            new SubscribersCount(),
         ];
     }
 

@@ -10,17 +10,16 @@ use Illuminate\Support\Facades\View;
 use App\CommonMark\MarxdownConverter;
 use App\CommonMark\LightdownConverter;
 use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
-    public function register(): void
+    public function register() : void
     {
         $this->app->bind(Client::class, fn (Application $app) => new Client($app->make(Factory::class)));
     }
 
-    public function boot(): void
+    public function boot() : void
     {
         Str::macro(
             'lightdown',

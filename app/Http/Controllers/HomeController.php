@@ -8,7 +8,7 @@ use Illuminate\View\View;
 
 class HomeController extends Controller
 {
-    public function __invoke(): View
+    public function __invoke() : View
     {
         $pins = Pin::latest()->limit(4)->get()->shuffle();
 

@@ -77,7 +77,7 @@ class MarxdownConverter extends \League\CommonMark\MarkdownConverter
         parent::__construct($environment);
     }
 
-    protected function childrenToText(Node $node): string
+    protected function childrenToText(Node $node) : string
     {
         $text = '';
 

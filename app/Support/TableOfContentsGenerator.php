@@ -13,7 +13,7 @@ class TableOfContentsGenerator
 
         $tableOfContents = [];
 
-        for ($i = 0; $i < count($headings[0]); $i++) {
+        for ($i = 0; $i < count($headings[0]); ++$i) {
             $title = html_entity_decode(strip_tags(Str::marxdown($headings[2][$i])));
 
             $tableOfContents[] = [

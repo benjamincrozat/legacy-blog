@@ -10,14 +10,14 @@ use League\CommonMark\Extension\InlinesOnly\InlinesOnlyExtension;
 class LightdownConverter extends \League\CommonMark\MarkdownConverter
 {
     /**
-     * @param  array<string, mixed>  $config
+     * @param array<string, mixed> $config
      */
     public function __construct(array $config = [])
     {
         $environment = new Environment($config);
-        $environment->addExtension(new AttributesExtension);
-        $environment->addExtension(new GithubFlavoredMarkdownExtension);
-        $environment->addExtension(new InlinesOnlyExtension);
+        $environment->addExtension(new AttributesExtension());
+        $environment->addExtension(new GithubFlavoredMarkdownExtension());
+        $environment->addExtension(new InlinesOnlyExtension());
 
         parent::__construct($environment);
     }

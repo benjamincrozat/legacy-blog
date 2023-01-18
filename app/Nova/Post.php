@@ -114,7 +114,7 @@ HTML;
     public function cards(NovaRequest $request) : array
     {
         return [
-            new PostsIntent,
+            new PostsIntent(),
         ];
     }
 

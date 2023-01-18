@@ -24,7 +24,7 @@ class Post extends BaseModel implements Feedable
         'modified_at' => 'date',
     ];
 
-    public static function booted(): void
+    public static function booted() : void
     {
         static::saved(function (Post $post) {
             if ($post->wasChanged('slug')) {
@@ -36,7 +36,7 @@ class Post extends BaseModel implements Feedable
         });
     }
 
-    public function scopeWithPinned(Builder $query): void
+    public function scopeWithPinned(Builder $query) : void
     {
         $query
             ->addSelect([
@@ -49,7 +49,7 @@ class Post extends BaseModel implements Feedable
             ]);
     }
 
-    public function scopeWithUser(Builder $query): void
+    public function scopeWithUser(Builder $query) : void
     {
         $query
             ->addSelect([
@@ -64,22 +64,22 @@ class Post extends BaseModel implements Feedable
             ]);
     }
 
-    public function user(): BelongsTo
+    public function user() : BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
-    public function bestProducts(): HasMany
+    public function bestProducts() : HasMany
     {
         return $this->hasMany(BestProduct::class)->orderBy('position');
     }
 
-    public function pins(): HasMany
+    public function pins() : HasMany
     {
         return $this->hasMany(Pin::class);
     }
 
-    public function readTime(): Attribute
+    public function readTime() : Attribute
     {
         return Attribute::make(function () {
             $words = str_word_count(strip_tags($this->content));
@@ -89,21 +89,21 @@ class Post extends BaseModel implements Feedable
         });
     }
 
-    public function tableOfContents(): Attribute
+    public function tableOfContents() : Attribute
     {
         return Attribute::make(
             fn () => TableOfContentsGenerator::generate($this->introduction . $this->content)
         );
     }
 
-    public function renderedIntroduction(): Attribute
+    public function renderedIntroduction() : Attribute
     {
         return Attribute::make(
             fn () => Str::marxdown($this->introduction ?? '')
         )->shouldCache();
     }
 
-    public function renderedContent(): Attribute
+    public function renderedContent() : Attribute
     {
         return Attribute::make(
             fn () => Str::marxdown($this->content ?? '')
@@ -118,7 +118,7 @@ class Post extends BaseModel implements Feedable
     }
 
     #[SearchUsingFullText(['title', 'content', 'description'])]
-    public function toSearchableArray(): array
+    public function toSearchableArray() : array
     {
         return [
             'title' => $this->title,
@@ -130,12 +130,12 @@ class Post extends BaseModel implements Feedable
         ];
     }
 
-    public static function getFeedItems(): Collection
+    public static function getFeedItems() : Collection
     {
         return self::latest()->withUser()->get();
     }
 
-    public function toFeedItem(): FeedItem
+    public function toFeedItem() : FeedItem
     {
         return FeedItem::create([
             'id' => route('posts.show', $this),

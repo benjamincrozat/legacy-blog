@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Artisan;
 
 class SitemapGenerateCommandTest extends TestCase
 {
-    public function test_it_generates_a_sitemap(): void
+    public function test_it_generates_a_sitemap() : void
     {
         Artisan::call(SitemapGenerateCommand::class);
 
