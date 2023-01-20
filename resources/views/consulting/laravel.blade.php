@@ -79,7 +79,26 @@
                 Simple pricing.
             </h2>
 
-            <div class="grid sm:grid-cols-2 gap-4 sm:gap-0 mt-8">
+            <div class="grid md:grid-cols-3 gap-4 sm:gap-0 mt-8">
+                <div class="bg-gradient-to-r from-white/0 via-white/[.15] to-white/0 grid place-items-center sm:my-8 p-6 sm:p-8 text-center">
+                    <div>
+                        <div class="font-semibold text-lg sm:text-lg md:text-xl">
+                            Audit
+                        </div>
+
+                        <div class="font-black mt-4 text-4xl md:text-5xl">
+                            <span class="inline-flex items-center">1,000<span class="font-light opacity-75 text-xl sm:text-3xl">€</span></span>
+                        </div>
+
+                        <a
+                            href="https://savvycal.com/benjamincrozat/ask-me-anything"
+                            class="border border-white/30 font-semibold inline-block mt-8 px-8 py-2 rounded"
+                        >
+                            Book a call
+                        </a>
+                    </div>
+                </div>
+
                 <div class="bg-gradient-to-r from-white to-indigo-50 grid place-items-center py-6 sm:p-8 rounded-xl shadow-xl shadow-indigo-500 text-center text-indigo-400">
                     <div>
                         <div>
@@ -106,11 +125,7 @@
                 <div class="bg-gradient-to-r from-white/0 via-white/[.15] to-white/0 grid place-items-center sm:my-8 p-6 sm:p-8 text-center">
                     <div>
                         <div class="font-semibold text-lg sm:text-lg md:text-xl">
-                            Audit
-                        </div>
-
-                        <div class="font-black mt-4 text-4xl md:text-5xl">
-                            <span class="inline-flex items-center">1,000<span class="font-light opacity-75 text-xl sm:text-3xl">€</span></span>
+                            Custom deal
                         </div>
 
                         <a
