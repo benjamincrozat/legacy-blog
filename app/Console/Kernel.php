@@ -2,8 +2,6 @@
 
 namespace App\Console;
 
-use Spatie\Backup\Commands\BackupCommand;
-use Spatie\Backup\Commands\CleanupCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use App\Console\Commands\FathomFetchCommand;
 use App\Console\Commands\ConvertKitFetchCommand;
@@ -25,14 +23,6 @@ class Kernel extends ConsoleKernel
         $schedule
             ->command(SitemapGenerateCommand::class)
             ->daily();
-
-        $schedule->command(CleanupCommand::class)
-            ->daily()
-            ->at('01:00');
-
-        $schedule->command(BackupCommand::class)
-            ->daily()
-            ->at('01:30');
     }
 
     protected function commands() : void
