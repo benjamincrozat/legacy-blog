@@ -124,8 +124,14 @@
 
                 <div class="bg-gradient-to-r from-white/0 via-white/[.15] to-white/0 grid place-items-center sm:my-8 p-6 sm:p-8 text-center">
                     <div>
-                        <div class="font-semibold text-lg sm:text-lg md:text-xl">
-                            Custom deal
+                        <div>
+                            <div class="font-semibold text-lg sm:text-lg md:text-xl">
+                                Custom deal
+                            </div>
+
+                            <div>
+                                Let's work something out.
+                            </div>
                         </div>
 
                         <a
@@ -330,41 +336,6 @@
         </section>
     </div>
 
-    <div class="bg-indigo-50 text-indigo-900">
-        <section
-            class="container py-8 sm:py-16"
-            x-intersect="window.fathom?.trackGoal('GNBHJW7B', 0)"
-        >
-            <h2 class="font-medium text-xl sm:text-3xl text-center">
-                Frequently Asked Questions
-            </h2>
-
-            <div class="border border-indigo-100 grid mt-8 rounded">
-                <details class="group" open>
-                    <summary class="border-b border-indigo-100 cursor-default flex items-center gap-2 font-medium p-4" @click="window.fathom?.trackGoal('XV5G8R8A', 0)">
-                        <x-heroicon-o-chevron-right class="-translate-y-px flex-shrink-0 group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
-                        When is my credit card charged?
-                    </summary>
-
-                    <p class="border-b border-indigo-100 p-4">
-                        Your credit card will be charged immediately after you schedule a consulting call.
-                    </p>
-                </details>
-
-                <details class="group">
-                    <summary class="border-b border-indigo-100 cursor-default flex items-center gap-2 font-medium p-4" @click="window.fathom?.trackGoal('XV5G8R8A', 0)">
-                        <x-heroicon-o-chevron-right class="-translate-y-px flex-shrink-0 group-open:-translate-y-px inline group-open:rotate-90 transition w-4 h-4" />
-                        Can I get my money back if something goes wrong?
-                    </summary>
-
-                    <p class="border-b border-indigo-100 p-4">
-                        If I'm unavailable and we can't reschedule, you're refunded. If you don't show up to the call, you're refunded. If I see I can't help you with your project because I don't have sufficient experience, you will also be refunded.
-                    </p>
-                </details>
-            </div>
-        </section>
-    </div>
-
     <div id="about" class="bg-indigo-50/30 text-indigo-900">
         <section
             class="container py-8 sm:py-16"
@@ -401,31 +372,6 @@
                 "position": 1,
                 "name": "Consulting"
             }]
-        }
-    </script>
-
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "When is my credit card charged?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Your credit card will be charged immediately after you schedule a consulting call."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Can I get my money back if something goes wrong?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "If I'm unavailable and we can't reschedule, you're refunded. If you don't show up to the call, you're refunded. If I see I can't help you with your project because I don't have sufficient experience, you will also be refunded."
-                    }
-                }
-            ]
         }
     </script>
 </x-app>
