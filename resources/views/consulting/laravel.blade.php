@@ -55,7 +55,7 @@
                         <strong class="font-medium text-white">Let's discuss</strong> about your project, your goals and how I can help. I speak <strong class="font-medium text-white">English</strong> and <strong class="font-medium text-white">French</strong>.
                     </p>
 
-                    <a href="https://savvycal.com/benjamincrozat/ask-me-anything" class="bg-white hover:bg-white/75 border border-white font-semibold inline-block mt-4 px-4 py-2 rounded text-center text-indigo-400 transition-colors w-full sm:w-auto">
+                    <a href="https://savvycal.com/benjamincrozat/ask-me-anything" class="bg-white hover:bg-white/75 border border-white font-medium inline-block mt-4 px-4 py-2 rounded text-center text-indigo-400 transition-colors w-full sm:w-auto">
                         Book a call
                     </a>
                 </div>
@@ -74,7 +74,7 @@
 
     <div id="pricing" class="bg-gradient-to-r from-indigo-600 to-indigo-400 py-16 text-indigo-50">
         <div class="container max-w-[1024px]">
-            <h2 class="font-semibold leading-tight text-xl md:text-2xl text-center">
+            <h2 class="font-medium leading-tight text-xl md:text-2xl text-center">
                 No scope to define.<br />
                 Simple pricing.
             </h2>
@@ -82,7 +82,7 @@
             <div class="grid md:grid-cols-3 gap-4 sm:gap-0 mt-8">
                 <div class="bg-gradient-to-r from-white/0 via-white/[.15] to-white/0 grid place-items-center sm:my-8 p-6 sm:p-8 text-center">
                     <div>
-                        <div class="font-semibold text-lg sm:text-lg md:text-xl">
+                        <div class="font-medium text-lg sm:text-lg md:text-xl">
                             Audit
                         </div>
 
@@ -92,7 +92,7 @@
 
                         <a
                             href="https://savvycal.com/benjamincrozat/ask-me-anything"
-                            class="border border-white/30 font-semibold inline-block mt-8 px-8 py-2 rounded"
+                            class="border border-white/30 font-medium inline-block mt-8 px-8 py-2 rounded"
                         >
                             Book a call
                         </a>
@@ -102,7 +102,7 @@
                 <div class="bg-gradient-to-r from-white to-indigo-50 grid place-items-center py-6 sm:p-8 rounded-xl shadow-xl shadow-indigo-500 text-center text-indigo-400">
                     <div>
                         <div>
-                            <div class="font-semibold text-lg sm:text-lg md:text-xl">
+                            <div class="font-medium text-lg sm:text-lg md:text-xl">
                                 Audit + Hands-on
                             </div>
 
@@ -115,7 +115,7 @@
 
                         <a
                             href="https://savvycal.com/benjamincrozat/ask-me-anything"
-                            class="border border-indigo-400/50 font-semibold inline-block mt-8 px-8 py-2 rounded"
+                            class="border border-indigo-400/50 font-medium inline-block mt-8 px-8 py-2 rounded"
                         >
                             Book a call
                         </a>
@@ -125,7 +125,7 @@
                 <div class="bg-gradient-to-r from-white/0 via-white/[.15] to-white/0 grid place-items-center sm:my-8 p-6 sm:p-8 text-center">
                     <div>
                         <div>
-                            <div class="font-semibold text-lg sm:text-lg md:text-xl">
+                            <div class="font-medium text-lg sm:text-lg md:text-xl">
                                 Custom deal
                             </div>
 
@@ -136,7 +136,7 @@
 
                         <a
                             href="https://savvycal.com/benjamincrozat/ask-me-anything"
-                            class="border border-white/30 font-semibold inline-block mt-8 px-8 py-2 rounded"
+                            class="border border-white/30 font-medium inline-block mt-8 px-8 py-2 rounded"
                         >
                             Book a call
                         </a>
@@ -161,12 +161,12 @@
                 <li>
                     <x-icon-pair-programming class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
 
-                    <p class="font-semibold mt-4 text-indigo-400 text-xl">
+                    <p class="font-medium mt-4 text-indigo-400 text-xl">
                         Pair programming
                     </p>
 
                     <p class="mt-4">
-                        Pair programming is the best way for Laravel developers to learn from each other, <strong class="font-semibold">fast</strong>.
+                        Pair programming is the best way for Laravel developers to learn from each other, <strong class="font-medium">fast</strong>.
                     </p>
 
                     <p class="mt-4">
@@ -177,7 +177,7 @@
                 <li>
                     <x-icon-best-practices class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
 
-                    <p class="font-semibold mt-4 text-indigo-400 text-xl">
+                    <p class="font-medium mt-4 text-indigo-400 text-xl">
                         Best practices
                     </p>
 
@@ -210,7 +210,7 @@
                 <li>
                     <x-icon-speedometer class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
 
-                    <p class="font-semibold mt-4 text-indigo-400 text-xl">
+                    <p class="font-medium mt-4 text-indigo-400 text-xl">
                         Performances
                     </p>
 
@@ -226,7 +226,7 @@
                 <li>
                     <x-icon-automated-testing class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
 
-                    <p class="font-semibold mt-4 text-indigo-400 text-xl">
+                    <p class="font-medium mt-4 text-indigo-400 text-xl">
                         Automated testing
                     </p>
 
@@ -254,7 +254,7 @@
                 <li>
                     <x-icon-continuous-integration class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
 
-                    <p class="font-semibold mt-4 text-indigo-400 text-xl">
+                    <p class="font-medium mt-4 text-indigo-400 text-xl">
                         Continuous integration
                     </p>
 
@@ -263,14 +263,14 @@
                     </p>
 
                     <p class="mt-4">
-                        We can make it happen <strong class="font-semibold">without any infrastructure or DevOps cost</strong>.
+                        We can make it happen <strong class="font-medium">without any infrastructure or DevOps cost</strong>.
                     </p>
                 </li>
 
                 <li>
                     <x-icon-errors-monitoring class="fill-current text-indigo-400 w-12 sm:w-16 h-12 sm:h-16" />
 
-                    <p class="font-semibold mt-4 text-indigo-400 text-xl">Errors monitoring</p>
+                    <p class="font-medium mt-4 text-indigo-400 text-xl">Errors monitoring</p>
 
                     <p class="mt-4">
                         What if we could react fast any time a blocking bug occurs in production?
@@ -288,7 +288,7 @@
                     class="bg-emerald-400 hover:bg-emerald-300 inline-block px-8 py-4 rounded text-base text-center text-white transition-colors w-full sm:w-auto"
                     @click="window.fathom?.trackGoal('BCXCNHU1', 0)"
                 >
-                    Convinced? <strong class="font-semibold">Book a call.</strong>
+                    Interested? <strong class="font-medium">Book a call.</strong>
                 </a>
             </div>
         </section>
@@ -336,24 +336,26 @@
         </section>
     </div>
 
-    <div id="about" class="bg-indigo-50/30 text-indigo-900">
+    <div id="about" class="bg-indigo-50/30 text-indigo-900 text-xl">
         <section
             class="container py-8 sm:py-16"
             x-intersect="window.fathom?.trackGoal('Q0JLQGBO', 0)"
         >
-            <h2 class="font-medium text-xl sm:text-3xl text-center">
+            <h2 class="font-medium text-2xl sm:text-3xl text-center">
                 About Benjamin Crozat
             </h2>
 
             <div class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8 mt-8">
                 <div class="order-2 md:order-none">
-                    <p>I'm a passionate <strong class="font-semibold">full-stack PHP and Laravel developer</strong> from the south of France with <strong class="font-semibold">10+ years of experience</strong>.</p>
+                    <p>I'm a passionate <strong class="font-medium">full-stack PHP and Laravel developer</strong> from the south of France with <strong class="font-medium">10+ years of experience</strong>.</p>
 
-                    <p class="mt-4">I'm self-taught and was immediately seduced by the freelancer life. I quickly became interested in helping companies to work better with web developers and technology.</p>
+                    <p class="mt-4">I write on <a href="{{ route('home') }}" class="decoration-indigo-400/50 font-medium text-indigo-400 underline underline-offset-4">my blog</a> about web development in general, with an emphasis on Laravel.</p>
+
+                    <p class="mt-4">I'm also active in the Laravel community on <a href="https://twitter.com/benjamincrozat" class="decoration-indigo-400/50 font-medium text-indigo-400 underline underline-offset-4">Twitter</a>.</p>
                 </div>
 
                 <div class="flex-shrink-0 order-1 md:order-none text-center md:text-left w-full md:w-auto">
-                    <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" width="96" height="96" alt="Benjamin Crozat" class="inline rounded-full" />
+                    <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" alt="Benjamin Crozat" class="inline rounded-full w-[96px] md:w-[128px]" />
                 </div>
             </div>
         </section>
