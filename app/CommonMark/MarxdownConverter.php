@@ -15,6 +15,7 @@ use League\CommonMark\Extension\Attributes\AttributesExtension;
 use League\CommonMark\Extension\SmartPunct\SmartPunctExtension;
 use League\CommonMark\Extension\GithubFlavoredMarkdownExtension;
 use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
+use League\CommonMark\Extension\Embed\Bridge\OscaroteroEmbedAdapter;
 use League\CommonMark\Extension\DescriptionList\DescriptionListExtension;
 use League\CommonMark\Extension\DefaultAttributes\DefaultAttributesExtension;
 
@@ -64,6 +65,11 @@ class MarxdownConverter extends \League\CommonMark\MarkdownConverter
                             : "window.fathom?.trackGoal('SMD2GKMN', 0)";
                     },
                 ],
+            ],
+            'embed' => [
+                'adapter' => new OscaroteroEmbedAdapter,
+                'allowed_domains' => ['youtube.com', 'twitter.com', 'github.com'],
+                'fallback' => 'link',
             ],
         ]);
         $environment->addExtension(new AttributesExtension);

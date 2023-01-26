@@ -10,6 +10,7 @@
         "algolia/algoliasearch-client-php": "^3.3",
         "benjamincrozat/laravel-dropbox-driver": "^4.0",
         "blade-ui-kit/blade-heroicons": "^2.0",
+        "embed/embed": "^4.4",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.19",
         "laravel/nova": "^4.18",
