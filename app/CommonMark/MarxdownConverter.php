@@ -7,6 +7,7 @@ use League\CommonMark\Node\Node;
 use League\CommonMark\Node\Inline\Text;
 use League\CommonMark\Environment\Environment;
 use Torchlight\Commonmark\V2\TorchlightExtension;
+use League\CommonMark\Extension\Embed\EmbedExtension;
 use League\CommonMark\Extension\Table\TableExtension;
 use League\CommonMark\Extension\CommonMark\Node\Inline\Link;
 use League\CommonMark\Extension\CommonMark\Node\Block\Heading;
@@ -65,14 +66,15 @@ class MarxdownConverter extends \League\CommonMark\MarkdownConverter
                 ],
             ],
         ]);
-        $environment->addExtension(new AttributesExtension());
-        $environment->addExtension(new CommonMarkCoreExtension());
-        $environment->addExtension(new DefaultAttributesExtension());
-        $environment->addExtension(new DescriptionListExtension());
-        $environment->addExtension(new GithubFlavoredMarkdownExtension());
-        $environment->addExtension(new SmartPunctExtension());
-        $environment->addExtension(new TableExtension());
-        $environment->addExtension(new TorchlightExtension());
+        $environment->addExtension(new AttributesExtension);
+        $environment->addExtension(new CommonMarkCoreExtension);
+        $environment->addExtension(new DefaultAttributesExtension);
+        $environment->addExtension(new DescriptionListExtension);
+        $environment->addExtension(new EmbedExtension);
+        $environment->addExtension(new GithubFlavoredMarkdownExtension);
+        $environment->addExtension(new SmartPunctExtension);
+        $environment->addExtension(new TableExtension);
+        $environment->addExtension(new TorchlightExtension);
 
         parent::__construct($environment);
     }
