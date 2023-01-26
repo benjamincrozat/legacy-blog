@@ -14,4 +14,6 @@ Alpine.plugin(Focus)
 Alpine.plugin(Intersect)
 Alpine.plugin(Persist)
 
+window.Alpine = Alpine
+
 Alpine.start()
