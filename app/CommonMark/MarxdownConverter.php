@@ -2,6 +2,7 @@
 
 namespace App\CommonMark;
 
+use Embed\Embed;
 use Illuminate\Support\Str;
 use League\CommonMark\Node\Node;
 use League\CommonMark\Node\Inline\Text;
@@ -23,6 +24,14 @@ class MarxdownConverter extends \League\CommonMark\MarkdownConverter
 {
     public function __construct(array $config = [])
     {
+        $embed = new Embed;
+        $embed->setSettings([
+            'oembed:query_parameters' => [
+                'maxwidth' => 800,
+                'maxheight' => 600,
+            ],
+        ]);
+
         $environment = new Environment([
             'default_attributes' => [
                 Heading::class => [
@@ -67,7 +76,7 @@ class MarxdownConverter extends \League\CommonMark\MarkdownConverter
                 ],
             ],
             'embed' => [
-                'adapter' => new OscaroteroEmbedAdapter,
+                'adapter' => new OscaroteroEmbedAdapter($embed),
                 'allowed_domains' => ['youtube.com', 'twitter.com', 'github.com'],
                 'fallback' => 'link',
             ],
