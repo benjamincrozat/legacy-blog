@@ -341,7 +341,7 @@
         </section>
     </div>
 
-    <div id="about" class="bg-indigo-50/30 text-indigo-900 text-lg">
+    <div id="about" class="bg-indigo-50/30 text-indigo-900">
         <section
             class="container py-8 sm:py-16"
             x-intersect="window.fathom?.trackGoal('Q0JLQGBO', 0)"
