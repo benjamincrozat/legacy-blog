@@ -13,7 +13,7 @@
         </nav>
 
         <div class="container mt-16">
-            <h1 class="leading-tight text-lg sm:text-xl md:text-2xl text-center text-indigo-100">
+            <h1 class="leading-tight text-lg sm:text-xl md:text-2xl text-center text-indigo-50">
                 <span class="font-medium text-white">Hire a Laravel expert</span>.<br />
                 On-demand CTO with 10+&nbsp;years&nbsp;of&nbsp;experience.
             </h1>
@@ -341,7 +341,7 @@
         </section>
     </div>
 
-    <div id="about" class="bg-indigo-50/30 text-indigo-900 text-xl">
+    <div id="about" class="bg-indigo-50/30 text-indigo-900 text-lg">
         <section
             class="container py-8 sm:py-16"
             x-intersect="window.fathom?.trackGoal('Q0JLQGBO', 0)"
@@ -350,13 +350,13 @@
                 About Benjamin Crozat
             </h2>
 
-            <div class="flex flex-wrap md:flex-nowrap items-center md:justify-between gap-8 mt-8">
+            <div class="flex flex-wrap md:flex-nowrap font-serif items-center md:justify-between gap-8 mt-8">
                 <div class="order-2 md:order-none">
-                    <p>I'm a passionate <strong class="font-medium">full-stack PHP and Laravel developer</strong> from the south of France with <strong class="font-medium">10+ years of experience</strong>.</p>
+                    <p>I'm a passionate <strong class="font-normal">full-stack PHP and Laravel developer</strong> from the south of France with <strong class="font-normal">10+ years of experience</strong>.</p>
 
-                    <p class="mt-4">I write on <a href="{{ route('home') }}" class="decoration-indigo-400/50 font-medium text-indigo-400 underline underline-offset-4">my blog</a> about web development in general, with an emphasis on Laravel.</p>
+                    <p class="mt-4">I write on <a href="{{ route('home') }}" class="decoration-indigo-400/50 font-normal text-indigo-400 underline underline-offset-4">my blog</a> about web development in general, with an emphasis on Laravel.</p>
 
-                    <p class="mt-4">I'm also active in the Laravel community on <a href="https://twitter.com/benjamincrozat" class="decoration-indigo-400/50 font-medium text-indigo-400 underline underline-offset-4">Twitter</a>.</p>
+                    <p class="mt-4">I'm also active in the Laravel community on <a href="https://twitter.com/benjamincrozat" class="decoration-indigo-400/50 font-normal text-indigo-400 underline underline-offset-4">Twitter</a>.</p>
                 </div>
 
                 <div class="flex-shrink-0 order-1 md:order-none text-center md:text-left w-full md:w-auto">

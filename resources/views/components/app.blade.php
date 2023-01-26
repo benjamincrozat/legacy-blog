@@ -24,6 +24,7 @@
 
         @if (! app()->runningUnitTests())
             @googlefonts
+            @googlefonts('serif')
         @endif
 
         <x-feed-links />
