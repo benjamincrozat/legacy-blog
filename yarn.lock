@@ -78,6 +78,26 @@
   dependencies:
     "@algolia/logger-common" "4.14.3"
 
+"@algolia/recommend-core@1.8.1":
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@algolia/recommend-core/-/recommend-core-1.8.1.tgz#e5881805a9de12b9a842d10996b602b651325fa6"
+  integrity sha512-ggJGe0yxfCDQYbU2S4d44mLXiGEZRSwcXDZl20kjCH0XEfGPd0ooKmdsXGv7TlN0zSUtt80lvS69393Q+M5K0w==
+
+"@algolia/recommend-js@^1.8.1":
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@algolia/recommend-js/-/recommend-js-1.8.1.tgz#19a71a27c373bcebe4d369095a5c2adb84a32a36"
+  integrity sha512-SnWBX4RmuBD1d4wFEkIy7uw1YjIILrQhJsnoQQPwVrL6uJonJ0ez55ySHbH4ivB56VNqValNrqPYE/8aAtGl8w==
+  dependencies:
+    "@algolia/recommend-core" "1.8.1"
+    "@algolia/recommend-vdom" "1.8.1"
+    htm "^3.0.0"
+    preact "^10.0.0"
+
+"@algolia/recommend-vdom@1.8.1":
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@algolia/recommend-vdom/-/recommend-vdom-1.8.1.tgz#dc25e936d3c15a667122d06e36b9b2c63812f530"
+  integrity sha512-YYmg89qrWUbJwyf1EgSUFaDQQWM7D0tB/G2sYrXDNxCN45T8u2PKT98pIwxYUbSpNg9GW+KWXYA6IVMffWXdcA==
+
 "@algolia/requester-browser-xhr@4.14.3":
   version "4.14.3"
   resolved "https://registry.yarnpkg.com/@algolia/requester-browser-xhr/-/requester-browser-xhr-4.14.3.tgz#bcf55cba20f58fd9bc95ee55793b5219f3ce8888"
@@ -551,6 +571,11 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
+htm@^3.0.0:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/htm/-/htm-3.1.1.tgz#49266582be0dc66ed2235d5ea892307cc0c24b78"
+  integrity sha512-983Vyg8NwUE7JkZ6NmOqpCZ+sh1bKv2iYTlUkzlWmA5JD2acKoxd4KVxbMmxX/85mtfdnDmTFoNKcg5DGAvxNQ==
+
 is-binary-path@~2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/is-binary-path/-/is-binary-path-2.1.0.tgz#ea1f7f3b80f064236e83470f86c09c254fb45b09"
@@ -737,6 +762,11 @@ postcss@^8.1.14, postcss@^8.4.18:
     nanoid "^3.3.4"
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
+
+preact@^10.0.0:
+  version "10.11.3"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-10.11.3.tgz#8a7e4ba19d3992c488b0785afcc0f8aa13c78d19"
+  integrity sha512-eY93IVpod/zG3uMF22Unl8h9KkrcKIRs2EGar8hwLZZDU1lkjph303V9HZBwufh2s736U6VXuhD109LYqPoffg==
 
 queue-microtask@^1.2.2:
   version "1.2.3"

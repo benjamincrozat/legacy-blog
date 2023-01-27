@@ -168,7 +168,7 @@
                         @click="$focus.focus($refs.input); $refs.input.select()"
                     />
 
-                    <p class="text-center text-xs">
+                    <p class="cursor-default text-center text-xs">
                         <span class="opacity-50">Powered by</span> <x-icon-algolia class="h-[.85rem] inline" />
                     </p>
 

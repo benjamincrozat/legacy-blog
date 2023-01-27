@@ -5,6 +5,7 @@
         "build": "vite build"
     },
     "devDependencies": {
+        "@algolia/recommend-js": "^1.8.1",
         "@alpinejs/focus": "^3.10.5",
         "@alpinejs/intersect": "^3.10.3",
         "@alpinejs/persist": "^3.10.5",
