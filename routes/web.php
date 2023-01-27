@@ -11,7 +11,6 @@ use App\Http\Controllers\RedirectToAffiliateController;
 Route::domain(preg_replace('/https?:\/\//', '', config('app.url')))->group(function () {
     Route::get('/', HomeController::class)->name('home');
 
-    Route::view('/laravel-developer-for-hire', 'consulting.laravel')->name('consulting.laravel');
     Route::view('/hire-cto', 'consulting.cto')->name('consulting.cto');
 
     Route::post('/subscribe', SubscribeController::class)->name('subscribe');
