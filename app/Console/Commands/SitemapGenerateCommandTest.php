@@ -16,7 +16,7 @@ class SitemapGenerateCommandTest extends TestCase
 
         $this->assertStringContainsString(route('home'), $content);
 
-        $this->assertStringContainsString(route('consulting.laravel'), $content);
+        $this->assertStringContainsString(route('consulting.cto'), $content);
 
         Post::latest()->get()->each(
             fn ($p) => $this->assertStringContainsString(route('posts.show', $p), $content)
