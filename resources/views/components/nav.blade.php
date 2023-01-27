@@ -1,4 +1,4 @@
-@if (! $funnel)
+@if (empty($funnel))
     <div {{ $attributes->merge(['class' => 'flex flex-wrap items-center justify-between gap-8']) }}>
         <a href="{{ route('home') }}">
             <x-icon-logo class="h-7 sm:h-8 md:h-9" />

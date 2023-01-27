@@ -25,7 +25,7 @@
             :email="$post->user->email"
             :name="$post->user->name"
             :read-time="$post->read_time"
-            class="container"
+            class="container mt-4"
         />
 
         <x-posts::newsletter
@@ -46,7 +46,10 @@
             class="container mt-8"
         />
 
-        <x-toc :toc="$post->table_of_contents" class="container mt-8" />
+        <x-posts::toc
+            :toc="$post->table_of_contents"
+            class="container mt-8"
+        />
 
         @if (! $post->promotes_affiliate_links && $post->image)
             <div class="container text-center">
