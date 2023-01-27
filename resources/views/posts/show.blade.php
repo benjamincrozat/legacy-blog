@@ -76,32 +76,9 @@
 
     <x-posts::divider class="-mt-4" />
 
-    <script defer src="https://cdn.jsdelivr.net/npm/@algolia/recommend-js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/@algolia/recommend"></script>
-
-    <script>
-        const { relatedProducts } = window['@algolia/recommend-js']
-
-        const recommend = window['@algolia/recommend']
-
-        const recommendClient =  recommend('HJB31QZQS0', '489d2a13861e648b9af3d5a8bbd5b43b')
-        const indexName = 'production_posts'
-        const currentObjectID = '1'
-
-        const results = frequentlyBoughtTogether({
-            recommendClient,
-            indexName,
-            objectIDs: [currentObjectID],
-        })
-
-        console.log(results)
-    </script>
-
-    <div id="frequentlyBoughtTogether"></div>
-
     @if ($others->isNotEmpty())
         <div class="container max-w-[1024px] mt-8 sm:mt-16">
-            <p class="font-semibold text-center text-xl">Other posts to read</p>
+            <p class="font-semibold text-center text-xl">Recommended</p>
 
             <div class="grid md:grid-cols-2 gap-4 sm:gap-8 mt-8">
                 @foreach ($others as $other)
