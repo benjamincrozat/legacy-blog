@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\View\View;
 use App\Models\Subscriber;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Algolia\AlgoliaSearch\RecommendClient;
 use Algolia\AlgoliaSearch\Exceptions\NotFoundException;
@@ -31,7 +32,13 @@ class ShowPostController extends Controller
 
         return view('posts.show', [
             'post' => $post,
-            'others' => Post::with('user')->whereIn('id', $recommendationsIds)->get(),
+            'others' => Post::with('user')
+                ->whereIn('id', $recommendationsIds)
+                ->when(! empty($recommendationsIds), fn ($q) => $q->orderByRaw(
+                    DB::raw('FIELD(id, ' . implode(',', $recommendationsIds) . ')')
+                ))
+                ->limit(10)
+                ->get(),
             'subscribersCount' => Subscriber::count(),
         ]);
     }
