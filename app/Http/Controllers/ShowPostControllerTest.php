@@ -19,7 +19,7 @@ class ShowPostControllerTest extends TestCase
 
         $this->assertInstanceOf(Post::class, $response->viewData('post'));
 
-        $this->assertInstanceOf(Collection::class, $response->viewData('others'));
-        $this->assertFalse($response->viewData('others')->contains($post));
+        $this->assertInstanceOf(Collection::class, $response->viewData('recommended'));
+        $this->assertFalse($response->viewData('recommended')->contains($post));
     }
 }

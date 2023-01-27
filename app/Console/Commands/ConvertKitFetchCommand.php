@@ -6,6 +6,7 @@ use App\ConvertKit\Client;
 use App\Models\Subscriber;
 use Illuminate\Support\Carbon;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Http;
 
 class ConvertKitFetchCommand extends Command
 {
@@ -13,9 +14,24 @@ class ConvertKitFetchCommand extends Command
 
     protected $description = 'Fetch subscriber from ConvertKit';
 
-    public function handle(Client $client) : int
+    public function handle() : int
     {
-        $client->subscribers()->each(function (array $subscriber) {
+        $subscribers = collect();
+
+        do {
+            $response = Http::get('https://api.convertkit.com/v3/subscribers', [
+                'api_secret' => config('services.convertkit.api_secret'),
+                'page' => $page ??= 1,
+            ])
+            ->throw()
+            ->json();
+
+            $subscribers = $subscribers->concat($response['subscribers']);
+
+            ++$page;
+        } while ($response['page'] < $response['total_pages']);
+
+        $subscribers->each(function (array $subscriber) {
             $subscriber = Subscriber::firstOrCreate([
                 'email' => $subscriber['email_address'],
                 'created_at' => Carbon::parse($subscriber['created_at']),

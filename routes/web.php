@@ -7,12 +7,11 @@ use App\Http\Controllers\SubscribeController;
 use App\Http\Controllers\RedirectToUrlController;
 use App\Http\Controllers\RedirectToAffiliateController;
 
+// The blog's routes.
 Route::domain(preg_replace('/https?:\/\//', '', config('app.url')))->group(function () {
     Route::get('/', HomeController::class)->name('home');
 
     Route::view('/laravel-developer-for-hire', 'consulting.laravel')->name('consulting.laravel');
-
-    Route::view('/seo-consulting', 'consulting.seo')->name('consulting.seo');
 
     Route::post('/subscribe', SubscribeController::class)->name('subscribe');
 
@@ -23,6 +22,7 @@ Route::domain(preg_replace('/https?:\/\//', '', config('app.url')))->group(funct
     Route::get('/{post:slug}', ShowPostController::class)->name('posts.show');
 });
 
+// URL shortener's routes.
 Route::domain(config('app.shorts_domain'))->group(function () {
     Route::redirect('/', 'https://benjamincrozat.com');
 

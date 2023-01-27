@@ -17,8 +17,6 @@ class AppServiceProvider extends ServiceProvider
 {
     public function register() : void
     {
-        $this->app->bind(Client::class, fn (Application $app) => new Client($app->make(Factory::class)));
-
         $this->app->bind(RecommendClient::class, fn (Application $app) => RecommendClient::create(
             $app['config']->get('scout.algolia.id'),
             $app['config']->get('scout.algolia.secret')

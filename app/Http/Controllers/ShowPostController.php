@@ -13,8 +13,13 @@ use Algolia\AlgoliaSearch\Exceptions\UnreachableException;
 
 class ShowPostController extends Controller
 {
-    public function __invoke(RecommendClient $recommendClient, Post $post) : View
+    public function __invoke(Post $post) : View
     {
+        $recommendClient = RecommendClient::create(
+            config('scout.algolia.id'),
+            config('scout.algolia.secret')
+        );
+
         $recommendationsIds = cache()->remember('recommended-posts-for-post-' . $post->id, 24 * 60 * 60, function () use ($recommendClient, $post) {
             try {
                 $recommendations = $recommendClient->getRelatedProducts([[
@@ -31,8 +36,9 @@ class ShowPostController extends Controller
         });
 
         return view('posts.show', [
+            'bestProducts' => $post->bestProducts()->with('affiliate')->get(),
             'post' => $post,
-            'others' => Post::with('user')
+            'recommended' => Post::with('user')
                 ->whereIn('id', $recommendationsIds)
                 ->when($recommendationsIds->isNotEmpty(), fn ($q) => $q->orderByRaw(
                     DB::raw('FIELD(id, ' . $recommendationsIds->join(',') . ')')
