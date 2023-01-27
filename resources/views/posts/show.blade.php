@@ -13,7 +13,9 @@
         :promotes-affiliate-links="$post->promotes_affiliate_links"
         class="container mt-8"
     >
-        {{ $post->title }}
+        <x-posts::breadcrumb-item>
+            {{ $post->title }}
+        </x-posts::breadcrumb-item>
     </x-posts::breadcrumb>
 
     <article class="mt-8">
