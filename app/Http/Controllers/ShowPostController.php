@@ -15,7 +15,7 @@ class ShowPostController extends Controller
 {
     public function __invoke(RecommendClient $recommendClient, Post $post) : View
     {
-        $recommendationsIds = cache()->remember('recommended-posts-for-post-' . $post->id, 3600, function () use ($recommendClient, $post) {
+        $recommendationsIds = cache()->remember('recommended-posts-for-post-' . $post->id, 24 * 60 * 60, function () use ($recommendClient, $post) {
             try {
                 $recommendations = $recommendClient->getRelatedProducts([[
                     'indexName' => config('app.env') . '_posts',
