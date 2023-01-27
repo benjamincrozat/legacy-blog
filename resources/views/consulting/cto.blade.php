@@ -75,7 +75,7 @@
         </div>
     </div>
 
-    <div class="bg-gray-900 pb-12 pt-16">
+    <div class="bg-gray-900 py-16">
         <div class="container">
             <div class="prose prose-a:decoration-orange-400/30 prose-a:font-light prose-a:text-orange-400 prose-a:underline prose-a:underline-offset-4 prose-headings:text-white prose-strong:text-white text-gray-300">
                 <h2 class="md:text-center">Frequently Asked Questions</h2>
