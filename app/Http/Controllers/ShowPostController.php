@@ -8,6 +8,7 @@ use App\Models\Subscriber;
 use Illuminate\Support\Facades\Log;
 use Algolia\AlgoliaSearch\RecommendClient;
 use Algolia\AlgoliaSearch\Exceptions\NotFoundException;
+use Algolia\AlgoliaSearch\Exceptions\UnreachableException;
 
 class ShowPostController extends Controller
 {
@@ -19,7 +20,7 @@ class ShowPostController extends Controller
                     'indexName' => config('app.env') . '_posts',
                     'objectID' => "$post->id",
                 ]]);
-            } catch (NotFoundException $e) {
+            } catch (NotFoundException|UnreachableException $e) {
                 Log::error($e->getMessage());
 
                 return [];

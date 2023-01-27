@@ -32,5 +32,7 @@
         <env name="SCOUT_DRIVER" value="null"/>
         <env name="SESSION_DRIVER" value="array"/>
         <env name="TELESCOPE_ENABLED" value="false"/>
+        <env name="ALGOLIA_APP_ID" value="null"/>
+        <env name="ALGOLIA_SECRET" value="null"/>
     </php>
 </phpunit>
