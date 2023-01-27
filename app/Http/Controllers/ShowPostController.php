@@ -24,7 +24,7 @@ class ShowPostController extends Controller
             } catch (NotFoundException|UnreachableException $e) {
                 Log::error($e->getMessage());
 
-                return [];
+                return collect();
             }
 
             return collect($recommendations['results'][0]['hits'])->pluck('objectID');
@@ -34,7 +34,7 @@ class ShowPostController extends Controller
             'post' => $post,
             'others' => Post::with('user')
                 ->whereIn('id', $recommendationsIds)
-                ->when(! empty($recommendationsIds), fn ($q) => $q->orderByRaw(
+                ->when($recommendationsIds->isNotEmpty(), fn ($q) => $q->orderByRaw(
                     DB::raw('FIELD(id, ' . $recommendationsIds->join(',') . ')')
                 ))
                 ->limit(10)
