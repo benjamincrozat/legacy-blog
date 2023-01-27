@@ -35,7 +35,7 @@ class ShowPostController extends Controller
             'others' => Post::with('user')
                 ->whereIn('id', $recommendationsIds)
                 ->when(! empty($recommendationsIds), fn ($q) => $q->orderByRaw(
-                    DB::raw('FIELD(id, ' . implode(',', $recommendationsIds) . ')')
+                    DB::raw('FIELD(id, ' . $recommendationsIds->join(',') . ')')
                 ))
                 ->limit(10)
                 ->get(),
