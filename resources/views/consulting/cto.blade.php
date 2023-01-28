@@ -176,7 +176,7 @@
                 </div>
 
                 <div class="mx-auto relative w-4/5 lg:w-1/2">
-                    <img src="{{ Vite::asset('/resources/img/screenshot.jpg') }}" alt="The blog of Benjamin Crozat" class="aspect-square inline object-cover object-top relative rotate-2 rounded-xl z-10" />
+                    <img src="{{ Vite::asset('resources/img/screenshot.jpg') }}" alt="The blog of Benjamin Crozat" class="aspect-square inline object-cover object-top relative rotate-2 rounded-xl z-10" />
 
                     <div class="absolute top-0 left-0 right-0 aspect-square bg-gradient-to-r from-orange-400 to-orange-400 -rotate-2 rounded-xl"></div>
                 </div>
