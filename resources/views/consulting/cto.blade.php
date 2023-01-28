@@ -5,6 +5,7 @@
     <div class="bg-gradient-to-r from-black/30 to-transparent">
         <div class="container py-16">
             <div class="text-center">
+
                 <img
                     loading="lazy"
                     src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256"
@@ -31,6 +32,8 @@
                         </span>
                     </span>
                 </div>
+
+                <x-icon-logos class="max-h-12 mt-8 mx-auto" />
             </div>
 
             <ul class="grid place-content-center gap-4 mt-8 sm:mt-16 md:text-xl">
