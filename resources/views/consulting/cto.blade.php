@@ -2,8 +2,8 @@
     title="Hire your on-demand virtual CTO."
     class="!bg-gray-900 text-gray-300"
 >
-    <div class="bg-gradient-to-r from-black/30 to-transparent">
-        <div class="container py-16">
+    <div class="bg-gradient-to-b from-black/30 to-gray-900 pt-16">
+        <div class="container">
             <div class="text-center">
                 <img
                     loading="lazy"
@@ -73,13 +73,13 @@
         </div>
     </div>
 
-    <div class="bg-gradient-to-b from-gray-900 to-black/30">
-        <div class="container max-w-[1024px] py-16 sm:pt-32">
+    <div class="bg-gradient-to-b from-gray-900 to-black/30 mt-16 md:mt-32">
+        <div class="container max-w-[1024px]">
             <h1 class="font-bold text-2xl md:text-4xl text-center">
                 The best on-demand virtual CTO services
             </h1>
 
-            <div class="grid sm:grid-cols-2 gap-4 mt-16">
+            <div class="grid sm:grid-cols-2 gap-4 mt-8 md:mt-16">
                 <div class="bg-[#161e2e] leading-tight p-8 rounded-xl shadow-md text-white text-xl">
                     <div class="relative w-10 h-10 sm:w-12 sm:h-12">
                         <x-icon-people class="absolute top-0 -left-1 fill-current w-12 h-12 sm:w-12 sm:h-12 z-20" />
@@ -152,8 +152,10 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="flex flex-wrap lg:flex-nowrap lg:items-center gap-16 mt-16 sm:mt-32 text-gray-400">
+        <div class="container mt-16 md:mt-32">
+            <div class="flex flex-wrap lg:flex-nowrap lg:items-center gap-16 text-gray-400">
                 <div>
                     <div class="text-3xl text-white">
                         I write on my blog about<br />
@@ -168,19 +170,21 @@
                         The blog generates <strong class="text-gray-300">+10K visits per month</strong> and <strong class="text-gray-300">half of them are from Google</strong>.
                     </div>
 
-                    <a href="https://benjamincrozat.com" class="bg-gradient-to-r from-blue-600 to-blue-500 duration-500 font-normal hover:hue-rotate-90 inline-block mt-10 px-8 py-3 rounded text-white transition-all">
+                    <a href="{{ route('home') }}" class="bg-gradient-to-r from-blue-600 to-blue-500 duration-500 font-normal hover:hue-rotate-90 inline-block mt-10 px-8 py-3 rounded text-white transition-all">
                         Read my blog
                     </a>
                 </div>
 
-                <div class="mx-auto relative w-4/5 lg:w-1/3">
+                <div class="mx-auto relative w-4/5 lg:w-1/2">
                     <img src="{{ Vite::asset('/resources/img/screenshot.jpg') }}" alt="The blog of Benjamin Crozat" class="aspect-square inline object-cover object-top relative rotate-2 rounded-xl z-10" />
 
                     <div class="absolute top-0 left-0 right-0 aspect-square bg-gradient-to-r from-orange-400 to-orange-400 -rotate-2 rounded-xl"></div>
                 </div>
             </div>
+        </div>
 
-            <div class="mt-32">
+        <div class="container max-w-[1024px] mt-16 md:mt-32">
+            <div>
                 <div id="calendar" class="scroll-mt-16 shadow-xl"></div>
 
                 <script>window.SavvyCal=window.SavvyCal||function(){(SavvyCal.q=SavvyCal.q||[]).push(arguments)}</script>
@@ -195,8 +199,8 @@
         </div>
     </div>
 
-    <div class="bg-black/30" x-intersect="window.fathom?.trackGoal('GNBHJW7B', 0)">
-        <div class="container lg:max-w-screen-md py-16">
+    <div class="bg-black/30 pb-16 pt-16 md:pt-32" x-intersect="window.fathom?.trackGoal('GNBHJW7B', 0)">
+        <div class="container lg:max-w-screen-md">
             <div class="prose prose-a:decoration-orange-400/30 prose-a:font-light prose-a:text-orange-400 prose-a:underline prose-a:underline-offset-4 prose-headings:text-white prose-strong:text-white text-gray-300 max-w-none">
                 <h2 class="md:text-center">Frequently Asked Questions</h2>
 
