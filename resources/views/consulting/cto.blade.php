@@ -72,45 +72,51 @@
     </div>
 
     <div class="bg-gradient-to-b from-gray-900 to-black/30">
-        <div class="container grid gap-16 sm:gap-32 lg:max-w-[1024px] pt-16 sm:pt-32">
-            <div class="sm:flex sm:items-center sm:gap-8 leading-tight sm:mr-[20%] text-white text-xl sm:text-2xl md:text-3xl">
-                <div class="relative w-10 h-10 sm:w-12 sm:h-12">
-                    <x-icon-speedometer class="absolute top-0 -left-1 sm:left-0 fill-current w-12 h-12 sm:w-12 sm:h-12 z-20" />
-                    <div class="absolute top-0 left-0 bg-emerald-900/50 blur-lg w-12 h-12 sm:w-12 sm:h-12 z-10"></div>
+        <div class="container lg:max-w-[1024px] pt-16 sm:pt-32">
+            <h1 class="font-thin text-3xl md:text-4xl text-center" style="text-shadow: 0 0 15px rgba(255, 255, 255, .5)">
+                The best on-demand virtual CTO services
+            </h1>
+
+            <div class="grid gap-16 md:gap-32 mt-16 md:mt-32">
+                <div class="sm:flex sm:items-center sm:gap-8 leading-tight sm:mr-[20%] text-white text-xl sm:text-2xl md:text-3xl">
+                    <div class="relative w-10 h-10 sm:w-12 sm:h-12">
+                        <x-icon-speedometer class="absolute top-0 -left-1 sm:left-0 fill-current w-12 h-12 sm:w-12 sm:h-12 z-20" />
+                        <div class="absolute top-0 left-0 bg-emerald-900/50 blur-lg w-12 h-12 sm:w-12 sm:h-12 z-10"></div>
+                    </div>
+
+                    <div class="mt-6 sm:mt-0">
+                        <div class="text-emerald-500">Technical debt won't be part of the equation.</div>
+                        <div class="font-thin mt-2">You will start on the right foot.</div>
+                    </div>
                 </div>
 
-                <div class="mt-6 sm:mt-0">
-                    <div class="text-emerald-500">Technical debt won't be part of the equation.</div>
-                    <div class="font-thin mt-2">You will start on the right foot.</div>
-                </div>
-            </div>
+                <div class="sm:flex sm:items-center sm:gap-8 leading-tight sm:ml-[20%] text-white text-xl sm:text-2xl md:text-3xl">
+                    <div class="relative w-10 h-10 sm:w-12 sm:h-12">
+                        <x-icon-foundations class="absolute top-0 left-0 fill-current w-10 h-10 sm:w-12 sm:h-12 z-20" />
+                        <div class="absolute top-0 left-0 bg-blue-900/50 blur-lg w-10 h-10 sm:w-12 sm:h-12 z-10"></div>
+                    </div>
 
-            <div class="sm:flex sm:items-center sm:gap-8 leading-tight sm:ml-[20%] text-white text-xl sm:text-2xl md:text-3xl">
-                <div class="relative w-10 h-10 sm:w-12 sm:h-12">
-                    <x-icon-foundations class="absolute top-0 left-0 fill-current w-10 h-10 sm:w-12 sm:h-12 z-20" />
-                    <div class="absolute top-0 left-0 bg-blue-900/50 blur-lg w-10 h-10 sm:w-12 sm:h-12 z-10"></div>
-                </div>
-
-                <div class="mt-6 sm:mt-0">
-                    <div class="text-blue-400">Invest your money on solid foundations.</div>
-                    <div class="font-thin mt-2">Don't waste it later on endless maintenance.</div>
-                </div>
-            </div>
-
-            <div class="sm:flex sm:items-center sm:gap-8 leading-tight sm:mr-[20%] text-white text-xl sm:text-2xl md:text-3xl">
-                <div class="relative w-10 h-10 sm:w-12 sm:h-12">
-                    <x-icon-muscle class="absolute top-0 left-0 fill-current w-10 h-10 sm:w-12 sm:h-12 z-20" />
-                    <div class="absolute top-0 left-0 bg-red-900/75 blur-lg w-10 h-10 sm:w-12 sm:h-12 z-10"></div>
+                    <div class="mt-6 sm:mt-0">
+                        <div class="text-blue-400">Invest your money on solid foundations.</div>
+                        <div class="font-thin mt-2">Don't waste it later on endless maintenance.</div>
+                    </div>
                 </div>
 
-                <div class="mt-6 sm:mt-0">
-                    <div class="text-red-400">Focus your developers on what matters.</div>
-                    <div class="font-thin mt-2">Because good execution is what gives value to ideas.</div>
+                <div class="sm:flex sm:items-center sm:gap-8 leading-tight sm:mr-[20%] text-white text-xl sm:text-2xl md:text-3xl">
+                    <div class="relative w-10 h-10 sm:w-12 sm:h-12">
+                        <x-icon-muscle class="absolute top-0 left-0 fill-current w-10 h-10 sm:w-12 sm:h-12 z-20" />
+                        <div class="absolute top-0 left-0 bg-red-900/75 blur-lg w-10 h-10 sm:w-12 sm:h-12 z-10"></div>
+                    </div>
+
+                    <div class="mt-6 sm:mt-0">
+                        <div class="text-red-400">Focus your developers on what matters.</div>
+                        <div class="font-thin mt-2">Because good execution is what gives value to ideas.</div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="container max-w-[1280px] pt-16 sm:pt-32">
+        <div class="container max-w-[1280px] mt-16 md:mt-32">
             <div id="calendar" class="scroll-mt-16 sm:scroll-mt-32 shadow-xl"></div>
 
             <script>window.SavvyCal=window.SavvyCal||function(){(SavvyCal.q=SavvyCal.q||[]).push(arguments)}</script>
