@@ -15,7 +15,7 @@
                 />
 
                 <div class="font-normal mt-8 text-xl sm:text-2xl md:text-3xl text-white">
-                    Not ready for a full-time hire?
+                    Not ready for full-time workforces?
                 </div>
 
                 <h1 class="font-bold mt-2 text-3xl md:text-5xl">
