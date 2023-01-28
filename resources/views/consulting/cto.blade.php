@@ -74,7 +74,7 @@
     </div>
 
     <div class="bg-gradient-to-b from-gray-900 to-black/30">
-        <div class="container lg:max-w-[1024px] pt-16 sm:pt-32">
+        <div class="container pt-16 sm:pt-32">
             <h1 class="font-bold text-2xl md:text-4xl lg:text-5xl text-center">
                 The best on-demand virtual CTO services
             </h1>
@@ -154,7 +154,7 @@
             </div>
         </div>
 
-        <div class="container lg:max-w-[1280px] mt-16">
+        <div class="container mt-16">
             <div id="calendar" class="scroll-mt-16 shadow-xl"></div>
 
             <script>window.SavvyCal=window.SavvyCal||function(){(SavvyCal.q=SavvyCal.q||[]).push(arguments)}</script>
