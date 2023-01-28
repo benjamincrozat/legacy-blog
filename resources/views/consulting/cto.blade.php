@@ -167,12 +167,16 @@
                     <div class="mt-4 text-xl">
                         The blog generates <strong class="text-gray-300">+10K visits per month</strong> and <strong class="text-gray-300">half of them are from Google</strong>.
                     </div>
+
+                    <a href="https://benjamincrozat.com" class="bg-gradient-to-r from-blue-600 to-blue-500 inline-block mt-10 px-8 py-3 rounded text-white">
+                        Read my blog
+                    </a>
                 </div>
 
                 <div class="mt-8 mx-auto relative w-1/2">
-                    <img src="{{ Vite::asset('/resources/img/screenshot.jpg') }}" alt="The blog of Benjamin Crozat" class="aspect-video inline object-cover object-top relative rotate-3 rounded-xl z-10" />
+                    <img src="{{ Vite::asset('/resources/img/screenshot.jpg') }}" alt="The blog of Benjamin Crozat" class="aspect-video inline object-cover object-top relative rotate-2 rounded-xl z-10" />
 
-                    <div class="absolute top-0 left-0 right-0 aspect-video bg-gradient-to-r from-orange-400 to-orange-400 -rotate-3 rounded-xl"></div>
+                    <div class="absolute top-0 left-0 right-0 aspect-video bg-gradient-to-r from-orange-400 to-orange-400 -rotate-2 rounded-xl"></div>
                 </div>
             </div>
 
