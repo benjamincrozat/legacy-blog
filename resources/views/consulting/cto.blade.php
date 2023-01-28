@@ -5,7 +5,6 @@
     <div class="bg-gradient-to-r from-black/30 to-transparent">
         <div class="container py-16">
             <div class="text-center">
-
                 <img
                     loading="lazy"
                     src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256"
@@ -39,7 +38,7 @@
             <ul class="grid place-content-center gap-4 mt-8 sm:mt-16 md:text-xl">
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                    <span>Ask me anything</span>
+                    <span>I will help you hire the best talents</span>
                 </li>
 
                 <li class="flex items-center gap-2">
