@@ -153,7 +153,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-wrap sm:flex-nowrap sm:items-center gap-16 mt-16 sm:mt-32 text-gray-400">
+            <div class="flex flex-wrap lg:flex-nowrap lg:items-center gap-16 mt-16 sm:mt-32 text-gray-400">
                 <div>
                     <div class="text-3xl text-white">
                         I write on my blog about<br />
@@ -173,7 +173,7 @@
                     </a>
                 </div>
 
-                <div class="mx-auto relative w-4/5 sm:w-1/2">
+                <div class="mx-auto relative w-4/5 lg:w-1/2">
                     <img src="{{ Vite::asset('/resources/img/screenshot.jpg') }}" alt="The blog of Benjamin Crozat" class="aspect-video inline object-cover object-top relative rotate-2 rounded-xl z-10" />
 
                     <div class="absolute top-0 left-0 right-0 aspect-video bg-gradient-to-r from-orange-400 to-orange-400 -rotate-2 rounded-xl"></div>
