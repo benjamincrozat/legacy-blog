@@ -33,7 +33,7 @@
                     </span>
                 </div>
 
-                <x-icon-technologies class="max-h-12 mt-8 mx-auto" />
+                <x-icon-technologies class="max-h-10 mt-8 mx-auto" />
             </div>
 
             <ul class="grid place-content-center gap-4 mt-8 sm:mt-16 md:text-xl">
