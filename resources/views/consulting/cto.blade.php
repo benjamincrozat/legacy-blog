@@ -74,8 +74,8 @@
     </div>
 
     <div class="bg-gradient-to-b from-gray-900 to-black/30">
-        <div class="container pt-16 sm:pt-32">
-            <h1 class="font-bold text-2xl md:text-4xl lg:text-5xl text-center">
+        <div class="container py-16 sm:pt-32">
+            <h1 class="font-bold text-2xl md:text-4xl text-center">
                 The best on-demand virtual CTO services
             </h1>
 
@@ -152,25 +152,25 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="container mt-16">
-            <div id="calendar" class="scroll-mt-16 shadow-xl"></div>
+            <div class="mt-16">
+                <div id="calendar" class="scroll-mt-16 shadow-xl"></div>
 
-            <script>window.SavvyCal=window.SavvyCal||function(){(SavvyCal.q=SavvyCal.q||[]).push(arguments)}</script>
+                <script>window.SavvyCal=window.SavvyCal||function(){(SavvyCal.q=SavvyCal.q||[]).push(arguments)}</script>
 
-            <script defer src="https://embed.savvycal.com/v1/embed.js"></script>
+                <script defer src="https://embed.savvycal.com/v1/embed.js"></script>
 
-            <script>
-                SavvyCal('init')
-                SavvyCal('inline', { link: 'benjamincrozat/ask-me-anything', selector: '#calendar', theme: 'dark' })
-            </script>
+                <script>
+                    SavvyCal('init')
+                    SavvyCal('inline', { link: 'benjamincrozat/ask-me-anything', selector: '#calendar', theme: 'dark' })
+                </script>
+            </div>
         </div>
     </div>
 
     <div class="bg-black/30" x-intersect="window.fathom?.trackGoal('GNBHJW7B', 0)">
-        <div class="container py-16">
-            <div class="prose prose-a:decoration-orange-400/30 prose-a:font-light prose-a:text-orange-400 prose-a:underline prose-a:underline-offset-4 prose-headings:text-white prose-strong:text-white text-gray-300">
+        <div class="container lg:max-w-screen-md py-16">
+            <div class="prose prose-a:decoration-orange-400/30 prose-a:font-light prose-a:text-orange-400 prose-a:underline prose-a:underline-offset-4 prose-headings:text-white prose-strong:text-white text-gray-300 max-w-none">
                 <h2 class="md:text-center">Frequently Asked Questions</h2>
 
                 <div class="not-prose">
