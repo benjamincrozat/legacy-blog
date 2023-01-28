@@ -168,15 +168,15 @@
                         The blog generates <strong class="text-gray-300">+10K visits per month</strong> and <strong class="text-gray-300">half of them are from Google</strong>.
                     </div>
 
-                    <a href="https://benjamincrozat.com" class="bg-gradient-to-r from-blue-600 to-blue-500 font-normal inline-block mt-10 px-8 py-3 rounded text-white">
+                    <a href="https://benjamincrozat.com" class="bg-gradient-to-r from-blue-600 to-blue-500 duration-500 font-normal hover:hue-rotate-90 inline-block mt-10 px-8 py-3 rounded text-white transition-all">
                         Read my blog
                     </a>
                 </div>
 
                 <div class="mx-auto relative w-4/5 lg:w-1/2">
-                    <img src="{{ Vite::asset('/resources/img/screenshot.jpg') }}" alt="The blog of Benjamin Crozat" class="aspect-video inline object-cover object-top relative rotate-2 rounded-xl z-10" />
+                    <img src="{{ Vite::asset('/resources/img/screenshot.jpg') }}" alt="The blog of Benjamin Crozat" class="aspect-square inline object-cover object-top relative rotate-2 rounded-xl z-10" />
 
-                    <div class="absolute top-0 left-0 right-0 aspect-video bg-gradient-to-r from-orange-400 to-orange-400 -rotate-2 rounded-xl"></div>
+                    <div class="absolute top-0 left-0 right-0 aspect-square bg-gradient-to-r from-orange-400 to-orange-400 -rotate-2 rounded-xl"></div>
                 </div>
             </div>
 
