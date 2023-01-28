@@ -71,43 +71,83 @@
         </div>
     </div>
 
-    <div class="bg-gray-900 py-16" x-intersect="window.fathom?.trackGoal('GNBHJW7B', 0)">
-        <div class="container">
+    <div class="bg-gradient-to-l from-gray-900 to-transparent">
+        <div class="container grid gap-16 sm:gap-32 max-w-[1024px] py-16 sm:py-32">
+            <div class="sm:flex sm:items-center sm:gap-8 font-normal leading-tight sm:mr-[25%] text-white text-xl sm:text-2xl md:text-3xl">
+                <div class="relative w-10 h-10 sm:w-12 sm:h-12">
+                    <x-icon-speedometer class="absolute top-0 -left-1 sm:left-0 fill-current w-12 h-12 sm:w-12 sm:h-12 z-20" />
+                    <div class="absolute top-0 left-0 bg-emerald-900/50 blur-lg w-12 h-12 sm:w-12 sm:h-12 z-10"></div>
+                </div>
+
+                <div class="mt-6 sm:mt-0">
+                    <div class="text-emerald-500">Technical debt won't be part of the equation.</div>
+                    <div class="mt-2">You will start on the right foot.</div>
+                </div>
+            </div>
+
+            <div class="sm:flex sm:items-center sm:gap-8 font-normal leading-tight sm:ml-[25%] text-white text-xl sm:text-2xl md:text-3xl">
+                <div class="relative w-10 h-10 sm:w-12 sm:h-12">
+                    <x-icon-foundations class="absolute top-0 left-0 fill-current w-10 h-10 sm:w-12 sm:h-12 z-20" />
+                    <div class="absolute top-0 left-0 bg-blue-900/50 blur-lg w-10 h-10 sm:w-12 sm:h-12 z-10"></div>
+                </div>
+
+                <div class="mt-6 sm:mt-0">
+                    <div class="text-blue-400">Invest your money on solid foundations.</div>
+                    <div class="mt-2">Don't waste it later on endless maintenance.</div>
+                </div>
+            </div>
+
+            <div class="sm:flex sm:items-center sm:gap-8 font-normal leading-tight sm:mr-[25%] text-white text-xl sm:text-2xl md:text-3xl">
+                <div class="relative w-10 h-10 sm:w-12 sm:h-12">
+                    <x-icon-muscle class="absolute top-0 left-0 fill-current w-10 h-10 sm:w-12 sm:h-12 z-20" />
+                    <div class="absolute top-0 left-0 bg-red-900/75 blur-lg w-10 h-10 sm:w-12 sm:h-12 z-10"></div>
+                </div>
+
+                <div class="mt-6 sm:mt-0">
+                    <div class="text-red-400">Focus your developers on what matters.</div>
+                    <div class="mt-2">Because good execution is what gives value to ideas.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-gradient-to-r from-black/30 to-transparent" x-intersect="window.fathom?.trackGoal('GNBHJW7B', 0)">
+        <div class="container py-16">
             <div class="prose prose-a:decoration-orange-400/30 prose-a:font-light prose-a:text-orange-400 prose-a:underline prose-a:underline-offset-4 prose-headings:text-white prose-strong:text-white text-gray-300">
                 <h2 class="md:text-center">Frequently Asked Questions</h2>
 
                 <div class="not-prose">
                     <ul class="grid gap-1">
                         <li>
-                            <a href="#section-1" class="decoration-orange-400/30 inline-flex items-center gap-1 text-orange-400 underline underline-offset-4">
+                            <a href="#section-1" class="decoration-orange-400/30 hover:decoration-orange-300/30 inline-flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors underline underline-offset-4">
                                 <x-heroicon-o-hashtag class="flex-shrink-0 inline opacity-50 translate-y-px w-3 h-3" />
                                 Who are you?
                             </a>
                         </li>
 
                         <li>
-                            <a href="#section-2" class="decoration-orange-400/30 inline-flex items-center gap-1 text-orange-400 underline underline-offset-4">
+                            <a href="#section-2" class="decoration-orange-400/30 hover:decoration-orange-300/30 inline-flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors underline underline-offset-4">
                                 <x-heroicon-o-hashtag class="flex-shrink-0 inline opacity-50 translate-y-px w-3 h-3" />
                                 What does CTO stands for?
                             </a>
                         </li>
 
                         <li>
-                            <a href="#section-3" class="decoration-orange-400/30 inline-flex items-center gap-1 text-orange-400 underline underline-offset-4">
+                            <a href="#section-3" class="decoration-orange-400/30 hover:decoration-orange-300/30 inline-flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors underline underline-offset-4">
                                 <x-heroicon-o-hashtag class="flex-shrink-0 inline opacity-50 translate-y-px w-3 h-3" />
                                 What is a CTO?
                             </a>
                         </li>
 
                         <li>
-                            <a href="#section-4" class="decoration-orange-400/30 inline-flex items-center gap-1 text-orange-400 underline underline-offset-4">
+                            <a href="#section-4" class="decoration-orange-400/30 hover:decoration-orange-300/30 inline-flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors underline underline-offset-4">
                                 <x-heroicon-o-hashtag class="flex-shrink-0 inline opacity-50 translate-y-px w-3 h-3" />
                                 Why should I hire a CTO?
                             </a>
                         </li>
 
                         <li>
-                            <a href="#section-5" class="decoration-orange-400/30 inline-flex items-center gap-1 text-orange-400 underline underline-offset-4">
+                            <a href="#section-5" class="decoration-orange-400/30 hover:decoration-orange-300/30 inline-flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors underline underline-offset-4">
                                 <x-heroicon-o-hashtag class="flex-shrink-0 inline opacity-50 translate-y-px w-3 h-3" />
                                 When to hire a CTO?
                             </a>
