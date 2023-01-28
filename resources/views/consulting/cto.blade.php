@@ -154,7 +154,7 @@
             </div>
         </div>
 
-        <div class="container max-w-[1280px] mt-16">
+        <div class="container lg:max-w-[1280px] mt-16">
             <div id="calendar" class="scroll-mt-16 shadow-xl"></div>
 
             <script>window.SavvyCal=window.SavvyCal||function(){(SavvyCal.q=SavvyCal.q||[]).push(arguments)}</script>
