@@ -168,7 +168,7 @@
                         The blog generates <strong class="text-gray-300">+10K visits per month</strong> and <strong class="text-gray-300">half of them are from Google</strong>.
                     </div>
 
-                    <a href="https://benjamincrozat.com" class="bg-gradient-to-r from-blue-600 to-blue-500 inline-block mt-10 px-8 py-3 rounded text-white">
+                    <a href="https://benjamincrozat.com" class="bg-gradient-to-r from-blue-600 to-blue-500 font-normal inline-block mt-10 px-8 py-3 rounded text-white">
                         Read my blog
                     </a>
                 </div>
