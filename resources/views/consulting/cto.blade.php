@@ -74,7 +74,7 @@
     </div>
 
     <div class="bg-gradient-to-b from-gray-900 to-black/30">
-        <div class="container py-16 sm:pt-32">
+        <div class="container max-w-[1024px] py-16 sm:pt-32">
             <h1 class="font-bold text-2xl md:text-4xl text-center">
                 The best on-demand virtual CTO services
             </h1>
@@ -153,7 +153,30 @@
                 </div>
             </div>
 
-            <div class="mt-16">
+            <div class="flex items-center gap-16 mt-32">
+                <div>
+                    <div class="text-3xl">
+                        I write on my blog about<br />
+                        the art of crafting web applications
+                    </div>
+
+                    <div class="mt-4 text-xl">
+                        As a self-taught developer, giving back to the community is the least I can do.
+                    </div>
+
+                    <div class="mt-4 text-xl">
+                        The blog generates <strong class="text-white">+10K visits per month</strong> and <strong class="text-white">half of them are from Google</strong>.
+                    </div>
+                </div>
+
+                <div class="mt-8 mx-auto relative w-1/2">
+                    <img src="{{ Vite::asset('/resources/img/screenshot.png') }}" alt="The blog of Benjamin Crozat" class="aspect-video inline object-cover object-top relative rotate-3 rounded-xl z-10" />
+
+                    <div class="absolute top-0 left-0 right-0 aspect-video bg-gradient-to-r from-orange-400 to-orange-400 -rotate-3 rounded-xl"></div>
+                </div>
+            </div>
+
+            <div class="mt-32">
                 <div id="calendar" class="scroll-mt-16 shadow-xl"></div>
 
                 <script>window.SavvyCal=window.SavvyCal||function(){(SavvyCal.q=SavvyCal.q||[]).push(arguments)}</script>
