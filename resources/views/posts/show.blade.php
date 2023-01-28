@@ -5,7 +5,7 @@
     class="dark:bg-gray-900 text-gray-600 dark:text-gray-300"
 >
     <x-nav
-        :funnel="! $post->promotes_affiliate_links"
+        :funnel="$post->promotes_affiliate_links"
         class="container mt-6"
     />
 
