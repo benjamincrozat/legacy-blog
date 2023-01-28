@@ -36,7 +36,7 @@
             <ul class="grid place-content-center gap-4 mt-8 sm:mt-16 md:text-xl">
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                    <span>I answer any questions you have</span>
+                    <span>Ask me anything</span>
                 </li>
 
                 <li class="flex items-center gap-2">
@@ -68,10 +68,6 @@
             <a href="https://savvycal.com/benjamincrozat/ask-me-anything" class="bg-gradient-to-r from-orange-500 to-orange-600 duration-500 font-bold hover:-hue-rotate-90 leading-none mt-16 mx-auto px-8 py-4 rounded table text-center md:text-xl transition-all">
                 Book a call
             </a>
-
-            <div class="-mx-4 px-4 py-16 overflow-x-scroll text-center">
-                <x-icon-clients class="fill-current inline text-gray-500 w-[600px]" />
-            </div>
         </div>
     </div>
 
