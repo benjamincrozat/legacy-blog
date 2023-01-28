@@ -75,7 +75,7 @@
 
     <div class="bg-gradient-to-b from-gray-900 to-black/30">
         <div class="container lg:max-w-[1024px] pt-16 sm:pt-32">
-            <h1 class="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center">
+            <h1 class="font-bold text-2xl md:text-4xl lg:text-5xl text-center">
                 The best on-demand virtual CTO services
             </h1>
 
