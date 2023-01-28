@@ -3,7 +3,7 @@
     class="!bg-gray-900 text-gray-300"
 >
     <div class="bg-gradient-to-r from-black/30 to-transparent">
-        <div class="container pt-16">
+        <div class="container py-16">
             <div class="text-center">
                 <img
                     loading="lazy"
