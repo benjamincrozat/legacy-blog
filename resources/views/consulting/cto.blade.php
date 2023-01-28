@@ -117,11 +117,11 @@
 
                 <h3 id="section-1">Who are you?</h3>
 
-                <p>I'm a passionate full-stack PHP and Laravel developer from the south of France with 10+ years of experience.</p>
+                <p>I'm a <strong>passionate full-stack PHP and Laravel developer</strong> from the south of France with 10+ years of experience.</p>
 
                 <p>I write on <a href="https://benjamincrozat.com">my blog</a> about web development in general, with an emphasis on Laravel.</p>
 
-                <p>I'm also active in the Laravel community on Twitter.</p>
+                <p>I'm also active in the Laravel community <a href="https://twitter.com/benjamincrozat" target="_blank" rel="noopener noreferrer">on Twitter</a>.</p>
 
                 <h3 id="section-2">What does CTO stands for?</h3>
 
@@ -136,18 +136,18 @@
                 <p>Some of the key responsibilities of a CTO may include:</p>
 
                 <ul>
-                    <li>Researching and evaluating new technologies that could benefit the company</li>
-                    <li>Developing and implementing technology-related policies and procedures</li>
-                    <li>Managing the company's IT department and staff</li>
-                    <li>Developing and managing technology budgets</li>
-                    <li>Overseeing the development and maintenance of the company's website, software and other technology systems.</li>
+                    <li><strong>Researching and evaluating new technologies</strong> that could benefit the company</li>
+                    <li>Developing and <strong>implementing technology-related policies and procedures</strong></li>
+                    <li><strong>Managing the company's IT department and staff</strong></li>
+                    <li>Developing and <strong>managing technology budgets</strong></li>
+                    <li><strong>Overseeing the development and maintenance of the company's website, software and other technology systems.</strong></li>
                 </ul>
 
                 <p>An on-demand virtual CTO should have a strong understanding of the technology industry and the latest trends and innovations.</p>
 
-                <p>They should also have excellent leadership and communication skills, as they will need to be ready work with a variety of teams within any company.</p>
+                <p>They should also have <strong>excellent leadership and communication skills</strong>, as they will need to be ready work with a variety of teams within any company.</p>
 
-                <h3 id="section-4">Why should I hire a CTO?</h3>
+                <h3 id="section-4">Why should I hire a virtual on-demand CTO?</h3>
 
                 <p>By hiring your on-demand virtual CTO (me), you can <strong>benefit from the expertise and experience of a seasoned professional without the commitment of a full-time hire</strong>.</p>
 
