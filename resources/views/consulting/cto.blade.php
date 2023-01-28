@@ -73,7 +73,7 @@
 
     <div class="bg-gradient-to-b from-gray-900 to-black/30">
         <div class="container lg:max-w-[1024px] pt-16 sm:pt-32">
-            <h1 class="font-thin text-3xl md:text-4xl text-center" style="text-shadow: 0 0 15px rgba(255, 255, 255, .5)">
+            <h1 class="font-thin text-2xl sm:text-3xl md:text-4xl text-center" style="text-shadow: 0 0 15px rgba(255, 255, 255, .5)">
                 The best on-demand virtual CTO services
             </h1>
 
