@@ -1,6 +1,6 @@
 @if ($promotesAffiliateLinks)
     <div {{ $attributes->merge(['class' => 'text-center text-sm']) }}>
-        <x-icon-logos class="mx-auto w-4/5 md:w-auto" />
+        <x-icon-technologies class="mx-auto w-4/5 md:w-auto" />
 
         <p class="mt-4">
             <strong class="font-semibold">@choice(':count person|:count persons', $subscribersCount) subscribed to my newsletter</strong>.<br /> Join them and enjoy free content about the art of crafting&nbsp;websites!

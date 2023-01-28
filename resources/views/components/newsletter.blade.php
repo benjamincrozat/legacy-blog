@@ -1,7 +1,7 @@
 <section id="newsletter" {{ $attributes->merge(['class' => 'scroll-mt-8']) }}>
     @if (empty($headline))
         <div class="container sm:max-w-screen-xs md:max-w-screen-sm text-center">
-            <x-icon-logos />
+            <x-icon-technologies />
         </div>
 
         <p class="font-medium !leading-tight sm:max-w-screen-xs mt-8 mx-auto text-xl text-center">
