@@ -81,7 +81,7 @@
             </h1>
 
             <div class="grid sm:grid-cols-2 gap-4 mt-16">
-                <div class="bg-gray-700/20 leading-tight p-8 rounded-xl shadow-md text-white text-xl">
+                <div class="bg-[#161e2e] leading-tight p-8 rounded-xl shadow-md text-white text-xl">
                     <div class="relative w-10 h-10 sm:w-12 sm:h-12">
                         <x-icon-speedometer class="absolute top-0 -left-1 fill-current w-12 h-12 sm:w-12 sm:h-12 z-20" />
                         <div class="absolute top-0 left-0 bg-emerald-900/50 blur-lg w-12 h-12 sm:w-12 sm:h-12 z-10"></div>
@@ -93,7 +93,7 @@
                     </div>
                 </div>
 
-                <div class="bg-gray-700/20 leading-tight p-8 rounded-xl shadow-md text-white text-xl">
+                <div class="bg-[#161e2e] leading-tight p-8 rounded-xl shadow-md text-white text-xl">
                     <div class="relative w-10 h-10 sm:w-12 sm:h-12">
                         <x-icon-foundations class="absolute top-0 -left-1 fill-current w-10 h-10 sm:w-12 sm:h-12 z-20" />
                         <div class="absolute top-0 left-0 bg-blue-900/50 blur-lg w-10 h-10 sm:w-12 sm:h-12 z-10"></div>
@@ -105,7 +105,7 @@
                     </div>
                 </div>
 
-                <div class="bg-gray-700/20 leading-tight p-8 rounded-xl shadow-md text-white text-xl">
+                <div class="bg-[#161e2e] leading-tight p-8 rounded-xl shadow-md text-white text-xl">
                     <div class="relative w-10 h-10 sm:w-12 sm:h-12">
                         <x-icon-muscle class="absolute top-0 left-1 fill-current w-10 h-10 sm:w-12 sm:h-12 z-20" />
                         <div class="absolute top-0 left-0 bg-red-900/75 blur-lg w-10 h-10 sm:w-12 sm:h-12 z-10"></div>
@@ -117,7 +117,7 @@
                     </div>
                 </div>
 
-                <div class="bg-gray-700/20 leading-tight p-8 rounded-xl shadow-md text-white text-xl">
+                <div class="bg-[#161e2e] leading-tight p-8 rounded-xl shadow-md text-white text-xl">
                     <div class="relative w-10 h-10 sm:w-12 sm:h-12">
                         <x-icon-server class="absolute top-0 -left-1 fill-current w-10 h-10 sm:w-12 sm:h-12 z-20" />
                         <div class="absolute top-0 left-0 bg-purple-900/50 blur-lg w-10 h-10 sm:w-12 sm:h-12 z-10"></div>
@@ -129,7 +129,7 @@
                     </div>
                 </div>
 
-                <div class="bg-gray-700/20 leading-tight p-8 rounded-xl shadow-md text-white text-xl">
+                <div class="bg-[#161e2e] leading-tight p-8 rounded-xl shadow-md text-white text-xl">
                     <div class="relative w-10 h-10 sm:w-12 sm:h-12">
                         <x-icon-robot class="absolute top-0 left-0 fill-current w-10 h-10 sm:w-12 sm:h-12 z-20" />
                         <div class="absolute top-0 left-0 bg-yellow-900/75 blur-lg w-10 h-10 sm:w-12 sm:h-12 z-10"></div>
