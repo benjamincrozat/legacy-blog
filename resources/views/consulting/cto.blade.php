@@ -111,7 +111,7 @@
         </div>
 
         <div class="container max-w-[1280px] pt-16 sm:pt-32">
-            <div id="calendar" class="scroll-mt-16 sm:scroll-mt-32"></div>
+            <div id="calendar" class="scroll-mt-16 sm:scroll-mt-32 shadow-xl"></div>
 
             <script>window.SavvyCal=window.SavvyCal||function(){(SavvyCal.q=SavvyCal.q||[]).push(arguments)}</script>
 
