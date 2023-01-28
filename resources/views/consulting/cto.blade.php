@@ -113,6 +113,30 @@
                         <div class="font-thin mt-2">Because good execution is what gives value to ideas.</div>
                     </div>
                 </div>
+
+                <div class="sm:flex sm:items-center sm:gap-8 leading-tight sm:ml-[20%] text-white text-xl sm:text-2xl md:text-3xl">
+                    <div class="relative w-10 h-10 sm:w-12 sm:h-12">
+                        <x-icon-server class="absolute top-0 left-0 fill-current w-10 h-10 sm:w-12 sm:h-12 z-20" />
+                        <div class="absolute top-0 left-0 bg-purple-900/50 blur-lg w-10 h-10 sm:w-12 sm:h-12 z-10"></div>
+                    </div>
+
+                    <div class="mt-6 sm:mt-0">
+                        <div class="text-purple-400">Leverage inexpensive serverless solutions to scale later</div>
+                        <div class="font-thin mt-2">Imagine being worry-free the day you go viral or reach Product&nbsp;Market&nbsp;Fit.</div>
+                    </div>
+                </div>
+
+                <div class="sm:flex sm:items-center sm:gap-8 leading-tight sm:mr-[20%] text-white text-xl sm:text-2xl md:text-3xl">
+                    <div class="relative w-10 h-10 sm:w-12 sm:h-12">
+                        <x-icon-robot class="absolute top-0 left-0 fill-current w-10 h-10 sm:w-12 sm:h-12 z-20" />
+                        <div class="absolute top-0 left-0 bg-yellow-900/75 blur-lg w-10 h-10 sm:w-12 sm:h-12 z-10"></div>
+                    </div>
+
+                    <div class="mt-6 sm:mt-0">
+                        <div class="text-yellow-400">Automate as much processes as possible.</div>
+                        <div class="font-thin mt-2">A business operating on its own can be a reality.</div>
+                    </div>
+                </div>
             </div>
         </div>
 
