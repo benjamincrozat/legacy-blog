@@ -83,13 +83,25 @@
             <div class="grid sm:grid-cols-2 gap-4 mt-16">
                 <div class="bg-[#161e2e] leading-tight p-8 rounded-xl shadow-md text-white text-xl">
                     <div class="relative w-10 h-10 sm:w-12 sm:h-12">
+                        <x-icon-people class="absolute top-0 -left-1 fill-current w-12 h-12 sm:w-12 sm:h-12 z-20" />
+                        <div class="absolute top-0 left-0 bg-orange-900/50 blur-lg w-12 h-12 sm:w-12 sm:h-12 z-10"></div>
+                    </div>
+
+                    <div class="mt-6">
+                        <div class="text-orange-500">I help you hire the right talents.</div>
+                        <div class="font-thin mt-2">Having a CTO at your side when recruiting developers is crucial.</div>
+                    </div>
+                </div>
+
+                <div class="bg-[#161e2e] leading-tight p-8 rounded-xl shadow-md text-white text-xl">
+                    <div class="relative w-10 h-10 sm:w-12 sm:h-12">
                         <x-icon-speedometer class="absolute top-0 -left-1 fill-current w-12 h-12 sm:w-12 sm:h-12 z-20" />
                         <div class="absolute top-0 left-0 bg-emerald-900/50 blur-lg w-12 h-12 sm:w-12 sm:h-12 z-10"></div>
                     </div>
 
                     <div class="mt-6">
                         <div class="text-emerald-500">Technical debt won't be part of the equation.</div>
-                        <div class="font-thin mt-2">You will start on the right foot.</div>
+                        <div class="font-thin mt-2">Let's make sure you start on the right foot.</div>
                     </div>
                 </div>
 
@@ -119,7 +131,7 @@
 
                 <div class="bg-[#161e2e] leading-tight p-8 rounded-xl shadow-md text-white text-xl">
                     <div class="relative w-10 h-10 sm:w-12 sm:h-12">
-                        <x-icon-server class="absolute top-0 -left-1 fill-current w-10 h-10 sm:w-12 sm:h-12 z-20" />
+                        <x-icon-server class="absolute top-0 -left-px fill-current w-10 h-10 sm:w-12 sm:h-12 z-20" />
                         <div class="absolute top-0 left-0 bg-purple-900/50 blur-lg w-10 h-10 sm:w-12 sm:h-12 z-10"></div>
                     </div>
 
