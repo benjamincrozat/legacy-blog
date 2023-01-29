@@ -66,10 +66,6 @@
                     <span>Reduce cost due to suboptimal technical decisions.</span>
                 </li>
             </ul>
-
-            <a href="#calendar" class="bg-gradient-to-r from-orange-500 to-orange-600 duration-500 font-bold hover:-hue-rotate-90 leading-none mt-16 mx-auto px-8 py-4 rounded table text-center md:text-xl transition-all">
-                Book a call
-            </a>
         </div>
     </div>
 
@@ -182,7 +178,11 @@
         </div>
 
         <div class="container max-w-[1024px] mt-16 md:mt-32">
-            <div>
+            <h1 class="font-bold text-2xl md:text-4xl text-center">
+                Book a call
+            </h1>
+
+            <div class="mt-8">
                 <div id="calendar" class="scroll-mt-16 shadow-xl"></div>
 
                 <script>window.SavvyCal=window.SavvyCal||function(){(SavvyCal.q=SavvyCal.q||[]).push(arguments)}</script>
