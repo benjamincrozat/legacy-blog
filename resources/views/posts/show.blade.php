@@ -13,7 +13,7 @@
         :promotes-affiliate-links="! $post->promotes_affiliate_links"
         class="container mt-8"
     >
-        <x-posts::breadcrumb-item>
+        <x-posts::breadcrumb-item class=”line-clamp-1”>
             {{ $post->title }}
         </x-posts::breadcrumb-item>
     </x-posts::breadcrumb>
