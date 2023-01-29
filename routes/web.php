@@ -12,6 +12,7 @@ Route::domain(preg_replace('/https?:\/\//', '', config('app.url')))->group(funct
     Route::get('/', HomeController::class)->name('home');
 
     Route::view('/hire-cto', 'consulting.cto')->name('consulting.cto');
+
     Route::view('/laravel-developer-for-hire', 'consulting.laravel')->name('consulting.laravel');
 
     Route::post('/subscribe', SubscribeController::class)->name('subscribe');
