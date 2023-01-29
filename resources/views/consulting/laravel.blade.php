@@ -5,7 +5,7 @@
     <div class="!container content py-8">
         <h1>Hire a Laravel developer</h1>
 
-        <p>Looking to hire a Laravel developer for your next project? Look no further. Our team of experienced Laravel developers are ready to take on your project and deliver top-notch results.</p>
+        <p>Looking to hire a Laravel developer for your next project? Look no further. I am experienced Laravel developers are ready to take on your project and deliver top-notch results.</p>
 
         <h2>Laravel Developers for Hire</h2>
 
@@ -25,7 +25,7 @@
 
         <h2>Hire Laravel Developers</h2>
 
-        If you need more than one Laravel developer for your project, our team can help. We have a pool of experienced Laravel developers who are ready to take on your project and deliver top-notch results.</p>
+        If you need more than one Laravel developer for your project, our team can help. I have a pool of experienced Laravel developers who are ready to take on your project and deliver top-notch results.</p>
 
         <h2>Hire Dedicated Laravel Developer</h2>
 
@@ -33,7 +33,7 @@
 
         <h2>Hire Dedicated Laravel Developers</h2>
 
-        If you need a team of dedicated Laravel developers for your project, our team can help. We have a pool of experienced and dedicated Laravel developers who are ready to take on your project and deliver top-notch results.</p>
+        If you need a team of dedicated Laravel developers for your project, our team can help. I have a pool of experienced and dedicated Laravel developers who are ready to take on your project and deliver top-notch results.</p>
 
         <h2>Hire Laravel Experts</h2>
 
@@ -49,7 +49,7 @@
 
         <h2>Hire Laravel Programmers</h2>
 
-        If you need more than one Laravel programmer for your project, our team can help. We have a pool of experienced Laravel programmers who are ready to take on your project and deliver top-notch results.</p>
+        If you need more than one Laravel programmer for your project, our team can help. I have a pool of experienced Laravel programmers who are ready to take on your project and deliver top-notch results.</p>
 
         <h2>Hire Laravel Programmer</h2>
 
