@@ -117,7 +117,6 @@ class Post extends BaseModel implements Feedable
         return $query->withUser();
     }
 
-    #[SearchUsingFullText(['title', 'content', 'description'])]
     public function toSearchableArray() : array
     {
         return [
