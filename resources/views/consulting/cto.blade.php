@@ -241,7 +241,7 @@
                     </ul>
                 </div>
 
-                <h3 id="section-1">Who are you?</h3>
+                <h3 id="section-1" class="scroll-mt-4">Who are you?</h3>
 
                 <p>I'm a <strong>passionate full-stack PHP and Laravel developer</strong> from the south of France with 10+ years of experience.</p>
 
@@ -249,11 +249,11 @@
 
                 <p>I'm also active in the Laravel community <a href="https://twitter.com/benjamincrozat" target="_blank" rel="noopener noreferrer">on Twitter</a>.</p>
 
-                <h3 id="section-2">What does CTO stands for?</h3>
+                <h3 id="section-2" class="scroll-mt-4">What does CTO stands for?</h3>
 
                 <p><strong>CTO stands for Chief Technology Officer</strong>, and is responsible for the overall technology strategy of a company.</p>
 
-                <h3 id="section-3">What is a CTO?</h3>
+                <h3 id="section-3" class="scroll-mt-4">What is a CTO?</h3>
 
                 <p><strong>A CTO plays a key role in shaping the direction and success of a business.</strong></p>
 
@@ -273,13 +273,13 @@
 
                 <p>They should also have <strong>excellent leadership and communication skills</strong>, as they will need to be ready work with a variety of teams within any company.</p>
 
-                <h3 id="section-4">Why should I hire a virtual on-demand CTO?</h3>
+                <h3 id="section-4" class="scroll-mt-4">Why should I hire a virtual on-demand CTO?</h3>
 
                 <p>By hiring your on-demand virtual CTO (me), you can <strong>benefit from the expertise and experience of a seasoned professional without the commitment of a full-time hire</strong>.</p>
 
                 <p><strong>I can work with your team on an ongoing or project basis.</strong></p>
 
-                <h3 id="section-5">When to hire a CTO?</h3>
+                <h3 id="section-5" class="scroll-mt-4">When to hire a CTO?</h3>
 
                 <p>You should hire a CTO when <strong>you have critical and technological decisions</strong> to make.</p>
 
