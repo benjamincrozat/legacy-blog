@@ -66,6 +66,10 @@
                     <span>Reduce cost due to suboptimal technical decisions.</span>
                 </li>
             </ul>
+
+            <a href="#calendar" class="bg-gradient-to-r from-orange-500 to-orange-600 duration-500 font-bold hover:-hue-rotate-90 leading-none mt-16 mx-auto px-8 py-4 rounded table text-center md:text-xl transition-all">
+                Book a call
+            </a>
         </div>
     </div>
 
@@ -75,7 +79,7 @@
                 The best on-demand virtual CTO services
             </h1>
 
-            <div class="grid sm:grid-cols-2 gap-4 mt-8">
+            <div class="grid sm:grid-cols-2 gap-4 mt-8 md:mt-16">
                 <div class="bg-[#161e2e] leading-tight p-8 rounded-xl shadow-md text-white text-xl">
                     <div class="relative w-10 h-10 sm:w-12 sm:h-12">
                         <x-icon-people class="absolute top-0 -left-1 fill-current w-12 h-12 sm:w-12 sm:h-12 z-20" />
