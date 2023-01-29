@@ -2,9 +2,47 @@
     title="Hire your on-demand virtual CTO."
     class="!bg-gray-900 text-gray-300"
 >
-    <div class="bg-gradient-to-b from-black/30 to-gray-900 pt-16">
+    <div class="bg-gradient-to-b from-black/30 to-gray-900 pt-4">
+        <ul class="flex items-center justify-end gap-1 mr-4">
+            <li>
+                <a
+                    href="https://github.com/benjamincrozat"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    @click="window.fathom?.trackGoal('COYELHY0', 0)"
+                >
+                    <span class="sr-only">GitHub</span>
+                    <x-icon-github class="fill-current text-white w-6 h-6" />
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://www.linkedin.com/in/benjamincrozat"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    @click="window.fathom?.trackGoal('COYELHY0', 0)"
+                >
+                    <span class="sr-only">LinkedIn</span>
+                    <x-icon-linkedin class="fill-current text-white w-6 h-6" />
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://twitter.com/benjamincrozat"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    @click="window.fathom?.trackGoal('COYELHY0', 0)"
+                >
+                    <span class="sr-only">Twitter</span>
+                    <x-icon-twitter class="fill-current text-white w-6 h-6" />
+                </a>
+            </li>
+        </ul>
+
         <div class="container">
-            <div class="text-center">
+            <div class="mt-16 text-center">
                 <img
                     loading="lazy"
                     src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256"
@@ -293,42 +331,4 @@
             </div>
         </div>
     </div>
-
-    <ul class="absolute top-4 right-4 flex items-center gap-1 sm:gap-2">
-        <li>
-            <a
-                href="https://github.com/benjamincrozat"
-                target="_blank"
-                rel="noopener noreferrer"
-                @click="window.fathom?.trackGoal('COYELHY0', 0)"
-            >
-                <span class="sr-only">GitHub</span>
-                <x-icon-github class="fill-current text-white w-6 h-6" />
-            </a>
-        </li>
-
-        <li>
-            <a
-                href="https://www.linkedin.com/in/benjamincrozat"
-                target="_blank"
-                rel="noopener noreferrer"
-                @click="window.fathom?.trackGoal('COYELHY0', 0)"
-            >
-                <span class="sr-only">LinkedIn</span>
-                <x-icon-linkedin class="fill-current text-white w-6 h-6" />
-            </a>
-        </li>
-
-        <li>
-            <a
-                href="https://twitter.com/benjamincrozat"
-                target="_blank"
-                rel="noopener noreferrer"
-                @click="window.fathom?.trackGoal('COYELHY0', 0)"
-            >
-                <span class="sr-only">Twitter</span>
-                <x-icon-twitter class="fill-current text-white w-6 h-6" />
-            </a>
-        </li>
-    </ul>
 </x-app>
