@@ -75,7 +75,7 @@
                 The best on-demand virtual CTO services
             </h1>
 
-            <div class="grid sm:grid-cols-2 gap-4 mt-8 md:mt-16">
+            <div class="grid sm:grid-cols-2 gap-4 mt-8">
                 <div class="bg-[#161e2e] leading-tight p-8 rounded-xl shadow-md text-white text-xl">
                     <div class="relative w-10 h-10 sm:w-12 sm:h-12">
                         <x-icon-people class="absolute top-0 -left-1 fill-current w-12 h-12 sm:w-12 sm:h-12 z-20" />
