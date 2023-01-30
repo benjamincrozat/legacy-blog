@@ -232,7 +232,7 @@
 
                 <script>
                     SavvyCal('init')
-                    SavvyCal('inline', { link: 'benjamincrozat/ask-me-anything', selector: '#calendar', theme: 'dark' })
+                    SavvyCal('inline', { link: @if (app()->getLocale() === 'fr') 'benjamincrozat/rendez-vous' @else 'benjamincrozat/ask-me-anything' @endif, selector: '#calendar', theme: 'dark' })
                 </script>
             </div>
         </div>

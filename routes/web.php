@@ -13,12 +13,6 @@ Route::domain(preg_replace('/https?:\/\//', '', config('app.url')))->group(funct
 
     Route::view('/hire-cto', 'consulting.cto')->name('consulting.cto');
 
-    Route::get('/fr/hire-cto', function () {
-        app()->setLocale('fr');
-
-        return view('consulting.cto');
-    })->name('consulting.cto');
-
     Route::view('/laravel-developer-for-hire', 'consulting.laravel')->name('consulting.laravel');
 
     Route::post('/subscribe', SubscribeController::class)->name('subscribe');
