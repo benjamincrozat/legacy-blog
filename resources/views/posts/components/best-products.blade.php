@@ -8,6 +8,7 @@
             @elseif ($bestProducts->count() > 1)
             sm:grid-cols-2
             gap-4
+            @endif
         ">
             @foreach ($bestProducts as $bestProduct)
                 <x-posts::best-product
