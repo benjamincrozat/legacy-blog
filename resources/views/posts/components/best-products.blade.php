@@ -1,6 +1,14 @@
 @if ($promotesAffiliateLinks && $bestProducts->isNotEmpty())
     <div {{ $attributes }}>
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div
+            class="grid
+            @if ($bestProducts->count() > 2)
+            sm:grid-cols-2
+            md:grid-cols-3
+            @elseif ($bestProducts->count() > 1)
+            sm:grid-cols-2
+            gap-4
+        ">
             @foreach ($bestProducts as $bestProduct)
                 <x-posts::best-product
                     :best-product="$bestProduct"
