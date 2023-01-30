@@ -53,19 +53,19 @@
                 />
 
                 <div class="font-normal mt-8 text-xl sm:text-2xl md:text-3xl text-white">
-                    Not ready for full-time workforces?
+                    @lang('Not ready for full-time workforces?')
                 </div>
 
                 <h1 class="font-bold mt-2 text-3xl md:text-5xl">
                     <span class="bg-clip-text bg-gradient-to-r from-orange-600 to-orange-300 inline-block">
-                        <span class="text-transparent">Hire your on-demand virtual CTO.</span>
+                        <span class="text-transparent">@lang('Hire your on-demand virtual CTO.')</span>
                     </span>
                 </h1>
 
                 <div class="mt-8 sm:mt-16 text-xl sm:text-2xl md:text-3xl text-purple-400">
                     <span class="bg-clip-text bg-gradient-to-r from-purple-300 to-purple-400 inline-block">
                         <span class="text-transparent">
-                            10+ years of experience at the service of your business.
+                            @lang('10+ years of experience at the service of your business.')
                         </span>
                     </span>
                 </div>
@@ -76,37 +76,37 @@
             <ul class="grid place-content-center gap-4 mt-8 sm:mt-16 md:text-xl">
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                    <span>I will help you hire the best talents</span>
+                    <span>@lang('I will help you hire the best talents')</span>
                 </li>
 
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                    <span>Discover best practices that make new hires productive</span>
+                    <span>@lang('Discover best practices that make new hires productive')</span>
                 </li>
 
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                    <span>Stop losing sales over bad performances</span>
+                    <span>@lang('Stop losing sales over bad performances')</span>
                 </li>
 
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                    <span>Prevent as many regressions as possible</span>
+                    <span>@lang('Prevent as many regressions as possible')</span>
                 </li>
 
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                    <span>Be notified when your app fails in production</span>
+                    <span>@lang('Be notified when your app fails in production')</span>
                 </li>
 
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                    <span>Reduce cost due to suboptimal technical decisions.</span>
+                    <span>@lang('Reduce cost due to suboptimal technical decisions.')</span>
                 </li>
             </ul>
 
             <a href="#calendar" class="bg-gradient-to-r from-orange-500 to-orange-600 duration-500 font-bold hover:-hue-rotate-90 leading-none mt-16 mx-auto px-8 py-4 rounded table text-center md:text-xl transition-all">
-                Book a call
+                @lang('Book a call')
             </a>
         </div>
     </div>
@@ -114,7 +114,7 @@
     <div class="bg-gradient-to-b from-gray-900 to-black/30 mt-16 md:mt-32">
         <div class="container max-w-[1024px]">
             <h1 class="font-bold text-2xl md:text-4xl text-center">
-                The best on-demand virtual CTO services
+                @lang('The best on-demand virtual CTO services')
             </h1>
 
             <div class="grid sm:grid-cols-2 gap-4 mt-8 md:mt-16">
@@ -125,8 +125,8 @@
                     </div>
 
                     <div class="mt-6">
-                        <div class="text-orange-500">I help you hire the right talents.</div>
-                        <div class="font-thin mt-2">Having a CTO at your side when recruiting developers is crucial.</div>
+                        <div class="text-orange-500">@lang('I help you hire the right talents.')</div>
+                        <div class="font-thin mt-2">@lang('Having a CTO at your side when recruiting developers is crucial.')</div>
                     </div>
                 </div>
 
@@ -137,8 +137,8 @@
                     </div>
 
                     <div class="mt-6">
-                        <div class="text-emerald-500">Technical debt won't be part of the equation.</div>
-                        <div class="font-thin mt-2">Let's make sure you start on the right foot.</div>
+                        <div class="text-emerald-500">@lang('Technical debt won\'t be part of the equation.')</div>
+                        <div class="font-thin mt-2">@lang('Let\'s make sure you start on the right foot.')</div>
                     </div>
                 </div>
 
@@ -149,8 +149,8 @@
                     </div>
 
                     <div class="mt-6">
-                        <div class="text-blue-400">Invest your money on solid foundations.</div>
-                        <div class="font-thin mt-2">Don't waste it later on endless maintenance.</div>
+                        <div class="text-blue-400">@lang('Invest your money on solid foundations.')</div>
+                        <div class="font-thin mt-2">@lang('Don\'t waste it later on endless maintenance.')</div>
                     </div>
                 </div>
 
@@ -161,8 +161,8 @@
                     </div>
 
                     <div class="mt-6">
-                        <div class="text-red-400">Focus your developers on what matters.</div>
-                        <div class="font-thin mt-2">Because good execution is what gives value to ideas.</div>
+                        <div class="text-red-400">@lang('Focus your developers on what matters.')</div>
+                        <div class="font-thin mt-2">@lang('Because good execution is what gives value to ideas.')</div>
                     </div>
                 </div>
 
@@ -173,8 +173,8 @@
                     </div>
 
                     <div class="mt-6">
-                        <div class="text-purple-400">Leverage inexpensive serverless solutions to scale later</div>
-                        <div class="font-thin mt-2">Imagine being worry-free the day you go viral or reach Product Market Fit.</div>
+                        <div class="text-purple-400">@lang('Leverage inexpensive serverless solutions to scale later')</div>
+                        <div class="font-thin mt-2">@lang('Imagine being worry-free the day you go viral or reach Product Market Fit.')</div>
                     </div>
                 </div>
 
@@ -185,8 +185,8 @@
                     </div>
 
                     <div class="mt-6">
-                        <div class="text-yellow-400">Automate as much processes as possible.</div>
-                        <div class="font-thin mt-2">A business operating on its own can be a reality.</div>
+                        <div class="text-yellow-400">@lang('Automate as much processes as possible.')</div>
+                        <div class="font-thin mt-2">@lang('A business operating on its own can be a reality.')</div>
                     </div>
                 </div>
             </div>
@@ -196,32 +196,31 @@
             <div class="flex flex-wrap lg:flex-nowrap lg:items-center gap-16 text-gray-400">
                 <div>
                     <div class="text-3xl text-white">
-                        I write on my blog about<br />
-                        the art of crafting web applications
+                        @lang('I write on my blog about<br /> the art of crafting web applications')
                     </div>
 
                     <div class="mt-4 text-xl">
-                        As a self-taught developer, giving back to the community is the least I can do.
+                        @lang('As a self-taught developer, giving back to the community is the least I can do.')
                     </div>
 
                     <div class="mt-4 text-xl">
-                        The blog generates <strong class="text-gray-300">+10K visits per month</strong> and <strong class="text-gray-300">half of them are from Google</strong>.
+                        @lang('The blog generates <strong class="text-gray-300">+10K visits per month</strong> and <strong class="text-gray-300">half of them are from Google</strong>.')
                     </div>
 
                     <a href="{{ route('home') }}" class="bg-gradient-to-r from-blue-600 to-blue-500 duration-500 font-normal hover:hue-rotate-90 inline-block mt-10 px-8 py-3 rounded text-white transition-all">
-                        Read my blog
+                        @lang('Read my blog')
                     </a>
                 </div>
 
                 <div class="mx-auto w-4/5 lg:w-1/2">
-                    <img src="{{ Vite::asset('resources/img/screenshot.jpg') }}" alt="The blog of Benjamin Crozat" class="aspect-square inline object-cover object-top relative rotate-2 rounded-xl z-10" />
+                    <img src="{{ Vite::asset('resources/img/screenshot.jpg') }}" alt="@lang('The blog of Benjamin Crozat')" class="aspect-square inline object-cover object-top relative rotate-2 rounded-xl z-10" />
                 </div>
             </div>
         </div>
 
         <div class="container max-w-[1024px] mt-16 md:mt-32">
             <h1 class="font-bold text-2xl md:text-4xl text-center">
-                Book a call
+                @lang('Book a call')
             </h1>
 
             <div class="mt-8">
