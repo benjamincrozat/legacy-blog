@@ -286,13 +286,13 @@
             </div>
         </div>
 
-        <div class="container max-w-[1024px] mt-16 md:mt-32">
+        <div id="calendar" class="container max-w-[1024px] mt-16 md:mt-32 scroll-mt-8">
             <h2 class="font-bold text-2xl md:text-4xl text-center">
                 @lang('Book a call')
             </h2>
 
             <div class="mt-8">
-                <div id="calendar" class="scroll-mt-16 shadow-xl"></div>
+                <div id="savvycal" class="shadow-xl"></div>
 
                 <script>window.SavvyCal=window.SavvyCal||function(){(SavvyCal.q=SavvyCal.q||[]).push(arguments)}</script>
 
@@ -300,7 +300,7 @@
 
                 <script>
                     SavvyCal('init')
-                    SavvyCal('inline', { link: @if (app()->getLocale() === 'fr') 'benjamincrozat/rendez-vous' @else 'benjamincrozat/ask-me-anything' @endif, selector: '#calendar', theme: 'dark' })
+                    SavvyCal('inline', { link: @if (app()->getLocale() === 'fr') 'benjamincrozat/rendez-vous' @else 'benjamincrozat/ask-me-anything' @endif, selector: '#savvycal', theme: 'dark' })
                 </script>
             </div>
         </div>
