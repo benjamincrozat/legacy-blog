@@ -288,7 +288,7 @@
                         @lang('Get started')
                     </a>
 
-                    <p class="border-t border-white/5 mt-8 pt-6 text-center text-gray-400">
+                    <p class="border-t border-white/5 mt-8 pt-6 text-center text-gray-400 text-sm">
                         Learn about my process and how I can help you. <a href="#calendar" class="decoration-orange-400/30 hover:decoration-orange-300/30 font-normal text-orange-400 hover:text-orange-300 transition-colors underline underline-offset-4">@lang('Book a call')</a>.
                     </p>
                 </div>
