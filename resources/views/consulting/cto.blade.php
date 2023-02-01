@@ -105,7 +105,7 @@
                 </li>
             </ul>
 
-            <a href="#pricing" class="bg-gradient-to-r from-orange-500 to-orange-600 duration-500 font-bold hover:-hue-rotate-90 leading-none mt-16 mx-auto px-8 py-4 rounded table text-center md:text-xl transition-all">
+            <a href="#pricing" class="bg-gradient-to-r from-orange-600 to-orange-700 duration-500 font-bold hover:-hue-rotate-90 leading-none mt-16 mx-auto px-8 py-4 rounded table text-center md:text-xl transition-all">
                 @lang('See pricing')
             </a>
         </div>
@@ -231,12 +231,13 @@
                 <p class="text-center text-sm">Unlimited requests in the scope of my services.</p>
 
                 <div class="mt-8 text-center">
-                    <div class="inline-block relative">
-                        <div class="absolute top-1/2 left-0 font-thin opacity-75 text-3xl -translate-x-full -translate-y-1/2">
-                            €
+                    <div class="inline-block relative text-white">
+                        <div class="absolute top-1/2 left-0 font-thin text-3xl -translate-x-full -translate-y-1/2">
+                            <x-icon-euro class="stroke-current w-8 h-8" />
+                            <span class="sr-only">€</span>
                         </div>
 
-                        <div class="font-bold text-white text-5xl">
+                        <div class="font-bold text-5xl">
                             4,995
                         </div>
                     </div>
