@@ -218,72 +218,80 @@
             </div>
         </div>
 
-        <div id="pricing" class="container mt-16 md:mt-32 scroll-mt-8">
+        <div id="pricing" class="container max-w-[1024px] mt-16 md:mt-32 scroll-mt-8">
             <h2 class="font-bold text-2xl md:text-4xl text-center">
                 @lang('Pricing')
             </h2>
 
-            <div class="bg-[#161e2e] mt-8 px-4 py-8 sm:p-8 rounded-xl shadow-xl">
-                <h2 class="font-bold text-xl text-center text-white">
-                    @lang('For a month')
-                </h2>
+            <div class="grid md:grid-cols-2 gap-4 mt-8">
+                <div class="bg-[#161e2e] px-4 py-8 sm:p-8 rounded-xl shadow-xl">
+                    <h2 class="font-bold text-xl text-center text-white">
+                        @lang('Monthly')
+                    </h2>
 
-                <p class="text-center text-sm">Unlimited requests in the scope of my services.</p>
+                    <p class="text-center text-sm">Unlimited requests in the scope of my services.</p>
 
-                <div class="mt-8 text-center">
-                    <div class="inline-block relative text-white">
-                        <div class="absolute top-1/2 left-0 font-thin text-3xl -translate-x-full -translate-y-1/2">
-                            <x-icon-euro class="stroke-current w-8 h-8" />
-                            <span class="sr-only">€</span>
-                        </div>
+                    <div class="mt-8 text-center">
+                        <div class="inline-block relative text-white">
+                            <div class="absolute top-1/2 left-0 font-thin text-3xl translate-x-[calc(-100%-.25rem)] -translate-y-1/2">
+                                <x-icon-euro class="stroke-current w-8 h-8" />
+                                <span class="sr-only">€</span>
+                            </div>
 
-                        <div class="font-bold text-5xl">
-                            4,995
+                            <div class="absolute top-1/2 right-0 font-thin translate-x-[calc(100%+.5rem)] -translate-y-1/2">
+                                per month
+                            </div>
+
+                            <div class="font-semibold text-5xl">
+                                4,995
+                            </div>
                         </div>
                     </div>
+
+                    <p class="font-bold mt-8 text-base text-white">What you get:</p>
+
+                    <ul class="grid gap-4 mt-4">
+                        <li class="flex items-center gap-2">
+                            <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
+                            <span>Audit of your project to pinpoint issues</span>
+                        </li>
+
+                        <li class="flex items-center gap-2">
+                            <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
+                            <span>Best practices tailored to your team and project</span>
+                        </li>
+
+                        <li class="flex items-center gap-2">
+                            <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
+                            <span>Help for writing automated tests</span>
+                        </li>
+
+                        <li class="flex items-center gap-2">
+                            <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
+                            <span>Help to set up a tool to monitor errors</span>
+                        </li>
+
+                        <li class="flex items-center gap-2">
+                            <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
+                            <span>Help to better leverage your infrastructure</span>
+                        </li>
+
+                        <li class="flex items-center gap-2">
+                            <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
+                            <span>Help for interviewing developers</span>
+                        </li>
+                    </ul>
+
+                    <a href="https://savvycal.com/benjamincrozat/get-started" class="bg-gradient-to-r from-orange-600 to-orange-700 duration-500 font-bold hover:-hue-rotate-90 leading-none mt-16 mx-auto px-8 py-4 rounded table text-center md:text-xl transition-all">
+                        @lang('Get started')
+                    </a>
+
+                    <p class="border-t border-white/5 mt-8 pt-6 text-center text-gray-400">
+                        Learn about my process and how I can help you. <a href="#calendar" class="decoration-orange-400/30 hover:decoration-orange-300/30 font-normal text-orange-400 hover:text-orange-300 transition-colors underline underline-offset-4">@lang('Book a call')</a>.
+                    </p>
                 </div>
 
-                <p class="font-bold mt-8 text-base text-white">What you get:</p>
-
-                <ul class="grid gap-4 mt-4">
-                    <li class="flex items-center gap-2">
-                        <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                        <span>An <strong class="font-normal text-white">audit of your codebase</strong> to pinpoint the most important issues</span>
-                    </li>
-
-                    <li class="flex items-center gap-2">
-                        <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                        <span>A list of <strong class="font-normal text-white">best practices tailored to your team and project</strong></span>
-                    </li>
-
-                    <li class="flex items-center gap-2">
-                        <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                        <span>Help for your team to write their first <strong class="font-normal text-white">automated tests</strong></span>
-                    </li>
-
-                    <li class="flex items-center gap-2">
-                        <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                        <span>Help to set up a tool to <strong class="font-normal text-white">monitor errors in production</strong></span>
-                    </li>
-
-                    <li class="flex items-center gap-2">
-                        <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                        <span><strong class="font-normal text-white">Get the most out of your infrastructure</strong>, or switch to <strong class="font-normal text-white">serverless solutions</strong></span>
-                    </li>
-
-                    <li class="flex items-center gap-2">
-                        <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                        <span><strong class="font-normal text-white">Help for interviewing a developer</strong></span>
-                    </li>
-                </ul>
-
-                <a href="https://savvycal.com/benjamincrozat/get-started" class="bg-gradient-to-r from-orange-600 to-orange-700 duration-500 font-bold hover:-hue-rotate-90 leading-none mt-16 mx-auto px-8 py-4 rounded table text-center md:text-xl transition-all">
-                    @lang('Get started')
-                </a>
-
-                <p class="border-t border-white/5 mt-8 pt-6 text-center">
-                    Learn about my process and how I can help you. <a href="#calendar" class="font-normal text-white">@lang('Book a call')</a>.
-                </p>
+                <div class="border-4 border-[#161e2e]/50 hidden md:block rounded-xl"></div>
             </div>
         </div>
 
