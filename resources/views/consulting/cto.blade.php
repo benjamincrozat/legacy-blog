@@ -270,6 +270,11 @@
 
                         <li class="flex items-center gap-2">
                             <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
+                            <span>Help to set up continuous integration</span>
+                        </li>
+
+                        <li class="flex items-center gap-2">
+                            <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
                             <span>Help to set up a tool to monitor errors</span>
                         </li>
 
