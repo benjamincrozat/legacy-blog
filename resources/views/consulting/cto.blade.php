@@ -1,5 +1,6 @@
 <x-app
     title="Hire your on-demand virtual CTO."
+    description="On-demand virtual CTO with 10+ years expertise. Get tailored support for technical debt, best practices, setup and interviews, without the cost of a full-time hire."
     class="!bg-gray-900 text-gray-300"
 >
     <div class="bg-gradient-to-b from-black/30 to-gray-900 pt-4">
