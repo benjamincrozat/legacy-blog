@@ -231,7 +231,7 @@
                         @lang('Monthly')
                     </h2>
 
-                    <p class="text-center text-sm">Unlimited requests in the scope of my services.</p>
+                    <p class="text-center text-gray-400 text-sm">Unlimited requests in the scope of my services.</p>
 
                     <div class="mt-8 text-center">
                         <div class="inline-block relative text-white">
