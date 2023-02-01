@@ -76,46 +76,46 @@
             <ul class="grid place-content-center gap-4 mt-8 sm:mt-16 md:text-xl">
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                    <span>@lang('I will help you hire the best talents')</span>
+                    <span><span>@lang('Discover best practices that make new hires productive')</span>
                 </li>
 
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                    <span>@lang('Discover best practices that make new hires productive')</span>
+                    <span><span>@lang('Stop losing sales over bad performances')</span>
                 </li>
 
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                    <span>@lang('Stop losing sales over bad performances')</span>
+                    <span><span>@lang('Prevent as many regressions as possible')</span>
                 </li>
 
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                    <span>@lang('Prevent as many regressions as possible')</span>
+                    <span><span>@lang('Be notified when your app fails in production')</span>
                 </li>
 
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                    <span>@lang('Be notified when your app fails in production')</span>
+                    <span><span>@lang('Reduce cost due to suboptimal technical decisions.')</span>
                 </li>
 
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                    <span>@lang('Reduce cost due to suboptimal technical decisions.')</span>
+                    <span><span>@lang('I will help you hire the best talents')</span>
                 </li>
             </ul>
 
-            <a href="#calendar" class="bg-gradient-to-r from-orange-500 to-orange-600 duration-500 font-bold hover:-hue-rotate-90 leading-none mt-16 mx-auto px-8 py-4 rounded table text-center md:text-xl transition-all">
-                @lang('Book a call')
+            <a href="#pricing" class="bg-gradient-to-r from-orange-500 to-orange-600 duration-500 font-bold hover:-hue-rotate-90 leading-none mt-16 mx-auto px-8 py-4 rounded table text-center md:text-xl transition-all">
+                @lang('See pricing')
             </a>
         </div>
     </div>
 
     <div class="bg-gradient-to-b from-gray-900 to-black/30 mt-16 md:mt-32">
         <div class="container max-w-[1024px]">
-            <h1 class="font-bold text-2xl md:text-4xl text-center">
+            <h2 class="font-bold text-2xl md:text-4xl text-center">
                 @lang('The best on-demand virtual CTO services')
-            </h1>
+            </h2>
 
             <div class="grid sm:grid-cols-2 gap-4 mt-8 md:mt-16">
                 <div class="bg-[#161e2e] leading-tight p-8 rounded-xl shadow-md text-white text-xl">
@@ -137,8 +137,8 @@
                     </div>
 
                     <div class="mt-6">
-                        <div class="text-emerald-500">@lang('Technical debt won\'t be part of the equation.')</div>
-                        <div class="font-thin mt-2">@lang('Let\'s make sure you start on the right foot.')</div>
+                        <div class="text-emerald-500">@lang("Technical debt won't be part of the equation.")</div>
+                        <div class="font-thin mt-2">@lang("Let's make sure you start on the right foot.")</div>
                     </div>
                 </div>
 
@@ -150,7 +150,7 @@
 
                     <div class="mt-6">
                         <div class="text-blue-400">@lang('Invest your money on solid foundations.')</div>
-                        <div class="font-thin mt-2">@lang('Don\'t waste it later on endless maintenance.')</div>
+                        <div class="font-thin mt-2">@lang("Don't waste it later on endless maintenance.")</div>
                     </div>
                 </div>
 
@@ -218,10 +218,78 @@
             </div>
         </div>
 
+        <div id="pricing" class="container mt-16 md:mt-32 scroll-mt-8">
+            <h2 class="font-bold text-2xl md:text-4xl text-center">
+                @lang('Pricing')
+            </h2>
+
+            <div class="bg-[#161e2e] mt-8 px-4 py-8 sm:p-8 rounded-xl shadow-xl">
+                <h2 class="font-bold text-xl text-center text-white">
+                    @lang('For a month')
+                </h2>
+
+                <p class="text-center text-sm">Unlimited requests in the scope of my services.</p>
+
+                <div class="mt-8 text-center">
+                    <div class="inline-block relative">
+                        <div class="absolute top-1/2 left-0 font-thin opacity-75 text-3xl -translate-x-full -translate-y-1/2">
+                            €
+                        </div>
+
+                        <div class="font-bold text-white text-5xl">
+                            4,995
+                        </div>
+                    </div>
+                </div>
+
+                <p class="font-bold mt-8 text-base text-white">What you get:</p>
+
+                <ul class="grid gap-4 mt-4">
+                    <li class="flex items-center gap-2">
+                        <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
+                        <span>An <strong class="font-normal text-white">audit of your codebase</strong> to pinpoint the most important issues</span>
+                    </li>
+
+                    <li class="flex items-center gap-2">
+                        <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
+                        <span>A list of <strong class="font-normal text-white">best practices tailored to your team and project</strong></span>
+                    </li>
+
+                    <li class="flex items-center gap-2">
+                        <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
+                        <span>Help for your team to write their first <strong class="font-normal text-white">automated tests</strong></span>
+                    </li>
+
+                    <li class="flex items-center gap-2">
+                        <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
+                        <span>Help to set up a tool to <strong class="font-normal text-white">monitor errors in production</strong></span>
+                    </li>
+
+                    <li class="flex items-center gap-2">
+                        <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
+                        <span><strong class="font-normal text-white">Get the most out of your infrastructure</strong>, or switch to <strong class="font-normal text-white">serverless solutions</strong></span>
+                    </li>
+
+                    <li class="flex items-center gap-2">
+                        <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
+                        <span><strong class="font-normal text-white">Help for interviewing a developer</strong></span>
+                    </li>
+                </ul>
+
+                <a href="https://savvycal.com/benjamincrozat/get-started" class="bg-gradient-to-r from-orange-600 to-orange-700 duration-500 font-bold hover:-hue-rotate-90 leading-none mt-16 mx-auto px-8 py-4 rounded table text-center md:text-xl transition-all">
+                    @lang('Get started')
+                </a>
+
+                <p class="border-t border-white/5 mt-8 pt-6 text-center">
+                    Learn about my process and how I can help you. <a href="#calendar" class="font-normal text-white">@lang('Book a call')</a>.
+                </p>
+            </div>
+        </div>
+
         <div class="container max-w-[1024px] mt-16 md:mt-32">
-            <h1 class="font-bold text-2xl md:text-4xl text-center">
+            <h2 class="font-bold text-2xl md:text-4xl text-center">
                 @lang('Book a call')
-            </h1>
+            </h2>
 
             <div class="mt-8">
                 <div id="calendar" class="scroll-mt-16 shadow-xl"></div>
@@ -241,42 +309,42 @@
     <div class="bg-black/30 pb-16 pt-16 md:pt-32" x-intersect="window.fathom?.trackGoal('GNBHJW7B', 0)">
         <div class="container lg:max-w-screen-md">
             <div class="prose prose-a:decoration-orange-400/30 prose-a:font-light prose-a:text-orange-400 prose-a:underline prose-a:underline-offset-4 prose-headings:text-white prose-strong:text-white text-gray-300 max-w-none">
-                <h2 class="md:text-center">Frequently Asked Questions</h2>
+                <h2 class="md:text-center">@lang('Frequently Asked Questions')</h2>
 
                 <div class="not-prose">
                     <ul class="grid gap-1">
                         <li>
                             <a href="#section-1" class="decoration-orange-400/30 hover:decoration-orange-300/30 inline-flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors underline underline-offset-4">
                                 <x-heroicon-o-hashtag class="flex-shrink-0 inline opacity-50 translate-y-px w-3 h-3" />
-                                Who are you?
+                                @lang('Who are you?')
                             </a>
                         </li>
 
                         <li>
                             <a href="#section-2" class="decoration-orange-400/30 hover:decoration-orange-300/30 inline-flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors underline underline-offset-4">
                                 <x-heroicon-o-hashtag class="flex-shrink-0 inline opacity-50 translate-y-px w-3 h-3" />
-                                What does CTO stands for?
+                                @lang('What does CTO stands for?')
                             </a>
                         </li>
 
                         <li>
                             <a href="#section-3" class="decoration-orange-400/30 hover:decoration-orange-300/30 inline-flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors underline underline-offset-4">
                                 <x-heroicon-o-hashtag class="flex-shrink-0 inline opacity-50 translate-y-px w-3 h-3" />
-                                What is a CTO?
+                                @lang('What is a CTO?')
                             </a>
                         </li>
 
                         <li>
                             <a href="#section-4" class="decoration-orange-400/30 hover:decoration-orange-300/30 inline-flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors underline underline-offset-4">
                                 <x-heroicon-o-hashtag class="flex-shrink-0 inline opacity-50 translate-y-px w-3 h-3" />
-                                Why should I hire a CTO?
+                                @lang('Why should I hire a CTO?')
                             </a>
                         </li>
 
                         <li>
                             <a href="#section-5" class="decoration-orange-400/30 hover:decoration-orange-300/30 inline-flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors underline underline-offset-4">
                                 <x-heroicon-o-hashtag class="flex-shrink-0 inline opacity-50 translate-y-px w-3 h-3" />
-                                When to hire a CTO?
+                                @lang('When to hire a CTO?')
                             </a>
                         </li>
                     </ul>
