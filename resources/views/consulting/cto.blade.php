@@ -214,7 +214,13 @@
                 </div>
 
                 <div class="mx-auto w-4/5 lg:w-1/2">
-                    <img src="{{ Vite::asset('resources/img/screenshot.jpg') }}" alt="@lang('The blog of Benjamin Crozat')" class="aspect-square inline object-cover object-top relative rotate-2 rounded-xl z-10" />
+                    <img
+                        src="{{ Vite::asset('resources/img/screenshot.jpg') }}"
+                        width="1280"
+                        height="1113"
+                        alt="@lang('The blog of Benjamin Crozat')"
+                        class="aspect-square inline object-cover object-top relative rotate-2 rounded-xl z-10"
+                    />
                 </div>
             </div>
         </div>
