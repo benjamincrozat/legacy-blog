@@ -223,7 +223,9 @@
                 @lang('Pricing')
             </h2>
 
-            <div class="grid md:grid-cols-2 gap-4 mt-8">
+            <h3 class="text-xl md:text-2xl text-center">Simple pricing for packages supercharged with value.</h3>
+
+            <div class="grid md:grid-cols-2 gap-4 mt-8 md:mt-16">
                 <div class="bg-[#161e2e] px-4 py-8 sm:p-8 rounded-xl shadow-xl">
                     <h2 class="font-bold text-xl text-center text-white">
                         @lang('Monthly')
