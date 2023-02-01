@@ -299,8 +299,10 @@
                 <script defer src="https://embed.savvycal.com/v1/embed.js"></script>
 
                 <script>
-                    SavvyCal('init')
-                    SavvyCal('inline', { link: @if (app()->getLocale() === 'fr') 'benjamincrozat/rendez-vous' @else 'benjamincrozat/ask-me-anything' @endif, selector: '#savvycal', theme: 'dark' })
+                    window.addEventListener('load', () => {
+                        SavvyCal('init')
+                        SavvyCal('inline', { link: 'benjamincrozat/ask-me-anything', selector: '#savvycal', theme: 'dark' })
+                    })
                 </script>
             </div>
         </div>
