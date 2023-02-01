@@ -4,7 +4,7 @@
     class="!bg-gray-900 text-gray-300"
 >
     <div class="bg-gradient-to-b from-black/30 to-gray-900 pt-4">
-        <ul class="flex items-center justify-end gap-1 mr-4">
+        <ul class="flex items-center justify-end gap-2 sm:gap-1 mr-4">
             <li>
                 <a
                     href="https://github.com/benjamincrozat"
@@ -13,7 +13,7 @@
                     @click="window.fathom?.trackGoal('COYELHY0', 0)"
                 >
                     <span class="sr-only">GitHub</span>
-                    <x-icon-github class="fill-current text-white w-6 h-6" />
+                    <x-icon-github class="fill-current text-white w-8 h-8 sm:w-6 sm:h-6" />
                 </a>
             </li>
 
@@ -25,7 +25,7 @@
                     @click="window.fathom?.trackGoal('COYELHY0', 0)"
                 >
                     <span class="sr-only">LinkedIn</span>
-                    <x-icon-linkedin class="fill-current text-white w-6 h-6" />
+                    <x-icon-linkedin class="fill-current text-white w-8 h-8 sm:w-6 sm:h-6" />
                 </a>
             </li>
 
@@ -37,7 +37,7 @@
                     @click="window.fathom?.trackGoal('COYELHY0', 0)"
                 >
                     <span class="sr-only">Twitter</span>
-                    <x-icon-twitter class="fill-current text-white w-6 h-6" />
+                    <x-icon-twitter class="fill-current text-white w-8 h-8 sm:w-6 sm:h-6" />
                 </a>
             </li>
         </ul>
