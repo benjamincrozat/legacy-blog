@@ -309,7 +309,10 @@
             </div>
         </div>
 
-        <div id="calendar" class="container max-w-[1024px] mt-16 md:mt-32 scroll-mt-8">
+        <div
+            id="calendar"
+            class="container max-w-[1024px] mt-16 md:mt-32 scroll-mt-8"
+        >
             <h2 class="font-bold text-2xl md:text-4xl text-center">
                 @lang('Book a call')
             </h2>
@@ -317,7 +320,11 @@
             <div class="mt-8">
                 <div id="savvycal" class="shadow-xl"></div>
 
-                <script>window.SavvyCal=window.SavvyCal||function(){(SavvyCal.q=SavvyCal.q||[]).push(arguments)}</script>
+                <script>
+                    window.addEventListener('load', () => {
+                        window.SavvyCal=window.SavvyCal||function(){(SavvyCal.q=SavvyCal.q||[]).push(arguments)}
+                    })
+                </script>
 
                 <script defer src="https://embed.savvycal.com/v1/embed.js"></script>
 
