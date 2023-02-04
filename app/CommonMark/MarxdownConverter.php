@@ -77,7 +77,12 @@ class MarxdownConverter extends \League\CommonMark\MarkdownConverter
             ],
             'embed' => [
                 'adapter' => new OscaroteroEmbedAdapter($embed),
-                'allowed_domains' => ['youtube.com', 'twitter.com', 'github.com'],
+                'allowed_domains' => [
+                    'github.com',
+                    'twitter.com',
+                    'vimeo.com',
+                    'youtube.com',
+                ],
                 'fallback' => 'link',
             ],
         ]);
