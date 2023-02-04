@@ -7,8 +7,8 @@
             md:grid-cols-3
             @elseif ($bestProducts->count() > 1)
             sm:grid-cols-2
-            gap-4
             @endif
+            gap-4
         ">
             @foreach ($bestProducts as $bestProduct)
                 <x-posts::best-product
