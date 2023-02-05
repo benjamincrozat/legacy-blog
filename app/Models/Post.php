@@ -36,20 +36,7 @@ class Post extends BaseModel implements Feedable
         });
     }
 
-    public function scopeWithPinned(Builder $query) : void
-    {
-        $query
-            ->addSelect([
-                'is_pinned' => Pin::select('id')
-                    ->whereColumn('post_id', 'posts.id')
-                    ->limit(1),
-                'pinned_at' => Pin::select('created_at')
-                    ->whereColumn('post_id', 'posts.id')
-                    ->limit(1),
-            ]);
-    }
-
-    public function scopeWithRecommendations(Builder $query, Collection $recommendations)
+    public function scopeWithRecommendations(Builder $query, Collection $recommendations, int $excluding)
     {
         $query
             ->when($recommendations->isNotEmpty(), function (Builder $query) use ($recommendations) {
@@ -58,10 +45,10 @@ class Post extends BaseModel implements Feedable
                     ->orderByRaw(
                         DB::raw('FIELD(id, ' . $recommendations->join(',') . ')')
                     );
-            }, function (Builder $query) {
+            }, function (Builder $query) use ($excluding) {
                 $query
                     ->inRandomOrder()
-                    ->whereNotIn('id', [$this->id]);
+                    ->whereNotIn('id', [$excluding]);
             });
     }
 

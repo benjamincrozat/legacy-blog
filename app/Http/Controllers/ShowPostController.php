@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\View\View;
-use App\Models\Subscriber;
 use Illuminate\Support\Facades\Log;
 use Algolia\AlgoliaSearch\RecommendClient;
 use Algolia\AlgoliaSearch\Exceptions\NotFoundException;
@@ -38,10 +37,12 @@ class ShowPostController extends Controller
             'bestProducts' => $post->bestProducts()->with('affiliate')->get(),
             'post' => $post,
             'recommended' => Post::with('user')
-                ->withRecommendations($recommendationsIds)
+                ->withRecommendations(
+                    recommendations: $recommendationsIds,
+                    excluding: $post->id
+                )
                 ->limit(10)
                 ->get(),
-            'subscribersCount' => Subscriber::count(),
         ]);
     }
 }

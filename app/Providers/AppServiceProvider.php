@@ -2,10 +2,8 @@
 
 namespace App\Providers;
 
-use App\ConvertKit\Client;
 use App\Models\Subscriber;
 use Illuminate\Support\Str;
-use Illuminate\Http\Client\Factory;
 use Illuminate\Support\Facades\View;
 use App\CommonMark\MarxdownConverter;
 use App\CommonMark\LightdownConverter;
@@ -35,9 +33,6 @@ class AppServiceProvider extends ServiceProvider
             fn ($string) => (new MarxdownConverter())->convert($string)
         );
 
-        View::composer(
-            'components.newsletter',
-            fn ($v) => $v->with('subscribersCount', Subscriber::count())
-        );
+        View::share('subscribersCount', Subscriber::count());
     }
 }
