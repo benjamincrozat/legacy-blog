@@ -7,10 +7,10 @@ use Spatie\Feed\FeedItem;
 use Illuminate\Support\Str;
 use Laravel\Scout\Searchable;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\DB;
 use App\Support\TableOfContentsGenerator;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
-use Laravel\Scout\Attributes\SearchUsingFullText;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -47,6 +47,22 @@ class Post extends BaseModel implements Feedable
                     ->whereColumn('post_id', 'posts.id')
                     ->limit(1),
             ]);
+    }
+
+    public function scopeWithRecommendations(Builder $query, Collection $recommendations)
+    {
+        $query
+            ->when($recommendations->isNotEmpty(), function (Builder $query) use ($recommendations) {
+                $query
+                    ->whereIn('id', $recommendations)
+                    ->orderByRaw(
+                        DB::raw('FIELD(id, ' . $recommendations->join(',') . ')')
+                    );
+            }, function (Builder $query) {
+                $query
+                    ->inRandomOrder()
+                    ->whereNotIn('id', [$this->id]);
+            });
     }
 
     public function scopeWithUser(Builder $query) : void

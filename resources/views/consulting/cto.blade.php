@@ -232,8 +232,8 @@
 
             <h3 class="text-xl md:text-2xl text-center">Simple pricing for  a package supercharged with value.</h3>
 
-            <div class="grid md:grid-cols-2 gap-4 mt-8 md:mt-16">
-                <div class="bg-[#161e2e] px-4 py-8 sm:p-8 rounded-xl shadow-xl">
+            <div class="grid md:grid-cols-2 place-items-center gap-4 mt-8 md:mt-16">
+                <div class="bg-[#161e2e] px-4 py-8 sm:p-8 rounded-xl shadow-xl w-full">
                     <h2 class="font-bold text-xl text-center text-white">
                         @lang('Monthly')
                     </h2>
@@ -305,7 +305,19 @@
                     </p>
                 </div>
 
-                <div class="border-4 border-[#161e2e]/50 hidden md:block rounded-xl"></div>
+                <div class="border-[#161e2e] border-4 flex flex-col px-4 py-8 sm:p-8 rounded-xl w-full">
+                    <h2 class="font-bold text-xl text-center text-white">
+                        @lang('Custom')
+                    </h2>
+
+                    <p class="text-center text-gray-400 text-sm">
+                        We will work out a deal tailor made for your needs.
+                    </p>
+
+                    <a href="#calendar" class="border-orange-600 border-2 duration-500 font-bold hover:-hue-rotate-90 leading-none mt-8 mx-auto px-8 py-4 rounded-lg table text-center text-orange-300 md:text-xl transition-transform">
+                        @lang('Book a call')
+                    </a>
+                </div>
             </div>
         </div>
 
