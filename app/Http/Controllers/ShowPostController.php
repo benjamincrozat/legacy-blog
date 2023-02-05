@@ -7,6 +7,7 @@ use Illuminate\View\View;
 use App\Models\Subscriber;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Database\Eloquent\Builder;
 use Algolia\AlgoliaSearch\RecommendClient;
 use Algolia\AlgoliaSearch\Exceptions\NotFoundException;
 use Algolia\AlgoliaSearch\Exceptions\UnreachableException;
@@ -39,10 +40,17 @@ class ShowPostController extends Controller
             'bestProducts' => $post->bestProducts()->with('affiliate')->get(),
             'post' => $post,
             'recommended' => Post::with('user')
-                ->whereIn('id', $recommendationsIds)
-                ->when($recommendationsIds->isNotEmpty(), fn ($q) => $q->orderByRaw(
-                    DB::raw('FIELD(id, ' . $recommendationsIds->join(',') . ')')
-                ))
+                ->when($recommendationsIds->isNotEmpty(), function (Builder $query) use ($recommendationsIds) {
+                    $query
+                        ->whereIn('id', $recommendationsIds)
+                        ->orderByRaw(
+                            DB::raw('FIELD(id, ' . $recommendationsIds->join(',') . ')')
+                        );
+                }, function (Builder $query) use ($post) {
+                    $query
+                        ->inRandomOrder()
+                        ->whereNotIn('id', [$post->id]);
+                })
                 ->limit(10)
                 ->get(),
             'subscribersCount' => Subscriber::count(),
