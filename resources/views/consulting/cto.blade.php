@@ -5,6 +5,12 @@
 >
     <div class="bg-gradient-to-b from-black/30 to-gray-900 pt-4">
         <ul class="flex items-center justify-end gap-2 sm:gap-1 mr-4">
+            <li class="border-r border-gray-700 mr-4 pr-4">
+                <a href="{{ route('home') }}">
+                    Home
+                </a>
+            </li>
+
             <li>
                 <a
                     href="https://github.com/benjamincrozat"
