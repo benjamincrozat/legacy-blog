@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Console\Commands;
+namespace Tests\Feature\App\Console\Commands;
 
 use Tests\TestCase;
 use App\Models\Subscriber;
 use Illuminate\Support\Facades\Http;
+use App\Console\Commands\ConvertKitFetchCommand;
 
 class ConvertKitFetchCommandTest extends TestCase
 {

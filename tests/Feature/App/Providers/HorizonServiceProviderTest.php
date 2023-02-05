@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Providers;
+namespace Tests\Feature\App\Providers;
 
 use Tests\TestCase;
 use App\Models\User;
 
-class NovaServiceProviderTest extends TestCase
+class HorizonServiceProviderTest extends TestCase
 {
     public function test_it_works() : void
     {
@@ -13,8 +13,8 @@ class NovaServiceProviderTest extends TestCase
 
         $this
             ->actingAs($user)
-            ->getJson('/nova')
-            ->assertRedirect('/nova/resources/posts');
+            ->getJson('/horizon')
+            ->assertOk();
     }
 
     public function test_it_disallows_users() : void
@@ -23,7 +23,7 @@ class NovaServiceProviderTest extends TestCase
 
         $this
             ->actingAs($user)
-            ->getJson('/nova')
+            ->getJson('/horizon')
             ->assertForbidden();
     }
 
@@ -31,7 +31,7 @@ class NovaServiceProviderTest extends TestCase
     {
         $this
             ->assertGuest()
-            ->getJson('/nova')
-            ->assertUnauthorized();
+            ->getJson('/horizon')
+            ->assertForbidden();
     }
 }

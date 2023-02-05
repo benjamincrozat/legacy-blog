@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Console\Commands;
+namespace Tests\Feature\App\Console\Commands;
 
 use Tests\TestCase;
 use App\Models\Post;
 use Illuminate\Support\Facades\Artisan;
+use App\Console\Commands\SitemapGenerateCommand;
 
 class SitemapGenerateCommandTest extends TestCase
 {

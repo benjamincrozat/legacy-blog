@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Models;
+namespace Feature\Tests\App\Models;
 
 use Tests\TestCase;
+use App\Models\Short;
 
 class ShortTest extends TestCase
 {

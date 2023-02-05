@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Models;
+namespace Feature\Tests\App\Models;
 
 use Tests\TestCase;
+use App\Models\Post;
+use App\Models\Redirect;
 
 class PostTest extends TestCase
 {

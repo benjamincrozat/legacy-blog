@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace Tests\Feature\App\Http\Middleware;
 
 use Tests\TestCase;
 use App\Models\Redirect;

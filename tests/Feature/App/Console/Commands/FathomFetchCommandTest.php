@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Console\Commands;
+namespace Tests\Feature\App\Console\Commands;
 
 use Tests\TestCase;
 use App\Models\Post;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Artisan;
+use App\Console\Commands\FathomFetchCommand;
 
 class FathomFetchCommandTest extends TestCase
 {

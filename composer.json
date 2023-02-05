@@ -33,7 +33,6 @@
         "laravel/pint": "^1.3",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^6.1",
-        "nunomaduro/laravel-mojito": "^0.2.10",
         "phpunit/phpunit": "^9.5.10",
         "spatie/laravel-horizon-watcher": "^1.0",
         "spatie/laravel-ignition": "^1.0",
@@ -44,10 +43,7 @@
             "App\\": "app",
             "Database\\Factories\\": "database/factories",
             "Database\\Seeders\\": "database/seeders"
-        },
-        "files": [
-            "app/Support/helpers.php"
-        ]
+        }
     },
     "autoload-dev": {
         "psr-4": {

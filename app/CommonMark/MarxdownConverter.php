@@ -24,14 +24,6 @@ class MarxdownConverter extends \League\CommonMark\MarkdownConverter
 {
     public function __construct(array $config = [])
     {
-        $embed = new Embed;
-        $embed->setSettings([
-            'oembed:query_parameters' => [
-                'maxwidth' => 800,
-                'maxheight' => 600,
-            ],
-        ]);
-
         $environment = new Environment([
             'default_attributes' => [
                 Heading::class => [
@@ -76,7 +68,7 @@ class MarxdownConverter extends \League\CommonMark\MarkdownConverter
                 ],
             ],
             'embed' => [
-                'adapter' => new OscaroteroEmbedAdapter($embed),
+                'adapter' => new OscaroteroEmbedAdapter(new Embed),
                 'allowed_domains' => [
                     'github.com',
                     'twitter.com',

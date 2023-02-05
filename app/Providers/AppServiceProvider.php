@@ -2,37 +2,23 @@
 
 namespace App\Providers;
 
-use App\Models\Subscriber;
 use Illuminate\Support\Str;
-use Illuminate\Support\Facades\View;
 use App\CommonMark\MarxdownConverter;
 use App\CommonMark\LightdownConverter;
-use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
-use Algolia\AlgoliaSearch\RecommendClient;
 
 class AppServiceProvider extends ServiceProvider
 {
-    public function register() : void
-    {
-        $this->app->bind(RecommendClient::class, fn (Application $app) => RecommendClient::create(
-            $app['config']->get('scout.algolia.id'),
-            $app['config']->get('scout.algolia.secret')
-        ));
-    }
-
     public function boot() : void
     {
         Str::macro(
             'lightdown',
-            fn ($string) => (new LightdownConverter())->convert($string)
+            fn ($s) => (new LightdownConverter())->convert($s)
         );
 
         Str::macro(
             'marxdown',
-            fn ($string) => (new MarxdownConverter())->convert($string)
+            fn ($s) => (new MarxdownConverter())->convert($s)
         );
-
-        View::share('subscribersCount', Subscriber::count());
     }
 }

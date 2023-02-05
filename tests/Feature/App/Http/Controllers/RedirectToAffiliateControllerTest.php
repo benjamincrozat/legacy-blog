@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Tests\Feature\App\Http\Controllers;
 
 use Tests\TestCase;
 use App\Models\Affiliate;
