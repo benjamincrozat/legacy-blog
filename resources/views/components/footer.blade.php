@@ -1,10 +1,10 @@
-<footer {{ $attributes->merge(['class' => 'container py-8 sm:py-16 text-sm']) }} x-intersect="window.fathom?.trackGoal('08VVENFW', 0)">
-    <div class="flex flex-wrap sm:flex-wrap sm:justify-between gap-8 sm:gap-16">
-        <a href="{{ route('home') }}" class="inline-block w-full sm:w-auto">
+<footer {{ $attributes->merge(['class' => 'container py-8 md:py-16 text-sm']) }} x-intersect="window.fathom?.trackGoal('08VVENFW', 0)">
+    <div class="flex flex-wrap md:flex-wrap md:justify-between gap-8 md:gap-16">
+        <a href="{{ route('home') }}" class="inline-block w-full md:w-auto">
             <x-icon-logo class="h-8" />
         </a>
 
-        <div class="w-full sm:w-auto">
+        <div class="w-full md:w-auto">
             <div class="font-semibold text-white">My services</div>
 
             <ul class="grid gap-2 mt-4">
@@ -22,7 +22,7 @@
             </ul>
         </div>
 
-        <div class="w-full sm:w-auto">
+        <div class="w-full md:w-auto">
             <div class="font-semibold text-white">Follow me</div>
 
             <ul class="grid gap-2 mt-4">
@@ -47,7 +47,7 @@
         </div>
     </div>
 
-    <p class="mt-8 sm:mt-16 text-center">
+    <p class="mt-8 md:mt-16 text-center">
         <span class="opacity-50">Hosting by</span> <a href="https://benjamincrozat.com/recommends/digitalocean" target="_blank" rel="nofollow noopener noreferrer">DigitalOcean</a> <span class="opacity-50">and analytics by</span> <a href="https://benjamincrozat.com/recommends/fathom-analytics" target="_blank" rel="nofollow noopener noreferrer">Fathom</a><span class="opacity-50">.</span>
     </p>
 
