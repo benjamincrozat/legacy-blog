@@ -370,11 +370,11 @@
                     </ul>
                 </div>
 
-                <h3 id="section-1" class="scroll-mt-4">Check for real-world Laravel experience</h3>
+                <h3 id="section-1" class="scroll-mt-4">Check for real-world Laravel developer experience</h3>
 
                 <p>If you don't have time to coach young developers, make sure they have real-world experience.</p>
 
-                <p>People freshly out of school won't be able to be proficient on most projects (of course, some passionate developers are the exception to this rule).</p>
+                <p><strong>People freshly out of school won't be able to be proficient on most projects</strong> (of course, some passionate developers are the exception to this rule).</p>
 
                 <p>Here's what makes a good candidate:</p>
 
@@ -384,17 +384,17 @@
                     <li>Even an inactive GitHub account is a good sign. A basic comprehension of open source reinforces the previous point.</li>
                 </ul>
 
-                <h3 id="section-2" class="scroll-mt-4">Don't hire senior developers to work on basic tasks</h3>
+                <h3 id="section-2" class="scroll-mt-4">Don't hire a senior Laravel developers to work on basic tasks</h3>
 
-                <p>A senior developer is expensive, and for good reasons. Years of experience made them a master at what they do. You want them to work on something other than simple interface changes or bug fixes, or they'll get bored and leave as soon as possible.</p>
+                <p>A senior developer is expensive, and for good reasons. Years of experience made them a master at what they do. <strong>You want them to work on something other than simple interface changes or bug fixes</strong>, or they'll get bored and leave as soon as possible.</p>
 
                 <p>Senior developers want to work on complex issues that will make your project easier to maintain, more stable, and more profitable in the long run.</p>
 
                 <p>That's exactly what I do after more than 10 years in this industry. Clients book me so I can help their team head in the right direction.</p>
 
-                <h3 id="section-3" class="scroll-mt-4">Get good communicators</h3>
+                <h3 id="section-3" class="scroll-mt-4">Get a Laravel developer who's a good communicators</h3>
 
-                <p>Communication is critical for any relationship. In a working environment, you need a clear view of the progression to plan what's next.</p>
+                <p><strong>Communication is critical for any relationship</strong>. In a working environment, you need a clear view of the progression to plan what's next.</p>
 
                 <p>And you also need to know when things are stuck. Sometimes, problems are tough to solve, and deciding to get someone else involved as soon as possible to help you move forward is crucial.</p>
             </div>
