@@ -1,38 +1,54 @@
-<footer {{ $attributes->merge(['class' => 'container py-8 text-sm']) }} x-intersect="window.fathom?.trackGoal('08VVENFW', 0)">
-    <div class="flex items-center justify-between">
-        <x-icon-logo class="h-8" />
+<footer {{ $attributes->merge(['class' => 'container py-8 sm:py-16 text-sm']) }} x-intersect="window.fathom?.trackGoal('08VVENFW', 0)">
+    <div class="flex flex-wrap sm:flex-wrap sm:justify-between gap-8 sm:gap-16">
+        <a href="{{ route('home') }}" class="inline-block w-full sm:w-auto">
+            <x-icon-logo class="h-8" />
+        </a>
 
-        <ul class="flex items-center gap-1 sm:gap-2">
-            <li>
-                <a href="https://github.com/benjamincrozat" target="_blank" rel="noopener noreferrer" @click="window.fathom?.trackGoal('COYELHY0', 0);">
-                    <span class="sr-only">GitHub</span>
-                    <x-icon-github class="fill-current w-6 sm:w-8 h-6 sm:h-8" />
-                </a>
-            </li>
+        <div class="w-full sm:w-auto">
+            <div class="font-semibold text-white">My services</div>
 
-            <li>
-                <a href="https://www.linkedin.com/in/benjamincrozat" target="_blank" rel="noopener noreferrer" @click="window.fathom?.trackGoal('COYELHY0', 0);">
-                    <span class="sr-only">LinkedIn</span>
-                    <x-icon-linkedin class="fill-current w-6 sm:w-8 h-6 sm:h-8" />
-                </a>
-            </li>
+            <ul class="grid gap-2 mt-4">
+                <li>
+                    <a href="{{ route('consulting.cto') }}" class="decoration-white/30 underline underline-offset-4">
+                        Virtual on-demand CTO
+                    </a>
+                </li>
 
-            <li>
-                <a href="https://twitter.com/benjamincrozat" target="_blank" rel="noopener noreferrer" @click="window.fathom?.trackGoal('COYELHY0', 0);">
-                    <span class="sr-only">Twitter</span>
-                    <x-icon-twitter class="fill-current w-6 sm:w-8 h-6 sm:h-8" />
-                </a>
-            </li>
-        </ul>
+                <li>
+                    <a href="{{ route('consulting.laravel') }}" class="decoration-white/30 underline underline-offset-4">
+                        Laravel development
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="w-full sm:w-auto">
+            <div class="font-semibold text-white">Follow me</div>
+
+            <ul class="grid gap-2 mt-4">
+                <li>
+                    <a href="https://github.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer" class="decoration-white/30 underline underline-offset-4">
+                        GitHub
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.instagram.com/benjamincrozat/" target="_blank" rel="nofollow noopener noreferrer" class="decoration-white/30 underline underline-offset-4">
+                        Instagram
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://twitter.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer" class="decoration-white/30 underline underline-offset-4">
+                        Twitter
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 
-    <p class="mt-8 text-center">
+    <p class="mt-8 sm:mt-16 text-center">
         <span class="opacity-50">Hosting by</span> <a href="https://benjamincrozat.com/recommends/digitalocean" target="_blank" rel="nofollow noopener noreferrer">DigitalOcean</a> <span class="opacity-50">and analytics by</span> <a href="https://benjamincrozat.com/recommends/fathom-analytics" target="_blank" rel="nofollow noopener noreferrer">Fathom</a><span class="opacity-50">.</span>
-    </p>
-
-    <p class="mt-2 opacity-50 text-center text-xs">
-        My blog uses affiliate links (like the ones above), which can compensate me at no cost to you if you decide to pursue a deal.<br class="hidden md:inline" />
-        I only promote products I've personally used and stand behind.
     </p>
 
     <p class="mt-8 opacity-50 text-center text-xs tracking-widest uppercase">
