@@ -46,7 +46,7 @@
 
         <section class="container max-w-[1024px] mt-16">
             <div class="font-semibold px-4 sm:px-0 text-center text-xl">
-                Most popular last week
+                Most popular
             </div>
 
             @if ($popular->isNotEmpty())
