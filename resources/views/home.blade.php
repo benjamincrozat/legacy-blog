@@ -45,7 +45,7 @@
 
     <section class="container max-w-[1024px] mt-16">
         <div class="font-semibold px-4 sm:px-0 text-center text-xl">
-            The most popular
+            The most popular articles
         </div>
 
         @if ($popular->isNotEmpty())
