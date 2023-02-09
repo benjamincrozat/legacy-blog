@@ -95,7 +95,7 @@ HTML;
                     ->sortable()
                     ->exceptOnForms(),
 
-                Boolean::make('Co-written with GPT')
+                Boolean::make('Co-written with GPT', 'ai')
                     ->sortable()
                     ->hideFromIndex(),
 
