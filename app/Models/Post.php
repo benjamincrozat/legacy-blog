@@ -129,6 +129,7 @@ class Post extends BaseModel implements Feedable
             'content' => strip_tags($this->rendered_content),
             'description' => $this->description,
             'image' => $this->image,
+            'ai' => $this->ai,
         ];
     }
 

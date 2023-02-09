@@ -37,6 +37,7 @@ class ShowPostController extends Controller
             'bestProducts' => $post->bestProducts()->with('affiliate')->get(),
             'post' => $post,
             'recommended' => Post::with('user')
+                ->when(! $post->ai, fn ($q) => $q->where('ai', false))
                 ->withRecommendations(
                     recommendations: $recommendationsIds,
                     excluding: $post->id

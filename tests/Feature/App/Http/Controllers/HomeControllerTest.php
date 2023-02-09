@@ -11,7 +11,7 @@ class HomeControllerTest extends TestCase
 {
     public function test_it_lists_pins() : void
     {
-        Post::factory(10)->pinned()->create();
+        Post::factory(10)->pinned()->create(['ai' => false]);
 
         $response = $this
             ->get(route('home'))
@@ -24,7 +24,7 @@ class HomeControllerTest extends TestCase
 
     public function test_it_lists_popular_posts() : void
     {
-        Post::factory(10)->create();
+        Post::factory(10)->create(['ai' => false]);
 
         $response = $this
             ->get(route('home'))
@@ -37,7 +37,7 @@ class HomeControllerTest extends TestCase
 
     public function test_it_lists_posts() : void
     {
-        Post::factory(10)->create();
+        Post::factory(10)->create(['ai' => false]);
 
         $response = $this
             ->get(route('home'))
