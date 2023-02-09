@@ -12,14 +12,12 @@ class HomeController extends Controller
     {
         $pins = Pin::latest()->limit(4)->get()->shuffle();
 
-        $query = Post::with('user');
-
-        $popular = $query
+        $popular = Post::with('user')
             ->orderByDesc('views')
             ->limit(6)
             ->get();
 
-        $posts = $query
+        $posts = Post::with('user')
             ->latest()
             ->simplePaginate(10);
 
