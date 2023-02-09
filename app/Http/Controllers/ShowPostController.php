@@ -23,6 +23,10 @@ class ShowPostController extends Controller
                 $recommendations = $recommendClient->getRelatedProducts([[
                     'indexName' => config('app.env') . '_posts',
                     'objectID' => "$post->id",
+                    'maxRecommendations' => 10,
+                    'queryParameters' => [
+                        'filters' => ! $post->ai ? 'ai:false' : 'ai:true',
+                    ],
                 ]]);
             } catch (NotFoundException|UnreachableException $e) {
                 Log::error($e->getMessage());
