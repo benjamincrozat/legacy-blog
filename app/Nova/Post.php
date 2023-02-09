@@ -95,6 +95,22 @@ HTML;
                     ->sortable()
                     ->exceptOnForms(),
 
+                Boolean::make('Co-written with GPT')
+                    ->sortable()
+                    ->hideFromIndex(),
+
+                Badge::make('AI')
+                    ->map([
+                        true => 'success',
+                        false => 'info',
+                    ])
+                    ->labels([
+                        true => 'Yes',
+                        false => 'No',
+                    ])
+                    ->sortable()
+                    ->exceptOnForms(),
+
                 Date::make('Modified At')
                     ->displayUsing(fn () => $this->modified_at?->isoFormat('ll'))
                     ->sortable(),
