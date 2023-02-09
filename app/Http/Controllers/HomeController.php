@@ -16,7 +16,7 @@ class HomeController extends Controller
 
         $popular = $query
             ->orderByDesc('views')
-            ->limit(8)
+            ->limit(6)
             ->get();
 
         $posts = $query
