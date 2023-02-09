@@ -12,11 +12,18 @@ class HomeController extends Controller
     {
         $pins = Pin::latest()->limit(4)->get()->shuffle();
 
-        $posts = Post::with('user')
+        $query = Post::with('user');
+
+        $popular = $query
+            ->orderByDesc('views')
+            ->limit(8)
+            ->get();
+
+        $posts = $query
             ->whereNotIn('id', $pins->pluck('post.id'))
             ->latest()
             ->get();
 
-        return view('home', compact('pins', 'posts'));
+        return view('home', compact('pins', 'popular', 'posts'));
     }
 }

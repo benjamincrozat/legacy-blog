@@ -45,6 +45,20 @@
 
     <section class="container max-w-[1024px] mt-16">
         <div class="font-semibold px-4 sm:px-0 text-center text-xl">
+            The most popular
+        </div>
+
+        @if ($popular->isNotEmpty())
+            <div class="grid md:grid-cols-2 gap-4 mt-8">
+                @foreach ($popular as $post)
+                    <x-post :post="$post" @click="window.fathom?.trackGoal('HH0P1ACM', 0)" />
+                @endforeach
+            </div>
+        @endif
+    </section>
+
+    <section class="container max-w-[1024px] mt-16">
+        <div class="font-semibold px-4 sm:px-0 text-center text-xl">
             Latest articles
         </div>
 
