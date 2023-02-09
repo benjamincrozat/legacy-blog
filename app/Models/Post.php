@@ -135,7 +135,11 @@ class Post extends BaseModel implements Feedable
 
     public static function getFeedItems() : Collection
     {
-        return self::latest()->withUser()->get();
+        return self::query()
+            ->where('ai', false)
+            ->latest()
+            ->withUser()
+            ->get();
     }
 
     public function toFeedItem() : FeedItem
