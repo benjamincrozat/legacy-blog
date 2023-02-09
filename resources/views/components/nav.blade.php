@@ -18,7 +18,7 @@
                 href="{{ route('consulting.laravel') }}"
                 class="bg-gradient-to-r from-indigo-300 dark:from-indigo-500 to-indigo-400 dark:to-indigo-600 hover:-hue-rotate-90 flex items-center gap-2 font-medium px-3 py-2 rounded shadow-lg text-white transition-all"
             >
-                Work with me
+                Hire me
             </a>
         </nav>
     </div>
