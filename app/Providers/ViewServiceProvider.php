@@ -17,6 +17,7 @@ class ViewServiceProvider extends ServiceProvider
         try {
             View::share('subscribersCount', Subscriber::count());
         } catch (QueryException $e) {
+            View::share('subscribersCount', 0);
         }
     }
 }
