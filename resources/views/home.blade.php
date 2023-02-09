@@ -33,7 +33,7 @@
         @if ($pins->isNotEmpty())
             <section class="md:container md:max-w-[1024px] mt-16">
                 <div class="font-semibold px-4 md:px-0 text-center text-xl">
-                    Pinned articles
+                    Featured
                 </div>
 
                 <div class="flex md:grid md:grid-cols-2 gap-2 mt-8 px-4 md:px-0 overflow-x-scroll md:overflow-x-visible snap-x md:snap-none snap-mandatory">
