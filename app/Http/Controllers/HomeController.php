@@ -22,7 +22,7 @@ class HomeController extends Controller
         $posts = $query
             ->whereNotIn('id', $pins->pluck('post.id'))
             ->latest()
-            ->get();
+            ->simplePaginate(10);
 
         return view('home', compact('pins', 'popular', 'posts'));
     }
