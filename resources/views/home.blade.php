@@ -44,7 +44,7 @@
             </section>
         @endif
 
-        <section class="container max-w-[1024px] mt-16">
+        <section class="container lg:max-w-[1024px] mt-16">
             <div class="font-semibold px-4 sm:px-0 text-center text-xl">
                 Most popular
             </div>
@@ -59,7 +59,7 @@
         </section>
     @endif
 
-    <section class="container max-w-[1024px] mt-16">
+    <section class="container lg:max-w-[1024px] mt-16">
         <div class="font-semibold px-4 sm:px-0 text-center text-xl">
             @if ($posts->onFirstPage())
                 Latest
