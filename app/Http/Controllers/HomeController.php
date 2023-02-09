@@ -20,7 +20,6 @@ class HomeController extends Controller
             ->get();
 
         $posts = $query
-            ->whereNotIn('id', $pins->pluck('post.id'))
             ->latest()
             ->simplePaginate(10);
 
