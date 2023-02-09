@@ -60,11 +60,13 @@
     @endif
 
     <section class="container max-w-[1024px] mt-16">
-        @if ($posts->onFirstPage())
-            <div class="font-semibold px-4 sm:px-0 text-center text-xl">
+        <div class="font-semibold px-4 sm:px-0 text-center text-xl">
+            @if ($posts->onFirstPage())
                 Latest
-            </div>
-        @endif
+            @else
+                Page {{ $posts->currentPage() }}
+            @endif
+        </div>
 
         @if ($posts->isNotEmpty())
             <div class="grid md:grid-cols-2 gap-4 mt-8">
