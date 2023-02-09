@@ -84,30 +84,6 @@
     </section>
 
     @if ($posts->onFirstPage())
-        <section class="container lg:max-w-[1024px] mt-16">
-            <div class="font-semibold px-4 sm:px-0 text-center text-xl">
-                @if ($posts->onFirstPage())
-                    AI-generated
-                @else
-                    AI-generated (page {{ $posts->currentPage() }})
-                @endif
-            </div>
-
-            @if ($ai->isNotEmpty())
-                <div class="grid md:grid-cols-2 gap-4 mt-8">
-                    @foreach ($ai as $post)
-                        <x-post :post="$post" @click="window.fathom?.trackGoal('HH0P1ACM', 0)" />
-                    @endforeach
-                </div>
-
-                @if ($ai->hasPages())
-                    <div class="mt-8">
-                        {{ $ai->links() }}
-                    </div>
-                @endif
-            @endif
-        </section>
-
         <x-newsletter class="container mt-16">
             <x-slot:headline>
                 Want more content?<br />
