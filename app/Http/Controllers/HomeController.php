@@ -13,14 +13,21 @@ class HomeController extends Controller
         $pins = Pin::latest()->limit(4)->get()->shuffle();
 
         $popular = Post::with('user')
+            ->where('ai', false)
             ->orderByDesc('views')
             ->limit(6)
             ->get();
 
         $posts = Post::with('user')
+            ->where('ai', false)
             ->latest()
             ->simplePaginate(10);
 
-        return view('home', compact('pins', 'popular', 'posts'));
+        $ai = Post::with('user')
+            ->where('ai', true)
+            ->latest()
+            ->simplePaginate(10);
+
+        return view('home', compact('ai', 'pins', 'popular', 'posts'));
     }
 }

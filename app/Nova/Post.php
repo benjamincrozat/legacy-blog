@@ -99,14 +99,18 @@ HTML;
                     ->sortable()
                     ->hideFromIndex(),
 
-                Badge::make('AI')
+                Badge::make('Written by', 'ai')
+                    ->types([
+                        'ai' => 'bg-yellow-100 text-yellow-600',
+                        'human' => 'bg-gray-100',
+                    ])
                     ->map([
-                        true => 'success',
-                        false => 'info',
+                        true => 'ai',
+                        false => 'human',
                     ])
                     ->labels([
-                        true => 'Yes',
-                        false => 'No',
+                        true => 'AI',
+                        false => 'Human',
                     ])
                     ->sortable()
                     ->exceptOnForms(),
