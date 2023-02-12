@@ -1,4 +1,4 @@
-@if ($promotesAffiliateLinks)
+@if (! $promotesAffiliateLinks)
     <div {{ $attributes->merge(['class' => 'text-center text-sm']) }}>
         <x-icon-technologies class="mx-auto w-4/5 md:w-auto" />
 
