@@ -10,10 +10,13 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use App\Support\TableOfContentsGenerator;
 use Illuminate\Database\Eloquent\Builder;
+use Algolia\AlgoliaSearch\RecommendClient;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Algolia\AlgoliaSearch\Exceptions\NotFoundException;
+use Algolia\AlgoliaSearch\Exceptions\UnreachableException;
 
 class Post extends BaseModel implements Feedable
 {
@@ -111,6 +114,29 @@ class Post extends BaseModel implements Feedable
         return Attribute::make(
             fn () => Str::marxdown($this->content ?? '')
         )->shouldCache();
+    }
+
+    public function recommendations() : Collection
+    {
+        try {
+            $recommendClient = RecommendClient::create(
+                config('scout.algolia.id'),
+                config('scout.algolia.secret')
+            );
+
+            $recommendations = $recommendClient->getRelatedProducts([[
+                'indexName' => config('app.env') . '_posts',
+                'objectID' => "$this->id",
+                'maxRecommendations' => 10,
+                'queryParameters' => [
+                    'filters' => ! $this->ai ? 'ai:false' : 'ai:true',
+                ],
+            ]]);
+
+            return collect($recommendations['results'][0]['hits'])->pluck('objectID');
+        } catch (NotFoundException|UnreachableException $e) {
+            return collect();
+        }
     }
 
     public function resolveRouteBindingQuery($query, $value, $field = null)
