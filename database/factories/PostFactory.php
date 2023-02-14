@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Post;
 use App\Models\User;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -13,9 +14,17 @@ class PostFactory extends Factory
 {
     public function definition() : array
     {
+        $response = Http::withOptions([
+            'allow_redirects' => [
+                'track_redirects' => true,
+            ],
+        ])->head('https://picsum.photos/1280/720')->throw();
+
+        dd($response);
+
         return [
             'user_id' => User::factory(),
-            'image' => fake()->imageUrl(),
+            'image' => (string) $response->effectiveUri(),
             'title' => fake()->sentence(),
             'slug' => fake()->slug(),
             'introduction' => fake()->paragraph(),
