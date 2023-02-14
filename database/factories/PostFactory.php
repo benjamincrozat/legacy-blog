@@ -20,8 +20,6 @@ class PostFactory extends Factory
             ],
         ])->head('https://picsum.photos/1280/720')->throw();
 
-        dd($response);
-
         return [
             'user_id' => User::factory(),
             'image' => (string) $response->effectiveUri(),
