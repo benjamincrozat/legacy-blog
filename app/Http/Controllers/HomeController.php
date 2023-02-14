@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function __invoke() : View
     {
-        $pins = Pin::latest()->limit(4)->get()->shuffle();
+        $pins = Pin::latest()->inRandomOrder()->limit(4)->get();
 
         $popular = Post::with('user')
             ->where('ai', false)
