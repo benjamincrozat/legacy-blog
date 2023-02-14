@@ -14,15 +14,21 @@ class PostFactory extends Factory
 {
     public function definition() : array
     {
-        $response = Http::withOptions([
-            'allow_redirects' => [
-                'track_redirects' => true,
-            ],
-        ])->head('https://picsum.photos/1280/720')->throw();
+        if (! app()->runningUnitTests()) {
+            $response = Http::withOptions([
+                'allow_redirects' => [
+                    'track_redirects' => true,
+                ],
+            ])->get('https://picsum.photos/1280/720')->throw();
+
+            $image = (string) $response->effectiveUri();
+        } else {
+            $image = fake()->imageUrl(1280, 720);
+        }
 
         return [
             'user_id' => User::factory(),
-            'image' => (string) $response->effectiveUri(),
+            'image' => $image,
             'title' => fake()->sentence(),
             'slug' => fake()->slug(),
             'introduction' => fake()->paragraph(),
