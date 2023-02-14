@@ -1,4 +1,4 @@
-<a href="{{ route('posts.show', $post->slug) }}" @click="window.fathom?.trackGoal('OKJIR46O', 0)" class="block flex-shrink-0 overflow-hidden relative rounded-md snap-start sm:snap-center md:snap-normal scroll-ml-4 md:scroll-ml-0 sm:hover:scale-110 sm:hover:z-10 sm:hover:shadow-xl sm:duration-300 sm:transition-all w-[90%] sm:w-[70%] md:w-auto">
+<a href="{{ route('posts.show', $post->slug) }}" @click="window.fathom?.trackGoal('OKJIR46O', 0)" class="block flex-shrink-0 overflow-hidden relative rounded-md snap-start sm:snap-center md:snap-normal scroll-ml-4 md:scroll-ml-0 sm:hover:scale-110 sm:hover:z-10 sm:hover:shadow-xl sm:duration-300 sm:transition-[shadow,transform] w-[90%] sm:w-[70%] md:w-auto">
     <figure {{ $attributes->except('post') }}>
         <img
             @if (empty($first)) loading="lazy" @endif

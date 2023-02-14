@@ -112,7 +112,7 @@
                 </li>
             </ul>
 
-            <a href="#pricing" class="bg-gradient-to-r from-orange-600 to-orange-700 duration-500 font-bold hover:-hue-rotate-90 leading-none mt-16 mx-auto px-8 py-4 rounded table text-center md:text-xl transition-all">
+            <a href="#pricing" class="bg-gradient-to-r from-orange-600 to-orange-700 duration-500 font-bold hover:-hue-rotate-90 leading-none mt-16 mx-auto px-8 py-4 rounded table text-center md:text-xl transition-[filter]">
                 @lang('See pricing')
             </a>
         </div>
@@ -214,7 +214,7 @@
                         @lang('The blog generates <strong class="text-gray-300">+10K visits per month</strong> and <strong class="text-gray-300">more than half of them are from Google</strong>.')
                     </div>
 
-                    <a href="{{ route('home') }}" class="bg-gradient-to-r from-blue-600 to-blue-500 duration-500 font-normal hover:hue-rotate-90 inline-block mt-10 px-8 py-3 rounded text-white transition-all">
+                    <a href="{{ route('home') }}" class="bg-gradient-to-r from-blue-600 to-blue-500 duration-500 font-normal hover:hue-rotate-90 inline-block mt-10 px-8 py-3 rounded text-white transition-[filter]">
                         @lang('Read my blog')
                     </a>
                 </div>
@@ -301,7 +301,7 @@
                     </li>
                 </ul>
 
-                <a href="https://savvycal.com/benjamincrozat/get-started" class="bg-gradient-to-r from-orange-600 to-orange-700 duration-500 font-bold hover:-hue-rotate-90 leading-none mt-16 mx-auto px-8 py-4 rounded table text-center md:text-xl transition-all">
+                <a href="https://savvycal.com/benjamincrozat/get-started" class="bg-gradient-to-r from-orange-600 to-orange-700 duration-500 font-bold hover:-hue-rotate-90 leading-none mt-16 mx-auto px-8 py-4 rounded table text-center md:text-xl transition-[filter]">
                     @lang('Get started')
                 </a>
 
