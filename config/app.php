@@ -57,7 +57,7 @@ return [
 
     'shorts_domain' => env('SHORTS_DOMAIN_NAME'),
 
-    'asset_url' => env('ASSET_URL'),
+    'asset_url' => env('ASSET_URL', '/'),
 
     /*
     |--------------------------------------------------------------------------
