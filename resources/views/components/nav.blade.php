@@ -5,7 +5,7 @@
     </div>
 
     <nav class="flex items-center justify-end gap-6 text-sm">
-        <a href="{{ route('home') }}" class="hover:text-indigo-400 transition-colors @if (Route::is('home') || Route::is('posts.show')) decoration-black/30 underline underline-offset-4 @endif">
+        <a href="{{ route('home') }}" class="hover:text-indigo-400 transition-colors @if (Route::is('home') || Route::is('posts.show')) decoration-black/30 dark:decoration-gray-300/30 underline underline-offset-4 @endif">
             Learn
         </a>
 
