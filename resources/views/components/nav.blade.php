@@ -1,10 +1,10 @@
 <div {{ $attributes->merge(['class' => 'container flex items-center justify-between'])}}>
-    <div class="font-bold leading-none dark:text-white">
-        <div class="sm:inline">Benjamin</div>
-        <div class="sm:inline">Crozat</div>
-    </div>
+    <a href="{{ route('home') }}" class="font-bold leading-tight dark:text-white">
+        <div>Benjamin</div>
+        <div>Crozat</div>
+    </a>
 
-    <nav class="flex items-center justify-end gap-6 text-sm">
+    <nav class="flex items-center gap-6 text-sm">
         <a href="{{ route('home') }}" class="hover:text-indigo-400 transition-colors">
             Learn
         </a>
@@ -20,7 +20,10 @@
         >
             <button class="flex items-center gap-1 text-indigo-400" @click="open = ! open; window.fathom?.trackGoal('5N03QFKC', 0)">
                 <span>Hire me</span>
-                <x-heroicon-o-chevron-down class="inline translate-y-px w-3 h-3" />
+                <x-heroicon-o-chevron-down
+                    class="duration-500 inline transition-transform translate-y-px w-3 h-3"
+                    x-bind:class="{ 'rotate-180': open }"
+                />
             </button>
 
             <div
