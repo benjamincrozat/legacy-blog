@@ -47,7 +47,7 @@
                     </li>
 
                     <li>
-                        <a href="#" class="hover:bg-indigo-400 dark:hover:bg-indigo-700 block px-4 py-2 hover:text-white duration-500 transition-colors">
+                        <a href="mailto:benjamincrozat@me.com" class="hover:bg-indigo-400 dark:hover:bg-indigo-700 block px-4 py-2 hover:text-white duration-500 transition-colors">
                             <div>Search Engine Optimization (SEO)</div>
                             <div class="opacity-75 text-xs">Drive more traffic for more revenues.</div>
                         </a>
