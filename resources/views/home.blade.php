@@ -36,7 +36,7 @@
                     Featured
                 </div>
 
-                <div class="flex md:grid md:grid-cols-2 gap-2 mt-8 px-4 md:px-0 overflow-x-scroll md:overflow-x-visible snap-x md:snap-none snap-mandatory">
+                <div class="flex md:grid md:grid-cols-2 gap-4 md:gap-8 mt-8 px-4 md:px-0 overflow-x-scroll md:overflow-x-visible snap-x md:snap-none snap-mandatory">
                     @foreach ($pins as $pin)
                         <x-pinned-post :post="$pin->post" :first="$loop->first" />
                     @endforeach
