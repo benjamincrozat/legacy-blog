@@ -105,14 +105,14 @@ class Post extends BaseModel implements Feedable
     public function renderedIntroduction() : Attribute
     {
         return Attribute::make(
-            fn () => Str::markdown($this->introduction ?? '')
+            fn () => Str::marxdown($this->introduction ?? '')
         )->shouldCache();
     }
 
     public function renderedContent() : Attribute
     {
         return Attribute::make(
-            fn () => Str::markdown($this->content ?? '')
+            fn () => Str::marxdown($this->content ?? '')
         )->shouldCache();
     }
 
@@ -177,7 +177,7 @@ class Post extends BaseModel implements Feedable
         return FeedItem::create([
             'id' => route('posts.show', $this),
             'title' => $this->title,
-            'summary' => Str::markdown($this->content),
+            'summary' => Str::marxdown($this->content),
             'updated' => $this->modified_at ?? $this->created_at,
             'link' => route('posts.show', $this),
             'authorName' => $this->user_name,
