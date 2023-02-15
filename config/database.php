@@ -41,14 +41,6 @@ return [
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
-        'posts' => [
-            'driver' => 'sqlite',
-            'url' => env('POSTS_DATABASE_URL'),
-            'database' => env('POSTS_DB_DATABASE', database_path('posts.sqlite')),
-            'prefix' => '',
-            'foreign_key_constraints' => env('POSTS_DB_FOREIGN_KEYS', true),
-        ],
-
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),

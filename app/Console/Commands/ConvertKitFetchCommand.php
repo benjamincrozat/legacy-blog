@@ -2,7 +2,6 @@
 
 namespace App\Console\Commands;
 
-use App\ConvertKit\Client;
 use App\Models\Subscriber;
 use Illuminate\Support\Carbon;
 use Illuminate\Console\Command;
