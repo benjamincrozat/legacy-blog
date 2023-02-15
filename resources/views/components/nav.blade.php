@@ -1,7 +1,7 @@
 <div {{ $attributes->merge(['class' => 'container flex items-center justify-between'])}}>
     <a href="{{ route('home') }}" class="font-bold !leading-none dark:text-white text-sm md:text-base">
-        <div>Benjamin</div>
-        <div class="mt-[.15rem]">Crozat</div>
+        <div class="md:inline">Benjamin</div>
+        <div class="md:inline mt-[.15rem] md:mt-0">Crozat</div>
     </a>
 
     <nav class="flex items-center gap-6 text-sm">
