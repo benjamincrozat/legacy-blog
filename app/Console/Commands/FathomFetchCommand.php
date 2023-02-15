@@ -17,8 +17,7 @@ class FathomFetchCommand extends Command
         Http::withToken(config('services.fathom.api_token'))
             ->get('https://api.usefathom.com/v1/aggregations', [
                 'aggregates' => 'pageviews',
-                'date_from' => now()->subWeek()->startOfWeek()->toDateTimeString(),
-                'date_to' => now()->subWeek()->endOfWeek()->toDateTimeString(),
+                'date_from' => now()->subWeek()->toDateTimeString(),
                 'entity_id' => config('services.fathom.site_id'),
                 'entity' => 'pageview',
                 'field_grouping' => 'pathname',
