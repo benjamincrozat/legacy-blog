@@ -17,7 +17,7 @@ class ShowPostController extends Controller
                     recommendations: $post->recommendations(),
                     excluding: $post->id
                 )
-                ->limit(20)
+                ->limit(10)
                 ->get(),
         ]);
     }
