@@ -8,7 +8,7 @@
         />
     </a>
 
-    <div class="font-semibold mt-3">{{ $post->title }}</div>
+    <a href="{{ route('posts.show', $post->slug) }}" class="font-semibold inline-block mt-3">{{ $post->title }}</a>
 
     <div class="flex items-center gap-2 mt-2 text-sm">
         <img
