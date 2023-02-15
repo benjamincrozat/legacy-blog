@@ -9,18 +9,12 @@ class ShowPostController extends Controller
 {
     public function __invoke(Post $post): View
     {
-        $recommendations = cache()->remember(
-            "post_{$post->id}_recommendations",
-            24 * 60 * 60,
-            fn () => $post->recommendations()
-        );
-
         return view('posts.show', [
             'bestProducts' => $post->bestProducts()->with('affiliate')->get(),
             'post' => $post,
             'recommended' => Post::with('user')
                 ->withRecommendations(
-                    recommendations: $recommendations,
+                    recommendations: $post->recommendations,
                     excluding: $post->id
                 )
                 ->limit(10)
