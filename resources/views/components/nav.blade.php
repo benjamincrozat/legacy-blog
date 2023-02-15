@@ -24,7 +24,7 @@
             </button>
 
             <div
-                class="absolute top-full right-0 dark:backdrop-blur-md dark:backdrop-brightness-150 dark:backdrop-saturate-150 bg-white dark:bg-black/75 min-w-[250px] py-2 rounded-lg shadow-xl z-10"
+                class="absolute top-full right-0 backdrop-blur-md backdrop-brightness-150 backdrop-saturate-150 bg-black/75 min-w-[300px] mt-2 py-2 rounded-lg shadow-xl text-gray-300 z-10"
                 x-cloak
                 x-show="open"
                 x-transition
@@ -33,23 +33,35 @@
 
                 <ul>
                     <li>
-                        <a href="{{ route('consulting.laravel') }}" class="hover:bg-indigo-400 dark:hover:bg-indigo-700 block px-4 py-2 hover:text-white duration-500 transition-colors">
-                            <div>Laravel developer</div>
-                            <div class="opacity-75 text-xs">Extra workforce for your business.</div>
+                        <a href="{{ route('consulting.laravel') }}" class="hover:bg-indigo-400 dark:hover:bg-indigo-700 flex items-center gap-3 group px-4 py-2 hover:text-white duration-500 transition-colors">
+                            <div class="flex-shrink-0 text-red-400 group-hover:text-white transition-colors w-6"><x-heroicon-o-code-bracket-square class="w-6 h-6" /></div>
+
+                            <div>
+                                <div>Laravel developer</div>
+                                <div class="opacity-75 text-xs">Extra workforce for your business.</div>
+                            </div>
                         </a>
                     </li>
 
                     <li>
-                        <a href="{{ route('consulting.cto') }}" class="hover:bg-indigo-400 dark:hover:bg-indigo-700 block px-4 py-2 hover:text-white duration-500 transition-colors">
-                            <div>On-demand virtual CTO</div>
-                            <div class="opacity-75 text-xs">10+ years of technical experience at your service.</div>
+                        <a href="{{ route('consulting.cto') }}" class="hover:bg-indigo-400 dark:hover:bg-indigo-700 flex items-center gap-3 group px-4 py-2 hover:text-white duration-500 transition-colors">
+                            <div class="flex-shrink-0 text-yellow-400 group-hover:text-white transition-colors w-6"><x-heroicon-o-bolt class="w-6 h-6" /></div>
+
+                            <div>
+                                <div>On-demand virtual CTO</div>
+                                <div class="opacity-75 text-xs">10+ years of technical experience at your service.</div>
+                            </div>
                         </a>
                     </li>
 
                     <li>
-                        <a href="https://savvycal.com/benjamincrozat/ask-me-anything" class="hover:bg-indigo-400 dark:hover:bg-indigo-700 block px-4 py-2 hover:text-white duration-500 transition-colors">
-                            <div>Search Engine Optimization (SEO)</div>
-                            <div class="opacity-75 text-xs">Drive more traffic for more revenues.</div>
+                        <a href="https://savvycal.com/benjamincrozat/ask-me-anything" class="hover:bg-indigo-400 dark:hover:bg-indigo-700 flex items-center gap-3 group px-4 py-2 hover:text-white duration-500 transition-colors">
+                            <div class="flex-shrink-0 text-blue-400 group-hover:text-white transition-colors w-6"><x-heroicon-o-presentation-chart-line class="w-6 h-6" /></div>
+
+                            <div>
+                                <div>Search Engine Optimization (SEO)</div>
+                                <div class="opacity-75 text-xs">Drive more traffic for more revenues.</div>
+                            </div>
                         </a>
                     </li>
                 </ul>
