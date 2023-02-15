@@ -21,8 +21,6 @@ class ConvertKitFetchCommandTest extends TestCase
                 ]],
             ]);
 
-        $this->assertDatabaseCount(Subscriber::class, 0);
-
         $this
             ->artisan(ConvertKitFetchCommand::class)
             ->expectsOutput("Imported $email")

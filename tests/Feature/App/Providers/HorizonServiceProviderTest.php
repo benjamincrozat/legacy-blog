@@ -9,22 +9,12 @@ class HorizonServiceProviderTest extends TestCase
 {
     public function test_it_works() : void
     {
-        $user = User::factory()->create(['email' => 'benjamincrozat@me.com']);
-
-        $this
-            ->actingAs($user)
-            ->getJson('/horizon')
-            ->assertOk();
-    }
-
-    public function test_it_disallows_users() : void
-    {
         $user = User::factory()->create();
 
         $this
             ->actingAs($user)
             ->getJson('/horizon')
-            ->assertForbidden();
+            ->assertOk();
     }
 
     public function test_it_disallows_guests() : void

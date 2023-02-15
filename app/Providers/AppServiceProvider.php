@@ -18,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
 
         Str::macro(
             'marxdown',
-            fn ($s) => (new MarxdownConverter())->convert($s)
+            fn ($s) => (new MarxdownConverter(torchlight: true))->convert($s)
         );
     }
 }

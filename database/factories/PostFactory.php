@@ -32,7 +32,7 @@ class PostFactory extends Factory
             'title' => fake()->sentence(),
             'slug' => fake()->slug(),
             'introduction' => fake()->paragraph(),
-            'content' => app()->runningUnitTests() ? fake()->paragraphs(5, true) : <<<MARKDOWN
+            'content' => <<<MARKDOWN
 # h1 Heading 8-)
 ## h2 Heading
 ### h3 Heading

@@ -2,13 +2,15 @@
 
 namespace Tests;
 
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Http;
-use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
+use App\CommonMark\MarxdownConverter;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase
 {
-    use CreatesApplication, LazilyRefreshDatabase;
+    use CreatesApplication, DatabaseTransactions;
 
     public function setUp() : void
     {
@@ -17,5 +19,10 @@ abstract class TestCase extends BaseTestCase
         Http::preventStrayRequests();
 
         $this->withoutVite();
+
+        Str::macro(
+            'marxdown',
+            fn ($s) => (new MarxdownConverter(torchlight: false))->convert($s)
+        );
     }
 }

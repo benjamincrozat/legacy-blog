@@ -105,20 +105,24 @@ class Post extends BaseModel implements Feedable
     public function renderedIntroduction() : Attribute
     {
         return Attribute::make(
-            fn () => Str::marxdown($this->introduction ?? '')
+            fn () => Str::markdown($this->introduction ?? '')
         )->shouldCache();
     }
 
     public function renderedContent() : Attribute
     {
         return Attribute::make(
-            fn () => Str::marxdown($this->content ?? '')
+            fn () => Str::markdown($this->content ?? '')
         )->shouldCache();
     }
 
     public function recommendations() : Collection
     {
         try {
+            if (! config('scout.algolia.id') || ! config('scout.algolia.secret')) {
+                return collect();
+            }
+
             $recommendClient = RecommendClient::create(
                 config('scout.algolia.id'),
                 config('scout.algolia.secret')
@@ -173,7 +177,7 @@ class Post extends BaseModel implements Feedable
         return FeedItem::create([
             'id' => route('posts.show', $this),
             'title' => $this->title,
-            'summary' => Str::marxdown($this->content),
+            'summary' => Str::markdown($this->content),
             'updated' => $this->modified_at ?? $this->created_at,
             'link' => route('posts.show', $this),
             'authorName' => $this->user_name,

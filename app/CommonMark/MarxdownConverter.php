@@ -22,7 +22,7 @@ use League\CommonMark\Extension\DefaultAttributes\DefaultAttributesExtension;
 
 class MarxdownConverter extends \League\CommonMark\MarkdownConverter
 {
-    public function __construct(array $config = [])
+    public function __construct(bool $torchlight = true)
     {
         $environment = new Environment([
             'default_attributes' => [
@@ -70,7 +70,6 @@ class MarxdownConverter extends \League\CommonMark\MarkdownConverter
             'embed' => [
                 'adapter' => new OscaroteroEmbedAdapter(new Embed),
                 'allowed_domains' => [
-                    'github.com',
                     'twitter.com',
                     'vimeo.com',
                     'youtube.com',
@@ -86,7 +85,10 @@ class MarxdownConverter extends \League\CommonMark\MarkdownConverter
         $environment->addExtension(new GithubFlavoredMarkdownExtension);
         $environment->addExtension(new SmartPunctExtension);
         $environment->addExtension(new TableExtension);
-        $environment->addExtension(new TorchlightExtension);
+
+        if ($torchlight) {
+            $environment->addExtension(new TorchlightExtension);
+        }
 
         parent::__construct($environment);
     }
