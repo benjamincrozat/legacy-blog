@@ -5,7 +5,7 @@
     </div>
 
     <nav class="flex items-center justify-end gap-6 text-sm">
-        <a href="{{ route('home') }}" class="hover:text-indigo-400 transition-colors @if (Route::is('home') || Route::is('posts.show')) decoration-black/30 dark:decoration-gray-300/30 underline underline-offset-4 @endif">
+        <a href="{{ route('home') }}" class="hover:text-indigo-400 transition-colors @if (Route::is('home') || Route::is('posts.show')) decoration-black/20 hover:decoration-indigo-400/30 dark:decoration-gray-300/30 underline underline-offset-4 @endif">
             Learn
         </a>
 
@@ -24,7 +24,7 @@
             </button>
 
             <div
-                class="absolute top-full right-0 bg-white dark:bg-gray-800 min-w-[250px] py-2 rounded-lg shadow-xl"
+                class="absolute top-full right-0 dark:backdrop-blur-md dark:backdrop-brightness-150 dark:backdrop-saturate-150 bg-white dark:bg-black/75 min-w-[250px] py-2 rounded-lg shadow-xl z-10"
                 x-cloak
                 x-show="open"
                 x-transition
