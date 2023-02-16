@@ -1,7 +1,7 @@
 <footer {{ $attributes->merge(['class' => 'container py-8 md:py-16 text-sm']) }} x-intersect="window.fathom?.trackGoal('08VVENFW', 0)">
     <div class="flex flex-wrap md:flex-wrap md:justify-between gap-8 md:gap-16">
-        <a href="{{ route('home') }}" class="inline-block w-full md:w-auto">
-            <x-icon-logo class="h-8" />
+        <a href="{{ route('home') }}" class="font-bold !leading-none dark:text-white text-lg md:text-xl">
+            Benjamin Crozat
         </a>
 
         <div class="w-full md:w-auto">
