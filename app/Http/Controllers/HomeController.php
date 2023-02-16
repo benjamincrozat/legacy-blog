@@ -18,6 +18,12 @@ class HomeController extends Controller
             ->limit(6)
             ->get();
 
+        $affiliates = Post::with('user')
+            ->latest()
+            ->where('promotes_affiliate_links', true)
+            ->limit(6)
+            ->get();
+
         $posts = Post::with('user')
             ->where('ai', false)
             ->latest()
@@ -28,6 +34,6 @@ class HomeController extends Controller
             ->latest()
             ->simplePaginate(perPage: 10, pageName: 'aiPostsPage');
 
-        return view('home', compact('ai', 'pins', 'popular', 'posts'));
+        return view('home', compact('affiliates', 'ai', 'pins', 'popular', 'posts'));
     }
 }
