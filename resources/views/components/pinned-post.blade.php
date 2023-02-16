@@ -4,7 +4,7 @@
             @if (empty($first)) loading="lazy" @endif
             src="{{ str_replace('w_auto', 'w_600', $post->image) }}"
             alt="{{ $post->title }}"
-            class="aspect-video object-cover rounded-md w-full"
+            class="aspect-video object-cover rounded-md shadow-lg w-full"
         />
     </a>
 
