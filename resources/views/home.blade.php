@@ -90,15 +90,15 @@
             <div class="text-center">
                 <div class="font-semibold px-4 sm:px-0 text-xl">
                     @if ($ai->onFirstPage())
-                        AI-generated
+                        <span class="bg-clip-text bg-gradient-to-r from-indigo-300 to-indigo-400 inline-block">
+                            <span class="text-transparent">AI-generated</span>
+                        </span>
                     @else
                         Page {{ $ai->currentPage() }}
                     @endif
                 </div>
 
-                <p class="mt-4">This is an experimental way of writing new content using ChatGPT.</p>
-
-                <p>These articles are marked as such and live in their sandbox.</p>
+                <p class="mt-4 text-sm">This is an <strong class="text-black">experimental</strong> way of writing new content using ChatGPT.<br class="hidden sm:inline" /> <strong class="text-black">These articles are marked as such and live in their sandbox</strong>.</p>
             </div>
 
             @if ($ai->isNotEmpty())

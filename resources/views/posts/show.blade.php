@@ -19,17 +19,9 @@
     </x-posts::breadcrumb>
 
     <article class="mt-8">
-        <div class="container">
-            @if ($post->ai)
-                <div class="bg-gradient-to-r from-indigo-300 to-indigo-400 font-normal mx-auto mb-2 px-3 py-1 rounded-full shadow md:shadow-md table text-xs text-white">
-                    AI-generated
-                </div>
-            @endif
-
-            <h1 class="font-thin text-3xl md:text-5xl dark:text-white">
-                {{ $post->title }}
-            </h1>
-        </div>
+        <h1 class="before:content-['AI-generated:'] before:text-indigo-400 container font-thin text-3xl md:text-5xl dark:text-white">
+            {{ $post->title }}
+        </h1>
 
         <x-posts::metadata
             :email="$post->user->email"
