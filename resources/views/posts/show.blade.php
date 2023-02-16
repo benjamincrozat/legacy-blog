@@ -19,7 +19,7 @@
     </x-posts::breadcrumb>
 
     <article class="mt-8">
-        <h1 class="before:content-['AI-generated:'] before:text-indigo-400 container font-thin text-3xl md:text-5xl dark:text-white">
+        <h1 class="@if ($post->ai) before:content-['AI-generated:'] before:text-indigo-400 @endif container font-thin text-3xl md:text-5xl dark:text-white">
             {{ $post->title }}
         </h1>
 
