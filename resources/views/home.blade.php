@@ -5,7 +5,7 @@
 >
     <x-nav class="container mt-6" />
 
-    @if ($posts->onFirstPage())
+    @if ($ai->onFirstPage() && $posts->onFirstPage())
         <x-newsletter class="container mt-16">
             <div class="md:flex md:items-center mt-8">
                 <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" width="96" height="96" alt="Benjamin Crozat" class="float-right md:float-none mb-4 ml-4 mt-4 md:m-0 md:order-1 rounded-full w-[80px] h-[80px] md:w-[96px] md:h-[96px]" />
@@ -59,37 +59,71 @@
         </section>
     @endif
 
-    <section class="container lg:max-w-[1024px] mt-16">
-        <div class="font-semibold px-4 sm:px-0 text-center text-xl">
-            @if ($posts->onFirstPage())
-                Latest
-            @else
-                Page {{ $posts->currentPage() }}
-            @endif
-        </div>
-
-        @if ($posts->isNotEmpty())
-            <div class="grid md:grid-cols-2 gap-4 mt-8">
-                @foreach ($posts as $post)
-                    <x-post :post="$post" @click="window.fathom?.trackGoal('HH0P1ACM', 0)" />
-                @endforeach
+    @if ($ai->onFirstPage())
+        <section class="container lg:max-w-[1024px] mt-16">
+            <div class="font-semibold px-4 sm:px-0 text-center text-xl">
+                @if ($posts->onFirstPage())
+                    Latest
+                @else
+                    Page {{ $posts->currentPage() }}
+                @endif
             </div>
 
-            @if ($posts->hasPages())
-                <div class="mt-8">
-                    {{ $posts->links() }}
+            @if ($posts->isNotEmpty())
+                <div class="grid md:grid-cols-2 gap-4 mt-8">
+                    @foreach ($posts as $post)
+                        <x-post :post="$post" @click="window.fathom?.trackGoal('HH0P1ACM', 0)" />
+                    @endforeach
                 </div>
+
+                @if ($posts->hasPages())
+                    <div class="mt-8">
+                        {{ $posts->links() }}
+                    </div>
+                @endif
             @endif
-        @endif
-    </section>
+        </section>
+    @endif
 
     @if ($posts->onFirstPage())
-        <x-newsletter class="container mt-16">
-            <x-slot:headline>
-                Want more content?<br />
-                Subscribe to my <span class="bg-clip-text bg-gradient-to-r from-indigo-300 to-indigo-400"><span class="text-transparent">free</span></span> newsletter!
-            </x-slot:headline>
-        </x-newsletter>
+        <section class="container lg:max-w-[1024px] mt-16">
+            <div class="text-center">
+                <div class="font-semibold px-4 sm:px-0 text-xl">
+                    @if ($ai->onFirstPage())
+                        AI-generated
+                    @else
+                        Page {{ $ai->currentPage() }}
+                    @endif
+                </div>
+
+                <p class="mt-4">This is an experimental way of writing new content using ChatGPT.</p>
+
+                <p>These articles are marked as such and live in their sandbox.</p>
+            </div>
+
+            @if ($ai->isNotEmpty())
+                <div class="grid md:grid-cols-2 gap-4 mt-8">
+                    @foreach ($ai as $post)
+                        <x-post :post="$post" @click="window.fathom?.trackGoal('HH0P1ACM', 0)" />
+                    @endforeach
+                </div>
+
+                @if ($ai->hasPages())
+                    <div class="mt-8">
+                        {{ $ai->links() }}
+                    </div>
+                @endif
+            @endif
+        </section>
+
+        @if ($ai->onFirstPage())
+            <x-newsletter class="container mt-16">
+                <x-slot:headline>
+                    Want more content?<br />
+                    Subscribe to my <span class="bg-clip-text bg-gradient-to-r from-indigo-300 to-indigo-400"><span class="text-transparent">free</span></span> newsletter!
+                </x-slot:headline>
+            </x-newsletter>
+        @endif
     @endif
 
     <div class="bg-gray-900 dark:bg-black mt-16">

@@ -8,7 +8,7 @@ use Illuminate\View\View;
 
 class HomeController extends Controller
 {
-    public function __invoke() : View
+    public function __invoke(): View
     {
         $pins = Pin::latest()->limit(4)->get();
 
@@ -21,12 +21,12 @@ class HomeController extends Controller
         $posts = Post::with('user')
             ->where('ai', false)
             ->latest()
-            ->simplePaginate(10);
+            ->simplePaginate(perPage: 10, pageName: 'postsPage');
 
         $ai = Post::with('user')
             ->where('ai', true)
             ->latest()
-            ->simplePaginate(10);
+            ->simplePaginate(perPage: 10, pageName: 'aiPostsPage');
 
         return view('home', compact('ai', 'pins', 'popular', 'posts'));
     }
