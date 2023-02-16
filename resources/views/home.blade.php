@@ -98,7 +98,7 @@
                     @endif
                 </div>
 
-                <p class="mt-4 text-sm">This is an <strong class="text-black">experimental</strong> way of writing new content using ChatGPT.<br class="hidden sm:inline" /> <strong class="text-black">These articles are marked as such</strong> and <strong class="text-black">live in their sandbox</strong>.</p>
+                <p class="mt-4 text-sm">This is an <strong class="text-black">experimental</strong> way of writing new content using ChatGPT.<br class="hidden sm:inline" /> <strong class="text-black">These articles are marked as such</strong> and <strong class="text-black">live in a sandbox</strong>.</p>
             </div>
 
             @if ($ai->isNotEmpty())
