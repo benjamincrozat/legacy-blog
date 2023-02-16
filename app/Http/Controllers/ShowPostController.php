@@ -15,7 +15,8 @@ class ShowPostController extends Controller
             'recommended' => Post::with('user')
                 ->withRecommendations(
                     recommendations: $post->recommendations,
-                    excluding: $post->id
+                    excluding: $post->id,
+                    ai: $post->ai
                 )
                 ->limit(10)
                 ->get(),

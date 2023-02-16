@@ -39,7 +39,7 @@ class Post extends BaseModel implements Feedable
         });
     }
 
-    public function scopeWithRecommendations(Builder $query, Collection $recommendations, int $excluding)
+    public function scopeWithRecommendations(Builder $query, Collection $recommendations, int $excluding, bool $ai = false)
     {
         $query
             ->when($recommendations->isNotEmpty(), function (Builder $query) use ($recommendations) {
@@ -48,9 +48,10 @@ class Post extends BaseModel implements Feedable
                     ->orderByRaw(
                         DB::raw('FIELD(id, '.$recommendations->join(',').')')
                     );
-            }, function (Builder $query) use ($excluding) {
+            }, function (Builder $query) use ($excluding, $ai) {
                 $query
                     ->inRandomOrder()
+                    ->where('ai', $ai)
                     ->whereNotIn('id', [$excluding]);
             });
     }
