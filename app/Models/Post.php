@@ -2,21 +2,21 @@
 
 namespace App\Models;
 
-use Algolia\AlgoliaSearch\Exceptions\NotFoundException;
-use Algolia\AlgoliaSearch\Exceptions\UnreachableException;
-use Algolia\AlgoliaSearch\RecommendClient;
-use App\Support\TableOfContentsGenerator;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Casts\Attribute;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
-use Laravel\Scout\Searchable;
 use Spatie\Feed\Feedable;
 use Spatie\Feed\FeedItem;
+use Illuminate\Support\Str;
+use Laravel\Scout\Searchable;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\DB;
+use App\Support\TableOfContentsGenerator;
+use Illuminate\Database\Eloquent\Builder;
+use Algolia\AlgoliaSearch\RecommendClient;
+use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Algolia\AlgoliaSearch\Exceptions\NotFoundException;
+use Algolia\AlgoliaSearch\Exceptions\UnreachableException;
 
 class Post extends BaseModel implements Feedable
 {
@@ -27,7 +27,7 @@ class Post extends BaseModel implements Feedable
         'modified_at' => 'date',
     ];
 
-    public static function booted(): void
+    public static function booted() : void
     {
         static::saved(function (Post $post) {
             if ($post->wasChanged('slug')) {
@@ -46,7 +46,7 @@ class Post extends BaseModel implements Feedable
                 $query
                     ->whereIn('id', $recommendations)
                     ->orderByRaw(
-                        DB::raw('FIELD(id, '.$recommendations->join(',').')')
+                        DB::raw('FIELD(id, ' . $recommendations->join(',') . ')')
                     );
             }, function (Builder $query) use ($excluding, $ai) {
                 $query
@@ -56,7 +56,7 @@ class Post extends BaseModel implements Feedable
             });
     }
 
-    public function scopeWithUser(Builder $query): void
+    public function scopeWithUser(Builder $query) : void
     {
         $query
             ->addSelect([
@@ -71,22 +71,22 @@ class Post extends BaseModel implements Feedable
             ]);
     }
 
-    public function user(): BelongsTo
+    public function user() : BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
-    public function bestProducts(): HasMany
+    public function bestProducts() : HasMany
     {
         return $this->hasMany(BestProduct::class)->orderBy('position');
     }
 
-    public function pins(): HasMany
+    public function pins() : HasMany
     {
         return $this->hasMany(Pin::class);
     }
 
-    public function readTime(): Attribute
+    public function readTime() : Attribute
     {
         return Attribute::make(function () {
             $words = str_word_count(strip_tags($this->content));
@@ -96,28 +96,28 @@ class Post extends BaseModel implements Feedable
         });
     }
 
-    public function tableOfContents(): Attribute
+    public function tableOfContents() : Attribute
     {
         return Attribute::make(
-            fn () => TableOfContentsGenerator::generate($this->introduction.$this->content)
+            fn () => TableOfContentsGenerator::generate($this->introduction . $this->content)
         );
     }
 
-    public function renderedIntroduction(): Attribute
+    public function renderedIntroduction() : Attribute
     {
         return Attribute::make(
             fn () => Str::marxdown($this->introduction ?? '')
         )->shouldCache();
     }
 
-    public function renderedContent(): Attribute
+    public function renderedContent() : Attribute
     {
         return Attribute::make(
             fn () => Str::marxdown($this->content ?? '')
         )->shouldCache();
     }
 
-    public function recommendations(): Attribute
+    public function recommendations() : Attribute
     {
         return Attribute::make(function () {
             try {
@@ -131,7 +131,7 @@ class Post extends BaseModel implements Feedable
                 );
 
                 $recommendations = $recommendClient->getRelatedProducts([[
-                    'indexName' => config('app.env').'_posts',
+                    'indexName' => config('app.env') . '_posts',
                     'objectID' => "$this->id",
                     'maxRecommendations' => 10,
                     // Exclude AI posts from recommendations when
@@ -155,7 +155,7 @@ class Post extends BaseModel implements Feedable
         return $query->withUser();
     }
 
-    public function toSearchableArray(): array
+    public function toSearchableArray() : array
     {
         return [
             'title' => $this->title,
@@ -168,7 +168,7 @@ class Post extends BaseModel implements Feedable
         ];
     }
 
-    public static function getFeedItems(): Collection
+    public static function getFeedItems() : Collection
     {
         return self::query()
             ->where('ai', false)
@@ -177,7 +177,7 @@ class Post extends BaseModel implements Feedable
             ->get();
     }
 
-    public function toFeedItem(): FeedItem
+    public function toFeedItem() : FeedItem
     {
         return FeedItem::create([
             'id' => route('posts.show', $this),

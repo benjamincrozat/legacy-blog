@@ -16,6 +16,7 @@
         "laravel/nova": "^4.22",
         "laravel/scout": "^9.8",
         "laravel/tinker": "^2.8",
+        "sentry/sentry-laravel": "^3.2",
         "spatie/flysystem-dropbox": "^2.0",
         "spatie/laravel-feed": "^4.2",
         "spatie/laravel-google-fonts": "^1.2",
