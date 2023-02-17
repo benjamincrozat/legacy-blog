@@ -134,11 +134,6 @@ class Post extends BaseModel implements Feedable
                     'indexName' => config('app.env').'_posts',
                     'objectID' => "$this->id",
                     'maxRecommendations' => 10,
-                    // Exclude AI posts from recommendations when
-                    // the current post isn't generated w/ AI.
-                    'queryParameters' => [
-                        'filters' => ! $this->ai ? 'ai:false' : 'ai:true',
-                    ],
                 ]]);
 
                 return collect($recommendations['results'][0]['hits'])->pluck('objectID');
