@@ -7,7 +7,7 @@ use Illuminate\View\View;
 
 class ShowPostController extends Controller
 {
-    public function __invoke(Post $post) : View
+    public function __invoke(Post $post): View
     {
         return view('posts.show', [
             'bestProducts' => $post->bestProducts()->with('affiliate')->get(),
