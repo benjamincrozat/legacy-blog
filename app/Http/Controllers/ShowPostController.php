@@ -14,11 +14,7 @@ class ShowPostController extends Controller
             'post' => $post,
             'recommended' => Post::with('user')
                 ->withRecommendations(
-                    recommendations: cache()->remember(
-                        "post_{$post->id}_recommendations",
-                        24 * 60 * 60,
-                        fn () => $post->recommendations
-                    ),
+                    recommendations: $post->recommendations,
                     excluding: $post->id,
                     ai: $post->ai
                 )
