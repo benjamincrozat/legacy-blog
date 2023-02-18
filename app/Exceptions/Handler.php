@@ -2,8 +2,8 @@
 
 namespace App\Exceptions;
 
-use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Sentry\Laravel\Integration;
+use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
 {
@@ -30,7 +30,7 @@ class Handler extends ExceptionHandler
         'password_confirmation',
     ];
 
-    public function register(): void
+    public function register() : void
     {
         $this->reportable(function (\Throwable $exception) {
             Integration::captureUnhandledException($exception);
