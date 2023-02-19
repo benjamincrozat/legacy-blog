@@ -48,5 +48,35 @@
         <x-status />
 
         <x-search />
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "Organization",
+                        "@id": "https://benjamincrozat.com/#organisation",
+                        "name": "Benjamin Crozat",
+                        "url": "https://benjamincrozat.com/",
+                        "sameAs": [
+                            "https://www.instagram.com/benjamincrozat/",
+                            "https://www.linkedin.com/in/benjamincrozat/",
+                            "https://twitter.com/benjamincrozat"
+                        ]
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https://benjamincrozat.com/#website",
+                        "url": "https://benjamincrozat.com/",
+                        "name": "Benjamin Crozat",
+                        "description": "The art of crafting web applications.",
+                        "publisher": {
+                            "@id": "https://benjamincrozat.com/#organization"
+                        },
+                        "inLanguage": "en-US"
+                    }
+                ]
+            }
+        </script>
     </body>
 </html>

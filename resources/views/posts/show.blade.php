@@ -88,4 +88,64 @@
     <div class="bg-gray-900 dark:bg-black mt-8 sm:mt-16">
         <x-footer class="text-gray-200" />
     </div>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [{
+                "@type": "WebPage",
+                "@id": "{{ route('posts.show', $post) }}#webpage",
+                "url": "{{ route('posts.show', $post) }}",
+                "name": "{{ $post->title }}",
+                "isPartOf": {
+                    "@id": "{{ route('home') }}#website"
+                },
+                "primaryImageOfPage": {
+                    "@id": "{{ route('home') }}#primaryimage"
+                },
+                "datePublished": "{{ $post->created_at->toIso8601String() }}",
+                "dateModified": "{{ $post->updated_at->toIso8601String() }}",
+                "description": "{{ $post->description }}",
+                "breadcrumb": {
+                    "@id": "{{ route('posts.show', $post) }}#breadcrumb"
+                },
+                "inLanguage": "en-US",
+                "potentialAction": [
+                    {
+                        "@type": "ReadAction",
+                        "target": [
+                            "{{ route('posts.show', $post) }}"
+                        ]
+                    }
+                ]
+            }, {
+                "@type": "Article",
+                "@id": "{{ route('posts.show', $post) }}#article",
+                "isPartOf": {
+                    "@id": "{{ route('home') }}#website"
+                },
+                "author": [
+                    {
+                        "@type": "Person",
+                        "name": "{{ $post->user->name }}",
+                        "url": "{{ route('home') }}"
+                    }
+                ],
+                "headline": "{{ $post->title }}",
+                "datePublished": "{{ $post->created_at->toIso8601String() }}",
+                "dateModified": "{{ $post->updated_at->toIso8601String() }}",
+                "mainEntityOfPage": {
+                    "@id": "{{ route('posts.show', $post) }}#webpage"
+                },
+                "publisher": {
+                    "@id": "https://benjamincrozat.com/#organization"
+                },
+                "image": {
+                    "@id": "{{ route('posts.show', $post) }}#primaryimage"
+                },
+                "thumbnailUrl": "{{ $post->image }}",
+                "inLanguage": "en-US"
+            }]
+        }
+    </script>
 </x-app>
