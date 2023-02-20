@@ -18,7 +18,7 @@ class TableOfContentsGenerator
 
             $tableOfContents[] = [
                 'id' => md5(str($title)->slug()),
-                'title' => $title,
+                'title' => trim($title),
                 'level' => strlen($headings[1][$i]),
             ];
         }
