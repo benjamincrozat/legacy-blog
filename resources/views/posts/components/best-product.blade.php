@@ -17,7 +17,7 @@
         </div>
 
         <div class="mt-3 text-center sm:text-left">
-            {!! Illuminate\Support\Str::marxdown($bestProduct->description) !!}
+            {!! str($bestProduct->description)->marxdown() !!}
         </div>
     </div>
 

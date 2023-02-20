@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Spatie\Feed\Feedable;
 use Spatie\Feed\FeedItem;
-use Illuminate\Support\Str;
 use Laravel\Scout\Searchable;
 use App\Support\TreeGenerator;
 use Illuminate\Support\Collection;
@@ -108,21 +107,21 @@ class Post extends BaseModel implements Feedable
     public function renderedIntroduction() : Attribute
     {
         return Attribute::make(
-            fn () => Str::marxdown($this->introduction ?? '')
+            fn () => str($this->introduction ?? '')->marxdown()
         )->shouldCache();
     }
 
     public function renderedContent() : Attribute
     {
         return Attribute::make(
-            fn () => Str::marxdown($this->content ?? '')
+            fn () => str($this->content ?? '')->marxdown()
         )->shouldCache();
     }
 
     public function renderedConclusion() : Attribute
     {
         return Attribute::make(
-            fn () => Str::marxdown($this->conclusion ?? '')
+            fn () => str($this->conclusion ?? '')->marxdown()
         )->shouldCache();
     }
 
@@ -191,7 +190,7 @@ class Post extends BaseModel implements Feedable
         return FeedItem::create([
             'id' => route('posts.show', $this),
             'title' => $this->title,
-            'summary' => Str::marxdown($this->content),
+            'summary' => str($this->content)->marxdown(),
             'updated' => $this->modified_at ?? $this->created_at,
             'link' => route('posts.show', $this),
             'authorName' => $this->user_name,

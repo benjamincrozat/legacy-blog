@@ -3,7 +3,6 @@
 namespace Tests\Feature\App\CommonMark;
 
 use Tests\TestCase;
-use Illuminate\Support\Str;
 
 class MarxdownConverterTest extends TestCase
 {
@@ -11,7 +10,7 @@ class MarxdownConverterTest extends TestCase
     {
         $this->assertStringContainsString(
             'id=',
-            Str::marxdown("# D'abc `def`-._&")
+            str("# D'abc `def`-._&")->marxdown()
         );
     }
 
@@ -19,7 +18,7 @@ class MarxdownConverterTest extends TestCase
     {
         $this->assertStringContainsString(
             'rel="nofollow noopener noreferrer" target="_blank"',
-            Str::marxdown('[Apple](https://www.apple.com)')
+            str('[Apple](https://www.apple.com)')->marxdown()
         );
     }
 
@@ -27,12 +26,12 @@ class MarxdownConverterTest extends TestCase
     {
         $this->assertStringContainsString(
             'href="' . url('/') . '">',
-            Str::marxdown('[Foo](' . url('/') . ')')
+            str('[Foo](' . url('/') . ')')->marxdown()
         );
 
         $this->assertStringContainsString(
             'href="#foo"',
-            Str::marxdown('[Foo](#foo)')
+            str('[Foo](#foo)')->marxdown()
         );
     }
 
@@ -40,7 +39,7 @@ class MarxdownConverterTest extends TestCase
     {
         $this->assertStringContainsString(
             '@click="window.fathom?.trackGoal(\'LBJL4VHK\', 0)"',
-            Str::marxdown('[Foo](' . url('/recommends/foo') . '')
+            str('[Foo](' . url('/recommends/foo') . '')->marxdown()
         );
     }
 
@@ -48,7 +47,7 @@ class MarxdownConverterTest extends TestCase
     {
         $this->assertStringContainsString(
             "window.fathom?.trackGoal('SMD2GKMN', 0)",
-            Str::marxdown('[Apple](https://www.apple.com)')
+            str('[Apple](https://www.apple.com)')->marxdown()
         );
     }
 

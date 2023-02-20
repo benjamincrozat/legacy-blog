@@ -3,6 +3,7 @@
 namespace Tests;
 
 use Illuminate\Support\Str;
+use Illuminate\Support\Stringable;
 use Illuminate\Support\Facades\Http;
 use App\CommonMark\MarxdownConverter;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -23,6 +24,11 @@ abstract class TestCase extends BaseTestCase
         Str::macro(
             'marxdown',
             fn ($s) => (new MarxdownConverter(torchlight: false))->convert($s)
+        );
+
+        Stringable::macro(
+            'marxdown',
+            fn () => (new MarxdownConverter(torchlight: false))->convert($this->value)
         );
     }
 }
