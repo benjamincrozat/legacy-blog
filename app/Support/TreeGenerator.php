@@ -13,7 +13,7 @@ class TreeGenerator
         foreach ($matches[0] as $key => $value) {
             $tree[] = [
                 'id' => $matches['id'][$key],
-                'title' => trim(html_entity_decode(strip_tags($matches['content'][$key]))),
+                'title' => str($matches['content'][$key])->stripTags()->htmlEntityDecode()->trim(),
                 'level' => $matches['level'][$key],
             ];
         }

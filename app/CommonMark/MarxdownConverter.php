@@ -28,9 +28,7 @@ class MarxdownConverter extends \League\CommonMark\MarkdownConverter
         $environment = new Environment([
             'default_attributes' => [
                 Heading::class => [
-                    'id' => function (Heading $node) {
-                        return md5(serialize($node));
-                    },
+                    'id' => fn ($n) => md5(serialize($n)),
                 ],
                 Link::class => [
                     'rel' => function (Link $node) {
