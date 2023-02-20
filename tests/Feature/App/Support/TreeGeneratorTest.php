@@ -10,9 +10,10 @@ class TreeGeneratorTest extends TestCase
     public function test_it_works() : void
     {
         $tree = TreeGenerator::generate(<<<HTML
-<h1 id="foo">Foo</h1>
-<h2 id="bar">Bar</h2>
-<h3 id="baz">Baz</h3>
+<h1 id="foo"><a href="#"><strong>Foo</strong></a></h1>
+<h2>Bar</h2>
+<p>Lorem ipsum dolor sit amet.</p>
+<h3 id="baz"><code>Baz</code></h3>
 HTML);
 
         $this->assertEquals([
@@ -22,7 +23,7 @@ HTML);
                 'level' => 1,
             ],
             [
-                'id' => 'bar',
+                'id' => '',
                 'title' => 'Bar',
                 'level' => 2,
             ],
