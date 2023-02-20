@@ -7,10 +7,10 @@ use Illuminate\Support\Str;
 
 class MarxdownConverterTest extends TestCase
 {
-    public function test_it_renders_headings_with_ids() : void
+    public function test_it_renders_headings_with_ids_and_fathom_event() : void
     {
         $this->assertStringContainsString(
-            'id="dabc-def"',
+            'id="' . md5('dabc-def') . '"',
             Str::marxdown("# D'abc `def`-._&")
         );
     }

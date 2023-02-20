@@ -31,12 +31,7 @@ class MarxdownConverter extends \League\CommonMark\MarkdownConverter
                     'id' => function (Heading $node) {
                         $text = $this->childrenToText($node);
 
-                        return Str::slug($text);
-                    },
-                    'x-intersect' => function (Heading $node) {
-                        $text = $this->childrenToText($node);
-
-                        return "\$dispatch('toc.section.changed', `$text`)";
+                        return md5(str($text)->slug());
                     },
                 ],
                 Link::class => [
