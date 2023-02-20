@@ -3,11 +3,10 @@
 namespace App\Support;
 
 use Illuminate\Support\Str;
-use Illuminate\Support\Collection;
 
 class TableOfContentsGenerator
 {
-    public static function generate(string $content) : Collection
+    public static function generate(string $content) : array
     {
         preg_match_all('/(#{1,6}) (.*)/', $content, $headings);
 
@@ -23,6 +22,6 @@ class TableOfContentsGenerator
             ];
         }
 
-        return collect($tableOfContents);
+        return $tableOfContents;
     }
 }
