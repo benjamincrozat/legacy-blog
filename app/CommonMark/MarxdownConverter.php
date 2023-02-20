@@ -29,9 +29,9 @@ class MarxdownConverter extends \League\CommonMark\MarkdownConverter
             'default_attributes' => [
                 Heading::class => [
                     'id' => function (Heading $node) {
-                        $text = $this->childrenToText($node);
-
-                        return md5(str($text)->slug());
+                        return md5(
+                            str($this->childrenToText($node))->slug()
+                        );
                     },
                 ],
                 Link::class => [
