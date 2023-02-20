@@ -1,11 +1,11 @@
-@if ($toc->isNotEmpty() && $toc->count() > 1)
-    <div {{ $attributes->except('toc') }}>
+@if (($count = count($tree)) && $count > 1)
+    <div {{ $attributes->except('tree') }}>
         <p class="font-semibold mb-2">
             Table of contents
         </p>
 
         <ul class="grid gap-2 mt-3">
-            @foreach ($toc as $item)
+            @foreach ($tree as $item)
                 <li>
                     <a
                         href="#{{ $item['id'] }}"

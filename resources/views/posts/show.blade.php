@@ -48,8 +48,8 @@
             class="container mt-8"
         />
 
-        <x-posts::toc
-            :toc="$post->table_of_contents"
+        <x-posts::tree
+            :tree="$post->tree"
             class="container mt-8"
         />
 
