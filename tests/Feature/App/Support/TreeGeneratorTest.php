@@ -34,4 +34,11 @@ HTML);
             ],
         ], $tree);
     }
+
+    public function test_it_does_crash_when_no_heading() : void
+    {
+        $tree = TreeGenerator::generate('');
+
+        $this->assertEquals([], $tree);
+    }
 }
