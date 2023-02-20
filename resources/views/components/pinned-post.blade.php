@@ -1,4 +1,4 @@
-<div {{ $attributes->except('first', 'post')->merge(['class' => 'block flex-shrink-0 overflow-hidden relative snap-start sm:snap-center md:snap-normal scroll-ml-4 md:scroll-ml-0 w-[90%] sm:w-[70%] md:w-auto']) }}>
+<div {{ $attributes->except('first', 'post')->merge(['class' => 'block flex-shrink-0 relative snap-start sm:snap-center md:snap-normal scroll-ml-4 md:scroll-ml-0 w-[90%] sm:w-[70%] md:w-auto']) }}>
     <a
         href="{{ route('posts.show', $post->slug) }}"
         @click="window.fathom?.trackGoal('OKJIR46O', 0)"
