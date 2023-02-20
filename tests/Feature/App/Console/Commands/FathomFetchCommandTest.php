@@ -16,13 +16,11 @@ class FathomFetchCommandTest extends TestCase
             ->push([
                 [
                     'pageviews' => 123456,
-                    'pathname' => '/foo',
+                    'pathname' => '/' . ($slug = fake()->slug()),
                 ],
             ]);
 
-        Post::factory()->create([
-            'slug' => 'foo',
-        ]);
+        Post::factory()->create(compact('slug'));
 
         Artisan::call(FathomFetchCommand::class);
 
