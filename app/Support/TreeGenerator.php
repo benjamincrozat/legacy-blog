@@ -18,6 +18,6 @@ class TreeGenerator
             ];
         }
 
-        return $tree;
+        return $tree ?? [];
     }
 }
