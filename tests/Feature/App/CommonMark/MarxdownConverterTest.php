@@ -11,7 +11,7 @@ class MarxdownConverterTest extends TestCase
     {
         $this->assertStringContainsString(
             'id="dabc-def"',
-            Str::marxdown("# D'abc def-._&")
+            Str::marxdown("# D'abc `def`-._&")
         );
     }
 

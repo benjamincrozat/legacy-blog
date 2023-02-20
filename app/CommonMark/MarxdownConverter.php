@@ -10,6 +10,7 @@ use League\CommonMark\Environment\Environment;
 use Torchlight\Commonmark\V2\TorchlightExtension;
 use League\CommonMark\Extension\Embed\EmbedExtension;
 use League\CommonMark\Extension\Table\TableExtension;
+use League\CommonMark\Node\Inline\AbstractStringContainer;
 use League\CommonMark\Extension\CommonMark\Node\Inline\Link;
 use League\CommonMark\Extension\CommonMark\Node\Block\Heading;
 use League\CommonMark\Extension\Attributes\AttributesExtension;
@@ -98,7 +99,7 @@ class MarxdownConverter extends \League\CommonMark\MarkdownConverter
         $text = '';
 
         foreach ($node->children() as $child) {
-            if ($child instanceof Text) {
+            if ($child instanceof AbstractStringContainer || $child instanceof Text) {
                 $text .= $child->getLiteral();
             } else {
                 $text .= $this->childrenToText($child);
