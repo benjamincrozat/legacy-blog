@@ -26,7 +26,7 @@
     <a
         href="{{ route('affiliate', $highlight->slug) }}"
         target="_blank"
-        class="bg-gradient-to-r from-emerald-400 dark:from-emerald-700 group-first:from-orange-300 dark:group-first:from-orange-400 to-emerald-500 dark:to-emerald-800 group-first:to-orange-400 dark:group-first:to-orange-500 block font-semibold leading-tight mt-4 px-4 py-3 rounded-sm shadow-md text-center text-sm text-white"
+        class="bg-gradient-to-r from-emerald-400 dark:from-emerald-700 group-first:from-orange-300 dark:group-first:from-orange-400 to-emerald-500 dark:to-emerald-800 hover:hue-rotate-90 group-first:hover:-hue-rotate-90 group-first:to-orange-400 dark:group-first:to-orange-500 block font-semibold leading-tight mt-4 px-4 py-3 rounded-sm shadow-md text-center text-sm text-white duration-500 transition-[filter]"
         @click="window.fathom?.trackGoal('XMLHWVO2', 0)"
     >
         Go to site
