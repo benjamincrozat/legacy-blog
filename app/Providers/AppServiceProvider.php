@@ -14,8 +14,10 @@ class AppServiceProvider extends ServiceProvider
             'marxdown', fn () => (new MarxdownConverter(torchlight: true))->convert($this->value)
         );
 
-        Stringable::macro(
-            'htmlEntityDecode', fn () => tap($this, fn () => html_entity_decode($this->value))
-        );
+        Stringable::macro('htmlEntityDecode', function () {
+            $this->value = html_entity_decode($this->value);
+
+            return $this;
+        });
     }
 }

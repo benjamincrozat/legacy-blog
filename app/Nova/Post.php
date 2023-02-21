@@ -2,20 +2,22 @@
 
 namespace App\Nova;
 
-use App\Nova\Metrics\PostsIntent;
-use Laravel\Nova\Fields\Badge;
-use Laravel\Nova\Fields\BelongsTo;
-use Laravel\Nova\Fields\Boolean;
-use Laravel\Nova\Fields\Date;
-use Laravel\Nova\Fields\HasMany;
-use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Line;
-use Laravel\Nova\Fields\Markdown;
-use Laravel\Nova\Fields\Stack;
-use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Textarea;
-use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Panel;
+use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Date;
+use Laravel\Nova\Fields\Line;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Badge;
+use Laravel\Nova\Fields\Stack;
+use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\HasMany;
+use App\Nova\Metrics\PostsIntent;
+use Laravel\Nova\Fields\Markdown;
+use Laravel\Nova\Fields\Textarea;
+use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\BelongsToMany;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Post extends Resource
 {
@@ -23,7 +25,7 @@ class Post extends Resource
 
     public static $title = 'title';
 
-    public function fields(NovaRequest $request): array
+    public function fields(NovaRequest $request) : array
     {
         return [
             ID::make()->sortable(),
@@ -51,7 +53,7 @@ HTML;
                 Line::make('Title')
                     ->displayUsing(function () {
                         $title = strlen($this->title) > 60
-                            ? substr($this->title, 0, 60).'…'
+                            ? substr($this->title, 0, 60) . '…'
                             : $this->title;
 
                         $link = route('posts.show', $this->resource);
@@ -123,35 +125,42 @@ HTML;
                     ->sortable(),
             ]),
 
-            HasMany::make('Best products'),
+            BelongsToMany::make('Affiliates')
+                ->fields(function () {
+                    return [
+                        Number::make('Position')
+                            ->rules('nullable', 'min:1'),
+                    ];
+                })
+                ->searchable(),
 
             HasMany::make('Pins'),
         ];
     }
 
-    public function subtitle(): string
+    public function subtitle() : string
     {
         return $this->slug;
     }
 
-    public function cards(NovaRequest $request): array
+    public function cards(NovaRequest $request) : array
     {
         return [
             new PostsIntent(),
         ];
     }
 
-    public function filters(NovaRequest $request): array
+    public function filters(NovaRequest $request) : array
     {
         return [];
     }
 
-    public function lenses(NovaRequest $request): array
+    public function lenses(NovaRequest $request) : array
     {
         return [];
     }
 
-    public function actions(NovaRequest $request): array
+    public function actions(NovaRequest $request) : array
     {
         return [];
     }

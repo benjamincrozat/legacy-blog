@@ -6,7 +6,7 @@ class TreeGenerator
 {
     public static function generate(string $content) : array
     {
-        $regex = '/<h(?<level>[1-6])(?:\s+id="(?<id>[^"]+)")?(?:\s+[^>]*)?>(?<content>.+?)<\/h[1-6]>/';
+        $regex = '/<h(?<level>[1-6])(?:\s+id="(?<id>[^"]+)")?(?:\s+[^>]*)?>(?<content>\X+?)<\/h[1-6]>/';
 
         preg_match_all($regex, $content, $matches);
 

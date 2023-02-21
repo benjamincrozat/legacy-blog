@@ -9,7 +9,6 @@ use App\Models\Short;
 use App\Models\Redirect;
 use App\Models\Affiliate;
 use App\Models\Subscriber;
-use App\Models\BestProduct;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -25,9 +24,9 @@ class DatabaseSeeder extends Seeder
 
         Pin::factory(10)->create();
 
-        Affiliate::factory(10)->create();
-
-        BestProduct::factory(100)->create();
+        Post::where('promotes_affiliate_links', true)->get()->each(function (Post $post) {
+            $post->affiliates()->saveMany(Affiliate::factory(mt_rand(3, 10))->make());
+        });
 
         Redirect::factory(10)->create();
 

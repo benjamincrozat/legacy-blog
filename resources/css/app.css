@@ -22,7 +22,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .btn-green {
-    @apply bg-gradient-to-r from-emerald-400 dark:from-emerald-700 to-emerald-500 dark:to-emerald-800 block !border-0 font-normal leading-tight sm:mx-auto px-4 py-3 rounded shadow-md sm:table text-center !text-emerald-50
+    @apply bg-gradient-to-r from-emerald-400 dark:from-emerald-700 to-emerald-500 dark:to-emerald-800 block !border-0 font-normal leading-tight sm:mx-auto px-4 py-3 sm:px-6 rounded shadow-md sm:table text-center !text-emerald-50
 }
 
 .btn-green strong {

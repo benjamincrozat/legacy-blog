@@ -4,7 +4,6 @@ namespace Database\Factories;
 
 use App\Models\Post;
 use App\Models\User;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -14,21 +13,9 @@ class PostFactory extends Factory
 {
     public function definition() : array
     {
-        if (! app()->runningUnitTests()) {
-            $response = Http::withOptions([
-                'allow_redirects' => [
-                    'track_redirects' => true,
-                ],
-            ])->get('https://picsum.photos/1280/720')->throw();
-
-            $image = (string) $response->effectiveUri();
-        } else {
-            $image = fake()->imageUrl(1280, 720);
-        }
-
         return [
             'user_id' => User::factory(),
-            'image' => $image,
+            'image' => fake()->imageUrl(),
             'title' => fake()->sentence(),
             'slug' => fake()->slug(),
             'introduction' => fake()->paragraph(),
@@ -267,6 +254,7 @@ It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
 *here be dragons*
 :::
 MARKDOWN,
+            'conclusion' => fake()->paragraph(),
             'description' => fake()->paragraph(),
             'promotes_affiliate_links' => fake()->boolean(),
             'ai' => fake()->boolean(),

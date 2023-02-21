@@ -15,6 +15,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Algolia\AlgoliaSearch\Exceptions\NotFoundException;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Algolia\AlgoliaSearch\Exceptions\UnreachableException;
 
 class Post extends BaseModel implements Feedable
@@ -75,9 +76,9 @@ class Post extends BaseModel implements Feedable
         return $this->belongsTo(User::class);
     }
 
-    public function bestProducts() : HasMany
+    public function affiliates() : BelongsToMany
     {
-        return $this->hasMany(BestProduct::class)->orderBy('position');
+        return $this->belongsToMany(Affiliate::class)->withPivot('position')->orderBy('position');
     }
 
     public function pins() : HasMany
@@ -99,7 +100,7 @@ class Post extends BaseModel implements Feedable
     {
         return Attribute::make(
             fn () => TreeGenerator::generate(
-                $this->rendered_introduction . $this->rendered_content . $this->rendered_conclusion
+                view('posts.components.content', ['post' => $this])->render()
             )
         )->shouldCache();
     }
@@ -160,7 +161,7 @@ class Post extends BaseModel implements Feedable
     {
         $query = parent::resolveRouteBindingQuery($query, $value, $field);
 
-        return $query->withUser();
+        return $query->withUser()->with('affiliates');
     }
 
     public function toSearchableArray() : array
