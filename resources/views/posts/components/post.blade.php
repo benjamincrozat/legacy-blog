@@ -49,13 +49,15 @@
     @if ($post->affiliates->isNotEmpty())
         <div class="content">
             <ul>
-                <li>
-                    <a href="#{{ $affiliate->slug }}">
-                        <a href="{{ route('affiliate', $affiliate) }}" class="font-semibold">
-                            {{ $affiliate->name }}
+                @foreach ($post->affiliates as $affiliate)
+                    <li>
+                        <a href="#{{ $affiliate->slug }}">
+                            <a href="{{ route('affiliate', $affiliate) }}" class="font-semibold">
+                                {{ $affiliate->name }}
+                            </a>
                         </a>
-                    </a>
-                </li>
+                    </li>
+                @endforeach
             </ul>
         </div>
     @endif
