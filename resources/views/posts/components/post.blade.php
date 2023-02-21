@@ -97,7 +97,7 @@
 
                         @if ($affiliate->rating)
                             <div class="mt-8 text-center">
-                                <div class="font-normal text-xl sm:text-3xl">
+                                <div class="font-semibold text-xl sm:text-3xl">
                                     {{ $affiliate->rating }} out of 10
                                 </div>
 
