@@ -83,7 +83,7 @@
                             </a>
 
                             <div class="font-bold leading-tight sm:text-lg md:text-xl">
-                                {{ $post->user->name }}'s take on {{ $affiliate->name }}
+                                {{ $post->user->name }}'s take on <a href="{{ route('affiliate', $affiliate) }}" class="decoration-indigo-400/50 text-indigo-400 underline underline-offset-4">{{ $affiliate->name }}</a>
                             </div>
                         </div>
                     </div>
