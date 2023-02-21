@@ -71,13 +71,18 @@
                 <div class="bg-gradient-to-r from-white/75 dark:from-gray-800/75 to-white/30 dark:to-gray-800/30 my-8 px-4 py-6 sm:p-8 rounded-xl shadow-xl dark:shadow-none">
                     <div class="not-prose">
                         <div class="flex items-center gap-4">
-                            <a href="{{ route('affiliate', $affiliate) }}" class="flex-shrink-0">
+                            <a href="{{ route('affiliate', $affiliate) }}" class="flex-shrink-0 relative w-[40px] h-[40px] sm:w-[48px] sm:h-[48px]">
                                 <img
                                     src="{{ $affiliate->icon }}"
                                     alt="{{ $affiliate->name }}"
-                                    width="48"
-                                    height="48"
-                                    class="aspect-square inline rounded-md sm:rounded-lg w-[40px] h-[40px] sm:w-[48px] sm:h-[48px]"
+                                    class="absolute inset-0 rounded-md sm:rounded-lg z-10"
+                                />
+
+                                <img
+                                    loading="lazy"
+                                    src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}"
+                                    alt="{{ $post->user->name }}"
+                                    class="absolute -bottom-2 -right-2 rounded-full w-2/3 z-20"
                                 />
                             </a>
 
