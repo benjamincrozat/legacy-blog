@@ -52,9 +52,7 @@
                 @foreach ($post->affiliates as $affiliate)
                     <li>
                         <a href="#{{ $affiliate->slug }}">
-                            <a href="{{ route('affiliate', $affiliate) }}" class="font-semibold">
-                                {{ $affiliate->name }}
-                            </a>
+                            {{ $affiliate->name }}
                         </a>
                     </li>
                 @endforeach
