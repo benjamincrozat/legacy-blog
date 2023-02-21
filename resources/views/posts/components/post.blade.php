@@ -48,7 +48,9 @@
 
     @if ($post->affiliates->isNotEmpty())
         <div class="!container content mt-4">
-            <h2 id="pick">My pick on "{{ $post->title }}"</h2>
+            <h2 id="pick">
+                <span class="text-indigo-400">My top picks on</span> {{ lcfirst($post->title) }}
+            </h2>
 
             <ol>
                 @foreach ($post->affiliates as $affiliate)
