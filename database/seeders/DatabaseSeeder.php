@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
         Pin::factory(10)->create();
 
         Post::where('promotes_affiliate_links', true)->get()->each(function (Post $post) {
+            $post->update(['content' => '']);
             $post->affiliates()->saveMany(Affiliate::factory(mt_rand(3, 10))->make());
         });
 

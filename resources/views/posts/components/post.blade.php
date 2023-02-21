@@ -48,6 +48,8 @@
 
     @if ($post->affiliates->isNotEmpty())
         <div class="!container content mt-4">
+            <h2>My pick on "{{ $post->title }}"</h2>
+
             <ol>
                 @foreach ($post->affiliates as $affiliate)
                     <li>
