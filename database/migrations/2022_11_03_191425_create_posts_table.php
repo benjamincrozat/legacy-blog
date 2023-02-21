@@ -14,9 +14,12 @@ return new class() extends Migration {
             $table->string('image')->nullable();
             $table->string('title');
             $table->string('slug')->unique();
+            $table->text('introduction')->nullable();
             $table->text('content');
+            $table->text('conclusion')->nullable();
             $table->text('description');
             $table->boolean('promotes_affiliate_links')->default(false);
+            $table->boolean('ai')->default(false);
             $table->unsignedBigInteger('views')->default(0);
             $table->timestamps();
             $table->datetime('modified_at')->nullable();
