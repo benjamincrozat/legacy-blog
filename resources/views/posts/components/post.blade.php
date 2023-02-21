@@ -82,7 +82,7 @@
                                     loading="lazy"
                                     src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}"
                                     alt="{{ $post->user->name }}"
-                                    class="absolute -bottom-2 -right-2 border-2 border-white rounded-full w-2/3 z-20"
+                                    class="absolute -bottom-2 -right-2 border-2 border-white dark:border-gray-800 rounded-full w-2/3 z-20"
                                 />
                             </a>
 
