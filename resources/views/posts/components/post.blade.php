@@ -48,10 +48,6 @@
 
     @if ($post->affiliates->isNotEmpty())
         <div class="!container content mt-4">
-            <h2 id="pick">
-                <span class="text-indigo-400">My top picks on</span> {{ lcfirst($post->title) }}
-            </h2>
-
             <ol>
                 @foreach ($post->affiliates as $affiliate)
                     <li>
@@ -73,7 +69,7 @@
             </h3>
 
             @if ($affiliate->take)
-                <div class="bg-white/75 dark:bg-gray-800/50 my-8 px-4 py-6 sm:p-8 rounded-lg shadow-xl dark:shadow-none">
+                <div class="bg-gradient-to-r from-white/75 dark:from-gray-800/75 to-white/30 dark:to-gray-800/30 my-8 px-4 py-6 sm:p-8 rounded-lg shadow-xl dark:shadow-none">
                     <div class="not-prose">
                         <div class="flex items-center gap-4">
                             <a href="{{ route('affiliate', $affiliate) }}" class="flex-shrink-0">
