@@ -11,9 +11,9 @@
                     class="-translate-y-[.5px] rounded-full"
                 />
 
-                <p>
-                    <a href="{{ route('consulting.cto') }}" target="_blank" rel="noopener noreferrer" class="font-medium" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">{{ $post->user->name }}</a> — Updated on <time datetime="{{ $post->updated_at->toDateTimeString() }}">{{ $post->updated_at->isoFormat('ll') }}</time>
-                </p>
+                <div class="line-clamp-1">
+                    <a href="{{ route('consulting.cto') }}" target="_blank" rel="noopener noreferrer" class="font-medium" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">{{ $post->user->name }}</a> — <span class="sr-only sm:not-sr-only">Updated</span> <time datetime="{{ $post->updated_at->toDateTimeString() }}">{{ $post->updated_at->isoFormat('ll') }}</time>
+                </div>
             </div>
 
             <a
