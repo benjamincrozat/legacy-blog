@@ -20,11 +20,6 @@ HTML);
 
         $this->assertEquals([
             [
-                'id' => 'foo',
-                'title' => 'Foo',
-                'level' => 1,
-            ],
-            [
                 'id' => '',
                 'title' => 'Bar',
                 'level' => 2,
