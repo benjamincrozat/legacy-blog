@@ -24,7 +24,7 @@
     @endif
 
     <x-posts::affiliate-highlights
-        :highlights="$post->affiliates->where('pivot.position')"
+        :highlights="$post->affiliates->where(app()->isProduction() ? 'pivot.position' : 'position')"
         :promotes-affiliate-links="$post->promotes_affiliate_links"
         class="container mt-8"
     />
