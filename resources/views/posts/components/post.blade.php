@@ -142,7 +142,7 @@
 
             @if ($affiliate->screenshot)
                 <a href="{{ route('affiliate', $affiliate) }}">
-                    <img src="{{ str_replace('/upload', '/upload/dpr_auto,f_auto,q_auto,w_auto', $affiliate->screenshot) }}" alt="{{ $affiliate->name }}" class="aspect-video rounded-lg shadow-lg w-full" />
+                    <img src="{{ str_replace('/upload', '/upload/dpr_auto,f_auto,q_auto,w_auto', $affiliate->screenshot) }}" alt="{{ $affiliate->name }}" class="aspect-video rounded-lg shadow-md w-full" />
                 </a>
             @endif
 
