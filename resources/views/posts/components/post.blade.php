@@ -111,17 +111,23 @@
                             </div>
                         @endif
 
-                        <table>
-                            <tr>
-                                <th class="pl-0 pr-2 text-right">Annual discount</th>
-                                <td class="pl-2 pr-0">{{ $affiliate->annual_discount }}</td>
-                            </tr>
+                        @if ($affiliate->annual_discount || $affiliate->guarantee)
+                            <table>
+                                @if ($affiliate->annual_discount)
+                                    <tr>
+                                        <th class="pl-0 pr-2 text-right">Annual discount</th>
+                                        <td class="pl-2 pr-0">{{ $affiliate->annual_discount }}</td>
+                                    </tr>
+                                @endif
 
-                            <tr>
-                                <th class="pl-0 pr-2 text-right">Guarantee</th>
-                                <td class="pl-2 pr-0">{{ $affiliate->guarantee }}</td>
-                            </tr>
-                        </table>
+                                @if ($affiliate->guarantee)
+                                    <tr>
+                                        <th class="pl-0 pr-2 text-right">Guarantee</th>
+                                        <td class="pl-2 pr-0">{{ $affiliate->guarantee }}</td>
+                                    </tr>
+                                @endif
+                            </table>
+                        @endif
                     </div>
 
                     <a href="{{ route('affiliate', $affiliate) }}" class="btn-green mt-7">
