@@ -68,7 +68,7 @@
             </h3>
 
             @if ($affiliate->take)
-                <div class="bg-gradient-to-r from-white/75 dark:from-gray-800/75 to-white/30 dark:to-gray-800/30 my-8 px-4 py-6 sm:p-8 rounded-xl shadow-xl dark:shadow-none">
+                <div class="bg-[#fdfdfe] dark:bg-[#1b2432] my-8 px-4 py-6 sm:p-8 rounded-xl shadow-xl dark:shadow-none">
                     <div class="not-prose">
                         <div class="flex items-center gap-4">
                             <a href="{{ route('affiliate', $affiliate) }}" class="flex-shrink-0 relative w-[40px] h-[40px] sm:w-[48px] sm:h-[48px]">
@@ -82,7 +82,7 @@
                                     loading="lazy"
                                     src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}"
                                     alt="{{ $post->user->name }}"
-                                    class="absolute -bottom-2 -right-2 border-2 border-white dark:border-gray-800 rounded-full w-2/3 z-20"
+                                    class="absolute -bottom-2 -right-2 ring-4 ring-white dark:ring-gray-800 rounded-full w-2/3 z-20"
                                 />
                             </a>
 
