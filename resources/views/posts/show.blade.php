@@ -27,6 +27,7 @@
             :email="$post->user->email"
             :name="$post->user->name"
             :read-time="$post->read_time"
+            :updated-at="$post->updated_at"
             class="container mt-4"
         />
 
