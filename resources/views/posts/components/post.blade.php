@@ -69,7 +69,7 @@
             </h3>
 
             @if ($affiliate->take)
-                <div class="border dark:border-gray-800 px-4 py-6 sm:p-8 rounded">
+                <div class="bg-white/75 dark:bg-gray-800 px-4 py-6 sm:p-8 rounded-lg shadow-xl dark:shadow-none">
                     <div class="not-prose">
                         <div class="flex items-center gap-4">
                             <a href="{{ route('affiliate', $affiliate) }}" class="flex-shrink-0">
@@ -112,7 +112,7 @@
                         @endif
 
                         @if ($affiliate->annual_discount || $affiliate->guarantee)
-                            <table>
+                            <table class="w-full">
                                 @if ($affiliate->annual_discount)
                                     <tr>
                                         <th class="pl-0 pr-2 text-right">Annual discount</th>
