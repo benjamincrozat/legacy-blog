@@ -68,7 +68,7 @@
             </h3>
 
             @if ($affiliate->take)
-                <div class="bg-[#fdfdfe] dark:bg-[#1b2432] my-8 px-4 py-6 sm:p-8 rounded-xl shadow-xl dark:shadow-none">
+                <div class="bg-[#fdfdfe] dark:bg-[#1b2432] mb-8 !mt-4 px-4 py-6 sm:p-8 rounded-xl shadow-xl dark:shadow-none">
                     <div class="not-prose">
                         <div class="flex items-center gap-4">
                             <a href="{{ route('affiliate', $affiliate) }}" class="flex-shrink-0 relative w-[40px] h-[40px] sm:w-[48px] sm:h-[48px]">
