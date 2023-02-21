@@ -131,7 +131,7 @@
                     </div>
 
                     <a href="{{ route('affiliate', $affiliate) }}" class="btn-green mt-7">
-                        Try {{ $post->user->name }}
+                        Try {{ $affiliate->name }}
                     </a>
                 </div>
             @endif
