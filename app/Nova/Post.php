@@ -74,7 +74,7 @@ HTML;
                 ->rules('nullable'),
 
             Markdown::make('Content')
-                ->rules('required'),
+                ->rules('nullable'),
 
             Markdown::make('Conclusion')
                 ->rules('nullable'),
