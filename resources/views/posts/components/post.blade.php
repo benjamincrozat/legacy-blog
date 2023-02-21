@@ -6,7 +6,7 @@
     <x-posts::metadata
         :email="$post->user->email"
         :name="$post->user->name"
-        :read-time="$post->read_time"
+        :read-time="empty($attributes) ? 0 : $post->read_time"
         :updated-at="$post->updated_at"
         class="container mt-4"
     />
@@ -69,7 +69,7 @@
             </h3>
 
             @if ($affiliate->take)
-                <div class="bg-gradient-to-r from-white/75 dark:from-gray-800/75 to-white/30 dark:to-gray-800/30 my-8 px-4 py-6 sm:p-8 rounded-lg shadow-xl dark:shadow-none">
+                <div class="bg-gradient-to-r from-white/75 dark:from-gray-800/75 to-white/30 dark:to-gray-800/30 my-8 px-4 py-6 sm:p-8 rounded-xl shadow-xl dark:shadow-none">
                     <div class="not-prose">
                         <div class="flex items-center gap-4">
                             <a href="{{ route('affiliate', $affiliate) }}" class="flex-shrink-0">

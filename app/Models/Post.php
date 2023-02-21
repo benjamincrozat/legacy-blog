@@ -89,7 +89,7 @@ class Post extends BaseModel implements Feedable
     public function readTime() : Attribute
     {
         return Attribute::make(function () {
-            $words = str_word_count(strip_tags($this->content));
+            $words = str_word_count(strip_tags(view('posts.components.post', ['post' => $this])->render()));
             $minutes = ceil($words / 200);
 
             return 0 === $minutes ? 1 : $minutes;
