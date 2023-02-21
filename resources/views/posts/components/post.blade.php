@@ -47,7 +47,7 @@
     </div>
 
     @if ($post->affiliates->isNotEmpty())
-        <div class="!container content mt-8">
+        <div class="!container content mt-4">
             <ol>
                 @foreach ($post->affiliates as $affiliate)
                     <li>
