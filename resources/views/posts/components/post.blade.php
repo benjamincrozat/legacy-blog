@@ -47,8 +47,8 @@
     </div>
 
     @if ($post->affiliates->isNotEmpty())
-        <div class="content">
-            <ul>
+        <div class="!container content">
+            <ol>
                 @foreach ($post->affiliates as $affiliate)
                     <li>
                         <a href="#{{ $affiliate->slug }}">
@@ -58,7 +58,7 @@
                         </a>
                     </li>
                 @endforeach
-            </ul>
+            </ol>
         </div>
     @endif
 
