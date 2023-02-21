@@ -44,13 +44,6 @@ class PostTest extends TestCase
         $this->assertEquals($post->user->email, $post->user_email);
     }
 
-    public function test_it_has_a_read_time_attribute() : void
-    {
-        $post = Post::factory()->create(['content' => fake()->words(201, true)]);
-
-        $this->assertEquals(2, $post->read_time);
-    }
-
     public function test_it_feeds_the_feed() : void
     {
         Post::factory(10)->create();

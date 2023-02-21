@@ -12,7 +12,7 @@
                 />
 
                 <p>
-                    <a href="{{ route('consulting.cto') }}" target="_blank" rel="noopener noreferrer" class="font-medium" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">{{ $post->user->name }}</a> — <span class="opacity-75">@choice(':count&nbsp;min|:count&nbsp;mins', $post->read_time) read</span>
+                    <a href="{{ route('consulting.cto') }}" target="_blank" rel="noopener noreferrer" class="font-medium" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">{{ $post->user->name }}</a>
                 </p>
             </div>
 

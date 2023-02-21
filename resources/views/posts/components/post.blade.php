@@ -6,7 +6,6 @@
     <x-posts::metadata
         :email="$post->user->email"
         :name="$post->user->name"
-        :read-time="empty($attributes) ? 0 : $post->read_time"
         :updated-at="$post->updated_at"
         class="container mt-4"
     />

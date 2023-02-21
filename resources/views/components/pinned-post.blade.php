@@ -29,20 +29,14 @@
             class="-translate-y-[.5px] rounded-full"
         />
 
-        <div>
-            <a
-                href="{{ route('consulting.cto') }}"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="font-medium"
-                @click="window.fathom?.trackGoal('LNRXVF3B', 0)"
-            >
-                {{ $post->user->name }}
-            </a>
-            —
-            <span class="opacity-75">
-                @choice(':count&nbsp;min|:count&nbsp;mins', $post->read_time) read
-            </span>
-        </div>
+        <a
+            href="{{ route('consulting.cto') }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-medium"
+            @click="window.fathom?.trackGoal('LNRXVF3B', 0)"
+        >
+            {{ $post->user->name }}
+        </a>
     </div>
 </div>
