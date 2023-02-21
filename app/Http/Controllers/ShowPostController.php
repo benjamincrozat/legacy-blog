@@ -11,7 +11,7 @@ class ShowPostController extends Controller
     {
         return view('posts.show', [
             'post' => $post,
-            'recommended' => Post::with('user')
+            'recommended' => Post::with('affiliates', 'user')
                 ->withRecommendations(
                     recommendations: $post->recommendations,
                     excluding: $post->id,

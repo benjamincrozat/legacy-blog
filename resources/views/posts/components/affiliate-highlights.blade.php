@@ -1,7 +1,7 @@
 @if ($promotesAffiliateLinks && $highlights->isNotEmpty())
     <div {{ $attributes->except('highlights') }}>
         <div
-            class="grid
+            class="grid place-items-center
             @if ($highlights->count() >= 4)
                 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
             @elseif ($highlights->count() >= 3)
@@ -14,7 +14,7 @@
             @foreach ($highlights as $highlight)
                 <x-posts::affiliate-highlight
                     :highlight="$highlight"
-                    class="col-span-1"
+                    class="col-span-1 h-full"
                 />
             @endforeach
         </div>
