@@ -29,14 +29,18 @@
             class="-translate-y-[.5px] rounded-full"
         />
 
-        <a
-            href="{{ route('consulting.cto') }}"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="font-medium"
-            @click="window.fathom?.trackGoal('LNRXVF3B', 0)"
-        >
-            {{ $post->user->name }}
-        </a>
+        <div>
+            <a
+                href="{{ route('consulting.cto') }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="font-medium"
+                @click="window.fathom?.trackGoal('LNRXVF3B', 0)"
+            >
+                {{ $post->user->name }}
+            </a>
+
+            — Updated on <time datetime="{{ $post->updated_at->toDateTimeString() }}">{{ $post->updated_at->isoFormat('ll') }}
+        </div>
     </div>
 </div>
