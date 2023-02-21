@@ -18,7 +18,7 @@
         </x-posts::breadcrumb-item>
     </x-posts::breadcrumb>
 
-    <x-posts::content :post="$post" class="mt-8" />
+    <x-posts::post :post="$post" class="mt-8" />
 
     <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mt-8 sm:mt-16 mx-auto w-[100px]"></div>
 

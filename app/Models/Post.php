@@ -100,7 +100,7 @@ class Post extends BaseModel implements Feedable
     {
         return Attribute::make(
             fn () => TreeGenerator::generate(
-                view('posts.components.content', ['post' => $this])->render()
+                view('posts.components.post', ['post' => $this])->render()
             )
         )->shouldCache();
     }

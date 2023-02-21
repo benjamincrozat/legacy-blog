@@ -46,13 +46,27 @@
         {!! $post->rendered_content !!}
     </div>
 
+    @if ($post->affiliates->isNotEmpty())
+        <div class="content">
+            <ul>
+                <li>
+                    <a href="#{{ $affiliate->slug }}">
+                        <a href="{{ route('affiliate', $affiliate) }}" class="font-semibold">
+                            {{ $affiliate->name }}
+                        </a>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    @endif
+
     @foreach ($post->affiliates as $affiliate)
         <div class="!container content">
-            <h2 id="{{ $affiliate->slug }}">
+            <h3 id="{{ $affiliate->slug }}">
                 <a href="{{ route('affiliate', $affiliate) }}" class="!font-semibold">
                     {{ $affiliate->name }}
                 </a>
-            </h2>
+            </h3>
 
             @if ($affiliate->take)
                 <div class="border dark:border-gray-800 px-4 py-6 sm:p-8 rounded">
