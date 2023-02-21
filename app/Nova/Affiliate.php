@@ -27,7 +27,7 @@ class Affiliate extends Resource
         return [
             ID::make()->sortable(),
 
-            URL::make('Image')
+            URL::make('Icon')
                 ->displayUsing(function () {
                     return <<<HTML
 <img src="$this->icon" width="50" height="50" class="aspect-square" style="object-fit: cover" />
