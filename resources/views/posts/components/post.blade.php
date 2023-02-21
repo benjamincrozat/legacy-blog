@@ -167,7 +167,7 @@
             @endif
 
             <a href="{{ route('affiliate', $affiliate) }}" class="btn-green mt-8">
-                Try {{ $post->user->name }}
+                Try {{ $affiliate->name }}
             </a>
         </div>
     @endforeach
