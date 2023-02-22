@@ -19,7 +19,7 @@ class HomeController extends Controller
             ->get();
 
         $affiliates = Post::with('user')
-            ->latest()
+            ->inRandomOrder()
             ->where('promotes_affiliate_links', true)
             ->limit(6)
             ->get();
