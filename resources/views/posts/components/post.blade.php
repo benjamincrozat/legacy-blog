@@ -1,6 +1,6 @@
 <article {{ $attributes }}>
     @if ($post->promotes_affiliate_links)
-        <div class="container mt-4 text-lg md:text-xl">
+        <div class="container mb-4 text-lg md:text-xl">
             from <strong class="font-semibold">{{ $post->user->name }}</strong>
         </div>
 
