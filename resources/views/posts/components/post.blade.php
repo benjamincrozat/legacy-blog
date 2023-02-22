@@ -6,7 +6,7 @@
     <x-posts::metadata
         :email="$post->user->email"
         :name="$post->user->name"
-        :modified-at="$post->modified_at"
+        :modified-at="$post->modified_at ?? $post->created_at"
         class="container mt-4"
     />
 
