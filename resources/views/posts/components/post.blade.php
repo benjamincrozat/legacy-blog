@@ -1,4 +1,4 @@
-<article {{ ($attributes ?? null)?->except('post') }}>
+<article {{ $attributes }}>
     <h1 class="@if ($post->ai) before:content-['AI-generated:'] before:text-indigo-400 @endif container font-thin text-3xl md:text-5xl dark:text-white">
         {{ $post->title }}
     </h1>
@@ -22,13 +22,25 @@
         </div>
     @endif
 
-    <x-posts::affiliate-highlights
-        :highlights="$post->affiliates->where(app()->isProduction() ? 'pivot.position' : 'position')"
-        :promotes-affiliate-links="$post->promotes_affiliate_links"
-        class="container mt-8"
-    />
+    @if ($post->promotes_affiliate_links && $highlights->isNotEmpty())
+        <div class="container mt-8">
+            <div class="grid sm:grid-cols-2 @if ($highlights->count() > 2) md:grid-cols-3 @endif place-items-center gap-4 text-center">
+                @foreach ($highlights as $highlight)
+                    <x-posts::affiliate-highlight
+                        :highlight="$highlight"
+                        class="col-span-1 h-full"
+                    />
+                @endforeach
+            </div>
 
-    @if (! empty($attributes))
+            <p class="mt-4 opacity-75 text-center text-xs">
+                This article uses affiliate links, which can compensate me at no cost to you if you decide to pursue a deal. @if ($highlights->count() > 1) <br class="hidden md:inline" /> @endif
+                I only promote products I've personally used and stand behind.
+            </p>
+        </div>
+    @endif
+
+    @if (empty($barebone))
         <x-posts::tree
             :tree="$post->tree"
             class="container mt-8"
@@ -93,7 +105,7 @@
                     </div>
 
                     <div class="mt-4">
-                        {{ $affiliate->take }}
+                        {!! $affiliate->rendered_take !!}
 
                         @if ($affiliate->rating)
                             <div class="mt-8 text-center">

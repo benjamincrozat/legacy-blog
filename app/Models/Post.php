@@ -10,6 +10,7 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Builder;
 use Algolia\AlgoliaSearch\RecommendClient;
+use Illuminate\View\ComponentAttributeBag;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -78,7 +79,7 @@ class Post extends BaseModel implements Feedable
 
     public function affiliates() : BelongsToMany
     {
-        return $this->belongsToMany(Affiliate::class)->withPivot('position')->orderBy('position');
+        return $this->belongsToMany(Affiliate::class)->withPivot('position')->orderByPivot('position');
     }
 
     public function pins() : HasMany
@@ -90,7 +91,12 @@ class Post extends BaseModel implements Feedable
     {
         return Attribute::make(
             fn () => TreeGenerator::generate(
-                view('posts.components.post', ['post' => $this])->render()
+                view('posts.components.post', [
+                    'barebone' => true,
+                    'attributes' => new ComponentAttributeBag,
+                    'highlights' => collect(),
+                    'post' => $this,
+                ])->render()
             )
         )->shouldCache();
     }
