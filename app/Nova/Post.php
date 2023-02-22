@@ -130,6 +130,8 @@ HTML;
                     return [
                         Number::make('Position')
                             ->rules('nullable', 'min:1'),
+
+                        Boolean::make('Highlight'),
                     ];
                 })
                 ->searchable(),

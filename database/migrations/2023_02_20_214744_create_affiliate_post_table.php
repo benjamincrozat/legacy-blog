@@ -13,7 +13,7 @@ return new class extends Migration {
             $table->id();
             $table->foreignIdFor(Affiliate::class);
             $table->foreignIdFor(Post::class);
-            $table->unsignedInteger('position')->nullable();
+            $table->unsignedInteger('position')->default(0);
         });
     }
 

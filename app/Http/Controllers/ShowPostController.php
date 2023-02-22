@@ -10,7 +10,9 @@ class ShowPostController extends Controller
     public function __invoke(Post $post) : View
     {
         return view('posts.show', [
-            'highlights' => $post->affiliates()->wherePivotNotNull('position')->get(),
+            'highlights' => $post->affiliates()
+                ->wherePivot('highlight', true)
+                ->get(),
             'post' => $post,
             'recommended' => Post::with('affiliates', 'user')
                 ->withRecommendations(
