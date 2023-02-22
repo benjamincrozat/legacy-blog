@@ -105,13 +105,13 @@
         @if ($ai->isNotEmpty())
             <section class="container lg:max-w-[1024px] mt-16">
                 <div class="text-center">
-                    <div class="font-semibold px-4 sm:px-0 text-xl">
+                    <div class="font-normal px-4 sm:px-0 text-xl">
                         @if ($ai->onFirstPage())
                             <span class="bg-clip-text bg-gradient-to-r from-indigo-300 to-indigo-400 inline-block">
                                 <span class="text-transparent">AI-generated</span>
                             </span>
 
-                            <p class="mt-4 text-sm">This is an <strong class="text-black">experimental</strong> way of writing new content using ChatGPT.<br class="hidden sm:inline" /> <strong class="text-black">These articles are marked as such</strong> and <strong class="text-black">live in a sandbox</strong>.</p>
+                            <p class="mt-4 text-sm">This is an <strong class="text-semibold">experimental</strong> way of writing new content using ChatGPT.<br class="hidden sm:inline" /> <strong class="text-semibold">These articles are marked as such</strong> and <strong class="text-semibold">live in a sandbox</strong>.</p>
                         @else
                             Page {{ $ai->currentPage() }}
                         @endif
