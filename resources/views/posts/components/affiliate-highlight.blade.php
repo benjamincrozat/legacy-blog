@@ -20,7 +20,7 @@
     </div>
 
     <div class="content flex-grow mt-3 text-center !text-sm">
-        {{ $highlight->highlight_text }}
+        {{ $highlight->rendered_highlight_text }}
     </div>
 
     <a

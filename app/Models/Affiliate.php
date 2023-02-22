@@ -15,6 +15,13 @@ class Affiliate extends BaseModel
         return $this->belongsToMany(Post::class)->withPivot('position');
     }
 
+    public function renderedHighlightText() : Attribute
+    {
+        return Attribute::make(
+            fn () => str($this->highlight_text ?? '')->marxdown()
+        )->shouldCache();
+    }
+
     public function renderedTake() : Attribute
     {
         return Attribute::make(
