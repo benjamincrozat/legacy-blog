@@ -40,7 +40,7 @@
                 {{ $post->user->name }}
             </a>
 
-            — Updated on <time datetime="{{ $post->modified_at->toDateTimeString() }}">{{ $post->modified_at->isoFormat('ll') }}
+            — Updated on <time datetime="{{ $post->modified_at?->toDateTimeString() }}">{{ $post->modified_at?->isoFormat('ll') }}
         </div>
     </div>
 </div>
