@@ -25,7 +25,6 @@ return new class() extends Migration {
             $table->text('cons')->nullable();
             $table->string('highlight_title')->nullable();
             $table->text('highlight_text')->nullable();
-            $table->unsignedInteger('position')->nullable();
             $table->timestamps();
         });
     }

@@ -28,7 +28,6 @@ class AffiliateFactory extends Factory
             'cons' => '- ' . collect(fake()->sentences(mt_rand(3, 10)))->join("\n- "),
             'highlight_title' => fake()->sentence(mt_rand(1, 3)),
             'highlight_text' => fake()->paragraph,
-            'position' => fake()->numberBetween(1, 10),
         ];
     }
 }

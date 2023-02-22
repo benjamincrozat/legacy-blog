@@ -1,14 +1,28 @@
 <article {{ $attributes }}>
-    <h1 class="@if ($post->ai) before:content-['AI-generated:'] before:text-indigo-400 @endif container font-thin text-3xl md:text-5xl dark:text-white">
-        {{ $post->title }}
-    </h1>
+    @if ($post->promotes_affiliate_links)
+        <div class="container flex items-center justify-between gap-8">
+            <h1 class="font-thin text-3xl md:text-5xl dark:text-white">
+                {{ $post->title }}
+            </h1>
 
-    <x-posts::metadata
-        :email="$post->user->email"
-        :name="$post->user->name"
-        :modified-at="$post->modified_at ?? $post->created_at"
-        class="container mt-4"
-    />
+            <img src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}?s=192" width="96" height="96" alt="{{ $post->user->name }}" class="flex-shrink-0 w-16 h-16 sm:w-24 sm:h-24 rounded-full" />
+        </div>
+
+        <div class="container mt-4 text-lg md:text-xl">
+            From <strong class="font-semibold">{{ $post->user->name }}</strong>
+        </div>
+    @else
+        <h1 class="@if ($post->ai) before:content-['AI-generated:'] before:text-indigo-400 @endif container font-thin text-3xl md:text-5xl dark:text-white">
+            {{ $post->title }}
+        </h1>
+
+        <x-posts::metadata
+            :email="$post->user->email"
+            :name="$post->user->name"
+            :modified-at="$post->modified_at ?? $post->created_at"
+            class="container mt-4"
+        />
+    @endif
 
     <x-posts::newsletter
         :promotes-affiliate-links="$post->promotes_affiliate_links"

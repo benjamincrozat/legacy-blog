@@ -79,7 +79,9 @@ class Post extends BaseModel implements Feedable
 
     public function affiliates() : BelongsToMany
     {
-        return $this->belongsToMany(Affiliate::class)->withPivot('position')->orderByPivot('position');
+        return $this->belongsToMany(Affiliate::class)
+            ->withPivot('position', 'highlight')
+            ->orderByPivot('position');
     }
 
     public function pins() : HasMany
