@@ -19,7 +19,7 @@
         </figure>
     </div>
 
-    <div class="content flex-grow mt-3 text-center !text-sm">
+    <div class="content flex-grow mt-3 !text-sm">
         {!! $highlight->rendered_highlight_text !!}
     </div>
 
