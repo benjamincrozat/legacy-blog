@@ -31,6 +31,7 @@
     <x-posts::divider class="-mt-4" />
 
     <x-posts::recommended
+        :promotes-affiliate-links="$post->promotes_affiliate_links"
         :recommended="$recommended"
         class="container max-w-[1024px] mt-8 sm:mt-16"
     />

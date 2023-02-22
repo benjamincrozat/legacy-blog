@@ -73,12 +73,4 @@
             </div>
         </nav>
     </div>
-@else
-    <div class="-mb-2 mt-8 text-center">
-        <a href="{{ route('home') }}" class="font-bold !leading-none text-lg dark:text-white">
-            Benjamin Crozat
-        </a>
-
-        <div class="opacity-75">The art of crating web applications</div>
-    </div>
 @endif
