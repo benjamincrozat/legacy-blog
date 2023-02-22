@@ -8,8 +8,8 @@
             <img src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}?s=192" width="96" height="96" alt="{{ $post->user->name }}" class="flex-shrink-0 w-16 h-16 sm:w-24 sm:h-24 rounded-full" />
         </div>
 
-        <div class="container mt-4 text-lg md:text-xl">
-            From <strong class="font-semibold">{{ $post->user->name }}</strong>
+        <div class="container mt-4 opacity-75 text-lg md:text-xl">
+            from <strong class="font-semibold">{{ $post->user->name }}</strong>
         </div>
     @else
         <h1 class="@if ($post->ai) before:content-['AI-generated:'] before:text-indigo-400 @endif container font-thin text-3xl md:text-5xl dark:text-white">
