@@ -189,12 +189,36 @@
             @endif
 
             @if ($affiliate->pros)
-                <p class="font-bold">What I like:</p>
+                <p class="flex font-bold items-center gap-2">
+                    <img
+                        loading="lazy"
+                        src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}"
+                        width="18"
+                        height="18"
+                        alt="{{ $post->user->name }}"
+                        class="rounded-full"
+                    />
+
+                    <span>What I like:</span>
+                </p>
+
                 {!! $affiliate->rendered_pros !!}
             @endif
 
             @if ($affiliate->cons)
-                <p class="font-bold">What I dislike:</h4>
+                <p class="flex font-bold items-center gap-2">
+                    <img
+                        loading="lazy"
+                        src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}"
+                        width="18"
+                        height="18"
+                        alt="{{ $post->user->name }}"
+                        class="rounded-full"
+                    />
+
+                    <span>What I dislike:</span>
+                </p>
+
                 {!! $affiliate->rendered_cons !!}
             @endif
 
