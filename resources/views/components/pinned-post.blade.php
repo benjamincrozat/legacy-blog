@@ -31,7 +31,7 @@
 
         <div>
             <a
-                href="{{ route('consulting.cto') }}"
+                href="https://twitter.com/benjamincrozat"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="font-medium"
@@ -39,8 +39,8 @@
             >
                 {{ $post->user->name }}
             </a>
-
-            — Updated on <time datetime="{{ $post->modified_at?->toDateTimeString() }}">{{ $post->modified_at?->isoFormat('ll') }}
+            —
+            Updated on <time datetime="{{ ($post->modified_at ?? $post->created_at)?->toDateTimeString() }}">{{ ($post->modified_at ?? $post->created_at)?->isoFormat('ll') }}
         </div>
     </div>
 </div>

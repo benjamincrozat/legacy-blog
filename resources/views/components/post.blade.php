@@ -12,7 +12,11 @@
                 />
 
                 <div class="line-clamp-1">
-                    <a href="{{ route('consulting.cto') }}" target="_blank" rel="noopener noreferrer" class="font-medium" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">{{ $post->user->name }}</a> — <span class="sr-only sm:not-sr-only">Updated on</span> <time datetime="{{ ($post->modified_at ?? $post->created_at)?->toDateTimeString() }}">{{ ($post->modified_at ?? $post->created_at)?->isoFormat('ll') }}</time>
+                    <a href="https://twitter.com/benjamincrozat" target="_blank" rel="noopener noreferrer" class="font-medium" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">
+                        {{ $post->user->name }}
+                    </a>
+                    —
+                    <span class="sr-only sm:not-sr-only">Updated on</span> <time datetime="{{ ($post->modified_at ?? $post->created_at)?->toDateTimeString() }}">{{ ($post->modified_at ?? $post->created_at)?->isoFormat('ll') }}</time>
                 </div>
             </div>
 
