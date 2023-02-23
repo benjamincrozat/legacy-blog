@@ -3,16 +3,16 @@
         'rel' => 'nofollow noopener noreferrer',
         'class' => 'block container md:max-w-screen-sm'
     ]) }}>
-        <div class="border flex items-center gap-4 p-4 rounded-md">
+        <div class="border flex gap-4 p-4 rounded-md text-sm">
             <img
                 src="{{ $affiliate->icon }}"
                 alt="{{ $affiliate->name }}"
                 class="aspect-square flex-shrink-0 rounded w-[48px] sm:w-[64px] h-[48px] sm:h-[64px]"
             />
 
-            <div class="text-sm">
-                <div class="font-bold line-clamp-2">{{ $affiliate->ad_title }}</div>
-                <div class="line-clamp-2">{!! $affiliate->rendered_ad_content !!}</div>
+            <div>
+                <div class="font-bold">{{ $affiliate->ad_title }}</div>
+                <div>{!! $affiliate->rendered_ad_content !!}</div>
             </div>
         </div>
     </a>
