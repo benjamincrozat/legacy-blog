@@ -1,5 +1,5 @@
 @if ($recommended->isNotEmpty())
-    <div {{ $attributes }}>
+    <div {{ $attributes->except('recommended') }}>
         <div class="font-semibold text-center text-xl">
             Recommended
         </div>
