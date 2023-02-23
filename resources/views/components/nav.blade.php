@@ -1,5 +1,5 @@
 <div {{ $attributes->merge(['class' => 'container flex items-center justify-between'])}}>
-    <a href="{{ route('home') }}" class="flex items-center gap-3">
+    <a href="{{ route('home') }}" class="flex flex-shrink-0 items-center gap-3">
         <x-icon-logo class="fill-current flex-shrink-0 w-10 h-10" />
 
         <span class="leading-tight sr-only md:not-sr-only text-sm">
