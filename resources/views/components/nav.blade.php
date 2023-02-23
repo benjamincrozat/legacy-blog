@@ -84,7 +84,7 @@
 
             <span class="leading-tight sr-only md:not-sr-only text-sm">
                 <span class="block font-medium">Benjamin Crozat</span>
-                <span class="block opacity-75">Learn art of crafting web applications</span>
+                <span class="block opacity-75">The art of crafting web applications</span>
             </span>
         </a>
     </div>
