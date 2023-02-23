@@ -7,9 +7,7 @@
             <img
                 src="{{ $affiliate->icon }}"
                 alt="{{ $affiliate->name }}"
-                width="64"
-                height="64"
-                class="aspect-square flex-shrink-0 rounded"
+                class="aspect-square flex-shrink-0 rounded w-[48px] sm:w-[64px] h-[48px] sm:h-[64px]"
             />
 
             <div class="text-sm">
