@@ -189,7 +189,9 @@
             @endif
 
             @if ($affiliate->pros)
-                <p class="flex font-bold items-center gap-2">
+                <p class="flex font-bold items-center gap-2 text-lg sm:text-xl">
+                    <span>Here's what I love about {{ $affiliate->name }}…</span>
+
                     <img
                         loading="lazy"
                         src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}?s=48"
@@ -198,15 +200,15 @@
                         alt="{{ $post->user->name }}"
                         class="rounded-full"
                     />
-
-                    <span>What I like:</span>
                 </p>
 
                 {!! $affiliate->rendered_pros !!}
             @endif
 
-            @if ($affiliate->cons)
-                <p class="flex font-bold items-center gap-2">
+            @if ($affiliate->pros)
+                <p class="flex font-bold items-center gap-2 text-lg sm:text-xl">
+                    <span>And what's not so good…</span>
+
                     <img
                         loading="lazy"
                         src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}?s=48"
@@ -215,11 +217,9 @@
                         alt="{{ $post->user->name }}"
                         class="rounded-full"
                     />
-
-                    <span>What I dislike:</span>
                 </p>
 
-                {!! $affiliate->rendered_cons !!}
+                {!! $affiliate->rendered_pros !!}
             @endif
 
             <a href="{{ route('affiliate', $affiliate) }}" class="btn-green mt-8">
