@@ -22,12 +22,14 @@ class AffiliateFactory extends Factory
             'annual_discount' => fake()->sentence(),
             'guarantee' => fake()->sentence(),
             'content' => fake()->paragraphs(mt_rand(2, 4), true),
-            'pricing' => fake()->paragraph,
+            'pricing' => fake()->paragraph(),
             'key_features' => '- ' . collect(fake()->sentences(mt_rand(3, 10)))->join("\n- "),
             'pros' => '- ' . collect(fake()->sentences(mt_rand(3, 10)))->join("\n- "),
             'cons' => '- ' . collect(fake()->sentences(mt_rand(3, 10)))->join("\n- "),
             'highlight_title' => fake()->sentence(mt_rand(1, 3)),
-            'highlight_text' => fake()->paragraph,
+            'highlight_text' => fake()->paragraph(),
+            'ad_title' => fake()->sentence(),
+            'ad_content' => fake()->paragraph(mt_rand(1, 2)),
         ];
     }
 }

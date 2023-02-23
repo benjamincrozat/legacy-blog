@@ -5,8 +5,26 @@
 >
     <x-nav class="container mt-6" />
 
+    <x-ad class="mt-10 md:mt-16" />
+
     @if ($ai->onFirstPage() && $posts->onFirstPage())
-        <x-newsletter class="container mt-16">
+        @if ($pins->isNotEmpty())
+            <section class="md:container md:max-w-[1024px] mt-8 md:mt-12">
+                <div class="font-semibold px-4 md:px-0 text-center text-xl">
+                    Featured
+                </div>
+
+                <div class="flex md:grid md:grid-cols-2 gap-4 md:gap-8 mt-8 px-4 md:px-0 overflow-x-scroll md:overflow-x-visible snap-x md:snap-none snap-mandatory">
+                    @foreach ($pins as $pin)
+                        <x-pinned-post :post="$pin->post" :first="$loop->first" />
+                    @endforeach
+                </div>
+            </section>
+        @endif
+
+        <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mt-16 mx-auto w-[100px]"></div>
+
+        <x-newsletter class="container mt-8 md:mt-16">
             <div class="md:flex md:items-center mt-8">
                 <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" width="96" height="96" alt="Benjamin Crozat" class="float-right md:float-none mb-4 ml-4 mt-4 md:m-0 md:order-1 rounded-full w-[80px] h-[80px] md:w-[96px] md:h-[96px]" />
 
@@ -30,21 +48,11 @@
             </div>
         </x-newsletter>
 
-        @if ($pins->isNotEmpty())
-            <section class="md:container md:max-w-[1024px] mt-16">
-                <div class="font-semibold px-4 md:px-0 text-center text-xl">
-                    Featured
-                </div>
+        <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mt-8 md:mt-16 mx-auto w-[100px]"></div>
 
-                <div class="flex md:grid md:grid-cols-2 gap-4 md:gap-8 mt-8 px-4 md:px-0 overflow-x-scroll md:overflow-x-visible snap-x md:snap-none snap-mandatory">
-                    @foreach ($pins as $pin)
-                        <x-pinned-post :post="$pin->post" :first="$loop->first" />
-                    @endforeach
-                </div>
-            </section>
-        @endif
+        <x-ad class="mt-16" />
 
-        <section class="container lg:max-w-[1024px] mt-16">
+        <section class="container lg:max-w-[1024px] mt-12">
             <div class="font-semibold px-4 sm:px-0 text-center text-xl">
                 Most popular
             </div>
@@ -61,7 +69,7 @@
 
     @if ($ai->onFirstPage())
         @if ($posts->onFirstPage())
-            <section class="container lg:max-w-[1024px] mt-16">
+            <section class="container lg:max-w-[1024px] mt-12 md:mt-16">
                 <div class="font-semibold px-4 sm:px-0 text-center text-xl">
                     Services and tools for your projects
                 </div>
@@ -76,7 +84,9 @@
             </section>
         @endif
 
-        <section class="container lg:max-w-[1024px] mt-16">
+        <x-ad class="mt-16" />
+
+        <section class="container lg:max-w-[1024px] mt-12">
             <div class="font-semibold px-4 sm:px-0 text-center text-xl">
                 @if ($posts->onFirstPage())
                     Latest
