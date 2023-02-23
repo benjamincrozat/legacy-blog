@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->foreignIdFor(Affiliate::class);
             $table->foreignIdFor(Post::class);
             $table->unsignedInteger('position')->default(0);
+            $table->boolean('highlight')->default(false);
         });
     }
 

@@ -63,4 +63,11 @@ class Affiliate extends BaseModel
             fn () => str($this->cons ?? '')->marxdown()
         )->shouldCache();
     }
+
+    public function renderedAdContent() : Attribute
+    {
+        return Attribute::make(
+            fn () => str($this->ad_content ?? '')->marxdown()
+        )->shouldCache();
+    }
 }

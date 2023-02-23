@@ -97,6 +97,13 @@ HTML;
             Markdown::make('Highlight text')
                 ->rules('nullable'),
 
+            Text::make('Ad title')
+                ->rules('nullable', 'max:255')
+                ->hideFromIndex(),
+
+            Markdown::make('Ad text')
+                ->rules('nullable'),
+
             BelongsToMany::make('Posts')
                 ->fields(function () {
                     return [
