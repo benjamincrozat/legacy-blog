@@ -198,7 +198,7 @@
                         width="24"
                         height="24"
                         alt="{{ $post->user->name }}"
-                        class="rounded-full"
+                        class="m-0 rounded-full"
                     />
                 </p>
 
@@ -215,7 +215,7 @@
                         width="24"
                         height="24"
                         alt="{{ $post->user->name }}"
-                        class="rounded-full"
+                        class="m-0 rounded-full"
                     />
                 </p>
 
