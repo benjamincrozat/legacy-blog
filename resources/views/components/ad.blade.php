@@ -3,7 +3,7 @@
         'rel' => 'nofollow noopener noreferrer',
         'class' => 'block container md:max-w-screen-sm'
     ]) }}>
-        <div class="border flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-start sm:gap-4 p-4 rounded-md text-center sm:text-left text-sm">
+        <div class="border border-gray-200 dark:border-gray-800 flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-start sm:gap-4 p-4 rounded-md text-center sm:text-left text-sm">
             <img
                 src="{{ $affiliate->icon }}"
                 alt="{{ $affiliate->name }}"
