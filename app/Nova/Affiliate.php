@@ -95,7 +95,7 @@ HTML;
                 ->hideFromIndex(),
 
             Markdown::make('Highlight text')
-                ->rules('required'),
+                ->rules('nullable'),
 
             BelongsToMany::make('Posts')
                 ->fields(function () {
