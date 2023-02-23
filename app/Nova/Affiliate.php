@@ -101,7 +101,7 @@ HTML;
                 ->rules('nullable', 'max:255')
                 ->hideFromIndex(),
 
-            Markdown::make('Ad text')
+            Markdown::make('Ad content')
                 ->rules('nullable'),
 
             BelongsToMany::make('Posts')
