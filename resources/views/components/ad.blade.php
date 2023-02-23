@@ -13,7 +13,7 @@
             />
 
             <div class="text-sm">
-                <div class="font-bold line-clamp-1">{{ $affiliate->ad_title }}</div>
+                <div class="font-bold line-clamp-2">{{ $affiliate->ad_title }}</div>
                 <div class="line-clamp-2">{!! $affiliate->rendered_ad_content !!}</div>
             </div>
         </div>
