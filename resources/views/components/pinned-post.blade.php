@@ -40,7 +40,7 @@
                 {{ $post->user->name }}
             </a>
             —
-            Updated on <time datetime="{{ ($post->modified_at ?? $post->created_at)?->toDateTimeString() }}">{{ ($post->modified_at ?? $post->created_at)?->isoFormat('ll') }}
+            <span class="sr-only sm:not-sr-only">Updated on</span> <time datetime="{{ ($post->modified_at ?? $post->created_at)?->toDateTimeString() }}">{{ ($post->modified_at ?? $post->created_at)?->isoFormat('ll') }}
         </div>
     </div>
 </div>
