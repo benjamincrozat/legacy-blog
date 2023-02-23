@@ -11,7 +11,7 @@
 
     <x-posts::breadcrumb
         :promotes-affiliate-links="! $post->promotes_affiliate_links"
-        class="container mt-8"
+        class="container mt-10 sm:mt-16"
     >
         <x-posts::breadcrumb-item>
             {{ $post->title }}
