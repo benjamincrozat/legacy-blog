@@ -1,8 +1,12 @@
 @if (empty($funnel))
     <div {{ $attributes->merge(['class' => 'container flex items-center justify-between'])}}>
-        <a href="{{ route('home') }}" class="font-bold !leading-none dark:text-white text-sm md:text-base">
-            <div class="md:inline">Benjamin</div>
-            <div class="md:inline mt-[.15rem] md:mt-0">Crozat</div>
+        <a href="{{ route('home') }}" class="flex items-center gap-3">
+            <x-icon-logo class="fill-current flex-shrink-0 w-10 h-10" />
+
+            <span class="leading-tight sr-only md:not-sr-only text-sm">
+                <span class="block font-medium">Benjamin Crozat</span>
+                <span class="block opacity-75">The art of crafting web applications</span>
+            </span>
         </a>
 
         <nav class="flex items-center gap-6 text-sm">
@@ -33,7 +37,7 @@
                     x-show="open"
                     x-transition
                 >
-                    <div class="my-2 px-4 opacity-50 text-xs">What services do you need?</div>
+                    <div class="my-2 px-4 opacity-50">What services do you need?</div>
 
                     <ul>
                         <li>
@@ -72,5 +76,16 @@
                 </div>
             </div>
         </nav>
+    </div>
+@else
+    <div class="container mt-6">
+        <a href="{{ route('home') }}" class="flex items-center gap-3">
+            <x-icon-logo class="fill-current flex-shrink-0 w-10 h-10" />
+
+            <span class="leading-tight sr-only md:not-sr-only text-sm">
+                <span class="block font-medium">Benjamin Crozat</span>
+                <span class="block opacity-75">Learn art of crafting web applications</span>
+            </span>
+        </a>
     </div>
 @endif
