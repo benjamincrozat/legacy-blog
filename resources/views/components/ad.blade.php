@@ -1,5 +1,8 @@
 @if ($ads->isNotEmpty() && $affiliate = $ads->random())
-    <a href="{{ route('affiliate', $affiliate) }}" {{ $attributes->merge(['class' => 'block container md:max-w-screen-sm']) }}>
+    <a href="{{ route('affiliate', $affiliate) }}" {{ $attributes->merge([
+        'rel' => 'nofollow noopener noreferrer',
+        'class' => 'block container md:max-w-screen-sm'
+    ]) }}>
         <div class="border flex items-center gap-4 p-4 rounded-md">
             <img
                 src="{{ $affiliate->icon }}"
