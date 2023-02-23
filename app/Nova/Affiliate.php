@@ -79,7 +79,7 @@ HTML;
                 ->hideFromIndex(),
 
             Markdown::make('Content')
-                ->rules('required'),
+                ->rules('nullable'),
 
             Markdown::make('Key features')
                 ->rules('nullable'),
