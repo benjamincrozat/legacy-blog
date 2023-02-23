@@ -18,6 +18,7 @@ class ShowPostController extends Controller
                 ->withRecommendations(
                     recommendations: $post->recommendations,
                     excluding: $post->id,
+                    affiliates: $post->promotes_affiliate_links,
                     ai: $post->ai
                 )
                 ->limit(10)

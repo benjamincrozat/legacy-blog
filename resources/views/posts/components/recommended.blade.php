@@ -1,4 +1,4 @@
-@if (empty($promotesAffiliateLinks) && $recommended->isNotEmpty())
+@if ($recommended->isNotEmpty())
     <div {{ $attributes }}>
         <div class="font-semibold text-center text-xl">
             Recommended
