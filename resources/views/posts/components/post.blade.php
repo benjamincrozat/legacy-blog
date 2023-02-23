@@ -192,9 +192,9 @@
                 <p class="flex font-bold items-center gap-2">
                     <img
                         loading="lazy"
-                        src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}"
-                        width="18"
-                        height="18"
+                        src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}?s=48"
+                        width="24"
+                        height="24"
                         alt="{{ $post->user->name }}"
                         class="rounded-full"
                     />
@@ -209,9 +209,9 @@
                 <p class="flex font-bold items-center gap-2">
                     <img
                         loading="lazy"
-                        src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}"
-                        width="18"
-                        height="18"
+                        src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}?s=48"
+                        width="24"
+                        height="24"
                         alt="{{ $post->user->name }}"
                         class="rounded-full"
                     />
