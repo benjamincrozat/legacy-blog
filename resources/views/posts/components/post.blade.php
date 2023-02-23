@@ -205,7 +205,7 @@
                 {!! $affiliate->rendered_pros !!}
             @endif
 
-            @if ($affiliate->pros)
+            @if ($affiliate->cons)
                 <p class="flex font-bold items-center gap-2 text-lg sm:text-xl">
                     <span>And what's not so good…</span>
 
@@ -219,7 +219,7 @@
                     />
                 </p>
 
-                {!! $affiliate->rendered_pros !!}
+                {!! $affiliate->rendered_cons !!}
             @endif
 
             <a href="{{ route('affiliate', $affiliate) }}" class="btn-green mt-8">
