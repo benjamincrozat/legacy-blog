@@ -16,10 +16,10 @@ return new class() extends Migration {
             $table->string('link');
             $table->text('take')->nullable();
             $table->unsignedInteger('rating')->default(0);
+            $table->text('pricing')->nullable();
             $table->string('annual_discount')->nullable();
             $table->string('guarantee')->nullable();
             $table->text('content')->nullable();
-            $table->text('pricing')->nullable();
             $table->text('key_features')->nullable();
             $table->text('pros')->nullable();
             $table->text('cons')->nullable();

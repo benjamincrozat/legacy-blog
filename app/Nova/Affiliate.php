@@ -60,15 +60,14 @@ HTML;
                 ->rules('nullable', 'url'),
 
             Markdown::make('Take')
-                ->rules('nullable')
-                ->hideFromIndex(),
+                ->rules('nullable'),
 
             Number::make('Rating')
                 ->rules('nullable', 'min:0', 'max:10')
                 ->hideFromIndex(),
 
-            Text::make('Pricing')
-                ->rules('nullable', 'max:255')
+            Markdown::make('Pricing')
+                ->rules('nullable')
                 ->hideFromIndex(),
 
             Text::make('Annual discount')
@@ -83,16 +82,13 @@ HTML;
                 ->rules('required'),
 
             Markdown::make('Key features')
-                ->rules('nullable')
-                ->hideFromIndex(),
+                ->rules('nullable'),
 
             Markdown::make('Pros')
-                ->rules('nullable')
-                ->hideFromIndex(),
+                ->rules('nullable'),
 
             Markdown::make('Cons')
-                ->rules('nullable')
-                ->hideFromIndex(),
+                ->rules('nullable'),
 
             Text::make('Highlight title')
                 ->rules('nullable', 'max:255')

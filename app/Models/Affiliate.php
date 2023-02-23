@@ -29,6 +29,13 @@ class Affiliate extends BaseModel
         )->shouldCache();
     }
 
+    public function renderedPricing() : Attribute
+    {
+        return Attribute::make(
+            fn () => str($this->pricing ?? '')->marxdown()
+        )->shouldCache();
+    }
+
     public function renderedContent() : Attribute
     {
         return Attribute::make(

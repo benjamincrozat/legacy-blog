@@ -146,7 +146,7 @@
                                 @if ($affiliate->pricing)
                                     <tr>
                                         <th class="pl-0 pr-2 text-right">Pricing</th>
-                                        <td class="pl-2 pr-0">{{ $affiliate->pricing }}</td>
+                                        <td class="pl-2 pr-0">{!! $affiliate->rendered_pricing !!}</td>
                                     </tr>
                                 @endif
 
