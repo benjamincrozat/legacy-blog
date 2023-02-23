@@ -143,6 +143,13 @@
 
                         @if ($affiliate->annual_discount || $affiliate->guarantee)
                             <table class="w-full">
+                                @if ($affiliate->pricing)
+                                    <tr>
+                                        <th class="pl-0 pr-2 text-right">Pricing</th>
+                                        <td class="pl-2 pr-0">{{ $affiliate->pricing }}</td>
+                                    </tr>
+                                @endif
+
                                 @if ($affiliate->annual_discount)
                                     <tr>
                                         <th class="pl-0 pr-2 text-right">Annual discount</th>
@@ -174,11 +181,6 @@
                 <a href="{{ route('affiliate', $affiliate) }}">
                     <img src="{{ str_replace('/upload', '/upload/dpr_auto,f_auto,q_auto,w_auto', $affiliate->screenshot) }}" alt="{{ $affiliate->name }}" class="aspect-video rounded-lg shadow-md dark:shadow-none w-full" />
                 </a>
-            @endif
-
-            @if ($affiliate->pricing)
-                <p class="font-bold">Pricing:</p>
-                {!! $affiliate->pricing !!}
             @endif
 
             @if ($affiliate->key_features)

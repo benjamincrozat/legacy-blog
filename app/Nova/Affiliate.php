@@ -67,6 +67,10 @@ HTML;
                 ->rules('nullable', 'min:0', 'max:10')
                 ->hideFromIndex(),
 
+            Text::make('Pricing')
+                ->rules('nullable', 'max:255')
+                ->hideFromIndex(),
+
             Text::make('Annual discount')
                 ->rules('nullable', 'max:255')
                 ->hideFromIndex(),
@@ -77,10 +81,6 @@ HTML;
 
             Markdown::make('Content')
                 ->rules('required'),
-
-            Markdown::make('Pricing')
-                ->rules('nullable')
-                ->hideFromIndex(),
 
             Markdown::make('Key features')
                 ->rules('nullable')
