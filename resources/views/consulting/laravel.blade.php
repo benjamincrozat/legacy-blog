@@ -117,18 +117,6 @@
             <div class="grid sm:grid-cols-2 gap-4 mt-8 md:mt-16">
                 <div class="bg-[#161e2e] leading-tight p-8 rounded-xl shadow-md text-white text-xl">
                     <div class="relative w-10 h-10 sm:w-12 sm:h-12">
-                        <x-icon-people class="absolute top-0 -left-1 fill-current w-12 h-12 sm:w-12 sm:h-12 z-20" />
-                        <div class="absolute top-0 left-0 bg-orange-900/50 blur-lg w-12 h-12 sm:w-12 sm:h-12 z-10"></div>
-                    </div>
-
-                    <div class="mt-6">
-                        <div class="text-orange-500">@lang('I help you hire the right talents.')</div>
-                        <div class="font-thin mt-2">@lang('Having an experienced developer at your side when recruiting new team members is crucial.')</div>
-                    </div>
-                </div>
-
-                <div class="bg-[#161e2e] leading-tight p-8 rounded-xl shadow-md text-white text-xl">
-                    <div class="relative w-10 h-10 sm:w-12 sm:h-12">
                         <x-icon-speedometer class="absolute top-0 -left-1 fill-current w-12 h-12 sm:w-12 sm:h-12 z-20" />
                         <div class="absolute top-0 left-0 bg-emerald-900/50 blur-lg w-12 h-12 sm:w-12 sm:h-12 z-10"></div>
                     </div>
@@ -146,8 +134,8 @@
                     </div>
 
                     <div class="mt-6">
-                        <div class="text-blue-400">@lang('Invest your money on solid foundations.')</div>
-                        <div class="font-thin mt-2">@lang("Don't waste it later on endless maintenance.")</div>
+                        <div class="text-blue-400">@lang('Invest your money on experience.')</div>
+                        <div class="font-thin mt-2">@lang("Don't waste it later on endless maintenance because you only hired juniors.")</div>
                     </div>
                 </div>
 
@@ -158,8 +146,8 @@
                     </div>
 
                     <div class="mt-6">
-                        <div class="text-red-400">@lang('Focus your developers on what matters.')</div>
-                        <div class="font-thin mt-2">@lang('Because good execution is what gives value to ideas.')</div>
+                        <div class="text-red-400">@lang('Senior developers focus on what matters.')</div>
+                        <div class="font-thin mt-2">@lang('I understand how business works. I give you results as fast as possible.')</div>
                     </div>
                 </div>
 
@@ -170,20 +158,8 @@
                     </div>
 
                     <div class="mt-6">
-                        <div class="text-purple-400">@lang('Leverage inexpensive serverless solutions to scale later')</div>
-                        <div class="font-thin mt-2">@lang('Imagine being worry-free the day you go viral or reach Product Market Fit.')</div>
-                    </div>
-                </div>
-
-                <div class="bg-[#161e2e] leading-tight p-8 rounded-xl shadow-md text-white text-xl">
-                    <div class="relative w-10 h-10 sm:w-12 sm:h-12">
-                        <x-icon-robot class="absolute top-0 left-0 fill-current w-10 h-10 sm:w-12 sm:h-12 z-20" />
-                        <div class="absolute top-0 left-0 bg-yellow-900/75 blur-lg w-10 h-10 sm:w-12 sm:h-12 z-10"></div>
-                    </div>
-
-                    <div class="mt-6">
-                        <div class="text-yellow-400">@lang('Automate as much processes as possible.')</div>
-                        <div class="font-thin mt-2">@lang('A business operating on its own can be a reality.')</div>
+                        <div class="text-purple-400">@lang('I can work in a serverless environment')</div>
+                        <div class="font-thin mt-2">@lang('Used right, serverless can drastically cut costs and handle an infinite amount of traffic.')</div>
                     </div>
                 </div>
             </div>
