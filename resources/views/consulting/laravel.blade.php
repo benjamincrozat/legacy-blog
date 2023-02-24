@@ -123,7 +123,7 @@
 
                     <div class="mt-6">
                         <div class="text-emerald-500">@lang("Technical debt won't be part of the equation.")</div>
-                        <div class="font-thin mt-2">@lang("Let's make sure you start on the right foot.")</div>
+                        <div class="font-thin mt-2">@lang("I write tests for my code to make it easier to change later.")</div>
                     </div>
                 </div>
 
