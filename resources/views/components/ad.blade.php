@@ -1,7 +1,5 @@
 @if ($ads->isNotEmpty() && $affiliate = $ads->random())
-    <div {{ $attributes->merge([
-        'class' => 'container lg:max-w-screen-md',
-    ]) }}>
+    <div {{ $attributes->merge(['class' => 'container lg:max-w-screen-md']) }}>
         <div class="border border-gray-200 dark:border-gray-800 flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-start sm:gap-4 p-4 rounded-md text-center sm:text-left text-sm">
             <a
                 href="{{ route('affiliate', $affiliate) }}"
@@ -23,7 +21,7 @@
 
             <a
                 href="{{ route('affiliate', $affiliate) }}"
-                class="bg-gradient-to-r from-emerald-400 dark:from-emerald-700 to-emerald-500 dark:to-emerald-800 inline-block !border-0 flex-shrink-0 font-semibold leading-tight mt-4 sm:mt-0 sm:mx-auto px-4 py-2 rounded shadow-md sm:table text-center !text-emerald-50"
+                class="bg-gradient-to-r from-emerald-400 dark:from-emerald-700 to-emerald-500 dark:to-emerald-800 hover:hue-rotate-90 inline-block !border-0 flex-shrink-0 font-semibold leading-tight mt-4 sm:mt-0 sm:mx-auto px-4 py-2 rounded shadow-md sm:table text-center !text-emerald-50 duration-500 transition-[filter]"
                 rel="nofollow noopener noreferral"
                 @click="window.fathom?.trackGoal('ODF3S05G', 0)"
             >
