@@ -35,7 +35,7 @@ class User extends Resource
             Markdown::make('Description')
                 ->rules('nullable'),
 
-            URL::make('Twitter')
+            URL::make('Twitter', 'twitter_url')
                 ->rules('nullable', 'regex:^https?:\/\/twitter.com\/\w+$'),
 
             Text::make('Email')
