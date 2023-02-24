@@ -5,7 +5,9 @@
 >
     <x-nav class="container mt-6" />
 
-    <x-ad class="mt-10 md:mt-16" />
+    @if ($ai->onFirstPage() && $posts->onFirstPage())
+        <x-ad class="mt-10 md:mt-16" />
+    @endif
 
     @if ($ai->onFirstPage() && $posts->onFirstPage())
         @if ($pins->isNotEmpty())
@@ -71,7 +73,7 @@
 
     @if ($ai->onFirstPage())
         @if ($posts->onFirstPage())
-            <section class="container lg:max-w-[1024px] mt-12 md:mt-16">
+            <section class="container lg:max-w-[1024px] mt-10 md:mt-16">
                 <div class="font-semibold px-4 sm:px-0 text-center text-xl">
                     Services and tools for your projects
                 </div>
@@ -115,19 +117,21 @@
 
     @if ($posts->onFirstPage())
         @if ($ai->isNotEmpty())
-            <section class="container lg:max-w-[1024px] mt-16">
-                <div class="text-center">
-                    <div class="font-normal px-4 sm:px-0 text-xl">
-                        @if ($ai->onFirstPage())
-                            <span class="bg-clip-text bg-gradient-to-r from-indigo-300 to-indigo-400 inline-block">
-                                <span class="text-transparent">AI-generated</span>
-                            </span>
+            @if (! $ai->onFirstPage())
+                <x-ad class="mt-10 md:mt-16" />
+            @endif
 
-                            <p class="mt-4 text-sm">This is an <strong class="text-semibold">experimental</strong> way of writing new content using ChatGPT.<br class="hidden sm:inline" /> <strong class="text-semibold">These articles are marked as such</strong> and <strong class="text-semibold">live in a sandbox</strong>.</p>
-                        @else
-                            Page {{ $ai->currentPage() }}
-                        @endif
-                    </div>
+            <section class="container lg:max-w-[1024px] mt-8">
+                <div class="font-semibold px-4 sm:px-0 text-center text-xl">
+                    @if ($ai->onFirstPage())
+                        <span class="bg-clip-text bg-gradient-to-r from-indigo-300 to-indigo-400 inline-block">
+                            <span class="text-transparent">AI-generated</span>
+                        </span>
+
+                        <p class="mt-4 text-sm">This is an <strong class="text-semibold">experimental</strong> way of writing new content using ChatGPT.<br class="hidden sm:inline" /> <strong class="text-semibold">These articles are marked as such</strong> and <strong class="text-semibold">live in a sandbox</strong>.</p>
+                    @else
+                        Page {{ $ai->currentPage() }}
+                    @endif
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-4 mt-8">
