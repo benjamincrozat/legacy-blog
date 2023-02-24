@@ -1,5 +1,5 @@
 @if ($ads->isNotEmpty() && $affiliate = $ads->random())
-    <div {{ $attributes->merge(['class' => 'container lg:max-w-screen-md']) }}>
+    <div {{ $attributes->merge(['class' => 'container md:max-w-screen-sm']) }}>
         <div class="border border-gray-200 dark:border-gray-800 flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-start sm:gap-4 p-4 rounded-md text-center sm:text-left text-sm">
             <a
                 href="{{ route('affiliate', $affiliate) }}"
