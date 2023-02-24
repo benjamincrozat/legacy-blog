@@ -10,7 +10,7 @@
                 <img
                     src="{{ $affiliate->icon }}"
                     alt="{{ $affiliate->name }}"
-                    class="aspect-square rounded w-[64px] h-[64px]"
+                    class="aspect-square rounded w-[64px] h-[64px] sm:w-[48px] sm:h-[48px]"
                 />
             </a>
 
