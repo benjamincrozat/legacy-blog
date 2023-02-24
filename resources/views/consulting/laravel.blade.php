@@ -256,18 +256,23 @@
                     </ul>
                 </div>
 
-                <h3 id="section-1" class="scroll-mt-4">Check for real-world Laravel developer experience</h3>
+                <h3 id="section-1" class="scroll-mt-4">
+                    Check for real-world Laravel developer experience
+                </h3>
 
                 <p>If you don't have time to coach young developers, make sure they have real-world experience.</p>
 
                 <p><strong>People freshly out of school won't be able to be proficient on most projects</strong> (of course, some passionate developers are the exception to this rule).</p>
 
-                <p>Here's what makes a good candidate:</p>
+                <p>Here's what a good candidate looks like:</p>
 
                 <ul>
-                    <li>Make sure they have at least one successful experience. It doesn't matter if this experience has been acquired working on open-source projects or in a company;</li>
-                    <li>Developers with tech culture and knowledge about the latest trends tend to be curious and, therefore, more willing to give everything they have to solve your problems;</li>
-                    <li>Even an inactive GitHub account is a good sign. A basic comprehension of open source reinforces the previous point.</li>
+                    <li>Make sure they have <strong>at least one successful experience</strong>. It doesn't matter if this experience has been acquired working on open-source projects or in a company;</li>
+                    <li>Developers with <strong>tech culture and knowledge about the latest trends</strong> tend to be curious and, therefore, more willing to give everything they have to solve your problems;</li>
+                    <li><strong>Even an inactive GitHub account is a good sign.</strong> A basic comprehension of open source reinforces the previous point;</li>
+                    <li><strong>Strong understanding of PHP</strong> and, obviously, the Laravel framework;</li>
+                    <li>Familiarity with <strong>databases like MySQL and PostgreSQL</strong> (which are the most popular;</li>
+                    <li><strong>Knowledge of Git</strong>, because you can create a GitHub account without ever using it.</li>
                 </ul>
 
                 <h3 id="section-2" class="scroll-mt-4">Don't hire a senior Laravel developers to work on basic tasks</h3>
