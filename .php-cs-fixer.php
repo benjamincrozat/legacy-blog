@@ -20,6 +20,8 @@ return (new PhpCsFixer\Config)
         'not_operator_with_successor_space' => true,
         'ordered_imports' => ['sort_algorithm' => 'length'],
         'ordered_interfaces' => true,
+        'ordered_traits' => true,
+        'ordered_class_elements' => true,
         'php_unit_method_casing' => false,
         'return_type_declaration' => ['space_before' => 'one'],
         'single_space_after_construct' => true,

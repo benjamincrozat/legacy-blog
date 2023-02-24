@@ -27,6 +27,11 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
         Nova::footer(fn () => '');
     }
 
+    public function tools() : array
+    {
+        return [];
+    }
+
     protected function routes() : void
     {
         Nova::routes()
@@ -41,11 +46,6 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     }
 
     protected function dashboards() : array
-    {
-        return [];
-    }
-
-    public function tools() : array
     {
         return [];
     }

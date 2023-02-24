@@ -21,8 +21,7 @@ use Algolia\AlgoliaSearch\Exceptions\UnreachableException;
 
 class Post extends BaseModel implements Feedable
 {
-    use HasFactory;
-    use Searchable;
+    use HasFactory, Searchable;
 
     protected $casts = [
         'modified_at' => 'date',
