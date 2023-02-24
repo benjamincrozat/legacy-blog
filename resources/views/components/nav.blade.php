@@ -14,7 +14,7 @@
 
     <nav class="flex items-center gap-6 text-sm">
         @if (empty($funnel))
-            <a href="{{ route('home') }}" class="hover:text-indigo-400 transition-colors">
+            <a href="{{ route('home') }}" class="decoration-gray-600/50 dark:decoration-gray-300/30 hover:text-indigo-400 transition-colors @if (Route::is('home')) underline underline-offset-4 @endif">
                 Learn
             </a>
 
