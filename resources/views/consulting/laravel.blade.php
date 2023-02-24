@@ -83,32 +83,22 @@
             <ul class="grid place-content-center gap-4 mt-8 sm:mt-16 md:text-xl">
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                    <span><span>@lang('Discover best practices that make new hires productive')</span>
+                    <span><span>@lang('I do both front-end and back-end')</span>
                 </li>
 
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                    <span><span>@lang('Stop losing sales over bad performances')</span>
+                    <span><span>@lang('I have 8+ years of expertise on Laravel')</span>
                 </li>
 
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                    <span><span>@lang('Prevent as many regressions as possible')</span>
+                    <span><span>@lang("I write easy to understand code using documented best practices")</span>
                 </li>
 
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                    <span><span>@lang('Be notified when your app fails in production')</span>
-                </li>
-
-                <li class="flex items-center gap-2">
-                    <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                    <span><span>@lang('Reduce cost due to suboptimal technical decisions.')</span>
-                </li>
-
-                <li class="flex items-center gap-2">
-                    <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
-                    <span><span>@lang('I will help you hire the best talents')</span>
+                    <span><span>@lang('I write tested code that anyone can change later without breaking it')</span>
                 </li>
             </ul>
 
@@ -211,7 +201,7 @@
                     </div>
 
                     <div class="mt-4 text-xl">
-                        @lang('The blog generates <strong class="text-gray-300">+10K visits per month</strong> and <strong class="text-gray-300">more than half of them are from Google</strong>.')
+                        @lang('The blog generates <strong class="text-gray-300">+15K visits per month</strong> and <strong class="text-gray-300">+10K of them are from Google</strong>.')
                     </div>
 
                     <a href="{{ route('home') }}" class="bg-gradient-to-r from-blue-600 to-blue-500 duration-500 font-normal hover:hue-rotate-90 inline-block mt-10 px-8 py-3 rounded text-white transition-[filter]">

@@ -211,7 +211,7 @@
                     </div>
 
                     <div class="mt-4 text-xl">
-                        @lang('The blog generates <strong class="text-gray-300">+10K visits per month</strong> and <strong class="text-gray-300">more than half of them are from Google</strong>.')
+                        @lang('The blog generates <strong class="text-gray-300">+15K visits per month</strong> and <strong class="text-gray-300">+10K of them are from Google</strong>.')
                     </div>
 
                     <a href="{{ route('home') }}" class="bg-gradient-to-r from-blue-600 to-blue-500 duration-500 font-normal hover:hue-rotate-90 inline-block mt-10 px-8 py-3 rounded text-white transition-[filter]">
