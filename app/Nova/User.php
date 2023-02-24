@@ -3,6 +3,7 @@
 namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\URL;
 use Laravel\Nova\Fields\Text;
 use Illuminate\Validation\Rules;
 use Laravel\Nova\Fields\Gravatar;
@@ -33,6 +34,9 @@ class User extends Resource
 
             Markdown::make('Description')
                 ->rules('nullable'),
+
+            URL::make('Twitter')
+                ->rules('nullable', 'regex:^https?:\/\/twitter.com\/\w+$'),
 
             Text::make('Email')
                 ->sortable()
