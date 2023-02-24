@@ -1,6 +1,6 @@
 <x-app
     title="Hire your on-demand virtual CTO."
-    description="On-demand virtual CTO with 10+ years expertise. Get tailored support for technical debt, best practices, setup and interviews, without the cost of a full-time hire."
+    description="On-demand virtual CTO with +10 years expertise. Get tailored support for technical debt, best practices, setup and interviews, without the cost of a full-time hire."
     class="!bg-gray-900 text-gray-300"
 >
     <div class="bg-gradient-to-b from-black/30 to-gray-900 pt-4">
@@ -72,7 +72,7 @@
                 <div class="mt-8 sm:mt-16 text-xl sm:text-2xl md:text-3xl text-purple-400">
                     <span class="bg-clip-text bg-gradient-to-r from-purple-300 to-purple-400 inline-block">
                         <span class="text-transparent">
-                            @lang('10+ years of experience at the service of your business.')
+                            @lang('+10 years of experience at the service of your business.')
                         </span>
                     </span>
                 </div>
@@ -306,7 +306,7 @@
 
                 <h3 id="section-1" class="scroll-mt-4">Who are you?</h3>
 
-                <p>I'm a <strong>passionate full-stack PHP and Laravel developer</strong> from the south of France with 10+ years of experience.</p>
+                <p>I'm a <strong>passionate full-stack PHP and Laravel developer</strong> from the south of France with +10 years of experience.</p>
 
                 <p>I write on <a href="https://benjamincrozat.com">my blog</a> about web development in general, with an emphasis on Laravel.</p>
 

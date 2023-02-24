@@ -36,7 +36,7 @@
                     </p>
 
                     <p class="mt-4">
-                        <strong class="font-semibold">I'm Benjamin Crozat</strong> and I have <strong class="font-semibold">10+ years of expertise</strong> in web development.
+                        <strong class="font-semibold">I'm Benjamin Crozat</strong> and I have <strong class="font-semibold">+10 years of expertise</strong> in web development.
                     </p>
 
                     <p class="mt-4">

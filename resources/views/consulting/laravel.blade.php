@@ -72,7 +72,7 @@
                 <div class="mt-8 sm:mt-16 text-xl sm:text-2xl md:text-3xl text-purple-400">
                     <span class="bg-clip-text bg-gradient-to-r from-purple-300 to-purple-400 inline-block">
                         <span class="text-transparent">
-                            @lang('10+ years of experience at the service of your business.')
+                            @lang('+10 years of experience at the service of your business.')
                         </span>
                     </span>
                 </div>

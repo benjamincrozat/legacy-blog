@@ -62,7 +62,7 @@
 
                             <div>
                                 <div>On-demand virtual CTO</div>
-                                <div class="opacity-75 text-xs">10+ years of technical experience at your service.</div>
+                                <div class="opacity-75 text-xs">+10 years of technical experience at your service.</div>
                             </div>
                         </a>
                     </li>
