@@ -243,14 +243,14 @@
                         <li>
                             <a href="#section-2" class="decoration-orange-400/30 hover:decoration-orange-300/30 inline-flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors underline underline-offset-4">
                                 <x-heroicon-o-hashtag class="flex-shrink-0 inline opacity-50 translate-y-px w-3 h-3" />
-                                @lang("Don't hire senior developers to work on basic tasks")
+                                @lang("Don't hire a senior Laravel developers to work on basic tasks")
                             </a>
                         </li>
 
                         <li>
                             <a href="#section-3" class="decoration-orange-400/30 hover:decoration-orange-300/30 inline-flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors underline underline-offset-4">
                                 <x-heroicon-o-hashtag class="flex-shrink-0 inline opacity-50 translate-y-px w-3 h-3" />
-                                @lang('Get good communicators')
+                                @lang("Get a Laravel developer who's a good communicator")
                             </a>
                         </li>
                     </ul>
@@ -278,7 +278,7 @@
 
                 <p>That's exactly what I do after more than 10 years in this industry. Clients book me so I can help their team head in the right direction.</p>
 
-                <h3 id="section-3" class="scroll-mt-4">Get a Laravel developer who's a good communicators</h3>
+                <h3 id="section-3" class="scroll-mt-4">Get a Laravel developer who's a good communicator</h3>
 
                 <p><strong>Communication is critical for any relationship</strong>. In a working environment, you need a clear view of the progression to plan what's next.</p>
 
