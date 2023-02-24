@@ -2172,16 +2172,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v10.1.3",
+            "version": "v10.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "12256504186326a9d02b2ab3b43a4031a59b52d1"
+                "reference": "da95415a83fe6216dc78efebfc311365cf4cade0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/12256504186326a9d02b2ab3b43a4031a59b52d1",
-                "reference": "12256504186326a9d02b2ab3b43a4031a59b52d1",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/da95415a83fe6216dc78efebfc311365cf4cade0",
+                "reference": "da95415a83fe6216dc78efebfc311365cf4cade0",
                 "shasum": ""
             },
             "require": {
@@ -2368,7 +2368,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2023-02-22T14:38:35+00:00"
+            "time": "2023-02-23T12:25:38+00:00"
         },
         {
             "name": "laravel/horizon",
@@ -2449,17 +2449,17 @@
         },
         {
             "name": "laravel/nova",
-            "version": "4.22.0",
+            "version": "4.22.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:laravel/nova.git",
-                "reference": "eb105414c6dedc3fda8e9ca62bdbe99dec80cd31"
+                "reference": "3daa3889d1bc6687f71282d8079ba174bc2283fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-eb105414c6dedc3fda8e9ca62bdbe99dec80cd31-zip-668949.zip",
-                "reference": "eb105414c6dedc3fda8e9ca62bdbe99dec80cd31",
-                "shasum": "2557303a3883136630a205c5ad858a7950515333"
+                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-3daa3889d1bc6687f71282d8079ba174bc2283fe-zip-6b73aa.zip",
+                "reference": "3daa3889d1bc6687f71282d8079ba174bc2283fe",
+                "shasum": "6ae486d53c6aa00d16ef36395e1688b0e2e93b67"
             },
             "require": {
                 "brick/money": "^0.5.0|^0.6.0|^0.7.0|^0.8.0",
@@ -2478,7 +2478,6 @@
                 "symfony/process": "^5.4|^6.0"
             },
             "require-dev": {
-                "laravel/framework": "10.x-dev",
                 "laravel/nova-dusk-suite": "8.4.x-dev|9.4.x-dev|10.4.x-dev",
                 "laravel/pint": "^1.4",
                 "laravel/scout": "^9.8",
@@ -2553,9 +2552,9 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/laravel/nova/tree/v4.22.0"
+                "source": "https://github.com/laravel/nova/tree/v4.22.1"
             },
-            "time": "2023-02-08T20:59:46+00:00"
+            "time": "2023-02-23T23:50:42+00:00"
         },
         {
             "name": "laravel/scout",
