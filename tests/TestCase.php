@@ -5,12 +5,12 @@ namespace Tests;
 use Illuminate\Support\Stringable;
 use Illuminate\Support\Facades\Http;
 use App\CommonMark\MarxdownConverter;
-use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase
 {
-    use CreatesApplication, LazilyRefreshDatabase;
+    use CreatesApplication, RefreshDatabase;
 
     public function setUp() : void
     {
