@@ -88,7 +88,17 @@
 
                 <li class="flex items-center gap-2">
                     <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
+                    <span><span>@lang('I write performant user-facing code')</span>
+                </li>
+
+                <li class="flex items-center gap-2">
+                    <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
                     <span><span>@lang('I have 8+ years of expertise on Laravel')</span>
+                </li>
+
+                <li class="flex items-center gap-2">
+                    <x-heroicon-o-check-circle class="md:translate-y-[-.5px] flex-shrink-0 text-emerald-600 w-5 md:w-6 h-5 md:h-6" />
+                    <span><span>@lang('I know how to efficiently query a relational database')</span>
                 </li>
 
                 <li class="flex items-center gap-2">
@@ -117,7 +127,7 @@
             <div class="grid sm:grid-cols-2 gap-4 mt-8 md:mt-16">
                 <div class="bg-[#161e2e] leading-tight p-8 rounded-xl shadow-md text-white text-xl">
                     <div class="relative w-10 h-10 sm:w-12 sm:h-12">
-                        <x-icon-speedometer class="absolute top-0 -left-1 fill-current w-12 h-12 sm:w-12 sm:h-12 z-20" />
+                        <x-heroicon-o-hand-thumb-up class="absolute top-0 -left-1 w-12 h-12 sm:w-12 sm:h-12 z-20" />
                         <div class="absolute top-0 left-0 bg-emerald-900/50 blur-lg w-12 h-12 sm:w-12 sm:h-12 z-10"></div>
                     </div>
 
