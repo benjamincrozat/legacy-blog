@@ -31,7 +31,7 @@
 
         <div>
             <a
-                href="https://twitter.com/benjamincrozat"
+                href="{{ $post->user->twitter_url }}"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="font-medium"

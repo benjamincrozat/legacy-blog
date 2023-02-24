@@ -1,7 +1,7 @@
 <article {{ $attributes->except('highlights', 'post') }}>
     @if ($post->promotes_affiliate_links)
         <div class="container mb-4 sm:mb-3 md:mb-2 sm:text-lg md:text-xl">
-            from <a href="https://twitter.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer" class="font-normal underline" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">{{ $post->user->name }}</a>
+            from <a href="{{ $post->user->twitter_url }}" target="_blank" rel="nofollow noopener noreferrer" class="font-normal underline" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">{{ $post->user->name }}</a>
         </div>
 
         <div class="container flex items-center justify-between gap-8">

@@ -12,7 +12,7 @@
                 />
 
                 <div class="line-clamp-1">
-                    <a href="https://twitter.com/benjamincrozat" target="_blank" rel="noopener noreferrer" class="font-medium" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">
+                    <a href="{{ $post->user->twitter_url }}" target="_blank" rel="noopener noreferrer" class="font-medium" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">
                         {{ $post->user->name }}
                     </a>
                     —
