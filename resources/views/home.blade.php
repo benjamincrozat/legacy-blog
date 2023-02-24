@@ -50,7 +50,9 @@
 
         <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mt-8 md:mt-16 mx-auto w-[100px]"></div>
 
-        <x-ad class="mt-16" />
+        @if ($ai->onFirstPage() && $posts->onFirstPage())
+            <x-ad class="mt-16" />
+        @endif
 
         <section class="container lg:max-w-[1024px] mt-12">
             <div class="font-semibold px-4 sm:px-0 text-center text-xl">
