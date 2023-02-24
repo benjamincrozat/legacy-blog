@@ -21,7 +21,7 @@ class ViewServiceProvider extends ServiceProvider
                     ->whereNotNull('ad_title')
                     ->whereNotNull('ad_content')
                     ->inRandomOrder()
-                    ->limit(3)
+                    ->limit(4)
                     ->get()
             );
 
