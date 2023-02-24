@@ -36,7 +36,7 @@
     />
 
     @if (! $post->promotes_affiliate_links)
-        <x-ad :affiliate="$ads->get(2)" class="mt-8 sm:mt-16" />
+        <livewire:ad :affiliate="$ads->get(2)" class="mt-8 sm:mt-16" />
     @endif
 
     <div class="bg-gray-900 dark:bg-black mt-8 sm:mt-16">

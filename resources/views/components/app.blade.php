@@ -20,6 +20,9 @@
 
         <title>{{ $title ?? "The web developer life of Benjamin Crozat" }}</title>
 
+        <livewire:styles />
+        <livewire:scripts />
+
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         @if (! app()->runningUnitTests())

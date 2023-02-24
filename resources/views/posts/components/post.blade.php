@@ -38,7 +38,7 @@
     @endif
 
     @if (! $post->promotes_affiliate_links)
-        <x-ad :affiliate="$ads->first()" class="my-5" />
+        <livewire:ad :affiliate="$ads->first()" class="my-5" />
     @endif
 
     @if ($post->promotes_affiliate_links && $highlights->isNotEmpty())
@@ -77,7 +77,7 @@
     </div>
 
     @if (! $post->promotes_affiliate_links)
-        <x-ad :affiliate="$ads->get(1)" class="my-5" />
+        <livewire:ad :affiliate="$ads->get(1)" class="my-5" />
     @endif
 
     @if ($post->affiliates->isNotEmpty())

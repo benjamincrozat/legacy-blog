@@ -6,7 +6,7 @@
     <x-nav class="container mt-6" />
 
     @if ($ai->onFirstPage() && $posts->onFirstPage())
-        <x-ad :affiliate="$ads->get(1)" :affiliate="$ads->first()" class="mt-10 md:mt-16" />
+        <livewire:ad :affiliate="$ads->first()" class="mt-10 md:mt-16" />
     @endif
 
     @if ($ai->onFirstPage() && $posts->onFirstPage())
@@ -53,7 +53,7 @@
         <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mt-8 md:mt-16 mx-auto w-[100px]"></div>
 
         @if ($ai->onFirstPage() && $posts->onFirstPage())
-            <x-ad :affiliate="$ads->get(1)" class="mt-16" />
+            <livewire:ad :affiliate="$ads->get(1)" class="mt-16" />
         @endif
 
         <section class="container lg:max-w-[1024px] mt-12">
@@ -88,7 +88,7 @@
             </section>
         @endif
 
-        <x-ad :affiliate="$ads->get(2)" class="mt-16" />
+        <livewire:ad :affiliate="$ads->get(2)" class="mt-16" />
 
         <section class="container lg:max-w-[1024px] mt-12">
             <div class="font-semibold px-4 sm:px-0 text-center text-xl">
@@ -118,7 +118,7 @@
     @if ($posts->onFirstPage())
         @if ($ai->isNotEmpty())
             @if (! $ai->onFirstPage())
-                <x-ad :affiliate="$ads->first()" class="mt-10 md:mt-16" />
+                <livewire:ad :affiliate="$ads->first()" class="mt-10 md:mt-16" />
             @endif
 
             <section class="container lg:max-w-[1024px] mt-8">
