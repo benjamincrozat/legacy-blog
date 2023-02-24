@@ -35,6 +35,10 @@
         class="container max-w-[1024px] mt-8 sm:mt-16"
     />
 
+    @if (! $post->promotes_affiliate_links)
+        <x-ad :affiliate="$ads->get(2)" class="mt-8 sm:mt-16" />
+    @endif
+
     <div class="bg-gray-900 dark:bg-black mt-8 sm:mt-16">
         <x-footer class="text-gray-200" />
     </div>
