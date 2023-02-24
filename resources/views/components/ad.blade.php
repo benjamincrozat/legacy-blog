@@ -1,4 +1,4 @@
-@if ($ads->isNotEmpty() && $affiliate = $ads->random())
+@if (! empty($affiliate))
     <div {{ $attributes->merge(['class' => 'container md:max-w-screen-sm']) }}>
         <div class="border border-gray-200 dark:border-gray-800 flex sm:items-center justify-between sm:justify-start gap-4 p-4 rounded-md text-sm">
             <a
