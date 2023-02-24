@@ -36,7 +36,7 @@ class User extends Resource
                 ->rules('nullable'),
 
             URL::make('Twitter', 'twitter_url')
-                ->rules('nullable', 'regex:https?:\/\/twitter.com\/\w+'),
+                ->rules('nullable', 'regex:/^https?:\/\/twitter.com\/\w+$/'),
 
             Text::make('Email')
                 ->sortable()
