@@ -20,6 +20,7 @@
             :email="$post->user->email"
             :name="$post->user->name"
             :modified-at="$post->modified_at ?? $post->created_at"
+            :twitter-url="$post->user->twitter_url"
             class="container mt-4"
         />
     @endif
