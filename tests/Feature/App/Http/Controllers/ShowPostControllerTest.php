@@ -32,7 +32,7 @@ class ShowPostControllerTest extends TestCase
         $posts = Post::factory(30)->create(['ai' => true]);
 
         $response = $this
-            ->get(route('posts.show', $post = $posts->first()))
+            ->get(route('posts.show', $posts->first()))
             ->assertOk()
             ->assertViewIs('posts.show');
 

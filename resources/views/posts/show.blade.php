@@ -18,7 +18,7 @@
         </x-posts::breadcrumb-item>
     </x-posts::breadcrumb>
 
-    <x-posts::post :highlights="$highlights" :post="$post" class="mt-10" />
+    <x-posts::post :highlights="$post->affiliates->where('highlight', true)" :post="$post" class="mt-10" />
 
     <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mt-8 sm:mt-16 mx-auto w-[100px]"></div>
 
