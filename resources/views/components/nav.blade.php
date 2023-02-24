@@ -4,7 +4,7 @@
         class="flex sm:flex-shrink-0 items-center gap-3"
         @click="window.fathom?.trackGoal('XAQUA2K4', 0)"
     >
-        <x-icon-logo class="fill-current flex-shrink-0 w-10 h-10" />
+        <x-icon-logo class="fill-current flex-shrink-0 w-8 h-8 md:w-10 md:h-10" />
 
         <span class="leading-tight sr-only md:not-sr-only text-sm">
             <span class="block font-medium">Benjamin Crozat</span>
