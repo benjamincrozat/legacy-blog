@@ -10,13 +10,13 @@
                 <img
                     src="{{ $affiliate->icon }}"
                     alt="{{ $affiliate->name }}"
-                    class="aspect-square rounded w-[48px] sm:w-[64px] h-[48px] sm:h-[64px]"
+                    class="aspect-square rounded w-[48px] h-[48px]"
                 />
             </a>
 
-            <div class="mt-4 sm:mt-0 w-full">
+            <div class="leading-tight mt-4 sm:mt-0 w-full">
                 <div class="font-bold">{{ $affiliate->ad_title }}</div>
-                <div>{!! $affiliate->rendered_ad_content !!}</div>
+                <div class="mt-1">{!! $affiliate->rendered_ad_content !!}</div>
             </div>
 
             <a
