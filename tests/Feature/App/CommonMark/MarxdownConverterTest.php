@@ -6,7 +6,7 @@ use Tests\TestCase;
 
 class MarxdownConverterTest extends TestCase
 {
-    public function test_it_renders_headings_with_ids_and_fathom_event() : void
+    public function test_it_renders_headings_with_ids() : void
     {
         $this->assertStringContainsString(
             'id=',

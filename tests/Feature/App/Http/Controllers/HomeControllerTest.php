@@ -35,9 +35,24 @@ class HomeControllerTest extends TestCase
         $this->assertCount(6, $response->viewData('popular'));
     }
 
+    public function test_it_lists_affiliate_posts() : void
+    {
+        Post::factory(10)->create(['promotes_affiliate_links' => true]);
+        Post::factory(10)->create(['ai' => false]);
+
+        $response = $this
+            ->get(route('home'))
+            ->assertOk()
+            ->assertViewIs('home');
+
+        $this->assertInstanceOf(Collection::class, $response->viewData('affiliates'));
+        $this->assertCount(6, $response->viewData('affiliates'));
+    }
+
     public function test_it_lists_posts() : void
     {
         Post::factory(10)->create(['ai' => false]);
+        Post::factory(10)->create(['ai' => true]);
 
         $response = $this
             ->get(route('home'))
@@ -46,5 +61,19 @@ class HomeControllerTest extends TestCase
 
         $this->assertInstanceOf(Paginator::class, $response->viewData('posts'));
         $this->assertCount(10, $response->viewData('posts'));
+    }
+
+    public function test_it_lists_ai_posts() : void
+    {
+        Post::factory(10)->create(['ai' => true]);
+        Post::factory(10)->create(['ai' => false]);
+
+        $response = $this
+            ->get(route('home'))
+            ->assertOk()
+            ->assertViewIs('home');
+
+        $this->assertInstanceOf(Paginator::class, $response->viewData('ai'));
+        $this->assertCount(10, $response->viewData('ai'));
     }
 }
