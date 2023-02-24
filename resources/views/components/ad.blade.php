@@ -21,7 +21,7 @@
 
             <a
                 href="{{ route('affiliate', $affiliate) }}"
-                class="bg-gradient-to-r from-emerald-400 dark:from-emerald-700 to-emerald-500 dark:to-emerald-800 hover:hue-rotate-90 inline-block !border-0 flex-shrink-0 font-semibold leading-tight mt-4 sm:mt-0 sm:mx-auto px-4 py-2 rounded shadow-md sm:table text-center !text-emerald-50 duration-500 transition-[filter]"
+                class="bg-gradient-to-r from-emerald-400 dark:from-emerald-700 to-emerald-500 dark:to-emerald-800 hover:hue-rotate-90 inline-block !border-0 flex-shrink-0 font-semibold leading-tight mt-4 sm:mt-0 sm:mx-auto px-3 py-2 rounded shadow-md sm:table text-center !text-emerald-50 duration-500 transition-[filter]"
                 rel="nofollow noopener noreferral"
                 @click="window.fathom?.trackGoal('ODF3S05G', 0)"
             >
