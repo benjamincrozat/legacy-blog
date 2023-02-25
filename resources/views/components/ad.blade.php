@@ -1,6 +1,6 @@
 @if (! empty($affiliate))
     <div {{ $attributes->merge(['class' => 'container md:max-w-screen-sm']) }}>
-        <div class="border border-gray-200 dark:border-gray-800 flex sm:items-center justify-between sm:justify-start gap-4 p-4 rounded-md text-sm">
+        <aside class="border border-gray-200 dark:border-gray-800 flex sm:items-center justify-between sm:justify-start gap-4 p-4 rounded-md text-sm">
             <a
                 href="{{ route('affiliate', $affiliate) }}"
                 target="_blank"
@@ -31,6 +31,6 @@
                     Go to site
                 </a>
             </div>
-        </div>
+        </aside>
     </div>
 @endif
