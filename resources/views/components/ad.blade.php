@@ -1,10 +1,4 @@
-@php
-if ($ads->isNotEmpty()) {
-    $affiliate = $ads->pull(mt_rand(0, $ads->count() - 1));
-}
-@endphp
-
-@if (! empty($affiliate))
+@if (! empty($affiliate = $ads->random()))
     <div {{ $attributes->merge(['class' => 'container md:max-w-screen-sm not-prose']) }}>
         <aside class="border border-gray-200 dark:border-gray-800 flex sm:items-center justify-between sm:justify-start gap-4 p-4 rounded-md text-sm">
             <a
