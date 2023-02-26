@@ -1,5 +1,5 @@
 @if (! empty($affiliate = $ads->shuffle()->first()))
-    <div {{ $attributes->merge(['class' => 'not-prose']) }}>
+    <div {{ $attributes->merge(['class' => 'md:max-w-screen-sm md:mx-auto not-prose']) }}>
         <aside class="border border-gray-200 dark:border-gray-800 flex sm:items-center justify-between sm:justify-start gap-4 p-4 rounded-md text-sm">
             <a
                 href="{{ route('affiliate', $affiliate) }}"
@@ -15,7 +15,7 @@
                 />
             </a>
 
-            <div class="sm:flex sm:items-center sm:justify-between sm:gap-4 order-1 sm:order-none w-full">
+            <div class="sm:flex sm:items-center sm:justify-between sm:gap-4 order-1 sm:order-none">
                 <div class="leading-tight w-full">
                     <div class="font-bold">{{ $affiliate->ad_title }}</div>
                     <div class="mt-1">{!! $affiliate->rendered_ad_content !!}</div>
