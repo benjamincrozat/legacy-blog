@@ -94,7 +94,7 @@ class Post extends BaseModel implements Feedable
         return Attribute::make(
             fn () => TreeGenerator::generate(
                 view('posts.components.post', [
-                    'barebone' => true,
+                    'barebones' => true,
                     'attributes' => new ComponentAttributeBag,
                     'highlights' => collect(),
                     'post' => $this,

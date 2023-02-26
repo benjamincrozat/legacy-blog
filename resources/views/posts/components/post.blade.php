@@ -1,8 +1,10 @@
 <article {{ $attributes->except('highlights', 'post') }}>
     @if ($post->promotes_affiliate_links)
-        <div class="container mb-4 sm:mb-3 md:mb-2 sm:text-lg md:text-xl">
-            from <a href="{{ $post->user->twitter_url }}" target="_blank" rel="nofollow noopener noreferrer" class="font-normal underline" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">{{ $post->user->name }}</a>
-        </div>
+        @if (empty($barebones))
+            <div class="container mb-4 sm:mb-3 md:mb-2 sm:text-lg md:text-xl">
+                from <a href="{{ $post->user->twitter_url }}" target="_blank" rel="nofollow noopener noreferrer" class="font-normal underline" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">{{ $post->user->name }}</a>
+            </div>
+        @endif
 
         <div class="container flex items-center justify-between gap-8">
             <h1 class="font-thin text-3xl md:text-5xl dark:text-white">
@@ -16,20 +18,24 @@
             {{ $post->title }}
         </h1>
 
-        <x-posts::metadata
-            :email="$post->user->email"
-            :name="$post->user->name"
-            :modified-at="$post->modified_at ?? $post->created_at"
-            :twitter-url="$post->user->twitter_url"
-            class="container mt-4"
-        />
+        @if (empty($barebones))
+            <x-posts::metadata
+                :email="$post->user->email"
+                :name="$post->user->name"
+                :modified-at="$post->modified_at ?? $post->created_at"
+                :twitter-url="$post->user->twitter_url"
+                class="container mt-4"
+            />
+        @endif
     @endif
 
-    <x-posts::newsletter
-        :promotes-affiliate-links="$post->promotes_affiliate_links"
-        :subscribers-count="$subscribersCount"
-        class="container sm:max-w-screen-xs mt-10"
-    />
+    @if (empty($barebones))
+        <x-posts::newsletter
+            :promotes-affiliate-links="$post->promotes_affiliate_links"
+            :subscribers-count="$subscribersCount"
+            class="container sm:max-w-screen-xs mt-10"
+        />
+    @endif
 
     @if ($post->introduction)
         <div class="!container content mt-8">
@@ -37,7 +43,7 @@
         </div>
     @endif
 
-    @if (! $post->promotes_affiliate_links)
+    @if (empty($barebones) && ! $post->promotes_affiliate_links)
         <x-ad :affiliate="$ads->first()" class="my-5" />
     @endif
 
@@ -59,7 +65,7 @@
         </div>
     @endif
 
-    @if (empty($barebone))
+    @if (empty($barebones))
         <x-posts::tree
             :tree="$post->tree"
             class="container mt-8"
@@ -76,7 +82,7 @@
         {!! $post->rendered_content !!}
     </div>
 
-    @if (! $post->promotes_affiliate_links)
+    @if (empty($barebones) && ! $post->promotes_affiliate_links)
         <x-ad :affiliate="$ads->get(1)" class="my-5" />
     @endif
 
