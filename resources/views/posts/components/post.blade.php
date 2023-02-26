@@ -44,7 +44,7 @@
     @endif
 
     @if (empty($barebones) && ! $post->promotes_affiliate_links)
-        <x-ad :affiliate="$ads->first()" class="my-5" />
+        <x-ad class="my-5" />
     @endif
 
     @if ($post->promotes_affiliate_links && $highlights->isNotEmpty())
@@ -83,7 +83,7 @@
     </div>
 
     @if (empty($barebones) && ! $post->promotes_affiliate_links)
-        <x-ad :affiliate="$ads->get(1)" class="my-5" />
+        <x-ad class="my-5" />
     @endif
 
     @if ($post->affiliates->isNotEmpty())
