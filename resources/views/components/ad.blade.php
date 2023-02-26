@@ -15,7 +15,7 @@
                 />
             </a>
 
-            <div class="sm:flex sm:items-center sm:justify-between sm:gap-4 order-1 sm:order-none">
+            <div class="sm:flex sm:items-center sm:justify-between sm:gap-4 order-1 sm:order-none w-full">
                 <div class="leading-tight w-full">
                     <div class="font-bold">{{ $affiliate->ad_title }}</div>
                     <div class="mt-1">{!! $affiliate->rendered_ad_content !!}</div>
