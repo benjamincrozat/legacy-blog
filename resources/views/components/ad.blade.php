@@ -1,5 +1,7 @@
 @php
-$affiliate = $ads->pull(mt_rand(0, $ads->count() - 1));
+if ($ads->isNotEmpty()) {
+    $affiliate = $ads->pull(mt_rand(0, $ads->count() - 1));
+}
 @endphp
 
 @if (! empty($affiliate))
