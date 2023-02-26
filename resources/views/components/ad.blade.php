@@ -1,5 +1,9 @@
+@php
+$affiliate = $ads->pull(mt_rand(0, $ads->count() - 1));
+@endphp
+
 @if (! empty($affiliate))
-    <div {{ $attributes->merge(['class' => 'container md:max-w-screen-sm']) }}>
+    <div {{ $attributes->merge(['class' => 'container md:max-w-screen-sm not-prose']) }}>
         <aside class="border border-gray-200 dark:border-gray-800 flex sm:items-center justify-between sm:justify-start gap-4 p-4 rounded-md text-sm">
             <a
                 href="{{ route('affiliate', $affiliate) }}"
