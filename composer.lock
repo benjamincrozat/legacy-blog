@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9617137a4173bfd0473de15de6d13630",
+    "content-hash": "089c8dc8e77dfe135161366ea60e3ca8",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -10585,6 +10585,70 @@
                 }
             ],
             "time": "2023-02-19T16:25:13+00:00"
+        },
+        {
+            "name": "nunomaduro/laravel-mojito",
+            "version": "v0.2.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nunomaduro/laravel-mojito.git",
+                "reference": "807507549cd7bf2947d67299e0e41453e2f6db3c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nunomaduro/laravel-mojito/zipball/807507549cd7bf2947d67299e0e41453e2f6db3c",
+                "reference": "807507549cd7bf2947d67299e0e41453e2f6db3c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2.5|^8.0",
+                "symfony/css-selector": "^5.1|^6.0",
+                "symfony/dom-crawler": "^5.1.8|^6.0"
+            },
+            "require-dev": {
+                "illuminate/contracts": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/support": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/view": "^6.0|^7.0|^8.0|^9.0",
+                "phpstan/phpstan": "^0.12.11",
+                "phpstan/phpstan-strict-rules": "^0.12",
+                "phpunit/phpunit": "^8.0|^9.0",
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "NunoMaduro\\LaravelMojito\\MojitoServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "NunoMaduro\\LaravelMojito\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nuno Maduro",
+                    "email": "enunomaduro@gmail.com"
+                }
+            ],
+            "description": "A lightweight package for testing Laravel views.",
+            "keywords": [
+                "laravel",
+                "package",
+                "php",
+                "testing"
+            ],
+            "support": {
+                "issues": "https://github.com/nunomaduro/laravel-mojito/issues",
+                "source": "https://github.com/nunomaduro/laravel-mojito/tree/v0.2.10"
+            },
+            "time": "2022-01-13T14:37:07+00:00"
         },
         {
             "name": "phar-io/manifest",

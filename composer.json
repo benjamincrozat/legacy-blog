@@ -33,6 +33,7 @@
         "laravel/pint": "^1.0",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^7.0",
+        "nunomaduro/laravel-mojito": "^0.2.10",
         "phpunit/phpunit": "^10.0",
         "spatie/laravel-horizon-watcher": "^1.0",
         "spatie/laravel-ignition": "^2.0",
