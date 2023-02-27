@@ -10,12 +10,18 @@ class ShowPostController extends Controller
 {
     public function __invoke(Post $post) : View
     {
+        $recommendations = cache()->remember(
+            "post_{$post->id}_recommendations",
+            24 * 60 * 60,
+            fn () => $post->recommendations,
+        );
+
         return view('posts.show', [
             'post' => $post,
             'recommended' => Post::with('user')
                 ->when(
-                    empty($post->recommendations),
-                    fn ($q) => $q->asSequence($post->recommendations),
+                    ! empty($recommendations),
+                    fn ($q) => $q->asSequence($recommendations),
                     function (Builder $query) use ($post) {
                         $query
                             ->inRandomOrder()
