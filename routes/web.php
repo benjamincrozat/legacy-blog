@@ -4,16 +4,18 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ShowPostController;
 use App\Http\Controllers\SubscribeController;
+use App\Http\Controllers\CTOConsultingController;
 use App\Http\Controllers\RedirectToUrlController;
+use App\Http\Controllers\LaravelConsultingController;
 use App\Http\Controllers\RedirectToAffiliateController;
 
 // The blog's routes.
 Route::domain(preg_replace('/https?:\/\//', '', config('app.url')))->group(function () {
     Route::get('/', HomeController::class)->name('home');
 
-    Route::view('/hire-cto', 'consulting.cto')->name('consulting.cto');
+    Route::get('/hire-cto', CTOConsultingController::class)->name('consulting.cto');
 
-    Route::view('/laravel-developer-for-hire', 'consulting.laravel')->name('consulting.laravel');
+    Route::get('/laravel-developer-for-hire', LaravelConsultingController::class)->name('consulting.laravel');
 
     Route::post('/subscribe', SubscribeController::class)->name('subscribe');
 

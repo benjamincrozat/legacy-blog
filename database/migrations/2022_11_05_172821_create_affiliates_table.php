@@ -25,6 +25,8 @@ return new class() extends Migration {
             $table->text('cons')->nullable();
             $table->string('highlight_title')->nullable();
             $table->text('highlight_text')->nullable();
+            $table->string('ad_title')->nullable();
+            $table->text('ad_content')->nullable();
             $table->timestamps();
         });
     }
