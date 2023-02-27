@@ -44,7 +44,7 @@
     @endif
 
     @if (empty($barebones) && ! $post->promotes_affiliate_links)
-        <x-ad class="container md:max-w-screen-sm my-5" />
+        <x-ad class="container my-5" />
     @endif
 
     @if ($post->promotes_affiliate_links && $highlights->isNotEmpty())
@@ -83,7 +83,7 @@
     </div>
 
     @if (empty($barebones) && ! $post->promotes_affiliate_links)
-        <x-ad class="container md:max-w-screen-sm my-5" />
+        <x-ad class="container my-5" />
     @endif
 
     @if ($post->affiliates->isNotEmpty())

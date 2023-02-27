@@ -36,7 +36,7 @@
     />
 
     @if (! $post->promotes_affiliate_links)
-        <x-ad class="container md:max-w-screen-sm mt-8 sm:mt-16" />
+        <x-ad class="container mt-8 sm:mt-16" />
     @endif
 
     <div class="bg-gray-900 dark:bg-black mt-8 sm:mt-16">
