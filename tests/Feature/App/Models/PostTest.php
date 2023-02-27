@@ -34,6 +34,20 @@ class PostTest extends TestCase
         ]);
     }
 
+    public function test_it_gets_posts_as_a_sequence() : void
+    {
+        $posts = Post::factory(30)->create();
+
+        $ids = $posts->shuffle()->take(4)->pluck('id');
+
+        $sequence = Post::asSequence($ids)->get();
+
+        $this->assertEquals($ids->get(0), $sequence->get(0)->id);
+        $this->assertEquals($ids->get(1), $sequence->get(1)->id);
+        $this->assertEquals($ids->get(2), $sequence->get(2)->id);
+        $this->assertEquals($ids->get(3), $sequence->get(3)->id);
+    }
+
     public function test_it_has_a_with_user_scope() : void
     {
         Post::factory()->create();

@@ -53,16 +53,16 @@ class MarxdownConverterTest extends TestCase
 
     public function test_it_renders_tweets() : void
     {
-        $this->markTestSkipped();
+        $this->markTestIncomplete();
     }
 
     public function test_it_renders_vimeo() : void
     {
-        $this->markTestSkipped();
+        $this->markTestIncomplete();
     }
 
     public function test_it_renders_youtube() : void
     {
-        $this->markTestSkipped();
+        $this->markTestIncomplete();
     }
 }

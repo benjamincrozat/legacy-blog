@@ -22,6 +22,7 @@ class ShowPostControllerTest extends TestCase
         $recommended = $response->viewData('recommended');
 
         $this->assertInstanceOf(Collection::class, $recommended);
+        $this->assertCount(10, $recommended);
         $this->assertFalse($recommended->contains($post));
 
         $recommended->each(fn (Post $post) => $this->assertFalse((bool) $post->ai));

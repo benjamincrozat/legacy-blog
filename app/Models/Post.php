@@ -4,10 +4,10 @@ namespace App\Models;
 
 use Spatie\Feed\Feedable;
 use Spatie\Feed\FeedItem;
+use Illuminate\Support\Arr;
 use Laravel\Scout\Searchable;
 use App\Support\TreeGenerator;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Builder;
 use Algolia\AlgoliaSearch\RecommendClient;
 use Illuminate\View\ComponentAttributeBag;
@@ -39,22 +39,13 @@ class Post extends BaseModel implements Feedable
         });
     }
 
-    public function scopeWithRecommendations(Builder $query, Collection $recommendations, int $excluding, bool $affiliates = false, bool $ai = false)
+    public function scopeAsSequence(Builder $query, $sequence) : void
     {
+        $sequence = collect($sequence);
+
         $query
-            ->when($recommendations->isNotEmpty(), function (Builder $query) use ($recommendations) {
-                $query
-                    ->whereIn('id', $recommendations)
-                    ->orderByRaw(
-                        DB::raw('FIELD(id, ' . $recommendations->join(',') . ')')
-                    );
-            }, function (Builder $query) use ($excluding, $affiliates, $ai) {
-                $query
-                    ->inRandomOrder()
-                    ->when($affiliates, fn ($q) => $q->where('promotes_affiliate_links', true))
-                    ->where('ai', $ai)
-                    ->whereNotIn('id', [$excluding]);
-            });
+            ->whereIn('id', $sequence)
+            ->orderByRaw('FIELD(id, ' . $sequence->join(',') . ')');
     }
 
     public function scopeWithUser(Builder $query) : void
@@ -138,7 +129,7 @@ class Post extends BaseModel implements Feedable
         return Attribute::make(function () {
             try {
                 if (! config('scout.algolia.id') || ! config('scout.algolia.secret')) {
-                    return collect();
+                    return [];
                 }
 
                 $recommendClient = RecommendClient::create(
@@ -150,16 +141,11 @@ class Post extends BaseModel implements Feedable
                     'indexName' => config('app.env') . '_posts',
                     'objectID' => "$this->id",
                     'maxRecommendations' => 10,
-                    // Exclude AI posts from recommendations when
-                    // the current post isn't generated w/ AI.
-                    'queryParameters' => [
-                        'filters' => ! $this->ai ? 'ai:false' : 'ai:true',
-                    ],
                 ]]);
 
-                return collect($recommendations['results'][0]['hits'])->pluck('objectID');
+                return Arr::pluck($recommendations['results'][0]['hits'], 'objectID');
             } catch (NotFoundException|UnreachableException $e) {
-                return collect();
+                return [];
             }
         })->shouldCache();
     }
