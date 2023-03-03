@@ -10,9 +10,19 @@
         </a>
 
         <div class="w-full md:w-auto">
-            <div class="font-semibold text-white">My services</div>
+            <div class="font-semibold text-white">My course & services</div>
 
             <ul class="grid gap-2 mt-4">
+                <li>
+                    <a href="https://blogging-with-laravel.com" class="decoration-white/30 underline underline-offset-4">
+                        Blogging with Laravel
+
+                        <span class="-mr-2 bg-gradient-to-r from-indigo-300 to-indigo-400 inline-block leading-tight px-3 py-1 rounded-full scale-75 text-white text-xs uppercase">
+                            New
+                        </span>
+                    </a>
+                </li>
+
                 <li>
                     <a href="{{ route('consulting.cto') }}" class="decoration-white/30 underline underline-offset-4">
                         Virtual on-demand CTO
