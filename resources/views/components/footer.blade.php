@@ -17,7 +17,7 @@
                     <a href="https://blogging-with-laravel.com" class="decoration-white/30 underline underline-offset-4">
                         Blogging with Laravel
 
-                        <span class="-mr-2 bg-gradient-to-r from-indigo-300 to-indigo-400 inline-block leading-tight px-3 py-1 rounded-full scale-75 text-white text-xs uppercase">
+                        <span class="-mr-2 bg-gradient-to-r from-indigo-500 to-indigo-600 inline-block leading-tight px-3 py-1 rounded-full scale-75 text-white text-xs uppercase">
                             New
                         </span>
                     </a>
