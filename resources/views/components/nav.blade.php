@@ -9,7 +9,7 @@
             </div>
 
             <div class="mt-1 text-gray-100">
-                A masterclass on unlocking limitless traffic with your favorite framework and <span class="bg-clip-text bg-gradient-to-r from-orange-300 to-orange-600"><span class="text-transparent" style="text-shadow: 0 0 5px rgb(253 186 116 / 50%)">SEO&nbsp;magic</span></span>
+                A masterclass on unlocking limitless traffic with your favorite framework and <span class="bg-clip-text bg-gradient-to-r from-orange-300 to-orange-600"><span class="text-transparent" style="text-shadow: 0 0 5px rgb(253 186 116 / 50%)">SEO&nbsp;magic</span></span>.
             </div>
         </div>
 
