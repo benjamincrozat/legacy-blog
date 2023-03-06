@@ -1,3 +1,26 @@
+<a href="https://blogging-with-laravel.com" class="bg-gradient-to-r from-gray-900 to-gray-700 block">
+    <div class="container flex items-center justify-between gap-4 leading-tight md:max-w-screen-sm py-4 text-sm text-white">
+        <div>
+            <div class="font-normal">
+                Blogging with
+                <span class="bg-clip-text bg-gradient-to-r from-red-300 to-red-400">
+                    <span class="text-transparent">Laravel</span>
+                </span>
+            </div>
+
+            <div class="mt-1 text-gray-100">
+                A masterclass on unlocking limitless traffic with your favorite framework and <span class="bg-clip-text bg-gradient-to-r from-orange-300 to-orange-600"><span class="text-transparent" style="text-shadow: 0 0 5px rgb(253 186 116 / 50%)">SEO&nbsp;magic</span></span>
+            </div>
+        </div>
+
+        <div class="bg-white/10 flex-shrink-0 overflow-hidden relative rounded-full w-16 h-16">
+            <x-icon-blogging-with-laravel
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-2 w-24 h-24"
+            />
+        </div>
+    </div>
+</a>
+
 <div {{ $attributes->merge(['class' => 'container flex items-center justify-between'])}}>
     <a
         href="{{ route('home') }}"
@@ -12,19 +35,11 @@
         </span>
     </a>
 
-    <nav class="flex items-center gap-6 text-sm">
-        @if (empty($funnel))
+    @if (empty($funnel))
+        <nav class="flex items-center gap-6 text-sm">
             <button class="hover:text-indigo-400 transition-colors" @click="searching = true; window.fathom?.trackGoal('NV4ZNM3W', 0)">
                 Search
             </button>
-
-            <a href="https://blogging-with-laravel.com" class="decoration-indigo-400/30 relative text-indigo-400 underline underline-offset-4">
-                Blogging with Laravel
-
-                <span class="-mr-2 bg-gradient-to-r from-indigo-300 to-indigo-400 inline-block leading-tight px-3 py-1 rounded-full scale-75 text-white text-xs uppercase">
-                    New
-                </span>
-            </a>
-        @endif
-    </nav>
+        </nav>
+    @endif
 </div>
