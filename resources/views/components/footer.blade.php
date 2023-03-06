@@ -10,7 +10,7 @@
         </a>
 
         <div class="w-full md:w-auto">
-            <div class="font-semibold text-white">My course & services</div>
+            <div class="font-semibold text-white">Courses & services</div>
 
             <ul class="grid gap-2 mt-4">
                 <li>
@@ -26,12 +26,6 @@
                 <li>
                     <a href="{{ route('consulting.cto') }}" class="decoration-white/30 underline underline-offset-4">
                         Virtual on-demand CTO
-                    </a>
-                </li>
-
-                <li>
-                    <a href="{{ route('consulting.laravel') }}" class="decoration-white/30 underline underline-offset-4">
-                        Laravel development
                     </a>
                 </li>
             </ul>

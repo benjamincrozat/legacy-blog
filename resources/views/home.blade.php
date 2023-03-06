@@ -6,12 +6,8 @@
     <x-nav class="container mt-6" />
 
     @if ($ai->onFirstPage() && $posts->onFirstPage())
-        <x-ad class="container mt-10 md:mt-16" />
-    @endif
-
-    @if ($ai->onFirstPage() && $posts->onFirstPage())
         @if ($pins->isNotEmpty())
-            <section class="md:container md:max-w-[1024px] mt-8 md:mt-12">
+            <section class="md:container md:max-w-[1024px] mt-10 md:mt-16">
                 <div class="font-semibold px-4 md:px-0 text-center text-xl">
                     Featured
                 </div>
@@ -52,11 +48,7 @@
 
         <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mt-8 md:mt-16 mx-auto w-[100px]"></div>
 
-        @if ($ai->onFirstPage() && $posts->onFirstPage())
-            <x-ad class="container mt-16" />
-        @endif
-
-        <section class="container lg:max-w-[1024px] mt-12">
+        <section class="container lg:max-w-[1024px] mt-16">
             <div class="font-semibold px-4 sm:px-0 text-center text-xl">
                 Most popular
             </div>
@@ -88,9 +80,7 @@
             </section>
         @endif
 
-        <x-ad class="container mt-16" />
-
-        <section class="container lg:max-w-[1024px] mt-12">
+        <section class="container lg:max-w-[1024px] mt-16">
             <div class="font-semibold px-4 sm:px-0 text-center text-xl">
                 @if ($posts->onFirstPage())
                     Latest
@@ -117,11 +107,7 @@
 
     @if ($posts->onFirstPage())
         @if ($ai->isNotEmpty())
-            @if (! $ai->onFirstPage())
-                <x-ad class="container mt-10 md:mt-16" />
-            @endif
-
-            <section class="container lg:max-w-[1024px] mt-8">
+            <section class="container lg:max-w-[1024px] mt-10 md:mt-16">
                 <div class="px-4 sm:px-0 text-center text-xl">
                     @if ($ai->onFirstPage())
                         <span class="bg-clip-text bg-gradient-to-r from-indigo-300 to-indigo-400 inline-block">

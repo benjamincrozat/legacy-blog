@@ -103,18 +103,7 @@ class Post extends BaseModel implements Feedable
 
     public function renderedContent() : Attribute
     {
-        return Attribute::make(function () {
-            $rendered = str($this->content ?? '')->marxdown();
-
-            return str_replace('$$$$', view('components.ad', [
-                'affiliate' => Affiliate::query()
-                    ->whereNotNull('ad_title')
-                    ->whereNotNull('ad_content')
-                    ->inRandomOrder()
-                    ->first(),
-                'attributes' => new ComponentAttributeBag,
-            ])->render(), $rendered);
-        })->shouldCache();
+        return Attribute::make(fn () => str($this->content ?? '')->marxdown())->shouldCache();
     }
 
     public function renderedConclusion() : Attribute

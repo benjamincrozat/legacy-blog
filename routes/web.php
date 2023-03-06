@@ -15,8 +15,6 @@ Route::domain(preg_replace('/https?:\/\//', '', config('app.url')))->group(funct
 
     Route::get('/hire-cto', CTOConsultingController::class)->name('consulting.cto');
 
-    Route::get('/laravel-developer-for-hire', LaravelConsultingController::class)->name('consulting.laravel');
-
     Route::post('/subscribe', SubscribeController::class)->name('subscribe');
 
     Route::get('/recommends/{affiliate:slug}', RedirectToAffiliateController::class)->name('affiliate');

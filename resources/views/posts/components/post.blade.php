@@ -43,10 +43,6 @@
         </div>
     @endif
 
-    @if (empty($barebones) && ! $post->promotes_affiliate_links)
-        <x-ad class="container my-5" />
-    @endif
-
     @if ($post->promotes_affiliate_links && $highlights->isNotEmpty())
         <div class="container mt-8">
             <div class="grid sm:grid-cols-2 @if ($highlights->count() > 2) md:grid-cols-3 @endif place-items-center gap-4">
@@ -81,10 +77,6 @@
     <div class="!container content mt-8">
         {!! $post->rendered_content !!}
     </div>
-
-    @if (empty($barebones) && ! $post->promotes_affiliate_links)
-        <x-ad class="container my-5" />
-    @endif
 
     @if ($post->affiliates->isNotEmpty())
         <div class="!container content mt-4">
