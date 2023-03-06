@@ -1,4 +1,4 @@
-<a href="https://blogging-with-laravel.com" class="bg-gradient-to-r from-gray-900 dark:from-gray-800 to-gray-700/50 block">
+<a href="https://blogging-with-laravel.com" class="bg-gradient-to-r from-gray-900 dark:from-gray-800/50 to-gray-700 dark:to-gray-700/50 block">
     <div class="container flex items-center justify-between gap-4 leading-tight md:max-w-screen-sm py-4 text-sm text-white">
         <div>
             <div class="font-normal">
