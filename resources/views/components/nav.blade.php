@@ -42,10 +42,15 @@
     </a>
 
     @if (empty($funnel))
-        <nav class="flex items-center gap-6 text-sm">
-            <button class="hover:text-indigo-400 transition-colors" @click="searching = true; window.fathom?.trackGoal('NV4ZNM3W', 0)">
+        <div class="flex items-center gap-2">
+            <button class="flex items-center gap-2 group hover:text-indigo-400 transition-colors" @click="searching = true; window.fathom?.trackGoal('NV4ZNM3W', 0)">
+                <x-heroicon-s-magnifying-glass class="flex-shrink-0 w-4 h-4" />
                 Search
             </button>
-        </nav>
+
+            <span class="border dark:border-gray-800 inline-block px-2 py-[.35rem] rounded scale-90 text-xs translate-y-px uppercase">
+                ⌘K
+            </span>
+        </div>
     @endif
 </div>
