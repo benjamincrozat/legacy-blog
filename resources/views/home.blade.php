@@ -64,22 +64,6 @@
     @endif
 
     @if ($ai->onFirstPage())
-        @if ($posts->onFirstPage())
-            <section class="container lg:max-w-[1024px] mt-10 md:mt-16">
-                <div class="font-semibold px-4 sm:px-0 text-center text-xl">
-                    Services and tools for your projects
-                </div>
-
-                @if ($affiliates->isNotEmpty())
-                    <div class="grid md:grid-cols-2 gap-4 mt-8">
-                        @foreach ($affiliates as $post)
-                            <x-post :post="$post" @click="window.fathom?.trackGoal('HH0P1ACM', 0)" />
-                        @endforeach
-                    </div>
-                @endif
-            </section>
-        @endif
-
         <section class="container lg:max-w-[1024px] mt-16">
             <div class="font-semibold px-4 sm:px-0 text-center text-xl">
                 @if ($posts->onFirstPage())
