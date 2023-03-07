@@ -12,7 +12,7 @@
         x-init="$watch('searching', value => {
             $nextTick(() => {
                 if (value) {
-                    $focus.focus($refs.input)
+                    setTimeout(() => $focus.focus($refs.input), 0)
                 } else {
                     $refs.input.blur()
                 }
