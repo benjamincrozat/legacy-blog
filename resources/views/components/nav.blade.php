@@ -48,7 +48,7 @@
                 Search
             </button>
 
-            <span class="border dark:border-gray-800 inline-block px-2 py-[.35rem] rounded scale-90 text-xs translate-y-[.5px] sm:translate-y-px uppercase">
+            <span class="border dark:border-gray-800 inline-block px-2 py-[.35rem] rounded scale-90 text-xs sm:translate-y-px uppercase">
                 ⌘K
             </span>
         </div>
