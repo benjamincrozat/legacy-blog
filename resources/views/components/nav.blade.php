@@ -44,7 +44,7 @@
     @if (empty($funnel))
         <div class="flex items-center gap-2">
             <button class="flex items-center gap-2 group hover:text-indigo-400 transition-colors" @click="searching = true; window.fathom?.trackGoal('NV4ZNM3W', 0)">
-                <x-heroicon-s-magnifying-glass class="flex-shrink-0 w-4 h-4" />
+                <x-heroicon-s-magnifying-glass class="-translate-y-[.5px] sm:-translate-y-0 flex-shrink-0 w-4 h-4" />
                 Search
             </button>
 
