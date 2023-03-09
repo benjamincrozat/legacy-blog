@@ -7,7 +7,7 @@
             </div>
 
             <div class="mt-1 text-gray-200">
-                Build a better blog with <span class="bg-clip-text bg-gradient-to-r from-red-300 to-red-400 text-transparent">Laravel</span>. Get <span class="bg-clip-text bg-gradient-to-r from-orange-300 to-orange-600 text-transparent" style="text-shadow: 0 0 5px rgb(253 186 116 / 50%)">10K monthly visitors</span> from Google in just 6 months.
+                Build a better blog with <span class="bg-clip-text bg-gradient-to-r from-red-300 to-red-400 font-normal text-transparent">Laravel</span>. Get <span class="bg-clip-text bg-gradient-to-r from-orange-300 to-orange-600 font-normal text-transparent" style="text-shadow: 0 0 5px rgb(253 186 116 / 50%)">10K monthly visitors</span> from Google in just 6 months.
 
                 <div class="flex items-center gap-[.35rem] mt-2 text-blue-400">
                     Pre-order now
