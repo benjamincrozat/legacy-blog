@@ -1,13 +1,8 @@
 <a href="https://blogging-with-laravel.com" class="bg-gradient-to-r from-gray-900 dark:from-gray-800/50 to-gray-700 dark:to-gray-700/50 block">
     <div class="container flex items-center justify-between gap-4 leading-tight py-4 text-sm text-white">
         <div>
-            <div class="font-normal">
-                Blogging with
-                <span class="bg-clip-text bg-gradient-to-r from-red-300 to-red-400 text-transparent">Laravel</span>
-            </div>
-
-            <div class="mt-1 text-gray-200">
-                Build a better blog with <span class="bg-clip-text bg-gradient-to-r from-red-300 to-red-400 font-normal text-transparent">Laravel</span>. Get <span class="bg-clip-text bg-gradient-to-r from-orange-300 to-orange-600 font-normal text-transparent" style="text-shadow: 0 0 5px rgb(253 186 116 / 50%)">10K monthly visitors</span> from Google in just 6 months.
+            <div class="text-gray-200">
+                Build a better blog with <span class="bg-clip-text bg-gradient-to-r from-red-300 to-red-400 font-normal text-transparent">Laravel</span>. Get <span class="bg-clip-text bg-gradient-to-r from-orange-300 to-orange-400 font-normal text-transparent">10K monthly visitors</span> from Google in just 6 months.
 
                 <div class="flex items-center gap-[.35rem] mt-2 text-blue-400">
                     Pre-order now
