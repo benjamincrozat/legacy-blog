@@ -2172,16 +2172,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v10.2.0",
+            "version": "v10.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "3799f7f3118d57dc5d3dfaabde69a912fff65a7e"
+                "reference": "9e1f11aeae5a5dd7f4870b0c4cfdcc62c7ee811f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/3799f7f3118d57dc5d3dfaabde69a912fff65a7e",
-                "reference": "3799f7f3118d57dc5d3dfaabde69a912fff65a7e",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/9e1f11aeae5a5dd7f4870b0c4cfdcc62c7ee811f",
+                "reference": "9e1f11aeae5a5dd7f4870b0c4cfdcc62c7ee811f",
                 "shasum": ""
             },
             "require": {
@@ -2368,20 +2368,20 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2023-03-02T14:55:50+00:00"
+            "time": "2023-03-08T15:48:36+00:00"
         },
         {
             "name": "laravel/horizon",
-            "version": "v5.14.2",
+            "version": "v5.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/horizon.git",
-                "reference": "d41a14c601766af0e2cce9486fd5dd143688c25f"
+                "reference": "b49be302566365e0e4d517aac9995a8fe20b580e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/horizon/zipball/d41a14c601766af0e2cce9486fd5dd143688c25f",
-                "reference": "d41a14c601766af0e2cce9486fd5dd143688c25f",
+                "url": "https://api.github.com/repos/laravel/horizon/zipball/b49be302566365e0e4d517aac9995a8fe20b580e",
+                "reference": "b49be302566365e0e4d517aac9995a8fe20b580e",
                 "shasum": ""
             },
             "require": {
@@ -2400,6 +2400,7 @@
             "require-dev": {
                 "mockery/mockery": "^1.0",
                 "orchestra/testbench": "^6.0|^7.0|^8.0",
+                "phpstan/phpstan": "^1.10",
                 "phpunit/phpunit": "^9.0",
                 "predis/predis": "^1.1|^2.0"
             },
@@ -2443,23 +2444,23 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel/horizon/issues",
-                "source": "https://github.com/laravel/horizon/tree/v5.14.2"
+                "source": "https://github.com/laravel/horizon/tree/v5.15.0"
             },
-            "time": "2023-02-10T15:40:38+00:00"
+            "time": "2023-03-07T17:45:21+00:00"
         },
         {
             "name": "laravel/nova",
-            "version": "4.22.1",
+            "version": "4.22.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:laravel/nova.git",
-                "reference": "3daa3889d1bc6687f71282d8079ba174bc2283fe"
+                "reference": "845062cbaba71af76a9e29580fba07525350d9b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-3daa3889d1bc6687f71282d8079ba174bc2283fe-zip-6b73aa.zip",
-                "reference": "3daa3889d1bc6687f71282d8079ba174bc2283fe",
-                "shasum": "6ae486d53c6aa00d16ef36395e1688b0e2e93b67"
+                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-845062cbaba71af76a9e29580fba07525350d9b2-zip-ffdb23.zip",
+                "reference": "845062cbaba71af76a9e29580fba07525350d9b2",
+                "shasum": "4816ab2483d1049577f0ca82ed34ac27d3be1ee9"
             },
             "require": {
                 "brick/money": "^0.5.0|^0.6.0|^0.7.0|^0.8.0",
@@ -2479,11 +2480,11 @@
             },
             "require-dev": {
                 "laravel/nova-dusk-suite": "8.4.x-dev|9.4.x-dev|10.4.x-dev",
-                "laravel/pint": "^1.4",
-                "laravel/scout": "^9.8",
+                "laravel/pint": "^1.6",
+                "laravel/scout": "^9.8|^10.0",
                 "mockery/mockery": "^1.4.4",
-                "nunomaduro/larastan": "^1.0.1|^2.4",
-                "orchestra/testbench-dusk": "^6.24|^7.0|^8.0",
+                "nunomaduro/larastan": "^1.0.1|^2.5.1",
+                "orchestra/testbench-dusk": "^6.24|^7.21|^8.0",
                 "phpunit/phpunit": "^9.5.27",
                 "predis/predis": "^1.1.9|^2.0"
             },
@@ -2552,9 +2553,9 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/laravel/nova/tree/v4.22.1"
+                "source": "https://github.com/laravel/nova/tree/v4.22.2"
             },
-            "time": "2023-02-23T23:50:42+00:00"
+            "time": "2023-03-07T18:10:41+00:00"
         },
         {
             "name": "laravel/scout",
@@ -10438,16 +10439,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.11.0",
+            "version": "1.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "14daed4296fae74d9e3201d2c4925d1acb7aa614"
+                "reference": "7284c22080590fb39f2ffa3e9057f10a4ddd0e0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/14daed4296fae74d9e3201d2c4925d1acb7aa614",
-                "reference": "14daed4296fae74d9e3201d2c4925d1acb7aa614",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/7284c22080590fb39f2ffa3e9057f10a4ddd0e0c",
+                "reference": "7284c22080590fb39f2ffa3e9057f10a4ddd0e0c",
                 "shasum": ""
             },
             "require": {
@@ -10485,7 +10486,7 @@
             ],
             "support": {
                 "issues": "https://github.com/myclabs/DeepCopy/issues",
-                "source": "https://github.com/myclabs/DeepCopy/tree/1.11.0"
+                "source": "https://github.com/myclabs/DeepCopy/tree/1.11.1"
             },
             "funding": [
                 {
@@ -10493,7 +10494,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-03T13:19:32+00:00"
+            "time": "2023-03-08T13:26:56+00:00"
         },
         {
             "name": "nunomaduro/collision",
