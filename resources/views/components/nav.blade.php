@@ -1,23 +1,18 @@
 @empty($funnel)
     <a href="https://blogging-with-laravel.com" class="bg-gradient-to-r from-gray-900 dark:from-gray-800/50 to-gray-700 dark:to-gray-700/50 block">
         <div class="container flex items-center justify-between gap-4 leading-tight py-4 text-sm text-white">
-            <div>
-                <div class="text-gray-200">
-                    Build a better blog with <span class="bg-clip-text bg-gradient-to-r from-red-300 to-red-400 font-normal text-transparent">Laravel</span>. Get <span class="bg-clip-text bg-gradient-to-r from-orange-300 to-orange-400 font-normal text-transparent">10K monthly visitors</span> from Google in just 6 months.
+            <div class="text-gray-200">
+                Build a better blog with <span class="bg-clip-text bg-gradient-to-r from-red-300 to-red-400 font-normal text-transparent">Laravel</span>. Get <span class="bg-clip-text bg-gradient-to-r from-orange-300 to-orange-400 font-normal text-transparent">10K monthly visitors</span> from Google in just 6 months.
 
-                    <div class="flex items-center gap-[.35rem] mt-2 text-blue-400">
-                        Pre-order now
-
-                        <x-heroicon-o-arrow-right class="w-3 h-3" />
-                    </div>
+                <div class="flex items-center gap-[.35rem] mt-2 text-blue-400">
+                    Pre-order now
+                    <x-heroicon-o-arrow-right class="w-3 h-3" />
                 </div>
             </div>
 
-            <div class="bg-white/10 flex-shrink-0 overflow-hidden relative rounded-full w-16 h-16">
-                <x-icon-blogging-with-laravel
-                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-2 w-24 h-24"
-                />
-            </div>
+            <x-icon-bloggingwithlaravel
+                class="flex-shrink-0 w-16 h-16"
+            />
         </div>
     </a>
 @endempty
