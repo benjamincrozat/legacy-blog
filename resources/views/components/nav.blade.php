@@ -10,9 +10,7 @@
                 </div>
             </div>
 
-            <x-icon-bloggingwithlaravel
-                class="flex-shrink-0 w-16 h-16"
-            />
+            <x-icon-bloggingwithlaravel class="flex-shrink-0 w-16 h-16" />
         </div>
     </a>
 @endempty
@@ -32,15 +30,14 @@
     </a>
 
     @empty($funnel)
-        <div class="flex items-center gap-2">
-            <button class="flex items-center gap-2 group hover:text-indigo-400 transition-colors" @click="searching = true; window.fathom?.trackGoal('NV4ZNM3W', 0)">
-                <x-heroicon-s-magnifying-glass class="-translate-y-[.5px] sm:-translate-y-0 flex-shrink-0 w-4 h-4" />
-                Search
-            </button>
+        <button class="flex items-center gap-2 group hover:text-indigo-400 transition-colors" @click="searching = true; window.fathom?.trackGoal('NV4ZNM3W', 0)">
+            <x-heroicon-s-magnifying-glass class="-translate-y-[.5px] sm:-translate-y-0 flex-shrink-0 w-4 h-4" />
 
-            <span class="border dark:border-gray-800 inline-block px-2 py-[.35rem] rounded scale-90 text-xs sm:translate-y-px uppercase">
+            Search
+
+            <span class="border dark:border-gray-800 inline-block px-2 py-[.35rem] rounded scale-90 !text-gray-600 dark:!text-gray-300 text-xs sm:translate-y-px uppercase">
                 ⌘K
             </span>
-        </div>
+        </button>
     @endempty
 </div>
