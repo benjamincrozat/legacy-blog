@@ -28,6 +28,6 @@ class HomeController extends Controller
             ->latest()
             ->simplePaginate(perPage: 10, pageName: 'aiPostsPage');
 
-        return view('home', compact('affiliates', 'ai', 'pins', 'popular', 'posts'));
+        return view('home', compact('ai', 'pins', 'popular', 'posts'));
     }
 }

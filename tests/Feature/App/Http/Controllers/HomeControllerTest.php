@@ -35,20 +35,6 @@ class HomeControllerTest extends TestCase
         $this->assertCount(6, $response->viewData('popular'));
     }
 
-    public function test_it_lists_affiliate_posts() : void
-    {
-        Post::factory(10)->create(['promotes_affiliate_links' => true]);
-        Post::factory(10)->create(['ai' => false]);
-
-        $response = $this
-            ->get(route('home'))
-            ->assertOk()
-            ->assertViewIs('home');
-
-        $this->assertInstanceOf(Collection::class, $response->viewData('affiliates'));
-        $this->assertCount(6, $response->viewData('affiliates'));
-    }
-
     public function test_it_lists_posts() : void
     {
         Post::factory(10)->create(['ai' => false]);
