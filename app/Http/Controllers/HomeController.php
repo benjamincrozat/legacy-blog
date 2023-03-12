@@ -18,12 +18,6 @@ class HomeController extends Controller
             ->limit(6)
             ->get();
 
-        $affiliates = Post::with('user')
-            ->inRandomOrder()
-            ->where('promotes_affiliate_links', true)
-            ->limit(6)
-            ->get();
-
         $posts = Post::with('user')
             ->where('ai', false)
             ->latest()
