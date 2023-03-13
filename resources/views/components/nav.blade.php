@@ -5,7 +5,7 @@
                 Build a better blog with <span class="bg-clip-text bg-gradient-to-r from-red-300 to-red-400 font-normal text-transparent">Laravel</span>. Get <span class="bg-clip-text bg-gradient-to-r from-orange-300 to-orange-400 font-normal text-transparent">10K monthly visitors</span> from Google in just 6 months.
 
                 <div class="flex items-center gap-[.35rem] mt-2 text-blue-400">
-                    Pre-order now
+                    Preorder now
                     <x-heroicon-o-arrow-right class="w-3 h-3" />
                 </div>
             </div>
