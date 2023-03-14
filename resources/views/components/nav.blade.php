@@ -2,7 +2,7 @@
     <a href="https://blogging-with-laravel.com" class="bg-gradient-to-r from-gray-900 dark:from-gray-800/50 to-gray-700 dark:to-gray-700/50 block">
         <div class="container flex items-center justify-between gap-4 leading-tight py-4 text-sm text-white">
             <div class="text-gray-200">
-                <div class="mt-1">
+                <div>
                     Build a better blog with <span class="bg-clip-text bg-gradient-to-r from-red-300 to-red-400 font-normal text-transparent">Laravel</span>. Get <span class="bg-clip-text bg-gradient-to-r from-orange-300 to-orange-400 font-normal text-transparent">10K monthly visitors</span> from Google in just 6 months.
                 </div>
 
@@ -12,9 +12,21 @@
                 </div>
             </div>
 
-            <div class="relative">
-                <x-icon-bloggingwithlaravel class="flex-shrink-0 w-16 h-16" />
-                <span class="absolute left-1/2 bottom-0 -translate-x-1/2 translate-y-[30%] bg-gradient-to-r from-indigo-400 to-blue-300 font-bold inline-block leading-tight px-2 py-1 rounded-full scale-[.65] text-xs uppercase">New!</span>
+            <div class="flex-shrink-0 relative">
+                <img
+                    loading="lazy"
+                    src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=128"
+                    width="64"
+                    height="64"
+                    alt="Benjamin Crozat"
+                    class="rounded-full"
+                />
+
+                <span class="absolute left-1/2 bottom-0 -translate-x-1/2 translate-y-[30%]
+                bg-gradient-to-r from-indigo-400 to-blue-300 font-bold inline-block
+                leading-tight px-2 py-1 rounded-full scale-[.65] text-xs uppercase">
+                    New!
+                </span>
             </div>
         </div>
     </a>
