@@ -2,15 +2,20 @@
     <a href="https://blogging-with-laravel.com" class="bg-gradient-to-r from-gray-900 dark:from-gray-800/50 to-gray-700 dark:to-gray-700/50 block">
         <div class="container flex items-center justify-between gap-4 leading-tight py-4 text-sm text-white">
             <div class="text-gray-200">
-                Build a better blog with <span class="bg-clip-text bg-gradient-to-r from-red-300 to-red-400 font-normal text-transparent">Laravel</span>. Get <span class="bg-clip-text bg-gradient-to-r from-orange-300 to-orange-400 font-normal text-transparent">10K monthly visitors</span> from Google in just 6 months.
+                <div class="mt-1">
+                    Build a better blog with <span class="bg-clip-text bg-gradient-to-r from-red-300 to-red-400 font-normal text-transparent">Laravel</span>. Get <span class="bg-clip-text bg-gradient-to-r from-orange-300 to-orange-400 font-normal text-transparent">10K monthly visitors</span> from Google in just 6 months.
+                </div>
 
                 <div class="flex items-center gap-[.35rem] mt-2 text-blue-400">
-                    Preorder now
+                    <span>Preorder now with <span class="text-blue-200">$100 off</span></span>
                     <x-heroicon-o-arrow-right class="w-3 h-3" />
                 </div>
             </div>
 
-            <x-icon-bloggingwithlaravel class="flex-shrink-0 w-16 h-16" />
+            <div class="relative">
+                <x-icon-bloggingwithlaravel class="flex-shrink-0 w-16 h-16" />
+                <span class="absolute left-1/2 bottom-0 -translate-x-1/2 translate-y-[30%] bg-gradient-to-r from-indigo-400 to-blue-300 font-bold inline-block leading-tight px-2 py-1 rounded-full scale-[.65] text-xs uppercase">New!</span>
+            </div>
         </div>
     </a>
 @endempty
