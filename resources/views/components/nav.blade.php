@@ -7,7 +7,7 @@
                 </div>
 
                 <div class="flex items-center gap-[.35rem] mt-2 text-blue-400">
-                    <span>Preorder now with <span class="text-blue-200">$100 off</span></span>
+                    <span><span class="text-blue-300" style="text-shadow: 0 0 3px rgb(255 255 255 / 50%)">$100 off</span> during early access</span>
                     <x-heroicon-o-arrow-right class="w-3 h-3" />
                 </div>
             </div>
