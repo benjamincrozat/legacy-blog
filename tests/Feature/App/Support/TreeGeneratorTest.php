@@ -9,7 +9,7 @@ class TreeGeneratorTest extends TestCase
 {
     public function test_it_works() : void
     {
-        $tree = TreeGenerator::generate(<<<HTML
+        $tree = TreeGenerator::generate(<<<'HTML'
 <h1 id="foo"><a href="#"><strong>Foo</strong></a></h1>
 <h2>Bar</h2>
 <p>Lorem ipsum dolor sit amet.</p>

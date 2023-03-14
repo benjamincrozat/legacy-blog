@@ -10,7 +10,6 @@ class CTOConsultingControllerTest extends TestCase
     {
         $this
             ->get(route('consulting.cto'))
-            ->assertOk()
-        ;
+            ->assertOk();
     }
 }

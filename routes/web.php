@@ -6,7 +6,6 @@ use App\Http\Controllers\ShowPostController;
 use App\Http\Controllers\SubscribeController;
 use App\Http\Controllers\CTOConsultingController;
 use App\Http\Controllers\RedirectToUrlController;
-use App\Http\Controllers\LaravelConsultingController;
 use App\Http\Controllers\RedirectToAffiliateController;
 
 // The blog's routes.

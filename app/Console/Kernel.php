@@ -4,7 +4,6 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use App\Console\Commands\FathomFetchCommand;
-use App\Console\Commands\ConvertKitFetchCommand;
 use App\Console\Commands\SitemapGenerateCommand;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 

@@ -8,7 +8,6 @@ use App\Models\User;
 use App\Models\Short;
 use App\Models\Redirect;
 use App\Models\Affiliate;
-use App\Models\Subscriber;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
