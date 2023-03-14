@@ -32,7 +32,6 @@
     @if (empty($barebones))
         <x-posts::newsletter
             :promotes-affiliate-links="$post->promotes_affiliate_links"
-            :subscribers-count="$subscribersCount"
             class="container sm:max-w-screen-xs mt-10"
         />
     @endif

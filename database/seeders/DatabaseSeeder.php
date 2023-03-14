@@ -36,8 +36,6 @@ class DatabaseSeeder extends Seeder
 
         Redirect::factory(10)->create();
 
-        Subscriber::factory(50)->create();
-
         Short::factory(10)->create();
     }
 }

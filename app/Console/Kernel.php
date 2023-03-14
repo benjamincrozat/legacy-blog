@@ -13,10 +13,6 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule) : void
     {
         $schedule
-            ->command(ConvertKitFetchCommand::class)
-            ->hourly();
-
-        $schedule
             ->command(FathomFetchCommand::class)
             ->hourly();
 

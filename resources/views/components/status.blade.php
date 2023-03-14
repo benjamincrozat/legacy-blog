@@ -1,6 +1,4 @@
-@if (! Route::is('consulting.cto') &&
-     (session('status') ||
-     request('convertkit')))
+@if (! Route::is('consulting.cto') && (session('status') || request('convertkit')))
     <div
         {{ $attributes->merge([
             'class' => 'fixed bottom-0 left-0 right-0 z-10',
