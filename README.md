@@ -4,6 +4,13 @@
 
 Source code for [benjamincrozat.com](https://benjamincrozat.com)
 
+## Requirements
+
+**This project requires Laravel Nova, which is a paid package. For now, I don't know how to make it optional, but meanwhile, you can just remove it for the dependencies.**
+
+- PHP 8.2+
+- MySQL 8+
+
 ## Installation
 
 This project should run in Laravel Valet, Docker or whatever else you prefer to use.
@@ -13,8 +20,6 @@ git clone git@github.com:benjamincrozat/benjamincrozat.com.git
 
 cd benjamincrozat.com
 ```
-
-**This project requires Laravel Nova, which is a paid package. For now, I don't know how to make it optional, but meanwhile, you can just remove it for the dependencies.**
 
 ```bash
 composer install
