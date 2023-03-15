@@ -127,21 +127,21 @@
     "@algolia/requester-common" "4.15.0"
 
 "@alpinejs/focus@^3.10.5":
-  version "3.11.1"
-  resolved "https://registry.yarnpkg.com/@alpinejs/focus/-/focus-3.11.1.tgz#8f18bf6099814e9dd45e1c8645bc1d971484e471"
-  integrity sha512-5gbkgwLlxFfYomCt4cHda5DxBwIdBagmA1AXiOuUytix7AHPtspJBjAULLglz4D82Xdz7bWyau4vZfLr/PhbXQ==
+  version "3.12.0"
+  resolved "https://registry.yarnpkg.com/@alpinejs/focus/-/focus-3.12.0.tgz#d287e48653a4fe38b12110b7fc2101ecc5008816"
+  integrity sha512-KfFS6W2Ao71e/zWMg5B51QR8Djocc2grDBhZ4VYNYFh5cUnb3TELQ3luY0kjl9phy2NToi52Gz360G889Pz1Bg==
   dependencies:
     focus-trap "^6.6.1"
 
 "@alpinejs/intersect@^3.10.3":
-  version "3.11.1"
-  resolved "https://registry.yarnpkg.com/@alpinejs/intersect/-/intersect-3.11.1.tgz#858e0aa5689c459fbd22442bbe06c65b00fa4786"
-  integrity sha512-kY8MBSZhfgaaEQC94flhCUVX04RAEXpZRZSKFb8cToDNDFbVhVFF8HNPEAwH+SQOAI45A0LFjGbVaO9m89egVw==
+  version "3.12.0"
+  resolved "https://registry.yarnpkg.com/@alpinejs/intersect/-/intersect-3.12.0.tgz#935e34a25206c98498502cd49e265f8302491046"
+  integrity sha512-pwaOtU3g4l9tKxOoccbZzCoRWokDyEr35T9hCKO8mWruyJ0WKjaB+8ypCA49TT1Vxw5XMUz82FBzuF3JJboirw==
 
 "@alpinejs/persist@^3.10.5":
-  version "3.11.1"
-  resolved "https://registry.yarnpkg.com/@alpinejs/persist/-/persist-3.11.1.tgz#87d6f461ab6da89b894701a9ddb896ab8eecdddb"
-  integrity sha512-x+vkIMexCYo5x/T1mvy/wZ1hg/y1k34Kk/dcXEfDiUF2iQ/hjusWO+54o+5FR6QUrQpPsjLfX2J1vf0XUsBlLA==
+  version "3.12.0"
+  resolved "https://registry.yarnpkg.com/@alpinejs/persist/-/persist-3.12.0.tgz#bbe1898eaccb7e6f3bb11d9f54fdb7c0105d0aec"
+  integrity sha512-d6dQSV73Lc1stDZAQmTqFIL+AfRZgOABxpitbhK6gAkKaWHwNE6O6UAj71Qs7VhF5NkaURdCv47lg4Q+6doupw==
 
 "@esbuild/android-arm@0.15.18":
   version "0.15.18"
@@ -253,9 +253,9 @@ algoliasearch@^4.14.3:
     "@algolia/transporter" "4.15.0"
 
 alpinejs@^3.10.3:
-  version "3.11.1"
-  resolved "https://registry.yarnpkg.com/alpinejs/-/alpinejs-3.11.1.tgz#8675083411bb8a18e618a646cd64cb9bdf76a75e"
-  integrity sha512-0Y+4WKQcEZrvpfS98qeSOXCPXFPorULQ+1hc8lQrx+1HHzkUofD4HzjTfz+wimA5tSsGnpXz/SoF2P9saiXZCw==
+  version "3.12.0"
+  resolved "https://registry.yarnpkg.com/alpinejs/-/alpinejs-3.12.0.tgz#ff84d788231e7cc3fc38e363b7ebbc4f9d7031b2"
+  integrity sha512-YENcRBA9dlwR8PsZNFMTHbmdlTNwd1BkCeivPvOzzCKHas6AfwNRsDK9UEFmE5dXTMEZjnnpCTxV8vkdpWiOCw==
   dependencies:
     "@vue/reactivity" "~3.1.1"
 
@@ -273,12 +273,12 @@ arg@^5.0.2:
   integrity sha512-PYjyFOLKQ9y57JvQ6QLo8dAgNqswh8M1RMJYdQduT6xbWSgK36P/Z/v+p888pM69jMMfS8Xd8F6I1kQ/I9HUGg==
 
 autoprefixer@^10.4.8:
-  version "10.4.13"
-  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-10.4.13.tgz#b5136b59930209a321e9fa3dca2e7c4d223e83a8"
-  integrity sha512-49vKpMqcZYsJjwotvt4+h/BCjJVnhGwcLpDt5xkcaOG3eLrG/HUYLagrihYsQ+qrIBgIzX1Rw7a6L8I/ZA1Atg==
+  version "10.4.14"
+  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-10.4.14.tgz#e28d49902f8e759dd25b153264e862df2705f79d"
+  integrity sha512-FQzyfOsTlwVzjHxKEqRIAdJx9niO6VCBCoEwax/VLSoQF29ggECcPuBqUMZ+u8jCZOPSy8b8/8KnuFbp0SaFZQ==
   dependencies:
-    browserslist "^4.21.4"
-    caniuse-lite "^1.0.30001426"
+    browserslist "^4.21.5"
+    caniuse-lite "^1.0.30001464"
     fraction.js "^4.2.0"
     normalize-range "^0.1.2"
     picocolors "^1.0.0"
@@ -296,7 +296,7 @@ braces@^3.0.2, braces@~3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
-browserslist@^4.21.4:
+browserslist@^4.21.5:
   version "4.21.5"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.21.5.tgz#75c5dae60063ee641f977e00edd3cfb2fb7af6a7"
   integrity sha512-tUkiguQGW7S3IhB7N+c2MV/HZPSCPAAiYBZXLsBhFB/PCy6ZKKsZrmBayHV9fdGV/ARIfJ14NkxKzRDjvp7L6w==
@@ -311,10 +311,10 @@ camelcase-css@^2.0.1:
   resolved "https://registry.yarnpkg.com/camelcase-css/-/camelcase-css-2.0.1.tgz#ee978f6947914cc30c6b44741b6ed1df7f043fd5"
   integrity sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==
 
-caniuse-lite@^1.0.30001426, caniuse-lite@^1.0.30001449:
-  version "1.0.30001462"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001462.tgz#b2e801e37536d453731286857c8520d3dcee15fe"
-  integrity sha512-PDd20WuOBPiasZ7KbFnmQRyuLE7cFXW2PVd7dmALzbkUXEP46upAuCDm9eY9vho8fgNMGmbAX92QBZHzcnWIqw==
+caniuse-lite@^1.0.30001449, caniuse-lite@^1.0.30001464:
+  version "1.0.30001466"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001466.tgz#c1e6197c540392e09709ecaa9e3e403428c53375"
+  integrity sha512-ewtFBSfWjEmxUgNBSZItFSmVtvk9zkwkl1OfRZlKA8slltRN+/C/tuGVrF9styXkN36Yu3+SeJ1qkXxDEyNZ5w==
 
 chokidar@^3.5.3:
   version "3.5.3"
@@ -366,9 +366,9 @@ dlv@^1.1.3:
   integrity sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==
 
 electron-to-chromium@^1.4.284:
-  version "1.4.322"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.322.tgz#e0afa1d115b66c1d47869db40d8f2f3729cecc16"
-  integrity sha512-KovjizNC9XB7dno/2GjxX8VS0SlfPpCjtyoKft+bCO+UfD8bFy16hY4Sh9s0h9BDxbRH2U0zX5VBjpM1LTcNlg==
+  version "1.4.330"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.330.tgz#4740378db7160d7210afb29800c74048cdf10a99"
+  integrity sha512-PqyefhybrVdjAJ45HaPLtuVaehiSw7C3ya0aad+rvmV53IVyXmYRk3pwIOb2TxTDTnmgQdn46NjMMaysx79/6Q==
 
 esbuild-android-64@0.15.18:
   version "0.15.18"
@@ -764,9 +764,9 @@ postcss@^8.0.9, postcss@^8.1.14, postcss@^8.4.18:
     source-map-js "^1.0.2"
 
 preact@^10.0.0:
-  version "10.13.0"
-  resolved "https://registry.yarnpkg.com/preact/-/preact-10.13.0.tgz#f8bd3cf257a4dbe41da71a52131b79916d4ca89d"
-  integrity sha512-ERdIdUpR6doqdaSIh80hvzebHB7O6JxycOhyzAeLEchqOq/4yueslQbfnPwXaNhAYacFTyCclhwkEbOumT0tHw==
+  version "10.13.1"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-10.13.1.tgz#d220bd8771b8fa197680d4917f3cefc5eed88720"
+  integrity sha512-KyoXVDU5OqTpG9LXlB3+y639JAGzl8JSBXLn1J9HTSB3gbKcuInga7bZnXLlxmK94ntTs1EFeZp0lrja2AuBYQ==
 
 queue-microtask@^1.2.2:
   version "1.2.3"
