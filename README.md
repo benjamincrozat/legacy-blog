@@ -6,7 +6,7 @@ Source code for [benjamincrozat.com](https://benjamincrozat.com)
 
 ## Requirements
 
-**This project requires Laravel Nova, which is a paid package. For now, I don't know how to make it optional, but meanwhile, you can just remove it for the dependencies.**
+**This project requires Laravel Nova, which is a paid package. For now, I don't know how to make it optional, but meanwhile, you can just remove it from the dependencies.**
 
 - PHP 8.2+
 - MySQL 8+
