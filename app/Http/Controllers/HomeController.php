@@ -21,12 +21,12 @@ class HomeController extends Controller
         $posts = Post::with('user')
             ->where('ai', false)
             ->latest()
-            ->simplePaginate(perPage: 10, pageName: 'postsPage');
+            ->simplePaginate(perPage: 20, pageName: 'postsPage');
 
         $ai = Post::with('user')
             ->where('ai', true)
             ->latest()
-            ->simplePaginate(perPage: 10, pageName: 'aiPostsPage');
+            ->simplePaginate(perPage: 20, pageName: 'aiPostsPage');
 
         return view('home', compact('ai', 'pins', 'popular', 'posts'));
     }
