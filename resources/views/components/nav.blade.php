@@ -3,7 +3,7 @@
         <div class="container flex items-center justify-between gap-4 leading-tight py-4 text-sm text-white">
             <div class="text-gray-200">
                 <div>
-                    Maximize your <span class="bg-clip-text bg-gradient-to-r from-red-300 to-red-400 font-normal text-transparent">Laravel</span> blog's potential with SEO best practices and reach <span class="bg-clip-text bg-gradient-to-r from-orange-300 to-orange-400 font-normal text-transparent">10K monthly clicks</span> on Google.
+                    Maximize your <span class="bg-clip-text bg-gradient-to-r from-red-300 to-red-400 font-normal text-transparent">Laravel</span> blog's potential with <span class="bg-clip-text bg-gradient-to-r from-green-300 to-green-400 font-normal text-transparent">SEO best practices</span> and reach <span class="bg-clip-text bg-gradient-to-r from-orange-300 to-orange-400 font-normal text-transparent">10K monthly clicks</span> on Google.
                 </div>
 
                 <div class="flex items-center gap-[.35rem] mt-2 text-blue-400">
