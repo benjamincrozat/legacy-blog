@@ -6,9 +6,7 @@
             <div class="container flex items-center justify-between gap-4 leading-tight py-4 text-sm text-white">
                 <div class="text-gray-200">
                     <div>
-                        <strong class="font-medium">Laravel developers</strong>, <span class="bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400 text-transparent">let GPT-4 handle repetitive tasks.</span><br class="hidden sm:inline" />
-
-                        <span class="bg-clip-text bg-gradient-to-r from-indigo-200 to-blue-300 text-transparent">Admin panels creation, REST API docs and i18nization, 100% handled by artificial intelligence.</span>
+                        <strong class="font-medium">Laravel developers</strong>, <span class="bg-clip-text bg-gradient-to-r from-blue-200 to-indigo-200 text-transparent">Save days of repetitive coding.</span> <span class="bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400 text-transparent">Let GPT-4 do it for you.</span>
                     </div>
 
                     <div class="flex items-center gap-[.35rem] mt-2 text-blue-400">
