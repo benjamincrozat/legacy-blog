@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\App\Support;
+namespace Tests\Feature;
 
 use Tests\TestCase;
 use PHPUnit\Framework\Attributes\DataProvider;
