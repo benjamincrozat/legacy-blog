@@ -257,7 +257,6 @@ MARKDOWN,
             'conclusion' => fake()->paragraph(),
             'description' => fake()->paragraph(),
             'promotes_affiliate_links' => fake()->boolean(),
-            'ai' => fake()->boolean(),
         ];
     }
 

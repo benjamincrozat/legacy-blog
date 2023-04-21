@@ -12,7 +12,6 @@ use Laravel\Nova\Fields\Stack;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\HasMany;
-use App\Nova\Metrics\PostsIntent;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\BelongsTo;
@@ -100,26 +99,6 @@ HTML;
                     ->sortable()
                     ->exceptOnForms(),
 
-                Boolean::make('Co-written with GPT', 'ai')
-                    ->sortable()
-                    ->hideFromIndex(),
-
-                Badge::make('Written by', 'ai')
-                    ->types([
-                        'ai' => 'bg-yellow-100 text-yellow-600',
-                        'human' => 'bg-gray-100',
-                    ])
-                    ->map([
-                        true => 'ai',
-                        false => 'human',
-                    ])
-                    ->labels([
-                        true => 'AI',
-                        false => 'Human',
-                    ])
-                    ->sortable()
-                    ->exceptOnForms(),
-
                 Date::make('Modified At')
                     ->displayUsing(fn () => $this->modified_at?->isoFormat('ll'))
                     ->sortable(),
@@ -147,9 +126,7 @@ HTML;
 
     public function cards(NovaRequest $request) : array
     {
-        return [
-            new PostsIntent(),
-        ];
+        return [];
     }
 
     public function filters(NovaRequest $request) : array

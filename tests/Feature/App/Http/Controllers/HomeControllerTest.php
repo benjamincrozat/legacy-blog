@@ -11,7 +11,7 @@ class HomeControllerTest extends TestCase
 {
     public function test_it_lists_pins() : void
     {
-        Post::factory(10)->pinned()->create(['ai' => false]);
+        Post::factory(10)->pinned()->create();
 
         $response = $this
             ->get(route('home'))
@@ -37,8 +37,7 @@ class HomeControllerTest extends TestCase
 
     public function test_it_lists_posts() : void
     {
-        Post::factory(10)->create(['ai' => false]);
-        Post::factory(10)->create(['ai' => true]);
+        Post::factory(30)->create();
 
         $response = $this
             ->get(route('home'))
@@ -46,20 +45,6 @@ class HomeControllerTest extends TestCase
             ->assertViewIs('home');
 
         $this->assertInstanceOf(Paginator::class, $response->viewData('posts'));
-        $this->assertCount(10, $response->viewData('posts'));
-    }
-
-    public function test_it_lists_ai_posts() : void
-    {
-        Post::factory(10)->create(['ai' => true]);
-        Post::factory(10)->create(['ai' => false]);
-
-        $response = $this
-            ->get(route('home'))
-            ->assertOk()
-            ->assertViewIs('home');
-
-        $this->assertInstanceOf(Paginator::class, $response->viewData('ai'));
-        $this->assertCount(10, $response->viewData('ai'));
+        $this->assertCount(20, $response->viewData('posts'));
     }
 }
