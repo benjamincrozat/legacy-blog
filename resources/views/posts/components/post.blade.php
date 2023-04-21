@@ -7,14 +7,14 @@
         @endif
 
         <div class="container flex items-center justify-between gap-8">
-            <h1 class="font-thin text-3xl md:text-5xl dark:text-white">
+            <h1 class="text-3xl font-thin md:text-5xl dark:text-white">
                 {{ $post->title }}
             </h1>
 
-            <img src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}?s=192" width="96" height="96" alt="{{ $post->user->name }}" class="flex-shrink-0 w-16 h-16 sm:w-24 sm:h-24 rounded-full -translate-y-px" />
+            <img src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}?s=192" width="96" height="96" alt="{{ $post->user->name }}" class="flex-shrink-0 w-16 h-16 -translate-y-px rounded-full sm:w-24 sm:h-24" />
         </div>
     @else
-        <h1 class="@if ($post->ai) before:content-['AI-generated:'] before:text-indigo-400 @endif container font-thin text-3xl md:text-5xl dark:text-white">
+        <h1 class="container text-3xl font-thin md:text-5xl dark:text-white">
             {{ $post->title }}
         </h1>
 
@@ -32,7 +32,7 @@
     @if (empty($barebones))
         <x-posts::newsletter
             :promotes-affiliate-links="$post->promotes_affiliate_links"
-            class="container sm:max-w-screen-xs mt-10"
+            class="container mt-10 sm:max-w-screen-xs"
         />
     @endif
 
@@ -48,12 +48,12 @@
                 @foreach ($highlights as $highlight)
                     <x-posts::affiliate-highlight
                         :highlight="$highlight"
-                        class="col-span-1 h-full"
+                        class="h-full col-span-1"
                     />
                 @endforeach
             </div>
 
-            <p class="mt-4 opacity-75 text-center text-xs">
+            <p class="mt-4 text-xs text-center opacity-75">
                 This article uses affiliate links, which can compensate me at no cost to you if you decide to pursue a deal. @if ($highlights->count() > 1) <br class="hidden md:inline" /> @endif
                 I only promote products I've personally used and stand behind.
             </p>
@@ -69,7 +69,7 @@
 
     @if (! $post->promotes_affiliate_links && $post->image)
         <div class="container text-center">
-            <img src="{{ $post->image }}" width="1280" height="720" alt="{{ $post->title }}" class="aspect-video inline mt-8 object-cover" />
+            <img src="{{ $post->image }}" width="1280" height="720" alt="{{ $post->title }}" class="inline object-cover mt-8 aspect-video" />
         </div>
     @endif
 
@@ -107,14 +107,14 @@
                                 <img
                                     src="{{ $affiliate->icon }}"
                                     alt="{{ $affiliate->name }}"
-                                    class="absolute inset-0 rounded-md sm:rounded-lg z-10"
+                                    class="absolute inset-0 z-10 rounded-md sm:rounded-lg"
                                 />
 
                                 <img
                                     loading="lazy"
                                     src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}"
                                     alt="{{ $post->user->name }}"
-                                    class="absolute -bottom-2 -right-2 ring-4 ring-white dark:ring-gray-800 rounded-full w-2/3 z-20"
+                                    class="absolute z-20 w-2/3 rounded-full -bottom-2 -right-2 ring-4 ring-white dark:ring-gray-800"
                                 />
                             </a>
 
@@ -129,18 +129,18 @@
 
                         @if ($affiliate->rating)
                             <div class="mt-8 text-center">
-                                <div class="font-semibold text-xl sm:text-3xl">
+                                <div class="text-xl font-semibold sm:text-3xl">
                                     {{ $affiliate->rating }} out of 10
                                 </div>
 
                                 <div class="mt-2">
                                     @foreach (range(1, $affiliate->rating) as $i)
-                                        <x-heroicon-s-star class="inline text-yellow-400 w-6 sm:w-8 h-6 sm:h-8" />
+                                        <x-heroicon-s-star class="inline w-6 h-6 text-yellow-400 sm:w-8 sm:h-8" />
                                     @endforeach
 
                                     @if ($affiliate->rating < 10)
                                         @foreach (range(1, 10 - $affiliate->rating) as $i)
-                                            <x-heroicon-s-star class="inline opacity-10 w-6 sm:w-8 h-6 sm:h-8" />
+                                            <x-heroicon-s-star class="inline w-6 h-6 opacity-10 sm:w-8 sm:h-8" />
                                         @endforeach
                                     @endif
                                 </div>
@@ -185,7 +185,7 @@
 
             @if ($affiliate->screenshot)
                 <a href="{{ route('affiliate', $affiliate) }}">
-                    <img src="{{ str_replace('/upload', '/upload/dpr_auto,f_auto,q_auto,w_auto', $affiliate->screenshot) }}" alt="{{ $affiliate->name }}" class="aspect-video rounded-lg shadow-md dark:shadow-none w-full" />
+                    <img src="{{ str_replace('/upload', '/upload/dpr_auto,f_auto,q_auto,w_auto', $affiliate->screenshot) }}" alt="{{ $affiliate->name }}" class="w-full rounded-lg shadow-md aspect-video dark:shadow-none" />
                 </a>
             @endif
 
@@ -195,7 +195,7 @@
             @endif
 
             @if ($affiliate->pros)
-                <p class="flex font-bold items-center gap-2 text-lg sm:text-xl">
+                <p class="flex items-center gap-2 text-lg font-bold sm:text-xl">
                     <span>Here's what I love about {{ $affiliate->name }}…</span>
 
                     <img
@@ -212,7 +212,7 @@
             @endif
 
             @if ($affiliate->cons)
-                <p class="flex font-bold items-center gap-2 text-lg sm:text-xl">
+                <p class="flex items-center gap-2 text-lg font-bold sm:text-xl">
                     <span>And what's not so good…</span>
 
                     <img
@@ -228,7 +228,7 @@
                 {!! $affiliate->rendered_cons !!}
             @endif
 
-            <a href="{{ route('affiliate', $affiliate) }}" class="btn-green mt-8">
+            <a href="{{ route('affiliate', $affiliate) }}" class="mt-8 btn-green">
                 Try {{ $affiliate->name }}
             </a>
         </div>

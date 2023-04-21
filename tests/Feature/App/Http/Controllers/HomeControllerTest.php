@@ -24,7 +24,7 @@ class HomeControllerTest extends TestCase
 
     public function test_it_lists_popular_posts() : void
     {
-        Post::factory(10)->create(['ai' => false]);
+        Post::factory(10)->create();
 
         $response = $this
             ->get(route('home'))

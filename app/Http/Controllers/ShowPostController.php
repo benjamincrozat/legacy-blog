@@ -26,7 +26,6 @@ class ShowPostController extends Controller
                         $query
                             ->inRandomOrder()
                             ->when($post->promotes_affiliate_links, fn ($q) => $q->where('promotes_affiliate_links', true))
-                            ->where('ai', $post->ai)
                             ->whereNotIn('id', [$post->id]);
                     }
                 )
