@@ -1,5 +1,5 @@
 @empty($funnel)
-    <a href="https://smousss.com" target="_blank "class="block text-gray-600 bg-gradient-to-r from-gray-100 dark:from-gray-900 dark:from-gray-800/50 to-gray-200/[.65] dark:to-gray-700/50 dark:text-white">
+    <a href="https://smousss.com" target="_blank "class="block text-gray-600 bg-gradient-to-r from-gray-100 dark:from-gray-900 dark:from-gray-700/50 to-gray-200/[.65] dark:to-gray-800/50 dark:text-white">
         <div class="container flex items-center justify-between gap-4 py-4 text-sm leading-tight">
             <div>
                 <div class="font-medium">
