@@ -7,7 +7,7 @@
                 </div>
 
                 <div class="mt-2 font-medium text-blue-400">
-                    <span>Try it and let me know what you think!</span>
+                    <span>Try it for free!</span>
                 </div>
             </div>
 
