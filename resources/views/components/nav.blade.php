@@ -1,24 +1,23 @@
 @empty($funnel)
-    <a href="https://smousss.com" target="_blank "class="block bg-gradient-to-r from-gray-900 dark:from-gray-800/50 to-gray-700 dark:to-gray-700/50">
-        <div class="container flex items-center justify-between gap-4 py-4 text-sm leading-tight text-white">
-            <div class="text-gray-200">
-                <div>
-                    <strong class="font-medium">The best AI assistant for Laravel developers.</strong>
+    <a href="https://smousss.com" target="_blank "class="block text-gray-600 bg-gradient-to-r from-gray-100 dark:from-gray-900 dark:from-gray-800/50 to-gray-200/[.65] dark:to-gray-700/50 dark:text-white">
+        <div class="container flex items-center justify-between gap-4 py-4 text-sm leading-tight">
+            <div>
+                <div class="font-medium">
+                    “I created an AI assistant for Laravel developers that handles all the boring work.”
                 </div>
 
-                <div class="flex items-center gap-[.35rem] mt-2 text-blue-400">
-                    <span>Try for free</span>
-                    <x-heroicon-o-arrow-right class="w-3 h-3" />
+                <div class="mt-2 font-medium text-blue-400">
+                    <span>Try it and let me know what you think!</span>
                 </div>
             </div>
 
             <img
                 loading="lazy"
-                src="{{ Vite::asset('resources/img/smousss.png') }}"
-                width="64"
-                height="64"
+                src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=128"
+                width="48"
+                height="48"
                 alt="Smousss"
-                class="flex-shrink-0 rounded-full"
+                class="flex-shrink-0 w-[48px] h-[48px] md:w-[64px] md:h-[64px] rounded-full"
             />
         </div>
     </a>
