@@ -6,6 +6,7 @@ use Illuminate\Console\Scheduling\Schedule;
 use App\Console\Commands\FathomFetchCommand;
 use App\Console\Commands\SitemapGenerateCommand;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Laravel\Nova\Fields\Attachments\PruneStaleAttachments;
 
 class Kernel extends ConsoleKernel
 {
@@ -14,6 +15,10 @@ class Kernel extends ConsoleKernel
         $schedule
             ->command(FathomFetchCommand::class)
             ->hourly();
+
+        $schedule
+            ->call(new PruneStaleAttachments)
+            ->daily();
 
         $schedule
             ->command(SitemapGenerateCommand::class)
