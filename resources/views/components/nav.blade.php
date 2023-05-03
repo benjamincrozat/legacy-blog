@@ -5,7 +5,7 @@
                 <div>“I created an AI assistant for Laravel developers that handles all the boring work.”</div>
 
                 <div class="mt-2 font-medium text-blue-400">
-                    Try it for free!
+                    Learn more
                 </div>
             </div>
 
