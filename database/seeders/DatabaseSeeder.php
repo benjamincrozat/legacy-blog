@@ -5,7 +5,6 @@ namespace Database\Seeders;
 use App\Models\Pin;
 use App\Models\Post;
 use App\Models\User;
-use App\Models\Short;
 use App\Models\Redirect;
 use App\Models\Affiliate;
 use Illuminate\Database\Seeder;
@@ -34,7 +33,5 @@ class DatabaseSeeder extends Seeder
         });
 
         Redirect::factory(10)->create();
-
-        Short::factory(10)->create();
     }
 }
