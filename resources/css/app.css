@@ -15,7 +15,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .content {
     @apply break-words max-w-none prose
-    prose-a:border-b prose-a:no-underline prose-a:border-indigo-400/50 prose-a:text-indigo-400
+    prose-a:text-indigo-400
     prose-blockquote:dark:border-gray-800 prose-blockquote:text-current
     prose-code:dark:text-current
     prose-headings:dark:text-white prose-headings:scroll-mt-8
