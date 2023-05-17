@@ -34,7 +34,11 @@ class Affiliate extends Resource
 
             Panel::make('Basic Information', [
                 URL::make('Icon')
-                    ->displayUsing(fn () => "<img src=\"$this->icon\" width=\"50\" height=\"50\" />")
+                    ->displayUsing(
+                        fn () => $this->icon
+                            ? "<img src=\"$this->icon\" width=\"50\" height=\"50\" />"
+                            : '<svg viewBox="0 0 127 127"><path fill-rule="evenodd" fill="currentColor" d="M0 0h127v127H0z"/></svg>'
+                    )
                     ->asHtml(),
 
                 URL::make('Screenshot')
