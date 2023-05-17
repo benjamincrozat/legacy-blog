@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use Laravel\Nova\Panel;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\URL;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Line;
 use Laravel\Nova\Fields\Text;
@@ -50,7 +51,7 @@ HTML;
                 ->asHtml()
                 ->onlyOnIndex(),
 
-            Text::make('Image')
+            URL::make('Image')
                 ->displayUsing(function () {
                     $image = str_replace('w_auto', 'h_100', $this->image);
 
