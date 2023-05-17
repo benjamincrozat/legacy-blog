@@ -13,6 +13,8 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 
 class User extends Resource
 {
+    public static $group = 'Blog';
+
     public static $model = \App\Models\User::class;
 
     public static $title = 'name';
