@@ -35,7 +35,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                     MenuItem::resource(Affiliate::class),
                 ])->icon('briefcase')->collapsable(),
 
-                MenuSection::make('Technical', [
+                MenuSection::make('Other', [
                     MenuItem::resource(Redirect::class),
                 ])->icon('cog')->collapsable(),
             ];

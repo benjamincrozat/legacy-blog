@@ -10,8 +10,6 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Pin extends Resource
 {
-    public static $group = 'Blog';
-
     public static $model = \App\Models\Pin::class;
 
     public static $title = 'post.title';
