@@ -68,7 +68,11 @@ class Affiliate extends Resource
                     ->hideFromIndex(),
 
                 URL::make('Link')
-                    ->displayUsing(fn () => substr($this->link, 0, 50) . '…')
+                    ->displayUsing(function () {
+                        return strlen($this->link) > 50
+                            ? substr($this->link, 0, 50) . '…'
+                            : $this->link;
+                    })
                     ->rules('nullable'),
             ]),
 
