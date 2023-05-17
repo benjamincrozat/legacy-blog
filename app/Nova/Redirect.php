@@ -24,15 +24,20 @@ class Redirect extends Resource
         return [
             ID::make()->sortable(),
 
+            Text::make('From → To', fn () => "<span style=\"color: #f95661\">/$this->from</span> → <span style=\"color: #56c86d\">/$this->to</span>")
+                ->asHtml(),
+
             Text::make('From')
                 ->rules('required', 'max:255')
                 ->creationRules('unique:redirects,from')
                 ->updateRules('unique:redirects,from,{{resourceId}}')
-                ->sortable(),
+                ->sortable()
+                ->hideFromIndex(),
 
             Text::make('To')
                 ->rules('required', 'max:255')
-                ->sortable(),
+                ->sortable()
+                ->hideFromIndex(),
         ];
     }
 
