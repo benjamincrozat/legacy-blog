@@ -37,7 +37,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 
                 MenuSection::make('Other', [
                     MenuItem::resource(Redirect::class),
-                ])->icon('cog')->collapsable(),
+                ])->icon('dots-horizontal')->collapsable(),
             ];
         });
 
