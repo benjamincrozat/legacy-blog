@@ -2,10 +2,16 @@
 
 namespace App\Providers;
 
+use App\Nova\Pin;
+use App\Nova\Post;
+use App\Nova\User;
+use App\Nova\Redirect;
 use Laravel\Nova\Nova;
+use App\Nova\Affiliate;
 use Laravel\Nova\Menu\Menu;
 use Illuminate\Http\Request;
 use Laravel\Nova\Menu\MenuItem;
+use Laravel\Nova\Menu\MenuSection;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\NovaApplicationServiceProvider;
 
@@ -16,6 +22,24 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
         parent::boot();
 
         Nova::initialPath('/resources/posts');
+
+        Nova::mainMenu(function (Request $request) {
+            return [
+                MenuSection::make('Blog', [
+                    MenuItem::resource(Post::class),
+                    MenuItem::resource(Pin::class),
+                    MenuItem::resource(User::class),
+                ])->icon('newspaper')->collapsable(),
+
+                MenuSection::make('Business', [
+                    MenuItem::resource(Affiliate::class),
+                ])->icon('briefcase')->collapsable(),
+
+                MenuSection::make('Technical', [
+                    MenuItem::resource(Redirect::class),
+                ])->icon('cog')->collapsable(),
+            ];
+        });
 
         Nova::userMenu(function (Request $request, Menu $menu) {
             return $menu->prepend([
