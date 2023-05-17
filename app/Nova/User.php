@@ -36,7 +36,13 @@ class User extends Resource
                 ->rules('nullable'),
 
             URL::make('Twitter', 'twitter_url')
-                ->rules('nullable', 'regex:/^https?:\/\/twitter.com\/\w+$/'),
+                ->displayUsing(function () {
+                    return strlen($this->twitter_url) > 50
+                        ? substr($this->twitter_url, 0, 50) . '…'
+                        : $this->twitter_url;
+                })
+                ->rules('nullable', 'regex:/^https?:\/\/twitter.com\/\w+$/')
+                ->textAlign('left'),
 
             Text::make('Email')
                 ->sortable()
