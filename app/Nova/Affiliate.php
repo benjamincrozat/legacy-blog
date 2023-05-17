@@ -43,7 +43,7 @@ class Affiliate extends Resource
 
                 URL::make('Screenshot')
                     ->rules('nullable', 'max:255')
-                    ->displayUsing(fn () => "<img src=\"$this->icon\" />")
+                    ->displayUsing(fn () => "<img src=\"$this->screenshot\" />")
                     ->asHtml()
                     ->hideFromIndex(),
 
