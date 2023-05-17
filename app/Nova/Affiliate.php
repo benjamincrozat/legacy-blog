@@ -63,8 +63,8 @@ class Affiliate extends Resource
                     ->sortable()
                     ->hideFromIndex(),
 
-                Text::make('Link')
-                    ->rules('nullable', 'url'),
+                URL::make('Link')
+                    ->rules('nullable'),
             ]),
 
             Panel::make('Review', [
