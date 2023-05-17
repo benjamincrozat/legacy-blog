@@ -68,8 +68,8 @@ class Affiliate extends Resource
                     ->hideFromIndex(),
 
                 URL::make('Link')
-                    ->rules('nullable')
-                    ->hideFromIndex(),
+                    ->displayUsing(fn () => substr($this->link, 0, 50) . '…')
+                    ->rules('nullable'),
             ]),
 
             Panel::make('Review', [
