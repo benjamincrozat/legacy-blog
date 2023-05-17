@@ -7,7 +7,6 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Line;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Badge;
 use Laravel\Nova\Fields\Stack;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Boolean;
@@ -23,6 +22,11 @@ class Post extends Resource
     public static $model = \App\Models\Post::class;
 
     public static $title = 'title';
+
+    public function subtitle() : string
+    {
+        return $this->slug;
+    }
 
     public function fields(NovaRequest $request) : array
     {
@@ -62,7 +66,7 @@ HTML;
                     ->asHtml(),
                 Line::make('Slug')->extraClasses('opacity-75 text-xs'),
             ])
-            ->onlyOnIndex(),
+                ->onlyOnIndex(),
 
             Text::make('Slug')
                 ->rules('required', 'max:255')
@@ -78,7 +82,7 @@ HTML;
             Markdown::make('Conclusion')
                 ->rules('nullable'),
 
-            Panel::make('SEO', [
+            Panel::make('Advanced', [
                 Textarea::make('Description')
                     ->maxlength(160)
                     ->rules('required'),
@@ -86,18 +90,6 @@ HTML;
                 Boolean::make('Promotes affiliate links')
                     ->sortable()
                     ->hideFromIndex(),
-
-                Badge::make('Intent', 'promotes_affiliate_links')
-                    ->map([
-                        true => 'success',
-                        false => 'info',
-                    ])
-                    ->labels([
-                        true => 'Commercial',
-                        false => 'Informational',
-                    ])
-                    ->sortable()
-                    ->exceptOnForms(),
 
                 Date::make('Modified At')
                     ->displayUsing(fn () => $this->modified_at?->isoFormat('ll'))
@@ -117,30 +109,5 @@ HTML;
 
             HasMany::make('Pins'),
         ];
-    }
-
-    public function subtitle() : string
-    {
-        return $this->slug;
-    }
-
-    public function cards(NovaRequest $request) : array
-    {
-        return [];
-    }
-
-    public function filters(NovaRequest $request) : array
-    {
-        return [];
-    }
-
-    public function lenses(NovaRequest $request) : array
-    {
-        return [];
-    }
-
-    public function actions(NovaRequest $request) : array
-    {
-        return [];
     }
 }
