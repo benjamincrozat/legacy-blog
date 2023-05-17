@@ -34,11 +34,7 @@ class Affiliate extends Resource
 
             Panel::make('Basic Information', [
                 URL::make('Icon')
-                    ->displayUsing(function () {
-                        return <<<HTML
-    <img src="$this->icon" width="50" height="50" class="aspect-square" style="object-fit: cover" />
-    HTML;
-                    })
+                    ->displayUsing(fn () => "<img src=\"$this->icon\" width=\"50\" height=\"50\" />")
                     ->asHtml(),
 
                 URL::make('Screenshot')
