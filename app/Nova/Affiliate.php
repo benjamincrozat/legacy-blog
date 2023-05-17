@@ -73,7 +73,8 @@ class Affiliate extends Resource
                             ? substr($this->link, 0, 50) . '…'
                             : $this->link;
                     })
-                    ->rules('nullable'),
+                    ->rules('nullable')
+                    ->textAlign('left'),
             ]),
 
             Panel::make('Review', [
