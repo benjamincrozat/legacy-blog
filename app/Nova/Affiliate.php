@@ -33,13 +33,14 @@ class Affiliate extends Resource
             ID::make()->sortable(),
 
             Panel::make('Basic Information', [
+                Text::make('Icon', fn () => '<img src="' . $this->icon . '" width="50" height="50" />')
+                    ->asHtml()
+                    ->onlyOnIndex(),
+
                 URL::make('Icon')
-                    ->displayUsing(
-                        fn () => $this->icon
-                            ? "<img src=\"$this->icon\" width=\"50\" height=\"50\" />"
-                            : '<svg viewBox="0 0 127 127" width=\"50\" height=\"50\"><path fill-rule="evenodd" fill="currentColor" d="M0 0h127v127H0z"/></svg>'
-                    )
-                    ->asHtml(),
+                    ->displayUsing(fn () => '<img src="' . $this->icon . '" width="50" height="50" />')
+                    ->asHtml()
+                    ->hideFromIndex(),
 
                 URL::make('Screenshot')
                     ->rules('nullable', 'max:255')
