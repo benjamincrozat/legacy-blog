@@ -19,6 +19,8 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Post extends Resource
 {
+    public static $group = 'Blog';
+
     public static $model = \App\Models\Post::class;
 
     public static $title = 'title';
@@ -34,6 +36,7 @@ class Post extends Resource
             ID::make()->sortable(),
 
             BelongsTo::make('Author', 'user', User::class)
+                ->searchable()
                 ->sortable(),
 
             Text::make('Image')
@@ -44,7 +47,17 @@ class Post extends Resource
 <img src="$image" width="50" height="50" class="aspect-square" style="object-fit: cover" />
 HTML;
                 })
-                ->asHtml(),
+                ->asHtml()
+                ->onlyOnIndex(),
+
+            Text::make('Image')
+                ->displayUsing(function () {
+                    $image = str_replace('w_auto', 'h_100', $this->image);
+
+                    return "<img src=\"$image\" />";
+                })
+                ->asHtml()
+                ->hideFromIndex(),
 
             Text::make('Title')
                 ->maxlength(60)
@@ -82,7 +95,7 @@ HTML;
             Markdown::make('Conclusion')
                 ->rules('nullable'),
 
-            Panel::make('Advanced', [
+            Panel::make('Others', [
                 Textarea::make('Description')
                     ->maxlength(160)
                     ->rules('required'),
