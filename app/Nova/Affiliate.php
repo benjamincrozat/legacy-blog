@@ -37,7 +37,7 @@ class Affiliate extends Resource
                     'Icon',
                     fn () => $this->icon
                         ? '<img src="' . $this->icon . '" width="50" height="50" />'
-                        : '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127 127"><path fill-rule="evenodd" fill="currentColor" d="M0 0h127v127H0z"/></svg>'
+                        : '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127 127" width="50" height="50"><path fill-rule="evenodd" fill="currentColor" d="M0 0h127v127H0z"/></svg>'
                 )
                     ->asHtml()
                     ->onlyOnIndex(),
