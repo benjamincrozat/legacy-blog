@@ -3,7 +3,7 @@
         <x-icon-technologies class="w-4/5 mx-auto md:w-auto" />
 
         <p class="mt-4">
-            <strong class="font-semibold">Hundreds of developers subscribed to my newsletter</strong>.<br /> Join them and enjoy free content about the art of crafting&nbsp;websites!
+            <strong class="font-semibold">Hundreds of developers subscribed to my newsletter</strong>.<br /> Join them and enjoy free content about the art of crafting web applications!
         </p>
 
         <x-form method="POST" action="{{ route('subscribe') }}" class="grid gap-2 mt-4 sm:mt-6" @submit="hide = true">
