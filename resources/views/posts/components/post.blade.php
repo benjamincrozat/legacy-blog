@@ -195,34 +195,16 @@
             @endif
 
             @if ($affiliate->pros)
-                <p class="flex items-center gap-2 text-lg font-bold sm:text-xl">
-                    <span>Here's what I love about {{ $affiliate->name }}…</span>
-
-                    <img
-                        loading="lazy"
-                        src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}?s=48"
-                        width="24"
-                        height="24"
-                        alt="{{ $post->user->name }}"
-                        class="!m-0 rounded-full"
-                    />
+                <p class="text-lg font-bold sm:text-xl">
+                    Here's what I love about {{ $affiliate->name }}…
                 </p>
 
                 {!! $affiliate->rendered_pros !!}
             @endif
 
             @if ($affiliate->cons)
-                <p class="flex items-center gap-2 text-lg font-bold sm:text-xl">
-                    <span>And what's not so good…</span>
-
-                    <img
-                        loading="lazy"
-                        src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}?s=48"
-                        width="24"
-                        height="24"
-                        alt="{{ $post->user->name }}"
-                        class="!m-0 rounded-full"
-                    />
+                <p class="text-lg font-bold sm:text-xl">
+                    And what's not so good…
                 </p>
 
                 {!! $affiliate->rendered_cons !!}
