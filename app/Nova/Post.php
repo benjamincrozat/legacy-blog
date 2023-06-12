@@ -115,6 +115,14 @@ HTML;
                             ->rules('nullable', 'min:1'),
 
                         Boolean::make('Highlight'),
+
+                        Text::make('Highlight title')
+                            ->rules('nullable', 'max:255')
+                            ->help('When this affiliate is highlighted at the top of a post, this title will be shown.'),
+
+                        Markdown::make('Highlight text')
+                            ->rules('nullable', 'max:255')
+                            ->help('When this affiliate is highlighted at the top of a post, this text will be shown.'),
                     ];
                 })
                 ->searchable(),
