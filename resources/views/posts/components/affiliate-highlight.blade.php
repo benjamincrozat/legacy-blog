@@ -1,7 +1,7 @@
 <div {{ $attributes->except('highlight')->merge(['class' => 'border first:border-orange-200 dark:border-gray-800 dark:first:border-orange-900 flex flex-col group p-4 rounded text-sm']) }}>
     <div class="text-center">
-        <span class="bg-gradient-to-r from-emerald-400 dark:from-emerald-600 group-first:from-orange-300 to-emerald-500 dark:to-emerald-700 dark:group-first:from-orange-400 group-first:to-orange-400 dark:group-first:to-orange-500 font-semibold px-3 py-1 rounded-full text-center text-white text-xs">
-            {{ $highlight->highlight_title }}
+        <span class="px-3 py-1 text-xs font-semibold text-center text-white rounded-full bg-gradient-to-r from-emerald-400 dark:from-emerald-600 group-first:from-orange-300 to-emerald-500 dark:to-emerald-700 dark:group-first:from-orange-400 group-first:to-orange-400 dark:group-first:to-orange-500">
+            {{ $highlight->pivot->highlight_title ?? $highlight->highlight_title }}
         </span>
 
         <figure class="mt-4">
@@ -10,10 +10,10 @@
                 alt="{{ $highlight->name }}"
                 width="48"
                 height="48"
-                class="aspect-square inline rounded-lg"
+                class="inline rounded-lg aspect-square"
             />
 
-            <figcaption class="font-semibold mt-4">
+            <figcaption class="mt-4 font-semibold">
                 {{ $highlight->name }}
             </figcaption>
         </figure>
