@@ -14,14 +14,13 @@ use Illuminate\View\ComponentAttributeBag;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Algolia\AlgoliaSearch\Exceptions\NotFoundException;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Algolia\AlgoliaSearch\Exceptions\UnreachableException;
 
 class Post extends BaseModel implements Feedable
 {
-    use HasFactory, Searchable;
+    use Searchable;
 
     protected $casts = [
         'modified_at' => 'date',

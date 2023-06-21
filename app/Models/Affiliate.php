@@ -3,13 +3,10 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Casts\Attribute;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Affiliate extends BaseModel
 {
-    use HasFactory;
-
     public function posts() : BelongsToMany
     {
         return $this->belongsToMany(Post::class)->withPivot('position');
