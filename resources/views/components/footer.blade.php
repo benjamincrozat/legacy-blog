@@ -1,6 +1,6 @@
 <footer {{ $attributes->merge(['class' => 'container py-8 text-sm']) }} x-intersect="window.fathom?.trackGoal('08VVENFW', 0)">
     <p class="text-center">
-        <span class="opacity-75">This blog is hosted by</span> <a href="https://benjamincrozat.com/recommends/digitalocean" target="_blank" rel="nofollow noopener noreferrer">DigitalOcean</a> <span class="opacity-75">and Laravel Forge. Analytics are provided by</span> <a href="https://benjamincrozat.com/recommends/fathom-analytics" target="_blank" rel="nofollow noopener noreferrer">Fathom</a><span class="opacity-75">.</span>
+        <span class="opacity-75">Domain name by</span> <a href="https://benjamincrozat.com/recommends/namecheap">Namecheap</a>, <span class="opacity-75">hosting by</span> <a href="https://benjamincrozat.com/recommends/digitalocean" target="_blank" rel="nofollow noopener noreferrer">DigitalOcean</a><span class="opacity-75">, and analytics by</span> <a href="https://benjamincrozat.com/recommends/fathom-analytics" target="_blank" rel="nofollow noopener noreferrer">Fathom</a><span class="opacity-75">.</span>
     </p>
 
     <div class="flex flex-wrap items-center justify-between mt-8 sm:flex-nowrap">
