@@ -2,7 +2,7 @@
 
 use App\Models\Post;
 use App\Models\Redirect;
-use function Pest\Laravel\getJson;
+use function Pest\Laravel\get;
 use function Pest\Laravel\assertDatabaseHas;
 use function Pest\Laravel\assertDatabaseMissing;
 
@@ -30,7 +30,7 @@ it('does not create a redirect when slug does not change', function () {
     ]);
 });
 
-test('gets posts as a sequence', function () {
+it('gets posts as a sequence', function () {
     $posts = Post::factory(30)->create();
 
     $ids = $posts->shuffle()->take(4)->pluck('id');
@@ -43,7 +43,7 @@ test('gets posts as a sequence', function () {
     expect($sequence->get(3)->id)->toEqual($ids->get(3));
 });
 
-test('has a with user scope', function () {
+it('has a with user scope', function () {
     Post::factory()->create();
 
     $post = Post::withUser()->first();
@@ -52,9 +52,9 @@ test('has a with user scope', function () {
     expect($post->user->email)->toEqual($post->user_email);
 });
 
-test('feeds the feed', function () {
+it('feeds the feed', function () {
     Post::factory(10)->create();
 
-    getJson('/feed')
+    get('/feed')
         ->assertOk();
 });
