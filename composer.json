@@ -35,6 +35,8 @@
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^7.0",
         "nunomaduro/laravel-mojito": "^0.2.10",
+        "pestphp/pest": "^2.8",
+        "pestphp/pest-plugin-laravel": "^2.0",
         "phpunit/phpunit": "^10.0",
         "spatie/laravel-horizon-watcher": "^1.0",
         "spatie/laravel-ignition": "^2.0",

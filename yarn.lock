@@ -132,21 +132,21 @@
   integrity sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==
 
 "@alpinejs/focus@^3.10.5":
-  version "3.12.2"
-  resolved "https://registry.yarnpkg.com/@alpinejs/focus/-/focus-3.12.2.tgz#726d982e98431ea9d7efdf33aed3e06389eb7ae1"
-  integrity sha512-Uhu/0uSwgYSyzAeNT/kzrxiVKJQezwhUM1VxYwCpfOMT0OvKJ80Wl+M4R+5JJhsf+15B65rQnsE7no+TxpV5bg==
+  version "3.12.3"
+  resolved "https://registry.yarnpkg.com/@alpinejs/focus/-/focus-3.12.3.tgz#0cfb7fd987d08ba744c6defe6cd72c61559ed7d0"
+  integrity sha512-kIQwvvUPCfCO2REpceQ3uHNdN3oqDLvvvQNaHVgHoYqk+RrL3EcR6uOHyvHJUgOhaIjN5Uc3b7BaRNrKZbDGew==
   dependencies:
     focus-trap "^6.6.1"
 
 "@alpinejs/intersect@^3.10.3":
-  version "3.12.2"
-  resolved "https://registry.yarnpkg.com/@alpinejs/intersect/-/intersect-3.12.2.tgz#c15df06e3af778116eb36189d20d8c771e45acea"
-  integrity sha512-4xkmvfyh8EdCPxQdTtb4nb9rhnlpaF+7lc4EhBrqAw8yMnNSVKBC5mBfUONCRsd2jrgQgK8CT6bdciEThyNhzQ==
+  version "3.12.3"
+  resolved "https://registry.yarnpkg.com/@alpinejs/intersect/-/intersect-3.12.3.tgz#8e389b6e6deffe42e437768712a08e5ed9a20cd1"
+  integrity sha512-C+wgyZYhV/Py/JJz6oRzjbcQ8gtPXhFAbigmbd9g0MK7wt/KUJ5CJ70iBsT46Ui0tX1eSTafbxixANz0xrvSlA==
 
 "@alpinejs/persist@^3.10.5":
-  version "3.12.2"
-  resolved "https://registry.yarnpkg.com/@alpinejs/persist/-/persist-3.12.2.tgz#cb14d323ff8a78d041f66e281fc4d6a8757f04d3"
-  integrity sha512-Bl8/XLySboH7hkujGDl8e6m8CFeaWGyIoVQE4ht5t30/AGNsE6aCoCJge2HejBVOkCz/2SoCGzU7MT67fhcmug==
+  version "3.12.3"
+  resolved "https://registry.yarnpkg.com/@alpinejs/persist/-/persist-3.12.3.tgz#43f6477e9c55dfa536466e3cb6539cf8ef996885"
+  integrity sha512-TyDzwkFePki6vc+pCdxdNs0cYdBYAJ6W5szXnoQys8iUyshov/6Q9UhKxlXoCE4jvmmXvL+U4vNnnCcnmVD5dg==
 
 "@esbuild/android-arm@0.15.18":
   version "0.15.18"
@@ -276,9 +276,9 @@ algoliasearch@^4.14.3:
     "@algolia/transporter" "4.18.0"
 
 alpinejs@^3.10.3:
-  version "3.12.2"
-  resolved "https://registry.yarnpkg.com/alpinejs/-/alpinejs-3.12.2.tgz#e76ffd00a4858623acf84112c27a4eecbee9ac74"
-  integrity sha512-wrUZULm9w6DYwWcUtB/anFLgRaF4riSuPgIJ3gcPUS8st9luAJnAxoIgro/Al97d2McSSz/JypWg/NlmKFIJJA==
+  version "3.12.3"
+  resolved "https://registry.yarnpkg.com/alpinejs/-/alpinejs-3.12.3.tgz#d7f311b39318c5144e99205ab69557c0d90a552a"
+  integrity sha512-fLz2dfYQ3xCk7Ip8LiIpV2W+9brUyex2TAE7Z0BCvZdUDklJE+n+a8gCgLWzfZ0GzZNZu7HUP8Z0z6Xbm6fsSA==
   dependencies:
     "@vue/reactivity" "~3.1.1"
 
@@ -398,9 +398,9 @@ dlv@^1.1.3:
   integrity sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==
 
 electron-to-chromium@^1.4.431:
-  version "1.4.446"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.446.tgz#c23fbc7884bfe43088d5eb908a858dbb35ab190b"
-  integrity sha512-4Gnw7ztEQ/E0eOt5JWfPn9jjeupfUlKoeW5ETKP9nLdWj+4spFoS3Stj19fqlKIaX28UQs0fNX+uKEyoLCBnkw==
+  version "1.4.447"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.447.tgz#ac69d3a7b3713e9ae94bb30ba65c3114e4d76a38"
+  integrity sha512-sxX0LXh+uL41hSJsujAN86PjhrV/6c79XmpY0TvjZStV6VxIgarf8SRkUoUTuYmFcZQTemsoqo8qXOGw5npWfw==
 
 esbuild-android-64@0.15.18:
   version "0.15.18"
@@ -536,9 +536,9 @@ escalade@^3.1.1:
   integrity sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==
 
 fast-glob@^3.2.12:
-  version "3.2.12"
-  resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.2.12.tgz#7f39ec99c2e6ab030337142da9e0c18f37afae80"
-  integrity sha512-DVj4CQIYYow0BlaelwK1pHl5n5cRSJfM60UA0zK891sVInoPri2Ekj7+e1CT3/3qxXenpI+nBBmQAcJPJgaj4w==
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.3.0.tgz#7c40cb491e1e2ed5664749e87bfb516dbe8727c0"
+  integrity sha512-ChDuvbOypPuNjO8yIDf36x7BlZX1smcUMTTcyoIjycexOxd6DFsKsg21qVBzEmr3G7fUKIRy2/psii+CIUt7FA==
   dependencies:
     "@nodelib/fs.stat" "^2.0.2"
     "@nodelib/fs.walk" "^1.2.3"

@@ -1,27 +1,19 @@
 <?php
 
-namespace Tests\Feature\App\Providers;
-
-use Tests\TestCase;
 use App\Models\User;
+use function Pest\Laravel\actingAs;
+use function Pest\Laravel\assertGuest;
 
-class HorizonServiceProviderTest extends TestCase
-{
-    public function test_it_works() : void
-    {
-        $user = User::factory()->create();
+it('works', function () {
+    $user = User::factory()->create();
 
-        $this
-            ->actingAs($user)
-            ->getJson('/horizon')
-            ->assertOk();
-    }
+    actingAs($user)
+        ->getJson('/horizon')
+        ->assertOk();
+});
 
-    public function test_it_disallows_guests() : void
-    {
-        $this
-            ->assertGuest()
-            ->getJson('/horizon')
-            ->assertForbidden();
-    }
-}
+test('it disallows guests', function () {
+    assertGuest()
+        ->getJson('/horizon')
+        ->assertForbidden();
+});

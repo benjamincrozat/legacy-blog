@@ -1,28 +1,21 @@
 <?php
 
-namespace Tests\Feature\App\Http\Controllers;
-
-use Tests\TestCase;
 use App\Models\Post;
+use function Pest\Laravel\get;
 use Illuminate\Support\Collection;
 
-class ShowPostControllerTest extends TestCase
-{
-    public function test_it_shows_a_given_post_and_list_recommended_posts_excluding_the_current_and_ai_ones() : void
-    {
-        $posts = Post::factory(30)->create();
+it('shows a given post and list recommended posts excluding the current and ai ones', function () {
+    $posts = Post::factory(30)->create();
 
-        $response = $this
-            ->get(route('posts.show', $post = $posts->first()))
-            ->assertOk()
-            ->assertViewIs('posts.show');
+    $response = get(route('posts.show', $post = $posts->first()))
+        ->assertOk()
+        ->assertViewIs('posts.show');
 
-        $this->assertInstanceOf(Post::class, $response->viewData('post'));
+    expect($response->viewData('post'))->toBeInstanceOf(Post::class);
 
-        $recommended = $response->viewData('recommended');
+    $recommended = $response->viewData('recommended');
 
-        $this->assertInstanceOf(Collection::class, $recommended);
-        $this->assertCount(10, $recommended);
-        $this->assertFalse($recommended->contains($post));
-    }
-}
+    expect($recommended)->toBeInstanceOf(Collection::class);
+    expect($recommended)->toHaveCount(10);
+    expect($recommended->contains($post))->toBeFalse();
+});

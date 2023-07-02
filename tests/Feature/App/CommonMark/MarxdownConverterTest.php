@@ -1,68 +1,36 @@
 <?php
 
-namespace Tests\Feature\App\CommonMark;
+it('renders headings with ids', function () {
+    expect(str("# D'abc `def`-._&")->marxdown()->__toString())->toContain('id=');
+});
 
-use Tests\TestCase;
+it('adds rel attribute values to external links', function () {
+    expect(str('[Apple](https://www.apple.com)')->marxdown()->__toString())
+        ->toContain('rel="nofollow noopener noreferrer" target="_blank"');
+});
 
-class MarxdownConverterTest extends TestCase
-{
-    public function test_it_renders_headings_with_ids() : void
-    {
-        $this->assertStringContainsString(
-            'id=',
-            str("# D'abc `def`-._&")->marxdown()
-        );
-    }
+it('does not add any attribute to internal links', function () {
+    expect(str('[Foo](' . url('/') . ')')->marxdown()->__toString())
+        ->toContain('href="' . url('/') . '">');
 
-    public function test_it_adds_rel_attribute_values_to_external_links() : void
-    {
-        $this->assertStringContainsString(
-            'rel="nofollow noopener noreferrer" target="_blank"',
-            str('[Apple](https://www.apple.com)')->marxdown()
-        );
-    }
+    expect(str('[Foo](#foo)')->marxdown()->__toString())->toContain('href="#foo"');
+});
 
-    public function test_it_does_not_add_any_attribute_to_internal_links() : void
-    {
-        $this->assertStringContainsString(
-            'href="' . url('/') . '">',
-            str('[Foo](' . url('/') . ')')->marxdown()
-        );
+it('adds a click event to affiliate links', function () {
+    expect(str('[Foo](' . url('/recommends/foo') . '')->marxdown()->__toString())
+        ->toContain('@click="window.fathom?.trackGoal(\'LBJL4VHK\', 0)"');
+});
 
-        $this->assertStringContainsString(
-            'href="#foo"',
-            str('[Foo](#foo)')->marxdown()
-        );
-    }
+it('adds a click event to external links', function () {
+    expect(str('[Apple](https://www.apple.com)')->marxdown()->__toString())
+        ->toContain("window.fathom?.trackGoal('SMD2GKMN', 0)");
+});
 
-    public function test_it_adds_a_click_event_to_affiliate_links() : void
-    {
-        $this->assertStringContainsString(
-            '@click="window.fathom?.trackGoal(\'LBJL4VHK\', 0)"',
-            str('[Foo](' . url('/recommends/foo') . '')->marxdown()
-        );
-    }
+it('renders tweets', function () {
+})->todo('Test that tweets are rendered from their URL.');
 
-    public function test_it_adds_a_click_event_to_external_links() : void
-    {
-        $this->assertStringContainsString(
-            "window.fathom?.trackGoal('SMD2GKMN', 0)",
-            str('[Apple](https://www.apple.com)')->marxdown()
-        );
-    }
+it('renders vimeo', function () {
+})->todo('Test that Vimeo videos are rendered from their URL.');
 
-    public function test_it_renders_tweets() : void
-    {
-        $this->markTestIncomplete();
-    }
-
-    public function test_it_renders_vimeo() : void
-    {
-        $this->markTestIncomplete();
-    }
-
-    public function test_it_renders_youtube() : void
-    {
-        $this->markTestIncomplete();
-    }
-}
+it('renders youtube', function () {
+})->todo('Test that YouTube videos are rendered from their URL.');

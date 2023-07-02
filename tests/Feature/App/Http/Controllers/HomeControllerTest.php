@@ -1,50 +1,39 @@
 <?php
 
-namespace Tests\Feature\App\Http\Controllers;
-
-use Tests\TestCase;
 use App\Models\Post;
+use function Pest\Laravel\get;
 use Illuminate\Support\Collection;
 use Illuminate\Pagination\Paginator;
 
-class HomeControllerTest extends TestCase
-{
-    public function test_it_lists_pins() : void
-    {
-        Post::factory(10)->pinned()->create();
+it('lists pins', function () {
+    Post::factory(10)->pinned()->create();
 
-        $response = $this
-            ->get(route('home'))
-            ->assertOk()
-            ->assertViewIs('home');
+    $response = get(route('home'))->assertOk()->assertViewIs('home');
 
-        $this->assertInstanceOf(Collection::class, $response->viewData('pins'));
-        $this->assertCount(4, $response->viewData('pins'));
-    }
+    $pins = $response->viewData('pins');
 
-    public function test_it_lists_popular_posts() : void
-    {
-        Post::factory(10)->create();
+    expect($pins)->toBeInstanceOf(Collection::class);
+    expect($pins)->toHaveCount(4);
+});
 
-        $response = $this
-            ->get(route('home'))
-            ->assertOk()
-            ->assertViewIs('home');
+it('lists popular posts', function () {
+    Post::factory(10)->create();
 
-        $this->assertInstanceOf(Collection::class, $response->viewData('popular'));
-        $this->assertCount(6, $response->viewData('popular'));
-    }
+    $response = get(route('home'))->assertOk()->assertViewIs('home');
 
-    public function test_it_lists_posts() : void
-    {
-        Post::factory(30)->create();
+    $popular = $response->viewData('popular');
 
-        $response = $this
-            ->get(route('home'))
-            ->assertOk()
-            ->assertViewIs('home');
+    expect($popular)->toBeInstanceOf(Collection::class);
+    expect($popular)->toHaveCount(6);
+});
 
-        $this->assertInstanceOf(Paginator::class, $response->viewData('posts'));
-        $this->assertCount(20, $response->viewData('posts'));
-    }
-}
+it('lists posts', function () {
+    Post::factory(30)->create();
+
+    $response = get(route('home'))->assertOk()->assertViewIs('home');
+
+    $posts = $response->viewData('posts');
+
+    expect($posts)->toBeInstanceOf(Paginator::class);
+    expect($posts)->toHaveCount(20);
+});

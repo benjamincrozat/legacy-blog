@@ -1,69 +1,60 @@
 <?php
 
-namespace Feature\Tests\App\Models;
-
-use Tests\TestCase;
 use App\Models\Post;
 use App\Models\Redirect;
+use function Pest\Laravel\getJson;
+use function Pest\Laravel\assertDatabaseHas;
+use function Pest\Laravel\assertDatabaseMissing;
 
-class PostTest extends TestCase
-{
-    public function test_it_creates_a_redirect_when_slug_changes() : void
-    {
-        $post = Post::factory()->create();
+it('creates a redirect when slug changes', function () {
+    $post = Post::factory()->create();
 
-        $original = $post->slug;
+    $original = $post->slug;
 
-        $post->update(['slug' => fake()->slug()]);
+    $post->update(['slug' => fake()->slug()]);
 
-        $this->assertDatabaseHas(Redirect::class, [
-            'from' => $original,
-            'to' => $post->slug,
-        ]);
-    }
+    assertDatabaseHas(Redirect::class, [
+        'from' => $original,
+        'to' => $post->slug,
+    ]);
+});
 
-    public function test_it_does_not_create_a_redirect_when_slug_does_not_change() : void
-    {
-        $post = Post::factory()->create();
+it('does not create a redirect when slug does not change', function () {
+    $post = Post::factory()->create();
 
-        $post->update(['slug' => $post->slug]);
+    $post->update(['slug' => $post->slug]);
 
-        $this->assertDatabaseMissing(Redirect::class, [
-            'from' => $post->slug,
-            'to' => $post->slug,
-        ]);
-    }
+    assertDatabaseMissing(Redirect::class, [
+        'from' => $post->slug,
+        'to' => $post->slug,
+    ]);
+});
 
-    public function test_it_gets_posts_as_a_sequence() : void
-    {
-        $posts = Post::factory(30)->create();
+test('gets posts as a sequence', function () {
+    $posts = Post::factory(30)->create();
 
-        $ids = $posts->shuffle()->take(4)->pluck('id');
+    $ids = $posts->shuffle()->take(4)->pluck('id');
 
-        $sequence = Post::asSequence($ids)->get();
+    $sequence = Post::asSequence($ids)->get();
 
-        $this->assertEquals($ids->get(0), $sequence->get(0)->id);
-        $this->assertEquals($ids->get(1), $sequence->get(1)->id);
-        $this->assertEquals($ids->get(2), $sequence->get(2)->id);
-        $this->assertEquals($ids->get(3), $sequence->get(3)->id);
-    }
+    expect($sequence->get(0)->id)->toEqual($ids->get(0));
+    expect($sequence->get(1)->id)->toEqual($ids->get(1));
+    expect($sequence->get(2)->id)->toEqual($ids->get(2));
+    expect($sequence->get(3)->id)->toEqual($ids->get(3));
+});
 
-    public function test_it_has_a_with_user_scope() : void
-    {
-        Post::factory()->create();
+test('has a with user scope', function () {
+    Post::factory()->create();
 
-        $post = Post::withUser()->first();
+    $post = Post::withUser()->first();
 
-        $this->assertEquals($post->user->name, $post->user_name);
-        $this->assertEquals($post->user->email, $post->user_email);
-    }
+    expect($post->user->name)->toEqual($post->user_name);
+    expect($post->user->email)->toEqual($post->user_email);
+});
 
-    public function test_it_feeds_the_feed() : void
-    {
-        Post::factory(10)->create();
+test('feeds the feed', function () {
+    Post::factory(10)->create();
 
-        $this
-            ->getJson('/feed')
-            ->assertOk();
-    }
-}
+    getJson('/feed')
+        ->assertOk();
+});
