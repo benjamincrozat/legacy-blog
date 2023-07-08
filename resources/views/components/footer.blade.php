@@ -3,10 +3,6 @@
         <span class="opacity-75">Domain name by</span> <a href="https://benjamincrozat.com/recommends/namecheap">Namecheap</a>, <span class="opacity-75">hosting by</span> <a href="https://benjamincrozat.com/recommends/digitalocean" target="_blank" rel="nofollow noopener noreferrer">DigitalOcean</a><span class="opacity-75">, and analytics by</span> <a href="https://benjamincrozat.com/recommends/fathom-analytics" target="_blank" rel="nofollow noopener noreferrer">Fathom</a><span class="opacity-75">.</span>
     </p>
 
-    <p class="mt-4 text-center">
-        <span class="opacity-75">My latest SEO experiment:</span> a <a href="https://benjamincrozat.com/recommends/namecheap">YouTube video converter and downloader</a>.
-    </p>
-
     <div class="flex flex-wrap items-center justify-between mt-8 sm:flex-nowrap">
         <div class="w-full text-xs tracking-widest text-center uppercase opacity-50 sm:w-auto">
             © Benjamin Crozat {{ date('Y') }}. All&nbsp;rights&nbsp;reserved.
