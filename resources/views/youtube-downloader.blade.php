@@ -5,23 +5,7 @@
     <div class="!container prose prose-headings:font-medium prose-headings:md:text-center prose-h3:!text-left prose-h3:!text-base prose-a:text-indigo-400 py-8">
         <h1>{{ $title }}</h1>
 
-        <form method="POST" action="#" class="mt-8 text-center" @submit.prevent>
-            <div>
-                <label for="url" class="sr-only">URL</label>
-                <input
-                    type="url"
-                    name="url"
-                    id="url"
-                    placeholder="https://youtu.be/dQw4w9WgXcQ"
-                    required
-                    class="w-full px-4 py-3 placeholder-gray-300 border-gray-300 rounded"
-                />
-            </div>
-
-            <button type="submit" class="px-6 py-3 mt-2 font-medium text-white bg-indigo-400 rounded">
-                Convert and download
-            </button>
-        </form>
+        <livewire:youtube-downloader />
 
         <div class="mt-16">
             <h2>How to convert and download a YouTube video to {{ $format }} for free?</h2>
@@ -35,8 +19,8 @@
             </ul>
 
             <h2>
-                Frequently asked questions:<br />
-                Converting and downloading YouTube videos to {{ $format }}
+                Frequently asked questions for<br />
+                converting and downloading YouTube videos to {{ $format }}
             </h2>
 
             <h3>Can I convert and download YouTube videos in MP4 or MP3 for free?</h3>

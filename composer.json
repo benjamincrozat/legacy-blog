@@ -8,6 +8,7 @@
     "require": {
         "php": "^8.2",
         "algolia/algoliasearch-client-php": "^3.3",
+        "athlon1600/youtube-downloader": "^3.1",
         "blade-ui-kit/blade-heroicons": "^2.1",
         "embed/embed": "^4.4",
         "guzzlehttp/guzzle": "^7.5",
@@ -16,6 +17,7 @@
         "laravel/nova": "^4.22",
         "laravel/scout": "^9.8",
         "laravel/tinker": "^2.8",
+        "livewire/livewire": "^2.12",
         "php-http/message-factory": "^1.1",
         "sentry/sentry-laravel": "^3.2",
         "spatie/flysystem-dropbox": "^2.0",
