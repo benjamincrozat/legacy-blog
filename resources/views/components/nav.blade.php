@@ -11,7 +11,7 @@
                 class="flex items-center gap-2"
                 @click="open = ! open; window.fathom?.trackGoal('HZPIZREN', 0)"
             >
-                Goodies
+                For you
                 <x-heroicon-o-chevron-down
                     class="w-4 h-4 transition-transform translate-y-px"
                     x-bind:class="{ 'rotate-180': open }"
