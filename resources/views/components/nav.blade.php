@@ -30,6 +30,7 @@
                         target="_blank"
                         rel="noopener noreferrer"
                         class="block px-4 py-2 transition-colors group hover:bg-indigo-400 hover:text-white"
+                        @click="window.fathom?.trackGoal('FIMDOB8S', 0)"
                     >
                         <span class="block font-medium">Smousss</span>
                         <span class="block text-sm text-gray-500 group-hover:text-indigo-100">An AI-powered assistant for Laravel developers.</span>
@@ -42,6 +43,7 @@
                         target="_blank"
                         rel="nofollow noopener noreferrer"
                         class="block px-4 py-2 transition-colors group hover:bg-indigo-400 hover:text-white"
+                        @click="window.fathom?.trackGoal('FIMDOB8S', 0)"
                     >
                         <span class="block font-medium">Follow me on Twitter</span>
                         <span class="block text-sm text-gray-500 group-hover:text-indigo-100">Free web development content, daily.</span>
@@ -54,6 +56,7 @@
                         target="_blank"
                         rel="nofollow noopener noreferrer"
                         class="block px-4 py-2 transition-colors group hover:bg-indigo-400 hover:text-white"
+                        @click="window.fathom?.trackGoal('FIMDOB8S', 0)"
                     >
                         <span class="block font-medium">My live analytics dashboard</span>
                         <span class="block text-sm text-gray-500 group-hover:text-indigo-100">See the growth of my blog for yourself.</span>
