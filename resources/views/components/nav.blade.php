@@ -9,7 +9,7 @@
         <div class="sm:relative" x-data="{ open: false }" @click.away="open = false">
             <button
                 class="flex items-center gap-2"
-                @click="open = ! open"
+                @click="open = ! open; window.fathom?.trackGoal('HZPIZREN', 0)"
             >
                 Goodies
                 <x-heroicon-o-chevron-down
