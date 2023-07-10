@@ -8,7 +8,7 @@
     @empty($funnel)
         <div class="flex items-center gap-6 md:gap-8">
             <div class="sm:relative" x-data="{ open: false }" @click.away="open = false">
-                <button class="flex items-center gap-2">
+                <button class="flex items-center gap-2" @click="open = ! open">
                     For you
                     <x-heroicon-o-chevron-down
                         class="w-4 h-4 transition-transform translate-y-px"
