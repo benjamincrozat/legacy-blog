@@ -1,9 +1,13 @@
 <x-app
-    :title="$title"
+    :title="$format === 'MP4' ? 'Convert and download YouTube videos as MP4 for free' : 'Convert and download YouTube videos as MP3 for free'"
     description="Convert and download your favorite YouTube videos in the {{ $format }} format in every available resolution for free."
 >
     <div class="!container prose prose-headings:font-medium prose-headings:md:text-center prose-h3:!text-left prose-h3:!text-base prose-a:text-indigo-400 py-8">
-        <h1>{{ $title }}</h1>
+        @if ($format === 'MP4')
+            <h1>Convert and download<br class="hidden sm:inline" /> YouTube videos as MP4 for free</h1>
+        @else
+            <h1>Convert and download<br class="hidden sm:inline" />  YouTube videos as MP3 for free</h1>
+        @endif
 
         <livewire:youtube-downloader :format="$format" />
 
