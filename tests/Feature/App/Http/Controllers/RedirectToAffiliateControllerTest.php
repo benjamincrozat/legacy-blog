@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Http;
 use function Pest\Laravel\assertGuest;
 
 beforeEach(function () {
+    config(['services.pirsch.access_key' => 'foo']);
+
     Http::fake([
         'api.pirsch.io/api/v1/event' => Http::response(),
     ]);

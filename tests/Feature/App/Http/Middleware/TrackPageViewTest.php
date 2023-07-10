@@ -9,6 +9,8 @@ use function Pest\Laravel\assertGuest;
 use function Pest\Laravel\withMiddleware;
 
 beforeEach(function () {
+    config(['services.pirsch.access_key' => 'foo']);
+
     Http::fake([
         'api.pirsch.io/api/v1/hit' => Http::response(),
     ]);
