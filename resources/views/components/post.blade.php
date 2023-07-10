@@ -12,7 +12,7 @@
                 />
 
                 <div class="line-clamp-1">
-                    <a href="{{ $post->user->twitter_url }}" target="_blank" rel="noopener noreferrer" class="font-medium" @click="window.fathom?.trackGoal('LNRXVF3B', 0)">
+                    <a href="{{ $post->user->twitter_url }}" target="_blank" rel="noopener noreferrer" class="font-medium">
                         {{ $post->user->name }}
                     </a>
                     —
@@ -22,7 +22,7 @@
 
             <a
                 href="{{ route('posts.show', $post->slug) }}"
-                class="font-normal inline-block mt-2 text-indigo-600 dark:text-indigo-400"
+                class="inline-block mt-2 font-normal text-indigo-600 dark:text-indigo-400"
                 {{ $attributes->only('@click') }}
             >
                 {{ $post->title }}
@@ -41,11 +41,11 @@
                     width="64"
                     height="64"
                     alt="{{ $post->title }}"
-                    class="aspect-square object-cover"
+                    class="object-cover aspect-square"
                 />
             </a>
         @endif
     </div>
 
-    <p class="leading-relaxed mt-3 text-sm">{{ $post->description }}</p>
+    <p class="mt-3 text-sm leading-relaxed">{{ $post->description }}</p>
 </div>

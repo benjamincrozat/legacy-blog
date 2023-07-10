@@ -1,20 +1,16 @@
 <div {{ $attributes->except('first', 'post')->merge(['class' => 'block flex-shrink-0 relative snap-start sm:snap-center md:snap-normal scroll-ml-4 md:scroll-ml-0 w-[90%] sm:w-[70%] md:w-auto']) }}>
-    <a
-        href="{{ route('posts.show', $post->slug) }}"
-        @click="window.fathom?.trackGoal('OKJIR46O', 0)"
-    >
+    <a href="{{ route('posts.show', $post->slug) }}">
         <img
             @if (empty($first)) loading="lazy" @endif
             src="{{ str_replace('w_auto', 'w_600', $post->image) }}"
             alt="{{ $post->title }}"
-            class="aspect-video object-cover rounded-md shadow-lg dark:shadow-none w-full"
+            class="object-cover w-full rounded-md shadow-lg aspect-video dark:shadow-none"
         />
     </a>
 
     <a
         href="{{ route('posts.show', $post->slug) }}"
-        class="font-semibold inline-block mt-4"
-        @click="window.fathom?.trackGoal('OKJIR46O', 0)"
+        class="inline-block mt-4 font-semibold"
     >
         {{ $post->title }}
     </a>
@@ -35,7 +31,6 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="font-medium"
-                @click="window.fathom?.trackGoal('LNRXVF3B', 0)"
             >
                 {{ $post->user->name }}
             </a>

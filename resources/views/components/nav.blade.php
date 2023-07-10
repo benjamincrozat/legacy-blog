@@ -8,10 +8,7 @@
     @empty($funnel)
         <div class="flex items-center gap-6 md:gap-8">
             <div class="sm:relative" x-data="{ open: false }" @click.away="open = false">
-                <button
-                    class="flex items-center gap-2"
-                    @click="open = ! open; window.fathom?.trackGoal('HZPIZREN', 0)"
-                >
+                <button class="flex items-center gap-2">
                     For you
                     <x-heroicon-o-chevron-down
                         class="w-4 h-4 transition-transform translate-y-px"
@@ -31,7 +28,6 @@
                             target="_blank"
                             rel="noopener noreferrer"
                             class="block px-4 py-3 transition-colors duration-[400s] group hover:bg-indigo-600/50 dark:hover:bg-indigo-600/50 hover:text-white"
-                            @click="window.fathom?.trackGoal('FIMDOB8S', 0)"
                         >
                             <span class="block font-medium">Smousss</span>
                             <span class="block text-sm text-gray-500 duration-[400s] group-hover:text-indigo-100 dark:group-hover:text-indigo-300">An AI-powered assistant for Laravel developers.</span>
@@ -44,7 +40,6 @@
                             target="_blank"
                             rel="nofollow noopener noreferrer"
                             class="block px-4 py-3 transition-colors duration-[400s] group hover:bg-indigo-600/50 dark:hover:bg-indigo-600/50 hover:text-white"
-                            @click="window.fathom?.trackGoal('FIMDOB8S', 0)"
                         >
                             <span class="block font-medium">Follow me on Twitter</span>
                             <span class="block text-sm text-gray-500 duration-[400s] group-hover:text-indigo-100 dark:group-hover:text-indigo-300">Free web development content, daily.</span>
@@ -53,11 +48,10 @@
 
                     <li>
                         <a
-                            href="https://app.usefathom.com/share/qtfeilsd/benjamin+crozat?page=1&range=last_month&sort=visitors%3Adesc"
+                            href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=today&scale=day"
                             target="_blank"
                             rel="nofollow noopener noreferrer"
                             class="block px-4 py-3 transition-colors duration-[400s] group hover:bg-indigo-600/50 dark:hover:bg-indigo-600/50 hover:text-white"
-                            @click="window.fathom?.trackGoal('FIMDOB8S', 0)"
                         >
                             <span class="block font-medium">My live analytics dashboard</span>
                             <span class="block text-sm text-gray-500 duration-[400s] group-hover:text-indigo-100 dark:group-hover:text-indigo-300">See the growth of my blog for yourself.</span>

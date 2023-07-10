@@ -1,7 +1,6 @@
 <a
     href="{{ route('home') }}"
     class="flex items-center gap-3 sm:flex-shrink-0"
-    @click="window.fathom?.trackGoal('XAQUA2K4', 0)"
 >
     <x-icon-logo class="flex-shrink-0 w-8 h-8 text-black fill-current dark:text-white md:w-10 md:h-10" />
 

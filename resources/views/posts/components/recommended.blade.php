@@ -1,12 +1,12 @@
 @if ($recommended->isNotEmpty())
     <div {{ $attributes->except('recommended') }}>
-        <div class="font-semibold text-center text-xl">
+        <div class="text-xl font-semibold text-center">
             Recommended
         </div>
 
-        <div class="grid md:grid-cols-2 gap-4 sm:gap-8 mt-8">
+        <div class="grid gap-4 mt-8 md:grid-cols-2 sm:gap-8">
             @foreach ($recommended as $post)
-                <x-post :post="$post" @click="window.fathom?.trackGoal('LTFJEOM0', 0)" />
+                <x-post :post="$post" />
             @endforeach
         </div>
     </div>

@@ -38,11 +38,11 @@
         x-trap="searching"
         x-transition.opacity
         @keyup.escape.window="query = ''; searching = false"
-        @keydown.meta.k.window="searching = ! searching; if (! searching) { query = '' }; window.fathom.trackGoal('XEDJAZWO', 0)"
+        @keydown.meta.k.window="searching = ! searching; if (! searching) { query = '' }"
     >
-        <div class="container md:max-w-screen-sm pb-20 pt-4 sm:py-4" @click.away="searching = false">
+        <div class="container pt-4 pb-20 md:max-w-screen-sm sm:py-4" @click.away="searching = false">
             <div
-                class="bg-white dark:bg-gray-800 pb-2 rounded-lg shadow-xl"
+                class="pb-2 bg-white rounded-lg shadow-xl dark:bg-gray-800"
                 @keyup.up="$focus.previous()"
                 @keyup.down="$focus.next()"
             >
@@ -55,19 +55,19 @@
                         "What's new in Laravel 10?",
                         "What's new in PHP 8.3?",
                     ])->random() }}"
-                    class="bg-transparent border-transparent focus:border-transparent placeholder-gray-300 dark:placeholder-gray-600 px-4 py-3 focus:ring-0 scroll-mt-4 w-full"
+                    class="w-full px-4 py-3 placeholder-gray-300 bg-transparent border-transparent focus:border-transparent dark:placeholder-gray-600 focus:ring-0 scroll-mt-4"
                     x-model="query"
                     x-ref="input"
                     @focus="$refs.input.select()"
                     @click="$focus.focus($refs.input); $refs.input.select()"
                 />
 
-                <p class="cursor-default text-center text-xs">
+                <p class="text-xs text-center cursor-default">
                     <span class="opacity-50">Powered by</span> <x-icon-algolia class="h-[.85rem] inline" />
                 </p>
 
                 <template x-if="! hits.length && query.length >= 3">
-                    <p class="mt-2 opacity-50 text-center">
+                    <p class="mt-2 text-center opacity-50">
                         No results found for your query.
                     </p>
                 </template>
@@ -78,11 +78,11 @@
                             <li class="border-t border-gray-200/50 dark:border-gray-700/50">
                                 <a
                                     :href="`${appUrl}/${hit.slug}`"
-                                    class="hover:bg-gray-200/50 dark:hover:bg-gray-700/50 focus:bg-blue-400 dark:focus:bg-blue-400/50 flex items-center justify-between gap-8 group p-4 transition-colors focus:outline-none"
+                                    class="flex items-center justify-between gap-8 p-4 transition-colors hover:bg-gray-200/50 dark:hover:bg-gray-700/50 focus:bg-blue-400 dark:focus:bg-blue-400/50 group focus:outline-none"
                                 >
                                     <div>
-                                        <div class="font-normal inline-block text-indigo-600 dark:text-indigo-400 group-focus:text-white transition-colors" x-html="hit._highlightResult.title.value"></div>
-                                        <div class="leading-relaxed mt-2 text-sm group-focus:text-white/75 transition-colors" x-html="hit._highlightResult.content.value"></div>
+                                        <div class="inline-block font-normal text-indigo-600 transition-colors dark:text-indigo-400 group-focus:text-white" x-html="hit._highlightResult.title.value"></div>
+                                        <div class="mt-2 text-sm leading-relaxed transition-colors group-focus:text-white/75" x-html="hit._highlightResult.content.value"></div>
                                     </div>
 
                                     <img
@@ -91,7 +91,7 @@
                                         width="64"
                                         height="64"
                                         :alt="hit.title"
-                                        class="aspect-square object-cover"
+                                        class="object-cover aspect-square"
                                     />
                                 </a>
                             </li>
@@ -101,7 +101,7 @@
             </div>
 
             <button
-                class="-translate-x-1/2 fixed bottom-4 left-1/2 backdrop-blur-md bg-black/50 dark:bg-white/50 grid place-items-center sm:hidden p-3 rounded-full shadow-lg text-white dark:text-black z-30"
+                class="fixed z-30 grid p-3 text-white -translate-x-1/2 rounded-full shadow-lg bottom-4 left-1/2 backdrop-blur-md bg-black/50 dark:bg-white/50 place-items-center sm:hidden dark:text-black"
                 @click="searching = false"
             >
                 <x-heroicon-o-x-mark class="w-5 h-5" />

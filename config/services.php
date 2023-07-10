@@ -36,9 +36,4 @@ return [
         'form_id' => env('CONVERTKIT_FORM_ID'),
         'main_tag_id' => env('CONVERTKIT_MAIN_TAG_ID'),
     ],
-
-    'fathom' => [
-        'api_token' => env('FATHOM_API_TOKEN'),
-        'site_id' => env('FATHOM_SITE_ID'),
-    ],
 ];

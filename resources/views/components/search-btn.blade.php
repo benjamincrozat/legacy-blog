@@ -1,4 +1,4 @@
-<button class="flex items-center gap-2 transition-colors group hover:text-indigo-400" @click="searching = true; window.fathom?.trackGoal('NV4ZNM3W', 0)">
+<button class="flex items-center gap-2 transition-colors group hover:text-indigo-400">
     <x-heroicon-s-magnifying-glass class="flex-shrink-0 w-4 h-4" />
 
     Search
