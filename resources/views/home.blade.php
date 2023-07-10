@@ -47,20 +47,6 @@
         </x-newsletter>
 
         <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mt-8 md:mt-16 mx-auto w-[100px]"></div>
-
-        <section class="container lg:max-w-[1024px] mt-16">
-            <div class="px-4 text-xl font-semibold text-center sm:px-0">
-                Most popular
-            </div>
-
-            @if ($popular->isNotEmpty())
-                <div class="grid gap-4 mt-8 md:grid-cols-2">
-                    @foreach ($popular as $post)
-                        <x-post :post="$post" @click="window.fathom?.trackGoal('HH0P1ACM', 0)" />
-                    @endforeach
-                </div>
-            @endif
-        </section>
     @endif
 
     <section class="container lg:max-w-[1024px] mt-16">

@@ -40,7 +40,12 @@
         <link rel="canonical" href="{{ url()->current() }}" />
 
         @if (app()->isProduction() && auth()->guest())
-            <script defer src="https://cdn.usefathom.com/script.js" data-site="{{ config('services.fathom.site_id') }}"></script>
+            <script
+                data-code="5N2hIsUQsCVX1LQtvPdJ3AGwQZHGxtt5"
+                defer
+                id="pirschextendedjs"
+                src="https://api.pirsch.io/pirsch-extended.js"
+            ></script>
         @endif
 
         @stack('head')
