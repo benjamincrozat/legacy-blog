@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Symfony\Component\HttpFoundation\Response;
@@ -17,7 +18,8 @@ class TrackPageView
         if (
             auth()->guest() &&
             ! $request->hasHeader('X-Livewire') &&
-            ! str_starts_with($request->route()->uri, 'telescope') &&
+            ! Str::startsWith($request->route()->uri, 'nova') &&
+            ! Str::startsWith($request->route()->uri, 'telescope') &&
             config('services.pirsch.access_key')
         ) {
             Http::withToken(config('services.pirsch.access_key'))
