@@ -8,6 +8,8 @@ use YouTube\DownloadOptions;
 
 class YoutubeDownloader extends Component
 {
+    public $format;
+
     public $url;
 
     protected ?DownloadOptions $options = null;

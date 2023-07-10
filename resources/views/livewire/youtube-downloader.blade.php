@@ -11,9 +11,15 @@
             {!! str(nl2br($this->options->getInfo()->getShortDescription()))->markdown() !!}
         </details>
 
-        <a href="{{ $this->options->getSplitFormats('high')->video->url }}" download>
-            Download
-        </a>
+        @if ($format === 'MP4')
+            <a href="{{ $this->options->getSplitFormats('high')->video->url }}" download>
+                Download video
+            </a>
+        @else
+            <a href="{{ $this->options->getSplitFormats('high')->audio->url }}" download>
+                Download audio
+            </a>
+        @endif
     @endif
 
     <form wire:submit.prevent="submit" class="mt-8 text-center">

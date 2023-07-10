@@ -5,7 +5,7 @@
     <div class="!container prose prose-headings:font-medium prose-headings:md:text-center prose-h3:!text-left prose-h3:!text-base prose-a:text-indigo-400 py-8">
         <h1>{{ $title }}</h1>
 
-        <livewire:youtube-downloader />
+        <livewire:youtube-downloader :format="$format" />
 
         <div class="mt-16">
             <h2>How to convert and download a YouTube video to {{ $format }} for free?</h2>
