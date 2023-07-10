@@ -19,7 +19,7 @@
             </button>
 
             <ul
-                class="absolute z-10 bg-white/[.75] dark:bg-black/[.75] backdrop-blur-md rounded-md overflow-hidden shadow-lg left-4 sm:left-auto sm:w-[300px] md:w-[350px] lg:w-[400px] sm:right-0 right-4 top-full"
+                class="absolute z-10 bg-white/[.75] backdrop-brightness-150 backdrop-saturate-150 dark:bg-black/[.75] backdrop-blur-md rounded-md overflow-hidden shadow-lg left-4 sm:left-auto sm:w-[300px] md:w-[350px] lg:w-[400px] sm:right-0 right-4 top-full"
                 x-cloak
                 x-show="open"
                 x-transition
