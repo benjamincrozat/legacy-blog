@@ -13,7 +13,7 @@ class RedirectToAffiliateController extends Controller
     public function __invoke(Request $request, Affiliate $affiliate) : RedirectResponse
     {
         if (auth()->guest()) {
-            Http::withToken(config('services.pirsch.api_key'))
+            Http::withToken(config('services.pirsch.access_key'))
                 ->retry(3)
                 ->post('https://api.pirsch.io/api/v1/event', [
                     'event_name' => 'Clicked on affiliate',

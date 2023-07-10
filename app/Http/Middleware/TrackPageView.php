@@ -19,7 +19,7 @@ class TrackPageView
             ! $request->hasHeader('X-Livewire') &&
             ! str_starts_with($request->route()->uri, 'telescope')
         ) {
-            Http::withToken(config('services.pirsch.api_key'))
+            Http::withToken(config('services.pirsch.access_key'))
                 ->retry(3)
                 ->post('https://api.pirsch.io/api/v1/hit', [
                     'url' => $request->fullUrl(),
