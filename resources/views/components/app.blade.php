@@ -43,8 +43,8 @@
             <script
                 data-code="5N2hIsUQsCVX1LQtvPdJ3AGwQZHGxtt5"
                 defer
-                id="pirschextendedjs"
-                src="https://api.pirsch.io/pirsch-extended.js"
+                id="pirscheventsjs"
+                src="https://api.pirsch.io/pirsch-events.js"
             ></script>
         @endif
 
