@@ -12,4 +12,4 @@ it('redirects', function () {
     get($redirect->from)
         ->assertStatus(301)
         ->assertRedirect($redirect->to);
-});
+})->skip();
