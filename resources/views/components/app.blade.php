@@ -40,12 +40,10 @@
         <link rel="canonical" href="{{ url()->current() }}" />
 
         @if (app()->isProduction() && auth()->guest())
-            <script
+            <script defer src="https://api.pirsch.io/pirsch-extended.js"
+                id="pirschextendedjs"
                 data-code="5N2hIsUQsCVX1LQtvPdJ3AGwQZHGxtt5"
-                defer
-                id="pirscheventsjs"
-                src="https://api.pirsch.io/pirsch-events.js"
-            ></script>
+                data-disable-page-views></script>
         @endif
 
         @stack('head')

@@ -36,4 +36,8 @@ return [
         'form_id' => env('CONVERTKIT_FORM_ID'),
         'main_tag_id' => env('CONVERTKIT_MAIN_TAG_ID'),
     ],
+
+    'pirsch' => [
+        'access_key' => env('PIRSCH_ACCESS_KEY'),
+    ],
 ];
