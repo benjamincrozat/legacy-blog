@@ -1,6 +1,19 @@
 <div>
     @if ($this->options)
-        @dump($this->options)
+        <div>{{ $this->options->getInfo()->getTitle() }}</div>
+
+        <div>{{ trans_choice(':views_count view|:views_count views', $this->options->getInfo()->getViewCount(), [
+            'views_count' => number_format($this->options->getInfo()->getViewCount()),
+        ]) }}</div>
+
+        <details>
+            <summary>Read the video's description.</summary>
+            {!! str(nl2br($this->options->getInfo()->getShortDescription()))->markdown() !!}
+        </details>
+
+        <a href="{{ $this->options->getSplitFormats('high')->video->url }}" download>
+            Download
+        </a>
     @endif
 
     <form wire:submit.prevent="submit" class="mt-8 text-center">

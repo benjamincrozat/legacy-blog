@@ -24,6 +24,8 @@ class YoutubeDownloader extends Component
 
         $this->options = (new \YouTube\YouTubeDownloader)
             ->getDownloadLinks($this->url);
+
+        $this->url = null;
     }
 
     public function updated($name) : void
