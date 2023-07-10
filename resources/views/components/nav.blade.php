@@ -29,7 +29,7 @@
                         href="https://smousss.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="block px-4 py-3 transition-colors duration-500 group hover:bg-indigo-400 dark:hover:bg-indigo-600/50 hover:text-white"
+                        class="block px-4 py-3 transition-colors duration-500 group hover:bg-indigo-600/50 dark:hover:bg-indigo-600/50 hover:text-white"
                         @click="window.fathom?.trackGoal('FIMDOB8S', 0)"
                     >
                         <span class="block font-medium">Smousss</span>
@@ -42,7 +42,7 @@
                         href="https://twitter.com/benjamincrozat"
                         target="_blank"
                         rel="nofollow noopener noreferrer"
-                        class="block px-4 py-3 transition-colors duration-500 group hover:bg-indigo-400 dark:hover:bg-indigo-600/50 hover:text-white"
+                        class="block px-4 py-3 transition-colors duration-500 group hover:bg-indigo-600/50 dark:hover:bg-indigo-600/50 hover:text-white"
                         @click="window.fathom?.trackGoal('FIMDOB8S', 0)"
                     >
                         <span class="block font-medium">Follow me on Twitter</span>
@@ -55,7 +55,7 @@
                         href="https://app.usefathom.com/share/qtfeilsd/benjamin+crozat?page=1&range=last_month&sort=visitors%3Adesc"
                         target="_blank"
                         rel="nofollow noopener noreferrer"
-                        class="block px-4 py-3 transition-colors duration-500 group hover:bg-indigo-400 dark:hover:bg-indigo-600/50 hover:text-white"
+                        class="block px-4 py-3 transition-colors duration-500 group hover:bg-indigo-600/50 dark:hover:bg-indigo-600/50 hover:text-white"
                         @click="window.fathom?.trackGoal('FIMDOB8S', 0)"
                     >
                         <span class="block font-medium">My live analytics dashboard</span>
