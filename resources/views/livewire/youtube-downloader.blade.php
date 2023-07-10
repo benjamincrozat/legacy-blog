@@ -1,4 +1,8 @@
 <div>
+    @if ($this->options)
+        @dump($this->options)
+    @endif
+
     <form wire:submit.prevent="submit" class="mt-8 text-center">
         <div>
             <label for="url" class="sr-only">
@@ -16,10 +20,12 @@
         </div>
 
         @error('url')
-            <div>{{ $message }}</div>
+            <div class="mt-1 mb-2 text-red-400">{{ $message }}</div>
         @enderror
 
-        <button wire:click="submit" class="px-6 py-3 mt-2 font-medium text-white bg-indigo-400 rounded">
+        <button
+            class="px-6 py-3 mt-2 font-medium text-white transition-colors bg-indigo-400 rounded disabled:bg-gray-100 disabled:text-gray-300"
+        >
             Convert and download
         </button>
     </form>

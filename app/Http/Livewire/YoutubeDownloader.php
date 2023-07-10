@@ -4,10 +4,13 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use Illuminate\View\View;
+use YouTube\DownloadOptions;
 
 class YoutubeDownloader extends Component
 {
     public $url;
+
+    protected ?DownloadOptions $options = null;
 
     protected $rules = [
         'url' => ['required', 'url'],
@@ -15,10 +18,12 @@ class YoutubeDownloader extends Component
 
     public function submit() : void
     {
-        $options = (new \YouTube\YouTubeDownloader)
-            ->getDownloadLinks($this->url);
+        if (! $this->url) {
+            return;
+        }
 
-        dump($options);
+        $this->options = (new \YouTube\YouTubeDownloader)
+            ->getDownloadLinks($this->url);
     }
 
     public function updated($name) : void
