@@ -1,4 +1,4 @@
-<button class="flex items-center gap-2 transition-colors group hover:text-indigo-400">
+<button class="flex items-center gap-2 transition-colors group hover:text-indigo-400" @click="searching = ! searching">
     <x-heroicon-s-magnifying-glass class="flex-shrink-0 w-4 h-4" />
 
     Search
