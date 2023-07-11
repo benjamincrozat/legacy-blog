@@ -11,7 +11,6 @@
         "@alpinejs/persist": "^3.10.5",
         "@tailwindcss/container-queries": "^0.1.0",
         "@tailwindcss/forms": "^0.5.3",
-        "@tailwindcss/line-clamp": "^0.4.2",
         "@tailwindcss/typography": "^0.5.7",
         "algoliasearch": "^4.14.3",
         "alpinejs": "^3.10.3",
