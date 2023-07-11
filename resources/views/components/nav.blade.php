@@ -27,7 +27,7 @@
                             href="https://smousss.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="block px-4 py-3 transition-colors duration-500 group hover:bg-indigo-600/50 dark:hover:bg-indigo-600/50 hover:text-white"
+                            class="block px-4 py-3 transition-colors duration-500 group hover:bg-indigo-700/60 hover:text-white"
                         >
                             <span class="block font-medium">Smousss</span>
                             <span class="block text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">An AI-powered assistant for Laravel developers.</span>
@@ -39,7 +39,7 @@
                             href="https://twitter.com/benjamincrozat"
                             target="_blank"
                             rel="nofollow noopener noreferrer"
-                            class="block px-4 py-3 transition-colors duration-500 group hover:bg-indigo-600/50 dark:hover:bg-indigo-600/50 hover:text-white"
+                            class="block px-4 py-3 transition-colors duration-500 group hover:bg-indigo-700/60 hover:text-white"
                         >
                             <span class="block font-medium">Follow me on Twitter</span>
                             <span class="block text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">Free web development content, daily.</span>
@@ -51,7 +51,7 @@
                             href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=today&scale=day"
                             target="_blank"
                             rel="nofollow noopener noreferrer"
-                            class="block px-4 py-3 transition-colors duration-500 group hover:bg-indigo-600/50 dark:hover:bg-indigo-600/50 hover:text-white"
+                            class="block px-4 py-3 transition-colors duration-500 group hover:bg-indigo-700/60 hover:text-white"
                         >
                             <span class="block font-medium">My live analytics dashboard</span>
                             <span class="block text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">See the growth of my blog for yourself.</span>

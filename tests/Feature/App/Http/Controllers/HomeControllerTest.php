@@ -35,5 +35,5 @@ it('lists posts', function () {
     $posts = $response->viewData('posts');
 
     expect($posts)->toBeInstanceOf(Paginator::class);
-    expect($posts)->toHaveCount(20);
+    expect($posts)->toHaveCount(30);
 });
