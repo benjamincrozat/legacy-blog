@@ -73,14 +73,9 @@
         @endif
     </section>
 
-    @if ($posts->onFirstPage())
-        <x-newsletter class="container mt-16">
-            <x-slot:headline>
-                Want more content?<br />
-                Subscribe to my <span class="bg-clip-text bg-gradient-to-r from-indigo-300 to-indigo-400"><span class="text-transparent">free</span></span> newsletter!
-            </x-slot:headline>
-        </x-newsletter>
-    @endif
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
+    <ins class="mt-16 adsbygoogle empty:mt-0" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-3461630254419592" data-ad-slot="4616088468"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({})</script>
 
     <div class="mt-16 bg-gray-900 dark:bg-black">
         <x-footer class="text-gray-200" />
