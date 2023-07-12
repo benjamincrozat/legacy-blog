@@ -60,37 +60,8 @@
 
         @if ($posts->isNotEmpty())
             <div class="grid gap-4 mt-8 md:grid-cols-2">
-                @php
-                $counter = 5;
-                @endphp
-
                 @foreach ($posts as $post)
-                    @php
-                    $includeAd = (bool) mt_rand(0, 1);
-                    $topOrBottom = mt_rand(0, 1);
-                    @endphp
-
-                    @if ($includeAd && $topOrBottom === 0 && $counter > 0)
-                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
-                        <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-g7-26-1h-5n+yf" data-ad-client="ca-pub-3461630254419592" data-ad-slot="7752607445"></ins>
-                        <script>(adsbygoogle = window.adsbygoogle || []).push({})</script>
-
-                        @php
-                        $counter--;
-                        @endphp
-                    @endif
-
                     <x-post :post="$post" />
-
-                    @if ($includeAd && $topOrBottom === 1 && $counter > 0)
-                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
-                        <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-g7-26-1h-5n+yf" data-ad-client="ca-pub-3461630254419592" data-ad-slot="7752607445"></ins>
-                        <script>(adsbygoogle = window.adsbygoogle || []).push({})</script>
-
-                        @php
-                        $counter--;
-                        @endphp
-                    @endif
                 @endforeach
             </div>
 
