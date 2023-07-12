@@ -67,7 +67,7 @@
                 @foreach ($posts as $post)
                     @php
                     $includeAd = (bool) mt_rand(0, 1);
-                    $topOrBottom = (bool) mt_rand(0, 1);
+                    $topOrBottom = mt_rand(0, 1);
                     @endphp
 
                     @if ($includeAd && $topOrBottom === 0 && $counter > 0)
