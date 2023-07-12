@@ -42,6 +42,10 @@
         </div>
     @endif
 
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-3461630254419592" data-ad-slot="4391946933"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({})</script>
+
     @if ($post->promotes_affiliate_links && $highlights->isNotEmpty())
         <div class="container mt-8">
             <div class="grid sm:grid-cols-2 @if ($highlights->count() > 2) md:grid-cols-3 @endif place-items-center gap-4">
@@ -215,6 +219,10 @@
             </a>
         </div>
     @endforeach
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-3461630254419592" data-ad-slot="4391946933"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({})</script>
 
     @if ($post->conclusion)
         <div class="!container content mt-8">
