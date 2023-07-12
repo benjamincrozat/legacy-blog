@@ -30,6 +30,9 @@
             <h3>Can I convert and download YouTube videos in MP4 or MP3 for free?</h3>
             <p>Yes, you can convert and download YouTube videos completely for free. This website is monetized through ads, so I will never ask you for a dime.</p>
 
+            <h3>What's the difference between your service and the ability to download videos with YouTube Premium?</h3>
+            <p>First, YouTube Premium cost money. And second, videos downloaded with YouTube Premium are only available inside the app. You cannot use them however you want.</p>
+
             <h3>What resolutions are available for converting and downloading videos in the MP4 format?</h3>
             <p>Depending on the resolution of the video you are trying to download, the range goes from 144p to 8K.</p>
 
