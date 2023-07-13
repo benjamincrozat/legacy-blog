@@ -25,20 +25,20 @@ it('tracks the click for guests and redirects to the affiliate', function () {
         ->assertRedirect(trim($affiliate->link, '/') . '?foo=bar');
 
     Http::assertSent(function (Request $request) use ($affiliate) {
-        $eventMeta = [
-            'id' => $affiliate->id,
+        expect($request->url())->toEqual('https://api.pirsch.io/api/v1/event');
+        expect($request->data()['event_name'])->toEqual('Clicked on Affiliate');
+        expect($request->data()['event_meta'])->toEqual([
+            'id' => "$affiliate->id",
             'name' => $affiliate->name,
             'link' => $affiliate->link,
-        ];
+        ]);
+        expect($request->data()['url'])->toEqual(route('affiliate', [$affiliate, 'foo' => 'bar']));
+        expect('127.0.0.1')->toEqual($request->data()['ip']);
+        expect('Symfony')->toEqual($request->data()['user_agent']);
+        expect(str_contains($request->data()['accept_language'], 'en-us'))->toBeTrue();
+        expect('https://example.com')->toEqual($request->data()['referrer']);
 
-        return 'https://api.pirsch.io/api/v1/event' === $request->url() &&
-                'Clicked on affiliate' === $request->data()['event_name'] &&
-                // $request->data()['event_meta'] === $eventMeta &&
-                route('affiliate', [$affiliate, 'foo' => 'bar']) === $request->data()['url'] &&
-               '127.0.0.1' === $request->data()['ip'] &&
-               'Symfony' === $request->data()['user_agent'] &&
-               str_contains($request->data()['accept_language'], 'en-us') &&
-               'https://example.com' === $request->data()['referrer'];
+        return true;
     });
 });
 

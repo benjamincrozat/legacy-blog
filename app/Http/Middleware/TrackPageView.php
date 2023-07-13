@@ -18,9 +18,10 @@ class TrackPageView
         if (
             auth()->guest() &&
             ! $request->hasHeader('X-Livewire') &&
-            ! Str::startsWith($request->route()->uri, 'horizon') &&
-            ! Str::startsWith($request->route()->uri, 'nova') &&
-            ! Str::startsWith($request->route()->uri, 'telescope') &&
+            ! Str::startsWith($request->route()->uri, 'horizon/') &&
+            ! Str::startsWith($request->route()->uri, 'nova/') &&
+            ! Str::startsWith($request->route()->uri, 'recommends/') &&
+            ! Str::startsWith($request->route()->uri, 'telescope/') &&
             config('services.pirsch.access_key')
         ) {
             Http::withToken(config('services.pirsch.access_key'))
