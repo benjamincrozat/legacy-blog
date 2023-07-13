@@ -17,12 +17,11 @@ class RedirectToAffiliateController extends Controller
                 ->retry(3)
                 ->post('https://api.pirsch.io/api/v1/event', [
                     'event_name' => 'Clicked on Affiliate',
-                    // TODO: Make sure this works!
-                    // 'event_meta' => [
-                    //     'id' => $affiliate->id,
-                    //     'name' => $affiliate->name,
-                    //     'link' => $affiliate->link,
-                    // ],
+                    'event_meta' => [
+                        'id' => "$affiliate->id",
+                        'name' => $affiliate->name,
+                        'link' => $affiliate->link,
+                    ],
                     'url' => $request->fullUrl(),
                     'ip' => $request->ip(),
                     'user_agent' => $request->userAgent(),
