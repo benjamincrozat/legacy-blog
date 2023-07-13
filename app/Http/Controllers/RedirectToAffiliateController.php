@@ -16,7 +16,7 @@ class RedirectToAffiliateController extends Controller
             Http::withToken(config('services.pirsch.access_key'))
                 ->retry(3)
                 ->post('https://api.pirsch.io/api/v1/event', [
-                    'event_name' => 'Clicked on affiliate',
+                    'event_name' => 'Clicked on Affiliate',
                     // TODO: Make sure this works!
                     // 'event_meta' => [
                     //     'id' => $affiliate->id,
