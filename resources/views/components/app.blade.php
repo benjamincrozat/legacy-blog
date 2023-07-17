@@ -9,7 +9,7 @@
             <meta property="og:image" content="{{ $image }}" />
         @endif
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="{{ URL::current() }}" />
+        <meta property="og:url" content="{{ url()->current() }}" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@benjamincrozat" />
         <meta name="twitter:description" content="{{ $description ?? '' }}" />
@@ -54,13 +54,5 @@
         <x-status />
 
         <x-search />
-
-        @if (app()->isProduction())
-            <script
-                async
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592"
-                crossorigin="anonymous"
-            ></script>
-        @endif
     </body>
 </html>

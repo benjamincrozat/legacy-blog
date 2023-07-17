@@ -71,10 +71,6 @@
                 </div>
             @endif
         @endif
-
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592" crossorigin="anonymous"></script>
-        <ins class="mt-8 md:mt-16 adsbygoogle empty:!mt-0" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-3461630254419592" data-ad-slot="4616088468"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({})</script>
     </section>
 
     <div class="mt-16 bg-gray-900 dark:bg-black">
