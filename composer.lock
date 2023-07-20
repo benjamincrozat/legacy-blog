@@ -2564,17 +2564,17 @@
         },
         {
             "name": "laravel/nova",
-            "version": "4.26.4",
+            "version": "4.26.5",
             "source": {
                 "type": "git",
                 "url": "git@github.com:laravel/nova.git",
-                "reference": "2c85439aa38f1aecf396b5fa473fa0f8dbd813f7"
+                "reference": "598ce8abf472f9c79492515f33ab8942424e6e84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-2c85439aa38f1aecf396b5fa473fa0f8dbd813f7-zip-f99a68.zip",
-                "reference": "2c85439aa38f1aecf396b5fa473fa0f8dbd813f7",
-                "shasum": "9a150d8c7b62c5731a1247eda8f9d1cf0ae4d490"
+                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-598ce8abf472f9c79492515f33ab8942424e6e84-zip-c3c729.zip",
+                "reference": "598ce8abf472f9c79492515f33ab8942424e6e84",
+                "shasum": "d49b1bf843026bef02f94d61e13820b5620b9568"
             },
             "require": {
                 "brick/money": "^0.5.0|^0.6.0|^0.7.0|^0.8.0",
@@ -2672,9 +2672,9 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/laravel/nova/tree/v4.26.4"
+                "source": "https://github.com/laravel/nova/tree/v4.26.5"
             },
-            "time": "2023-07-07T19:28:00+00:00"
+            "time": "2023-07-14T16:46:26+00:00"
         },
         {
             "name": "laravel/scout",
@@ -5279,16 +5279,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.11.18",
+            "version": "v0.11.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "4f00ee9e236fa6a48f4560d1300b9c961a70a7ec"
+                "reference": "1724ceff278daeeac5a006744633bacbb2dc4706"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/4f00ee9e236fa6a48f4560d1300b9c961a70a7ec",
-                "reference": "4f00ee9e236fa6a48f4560d1300b9c961a70a7ec",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/1724ceff278daeeac5a006744633bacbb2dc4706",
+                "reference": "1724ceff278daeeac5a006744633bacbb2dc4706",
                 "shasum": ""
             },
             "require": {
@@ -5349,9 +5349,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.11.18"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.11.19"
             },
-            "time": "2023-05-23T02:31:11+00:00"
+            "time": "2023-07-15T19:42:19+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -6475,16 +6475,16 @@
         },
         {
             "name": "spatie/laravel-honeypot",
-            "version": "4.3.2",
+            "version": "4.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-honeypot.git",
-                "reference": "eab92dd2096f1cdb83c28ced4f4632d3cfde2872"
+                "reference": "fa303f537e0f2119861ab75efaa9b5ef792da12d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-honeypot/zipball/eab92dd2096f1cdb83c28ced4f4632d3cfde2872",
-                "reference": "eab92dd2096f1cdb83c28ced4f4632d3cfde2872",
+                "url": "https://api.github.com/repos/spatie/laravel-honeypot/zipball/fa303f537e0f2119861ab75efaa9b5ef792da12d",
+                "reference": "fa303f537e0f2119861ab75efaa9b5ef792da12d",
                 "shasum": ""
             },
             "require": {
@@ -6539,7 +6539,7 @@
                 "spatie"
             ],
             "support": {
-                "source": "https://github.com/spatie/laravel-honeypot/tree/4.3.2"
+                "source": "https://github.com/spatie/laravel-honeypot/tree/4.3.3"
             },
             "funding": [
                 {
@@ -6547,7 +6547,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2023-01-17T07:09:34+00:00"
+            "time": "2023-07-17T20:02:47+00:00"
         },
         {
             "name": "spatie/laravel-package-tools",
@@ -10402,16 +10402,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.15.2",
+            "version": "2.15.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "aac9304c5ed61bf7b1b7a6064bf9806ab842ce73"
+                "reference": "c83e88a30524f9360b11f585f71e6b17313b7187"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/aac9304c5ed61bf7b1b7a6064bf9806ab842ce73",
-                "reference": "aac9304c5ed61bf7b1b7a6064bf9806ab842ce73",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/c83e88a30524f9360b11f585f71e6b17313b7187",
+                "reference": "c83e88a30524f9360b11f585f71e6b17313b7187",
                 "shasum": ""
             },
             "require": {
@@ -10461,7 +10461,7 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.15.2"
+                "source": "https://github.com/filp/whoops/tree/2.15.3"
             },
             "funding": [
                 {
@@ -10469,7 +10469,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-04-12T12:00:00+00:00"
+            "time": "2023-07-13T12:00:00+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -10524,16 +10524,16 @@
         },
         {
             "name": "laravel/pint",
-            "version": "v1.10.4",
+            "version": "v1.10.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/pint.git",
-                "reference": "f56798088068af8bd75a8f2c4ecae022990fdf75"
+                "reference": "a458fb057bfa2f5a09888a8aa349610be807b0c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/pint/zipball/f56798088068af8bd75a8f2c4ecae022990fdf75",
-                "reference": "f56798088068af8bd75a8f2c4ecae022990fdf75",
+                "url": "https://api.github.com/repos/laravel/pint/zipball/a458fb057bfa2f5a09888a8aa349610be807b0c3",
+                "reference": "a458fb057bfa2f5a09888a8aa349610be807b0c3",
                 "shasum": ""
             },
             "require": {
@@ -10546,7 +10546,7 @@
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^3.21.1",
                 "illuminate/view": "^10.5.1",
-                "laravel-zero/framework": "^10.0.2",
+                "laravel-zero/framework": "^10.1.1",
                 "mockery/mockery": "^1.5.1",
                 "nunomaduro/larastan": "^2.5.1",
                 "nunomaduro/termwind": "^1.15.1",
@@ -10586,7 +10586,7 @@
                 "issues": "https://github.com/laravel/pint/issues",
                 "source": "https://github.com/laravel/pint"
             },
-            "time": "2023-07-11T15:18:27+00:00"
+            "time": "2023-07-14T10:26:01+00:00"
         },
         {
             "name": "maximebf/debugbar",
@@ -10656,44 +10656,39 @@
         },
         {
             "name": "mockery/mockery",
-            "version": "1.6.2",
+            "version": "1.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mockery/mockery.git",
-                "reference": "13a7fa2642c76c58fa2806ef7f565344c817a191"
+                "reference": "b1be135c1ba7632f0248e07ee5e6e412576a309d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mockery/mockery/zipball/13a7fa2642c76c58fa2806ef7f565344c817a191",
-                "reference": "13a7fa2642c76c58fa2806ef7f565344c817a191",
+                "url": "https://api.github.com/repos/mockery/mockery/zipball/b1be135c1ba7632f0248e07ee5e6e412576a309d",
+                "reference": "b1be135c1ba7632f0248e07ee5e6e412576a309d",
                 "shasum": ""
             },
             "require": {
                 "hamcrest/hamcrest-php": "^2.0.1",
                 "lib-pcre": ">=7.0",
-                "php": "^7.4 || ^8.0"
+                "php": ">=7.4,<8.3"
             },
             "conflict": {
                 "phpunit/phpunit": "<8.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^8.5 || ^9.3",
-                "psalm/plugin-phpunit": "^0.18",
-                "vimeo/psalm": "^5.9"
+                "psalm/plugin-phpunit": "^0.18.4",
+                "vimeo/psalm": "^5.13.1"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "1.6.x-dev"
-                }
-            },
             "autoload": {
                 "files": [
-                    "library/helpers.php",
-                    "library/Mockery.php"
+                    "src/helpers.php",
+                    "src/Mockery.php"
                 ],
                 "psr-4": {
-                    "Mockery\\": "library/Mockery"
+                    "Mockery\\": "src/Mockery"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -10704,12 +10699,20 @@
                 {
                     "name": "Pádraic Brady",
                     "email": "padraic.brady@gmail.com",
-                    "homepage": "http://blog.astrumfutura.com"
+                    "homepage": "https://github.com/padraic",
+                    "role": "Author"
                 },
                 {
                     "name": "Dave Marshall",
                     "email": "dave.marshall@atstsolutions.co.uk",
-                    "homepage": "http://davedevelopment.co.uk"
+                    "homepage": "https://davedevelopment.co.uk",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Nathanael Esayeas",
+                    "email": "nathanael.esayeas@protonmail.com",
+                    "homepage": "https://github.com/ghostwriter",
+                    "role": "Lead Developer"
                 }
             ],
             "description": "Mockery is a simple yet flexible PHP mock object framework",
@@ -10727,10 +10730,13 @@
                 "testing"
             ],
             "support": {
+                "docs": "https://docs.mockery.io/",
                 "issues": "https://github.com/mockery/mockery/issues",
-                "source": "https://github.com/mockery/mockery/tree/1.6.2"
+                "rss": "https://github.com/mockery/mockery/releases.atom",
+                "security": "https://github.com/mockery/mockery/security/advisories",
+                "source": "https://github.com/mockery/mockery"
             },
-            "time": "2023-06-07T09:07:52+00:00"
+            "time": "2023-07-18T17:47:29+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -11185,27 +11191,27 @@
         },
         {
             "name": "pestphp/pest-plugin-laravel",
-            "version": "v2.0.0",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pestphp/pest-plugin-laravel.git",
-                "reference": "fc28f077fc3a461dfc11de4f50dbfef2aba1186d"
+                "reference": "db6295986e3c506dbf37c16ddc64c4a83e96bd75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pestphp/pest-plugin-laravel/zipball/fc28f077fc3a461dfc11de4f50dbfef2aba1186d",
-                "reference": "fc28f077fc3a461dfc11de4f50dbfef2aba1186d",
+                "url": "https://api.github.com/repos/pestphp/pest-plugin-laravel/zipball/db6295986e3c506dbf37c16ddc64c4a83e96bd75",
+                "reference": "db6295986e3c506dbf37c16ddc64c4a83e96bd75",
                 "shasum": ""
             },
             "require": {
-                "laravel/framework": "^10.4.1",
-                "pestphp/pest": "^2.0.0",
+                "laravel/framework": "^10.15.0",
+                "pestphp/pest": "^2.8.3",
                 "php": "^8.1.0"
             },
             "require-dev": {
-                "laravel/dusk": "^7.7.0",
-                "orchestra/testbench": "^8.0.10",
-                "pestphp/pest-dev-tools": "^2.5.0"
+                "laravel/dusk": "^7.8.0",
+                "orchestra/testbench": "^8.5.10",
+                "pestphp/pest-dev-tools": "^2.12.0"
             },
             "type": "library",
             "extra": {
@@ -11238,7 +11244,7 @@
                 "unit"
             ],
             "support": {
-                "source": "https://github.com/pestphp/pest-plugin-laravel/tree/v2.0.0"
+                "source": "https://github.com/pestphp/pest-plugin-laravel/tree/v2.1.0"
             },
             "funding": [
                 {
@@ -11250,7 +11256,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-20T09:27:24+00:00"
+            "time": "2023-07-18T11:41:02+00:00"
         },
         {
             "name": "phar-io/manifest",
