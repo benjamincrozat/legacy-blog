@@ -17,6 +17,7 @@ class TrackPageView
     {
         if (
             auth()->guest() &&
+            'GET' === $request->method() &&
             ! $request->hasHeader('X-Livewire') &&
             ! Str::startsWith($request->route()->uri, 'horizon/') &&
             ! Str::startsWith($request->route()->uri, 'nova/') &&
