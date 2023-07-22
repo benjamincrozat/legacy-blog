@@ -29,13 +29,6 @@
         @endif
     @endif
 
-    @if (empty($barebones))
-        <x-posts::newsletter
-            :promotes-affiliate-links="$post->promotes_affiliate_links"
-            class="container mt-10 sm:max-w-screen-xs"
-        />
-    @endif
-
     @if ($post->introduction)
         <div class="!container content mt-8">
             {!! $post->rendered_introduction !!}

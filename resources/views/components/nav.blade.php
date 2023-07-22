@@ -36,6 +36,16 @@
 
                     <li>
                         <a
+                            href="{{ route('home') }}#newsletter"
+                            class="block px-4 py-3 transition-colors duration-500 group hover:bg-indigo-700/60 hover:text-white"
+                        >
+                            <span class="block font-medium">My newsletter</span>
+                            <span class="block text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">Whenever I feel like sharing interesting content.</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
                             href="https://benjamincrozat.com/best-web-development-tools"
                             class="block px-4 py-3 transition-colors duration-500 group hover:bg-indigo-700/60 hover:text-white"
                         >
