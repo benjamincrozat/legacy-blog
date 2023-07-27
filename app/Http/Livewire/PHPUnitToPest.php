@@ -6,7 +6,7 @@ use Livewire\Component;
 use Illuminate\View\View;
 use Pest\Drift\Converters\CodeConverterFactory;
 
-class PHPUnitToPest extends Component
+class PhpunitToPest extends Component
 {
     public $code = '';
 
