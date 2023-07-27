@@ -24,6 +24,16 @@
                 >
                     <li>
                         <a
+                            href="{{ route('phpunit-to-pest') }}"
+                            class="block px-4 py-3 transition-colors duration-500 group hover:bg-indigo-700/60 hover:text-white"
+                        >
+                            <span class="block font-medium">Convert PHPUnit tests to Pest for free</span>
+                            <span class="block text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">Kickstart the migration of your test suite.</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
                             href="https://smousss.com"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -31,38 +41,6 @@
                         >
                             <span class="block font-medium">Smousss</span>
                             <span class="block text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">An AI-powered assistant for Laravel developers.</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a
-                            href="{{ route('home') }}#newsletter"
-                            class="block px-4 py-3 transition-colors duration-500 group hover:bg-indigo-700/60 hover:text-white"
-                        >
-                            <span class="block font-medium">My newsletter</span>
-                            <span class="block text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">Whenever I feel like sharing interesting content.</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a
-                            href="https://benjamincrozat.com/best-web-development-tools"
-                            class="block px-4 py-3 transition-colors duration-500 group hover:bg-indigo-700/60 hover:text-white"
-                        >
-                            <span class="block font-medium">The tools I use for my work</span>
-                            <span class="block text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">If you need some inspiration, this is the right place to be.</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a
-                            href="https://twitter.com/benjamincrozat"
-                            target="_blank"
-                            rel="nofollow noopener noreferrer"
-                            class="block px-4 py-3 transition-colors duration-500 group hover:bg-indigo-700/60 hover:text-white"
-                        >
-                            <span class="block font-medium">Follow me on Twitter</span>
-                            <span class="block text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">Free web development content, daily.</span>
                         </a>
                     </li>
 
