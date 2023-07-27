@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Http;
 use App\CommonMark\MarxdownConverter;
 use App\Http\Middleware\TrackPageView;
 use function Pest\Laravel\withoutVite;
+use Torchlight\Middleware\RenderTorchlight;
 use function Pest\Laravel\withoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
@@ -18,7 +19,10 @@ uses(TestCase::class, DatabaseTransactions::class)
             fn () => (new MarxdownConverter(torchlight: false))->convert($this->value)
         );
 
-        withoutMiddleware(TrackPageView::class);
+        withoutMiddleware([
+            RenderTorchlight::class,
+            TrackPageView::class,
+        ]);
 
         withoutVite();
     })
