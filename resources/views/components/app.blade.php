@@ -20,14 +20,13 @@
 
         <title>{{ $title ?? config('app.name') }}</title>
 
-        <livewire:styles />
-        <livewire:scripts />
-
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-
         @if (! app()->runningUnitTests())
             @googlefonts
         @endif
+
+        @livewireStyles
+
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         <x-feed-links />
 
@@ -53,6 +52,10 @@
 
         <x-status />
 
-        <x-search />
+        @if (Route::is('home') || Route::is('posts.show'))
+            <x-search />
+        @endif
+
+        @livewireScripts
     </body>
 </html>

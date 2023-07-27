@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Post;
 use App\Models\User;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,7 @@ class PostFactory extends Factory
             'user_id' => User::factory(),
             'image' => fake()->imageUrl(),
             'title' => fake()->sentence(),
-            'slug' => fake()->slug(),
+            'slug' => fn ($attributes) => Str::slug($attributes['title']),
             'introduction' => fake()->paragraph(),
             'content' => <<<MARKDOWN
 # h1 Heading 8-)
