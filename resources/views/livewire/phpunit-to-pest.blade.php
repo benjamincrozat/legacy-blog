@@ -11,7 +11,12 @@
     @else
         <form wire:submit.prevent="convert">
             <label for="source" class="sr-only">Your PHPUnit test.</label>
-            <textarea wire:model="code" placeholder="Your PHPUnit test." class="w-full px-4 py-3 placeholder-gray-300 border border-gray-200 rounded resize-none"></textarea>
+            <textarea
+                wire:model="code"
+                placeholder="Your PHPUnit test."
+                class="w-full px-4 py-3 placeholder-gray-300 border border-gray-200 rounded resize-none"
+                x-autosize
+            ></textarea>
             <button class="table px-6 py-3 mx-auto mt-2 font-bold text-white rounded bg-emerald-400">Convert</button>
         </form>
     @endif

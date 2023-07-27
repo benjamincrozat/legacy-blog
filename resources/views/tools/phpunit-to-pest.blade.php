@@ -2,7 +2,7 @@
     <article class="container py-8">
         <div class="text-center">
             <h1 class="text-xl font-bold sm:text-2xl md:text-3xl">
-                Instantly convert PHPUnit tests to Pest
+                Instantly migrate PHPUnit tests to Pest
             </h1>
 
             <div class="text-gray-600 sm:text-lg md:text-xl">A tool based on <a href="https://packagist.org/packages/pestphp/pest-plugin-drift" target="_blank" rel="nofollow noopener noreferrer" class="text-indigo-400 underline">pestphp/pest-plugin-drift</a> and created by <a href="{{ route('home') }}" class="text-indigo-400 underline">Benjamin Crozat</a></div>
