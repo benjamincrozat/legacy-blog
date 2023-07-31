@@ -1,4 +1,7 @@
-<x-app class="!text-gray-300 bg-gray-900">
+<x-app
+    title="Instantly migrate PHPUnit tests to Pest"
+    class="!text-gray-300 bg-gray-900"
+>
     <article class="container py-8">
         <div class="text-center">
             <a href="{{ route('phpunit-to-pest') }}">
