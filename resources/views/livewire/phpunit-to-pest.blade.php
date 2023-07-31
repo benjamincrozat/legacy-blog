@@ -6,7 +6,7 @@
             class="table px-6 py-3 mx-auto mt-4 font-bold text-white rounded bg-gray-950/75"
             wire:click="again"
         >
-            Convert another test
+            Convert another test to Pest
         </button>
     @else
         <form wire:submit.prevent="convert">
@@ -23,9 +23,9 @@
 
             <button
                 class="table px-6 py-3 mx-auto mt-2 font-bold text-white rounded bg-gradient-to-r from-emerald-400 via-blue-400 to-pink-400"
-                style="text-shadow: 1px 1px 3px rgb(0 0 0 / 20%)"
+                style="text-shadow: 1px 1px 1px rgb(0 0 0 / 10%)"
             >
-                Convert
+                Convert to Pest
             </button>
         </form>
     @endif
