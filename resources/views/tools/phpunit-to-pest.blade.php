@@ -15,7 +15,7 @@
         </div>
 
         <h2 class="mt-8 font-bold text-white sm:text-lg md:text-xl">What is Pest?</h2>
-        <div class="mt-2">Pest is a revolutionary testing framework with a focus on simplicity. It's been meticulously designed to bring back the joy of testing in PHP and go even further than what you can do with PHPUnit.</div>
+        <div class="mt-2"><a href="https://pestphp.com" target="_blank" rel="nofollow noopener noreferrer" class="decoration-[#f471b5]/50 text-[#f471b5] underline underline-offset-4">Pest</a> is a revolutionary testing framework with a focus on simplicity. It's been meticulously designed to bring back the joy of testing in PHP and go even further than what you can do with PHPUnit.</div>
 
         <h2 class="mt-8 font-bold text-white sm:text-lg md:text-xl">Why switch to Pest?</h2>
         <div class="mt-2">Switching to Pest brings several benefits to your codebase:</div>
