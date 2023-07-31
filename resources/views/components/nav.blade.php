@@ -17,7 +17,7 @@
                 </button>
 
                 <ul
-                    class="absolute z-10 bg-white/[.75] backdrop-brightness-150 backdrop-saturate-150 dark:bg-black/[.75] backdrop-blur-md rounded-md overflow-hidden shadow-lg left-4 sm:left-auto sm:w-[300px] md:w-[350px] lg:w-[400px] sm:right-0 right-4 top-full"
+                    class="absolute z-10 bg-white/90 backdrop-brightness-150 backdrop-saturate-150 dark:bg-black/[.75] backdrop-blur-md rounded-lg overflow-hidden shadow-lg left-4 sm:left-auto sm:w-[300px] md:w-[350px] lg:w-[400px] sm:right-0 right-4 top-full"
                     x-cloak
                     x-show="open"
                     x-transition
@@ -25,34 +25,63 @@
                     <li>
                         <a
                             href="{{ route('phpunit-to-pest') }}"
-                            class="block px-4 py-3 transition-colors duration-500 group hover:bg-indigo-700/60 hover:text-white"
+                            class="flex items-center gap-4 p-4 transition-colors duration-500 group hover:bg-indigo-700/60 hover:text-white"
                         >
-                            <span class="block font-medium">Convert PHPUnit tests to Pest for free</span>
-                            <span class="block text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">Kickstart the migration of your test suite.</span>
+                            <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded bg-gradient-to-r from-blue-300 via-emerald-400 to-pink-400">
+                                <x-heroicon-s-forward class="w-8 h-8 text-white" />
+                            </div>
+
+                            <div class="leading-tight">
+                                <div class="font-medium">
+                                    Pouest
+                                </div>
+
+                                <div class="text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">
+                                    Instantly migrate your tests to Pest <span class="font-normal text-black transition-colors duration-500 group-hover:text-white">for free</span>.
+                                </div>
+                            </div>
                         </a>
                     </li>
 
                     <li>
                         <a
-                            href="https://smousss.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="block px-4 py-3 transition-colors duration-500 group hover:bg-indigo-700/60 hover:text-white"
+                            href="https://superchargedlaravel.com"
+                            class="flex items-center gap-4 p-4 transition-colors duration-500 group hover:bg-indigo-700/60 hover:text-white"
                         >
-                            <span class="block font-medium">Smousss</span>
-                            <span class="block text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">An AI-powered assistant for Laravel developers.</span>
+                            <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 bg-gray-900 rounded">
+                                <x-heroicon-s-bolt class="w-6 h-6 text-yellow-400" />
+                            </div>
+
+                            <div class="leading-tight">
+                                <div class="font-medium">
+                                    Supercharged Laravel
+                                </div>
+
+                                <div class="text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">
+                                    Learn how to generate production-ready Laravel code faster, and be your company's hero.
+                                </div>
+                            </div>
                         </a>
                     </li>
 
                     <li>
                         <a
                             href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=today&scale=day"
-                            target="_blank"
-                            rel="nofollow noopener noreferrer"
-                            class="block px-4 py-3 transition-colors duration-500 group hover:bg-indigo-700/60 hover:text-white"
+                            class="flex items-center gap-4 p-4 transition-colors duration-500 group hover:bg-indigo-700/60 hover:text-white"
                         >
-                            <span class="block font-medium">My live analytics dashboard</span>
-                            <span class="block text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">See the growth of my blog for yourself.</span>
+                            <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 bg-blue-400 rounded">
+                                <x-heroicon-s-chart-bar class="w-6 h-6 text-white" />
+                            </div>
+
+                            <div class="leading-tight">
+                                <div class="font-medium">
+                                    My blog's live analytics dashboard
+                                </div>
+
+                                <div class="text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">
+                                    Curious? See the growth of my blog for yourself, <span class="font-normal text-black transition-colors duration-500 group-hover:text-white">free of charge</span>.
+                                </div>
+                            </div>
                         </a>
                     </li>
                 </ul>
