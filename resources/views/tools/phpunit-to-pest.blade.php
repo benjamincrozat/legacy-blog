@@ -1,7 +1,9 @@
 <x-app class="!text-gray-300 bg-gray-900">
     <article class="container py-8">
         <div class="text-center">
-            <img src="{{ Vite::asset('resources/img/pouest.png') }}" alt="Instantly migrate PHPUnit tests to Pest" class="w-16 h-16 mx-auto shadow-lg rounded-xl" />
+            <a href="{{ route('phpunit-to-pest') }}">
+                <img src="{{ Vite::asset('resources/img/pouest.png') }}" alt="Instantly migrate PHPUnit tests to Pest" class="w-16 h-16 mx-auto shadow-lg rounded-xl" />
+            </a>
 
             <h1 class="mt-6 text-xl font-bold text-white sm:text-2xl md:text-3xl">
                 Instantly migrate PHPUnit tests to Pest
