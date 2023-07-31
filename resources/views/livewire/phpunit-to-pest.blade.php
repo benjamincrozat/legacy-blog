@@ -1,9 +1,9 @@
 <div>
     @if ($result)
-        <pre class="bg-[#1f2937] text-sm p-4 rounded"><x-torchlight-code language="php">{!! $result !!}</x-torchlight-code></pre>
+        <pre class="p-4 text-sm rounded bg-gray-950/50"><x-torchlight-code language="php">{!! $result !!}</x-torchlight-code></pre>
 
         <button
-            class="table px-6 py-3 mx-auto mt-4 font-bold text-white bg-indigo-400 rounded"
+            class="table px-6 py-3 mx-auto mt-4 font-bold text-white rounded bg-gray-950/75"
             wire:click="again"
         >
             Convert another test
@@ -11,7 +11,7 @@
     @else
         <form wire:submit.prevent="convert">
             <label for="source" class="sr-only">
-                Your PHPUnit test.
+                Test
             </label>
 
             <textarea

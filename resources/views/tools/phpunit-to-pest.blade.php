@@ -23,7 +23,7 @@
             <li>Pest is officially supported by Laravel.</li>
             <li class="mt-2">Your tests become more concise and readable.</li>
             <li class="mt-2">The barrier to entry is lower, thanks to reduced boilerplate and a less intimidating syntax.</li>
-            <li class="mt-2">In addition to traditionnal testing, Pest can also help you enforce coding standards thanks to <a href="https://pestphp.com/docs/arch-testing" target="_blank" rel="nofollow noopener noreferrer" class="decoration-[#f471b5]/50 text-[#f471b5] underline underline-offset-4">its architecture testing helpers</a>.</li>
+            <li class="mt-2">In addition to traditionnal testing, Pest can also help you enforce coding standards thanks to <a href="https://pestphp.com/docs/arch-testing" target="_blank" rel="nofollow noopener noreferrer" class="decoration-[#f471b5]/50 text-[#f471b5] underline underline-offset-4">its architecture testing helpers</a>. This will faciliate the collaboration with your team.</li>
         </ul>
 
         <h2 class="mt-8 font-bold text-white sm:text-lg md:text-xl">Is this tool enough to convert my test suite?</h2>
