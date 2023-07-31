@@ -12,7 +12,7 @@ it('works', function () {
         ->assertSet('code', '')
         ->assertSet('result', '')
         ->set('code', '<?php namespace Tests\Unit; use PHPUnit\Framework\TestCase; class ExampleTest extends TestCase { public function test_that_true_is_true(): void { $this->assertTrue(true); } }')
-        ->call('convert')
+        ->call('migrate')
         ->assertSet('result', fn ($result) => ! empty($result));
 
     $component

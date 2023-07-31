@@ -1,10 +1,10 @@
-<a href="https://smousss.com" target="_blank "class="block text-gray-600 bg-gradient-to-r from-gray-100 dark:from-gray-900 dark:from-gray-700/50 to-gray-200/[.65] dark:to-gray-800/50 font-medium leading-tight text-sm dark:text-white">
+<a href="https://superchargedlaravel.com" target="_blank "class="block text-gray-600 bg-gradient-to-r from-gray-100 dark:from-gray-900 dark:from-gray-700/50 to-gray-200/[.65] dark:to-gray-800/50 font-medium leading-tight text-sm dark:text-white">
     <div class="container flex items-center justify-between gap-4 py-4 ">
         <div>
-            <div>“I created an AI assistant for Laravel developers that handles all the boring work.”</div>
+            <div>“I'm writing an ebook teaching how to generate accurate Laravel code using ChatGPT and be more productive.”</div>
 
             <div class="mt-2 font-medium text-blue-400">
-                Learn more
+                Get 3 chapters for free
             </div>
         </div>
 

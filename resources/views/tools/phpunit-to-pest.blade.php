@@ -14,7 +14,7 @@
                 Instantly migrate PHPUnit tests to Pest
             </h1>
 
-            <div class="sm:text-lg md:text-xl">A tool based on <a href="https://packagist.org/packages/pestphp/pest-plugin-drift" target="_blank" rel="nofollow noopener noreferrer" class="decoration-[#f471b5]/50 text-[#f471b5] underline underline-offset-4">pestphp/pest-plugin-drift</a> and created by <a href="{{ route('home') }}" class="decoration-[#f471b5]/50 text-[#f471b5] underline underline-offset-4">Benjamin Crozat</a></div>
+            <div class="sm:text-lg md:text-xl">A tool created by <a href="{{ route('home') }}" class="decoration-[#f471b5]/50 text-[#f471b5] underline underline-offset-4">Benjamin Crozat</a> and based on <a href="https://packagist.org/packages/pestphp/pest-plugin-drift" target="_blank" rel="nofollow noopener noreferrer" class="decoration-[#f471b5]/50 text-[#f471b5] underline underline-offset-4">pestphp/pest-plugin-drift</a></div>
         </div>
 
         <div class="mt-8 md:mt-16">
