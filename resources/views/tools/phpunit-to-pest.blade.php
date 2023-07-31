@@ -7,7 +7,7 @@
     <article class="container py-8">
         <div class="text-center">
             <a href="{{ route('phpunit-to-pest') }}">
-                <img src="{{ Vite::asset('resources/img/pouest.png') }}" alt="Instantly migrate PHPUnit tests to Pest" class="w-16 h-16 mx-auto shadow-lg rounded-xl" />
+                <img src="{{ Vite::asset('resources/img/pouest.png') }}" alt="Instantly migrate PHPUnit tests to Pest" class="w-16 h-16 mx-auto shadow-lg rounded-2xl" />
             </a>
 
             <h1 class="mt-6 text-xl font-bold text-white sm:text-2xl md:text-3xl">

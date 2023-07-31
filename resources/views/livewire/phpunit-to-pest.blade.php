@@ -16,7 +16,7 @@
 
             <textarea
                 wire:model="code"
-                placeholder="{!! "&lt;?php\n\nnamespace Tests\Unit;\n\nuse PHPUnit\Framework\TestCase;\n\nclass ExampleTest extends TestCase\n{\n   public function test_that_true_is_true(): void\n   {\n       \$this->assertTrue(true);\n   }\n}" !!}"
+                placeholder="{!! "&lt;?php\n\nnamespace Tests\Unit;\n\nuse PHPUnit\Framework\TestCase;\n\nclass ExampleTest extends TestCase\n{\n   public function test_true_equals_true()\n   {\n       \$this->assertTrue(true);\n   }\n}" !!}"
                 required
                 class="w-full px-4 py-3 min-h-[350px] md:min-h-[300px] font-mono text-sm bg-transparent border-0 rounded resize-none placeholder-gray-700/50 focus:ring-teal-400 bg-gradient-to-r from-gray-800/30 to-gray-800/50"
                 x-autosize
