@@ -1,6 +1,7 @@
 <x-app
     title="Instantly migrate PHPUnit tests to Pest"
     description="Convert your PHPUnit tests to Pest using a web page instead of a CLI."
+    image="{{ Vite::asset('resources/img/pouest-banner.jpg') }}"
     class="!text-gray-300 bg-gray-900"
 >
     <article class="container py-8">
