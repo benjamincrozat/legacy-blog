@@ -1,6 +1,6 @@
 <x-app
     title="Instantly migrate PHPUnit tests to Pest"
-    description="Convert your PHPUnit tests to Pest using a web page instead of a CLI."
+    description="Migrate your PHPUnit tests to Pest using a web page instead of a CLI."
     image="{{ Vite::asset('resources/img/pouest-banner.jpg') }}"
     class="!text-gray-300 bg-gray-900"
 >
@@ -33,9 +33,9 @@
             <li class="mt-2">In addition to traditionnal testing, Pest can also help you enforce coding standards thanks to <a href="https://pestphp.com/docs/arch-testing" target="_blank" rel="nofollow noopener noreferrer" class="decoration-[#f471b5]/50 text-[#f471b5] underline underline-offset-4">its architecture testing helpers</a>. This will faciliate the collaboration with your team.</li>
         </ul>
 
-        <h2 class="mt-8 font-bold text-white sm:text-lg md:text-xl">Is this tool enough to convert my test suite?</h2>
+        <h2 class="mt-8 font-bold text-white sm:text-lg md:text-xl">Is this tool enough to migrate my test suite?</h2>
         <div class="mt-2">The <a href="https://packagist.org/packages/pestphp/pest-plugin-drift" target="_blank" rel="nofollow noopener noreferrer" class="decoration-[#f471b5]/50 text-[#f471b5] underline underline-offset-4">pestphp/pest-plugin-drift</a> used under the hood performs a basic conversion, which will help you get started.</div>
-        <div class="mt-2">But if you are looking for a miracle solution, I created an even more advanced tool called <a href="https://smousss.com" class="decoration-[#f471b5]/50 text-[#f471b5] underline underline-offset-4">Smousss</a>, which is based on artificial intelligence and can convert your test suite way better than any developer.</div>
+        <div class="mt-2">But if you are looking for a miracle solution, I created an even more advanced tool called <a href="https://smousss.com" class="decoration-[#f471b5]/50 text-[#f471b5] underline underline-offset-4">Smousss</a>, which is based on artificial intelligence and can migrate your test suite way better than any developer.</div>
     </article>
 
     <div class="mt-8 bg-gray-950">

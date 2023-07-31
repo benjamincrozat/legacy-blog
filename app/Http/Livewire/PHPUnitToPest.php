@@ -21,7 +21,7 @@ class PhpunitToPest extends Component
         return view('livewire.phpunit-to-pest');
     }
 
-    public function convert() : void
+    public function migrate() : void
     {
         $this->result = (new CodeConverterFactory)
             ->codeConverter()

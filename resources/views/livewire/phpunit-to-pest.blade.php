@@ -6,10 +6,10 @@
             class="table px-6 py-3 mx-auto mt-4 font-bold text-white rounded bg-gray-950/75"
             wire:click="again"
         >
-            Convert another test to Pest
+            Migrate another test to Pest
         </button>
     @else
-        <form wire:submit.prevent="convert">
+        <form wire:submit.prevent="migrate">
             <label for="source" class="sr-only">
                 Test
             </label>
@@ -26,7 +26,7 @@
                 class="table px-6 py-3 mx-auto mt-2 font-bold text-white rounded bg-gradient-to-r from-emerald-400 via-blue-400 to-pink-400"
                 style="text-shadow: 1px 1px 1px rgb(0 0 0 / 10%)"
             >
-                Convert to Pest
+                Migrate to Pest
             </button>
         </form>
     @endif
