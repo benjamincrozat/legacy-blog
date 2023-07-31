@@ -12,6 +12,10 @@ class PhpunitToPest extends Component
 
     public $result = '';
 
+    protected $rules = [
+        'code' => 'required|string|min:3',
+    ];
+
     public function render() : View
     {
         return view('livewire.phpunit-to-pest');
