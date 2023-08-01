@@ -24,6 +24,27 @@
                 >
                     <li>
                         <a
+                            href="https://benjamincrozat.com/best-web-development-tools#26d0a66f80201fbc1d3965a7f3365e83"
+                            class="flex items-center gap-4 p-4 transition-colors duration-500 group hover:bg-indigo-700/60 hover:text-white"
+                        >
+                            <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded bg-emerald-400">
+                                <x-heroicon-s-wrench-screwdriver class="w-8 h-8 text-white" />
+                            </div>
+
+                            <div class="leading-tight">
+                                <div class="font-medium">
+                                    The tools I use
+                                </div>
+
+                                <div class="text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">
+                                    Here are the best free and paid tools I use in 2023 to do my job.
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
                             href="{{ route('phpunit-to-pest') }}"
                             class="flex items-center gap-4 p-4 transition-colors duration-500 group hover:bg-indigo-700/60 hover:text-white"
                         >
@@ -37,7 +58,7 @@
                                 </div>
 
                                 <div class="text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">
-                                    Instantly migrate your tests to Pest <span class="font-normal text-black transition-colors duration-500 group-hover:text-white">for free</span>.
+                                    Instantly migrate your tests to Pest for free.
                                 </div>
                             </div>
                         </a>
@@ -79,7 +100,7 @@
                                 </div>
 
                                 <div class="text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">
-                                    Curious? See the growth of my blog for yourself, <span class="font-normal text-black transition-colors duration-500 group-hover:text-white">free of charge</span>.
+                                    Curious? See the growth of my blog for yourself, free of charge.
                                 </div>
                             </div>
                         </a>
