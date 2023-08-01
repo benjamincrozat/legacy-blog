@@ -5,12 +5,12 @@
     class="!text-gray-300 bg-gray-900"
 >
     <nav class="container flex items-center justify-between mt-8">
-        <a href="{{ route('home') }}" class="decoration-[#f471b5]/50 text-[#f471b5] underline underline-offset-4">
+        <a href="{{ route('home') }}" class="text-sm text-gray-500 underline underline-offset-4 decoration-gray-500/50">
             ← Back to the blog
         </a>
     </nav>
 
-    <article class="container mt-8 md:mt-16">
+    <article class="container mt-16">
         <div class="text-center">
             <a href="{{ route('phpunit-to-pest') }}">
                 <img src="{{ Vite::asset('resources/img/pouest.png') }}" alt="Instantly migrate PHPUnit tests to Pest" class="inline-block w-16 h-16 mx-auto shadow-lg rounded-2xl" />
