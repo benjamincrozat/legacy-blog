@@ -4,7 +4,13 @@
     image="{{ Vite::asset('resources/img/pouest-banner.jpg') }}"
     class="!text-gray-300 bg-gray-900"
 >
-    <article class="container py-8">
+    <nav class="container flex items-center justify-between mt-8">
+        <a href="{{ route('home') }}" class="decoration-[#f471b5]/50 text-[#f471b5] underline underline-offset-4">
+            ← Back to the blog
+        </a>
+    </nav>
+
+    <article class="container mt-8 md:mt-16">
         <div class="text-center">
             <a href="{{ route('phpunit-to-pest') }}">
                 <img src="{{ Vite::asset('resources/img/pouest.png') }}" alt="Instantly migrate PHPUnit tests to Pest" class="inline-block w-16 h-16 mx-auto shadow-lg rounded-2xl" />
@@ -38,7 +44,7 @@
         <div class="mt-2">But if you are looking for a miracle solution, I created an even more advanced tool called <a href="https://smousss.com" class="decoration-[#f471b5]/50 text-[#f471b5] underline underline-offset-4">Smousss</a>, which is based on artificial intelligence and can migrate your test suite way better than any developer.</div>
     </article>
 
-    <div class="mt-8 bg-gray-950">
+    <div class="mt-16 bg-gray-950">
         <x-footer class="text-gray-200" />
     </div>
 </x-app>
