@@ -22,6 +22,13 @@
                     <span class="sr-only">Twitter</span>
                 </a>
             </li>
+
+            <li>
+                <a href="mailto:hello@benjamincrozat.com" class="underline decoration-white/30 underline-offset-4">
+                    <x-icon-email class="w-8 h-8 fill-current" />
+                    <span class="sr-only">Email</span>
+                </a>
+            </li>
         </ul>
     </div>
 </footer>
