@@ -12,15 +12,10 @@ class HomeController extends Controller
     {
         $pins = Pin::with('post.user')->latest()->limit(4)->get();
 
-        $popular = Post::with('user')
-            ->orderByDesc('views')
-            ->limit(6)
-            ->get();
-
         $posts = Post::with('user')
             ->latest()
-            ->simplePaginate(perPage: 30, pageName: 'postsPage');
+            ->paginate(perPage: 14);
 
-        return view('home', compact('pins', 'popular', 'posts'));
+        return view('home', compact('pins', 'posts'));
     }
 }
