@@ -14,7 +14,7 @@ class HomeController extends Controller
 
         $posts = Post::with('user')
             ->latest()
-            ->paginate(perPage: 14);
+            ->paginate(perPage: 12);
 
         return view('home', compact('pins', 'posts'));
     }

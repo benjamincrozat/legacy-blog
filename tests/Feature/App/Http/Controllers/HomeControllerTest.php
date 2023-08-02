@@ -24,5 +24,5 @@ it('lists posts', function () {
     $posts = $response->viewData('posts');
 
     expect($posts)->toBeInstanceOf(LengthAwarePaginator::class);
-    expect($posts)->toHaveCount(14);
+    expect($posts)->toHaveCount(12);
 });
