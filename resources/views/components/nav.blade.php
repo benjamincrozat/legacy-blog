@@ -67,7 +67,7 @@
                 </x-menu-item>
             </x-menu>
 
-            @guest
+            @auth
                 <x-menu class="sm:!w-[200px] md:!w-[250px] lg:!w-[300px]">
                     <x-slot name="trigger">Admin</x-slot>
 
@@ -79,7 +79,7 @@
                         Nova
                     </x-menu-item>
                 </x-menu>
-            @endguest
+            @endauth
 
             <x-search-btn />
         </div>
