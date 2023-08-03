@@ -1,6 +1,6 @@
 @if ($paginator->hasPages())
     <nav role="navigation" aria-label="{{ __('Pagination Navigation') }}" class="flex items-center justify-between mt-16">
-        <div class="text-gray-400 dark:text-gray-800">
+        <div class="text-gray-400 dark:text-gray-700">
             {{ $paginator->count() }}
             {!! __('of') !!}
             <span>{{ $paginator->total() }}</span>
