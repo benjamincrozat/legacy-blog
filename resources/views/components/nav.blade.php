@@ -2,7 +2,7 @@
     <x-announcement />
 @endempty
 
-<div {{ $attributes->merge(['class' => 'container flex items-center justify-between relative sm:static'])}}>
+<div {{ $attributes->merge(['class' => 'container flex items-center justify-between relative sm:static text-sm sm:text-base'])}}>
     <x-logo />
 
     @empty($funnel)
@@ -67,8 +67,8 @@
                 </x-menu-item>
             </x-menu>
 
-            @auth
-                <x-menu>
+            @guest
+                <x-menu class="sm:!w-[200px] md:!w-[250px] lg:!w-[300px]">
                     <x-slot name="trigger">Admin</x-slot>
 
                     <x-menu-item href="/horizon">
@@ -79,7 +79,7 @@
                         Nova
                     </x-menu-item>
                 </x-menu>
-            @endauth
+            @endguest
 
             <x-search-btn />
         </div>
