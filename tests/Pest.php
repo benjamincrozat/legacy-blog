@@ -8,9 +8,10 @@ use App\Http\Middleware\TrackPageView;
 use function Pest\Laravel\withoutVite;
 use Torchlight\Middleware\RenderTorchlight;
 use function Pest\Laravel\withoutMiddleware;
+use NunoMaduro\LaravelMojito\InteractsWithViews;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-uses(TestCase::class, DatabaseTransactions::class)
+uses(TestCase::class, DatabaseTransactions::class, InteractsWithViews::class)
     ->beforeEach(function () {
         Http::preventStrayRequests();
 
