@@ -98,7 +98,7 @@
                                 </div>
 
                                 <div class="text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">
-                                    Curious? See the growth of my blog for yourself, free of charge.
+                                    Curious? See the growth of my blog for yourself.
                                 </div>
                             </div>
                         </a>
