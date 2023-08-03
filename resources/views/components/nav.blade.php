@@ -48,9 +48,7 @@
                             href="{{ route('phpunit-to-pest') }}"
                             class="flex items-center gap-4 p-4 transition-colors duration-500 group hover:bg-indigo-700/60 hover:text-white"
                         >
-                            <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded bg-gradient-to-r from-blue-300 via-emerald-400 to-pink-400">
-                                <x-heroicon-s-forward class="w-8 h-8 text-white" />
-                            </div>
+                            <x-icon-pouest class="w-12 h-12 text-white rounded" />
 
                             <div class="leading-tight">
                                 <div class="font-medium">

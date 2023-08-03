@@ -3,7 +3,7 @@
 use function Pest\Laravel\from;
 use Illuminate\Support\Facades\Http;
 
-it('works', function () : void {
+test('guests can subscribe to newsletter', function () {
     Http::fakeSequence()
         ->push([
             'subscription' => [
@@ -22,4 +22,16 @@ it('works', function () : void {
         ->postJson(route('subscribe'), ['email' => fake()->safeEmail()])
         ->assertValid(['email'])
         ->assertRedirect(route('home'));
+});
+
+test('the form needs an email address', function () {
+    from(route('home'))
+        ->postJson(route('subscribe'))
+        ->assertInvalid(['email' => 'required']);
+});
+
+test('the form needs a valid email address', function () {
+    from(route('home'))
+        ->postJson(route('subscribe'), ['email' => 'foo'])
+        ->assertInvalid(['email' => 'email']);
 });

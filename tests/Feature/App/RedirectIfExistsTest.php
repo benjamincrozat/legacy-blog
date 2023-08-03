@@ -3,7 +3,7 @@
 use App\Models\Redirect;
 use function Pest\Laravel\get;
 
-it('redirects', function () {
+test('middleware applies existing redirections rules', function () {
     $redirect = Redirect::create([
         'from' => '/foo',
         'to' => '/bar',

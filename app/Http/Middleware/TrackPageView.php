@@ -3,27 +3,30 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Symfony\Component\HttpFoundation\Response;
 
 class TrackPageView
 {
+    protected $except = [
+        'horizon/',
+        'nova/',
+        'recommends/',
+        'telescope/',
+    ];
+
     /**
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
     public function handle(Request $request, Closure $next) : Response
     {
         if (
+            config('services.pirsch.access_key') &&
             auth()->guest() &&
             'GET' === $request->method() &&
             ! $request->hasHeader('X-Livewire') &&
-            ! Str::startsWith($request->route()->uri, 'horizon/') &&
-            ! Str::startsWith($request->route()->uri, 'nova/') &&
-            ! Str::startsWith($request->route()->uri, 'recommends/') &&
-            ! Str::startsWith($request->route()->uri, 'telescope/') &&
-            config('services.pirsch.access_key')
+            ! in_array($request->route()->uri, $this->except)
         ) {
             Http::withToken(config('services.pirsch.access_key'))
                 ->retry(3)

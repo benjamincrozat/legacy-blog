@@ -3,6 +3,7 @@
 use App\Models\Post;
 use App\Models\Redirect;
 use function Pest\Laravel\get;
+use Illuminate\Support\Collection;
 use function Pest\Laravel\assertDatabaseHas;
 use function Pest\Laravel\assertDatabaseMissing;
 
@@ -57,4 +58,20 @@ it('feeds the feed', function () {
 
     get('/feed')
         ->assertOk();
+});
+
+it('shows a given post and list the recommended excluding the current one', function () {
+    $posts = Post::factory(30)->create();
+
+    $response = get(route('posts.show', $post = $posts->first()))
+        ->assertOk()
+        ->assertViewIs('posts.show');
+
+    expect($response->viewData('post'))->toBeInstanceOf(Post::class);
+
+    $recommended = $response->viewData('recommended');
+
+    expect($recommended)->toBeInstanceOf(Collection::class);
+    expect($recommended)->toHaveCount(10);
+    expect($recommended->contains($post))->toBeFalse();
 });

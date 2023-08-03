@@ -4,7 +4,7 @@ use App\Models\Post;
 use Illuminate\Support\Facades\Artisan;
 use App\Console\Commands\SitemapGenerateCommand;
 
-it('generates a sitemap', function () {
+test('the command generates a sitemap', function () {
     Artisan::call(SitemapGenerateCommand::class);
 
     $content = file_get_contents(public_path('/sitemap.xml'));
@@ -14,4 +14,6 @@ it('generates a sitemap', function () {
     Post::latest()->get()->each(
         fn ($p) => expect($content)->toContain(route('posts.show', $p))
     );
+
+    expect($content)->toContain(route('phpunit-to-pest'));
 });
