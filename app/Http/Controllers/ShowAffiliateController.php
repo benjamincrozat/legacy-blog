@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Spatie\Url\Url;
+use App\Jobs\TrackEvent;
 use App\Models\Affiliate;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Http\RedirectResponse;
 
 class ShowAffiliateController extends Controller
@@ -36,23 +36,12 @@ class ShowAffiliateController extends Controller
         $acceptLanguage = $request->header('Accept-Language');
         $referrer = $request->header('Referer');
 
-        dispatch(function () use ($id, $name, $link, $fullUrl, $ip, $userAgent, $acceptLanguage, $referrer) {
-            Http::withToken(config('services.pirsch.access_key'))
-                ->retry(3)
-                ->post('https://api.pirsch.io/api/v1/event', [
-                    'event_name' => 'Clicked on Affiliate',
-                    'event_meta' => [
-                        'id' => $id,
-                        'name' => $name,
-                        'link' => $link,
-                    ],
-                    'url' => $fullUrl,
-                    'ip' => $ip,
-                    'user_agent' => $userAgent,
-                    'accept_language' => $acceptLanguage,
-                    'referrer' => $referrer,
-                ])
-                ->throw();
-        });
+        $pendingDispatch = dispatch(
+            new TrackEvent($id, $name, $link, $fullUrl, $ip, $userAgent, $acceptLanguage, $referrer)
+        );
+
+        if (! app()->isLocal() && ! app()->runningUnitTests()) {
+            $pendingDispatch->afterResponse();
+        }
     }
 }
