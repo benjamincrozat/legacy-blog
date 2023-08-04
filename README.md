@@ -2,7 +2,7 @@
 
 # [benjamincrozat.com](https://benjamincrozat.com)
 
-Source code for [benjamincrozat.com](https://benjamincrozat.com)
+This is the source code of my blog, [benjamincrozat.com](https://benjamincrozat.com). This blog built with the TALL stack gets more than 20K visitors per month. There's nothing fancy, and it's probably not what you should do for yours. But if you're curious, you can check it out.
 
 ## Requirements
 
@@ -13,7 +13,9 @@ Source code for [benjamincrozat.com](https://benjamincrozat.com)
 
 ## Installation
 
-This project should run in Laravel Valet, Docker or whatever else you prefer to use.
+I assume you are using Laravel Valet. But you can run it in whichever environment you want.
+
+Clone the repository and cd into it:
 
 ```bash
 git clone git@github.com:benjamincrozat/benjamincrozat.com.git
@@ -21,19 +23,34 @@ git clone git@github.com:benjamincrozat/benjamincrozat.com.git
 cd benjamincrozat.com
 ```
 
+Install the dependencies:
+
 ```bash
 composer install
 ```
+
+Create the database:
 
 ```bash
 mysql -u root -e "CREATE DATABASE benjamincrozat"
 ```
 
+Migrate the database with some fake data:
+
 ```bash
 php artisan migrate --seed
 ```
 
+Install the frontend dependencies and build the assets:
+
 ```bash
-yarn
-yarn dev
+yarn && yarn build
+```
+
+## Testing
+
+To run the tests, just execute the following command:
+
+```bash
+php artisan test
 ```
