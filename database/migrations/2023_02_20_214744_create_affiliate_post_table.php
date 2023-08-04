@@ -16,6 +16,8 @@ return new class extends Migration
             $table->foreignIdFor(Post::class);
             $table->unsignedInteger('position')->default(0);
             $table->boolean('highlight')->default(false);
+            $table->string('highlight_title')->nullable();
+            $table->string('highlight_text')->nullable();
         });
     }
 
