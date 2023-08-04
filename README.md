@@ -23,6 +23,14 @@ git clone git@github.com:benjamincrozat/benjamincrozat.com.git
 cd benjamincrozat.com
 ```
 
+Create a `.env` file and generate the app key:
+
+```bash
+cp .env.example .env
+
+php artisan key:generate
+```
+
 Install the dependencies:
 
 ```bash
