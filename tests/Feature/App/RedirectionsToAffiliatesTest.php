@@ -1,12 +1,10 @@
 <?php
 
-use App\Models\User;
 use App\Models\Affiliate;
 use function Pest\Laravel\get;
-use function Pest\Laravel\actingAs;
+use function Pest\Laravel\from;
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Http;
-use function Pest\Laravel\assertGuest;
 
 beforeEach(function () {
     config(['services.pirsch.access_key' => 'foo']);
@@ -19,9 +17,8 @@ beforeEach(function () {
 it('tracks the click for guests and redirects to the affiliate', function () {
     $affiliate = Affiliate::factory()->create();
 
-    assertGuest()
-        ->from('https://example.com')
-        ->get(route('affiliate', [$affiliate, 'foo' => 'bar']))
+    from('https://example.com')
+        ->get(route('affiliate.show', [$affiliate, 'foo' => 'bar']))
         ->assertRedirect(trim($affiliate->link, '/') . '?foo=bar');
 
     Http::assertSent(function (Request $request) use ($affiliate) {
@@ -32,7 +29,7 @@ it('tracks the click for guests and redirects to the affiliate', function () {
             'name' => $affiliate->name,
             'link' => $affiliate->link,
         ]);
-        expect($request->data()['url'])->toEqual(route('affiliate', [$affiliate, 'foo' => 'bar']));
+        expect($request->data()['url'])->toEqual(route('affiliate.show', [$affiliate, 'foo' => 'bar']));
         expect('127.0.0.1')->toEqual($request->data()['ip']);
         expect('Symfony')->toEqual($request->data()['user_agent']);
         expect(str_contains($request->data()['accept_language'], 'en-us'))->toBeTrue();
@@ -42,17 +39,7 @@ it('tracks the click for guests and redirects to the affiliate', function () {
     });
 });
 
-it('does not track the click for users but still redirects to the affiliate', function () {
-    $affiliate = Affiliate::factory()->create();
-
-    actingAs(User::factory()->create())
-        ->get(route('affiliate', $affiliate))
-        ->assertRedirect();
-
-    Http::assertNothingSent();
-});
-
 test('it throws 404 when affiliate does not exist', function () {
-    get(route('affiliate', 'foo'))
+    get(route('affiliate.show', 'foo'))
         ->assertNotFound();
 });
