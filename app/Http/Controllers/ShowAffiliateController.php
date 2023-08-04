@@ -40,8 +40,8 @@ class ShowAffiliateController extends Controller
             new TrackEvent($id, $name, $link, $fullUrl, $ip, $userAgent, $acceptLanguage, $referrer)
         );
 
-        if (! app()->isLocal() && ! app()->runningUnitTests()) {
-            $pendingDispatch->afterResponse();
-        }
+        // if (! app()->isLocal() && ! app()->runningUnitTests()) {
+        //     $pendingDispatch->afterResponse();
+        // }
     }
 }

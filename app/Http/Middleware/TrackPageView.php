@@ -38,9 +38,9 @@ class TrackPageView
                 )
             );
 
-            if (! app()->isLocal() && ! app()->runningUnitTests()) {
-                $pendingDispatch->afterResponse();
-            }
+            // if (! app()->isLocal() && ! app()->runningUnitTests()) {
+            //     $pendingDispatch->afterResponse();
+            // }
         }
 
         return $next($request);
