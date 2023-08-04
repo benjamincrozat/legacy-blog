@@ -29,7 +29,7 @@ class TrackPageView
             // I dispatch the request instead of using a terminatable middleware.
             // It's easier to test in my local and testing environments.
             $pendingDispatch = dispatch(
-                new TrackPageView(
+                new \App\Jobs\TrackPageView(
                     $request->fullUrl(),
                     $request->ip(),
                     $request->userAgent(),
