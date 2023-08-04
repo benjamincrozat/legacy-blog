@@ -19,7 +19,7 @@ class SitemapGenerateCommand extends Command
         $sitemap->add(route('home'));
 
         Post::latest()->get()->each(
-            fn ($p) => $sitemap->add(route('posts.show', $p))
+            fn (Post $post) => $sitemap->add(route('posts.show', $post))
         );
 
         $sitemap->add(route('phpunit-to-pest'));
