@@ -8,12 +8,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 class TrackPageView
 {
-    protected $except = [
-        'horizon/',
-        'nova/',
-        'recommends/{affiliate}',
-    ];
-
     /**
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
@@ -21,26 +15,21 @@ class TrackPageView
     {
         if (
             config('services.pirsch.access_key') &&
-            auth()->guest() &&
             'GET' === $request->method() &&
             ! $request->hasHeader('X-Livewire') &&
-            ! in_array($request->route()->uri, $this->except)
+            ! str_contains($request->path(), 'horizon') &&
+            ! str_contains($request->path(), 'nova') &&
+            ! str_contains($request->path(), 'recommends/')
         ) {
-            // I dispatch the request instead of using a terminatable middleware.
+            // I dispatch the request instead as a job of using terminate().
             // It's easier to test in my local and testing environments.
-            $pendingDispatch = dispatch(
-                new \App\Jobs\TrackPageView(
-                    $request->fullUrl(),
-                    $request->ip(),
-                    $request->userAgent(),
-                    $request->header('Accept-Language'),
-                    $request->header('Referer')
-                )
+            \App\Jobs\TrackPageView::dispatch(
+                $request->fullUrl(),
+                $request->ip(),
+                $request->userAgent(),
+                $request->header('Accept-Language'),
+                $request->header('Referer')
             );
-
-            // if (! app()->isLocal() && ! app()->runningUnitTests()) {
-            //     $pendingDispatch->afterResponse();
-            // }
         }
 
         return $next($request);

@@ -3,11 +3,11 @@
 use App\Models\User;
 use App\Models\Affiliate;
 use function Pest\Laravel\get;
+use function Pest\Laravel\from;
 use function Pest\Laravel\actingAs;
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Http;
 use App\Http\Middleware\TrackPageView;
-use function Pest\Laravel\assertGuest;
 use function Pest\Laravel\withMiddleware;
 
 beforeEach(function () {
@@ -20,9 +20,8 @@ beforeEach(function () {
     withMiddleware(TrackPageView::class);
 });
 
-it('tracks the page view for guests', function () {
-    assertGuest()
-        ->from('https://example.com')
+it('tracks page views', function () {
+    from('https://example.com')
         ->get(route('home'))
         ->assertOk();
 
@@ -34,14 +33,6 @@ it('tracks the page view for guests', function () {
                str_contains($request->data()['accept_language'], 'en-us') &&
                'https://example.com' === $request->data()['referrer'];
     });
-});
-
-it('does not track the page view for users', function () {
-    actingAs(User::factory()->create())
-        ->get(route('home'))
-        ->assertOk();
-
-    Http::assertNothingSent();
 });
 
 it('does not track the page view', function ($path, $requiresAuthentication) {

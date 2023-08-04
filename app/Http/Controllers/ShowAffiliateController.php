@@ -26,22 +26,15 @@ class ShowAffiliateController extends Controller
             return;
         }
 
-        $id = "$affiliate->id"; // Pirsch's API crashes when an integer is passed.
-        $name = $affiliate->name;
-        $link = $affiliate->link;
-
-        $fullUrl = $request->fullUrl();
-        $ip = $request->ip();
-        $userAgent = $request->userAgent();
-        $acceptLanguage = $request->header('Accept-Language');
-        $referrer = $request->header('Referer');
-
-        $pendingDispatch = dispatch(
-            new TrackEvent($id, $name, $link, $fullUrl, $ip, $userAgent, $acceptLanguage, $referrer)
+        TrackEvent::dispatch(
+            "$affiliate->id", // Pirsch's API crashes when an integer is passed.
+            $affiliate->name,
+            $affiliate->link,
+            $request->fullUrl(),
+            $request->ip(),
+            $request->userAgent(),
+            $request->header('Accept-Language'),
+            $request->header('Referer')
         );
-
-        // if (! app()->isLocal() && ! app()->runningUnitTests()) {
-        //     $pendingDispatch->afterResponse();
-        // }
     }
 }
