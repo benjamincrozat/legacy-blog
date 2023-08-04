@@ -87,7 +87,7 @@
     @foreach ($post->affiliates as $affiliate)
         <div class="!container content">
             <h3 id="{{ $affiliate->slug }}">
-                <a href="{{ route('affiliate.show', $affiliate) }}" class="!font-semibold">
+                <a href="{{ route('affiliate', $affiliate) }}" class="!font-semibold">
                     {{ $affiliate->name }}
                 </a>
             </h3>
@@ -96,7 +96,7 @@
                 <div class="bg-[#fdfdfe] dark:bg-[#1b2432] mb-8 !mt-4 px-4 py-6 sm:p-8 rounded-xl shadow-xl dark:shadow-none">
                     <div class="not-prose">
                         <div class="flex items-center gap-4">
-                            <a href="{{ route('affiliate.show', $affiliate) }}" class="flex-shrink-0 relative w-[40px] h-[40px] sm:w-[48px] sm:h-[48px]">
+                            <a href="{{ route('affiliate', $affiliate) }}" class="flex-shrink-0 relative w-[40px] h-[40px] sm:w-[48px] sm:h-[48px]">
                                 <img
                                     src="{{ $affiliate->icon }}"
                                     alt="{{ $affiliate->name }}"
@@ -112,7 +112,7 @@
                             </a>
 
                             <div class="font-bold leading-tight sm:text-lg md:text-xl">
-                                {{ $post->user->name }}'s take on <a href="{{ route('affiliate.show', $affiliate) }}" class="underline underline-offset-4">{{ $affiliate->name }}</a>
+                                {{ $post->user->name }}'s take on <a href="{{ route('affiliate', $affiliate) }}" class="underline underline-offset-4">{{ $affiliate->name }}</a>
                             </div>
                         </div>
                     </div>
@@ -166,7 +166,7 @@
                         @endif
                     </div>
 
-                    <a href="{{ route('affiliate.show', $affiliate) }}" class="btn-green mt-7">
+                    <a href="{{ route('affiliate', $affiliate) }}" class="btn-green mt-7">
                         Try {{ $affiliate->name }}
                     </a>
                 </div>
@@ -177,7 +177,7 @@
             @endif
 
             @if ($affiliate->screenshot)
-                <a href="{{ route('affiliate.show', $affiliate) }}">
+                <a href="{{ route('affiliate', $affiliate) }}">
                     <img src="{{ str_replace('/upload', '/upload/dpr_auto,f_auto,q_auto,w_auto', $affiliate->screenshot) }}" alt="{{ $affiliate->name }}" class="w-full rounded-lg shadow-md aspect-video dark:shadow-none" />
                 </a>
             @endif
@@ -203,7 +203,7 @@
                 {!! $affiliate->rendered_cons !!}
             @endif
 
-            <a href="{{ route('affiliate.show', $affiliate) }}" class="mt-8 btn-green">
+            <a href="{{ route('affiliate', $affiliate) }}" class="mt-8 btn-green">
                 Try {{ $affiliate->name }}
             </a>
         </div>

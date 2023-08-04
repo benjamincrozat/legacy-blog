@@ -15,7 +15,7 @@
         </x-form>
 
         <p class="mt-4 text-xs text-center">
-            <a href="{{ route('affiliate.show', 'convertkit') }}" target="_blank" rel="nofollow noopener noreferrer">
+            <a href="{{ route('affiliate', 'convertkit') }}" target="_blank" rel="nofollow noopener noreferrer">
                 Powered by <x-icon-convertkit class="inline h-4 -translate-y-px" />
             </a>
         </p>

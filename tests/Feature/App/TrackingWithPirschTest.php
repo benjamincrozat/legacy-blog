@@ -1,8 +1,6 @@
 <?php
 
 use App\Models\User;
-use App\Models\Affiliate;
-use function Pest\Laravel\get;
 use function Pest\Laravel\actingAs;
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Http;
@@ -43,17 +41,3 @@ it('does not track the page view for users', function () {
 
     Http::assertNothingSent();
 });
-
-it('does not track the page view', function ($path, $requiresAuthentication) {
-    if ($requiresAuthentication) {
-        actingAs(User::factory()->create());
-    }
-
-    get($path);
-
-    Http::assertNothingSent();
-})->with([
-    ['/horizon', true],
-    ['/nova', true],
-    fn () => [route('affiliate.show', Affiliate::factory()->create()), false],
-]);

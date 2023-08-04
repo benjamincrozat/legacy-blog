@@ -10,6 +10,8 @@
         <directory suffix="Test.php">tests/Feature</directory>
     </testsuite>
 
+    <coverage />
+
     <source>
         <include>
             <directory suffix=".php">app</directory>

@@ -23,8 +23,8 @@ class SubscribeController extends Controller
             'email' => $request->email,
             'tags' => [config('services.convertkit.main_tag_id')],
         ])
-            ->throw()
-            ->json();
+        ->throw()
+        ->json();
 
         return back()->with('status', 'Almost there! Check your emails for confirmation.');
     }
