@@ -5,7 +5,7 @@ namespace App\Listeners;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Events\MigrationsEnded;
 
-class DisablePrimaryKeyRequirement
+class EnablePrimaryKeyRequirement
 {
     public function handle(MigrationsEnded $event) : void
     {
