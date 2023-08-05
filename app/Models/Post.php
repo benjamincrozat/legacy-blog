@@ -170,6 +170,7 @@ class Post extends BaseModel implements Feedable
         return self::query()
             ->latest()
             ->withUser()
+            ->limit(10)
             ->get();
     }
 
