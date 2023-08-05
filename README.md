@@ -68,3 +68,7 @@ To run the tests, just execute the following command:
 ```bash
 php artisan test
 ```
+
+## Deployment
+
+Once the tests are green in the CI environment, a webhook from Laravel Forge is called, which triggers the deployment. The blog is hosted on a $6 DigitalOcean VPS. I could stop here, but I'm also using a managed MySQL database for peace of mind. 
