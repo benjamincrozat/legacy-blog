@@ -8,6 +8,7 @@ use Laravel\Nova\Fields\URL;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Line;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Badge;
 use Laravel\Nova\Fields\Stack;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Boolean;
@@ -37,6 +38,7 @@ class Post extends Resource
             ID::make()->sortable(),
 
             BelongsTo::make('Author', 'user', User::class)
+                ->filterable()
                 ->searchable()
                 ->sortable(),
 
@@ -109,9 +111,19 @@ HTML;
                     ->rules('nullable')
                     ->help("This must be a piece of content that teases the article and gives the user a urge to click. For now, it's used for the RSS feed. When left blank, GPT will generate it automatically."),
 
+                Badge::make('Promotes affiliate links')->map([
+                    true => 'success',
+                    false => 'info',
+                ])->labels([
+                    true => 'Yes',
+                    false => 'No',
+                ])
+                    ->hideFromIndex(),
+
                 Boolean::make('Promotes affiliate links')
+                    ->filterable()
                     ->sortable()
-                    ->hideFromIndex()
+                    ->onlyOnForms()
                     ->help('When enabled, this setting will put users in a sales funnel, free of potential distractions.'),
 
                 Date::make('Modified At')
