@@ -8,11 +8,11 @@ use App\Http\Controllers\ShowAffiliateController;
 
 Route::get('/', HomeController::class)->name('home');
 
+Route::get('/recommends/{affiliate:slug}', ShowAffiliateController::class)->name('affiliate.show');
+
 Route::post('/subscribe', SubscribeController::class)->name('subscribe');
 
 Route::view('/phpunit-to-pest', 'tools.phpunit-to-pest')->name('phpunit-to-pest');
-
-Route::get('/recommends/{affiliate:slug}', ShowAffiliateController::class)->name('affiliate.show');
 
 Route::feeds();
 
