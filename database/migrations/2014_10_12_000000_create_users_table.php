@@ -24,7 +24,7 @@ return new class extends Migration
         if (! app()->runningUnitTests()) {
             User::factory()->create([
                 'name' => 'Benjamin Crozat',
-                'email' => 'benjamincrozat@me.com',
+                'email' => 'hello@benjamincrozat.com',
             ]);
         }
     }
