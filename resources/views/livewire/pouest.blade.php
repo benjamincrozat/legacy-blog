@@ -1,6 +1,33 @@
+<?php
+
+use function Livewire\Volt\state;
+use Pest\Drift\Converters\CodeConverterFactory;
+
+state([
+    'code' => '',
+    'result' => '',
+]);
+
+$migrate = function () {
+    $this->validate([
+        'code' => 'required|string|min:3',
+    ]);
+
+    $this->result = (new CodeConverterFactory)
+        ->codeConverter()
+        ->convert($this->code);
+};
+
+$again = function () {
+    $this->code = '';
+    $this->result = '';
+};
+
+?>
+
 <div>
     @if ($result)
-        <pre class="p-4 text-sm rounded bg-gray-950/50"><x-torchlight-code language="php">{!! $result !!}</x-torchlight-code></pre>
+        <pre class="p-4 font-mono text-sm rounded bg-gray-950/50">{{ $result }}</pre>
 
         <button
             class="table px-6 py-3 mx-auto mt-4 font-bold text-white rounded bg-gray-950/75"
@@ -16,10 +43,9 @@
 
             <textarea
                 wire:model="code"
-                placeholder="{!! "&lt;?php\n\nnamespace Tests\Unit;\n\nuse PHPUnit\Framework\TestCase;\n\nclass ExampleTest extends TestCase\n{\n   public function test_true_equals_true()\n   {\n       \$this->assertTrue(true);\n   }\n}" !!}"
+                placeholder="Your PHPUnit tests here…"
                 required
-                class="w-full px-4 py-3 min-h-[350px] md:min-h-[300px] font-mono text-sm bg-transparent border-0 rounded resize-none placeholder-gray-700/50 focus:ring-teal-400 bg-gradient-to-r from-gray-800/30 to-gray-800/50"
-                x-autosize
+                class="w-full px-4 py-3 font-mono text-sm bg-transparent border-0 rounded resize-none placeholder-gray-700/50 focus:ring-teal-400 bg-gradient-to-r from-gray-800/30 to-gray-800/50"
             ></textarea>
 
             <button

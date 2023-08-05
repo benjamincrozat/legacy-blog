@@ -44,8 +44,6 @@
                 data-code="5N2hIsUQsCVX1LQtvPdJ3AGwQZHGxtt5"
                 data-disable-page-views></script>
         @endif
-
-        @stack('head')
     </head>
     <body {{ $attributes->merge(['class' => 'bg-gray-50 font-light', 'x-data' => '{ searching: false }']) }}>
         {{ $slot }}

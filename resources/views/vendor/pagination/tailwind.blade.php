@@ -13,7 +13,7 @@
                     ←
                 </span>
             @else
-                <a href="{{ $paginator->previousPageUrl() }}" rel="prev" class="flex items-center justify-center w-8 h-8 text-blue-400 transition-colors bg-gray-100 rounded-sm dark:bg-gray-800/50 hover:bg-gray-200/50 hover:bg-gray-800 hover:text-blue-500">
+                <a href="{{ $paginator->previousPageUrl() }}" rel="prev" class="flex items-center justify-center w-8 h-8 text-blue-400 transition-colors bg-gray-100 rounded-sm dark:bg-gray-800/50 hover:bg-gray-200/50 hover:dark:bg-gray-800 hover:text-blue-500">
                     ←
                 </a>
             @endif
@@ -32,7 +32,7 @@
                                 <span>{{ $page }}</span>
                             </span>
                         @else
-                            <a href="{{ $url }}" class="flex items-center justify-center w-8 h-8 text-blue-400 transition-colors bg-gray-100 rounded-sm dark:bg-gray-800/50 hover:bg-gray-200/50 hover:bg-gray-800 hover:text-blue-500">
+                            <a href="{{ $url }}" class="flex items-center justify-center w-8 h-8 text-blue-400 transition-colors bg-gray-100 rounded-sm dark:bg-gray-800/50 hover:bg-gray-200/50 hover:dark:bg-gray-800 hover:text-blue-500">
                                 {{ $page }}
                             </a>
                         @endif
@@ -41,7 +41,7 @@
             @endforeach
 
             @if ($paginator->hasMorePages())
-                <a href="{{ $paginator->nextPageUrl() }}" rel="next" class="flex items-center justify-center w-8 h-8 text-blue-400 transition-colors bg-gray-100 rounded-sm dark:bg-gray-800/50 hover:bg-gray-200/50 hover:bg-gray-800 hover:text-blue-500">
+                <a href="{{ $paginator->nextPageUrl() }}" rel="next" class="flex items-center justify-center w-8 h-8 text-blue-400 transition-colors bg-gray-100 rounded-sm dark:bg-gray-800/50 hover:bg-gray-200/50 hover:dark:bg-gray-800 hover:text-blue-500">
                     →
                 </a>
             @else
