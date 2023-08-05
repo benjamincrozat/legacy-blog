@@ -8,6 +8,7 @@ use Illuminate\Support\Arr;
 use Laravel\Scout\Searchable;
 use App\Support\TreeGenerator;
 use Illuminate\Support\Collection;
+use Laravel\Nova\Actions\Actionable;
 use Illuminate\Database\Eloquent\Builder;
 use Algolia\AlgoliaSearch\RecommendClient;
 use Illuminate\View\ComponentAttributeBag;
@@ -20,7 +21,7 @@ use Algolia\AlgoliaSearch\Exceptions\UnreachableException;
 
 class Post extends BaseModel implements Feedable
 {
-    use Searchable;
+    use Actionable, Searchable;
 
     protected $casts = [
         'modified_at' => 'date',

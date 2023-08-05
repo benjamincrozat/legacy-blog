@@ -40,4 +40,8 @@ return [
     'pirsch' => [
         'access_key' => env('PIRSCH_ACCESS_KEY'),
     ],
+
+    'openai' => [
+        'api_key' => env('OPENAI_API_KEY'),
+    ],
 ];

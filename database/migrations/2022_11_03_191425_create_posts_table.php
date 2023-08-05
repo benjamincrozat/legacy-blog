@@ -18,7 +18,7 @@ return new class extends Migration
             $table->text('introduction')->nullable();
             $table->text('content');
             $table->text('conclusion')->nullable();
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->boolean('promotes_affiliate_links')->default(false);
             $table->timestamps();
             $table->datetime('modified_at')->nullable();

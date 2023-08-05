@@ -16,7 +16,9 @@ use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\BelongsToMany;
+use App\Nova\Actions\GeneratePostTeaser;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use App\Nova\Actions\GeneratePostDescription;
 
 class Post extends Resource
 {
@@ -100,7 +102,7 @@ HTML;
             Panel::make('Others', [
                 Textarea::make('Description')
                     ->maxlength(160)
-                    ->rules('required')
+                    ->rules('nullable')
                     ->help('This must be a short description. It will be used by search engines, social media previews, and the homepage of the blog. When left blank, GPT will generate it automatically.'),
 
                 Markdown::make('Teaser')
@@ -137,6 +139,14 @@ HTML;
                 ->searchable(),
 
             HasMany::make('Pins'),
+        ];
+    }
+
+    public function actions(NovaRequest $request) : array
+    {
+        return [
+            (new GeneratePostDescription)->showInline(),
+            (new GeneratePostTeaser)->showInline(),
         ];
     }
 }
