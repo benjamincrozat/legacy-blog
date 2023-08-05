@@ -24,7 +24,7 @@ I feel obligated to mention that my success is certainly not because of my tech 
 
 ## Before you proceed
 
-If you are here to see how I'm doing with SEO, you will be disappointed. SEO is about producing content matching popular search requests. [I wrote about my SEO journey](https://benjamincrozat.com/seo-case-study).
+If you are here to see how I'm doing with SEO, you will be disappointed. SEO is about producing content matching popular search requests. [I wrote about my SEO journey](https://benjamincrozat.com/seo-case-study). As long as your website isn't complete garbage, you can rank your pages and I recommend you to not overthink it.
 
 ## What you will learn
 
