@@ -171,7 +171,7 @@ class Post extends BaseModel implements Feedable
             'id' => route('posts.show', $this),
             'title' => $this->title,
             'summary' => $this->description,
-            'updated' => $this->modified_at ?? $this->created_at,
+            'updated' => $this->created_at,
             'link' => route('posts.show', $this),
             'authorName' => $this->user_name,
         ]);
