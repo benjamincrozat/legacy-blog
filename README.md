@@ -6,13 +6,19 @@
 
 This is the source code of my blog, [benjamincrozat.com](https://benjamincrozat.com). This blog was built with the TALL stack and gets more than **20K visitors per month**.
 
-![CleanShot 2023-08-05 at 08 16 04@2x](https://github.com/benjamincrozat/benjamincrozat.com/assets/3613731/b48b67b1-5da2-4319-941e-e600cc182a5e)
+<figure>
+    <img src="https://github.com/benjamincrozat/benjamincrozat.com/assets/3613731/b48b67b1-5da2-4319-941e-e600cc182a5e" alt="My Pirsch Analytics Dashboard." />
+    <figcaption>My <a href="https://benjamincrozat.com/recommends/pirsch">Pirsch Analytics</a> dashboard. Actually, in the last 30 days, I got more than 25K visits!</figcaption>
+</figure>
 
-My [Pirsch Analytics](https://benjamincrozat.com/recommends/pirsch) dashboard. Actually, in the last 30 days, I got more than 25K visits!
+&nbsp;
 
-![CleanShot 2023-08-05 at 08 15 02@2x](https://github.com/benjamincrozat/benjamincrozat.com/assets/3613731/83c2a06a-305f-485a-bd09-80fe6b8cfeaa)
+<figure>
+    <img src="https://github.com/benjamincrozat/benjamincrozat.com/assets/3613731/83c2a06a-305f-485a-bd09-80fe6b8cfeaa" alt="My Google Search Console." />
+    <figcaption>My Google Search Console. You can see the growth since I launched in September 2022.</figcaption>
+</figure>
 
-My Google Search Console. You can see the growth since I launched in September 2022.
+&nbsp;
 
 I feel obligated to mention that my success is certainly not because of my tech stack. I just wanted to own my piece of real estate on the web. If you also want to create your blog, I don't recommend anything I did. The code is not ideal, and we all have different needs. But if you're curious, there you go, enjoy!
 
@@ -93,5 +99,5 @@ Once the tests are green in the CI environment, a webhook from Laravel Forge is 
 
 Some details about the production environment:
 - I host the blog on a [$6 DigitalOcean VPS](https://benjamincrozat.com/recommends/digitalocean).
-- I could have stopped here, but I'm also using [a managed MySQL database](https://benjamincrozat.com/recommends/digitalocean-managed-mysql-database) for peace of mind.
+- I could have stopped here, but I'm also using [a managed MySQL database](https://benjamincrozat.com/recommends/digitalocean-managed-mysql-database) for frequent automatic backups and not having to deal with anything related to the configuration.
 - I use Sentry to monitor errors.
