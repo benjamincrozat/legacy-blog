@@ -4,11 +4,18 @@
 
 This is the source code of my blog, [benjamincrozat.com](https://benjamincrozat.com). This blog built with the TALL stack gets more than **20K visitors per month**.
 
-That being said, there's nothing fancy, and it's probably not what you should do for yours. But if you're curious, you can check it out.
+That being said, there's nothing fancy, and it's probably not what you should do for yours because the code is far from being as perfect as I want, and we all have different needs. But if you're curious, you can check it out anyway.
 
-## Disclaimer
+## Before you proceed
 
 If you are here to see how I'm doing with SEO, you will be disappointed. SEO is about writing content matching popular search requests. [I wrote about this](https://benjamincrozat.com/seo-case-study).
+
+## What you will learn
+
+This is a small project that I work on alone. That being said, you will be able to learn more about:
+- Simplicity. Most developers underestimate the benefits of simple code.
+- Testing. A crucial part of ensuring everything stays stable.
+- How to use various frontend technologies such as Alpine.js and Tailwind CSS.
 
 ## Requirements
 
@@ -71,4 +78,9 @@ php artisan test
 
 ## Deployment
 
-Once the tests are green in the CI environment, a webhook from Laravel Forge is called, which triggers the deployment. The blog is hosted on a $6 DigitalOcean VPS. I could stop here, but I'm also using a managed MySQL database for peace of mind. 
+Once the tests are green in the CI environment, a webhook from Laravel Forge is called, which triggers the deployment. 
+
+Some details about the production environment:
+- The blog is hosted on a $6 DigitalOcean VPS.
+- I could have stopped here, but I'm also using a managed MySQL database for peace of mind.
+- I use Sentry to monitor errors.
