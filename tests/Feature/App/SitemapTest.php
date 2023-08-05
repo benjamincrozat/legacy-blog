@@ -15,5 +15,5 @@ test('the command generates a sitemap', function () {
         fn ($p) => expect($content)->toContain(route('posts.show', $p))
     );
 
-    expect($content)->toContain(route('phpunit-to-pest'));
+    expect($content)->toContain(route('pouest'));
 });

@@ -4,6 +4,9 @@ use App\Models\User;
 use PHPUnit\Framework\Assert;
 use NunoMaduro\LaravelMojito\ViewAssertion;
 
+// These tests use Laravel Mojito, which allows me to test Blade
+// components in isolation instead of having to hit a route.
+
 beforeEach(function () {
     ViewAssertion::macro('doesNotContain', function (string $string) {
         Assert::assertStringNotContainsString(

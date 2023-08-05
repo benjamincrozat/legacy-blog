@@ -6,7 +6,7 @@ use Livewire\Component;
 use Illuminate\View\View;
 use Pest\Drift\Converters\CodeConverterFactory;
 
-class PhpunitToPest extends Component
+class Pouest extends Component
 {
     public $code = '';
 
@@ -18,7 +18,7 @@ class PhpunitToPest extends Component
 
     public function render() : View
     {
-        return view('livewire.phpunit-to-pest');
+        return view('livewire.pouest');
     }
 
     public function migrate() : void

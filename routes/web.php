@@ -12,7 +12,7 @@ Route::get('/recommends/{affiliate:slug}', ShowAffiliateController::class)->name
 
 Route::post('/subscribe', SubscribeController::class)->name('subscribe');
 
-Route::view('/phpunit-to-pest', 'tools.phpunit-to-pest')->name('phpunit-to-pest');
+Route::view('/phpunit-to-pest', 'pouest')->name('pouest');
 
 Route::feeds();
 

@@ -22,7 +22,7 @@ class SitemapGenerateCommand extends Command
             fn (Post $post) => $sitemap->add(route('posts.show', $post))
         );
 
-        $sitemap->add(route('phpunit-to-pest'));
+        $sitemap->add(route('pouest'));
 
         $sitemap->writeToFile(public_path('/sitemap.xml'));
 

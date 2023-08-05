@@ -24,7 +24,7 @@
                     </div>
                 </x-menu-item>
 
-                <x-menu-item href="{{ route('phpunit-to-pest') }}">
+                <x-menu-item href="{{ route('pouest') }}">
                     <x-icon-pouest class="w-12 h-12 text-white rounded" />
 
                     <div class="leading-tight">

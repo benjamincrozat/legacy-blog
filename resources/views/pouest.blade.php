@@ -12,7 +12,7 @@
 
     <article class="container mt-16">
         <div class="text-center">
-            <a href="{{ route('phpunit-to-pest') }}">
+            <a href="{{ route('pouest') }}">
                 <img src="{{ Vite::asset('resources/img/pouest.png') }}" alt="Instantly migrate PHPUnit tests to Pest" class="inline-block w-16 h-16 mx-auto shadow-lg rounded-2xl" />
             </a>
 
@@ -24,7 +24,7 @@
         </div>
 
         <div class="mt-8 md:mt-16">
-            <livewire:phpunit-to-pest />
+            <livewire:pouest />
         </div>
 
         <h2 class="mt-8 font-bold text-white sm:text-lg md:text-xl">What is Pest?</h2>

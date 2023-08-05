@@ -1,20 +1,22 @@
 <?php
 
 use Livewire\Livewire;
-use App\Http\Livewire\PhpunitToPest;
+use App\Http\Livewire\Pouest;
+use function Pest\Laravel\get;
 
-test('the route works')
-    ->get('/phpunit-to-pest')
-    ->assertOk()
-    ->assertViewIs('tools.phpunit-to-pest')
-    ->assertSeeLivewire('phpunit-to-pest');
+test('the page works', function () {
+    get(route('pouest'))
+        ->assertOk()
+        ->assertViewIs('pouest')
+        ->assertSeeLivewire('pouest');
+});
 
 test('the livewire component works', function () {
-    $component = Livewire::test(PhpunitToPest::class);
+    $component = Livewire::test(Pouest::class);
 
     $component
         ->assertOk()
-        ->assertViewIs('livewire.phpunit-to-pest')
+        ->assertViewIs('livewire.pouest')
         ->assertSet('code', '')
         ->assertSet('result', '')
         ->set('code', '<?php namespace Tests\Unit; use PHPUnit\Framework\TestCase; class ExampleTest extends TestCase { public function test_that_true_is_true(): void { $this->assertTrue(true); } }')
