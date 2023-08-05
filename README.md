@@ -81,6 +81,6 @@ php artisan test
 Once the tests are green in the CI environment, a webhook from Laravel Forge is called, which triggers the deployment. 
 
 Some details about the production environment:
-- The blog is hosted on a $6 DigitalOcean VPS.
+- I host the blog on a $6 DigitalOcean VPS.
 - I could have stopped here, but I'm also using a managed MySQL database for peace of mind.
 - I use Sentry to monitor errors.
