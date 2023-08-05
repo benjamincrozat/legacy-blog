@@ -42,6 +42,13 @@ class User extends Authenticatable
         return $this->hasMany(Post::class);
     }
 
+    public function gravatar() : Attribute
+    {
+        return Attribute::make(
+            fn () => 'https://www.gravatar.com/avatar/' . md5($this->email)
+        )->shouldCache();
+    }
+
     public function renderedDescription() : Attribute
     {
         return Attribute::make(

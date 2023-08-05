@@ -11,7 +11,7 @@
                 {{ $post->title }}
             </h1>
 
-            <img src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}?s=192" width="96" height="96" alt="{{ $post->user->name }}" class="flex-shrink-0 w-16 h-16 -translate-y-px rounded-full sm:w-24 sm:h-24" />
+            <img src="{{ $post->user->gravatar }}?s=192" width="96" height="96" alt="{{ $post->user->name }}" class="flex-shrink-0 w-16 h-16 -translate-y-px rounded-full sm:w-24 sm:h-24" />
         </div>
     @else
         <h1 class="container text-3xl font-thin md:text-5xl dark:text-white">
@@ -20,7 +20,7 @@
 
         @if (empty($barebones))
             <x-posts::metadata
-                :email="$post->user->email"
+                :gravatar="$post->user->gravatar"
                 :name="$post->user->name"
                 :modified-at="$post->modified_at ?? $post->created_at"
                 :twitter-url="$post->user->twitter_url"
@@ -105,7 +105,7 @@
 
                                 <img
                                     loading="lazy"
-                                    src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}"
+                                    src="{{ $post->user->gravatar }}"
                                     alt="{{ $post->user->name }}"
                                     class="absolute z-20 w-2/3 rounded-full -bottom-2 -right-2 ring-4 ring-white dark:ring-gray-800"
                                 />

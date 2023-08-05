@@ -1,6 +1,6 @@
 <div {{ $attributes->merge(['class' => 'text-sm']) }}>
     <a href="{{ $twitterUrl }}" class="font-normal underline"><img
-        src="https://www.gravatar.com/avatar/{{ md5($email) }}?s=40"
+        src="{{ $gravatar }}?s=40"
         width="40"
         height="40"
         alt="{{ $name }}"

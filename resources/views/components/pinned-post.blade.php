@@ -18,7 +18,7 @@
     <div class="flex items-center gap-2 mt-2 text-sm">
         <img
             loading="lazy"
-            src="https://www.gravatar.com/avatar/{{ md5($post->user->email) }}"
+            src="{{ $post->user->gravatar }}"
             width="18"
             height="18"
             alt="{{ $post->user->name }}"
