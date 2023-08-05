@@ -4,6 +4,10 @@
 
 This is the source code of my blog, [benjamincrozat.com](https://benjamincrozat.com). This blog built with the TALL stack gets more than 20K visitors per month. There's nothing fancy, and it's probably not what you should do for yours. But if you're curious, you can check it out.
 
+## Diclaimer
+
+If you are here to see how I'm doing with SEO, you will be disappointed. SEO is about writing content matching popular search requests. [I wrote about this](https://benjamincrozat.com/seo-case-study).
+
 ## Requirements
 
 **This project requires Laravel Nova, which is a paid package. For now, I don't know how to make it optional, but meanwhile, you can just remove it from the dependencies.**
