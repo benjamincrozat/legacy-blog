@@ -76,6 +76,7 @@ HTML;
                         return "<a href=\"$link\" target=\"_blank\" class=\"link-default\">$title</a>";
                     })
                     ->asHtml(),
+
                 Line::make('Slug')->extraClasses('opacity-75 text-xs'),
             ])
                 ->onlyOnIndex(),
@@ -86,10 +87,12 @@ HTML;
                 ->hideFromIndex(),
 
             Markdown::make('Introduction')
-                ->rules('nullable'),
+                ->rules('nullable')
+                ->help('The introduction always comes before the table of contents.'),
 
             Markdown::make('Content')
-                ->rules('nullable'),
+                ->rules('nullable')
+                ->help('The introduction always comes after the table of contents and the image.'),
 
             Markdown::make('Conclusion')
                 ->rules('nullable'),
@@ -97,11 +100,17 @@ HTML;
             Panel::make('Others', [
                 Textarea::make('Description')
                     ->maxlength(160)
-                    ->rules('required'),
+                    ->rules('required')
+                    ->help('This must be a short description. It will be used by search engines, social media previews, and the homepage of the blog. When left blank, GPT will generate it automatically.'),
+
+                Markdown::make('Teaser')
+                    ->rules('nullable')
+                    ->help("This must be a piece of content that teases the article and gives the user a urge to click. For now, it's used for the RSS feed. When left blank, GPT will generate it automatically."),
 
                 Boolean::make('Promotes affiliate links')
                     ->sortable()
-                    ->hideFromIndex(),
+                    ->hideFromIndex()
+                    ->help('When enabled, this setting will put users in a sales funnel, free of potential distractions.'),
 
                 Date::make('Modified At')
                     ->displayUsing(fn () => $this->modified_at?->isoFormat('ll'))

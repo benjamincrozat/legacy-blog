@@ -112,6 +112,13 @@ class Post extends BaseModel implements Feedable
         )->shouldCache();
     }
 
+    public function renderedTeaser() : Attribute
+    {
+        return Attribute::make(
+            fn () => str($this->teaser ?? '')->marxdown()
+        )->shouldCache();
+    }
+
     public function recommendations() : Attribute
     {
         return Attribute::make(function () {
@@ -170,9 +177,8 @@ class Post extends BaseModel implements Feedable
         return FeedItem::create([
             'id' => route('posts.show', $this),
             'title' => $this->title,
-            'summary' => $this->description,
+            'summary' => $this->teaser ?? $this->description,
             'updated' => $this->created_at,
-            'link' => route('posts.show', $this),
             'authorName' => $this->user_name,
         ]);
     }
