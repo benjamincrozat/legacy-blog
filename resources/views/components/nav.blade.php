@@ -81,7 +81,7 @@
                 </x-menu>
             @endauth
 
-            <x-search-btn />
+            <x-search />
         </div>
     @endempty
 </div>

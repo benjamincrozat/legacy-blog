@@ -50,10 +50,6 @@
 
         <x-status />
 
-        @if (Route::is('home') || Route::is('posts.show'))
-            <x-search />
-        @endif
-
         @livewireScripts
     </body>
 </html>
