@@ -7,13 +7,13 @@ use Illuminate\Support\Facades\Http;
 
 class GeneratePostDescription
 {
-    public function generate(Post $post) : Post
+    public function generate(Post $post, string $model = 'gpt-3.5-turbo-16k') : Post
     {
         $response = Http::withToken(config('services.openai.api_key'))
             ->timeout(300)
             ->baseUrl('https://api.openai.com/v1')
             ->post('/chat/completions', [
-                'model' => 'gpt-3.5-turbo-16k',
+                'model' => $model,
                 'messages' => [
                     [
                         'role' => 'user',

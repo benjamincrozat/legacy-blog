@@ -8,11 +8,12 @@ use Laravel\Nova\Actions\Action;
 use Illuminate\Support\Collection;
 use Laravel\Nova\Fields\ActionFields;
 use Illuminate\Queue\InteractsWithQueue;
+use App\Nova\Actions\Traits\ChangesModel;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
 class GeneratePostTeaser extends Action implements ShouldQueue
 {
-    use InteractsWithQueue, Queueable;
+    use ChangesModel, InteractsWithQueue, Queueable;
 
     public $name = 'Generate post teaser';
 
@@ -20,7 +21,7 @@ class GeneratePostTeaser extends Action implements ShouldQueue
     {
         foreach ($posts as $post) {
             try {
-                (new \App\Actions\GeneratePostTeaser)->generate($post);
+                (new \App\Actions\GeneratePostTeaser)->generate($post, $fields->model);
 
                 $this->markAsFinished($post);
             } catch (Exception $e) {
