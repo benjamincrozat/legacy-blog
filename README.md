@@ -30,6 +30,7 @@ If you are here to see how I'm doing with SEO, you will be disappointed. SEO is 
 
 This is a small project that I work on alone. That being said, you will be able to learn more about:
 - Simplicity. Most developers underestimate the benefits of simple code.
+- Integrating AI to speed up your writing.
 - Creating admin pages based on Laravel Nova.
 - Testing. A crucial part of ensuring everything stays stable.
 - How to use various frontend technologies such as Alpine.js and Tailwind CSS.
