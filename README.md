@@ -6,7 +6,7 @@ This is the source code of my blog, [benjamincrozat.com](https://benjamincrozat.
 
 That being said, there's nothing fancy, and it's probably not what you should do for yours. But if you're curious, you can check it out.
 
-## Diclaimer
+## Disclaimer
 
 If you are here to see how I'm doing with SEO, you will be disappointed. SEO is about writing content matching popular search requests. [I wrote about this](https://benjamincrozat.com/seo-case-study).
 
