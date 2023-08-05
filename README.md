@@ -2,7 +2,9 @@
 
 # [benjamincrozat.com](https://benjamincrozat.com)
 
-This is the source code of my blog, [benjamincrozat.com](https://benjamincrozat.com). This blog built with the TALL stack gets more than 20K visitors per month. There's nothing fancy, and it's probably not what you should do for yours. But if you're curious, you can check it out.
+This is the source code of my blog, [benjamincrozat.com](https://benjamincrozat.com). This blog built with the TALL stack gets more than **20K visitors per month**.
+
+That being said, there's nothing fancy, and it's probably not what you should do for yours. But if you're curious, you can check it out.
 
 ## Diclaimer
 
