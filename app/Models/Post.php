@@ -178,7 +178,7 @@ class Post extends BaseModel implements Feedable
         return FeedItem::create([
             'id' => route('posts.show', $this),
             'title' => $this->title,
-            'summary' => $this->teaser ?? $this->description,
+            'summary' => $this->rendered_teaser ?? $this->description,
             'updated' => $this->created_at,
             'link' => route('posts.show', $this),
             'authorName' => $this->user_name,
