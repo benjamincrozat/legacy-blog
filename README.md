@@ -25,8 +25,8 @@ I feel obligated to mention that my relative success is not correlated to my tec
 ## Before you proceed
 
 - **I don't need pull requests.** This is a project I'm working on alone and I only have time for the bad code I write myself.
-- **This also isn't an opportunity for mentoring.** I don't have time for that either. Please try to resolve your issues on your own.
-- **This isn't a reference for SEO.** If you want to rank on Google, write content people search for. [You can learn how I did it there](https://benjamincrozat.com/seo-case-study).
+- **This isn't an opportunity for mentoring.** I don't have time for that either. Please try to resolve your issues on your own.
+- **This isn't a reference for SEO.** If you want to rank on Google, write content people search for and be patient. [You can learn how I did it.](https://benjamincrozat.com/seo-case-study)
 
 ## What you will learn
 
