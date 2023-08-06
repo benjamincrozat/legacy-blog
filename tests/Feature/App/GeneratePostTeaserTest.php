@@ -1,10 +1,10 @@
 <?php
 
 use App\Models\Post;
+use App\Actions\GeneratePostTeaser;
 use Illuminate\Support\Facades\Http;
-use App\Actions\GeneratePostDescription;
 
-it('asks GPT to generate a description for a given post', function () {
+it('asks GPT to generate a teaser for a given post', function () {
     Http::fake([
         'api.openai.com/v1/*' => Http::response([
             'choices' => [['message' => ['content' => 'Lorem ipsum dolor sit amet.']]],
@@ -13,7 +13,7 @@ it('asks GPT to generate a description for a given post', function () {
 
     $post = Post::factory()->create();
 
-    (new GeneratePostDescription)->generate($post);
+    (new GeneratePostTeaser)->generate($post);
 
-    $this->assertEquals('Lorem ipsum dolor sit amet.', $post->description);
+    $this->assertEquals('Lorem ipsum dolor sit amet.', $post->teaser);
 });
