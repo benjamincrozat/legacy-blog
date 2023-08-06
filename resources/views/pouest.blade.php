@@ -13,7 +13,7 @@
     <article class="container mt-16">
         <div class="text-center">
             <a href="{{ route('pouest') }}">
-                <img src="{{ Vite::asset('resources/img/pouest.png') }}" alt="Instantly migrate PHPUnit tests to Pest" class="inline-block w-16 h-16 mx-auto shadow-lg rounded-2xl" />
+                <img src="{{ Vite::asset('resources/img/pouest.jpg') }}" alt="Instantly migrate PHPUnit tests to Pest" class="inline-block w-16 h-16 mx-auto shadow-lg rounded-2xl" />
             </a>
 
             <h1 class="mt-6 text-xl font-bold text-white sm:text-2xl md:text-3xl">
