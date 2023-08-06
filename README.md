@@ -62,7 +62,7 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-Install the dependencies:
+Install the dependencies (if you don't have a Laravel Nova license, switch to the *feature/filament* branch):
 
 ```bash
 composer install
