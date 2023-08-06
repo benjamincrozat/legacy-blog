@@ -28,6 +28,7 @@ class AppServiceProvider extends ServiceProvider
 
         Model::unguard();
 
+        // Marxdown is a named I invented for Markdown with extra features.
         Stringable::macro(
             'marxdown', fn () => (new MarxdownConverter(torchlight: true))->convert($this->value)
         );

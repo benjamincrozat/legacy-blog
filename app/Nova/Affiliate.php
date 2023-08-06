@@ -22,7 +22,7 @@ class Affiliate extends Resource
     public static $title = 'name';
 
     public static $search = [
-        'id', 'name', 'slug', 'link', 'take', 'annual_discount', 'guarantee', 'key_features', 'pros', 'cons',
+        'id', 'name', 'slug', 'link', 'take', 'rating', 'pricing', 'annual_discount', 'guarantee', 'content', 'key_features', 'pros', 'cons', 'highlight_title', 'highlight_text', 'ad_title', 'ad_content',
     ];
 
     public function fields(NovaRequest $request) : array
