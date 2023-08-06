@@ -86,10 +86,12 @@
                     <x-slot name="trigger">Admin</x-slot>
 
                     <x-menu-item href="/horizon">
+                        <x-icon-horizon class="text-[#7746ec] group-hover:text-white duration-500 fill-current w-5 h-5 translate-y-[.5px] -mr-1" />
                         Horizon
                     </x-menu-item>
 
                     <x-menu-item href="/nova">
+                        <x-icon-nova class="w-5 h-5 translate-y-[.5px] -mr-1" />
                         Nova
                     </x-menu-item>
                 </x-menu>
