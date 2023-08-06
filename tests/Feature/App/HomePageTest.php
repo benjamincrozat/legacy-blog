@@ -24,5 +24,5 @@ test('posts are listed', function () {
         ->assertViewIs('home');
 
     expect($response->viewData('posts'))->toBeInstanceOf(LengthAwarePaginator::class);
-    expect($response->viewData('posts'))->toHaveCount(12);
+    expect($response->viewData('posts'))->toHaveCount(16);
 });
