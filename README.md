@@ -8,7 +8,7 @@ This is the source code of my blog, [benjamincrozat.com](https://benjamincrozat.
 
 <figure>
     <img src="https://github.com/benjamincrozat/benjamincrozat.com/assets/3613731/b48b67b1-5da2-4319-941e-e600cc182a5e" alt="My Pirsch Analytics Dashboard." />
-    <figcaption>My <a href="https://benjamincrozat.com/recommends/pirsch">Pirsch Analytics</a> dashboard that is [publicly accessible](https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=today&scale=day).</figcaption>
+    <figcaption>My <a href="https://benjamincrozat.com/recommends/pirsch">Pirsch Analytics</a> dashboard that is <a href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=today&scale=day">publicly accessible</a>.</figcaption>
 </figure>
 
 &nbsp;
