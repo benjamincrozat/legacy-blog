@@ -20,7 +20,7 @@ This is the source code of my blog, [benjamincrozat.com](https://benjamincrozat.
 
 &nbsp;
 
-I feel obligated to mention that my relative success is not correlated to my tech stack. I just want to own my piece of real estate online and do whatever I want with it. If you also want to create your blog, I don't recommend to copy and paste anything I did. The code is not ideal, and we all have different needs. But if you're curious, there you go, enjoy!
+I feel obligated to mention that my relative success is not correlated to my tech stack. I just want to own my piece of real estate online and do whatever I want with it. If you also want to create your blog, I don't recommend to copy and paste anything I did. While the code works for my specific needs, it might not be the ideal solution for everyone. But if you're curious, there you go, enjoy!
 
 ## Before you proceed
 
