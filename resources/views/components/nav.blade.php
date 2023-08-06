@@ -52,6 +52,20 @@
                     </div>
                 </x-menu-item>
 
+                <x-menu-item href="https://smousss.com">
+                    <img src="{{ Vite::asset('resources/img/smousss.jpg') }}" class="w-12 h-12 rounded" />
+
+                    <div class="leading-tight">
+                        <div class="font-medium">
+                            Smousss
+                        </div>
+
+                        <div class="text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">
+                            An AI-powered assistant for Laravel developers.
+                        </div>
+                    </div>
+                </x-menu-item>
+
                 <x-menu-item href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=today&scale=day">
                     <x-menu-item-icon bg-color-class="bg-blue-400" icon="s-chart-bar" />
 

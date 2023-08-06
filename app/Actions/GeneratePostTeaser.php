@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Http;
 
 class GeneratePostTeaser
 {
-    public function generate(Post $post, string $model = 'gpt-3.5-turbo-16k') : Post
+    public function generate(Post $post, string $model = 'gpt-3.5-turbo') : Post
     {
         $response = Http::withToken(config('services.openai.api_key'))
             ->timeout(300)
