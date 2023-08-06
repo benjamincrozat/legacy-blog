@@ -20,11 +20,11 @@ This is the source code of my blog, [benjamincrozat.com](https://benjamincrozat.
 
 &nbsp;
 
-I feel obligated to mention that my success is certainly not because of my tech stack. I just wanted to own my piece of real estate on the web. If you also want to create your blog, I don't recommend anything I did. The code is not ideal, and we all have different needs. But if you're curious, there you go, enjoy!
+I feel obligated to mention that my relative success is not correlated to my tech stack. I just want to own my piece of real estate online and do whatever I want with it. If you also want to create your blog, I don't recommend to copy and paste anything I did. The code is not ideal, and we all have different needs. But if you're curious, there you go, enjoy!
 
 ## Before you proceed
 
-If you are here to see how I'm doing with SEO, you will be disappointed. SEO is about producing content matching popular search requests. [I wrote about my SEO journey](https://benjamincrozat.com/seo-case-study). As long as your website isn't complete garbage, you can rank your pages and I recommend you to not overthink it.
+You will be disappointed if you are here to see how I'm doing with SEO. SEO is about producing content matching popular search requests. [I wrote about my SEO journey](https://benjamincrozat.com/seo-case-study). You can rank your pages as long as your website isn't complete garbage. I recommend you not overthink it.
 
 ## What you will learn
 
@@ -37,7 +37,7 @@ This is a small project that I work on alone. That being said, you will be able 
 
 ## Requirements
 
-**This project requires Laravel Nova, which is a paid package. For now, I don't know how to make it optional, but meanwhile, you can remove it from the dependencies.**
+**This project requires Laravel Nova, which is a paid package. For now, I don't know how to make it optional, but meanwhile, you can switch to the *feature/filament* branch.**
 
 - PHP 8.2+
 - MySQL 8+
