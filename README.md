@@ -24,7 +24,9 @@ I feel obligated to mention that my relative success is not correlated to my tec
 
 ## Before you proceed
 
-You will be disappointed if you are here to see how I'm doing with SEO. SEO is about producing content matching popular search requests. [I wrote about my SEO journey](https://benjamincrozat.com/seo-case-study). You can rank your pages as long as your website isn't complete garbage. I recommend you not overthink it.
+- **I don't need pull requests.** This is a project I'm working on alone and I only have time for the bad code I write myself.
+- **This also isn't an opportunity for mentoring.** I don't have time for that either. Please try to resolve your issues on your own.
+- **This isn't a reference for SEO.** If you want to rank on Google, write content people search for. [You can learn how I did it there](https://benjamincrozat.com/seo-case-study).
 
 ## What you will learn
 
