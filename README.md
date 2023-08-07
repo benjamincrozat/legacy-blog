@@ -30,9 +30,9 @@ I feel obligated to mention that my relative success is not correlated to my tec
 
 ## What you will learn
 
-This is a small project that I work on alone. That being said, you will be able to learn more about:
-- Simplicity. Most developers underestimate the benefits of simple code.
-- Integrating AI to speed up your writing.
+This is a small project. It certainly won't teach you how to maintain apps at huge scales. That being said, you can learn about:
+- Simplicity. Most developers underestimate its benefits.
+- Using the GPT API from OpenAI to create features that were unthinkable not so long ago.
 - Creating admin pages based on Laravel Nova. (I'm working on Filament's integration in the _feature/filament_ branch.)
 - Testing. A crucial part of ensuring everything stays stable. Because I can be forgetful, distracted and overconfident sometimes. These are bi flaws of human beings that can easily be mitigated by machines.
 - How to use various frontend technologies such as Livewire v3 + Volt, Alpine.js, and Tailwind CSS.
