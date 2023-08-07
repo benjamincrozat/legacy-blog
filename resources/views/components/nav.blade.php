@@ -66,7 +66,7 @@
                     </div>
                 </x-menu-item>
 
-                <x-menu-item href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=today&scale=day">
+                <x-menu-item href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=30d&scale=day">
                     <x-menu-item-icon bg-color-class="bg-blue-400" icon="s-chart-bar" />
 
                     <div class="leading-tight">

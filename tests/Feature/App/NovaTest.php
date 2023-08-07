@@ -1,7 +1,6 @@
 <?php
 
 use App\Models\User;
-use function Pest\Laravel\getJson;
 use function Pest\Laravel\actingAs;
 use function Pest\Laravel\assertGuest;
 
@@ -14,8 +13,7 @@ test('nova works for users', function () {
 });
 
 test('nova is forbidden to guests', function () {
-    assertGuest();
-
-    getJson('/nova')
+    assertGuest()
+        ->getJson('/nova')
         ->assertUnauthorized();
 });
