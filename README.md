@@ -34,7 +34,7 @@ This is a small project. It certainly won't teach you how to maintain apps at hu
 - Simplicity. Most developers underestimate its benefits.
 - Using the GPT API from OpenAI to create features that were unthinkable not so long ago.
 - Creating admin pages based on Laravel Nova. (I'm working on Filament's integration in the _feature/filament_ branch.)
-- Testing. A crucial part of ensuring everything stays stable. Because I can be forgetful, distracted and overconfident sometimes. These are bi flaws of human beings that can easily be mitigated by machines.
+- Testing. A crucial part of ensuring everything stays stable. Because I can be forgetful, distracted and overconfident sometimes. These are flaws of human beings that can easily be mitigated by machines.
 - How to use various frontend technologies such as Livewire v3 + Volt, Alpine.js, and Tailwind CSS.
 - But you will also learn what you should avoid. This codebase is far from what I consider perfect.
 
