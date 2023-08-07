@@ -25,8 +25,8 @@ I feel obligated to mention that my relative success is not correlated to my tec
 ## Before you proceed
 
 - **I don't need pull requests.** This is a project I'm working on alone, and I only have time for the bad code I write myself. 😅
-- **This isn't an opportunity for mentoring.** I don't have time for that either. Please try to resolve your issues on your own.
-- **This isn't a reference for SEO.** If you want to rank on Google, write content people search for and be patient. [You can learn how I did it.](https://benjamincrozat.com/seo-case-study)
+- **This isn't an opportunity for mentoring.** Please try to resolve your issues on your own. If you tried your hardest, then I'm completely open to chatting on [Twitter](https://twitter.com/benjamincrozat)! Also, feedback is also welcome (but useful feedback, not something like "whAt aBoUt SrP DudE?"
+- **This isn't a reference for SEO.** If you want to rank on Google, **write content people search for** and **BE PATIENT**. [I actually wrote about my journey on the blog.](https://benjamincrozat.com/seo-case-study)
 
 ## What you will learn
 
@@ -34,7 +34,7 @@ This is a small project that I work on alone. That being said, you will be able 
 - Simplicity. Most developers underestimate the benefits of simple code.
 - Integrating AI to speed up your writing.
 - Creating admin pages based on Laravel Nova. (I'm working on Filament's integration in the _feature/filament_ branch.)
-- Testing. A crucial part of ensuring everything stays stable.
+- Testing. A crucial part of ensuring everything stays stable. Because I can be forgetful, distracted and overconfident sometimes. These are bi flaws of human beings that can easily be mitigated by machines.
 - How to use various frontend technologies such as Livewire v3 + Volt, Alpine.js, and Tailwind CSS.
 - But you will also learn what you should avoid. This codebase is far from what I consider perfect.
 
@@ -47,7 +47,7 @@ This is a small project that I work on alone. That being said, you will be able 
 
 ## Installation
 
-I assume you are using Laravel Valet. But you can run it in whichever environment you want.
+The instructions below have been written assuming that you are using Laravel Valet. But you can the project in whichever environment you want (Herd, Docker with Laravel Sail, Laragon, etc.).
 
 Clone the repository and cd into it:
 
