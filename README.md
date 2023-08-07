@@ -24,7 +24,7 @@ I feel obligated to mention that my relative success is not correlated to my tec
 
 ## Before you proceed
 
-- **I don't need pull requests.** This is a project I'm working on alone and I only have time for the bad code I write myself.
+- **I don't need pull requests.** This is a project I'm working on alone, and I only have time for the bad code I write myself. 😅
 - **This isn't an opportunity for mentoring.** I don't have time for that either. Please try to resolve your issues on your own.
 - **This isn't a reference for SEO.** If you want to rank on Google, write content people search for and be patient. [You can learn how I did it.](https://benjamincrozat.com/seo-case-study)
 
@@ -33,9 +33,9 @@ I feel obligated to mention that my relative success is not correlated to my tec
 This is a small project that I work on alone. That being said, you will be able to learn more about:
 - Simplicity. Most developers underestimate the benefits of simple code.
 - Integrating AI to speed up your writing.
-- Creating admin pages based on Laravel Nova.
+- Creating admin pages based on Laravel Nova. (I'm working on Filament's integration in the _feature/filament_ branch.)
 - Testing. A crucial part of ensuring everything stays stable.
-- How to use various frontend technologies such as Livewire, Alpine.js, and Tailwind CSS.
+- How to use various frontend technologies such as Livewire v3 + Volt, Alpine.js, and Tailwind CSS.
 - But you will also learn what you should avoid. This codebase is far from what I consider perfect.
 
 ## Requirements
