@@ -1,20 +1,20 @@
 [![Laravel Forge Site Deployment Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fforge.laravel.com%2Fsite-badges%2F853f706f-237e-49ce-9812-7d452d57c0bb%3Fdate%3D1%26commit%3D1&style=for-the-badge)](https://forge.laravel.com)
 
-<img src="https://github.com/benjamincrozat/benjamincrozat.com/assets/3613731/af6aaf53-a7f6-45fd-ab3a-114b862f4a1a" width="64" height="64" alt="The logo of the blog of Benjamin Crozat." />
+<img src="https://github.com/benjamincrozat/benjamincrozat.com/assets/3613731/d80fbb79-7de6-4b2d-ab62-602890c6aa82" width="64" height="64" alt="The logo of the blog of Benjamin Crozat." />
 
 # [benjamincrozat.com](https://benjamincrozat.com)
 
 This is the source code of my blog, [benjamincrozat.com](https://benjamincrozat.com). This blog was built with the TALL stack and gets more than **20K visitors per month**.
 
 <figure>
-    <img src="https://github.com/benjamincrozat/benjamincrozat.com/assets/3613731/b48b67b1-5da2-4319-941e-e600cc182a5e" alt="My Pirsch Analytics Dashboard." />
+    <img src="https://github.com/benjamincrozat/benjamincrozat.com/assets/3613731/0d631e69-131b-49c9-b015-5820fa02a459" alt="My Pirsch Analytics Dashboard." />
     <figcaption>My <a href="https://benjamincrozat.com/recommends/pirsch">Pirsch Analytics</a> dashboard that is <a href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=30d&scale=day">publicly accessible</a>.</figcaption>
 </figure>
 
 &nbsp;
 
 <figure>
-    <img src="https://github.com/benjamincrozat/benjamincrozat.com/assets/3613731/83c2a06a-305f-485a-bd09-80fe6b8cfeaa" alt="My Google Search Console." />
+    <img src="https://github.com/benjamincrozat/benjamincrozat.com/assets/3613731/452bea4e-e9e5-47bc-8624-31d56deb6c49" alt="My Google Search Console." />
     <figcaption>My Google Search Console. You can see the growth since I launched in September 2022.</figcaption>
 </figure>
 
