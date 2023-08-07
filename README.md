@@ -25,7 +25,7 @@ I feel obligated to mention that my relative success is not correlated to my tec
 ## Before you proceed
 
 - **I don't need pull requests.** This is a project I'm working on alone, and I only have time for the bad code I write myself. 😅
-- **This isn't an opportunity for mentoring.** Please try to resolve your issues on your own. If you tried your hardest, then I'm completely open to chatting on [Twitter](https://twitter.com/benjamincrozat)! Also, feedback is also welcome (but useful feedback, not something like "whAt aBoUt SrP DudE?"
+- **This isn't an opportunity for mentoring.** Please try to resolve your issues on your own. If you tried your hardest, then I'm completely open to chatting on [Twitter](https://twitter.com/benjamincrozat)! Also, feedback is welcome (but useful feedback, not something like "whAt aBoUt SrP DudE?"
 - **This isn't a reference for SEO.** If you want to rank on Google, **write content people search for** and **BE PATIENT**. [I actually wrote about my journey on the blog.](https://benjamincrozat.com/seo-case-study)
 
 ## What you will learn
