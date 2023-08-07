@@ -35,7 +35,7 @@ This is a small project that I work on alone. That being said, you will be able 
 - Integrating AI to speed up your writing.
 - Creating admin pages based on Laravel Nova.
 - Testing. A crucial part of ensuring everything stays stable.
-- How to use various frontend technologies such as Alpine.js and Tailwind CSS.
+- How to use various frontend technologies such as Livewire, Alpine.js, and Tailwind CSS.
 - But you will also learn what you should avoid. This codebase is far from what I consider perfect.
 
 ## Requirements
