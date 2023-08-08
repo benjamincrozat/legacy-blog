@@ -101,7 +101,7 @@ describe('HasRecommendations trait', function () {
                 'maxRecommendations' => 10,
             ]])
             ->andReturn(['results' => [[
-                'hits' => array_map(fn ($id) => ['objectID' => $id], range(1, 10)),
+                'hits' => array_map(fn ($id) => ['objectID' => $id], range($post->id + 1, $post->id + 10)),
             ]]])
             ->once();
 
