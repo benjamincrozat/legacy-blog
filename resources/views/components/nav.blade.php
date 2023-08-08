@@ -66,6 +66,20 @@
                     </div>
                 </x-menu-item>
 
+                <x-menu-item href="https://github.com/benjamincrozat/benjamincrozat.com">
+                    <x-menu-item-icon bg-color-class="bg-orange-400" icon="s-code-bracket" />
+
+                    <div class="leading-tight">
+                        <div class="font-medium">
+                            The blog's source code
+                        </div>
+
+                        <div class="text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">
+                            This blog gets more than 20K visitors per month, and you can freely see how it's built.
+                        </div>
+                    </div>
+                </x-menu-item>
+
                 <x-menu-item href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=30d&scale=day">
                     <x-menu-item-icon bg-color-class="bg-blue-400" icon="s-chart-bar" />
 
