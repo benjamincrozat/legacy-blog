@@ -32,7 +32,7 @@ trait HasRecommendations
                     Arr::pluck($recommendations['results'][0]['hits'], 'objectID')
                 )->get();
             } catch (NotFoundException|UnreachableException $e) {
-                return [];
+                return collect();
             }
         })->shouldCache();
     }
