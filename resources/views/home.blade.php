@@ -49,6 +49,20 @@
         <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mt-8 md:mt-16 mx-auto w-[100px]"></div>
     @endif
 
+    @if ($popular->isNotEmpty())
+        <section class="container lg:max-w-[1024px] mt-16">
+            <div class="px-4 text-xl font-semibold text-center sm:px-0">
+                Popular
+            </div>
+
+            <div class="grid gap-4 mt-8 md:grid-cols-2">
+                @foreach ($popular as $post)
+                    <x-post :post="$post" />
+                @endforeach
+            </div>
+        </section>
+    @endif
+
     <section class="container lg:max-w-[1024px] mt-16">
         <div class="px-4 text-xl font-semibold text-center sm:px-0">
             @if ($posts->onFirstPage())

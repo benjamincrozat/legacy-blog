@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pin;
-use App\Models\Posts\Post;
 use Illuminate\View\View;
+use App\Models\Posts\Post;
 
 class HomeController extends Controller
 {
@@ -12,10 +12,16 @@ class HomeController extends Controller
     {
         $pins = Pin::with('post.user')->latest()->limit(4)->get();
 
+        $popular = Post::with('user')
+            ->where('sessions', '>', 0)
+            ->orderByDesc('sessions')
+            ->limit(6)
+            ->get();
+
         $posts = Post::with('user')
             ->latest()
             ->paginate(perPage: 16);
 
-        return view('home', compact('pins', 'posts'));
+        return view('home', compact('pins', 'popular', 'posts'));
     }
 }
