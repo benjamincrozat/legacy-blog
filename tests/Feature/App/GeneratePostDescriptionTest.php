@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Post;
+use App\Models\Posts\Post;
 use Illuminate\Support\Facades\Http;
 use App\Actions\GeneratePostDescription;
 

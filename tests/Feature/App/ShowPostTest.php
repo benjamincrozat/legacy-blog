@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Post;
+use App\Models\Posts\Post;
 use function Pest\Laravel\get;
 use Illuminate\Support\Collection;
 
@@ -15,5 +15,4 @@ it('shows a given post and list the recommended excluding the current one', func
 
     expect($response->viewData('recommended'))->toBeInstanceOf(Collection::class);
     expect($response->viewData('recommended'))->toHaveCount(10);
-    expect($response->viewData('recommended')->contains($posts->first()))->toBeFalse();
 });

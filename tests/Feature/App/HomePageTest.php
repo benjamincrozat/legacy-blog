@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Post;
+use App\Models\Posts\Post;
 use function Pest\Laravel\get;
 use Illuminate\Support\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;

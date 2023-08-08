@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Post;
+use App\Models\Posts\Post;
 use App\Actions\GeneratePostTeaser;
 use Illuminate\Support\Facades\Http;
 

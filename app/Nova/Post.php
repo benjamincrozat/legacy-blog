@@ -23,7 +23,7 @@ use App\Nova\Actions\GeneratePostDescription;
 
 class Post extends Resource
 {
-    public static $model = \App\Models\Post::class;
+    public static $model = \App\Models\Posts\Post::class;
 
     public static $title = 'title';
 

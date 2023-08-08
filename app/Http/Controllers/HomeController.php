@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pin;
-use App\Models\Post;
+use App\Models\Posts\Post;
 use Illuminate\View\View;
 
 class HomeController extends Controller

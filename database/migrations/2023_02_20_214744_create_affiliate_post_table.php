@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Post;
+use App\Models\Posts\Post;
 use App\Models\Affiliate;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;

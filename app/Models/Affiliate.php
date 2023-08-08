@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Posts\Post;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Posts\Post;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Pin extends BaseModel

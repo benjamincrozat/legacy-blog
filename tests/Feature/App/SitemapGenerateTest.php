@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Post;
+use App\Models\Posts\Post;
 use Illuminate\Support\Facades\Artisan;
 use App\Console\Commands\SitemapGenerateCommand;
 
