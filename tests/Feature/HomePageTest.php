@@ -16,6 +16,17 @@ test('pins are listed', function () {
     expect($response->viewData('pins'))->toHaveCount(4);
 });
 
+test('popular posts are listed', function () {
+    Post::factory(10)->pinned()->create();
+
+    $response = get(route('home'))
+        ->assertOk()
+        ->assertViewIs('home');
+
+    expect($response->viewData('popular'))->toBeInstanceOf(Collection::class);
+    expect($response->viewData('popular'))->toHaveCount(6);
+});
+
 test('posts are listed', function () {
     Post::factory(30)->create();
 
