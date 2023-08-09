@@ -12,86 +12,27 @@
 
                 <x-menu-item href="https://benjamincrozat.com/best-web-development-tools">
                     <x-menu-item-icon bg-color-class="bg-emerald-400" icon="s-wrench-screwdriver" />
-
-                    <div class="leading-tight">
-                        <div class="font-medium">
-                            The tools I use
-                        </div>
-
-                        <div class="text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">
-                            Here are the best free and paid tools I use in 2023 to do my job.
-                        </div>
-                    </div>
+                    See all the tools I use as a developer
                 </x-menu-item>
 
                 <x-menu-item href="{{ route('pouest') }}">
-                    <x-icon-pouest class="w-12 h-12 text-white rounded" />
-
-                    <div class="leading-tight">
-                        <div class="font-medium">
-                            Pouest
-                        </div>
-
-                        <div class="text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">
-                            Instantly migrate your tests to Pest for free.
-                        </div>
-                    </div>
+                    <x-icon-pouest class="w-8 h-8 text-white rounded md:w-12 md:h-12" />
+                    Migrate to Pest in seconds
                 </x-menu-item>
 
                 <x-menu-item href="https://superchargedlaravel.com">
                     <x-menu-item-icon bg-color-class="bg-gray-900" icon-color-class="text-yellow-400" icon="s-bolt" />
-
-                    <div class="leading-tight">
-                        <div class="font-medium">
-                            Supercharged Laravel
-                        </div>
-
-                        <div class="text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">
-                            Learn how to generate production-ready Laravel code faster, and be your company's hero.
-                        </div>
-                    </div>
-                </x-menu-item>
-
-                <x-menu-item href="https://smousss.com">
-                    <img src="{{ Vite::asset('resources/img/smousss.jpg') }}" class="w-12 h-12 rounded" />
-
-                    <div class="leading-tight">
-                        <div class="font-medium">
-                            Smousss
-                        </div>
-
-                        <div class="text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">
-                            An AI-powered assistant for Laravel developers.
-                        </div>
-                    </div>
+                    Generate Laravel code with ChatGPT
                 </x-menu-item>
 
                 <x-menu-item href="https://github.com/benjamincrozat/benjamincrozat.com">
                     <x-menu-item-icon bg-color-class="bg-orange-400" icon="s-code-bracket" />
-
-                    <div class="leading-tight">
-                        <div class="font-medium">
-                            The blog's source code
-                        </div>
-
-                        <div class="text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">
-                            This blog gets more than 20K visitors per month, and you can freely see how it's built.
-                        </div>
-                    </div>
+                    Hack in my blog's source code
                 </x-menu-item>
 
                 <x-menu-item href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=30d&scale=day">
                     <x-menu-item-icon bg-color-class="bg-blue-400" icon="s-chart-bar" />
-
-                    <div class="leading-tight">
-                        <div class="font-medium">
-                            My blog's live analytics dashboard
-                        </div>
-
-                        <div class="text-sm text-gray-500 duration-500 group-hover:text-indigo-100 dark:group-hover:text-indigo-300">
-                            Curious? See the growth of my blog for yourself.
-                        </div>
-                    </div>
+                    See my blog's live analytics dashboard
                 </x-menu-item>
             </x-menu>
 
