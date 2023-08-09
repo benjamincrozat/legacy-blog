@@ -19,13 +19,13 @@ beforeEach(function () {
 
 it('does not display the admin menu to guests', function () {
     $this
-        ->assertView('components.nav', ['attributes' => new ComponentAttributeBag])
+        ->assertView('components.navigation', ['attributes' => new ComponentAttributeBag])
         ->doesNotContain('Admin');
 });
 
 it('displays the admin menu to users', function () {
     $this
         ->actingAs(User::factory()->create())
-        ->assertView('components.nav', ['attributes' => new ComponentAttributeBag])
+        ->assertView('components.navigation', ['attributes' => new ComponentAttributeBag])
         ->contains('Admin');
 });

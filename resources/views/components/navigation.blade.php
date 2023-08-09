@@ -1,9 +1,8 @@
-@empty($funnel)
-    <x-announcement />
-@endempty
-
 <div {{ $attributes->merge(['class' => 'container flex items-center justify-between relative sm:static text-sm sm:text-base'])}}>
-    <x-logo />
+    <a href="{{ route('home') }}">
+        <span class="sr-only">Benjamin Crozat</span>
+        <x-icon-logo class="w-8 h-8 text-black fill-current dark:text-white md:w-10 md:h-10" />
+    </a>
 
     @empty($funnel)
         <div class="flex items-center gap-6 md:gap-8">

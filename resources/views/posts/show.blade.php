@@ -2,13 +2,9 @@
     :title="$post->title"
     :description="$post->description"
     :image="$post->image"
+    :funnel="$post->promotes_affiliate_links"
     class="text-gray-600 dark:bg-gray-900 dark:text-gray-300"
 >
-    <x-nav
-        :funnel="$post->promotes_affiliate_links"
-        class="container mt-6"
-    />
-
     <x-posts::breadcrumb
         :promotes-affiliate-links="! $post->promotes_affiliate_links"
         class="container mt-10 sm:mt-16"

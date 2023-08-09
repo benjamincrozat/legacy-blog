@@ -46,6 +46,18 @@
         @endif
     </head>
     <body {{ $attributes->merge(['class' => 'bg-gray-50 font-light']) }}>
+        @if (empty($funnel) && (Route::is('home') || Route::is('posts.show')))
+            <x-announcement>
+                I'm writing an ebook teaching how to generate accurate Laravel code using ChatGPT and be more productive.
+
+                <x-slot name="cta">
+                    Get 3 chapters for free
+                </x-slot>
+            </x-announcement>
+
+            <x-navigation class="container mt-6" />
+        @endif
+
         {{ $slot }}
 
         <x-status />

@@ -3,8 +3,6 @@
     description="Have you ever had a question about the art of crafting web applications with PHP, Laravel and its ecosystem? This is the best blog to find your answer."
     class="text-gray-600 dark:bg-gray-900 dark:text-gray-300"
 >
-    <x-nav class="container mt-6" />
-
     @if ($posts->onFirstPage())
         @if ($pins->isNotEmpty())
             <section class="md:container md:max-w-[1024px] mt-10 md:mt-16">

@@ -1,4 +1,4 @@
-@if (! Route::is('consulting.cto') && (session('status') || request('convertkit')))
+@if (session('status') || request('convertkit'))
     <div
         {{ $attributes->merge([
             'class' => 'fixed bottom-0 left-0 right-0 z-10',
@@ -9,14 +9,14 @@
         ]) }}
     >
         <div class="container mb-4">
-            <div class="bg-gray-800 flex items-center justify-between gap-5 px-5 py-4 rounded-lg shadow-lg text-white">
-                <p>
+            <div class="flex items-center justify-between gap-5 px-5 py-4 text-white bg-gray-800 rounded-lg shadow-lg">
+                <div>
                     @if ('confirmed' === request('convertkit'))
                         You're all set! Thank you for subscribing!
                     @else
                         {{ session('status') }}
                     @endif
-                </p>
+                </div>
 
                 <button class="text-indigo-400" @click="open = false">
                     <span class="sr-only">Close</span>
