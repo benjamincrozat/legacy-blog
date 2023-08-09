@@ -16,4 +16,5 @@ Route::view('/phpunit-to-pest', 'pouest')->name('pouest');
 
 Route::feeds();
 
+// This is a wildcard route, so it should come last.
 Route::get('/{post:slug}', ShowPostController::class)->name('posts.show');

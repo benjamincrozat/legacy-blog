@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\Posts\Post;
 use App\Models\Affiliate;
+use App\Models\Posts\Post;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;

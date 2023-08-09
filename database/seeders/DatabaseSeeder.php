@@ -3,9 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\Pin;
-use App\Models\Posts\Post;
 use App\Models\Redirect;
 use App\Models\Affiliate;
+use App\Models\Posts\Post;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
