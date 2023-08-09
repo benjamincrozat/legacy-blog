@@ -5,8 +5,7 @@ use function Pest\Laravel\artisan;
 use Illuminate\Support\Facades\Http;
 use App\Console\Commands\AnalyticsFetchCommand;
 
-// This test also implicitly tests the App\Actions\FetchSessionsFromLastWeekForPath class.
-test('commands fetches sessions from last week for a given path', function () {
+test('the command updates posts with new sessions numbers', function () {
     Http::fake([
         'api.pirsch.io/api/v1/token*' => Http::response(['access_token' => 'foo']),
         'api.pirsch.io/api/v1/statistics/page*' => Http::response([['sessions' => 123]]),
@@ -14,7 +13,9 @@ test('commands fetches sessions from last week for a given path', function () {
 
     $posts = Post::factory(10)->create();
 
-    artisan(AnalyticsFetchCommand::class);
+    artisan(AnalyticsFetchCommand::class)
+        ->expectsOutput('Fresh analytics data has been fetched.')
+        ->assertExitCode(0);
 
     $posts->each(
         fn (Post $post) => expect($post->fresh()->sessions)->toEqual(123)

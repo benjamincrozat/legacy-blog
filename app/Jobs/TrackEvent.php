@@ -13,9 +13,6 @@ class TrackEvent implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    /**
-     * Create a new job instance.
-     */
     public function __construct(
         public string $id,
         public string $name,
@@ -28,9 +25,6 @@ class TrackEvent implements ShouldQueue
     ) {
     }
 
-    /**
-     * Execute the job.
-     */
     public function handle() : void
     {
         Http::withToken(config('services.pirsch.access_key'))

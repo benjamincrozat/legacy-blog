@@ -2,10 +2,8 @@
 
 use App\Models\User;
 use PHPUnit\Framework\Assert;
+use Illuminate\View\ComponentAttributeBag;
 use NunoMaduro\LaravelMojito\ViewAssertion;
-
-// These tests use Laravel Mojito, which allows me to test Blade
-// components in isolation instead of having to hit a route.
 
 beforeEach(function () {
     ViewAssertion::macro('doesNotContain', function (string $string) {
@@ -21,13 +19,13 @@ beforeEach(function () {
 
 it('does not display the admin menu to guests', function () {
     $this
-        ->assertView('components.nav', ['attributes' => collect()])
+        ->assertView('components.nav', ['attributes' => new ComponentAttributeBag])
         ->doesNotContain('Admin');
 });
 
 it('displays the admin menu to users', function () {
     $this
         ->actingAs(User::factory()->create())
-        ->assertView('components.nav', ['attributes' => collect()])
+        ->assertView('components.nav', ['attributes' => new ComponentAttributeBag])
         ->contains('Admin');
 });

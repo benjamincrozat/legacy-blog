@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use App\Models\Redirect;
 use Illuminate\Http\Request;
 
-class RedirectIfExists
+class ApplyRedirectionRule
 {
     public function handle(Request $request, \Closure $next) : mixed
     {

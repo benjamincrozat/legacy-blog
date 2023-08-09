@@ -5,7 +5,7 @@ namespace App\Actions;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Client\PendingRequest;
 
-class FetchSessionsFromLastWeekForPath
+class FetchSessionsForPath
 {
     public function fetch(string $path) : int
     {

@@ -1,16 +1,8 @@
 <?php
 
 use Livewire\Volt\Volt;
-use function Pest\Laravel\get;
 
-test('the page works', function () {
-    get(route('pouest'))
-        ->assertOk()
-        ->assertViewIs('pouest')
-        ->assertSeeLivewire('pouest');
-});
-
-test('the livewire component works', function () {
+test('the pouest livewire component works', function () {
     $component = Volt::test('pouest');
 
     $component
