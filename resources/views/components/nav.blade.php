@@ -37,8 +37,11 @@
             </x-menu>
 
             @auth
-                <x-menu class="sm:!w-[200px] md:!w-[250px] lg:!w-[300px]">
-                    <x-slot name="trigger">Admin</x-slot>
+                <x-menu :hide-icon="true" class="sm:!w-[200px] md:!w-[250px] lg:!w-[300px]">
+                    <x-slot name="trigger">
+                        <span class="sr-only">Admin</span>
+                        <x-heroicon-o-wrench-screwdriver class="w-4 h-4 md:w-5 md:h-5" />
+                    </x-slot>
 
                     <x-menu-item href="/horizon">
                         <x-icon-horizon class="text-[#7746ec] group-hover:text-white duration-500 fill-current w-5 h-5 translate-y-[.5px] -mr-1" />
@@ -51,8 +54,6 @@
                     </x-menu-item>
                 </x-menu>
             @endauth
-
-            <x-search />
         </div>
     @endempty
 </div>

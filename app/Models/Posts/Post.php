@@ -14,11 +14,10 @@ use App\Models\Posts\Concerns\HasRelationships;
 use App\Models\Posts\Concerns\HasRecommendations;
 use App\Models\Posts\Concerns\PresentsAttributes;
 use Illuminate\Database\Eloquent\Casts\Attribute;
-use App\Models\Posts\Concerns\HasSearchableFields;
 
 class Post extends BaseModel implements Feedable
 {
-    use Actionable, CreatesRedirects, HasFeedItems, HasLocalScopes, HasRecommendations, HasRelationships, HasSearchableFields, PresentsAttributes;
+    use Actionable, CreatesRedirects, HasFeedItems, HasLocalScopes, HasRecommendations, HasRelationships, PresentsAttributes;
 
     protected $casts = [
         'modified_at' => 'date',

@@ -10,8 +10,8 @@ dataset('posts', [
 ]);
 
 it('requests ten recommendations to Algolia and excludes the current post from recommendations', function (Collection $posts) {
-    config()->set('scout.algolia.id', 'foo');
-    config()->set('scout.algolia.secret', 'bar');
+    config()->set('services.algolia.id', 'foo');
+    config()->set('services.algolia.secret', 'bar');
 
     $post = $posts->first();
 

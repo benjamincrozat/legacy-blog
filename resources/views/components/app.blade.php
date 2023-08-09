@@ -45,7 +45,7 @@
                 data-disable-page-views></script>
         @endif
     </head>
-    <body {{ $attributes->merge(['class' => 'bg-gray-50 font-light', 'x-data' => '{ searching: false }']) }}>
+    <body {{ $attributes->merge(['class' => 'bg-gray-50 font-light']) }}>
         {{ $slot }}
 
         <x-status />

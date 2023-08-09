@@ -15,7 +15,6 @@
         "laravel/horizon": "^5.19",
         "laravel/nova": "^4.26",
         "laravel/prompts": "^0.1.1",
-        "laravel/scout": "^9.8",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.0@beta",
         "livewire/volt": "^1.0@beta",
