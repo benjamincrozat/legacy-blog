@@ -54,9 +54,9 @@
                     Get 3 chapters for free
                 </x-slot>
             </x-announcement>
-
-            <x-navigation class="container mt-6" />
         @endif
+
+        <x-navigation :funnel="$funnel" class="container mt-6" />
 
         {{ $slot }}
 
