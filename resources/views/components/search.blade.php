@@ -2,7 +2,7 @@
     'class' => 'flex items-center gap-2 transition-colors group hover:text-indigo-400',
 ]) }} @click="searching = ! searching">
     <span class="sr-only">Search</span>
-    <x-heroicon-s-magnifying-glass class="flex-shrink-0 w-4 h-4" />
+    <x-heroicon-s-magnifying-glass class="flex-shrink-0 w-4 h-4 md:w-5 md:h-5" />
 </button>
 
 @if (Route::is('home') || Route::is('posts.show'))
