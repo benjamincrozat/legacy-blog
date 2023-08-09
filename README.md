@@ -47,7 +47,7 @@ This is a small project. It certainly won't teach you how to maintain apps at hu
 
 ## Installation
 
-The instructions below have been written assuming that you are using Laravel Valet. But you can the project in whichever environment you want (Herd, Docker with Laravel Sail, Laragon, etc.).
+The instructions below have been written assuming that you are using Laravel Valet. But you can run the project in whichever environment you want (Herd, Docker with Laravel Sail, Laragon, etc.).
 
 Clone the repository and cd into it:
 
