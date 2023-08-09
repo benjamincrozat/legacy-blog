@@ -51,7 +51,17 @@
                         <x-icon-nova class="w-5 h-5 translate-y-[.5px] -mr-1" />
                         Nova
                     </x-menu-item>
+
+                    <x-menu-divider />
+
+                    {{-- This button submits the form below. There's no JavaScript involved. How crazy is that? --}}
+                    <x-menu-item form="logout" class="hover:!bg-red-400">
+                        <x-heroicon-s-arrow-left-on-rectangle class="w-5 h-5 translate-y-[.5px] -mr-1" />
+                        Log out
+                    </x-menu-item>
                 </x-menu>
+
+                <form method="POST" action="{{ route('logout') }}" id="logout">@csrf</form>
             @endauth
         </div>
     @endempty

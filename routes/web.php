@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ShowPostController;
 use App\Http\Controllers\SubscribeController;
 use App\Http\Controllers\ShowAffiliateController;
@@ -15,6 +16,8 @@ Route::post('/subscribe', SubscribeController::class)->name('subscribe');
 Route::view('/phpunit-to-pest', 'pouest')->name('pouest');
 
 Route::feeds();
+
+Route::post('/logout', LogoutController::class)->name('logout');
 
 // This is a wildcard route, so it should come last.
 Route::get('/{post:slug}', ShowPostController::class)->name('posts.show');
