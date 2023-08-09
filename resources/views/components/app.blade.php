@@ -56,7 +56,7 @@
             </x-announcement>
         @endif
 
-        <x-navigation :funnel="$funnel" class="container mt-6" />
+        <x-navigation :funnel="$funnel ?? null" class="container mt-6" />
 
         {{ $slot }}
 
