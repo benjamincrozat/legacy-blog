@@ -5,7 +5,7 @@
     </a>
 
     @empty($funnel)
-        <div class="flex items-center gap-6 md:gap-8">
+        <div class="flex items-center justify-end gap-6 md:gap-8">
             <x-menu>
                 <x-slot name="trigger">For you</x-slot>
 
@@ -18,7 +18,7 @@
                     <x-icon-pouest class="w-8 h-8 text-white rounded md:w-12 md:h-12" />
                     Migrate to Pest in seconds
                 </x-menu-item>
-                        
+
                 <x-menu-item href="https://github.com/benjamincrozat/benjamincrozat.com">
                     <x-menu-item-icon bg-color-class="bg-orange-400" icon="s-code-bracket" />
                     Hack in my blog's source code
@@ -55,9 +55,9 @@
                         Log out
                     </x-menu-item>
                 </x-menu>
-
-                <form method="POST" action="{{ route('logout') }}" id="logout">@csrf</form>
             @endauth
         </div>
     @endempty
 </div>
+
+<form method="POST" action="{{ route('logout') }}" id="logout">@csrf</form>
