@@ -17,7 +17,26 @@ class GeneratePostDescription
                 'messages' => [
                     [
                         'role' => 'user',
-                        'content' => <<<PROMPT
+                        'content' => $post->is_community_link
+                            ? <<<PROMPT
+# {$post->title}
+{$post->introduction}
+{$post->content}
+{$post->conclusion}
+
+---
+
+Context: This is a community link I shared.
+
+Instructions:
+- Summarize it in the shortest form possible.
+- Don't reuse the title.
+- Use a natural tone.
+- Speak in the first person as if you were the person who shared.
+- Give the user a reason to click, but don't overdo it.
+- Use 20 words or less.
+PROMPT
+                            : <<<PROMPT
 # {$post->title}
 {$post->introduction}
 {$post->content}
