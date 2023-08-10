@@ -46,8 +46,10 @@
         @endif
     </head>
     <body {{ $attributes->merge(['class' => 'bg-gray-50 font-light']) }}>
-        <x-navigation :funnel="$funnel ?? null" class="container mt-6" />
-
+        @if (empty($hideNavigation)
+            <x-navigation :funnel="$funnel ?? null" class="container mt-6" />
+        @endif
+                
         {{ $slot }}
 
         <x-status />
