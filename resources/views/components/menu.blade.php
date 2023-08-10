@@ -11,7 +11,7 @@
     </button>
 
     <ul
-        {{ $attributes->merge(['class' => 'absolute z-10 bg-white/90 backdrop-brightness-150 backdrop-saturate-150 dark:bg-black/[.9] backdrop-blur-md rounded-lg overflow-hidden shadow-lg left-4 sm:left-auto sm:w-[400px] sm:right-0 right-4 top-full'])->except(['x-cloak', 'x-show', 'x-transition']) }}
+        {{ $attributes->merge(['class' => 'absolute z-10 bg-white/90 backdrop-brightness-150 backdrop-saturate-150 dark:bg-black/[.9] backdrop-blur-md rounded-lg overflow-hidden shadow-lg left-4 sm:left-auto sm:w-[400px] sm:right-0 right-4 top-full py-2'])->except(['x-cloak', 'x-show', 'x-transition']) }}
         x-cloak
         x-show="open"
         x-transition
