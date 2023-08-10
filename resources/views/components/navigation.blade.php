@@ -34,7 +34,7 @@
                 <x-menu :hide-icon="true" class="sm:!w-[200px] md:!w-[250px] lg:!w-[300px]">
                     <x-slot name="trigger">
                         <span class="sr-only">Admin</span>
-                        <x-heroicon-s-cog class="w-4 h-4 md:w-5 md:h-5" />
+                        <x-heroicon-o-cog class="w-5 h-5" />
                     </x-slot>
 
                     <x-menu-item href="/horizon">
