@@ -16,24 +16,34 @@ test('pins are listed', function () {
     expect($response->viewData('pins'))->toHaveCount(4);
 });
 
-test('popular posts are listed', function () {
+test('popular posts that are not community links are listed', function () {
     Post::factory(10)->pinned()->create();
 
     $response = get(route('home'))
         ->assertOk()
         ->assertViewIs('home');
 
-    expect($response->viewData('popular'))->toBeInstanceOf(Collection::class);
-    expect($response->viewData('popular'))->toHaveCount(6);
+    $popular = $response->viewData('popular');
+
+    expect($popular)->toBeInstanceOf(Collection::class);
+    expect($popular)->toHaveCount(6);
+    $popular->each(function ($post) {
+        expect($post->is_community_link)->toBeFalsy();
+    });
 });
 
-test('posts are listed', function () {
+test('posts that are not community links are listed', function () {
     Post::factory(30)->create();
 
     $response = get(route('home'))
         ->assertOk()
         ->assertViewIs('home');
 
-    expect($response->viewData('posts'))->toBeInstanceOf(LengthAwarePaginator::class);
-    expect($response->viewData('posts'))->toHaveCount(16);
+    $posts = $response->viewData('posts');
+
+    expect($posts)->toBeInstanceOf(LengthAwarePaginator::class);
+    expect($posts)->toHaveCount(16);
+    $posts->each(function ($post) {
+        expect($post->is_community_link)->toBeFalsy();
+    });
 });

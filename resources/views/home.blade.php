@@ -61,6 +61,34 @@
         </section>
     @endif
 
+    @if ($community->isNotEmpty() && $posts->onFirstPage())
+        <section class="container lg:max-w-[1024px] mt-16">
+            <div class="px-4 text-xl font-semibold text-center sm:px-0">
+                From the community
+            </div>
+
+            <div class="grid gap-4 mt-8 md:grid-cols-2">
+                @foreach ($community as $post)
+                    <div>
+                        <a
+                            href="{{ route('posts.show', $post) }}"
+                            class="font-medium text-indigo-600 dark:text-indigo-400 line-clamp-1"
+                        >
+                            {{ $post->title }}
+                        </a>
+
+                        <div>
+                            Shared on
+                            <time datetime="{{ $post->created_at->toDateTimeString() }}">
+                                {{ $post->created_at->isoFormat('ll') }}
+                            </time>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </section>
+    @endif
+
     <section class="container lg:max-w-[1024px] mt-16">
         <div class="px-4 text-xl font-semibold text-center sm:px-0">
             @if ($posts->onFirstPage())

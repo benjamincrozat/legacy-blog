@@ -126,6 +126,10 @@ HTML;
                     ->onlyOnForms()
                     ->help('When enabled, this setting will put users in a sales funnel, free of potential distractions.'),
 
+                Boolean::make('Is community link')
+                    ->filterable()
+                    ->hideFromIndex(),
+
                 Date::make('Modified At')
                     ->displayUsing(fn () => $this->modified_at?->isoFormat('ll'))
                     ->sortable(),
