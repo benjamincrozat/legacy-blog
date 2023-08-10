@@ -2,7 +2,7 @@
     title="Instantly migrate PHPUnit tests to Pest"
     description="Migrate your PHPUnit tests to Pest using a web page instead of a CLI."
     image="{{ Vite::asset('resources/img/pouest-banner.jpg') }}"
-    hide-nevigation="true"
+    :hide-nevigation="true"
     class="!text-gray-300 bg-gray-900"
 >
     <nav class="container flex items-center justify-between mt-8">
