@@ -32,6 +32,22 @@ test('popular posts that are not community links are listed', function () {
     });
 });
 
+test('community links are listed', function () {
+    Post::factory(10)->pinned()->create();
+
+    $response = get(route('home'))
+        ->assertOk()
+        ->assertViewIs('home');
+
+    $community = $response->viewData('community');
+
+    expect($community)->toBeInstanceOf(Collection::class);
+    expect($community)->toHaveCount(10);
+    $community->each(function ($post) {
+        expect($post->is_community_link)->toBeTruthy();
+    });
+});
+
 test('posts that are not community links are listed', function () {
     Post::factory(30)->create();
 
