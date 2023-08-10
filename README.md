@@ -14,7 +14,7 @@ This is the source code of my blog, [benjamincrozat.com](https://benjamincrozat.
 &nbsp;
 
 <figure>
-    <img src="https://github.com/benjamincrozat/benjamincrozat.com/assets/3613731/452bea4e-e9e5-47bc-8624-31d56deb6c49" alt="My Google Search Console." />
+    <img src="https://github.com/benjamincrozat/benjamincrozat.com/assets/3613731/da83c642-08ec-4f9d-a027-17bca2db7e42" alt="My Google Search Console." />
     <figcaption>My Google Search Console. You can see the growth since I launched in September 2022.</figcaption>
 </figure>
 
