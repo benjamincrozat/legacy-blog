@@ -38,7 +38,7 @@
 
         <link rel="canonical" href="{{ url()->current() }}" />
 
-        @if (app()->isProduction() && auth()->guest())
+        @if (app()->isProduction())
             <script defer src="https://api.pirsch.io/pirsch-extended.js"
                 id="pirschextendedjs"
                 data-code="5N2hIsUQsCVX1LQtvPdJ3AGwQZHGxtt5"
