@@ -7,7 +7,7 @@
         </p>
 
         <x-form method="POST" action="{{ route('subscribe') }}" class="grid gap-2 mt-4 sm:mt-6" @submit="hide = true">
-            <input type="email" name="email" id="email" placeholder="homer@simpson.com" required class="block w-full px-3 py-2 text-sm placeholder-gray-300 border-0 rounded shadow dark:bg-gray-700/40 dark:placeholder-gray-600" />
+            <input type="email" name="email" id="email" placeholder="homersimpson@example.com" required class="block w-full px-3 py-2 text-sm placeholder-gray-300 border-0 rounded shadow dark:bg-gray-700/40 dark:placeholder-gray-600" />
 
             <button class="bg-gradient-to-r from-purple-300 dark:from-purple-500 to-purple-400 dark:to-purple-600 hover:-hue-rotate-90 duration-500 transition-[filter] block font-semibold py-2 rounded shadow text-white">
                 Subscribe

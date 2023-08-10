@@ -14,7 +14,7 @@
     @endif
 
     <x-form method="POST" action="{{ route('subscribe') }}" class="mx-auto mt-4 max-w-screen-xs">
-        <input type="email" name="email" id="email" placeholder="homer@simpson.com" required class="block w-full px-4 py-3 placeholder-gray-300 border-0 rounded-md shadow dark:bg-gray-700/40 dark:placeholder-gray-600" />
+        <input type="email" name="email" id="email" placeholder="homersimpson@example.com" required class="block w-full px-4 py-3 placeholder-gray-300 border-0 rounded-md shadow dark:bg-gray-700/40 dark:placeholder-gray-600" />
 
         <button class="bg-gradient-to-r from-purple-300 dark:from-purple-500 to-purple-400 dark:to-purple-600 hover:-hue-rotate-90 duration-500 transition-[filter] block font-semibold mt-2 px-4 py-3 rounded-md shadow-lg text-white w-full">
             Join hundreds of developers
