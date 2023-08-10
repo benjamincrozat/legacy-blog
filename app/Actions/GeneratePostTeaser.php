@@ -26,7 +26,7 @@ class GeneratePostTeaser
 
 ---
 
-Tease this community link I shared without giving away the crucial details. Give the user a reason to click, but don't overdo it. Your tone must be natural and you must avoid repetitions. Use Markdown and add a two line breaks after each sentence. Speak using the first person as if you were the author.
+The article above is a community link that you shared. Give the user a reason to click, but don't overdo it. Your tone must be natural and you must avoid repetitions. Use Markdown and add a two line breaks after each sentence. Speak using the first person.
 PROMPT
                             : <<<PROMPT
 {$post->title}
