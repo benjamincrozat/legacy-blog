@@ -17,7 +17,7 @@ test('pins are listed', function () {
 });
 
 test('popular posts that are not community links are listed', function () {
-    Post::factory(10)->pinned()->create();
+    Post::factory(10)->pinned()->create(['is_community_link' => false]);
 
     $response = get(route('home'))
         ->assertOk()
@@ -33,7 +33,7 @@ test('popular posts that are not community links are listed', function () {
 });
 
 test('community links are listed', function () {
-    Post::factory(10)->pinned()->create();
+    Post::factory(30)->pinned()->create(['is_community_link' => true]);
 
     $response = get(route('home'))
         ->assertOk()
@@ -49,7 +49,7 @@ test('community links are listed', function () {
 });
 
 test('posts that are not community links are listed', function () {
-    Post::factory(30)->create();
+    Post::factory(30)->create(['is_community_link' => false]);
 
     $response = get(route('home'))
         ->assertOk()
