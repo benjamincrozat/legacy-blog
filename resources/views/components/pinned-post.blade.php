@@ -15,27 +15,7 @@
         {{ $post->title }}
     </a>
 
-    <div class="flex items-center gap-2 mt-2 text-sm">
-        <img
-            loading="lazy"
-            src="{{ $post->user->gravatar }}"
-            width="18"
-            height="18"
-            alt="{{ $post->user->name }}"
-            class="-translate-y-[.5px] rounded-full"
-        />
-
-        <div>
-            <a
-                href="{{ $post->user->twitter_url }}"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="font-medium"
-            >
-                {{ $post->user->name }}
-            </a>
-            —
-            <span class="sr-only sm:not-sr-only">Updated on</span> <time datetime="{{ ($post->modified_at ?? $post->created_at)?->toDateTimeString() }}">{{ ($post->modified_at ?? $post->created_at)?->isoFormat('ll') }}
-        </div>
+    <div>
+        Updated on <time datetime="{{ $post->last_update }}">{{ $post->rendered_last_update }}</time>
     </div>
 </div>

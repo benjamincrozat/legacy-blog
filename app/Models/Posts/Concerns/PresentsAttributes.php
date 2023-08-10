@@ -33,4 +33,18 @@ trait PresentsAttributes
             fn () => str($this->teaser ?? '')->marxdown()
         )->shouldCache();
     }
+
+    public function lastUpdate() : Attribute
+    {
+        return Attribute::make(
+            fn () => ($this->updated_at ?? $this->created)->toDateTimeString()
+        )->shouldCache();
+    }
+
+    public function renderedLastUpdate() : Attribute
+    {
+        return Attribute::make(
+            fn () => ($this->updated_at ?? $this->created)->isoFormat('LL')
+        )->shouldCache();
+    }
 }
