@@ -1,4 +1,4 @@
-<div {{ $attributes->except(['@click', 'post'])->merge(['class' => 'bg-gradient-to-r from-white dark:from-gray-800/50 to-gray-50/30 dark:to-gray-800/50 p-4 sm:p-5 rounded-lg shadow-lg shadow-gray-200 dark:shadow-black/10']) }}>
+<div {{ $attributes->except(['@click', 'post'])->merge(['class' => 'bg-gradient-to-r from-white dark:from-gray-800/50 to-gray-50/30 dark:to-gray-800/50 p-4 sm:p-5 rounded-lg shadow-lg shadow-gray-200 dark:shadow-none']) }}>
     <div class="flex items-center justify-between gap-8">
         <div>
             <div class="flex items-center gap-2 text-sm">
