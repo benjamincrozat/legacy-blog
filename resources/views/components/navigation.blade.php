@@ -11,19 +11,14 @@
 
                 <x-menu-item href="https://benjamincrozat.com/best-web-development-tools">
                     <x-menu-item-icon bg-color-class="bg-emerald-400" icon="s-wrench-screwdriver" />
-                    See all the tools I use as a developer
+                    See all the tools I use
                 </x-menu-item>
 
                 <x-menu-item href="{{ route('pouest') }}">
                     <x-icon-pouest class="w-8 h-8 text-white rounded md:w-12 md:h-12" />
                     Migrate to Pest in seconds
                 </x-menu-item>
-
-                <x-menu-item href="https://superchargedlaravel.com">
-                    <x-menu-item-icon bg-color-class="bg-gray-900" icon-color-class="text-yellow-400" icon="s-bolt" />
-                    Generate Laravel code with ChatGPT
-                </x-menu-item>
-
+                        
                 <x-menu-item href="https://github.com/benjamincrozat/benjamincrozat.com">
                     <x-menu-item-icon bg-color-class="bg-orange-400" icon="s-code-bracket" />
                     Hack in my blog's source code
