@@ -214,4 +214,12 @@
             {!! $post->rendered_conclusion !!}
         </div>
     @endif
+
+    @if ($post->community_link)
+        <div class="!container content mt-8 text-center">
+            <a href="{{ $post->community_link }}" class="text-xl text-indigo-400 underline">
+                Read more on {{ $post->community_link_domain }}
+            </a>
+        </div>
+    @endif
 </article>
