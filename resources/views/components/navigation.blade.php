@@ -14,6 +14,11 @@
                     See all the tools I use
                 </x-menu-item>
 
+                <x-menu-item href="{{ route('community') }}">
+                    <x-menu-item-icon bg-color-class="bg-yellow-400" icon="s-user-group" />
+                    Read articles from the community
+                </x-menu-item>
+
                 <x-menu-item href="{{ route('pouest') }}">
                     <x-icon-pouest class="w-8 h-8 text-white rounded md:w-12 md:h-12" />
                     Migrate to Pest in seconds
