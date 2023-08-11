@@ -1,1 +1,4 @@
-import.meta.glob(['../img/**'])
+import.meta.glob([
+    '../img/**',
+    '../svg/logo.svg',
+])
