@@ -3,7 +3,6 @@
     :description="$post->description"
     :image="$post->image"
     :funnel="$post->promotes_affiliate_links"
-    class="text-gray-600 dark:bg-gray-900 dark:text-gray-300"
 >
     <x-posts::breadcrumb
         :promotes-affiliate-links="! $post->promotes_affiliate_links"

@@ -1,7 +1,6 @@
 <x-app
     title="The art of crafting web applications with Benjamin Crozat"
     description="Have you ever had a question about the art of crafting web applications with PHP, Laravel and its ecosystem? This is the best blog to find your answer."
-    class="text-gray-600 dark:bg-gray-900 dark:text-gray-300"
 >
     @if ($posts->onFirstPage())
         @if ($pins->isNotEmpty())

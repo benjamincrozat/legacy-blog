@@ -4,10 +4,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ShowPostController;
+use App\Http\Controllers\CommunityController;
 use App\Http\Controllers\SubscribeController;
 use App\Http\Controllers\ShowAffiliateController;
 
 Route::get('/', HomeController::class)->name('home');
+
+Route::get('/community', CommunityController::class)->name('community');
 
 Route::get('/recommends/{affiliate:slug}', ShowAffiliateController::class)->name('affiliate.show');
 

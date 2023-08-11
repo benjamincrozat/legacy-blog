@@ -45,11 +45,11 @@
                 data-disable-page-views></script>
         @endif
     </head>
-    <body {{ $attributes->merge(['class' => 'bg-gray-50 font-light']) }}>
+    <body {{ $attributes->merge(['class' => 'bg-gray-50 font-light text-gray-600 dark:bg-gray-900 dark:text-gray-300']) }}>
         @if (empty($hideNavigation))
             <x-navigation :funnel="$funnel ?? null" class="container mt-6" />
         @endif
-                
+
         {{ $slot }}
 
         <x-status />
