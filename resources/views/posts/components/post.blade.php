@@ -15,7 +15,13 @@
         </div>
     @else
         <h1 class="container text-3xl font-thin md:text-5xl dark:text-white">
-            {{ $post->title }}
+            @if ($post->community_link)
+                <a href="$post->community_link" target="_blank" rel="nofollow noopener noreferrer" class="underline decoration-1">
+                    {{ $post->title }}
+                </a>
+            @else
+                {{ $post->title }}
+            @endif
         </h1>
 
         @if (! $post->community_link && empty($barebones))
