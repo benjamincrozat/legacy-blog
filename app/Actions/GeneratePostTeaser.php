@@ -17,8 +17,7 @@ class GeneratePostTeaser
                 'messages' => [
                     [
                         'role' => 'user',
-                        'content' => $post->community_link
-                            ? <<<PROMPT
+                        'content' => <<<PROMPT
 {$post->title}
 {$post->introduction}
 {$post->content}
@@ -26,17 +25,7 @@ class GeneratePostTeaser
 
 ---
 
-The article above is a community link that you shared. Give the user a reason to click, but don't overdo it. Your tone must be natural and you must avoid repetitions. Use Markdown and add a two line breaks after each sentence. Speak using the first person.
-PROMPT
-                            : <<<PROMPT
-{$post->title}
-{$post->introduction}
-{$post->content}
-{$post->conclusion}
-
----
-
-Tease this article without giving away the crucial details. Give the user a reason to click, but don't overdo it. Your tone must be the same as in the article and you must avoid repetitions. Use Markdown and add a two line breaks after each sentence. Speak using the first person as if you were the author.
+Tease this article without giving away the crucial details. Give the user a reason to click, but don't overdo it. Your tone must be the same as in the article and you must avoid repetitions. Speak using the first person as if you were the author.
 PROMPT,
                     ],
                 ],

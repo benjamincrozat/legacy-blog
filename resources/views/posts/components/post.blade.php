@@ -18,7 +18,7 @@
             {{ $post->title }}
         </h1>
 
-        @if (empty($barebones))
+        @if (! $this->community_link && empty($barebones))
             <x-posts::metadata
                 :gravatar="$post->user->gravatar"
                 :name="$post->user->name"
