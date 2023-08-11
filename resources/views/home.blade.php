@@ -77,7 +77,7 @@
                             {{ $post->title }}
                         </a>
 
-                        <div>
+                        <div class="opacity-75">
                             Shared on
                             <time datetime="{{ $post->created_at->toDateTimeString() }}">
                                 {{ $post->created_at->isoFormat('ll') }}

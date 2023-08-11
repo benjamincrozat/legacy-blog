@@ -15,7 +15,7 @@
         {{ $post->title }}
     </a>
 
-    <div>
+    <div class="opacity-75">
         Updated on <time datetime="{{ $post->last_update }}">{{ $post->rendered_last_update }}</time>
     </div>
 </div>
