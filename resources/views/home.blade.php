@@ -81,7 +81,7 @@
 
                         <div class="mt-1 opacity-75">
                             Shared on
-                            <a href="{{ route('posts.show', $post) }}">
+                            <a href="{{ route('posts.show', $post) }}" class="font-normal">
                                 <time datetime="{{ $post->created_at->toDateTimeString() }}">
                                     {{ $post->created_at->isoFormat('ll') }}
                                 </time>
