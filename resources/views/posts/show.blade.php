@@ -16,9 +16,9 @@
 
     <x-posts::post :highlights="$post->affiliates->where('pivot.highlight', true)" :post="$post" class="mt-10" />
 
-    <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mt-8 sm:mt-16 mx-auto w-[100px]"></div>
-
     @if (! $post->community_link)
+        <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mt-8 sm:mt-16 mx-auto w-[100px]"></div>
+
         <x-posts::author
             :description="$post->user->rendered_description"
             :email="$post->user->email"
@@ -27,13 +27,6 @@
     @endif
 
     <x-posts::divider class="mt-0 md:mt-16" />
-
-    @if (empty($barebones))
-        <x-posts::newsletter
-            :promotes-affiliate-links="$post->promotes_affiliate_links"
-            class="container mt-10 sm:max-w-screen-xs"
-        />
-    @endif
 
     @if (! $post->promotes_affiliate_links)
         <x-posts::recommended
