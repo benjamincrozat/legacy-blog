@@ -263,6 +263,11 @@ MARKDOWN,
         ];
     }
 
+    public function asCommunityLink() : static
+    {
+        return $this->state(fn () => ['community_link' => fake()->url()]);
+    }
+
     public function pinned() : static
     {
         return $this->afterCreating(fn (Post $post) => $post->pins()->create());

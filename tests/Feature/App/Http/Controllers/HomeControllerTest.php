@@ -27,13 +27,12 @@ test('popular posts that are not community links are listed', function () {
 
     expect($popular)->toBeInstanceOf(Collection::class);
     expect($popular)->toHaveCount(6);
-    $popular->each(function ($post) {
-        expect($post->community_link)->toBeNull();
-    });
+    $popular->each(fn ($post) => expect($post->community_link)->toBeNull());
 });
 
 test('community links are listed', function () {
-    Post::factory(30)->pinned()->create(['community_link' => fake()->url()]);
+    Post::factory(5)->create();
+    Post::factory(5)->asCommunityLink()->create();
 
     $response = get(route('home'))
         ->assertOk()
@@ -42,10 +41,10 @@ test('community links are listed', function () {
     $community = $response->viewData('community');
 
     expect($community)->toBeInstanceOf(Collection::class);
-    expect($community)->toHaveCount(10);
-    $community->each(function ($post) {
-        expect($post->community_link)->not->toBeNull();
-    });
+    expect($community)->toHaveCount(5);
+    $community->each(
+        fn ($post) => expect($post->community_link)->not->toBeNull()
+    );
 });
 
 test('posts that are not community links are listed', function () {
@@ -59,7 +58,5 @@ test('posts that are not community links are listed', function () {
 
     expect($posts)->toBeInstanceOf(LengthAwarePaginator::class);
     expect($posts)->toHaveCount(16);
-    $posts->each(function ($post) {
-        expect($post->community_link)->toBeNull();
-    });
+    $posts->each(fn ($post) => expect($post->community_link)->toBeNull());
 });

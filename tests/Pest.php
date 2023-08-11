@@ -9,9 +9,9 @@ use function Pest\Laravel\withoutVite;
 use Torchlight\Middleware\RenderTorchlight;
 use function Pest\Laravel\withoutMiddleware;
 use NunoMaduro\LaravelMojito\InteractsWithViews;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
 
-uses(TestCase::class, DatabaseTransactions::class, InteractsWithViews::class)
+uses(TestCase::class, LazilyRefreshDatabase::class, InteractsWithViews::class)
     ->beforeEach(function () {
         Http::preventStrayRequests();
 
