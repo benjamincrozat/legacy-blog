@@ -29,7 +29,7 @@ jobs:
           php-version: 8.2
 
       - name: Setup MySQL database
-        run: mysql -u root -h 127.0.0.1 -P ${{ job.services.mysql.ports[3306] }} -e "CREATE DATABASE laravel"
+        run: mysql -u root -h 127.0.0.1 -P ${{ job.services.mysql.ports[3306] }} -e "CREATE DATABASE benjamincrozat_test"
 
       - name: Setup Redis
         uses: zhulik/redis-action@1.1.0
