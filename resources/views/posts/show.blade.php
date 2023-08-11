@@ -18,11 +18,13 @@
 
     <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mt-8 sm:mt-16 mx-auto w-[100px]"></div>
 
-    <x-posts::author
-        :description="$post->user->rendered_description"
-        :email="$post->user->email"
-        :name="$post->user->name"
-    />
+    @if (! $this->community_link)
+        <x-posts::author
+            :description="$post->user->rendered_description"
+            :email="$post->user->email"
+            :name="$post->user->name"
+        />
+    @endif
 
     <x-posts::divider class="mt-0 md:mt-16" />
 
