@@ -33,10 +33,12 @@
         />
     @endif
 
-    <x-posts::recommended
-        :recommended="$recommended"
-        class="container max-w-[1024px] mt-8 sm:mt-16"
-    />
+    @if (! $post->promotes_affiliate_links)
+        <x-posts::recommended
+            :recommended="$recommended"
+            class="container max-w-[1024px] mt-8 sm:mt-16"
+        />
+    @endif
 
     <div class="mt-8 bg-gray-900 dark:bg-black sm:mt-16">
         <x-footer class="text-gray-200" />
