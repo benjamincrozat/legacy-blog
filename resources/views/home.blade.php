@@ -69,19 +69,25 @@
 
             <div class="grid gap-4 mt-8 md:grid-cols-2">
                 @foreach ($community as $post)
-                    <div class="p-4 border rounded dark:border-gray-700/50">
+                    <div class="p-4 leading-tight border rounded dark:border-gray-700/50">
                         <a
-                            href="{{ route('posts.show', $post) }}"
-                            class="font-medium text-indigo-600 dark:text-indigo-400 line-clamp-1"
+                            href="{{ $post->community_link }}"
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
+                            class="font-medium text-indigo-600 dark:text-indigo-400"
                         >
                             {{ $post->title }}
                         </a>
 
-                        <div class="opacity-75">
+                        <div class="mt-1 opacity-75">
                             Shared on
-                            <time datetime="{{ $post->created_at->toDateTimeString() }}">
-                                {{ $post->created_at->isoFormat('ll') }}
-                            </time>
+                            <a href="{{ route('posts.show', $post) }}">
+                                <time datetime="{{ $post->created_at->toDateTimeString() }}">
+                                    {{ $post->created_at->isoFormat('ll') }}
+                                </time>
+                            </a>
+                            <span class="mx-1 text-xs">•</span>
+                            <span>{{ $post->community_link_domain }}</span>
                         </div>
                     </div>
                 @endforeach

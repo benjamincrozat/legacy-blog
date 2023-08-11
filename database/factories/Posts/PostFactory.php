@@ -259,7 +259,6 @@ MARKDOWN,
             'description' => fake()->paragraph(),
             'teaser' => fake()->paragraph(),
             'promotes_affiliate_links' => fake()->boolean(),
-            'is_community_link' => fake()->boolean(),
             'sessions' => fake()->randomNumber(),
         ];
     }

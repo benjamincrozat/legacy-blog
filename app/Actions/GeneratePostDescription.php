@@ -17,7 +17,7 @@ class GeneratePostDescription
                 'messages' => [
                     [
                         'role' => 'user',
-                        'content' => $post->is_community_link
+                        'content' => $post->community_link
                             ? <<<PROMPT
 # {$post->title}
 {$post->introduction}

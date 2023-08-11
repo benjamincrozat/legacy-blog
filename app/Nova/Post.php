@@ -126,7 +126,7 @@ HTML;
                     ->onlyOnForms()
                     ->help('When enabled, this setting will put users in a sales funnel, free of potential distractions.'),
 
-                Boolean::make('Is community link')
+                URL::make('Community link')
                     ->filterable()
                     ->hideFromIndex(),
 

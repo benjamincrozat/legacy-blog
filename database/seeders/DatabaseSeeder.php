@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
     public function run() : void
     {
         Post::factory(50)->create();
+        Post::factory(30)->create(['community_link' => fake()->url()]);
 
         Pin::factory(10)->create();
 

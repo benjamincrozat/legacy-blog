@@ -2,6 +2,7 @@
 
 namespace App\Models\Posts\Concerns;
 
+use Spatie\Url\Url;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 
 trait PresentsAttributes
@@ -46,5 +47,12 @@ trait PresentsAttributes
         return Attribute::make(
             fn () => ($this->updated_at ?? $this->created)->isoFormat('LL')
         )->shouldCache();
+    }
+
+    public function communityLinkDomain() : Attribute
+    {
+        return Attribute::make(
+            fn () => str_replace('www.', '', Url::fromString($this->community_link)->getHost())
+        );
     }
 }
