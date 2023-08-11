@@ -19,5 +19,7 @@ Route::feeds();
 
 Route::post('/logout', LogoutController::class)->name('logout');
 
+Route::view('/terms-of-service', 'terms-of-service')->name('terms-of-service');
+
 // This is a wildcard route, so it should come last.
 Route::get('/{post:slug}', ShowPostController::class)->name('posts.show');
