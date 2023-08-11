@@ -17,15 +17,12 @@ class FetchSessionsForPath
             ->throw()
             ->json('access_token');
 
-        $startOfLastWeek = now()->startOfWeek()->subWeek();
-        $endOfLastWeek = $startOfLastWeek->copy()->endOfWeek();
-
         $statistics = $this->request()
             ->withToken($accessToken)
             ->get('/statistics/page', [
                 'id' => config('services.pirsch.domain_id'),
-                'from' => $startOfLastWeek->toDateString(),
-                'to' => $endOfLastWeek->toDateString(),
+                'from' => now()->subWeek()->toDateString(),
+                'to' => now()->toDateString(),
                 'tz' => 'UTC',
                 'path' => $path,
             ])
