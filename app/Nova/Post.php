@@ -127,7 +127,7 @@ HTML;
                     ->help('When enabled, this setting will put users in a sales funnel, free of potential distractions.'),
 
                 URL::make('Community link')
-                    ->filterable()
+                    ->rules('nullable', 'max:255')
                     ->hideFromIndex(),
 
                 Date::make('Modified At')
