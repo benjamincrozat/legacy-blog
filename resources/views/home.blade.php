@@ -69,7 +69,7 @@
 
             <div class="grid gap-4 mt-8 md:grid-cols-2">
                 @foreach ($community as $post)
-                    <div>
+                    <div class="p-4 border rounded dark:border-gray-700/50">
                         <a
                             href="{{ route('posts.show', $post) }}"
                             class="font-medium text-indigo-600 dark:text-indigo-400 line-clamp-1"
