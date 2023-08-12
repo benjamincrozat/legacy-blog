@@ -54,11 +54,6 @@ jobs:
       - name: Build CSS and JavaScript
         run: yarn build
 
-      - name: Migrate database
-        run: php artisan migrate
-        env:
-          DB_PORT: ${{ job.services.mysql.ports[3306] }}
-
       - name: Run tests
         run: php artisan test
         env:
