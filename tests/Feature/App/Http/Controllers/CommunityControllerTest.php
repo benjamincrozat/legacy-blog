@@ -5,8 +5,8 @@ use function Pest\Laravel\get;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 test('community links are listed', function () {
-    Post::factory(5)->create();
-    Post::factory(5)->asCommunityLink()->create();
+    Post::factory(10)->create();
+    Post::factory(10)->asCommunityLink()->create();
 
     $response = get(route('community'))
         ->assertOk()
@@ -15,7 +15,7 @@ test('community links are listed', function () {
     $posts = $response->viewData('posts');
 
     expect($posts)->toBeInstanceOf(LengthAwarePaginator::class);
-    expect($posts)->toHaveCount(5);
+    expect($posts)->toHaveCount(10);
     $posts->each(
         fn ($post) => expect($post->community_link)->not->toBeNull()
     );

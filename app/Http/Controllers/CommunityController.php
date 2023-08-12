@@ -13,7 +13,7 @@ class CommunityController extends Controller
             'posts' => Post::query()
                 ->whereNotNull('community_link')
                 ->latest()
-                ->paginate(10),
+                ->paginate(16),
         ]);
     }
 }

@@ -10,31 +10,9 @@
             @endif
         </div>
 
-        <div class="grid gap-16 mt-8">
+        <div class="grid gap-4 mt-8 md:grid-cols-2">
             @foreach ($posts as $post)
-                <div>
-                    <a
-                        href="{{ $post->community_link }}"
-                        target="_blank"
-                        rel="nofollow noopener noreferrer"
-                        class="block ml-[-2px] text-2xl sm:text-3xl md:text-4xl lg:text-5xl underline decoration-1 text-indigo-600 dark:text-indigo-400"
-                    >
-                        {{ $post->title }}
-                    </a>
-
-                    <div class="mt-2 opacity-75">
-                        Shared on
-                        <a href="{{ route('posts.show', $post) }}" class="font-normal">
-                            <time datetime="{{ $post->created_at->toDateTimeString() }}">
-                                {{ $post->created_at->isoFormat('ll') }}
-                            </time>
-                        </a>
-                        <span class="mx-1 text-xs">•</span>
-                        <span>{{ $post->community_link_domain }}</span>
-                    </div>
-
-                    <div class="mt-8 md:text-xl">{{ $post->description }}</div>
-                </div>
+                <x-post :post="$post" />
             @endforeach
         </div>
 
