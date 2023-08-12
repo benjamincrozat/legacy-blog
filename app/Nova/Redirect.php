@@ -25,7 +25,7 @@ class Redirect extends Resource
             ID::make()->sortable(),
 
             Text::make('From → To', fn () => <<<HTML
-<a href="/{$this->from}">
+<a href="/{$this->from}" target="_blank">
 <span style="color: #f95661">/{$this->from}</span> → <span style="color: #56c86d">/{$this->to}</span>
 </a>
 HTML)
