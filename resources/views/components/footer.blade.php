@@ -24,9 +24,9 @@
             </li>
 
             <li>
-                <a href="https://twitter.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer">
-                    <x-icon-twitter class="w-8 h-8 fill-current" />
-                    <span class="sr-only">Twitter</span>
+                <a href="https://x.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer">
+                    <x-icon-x class="w-8 h-8 fill-current" />
+                    <span class="sr-only">X</span>
                 </a>
             </li>
 
