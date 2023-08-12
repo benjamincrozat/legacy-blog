@@ -39,7 +39,7 @@
                 <x-menu :hide-icon="true" class="sm:!w-[200px] md:!w-[250px] lg:!w-[300px]">
                     <x-slot name="trigger">
                         <span class="sr-only">Admin</span>
-                        <x-heroicon-o-cog class="w-5 h-5 duration-500" x-bind:class="{ 'rotate-180': open }" />
+                        <x-heroicon-o-cog class="w-5 h-5 transition-transform duration-500" x-bind:class="{ 'rotate-180': open }" />
                     </x-slot>
 
                     <x-menu-item href="/horizon">

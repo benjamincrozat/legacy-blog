@@ -4,7 +4,7 @@
 
         @if (empty($hideIcon))
             <x-heroicon-o-chevron-down
-                class="w-3 h-3 transition-transform translate-y-px md:w-4 md:h-4"
+                class="w-3 h-3 transition-transform duration-500 translate-y-px md:w-4 md:h-4"
                 x-bind:class="{ 'rotate-180': open }"
             />
         @endif
