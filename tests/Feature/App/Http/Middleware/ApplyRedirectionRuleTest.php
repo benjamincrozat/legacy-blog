@@ -26,6 +26,6 @@ test('middleware does not initiate an infinite loop of redirects', function () {
 
     get($redirect->to)
         // This route does not exist, so a 404 is to be expected.
-        // If the bug was still happening, I'd have a redirect.
+        // If the bug was still happening, we'd have a redirect.
         ->assertNotFound();
 });
