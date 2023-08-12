@@ -2,12 +2,14 @@
     <div class="flex items-center justify-between gap-8">
         <div>
             <div class="text-sm opacity-75">
-                Updated on
-                <time datetime="{{ $post->last_update }}">{{ $post->rendered_last_update }}</time>
+                @if ($post->community_link) Shared on @else Updated on @endif
+                <a href="{{ route('posts.show', $post->slug) }}"><time datetime="{{ $post->last_update }}">{{ $post->rendered_last_update }}</time></a>
+                @if ($post->community_link) <span class="mx-1 text-xs">•</span> {{ $post->community_link_domain }} @endif
             </div>
 
             <a
-                href="{{ route('posts.show', $post->slug) }}"
+                href="@if ($post->community_link) {{ $post->community_link }} @else {{ route('posts.show', $post->slug) }} @endif"
+                @if ($post->community_link) target="_blank" rel="nofollow noopener noreferrer" @endif
                 class="block mt-1 font-normal text-indigo-600 dark:text-indigo-400"
                 {{ $attributes->only('@click') }}
             >
@@ -17,7 +19,8 @@
 
         @if ($post->image)
             <a
-                href="{{ route('posts.show', $post->slug) }}"
+                href="@if ($post->community_link) {{ $post->community_link }} @else {{ route('posts.show', $post->slug) }} @endif"
+                @if ($post->community_link) target="_blank" rel="nofollow noopener noreferrer" @endif
                 {{ $attributes->only('@click') }}
                 class="flex-shrink-0"
             >
