@@ -24,7 +24,11 @@ class Redirect extends Resource
         return [
             ID::make()->sortable(),
 
-            Text::make('From → To', fn () => "<span style=\"color: #f95661\">/$this->from</span> → <span style=\"color: #56c86d\">/$this->to</span>")
+            Text::make('From → To', fn () => <<<HTML
+<a href="/{$this->from}">
+<span style="color: #f95661">/{$this->from}</span> → <span style="color: #56c86d">/{$this->to}</span>
+</a>
+HTML)
                 ->asHtml()
                 ->onlyOnIndex(),
 
