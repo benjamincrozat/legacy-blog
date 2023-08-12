@@ -12,4 +12,4 @@ test('middleware applies existing redirections rules', function () {
     get($redirect->from)
         ->assertStatus(301)
         ->assertRedirect($redirect->to);
-})->skip();
+});
