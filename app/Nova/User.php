@@ -35,7 +35,7 @@ class User extends Resource
             Markdown::make('Description')
                 ->rules('nullable'),
 
-            URL::make('Twitter', 'twitter_url')
+            URL::make('X', 'twitter_url')
                 ->displayUsing(function () {
                     return strlen($this->twitter_url) > 50
                         ? substr($this->twitter_url, 0, 50) . '…'
