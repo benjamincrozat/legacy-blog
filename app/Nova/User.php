@@ -41,7 +41,7 @@ class User extends Resource
                         ? substr($this->twitter_url, 0, 50) . '…'
                         : $this->twitter_url;
                 })
-                ->rules('nullable', 'regex:/^https?:\/\/twitter.com\/\w+$/')
+                ->rules('nullable', 'regex:/^https?:\/\/[x|twitter].com\/\w+$/')
                 ->textAlign('left'),
 
             Text::make('Email')
