@@ -2,6 +2,7 @@
 
 use App\Models\User;
 use App\Models\Affiliate;
+use App\Models\Posts\Post;
 use function Pest\Laravel\get;
 use function Pest\Laravel\actingAs;
 use function Pest\Laravel\postJson;
@@ -35,6 +36,18 @@ it('does not track the page view for excluded paths', function ($path, $requires
     ['/horizon', true],
     ['/nova', true],
     fn () => [route('affiliate.show', Affiliate::factory()->create()), false],
+]);
+
+it('does not confuse excluded paths with similar ones', function ($slug) {
+    Post::factory()->create(['slug' => $slug]);
+
+    get($slug);
+
+    Queue::assertPushed(\App\Jobs\TrackPageView::class);
+})->with([
+    ['foo-horizon'],
+    ['bar-nova'],
+    ['baz-recommends'],
 ]);
 
 it('does not track page views for HTTP methods other than GET', function () {

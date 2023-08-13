@@ -17,9 +17,9 @@ class TrackPageView
             config('services.pirsch.access_key') &&
             'GET' === $request->method() &&
             ! $request->hasHeader('X-Livewire') &&
-            ! str_contains($request->path(), 'horizon') &&
-            ! str_contains($request->path(), 'nova') &&
-            ! str_contains($request->path(), 'recommends/')
+            ! preg_match('/^\/?horizon/', $request->path()) &&
+            ! preg_match('/^\/?nova/', $request->path()) &&
+            ! preg_match('/^\/?recommends\//', $request->path())
         ) {
             // I dispatch the request instead as a job of using terminate().
             // It's easier to test in my local and testing environments.
