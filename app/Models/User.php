@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\Posts\Post;
+use App\Models\Post;
 use Illuminate\Support\Str;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Casts\Attribute;

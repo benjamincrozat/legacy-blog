@@ -12,7 +12,7 @@ class Kernel extends ConsoleKernel
     {
         $schedule
             ->command(AnalyticsFetchCommand::class)
-            ->mondays();
+            ->daily();
     }
 
     protected function commands() : void

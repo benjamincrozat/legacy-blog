@@ -1,104 +1,77 @@
 <x-app
-    title="The art of crafting web applications with Benjamin Crozat"
-    description="Have you ever had a question about the art of crafting web applications with PHP, Laravel and its ecosystem? This is the best blog to find your answer."
+    title="Learn about Laravel and its ecosystem."
 >
-    @if ($posts->onFirstPage())
-        @if ($pins->isNotEmpty())
-            <section class="md:container md:max-w-[1024px] mt-10 md:mt-16">
-                <div class="px-4 text-xl font-semibold text-center md:px-0">
-                    Featured
-                </div>
-
-                <div class="flex gap-4 px-4 mt-8 overflow-x-scroll md:grid md:grid-cols-2 md:gap-8 md:px-0 md:overflow-x-visible snap-x md:snap-none snap-mandatory">
-                    @foreach ($pins as $pin)
-                        <x-pinned-post :post="$pin->post" :first="$loop->first" />
-                    @endforeach
-                </div>
-            </section>
-        @endif
-
-        <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mt-16 mx-auto w-[100px]"></div>
-
-        <x-newsletter class="container mt-8 md:mt-16">
-            <div class="mt-8 md:flex md:items-center">
-                <img loading="lazy" src="https://www.gravatar.com/avatar/{{ md5('benjamincrozat@me.com') }}?s=256" width="96" height="96" alt="Benjamin Crozat" class="float-right md:float-none mb-4 ml-4 mt-4 md:m-0 md:order-1 rounded-full w-[80px] h-[80px] md:w-[96px] md:h-[96px]" />
-
-                <div>
-                    <p>
-                        Hi there! 👋
-                    </p>
-
-                    <p class="mt-4">
-                        <strong class="font-semibold">I'm Benjamin Crozat</strong> and I have <strong class="font-semibold">+10 years of expertise</strong> in web development.
-                    </p>
-
-                    <p class="mt-4">
-                        Understanding and building for the web can give you a significant advantage. It provides job security and allows you to start a business from scratch.
-                    </p>
-
-                    <p class="mt-4">
-                        I want to share with you everything I learn, <strong class="font-semibold">for free</strong>.
-                    </p>
-                </div>
-            </div>
-        </x-newsletter>
-
-        <div class="border-b-4 border-dotted border-gray-200 dark:border-gray-700 mt-8 md:mt-16 mx-auto w-[100px]"></div>
-    @endif
-
-    @if ($popular->isNotEmpty() && $posts->onFirstPage())
-        <section class="container lg:max-w-[1024px] mt-16">
-            <div class="px-4 text-xl font-semibold text-center sm:px-0">
-                Popular
+    <x-section class="container mt-24 text-center">
+        <x-slot:title class="text-5xl font-bold text-center">
+            <div class="flex items-center justify-center gap-8 mt-8">
+                <x-icon-laravel class="h-[3.25rem]" />
+                <x-icon-livewire class="h-12 mx-2" />
+                <x-icon-alpine-js class="h-8 mr-1" />
+                <x-icon-tailwind-css class="h-12 mr-1" />
+                <x-icon-vue-js class="h-12" />
             </div>
 
-            <div class="grid gap-4 mt-8 md:grid-cols-2">
-                @foreach ($popular as $post)
-                    <x-post :post="$post" />
+            <div class="mt-8">Learn about Laravel and its ecosystem.</div>
+        </x-slot:title>
+
+        <p class="mt-2 text-3xl">
+            Join more than <span class="font-semibold text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">20,000</span> readers and skyrocket your web development skills.
+        </p>
+    </x-section>
+
+    <x-section class="container mt-32">
+        <x-slot:title class="text-center">
+            An endless amount of content for web developers.
+        </x-slot:title>
+
+        <ul class="grid grid-cols-3 mt-8 gap-x-8 gap-y-16">
+            @foreach ($categories as $category)
+                <li class="h-full">
+                    <x-home.category :category="$category" />
+                </li>
+            @endforeach
+        </ul>
+    </x-section>
+
+    @foreach ($categories as $category)
+        <x-section class="mt-32">
+            <x-slot:title class="container lg:max-w-screen-md">
+                Learn <span class="text-{{ $category->primary_color }}">{{ $category->name }}</span>
+            </x-slot:title>
+
+            <div class="container mt-2 lg:max-w-screen-md">
+                {!! $category->long_description !!}
+            </div>
+
+            <ul class="container grid grid-cols-2 gap-8 mt-16">
+                @foreach ($category->posts()->limit(4)->get() as $post)
+                    <li>
+                        <x-post :post="$post" />
+                    </li>
                 @endforeach
-            </div>
-        </section>
-    @endif
+            </ul>
 
-    @if ($community->isNotEmpty() && $posts->onFirstPage())
-        <section class="container lg:max-w-[1024px] mt-16">
-            <div class="px-4 text-xl font-semibold text-center sm:px-0">
-                From the community
-            </div>
+            <p class="mt-16 text-center">
+                <x-button href="{{ route('categories.show', $category) }}" class="bg-{{ $category->primary_color ?? 'bg-black' }} text-{{ $category->secondary_color ?? 'white' }}">
+                    Read more about {{ $category->name }}
+                </x-button>
+            </p>
+        </x-section>
+    @endforeach
 
-            <div class="grid gap-4 mt-8 md:grid-cols-2">
-                @foreach ($community as $post)
-                    <x-post :post="$post" />
-                @endforeach
-            </div>
-        </section>
-    @endif
+    <x-divider class="mt-[4.5rem]" />
 
-    <section class="container lg:max-w-[1024px] mt-16">
-        <div class="px-4 text-xl font-semibold text-center sm:px-0">
-            @if ($posts->onFirstPage())
-                Latest
-            @else
-                Page {{ $posts->currentPage() }}
-            @endif
-        </div>
+    <x-section class="container lg:max-w-screen-md">
+        <x-slot:title class="text-center">
+            About Benjamin Crozat
+        </x-slot:title>
 
-        @if ($posts->isNotEmpty())
-            <div class="grid gap-4 mt-8 md:grid-cols-2">
-                @foreach ($posts as $post)
-                    <x-post :post="$post" />
-                @endforeach
-            </div>
+        <x-prose class="mt-8">
+            <img src="https://www.gravatar.com/avatar/{{ md5('hello@benjamincrozat.com') }}?s=256" width="128" height="128" alt="Benjamin Crozat" class="float-right mb-8 ml-8 rounded-full" />
 
-            @if ($posts->hasPages())
-                <div class="mt-8">
-                    {{ $posts->links() }}
-                </div>
-            @endif
-        @endif
-    </section>
+            <p>Hi! I'm Benjamin Crozat. I'm coming from the South of France and <strong>I've been a self-taught professional web developer for more than 10 years</strong>.</p>
 
-    <div class="mt-16 bg-gray-900 dark:bg-black">
-        <x-footer class="text-gray-200" />
-    </div>
+            <p>Coming from a modest family, <strong>being able to educate myself for free on the web changed my life for the better</strong>. <strong>Transmitting this knowledge to the community was a natural direction in my career.</strong> Therefore, I launched this blog in September 2022 with the goal to be in everyone's Google search.</p>
+        </x-prose>
+    </x-section>
 </x-app>

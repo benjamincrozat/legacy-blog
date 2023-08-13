@@ -2,38 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
-    @apply appearance-none
-}
-
 [x-cloak] {
     @apply !hidden
-}
-
-.content {
-    @apply break-words max-w-none prose
-    prose-a:text-indigo-400
-    prose-blockquote:dark:border-gray-800 prose-blockquote:text-current
-    prose-code:dark:text-current
-    prose-headings:dark:text-white prose-headings:scroll-mt-8
-    prose-hr:dark:border-gray-800
-    prose-strong:text-current
-    prose-thead:dark:border-gray-800
-    prose-tr:dark:border-gray-800
-    dark:text-current
-}
-
-.content iframe {
-    @apply aspect-video w-full h-auto
-}
-
-.btn-green {
-    @apply bg-gradient-to-r from-emerald-400 dark:from-emerald-700 to-emerald-500 dark:to-emerald-800 block !border-0 font-semibold leading-tight sm:mx-auto no-underline px-4 py-3 sm:px-6 rounded shadow-md sm:table text-center !text-emerald-50
-}
-
-.btn-green strong {
-    @apply text-white
 }

@@ -18,7 +18,6 @@ class TrackPageView
             'GET' === $request->method() &&
             ! $request->hasHeader('X-Livewire') &&
             ! str_contains($request->path(), 'horizon') &&
-            ! str_contains($request->path(), 'nova') &&
             ! str_contains($request->path(), 'recommends/')
         ) {
             // I dispatch the request instead as a job of using terminate().

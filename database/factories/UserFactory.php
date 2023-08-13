@@ -14,7 +14,7 @@ class UserFactory extends Factory
     {
         return [
             'name' => fake()->name(),
-            'description' => collect([fake()->paragraph(), null])->random(),
+            'description' => fake()->paragraph(),
             'twitter_url' => fake()->url(),
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
