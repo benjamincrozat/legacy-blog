@@ -8,24 +8,24 @@
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
-            "version": "3.4.0",
+            "version": "3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/algolia/algoliasearch-client-php.git",
-                "reference": "df4508d6ca85700d2df9b556edd18696f37fb2cd"
+                "reference": "cbd07bc0bb7303ff71e238d2d6284ef8469e1d5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/algolia/algoliasearch-client-php/zipball/df4508d6ca85700d2df9b556edd18696f37fb2cd",
-                "reference": "df4508d6ca85700d2df9b556edd18696f37fb2cd",
+                "url": "https://api.github.com/repos/algolia/algoliasearch-client-php/zipball/cbd07bc0bb7303ff71e238d2d6284ef8469e1d5a",
+                "reference": "cbd07bc0bb7303ff71e238d2d6284ef8469e1d5a",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
                 "ext-json": "*",
                 "ext-mbstring": "*",
-                "php": "^7.3 || ^8.0",
-                "psr/http-message": "^1.0 || ^2.0",
+                "php": "^7.2 || ^8.0",
+                "psr/http-message": "^1.0",
                 "psr/log": "^1.0 || ^2.0 || ^3.0",
                 "psr/simple-cache": "^1.0 || ^2.0 || ^3.0"
             },
@@ -76,9 +76,9 @@
             ],
             "support": {
                 "issues": "https://github.com/algolia/algoliasearch-client-php/issues",
-                "source": "https://github.com/algolia/algoliasearch-client-php/tree/3.4.0"
+                "source": "https://github.com/algolia/algoliasearch-client-php/tree/3.3.2"
             },
-            "time": "2023-08-10T09:34:00+00:00"
+            "time": "2022-09-22T08:21:13+00:00"
         },
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -1164,16 +1164,16 @@
         },
         {
             "name": "dragonmantank/cron-expression",
-            "version": "v3.3.3",
+            "version": "v3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dragonmantank/cron-expression.git",
-                "reference": "adfb1f505deb6384dc8b39804c5065dd3c8c8c0a"
+                "reference": "782ca5968ab8b954773518e9e49a6f892a34b2a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dragonmantank/cron-expression/zipball/adfb1f505deb6384dc8b39804c5065dd3c8c8c0a",
-                "reference": "adfb1f505deb6384dc8b39804c5065dd3c8c8c0a",
+                "url": "https://api.github.com/repos/dragonmantank/cron-expression/zipball/782ca5968ab8b954773518e9e49a6f892a34b2a8",
+                "reference": "782ca5968ab8b954773518e9e49a6f892a34b2a8",
                 "shasum": ""
             },
             "require": {
@@ -1213,7 +1213,7 @@
             ],
             "support": {
                 "issues": "https://github.com/dragonmantank/cron-expression/issues",
-                "source": "https://github.com/dragonmantank/cron-expression/tree/v3.3.3"
+                "source": "https://github.com/dragonmantank/cron-expression/tree/v3.3.2"
             },
             "funding": [
                 {
@@ -1221,7 +1221,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-08-10T19:36:49+00:00"
+            "time": "2022-09-10T18:51:20+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -2509,16 +2509,16 @@
         },
         {
             "name": "laravel/horizon",
-            "version": "v5.19.1",
+            "version": "v5.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/horizon.git",
-                "reference": "1987f98084bc3119f78ec3da6283821a2c1acf63"
+                "reference": "1c9b6b3068c64f50ae99a96ca662206c6078a1c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/horizon/zipball/1987f98084bc3119f78ec3da6283821a2c1acf63",
-                "reference": "1987f98084bc3119f78ec3da6283821a2c1acf63",
+                "url": "https://api.github.com/repos/laravel/horizon/zipball/1c9b6b3068c64f50ae99a96ca662206c6078a1c5",
+                "reference": "1c9b6b3068c64f50ae99a96ca662206c6078a1c5",
                 "shasum": ""
             },
             "require": {
@@ -2581,23 +2581,23 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel/horizon/issues",
-                "source": "https://github.com/laravel/horizon/tree/v5.19.1"
+                "source": "https://github.com/laravel/horizon/tree/v5.19.0"
             },
-            "time": "2023-08-09T13:18:44+00:00"
+            "time": "2023-07-14T14:18:51+00:00"
         },
         {
             "name": "laravel/nova",
-            "version": "4.27.10",
+            "version": "4.26.5",
             "source": {
                 "type": "git",
                 "url": "git@github.com:laravel/nova.git",
-                "reference": "1f1bc023213e9defc0b4fb4e5cf244ec63b216ea"
+                "reference": "598ce8abf472f9c79492515f33ab8942424e6e84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-1f1bc023213e9defc0b4fb4e5cf244ec63b216ea-zip-e0b4db.zip",
-                "reference": "1f1bc023213e9defc0b4fb4e5cf244ec63b216ea",
-                "shasum": "83a0ff14a3eec76c638a77f5c05de3ae83ab872d"
+                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-598ce8abf472f9c79492515f33ab8942424e6e84-zip-c3c729.zip",
+                "reference": "598ce8abf472f9c79492515f33ab8942424e6e84",
+                "shasum": "d49b1bf843026bef02f94d61e13820b5620b9568"
             },
             "require": {
                 "brick/money": "^0.5.0|^0.6.0|^0.7.0|^0.8.0",
@@ -2695,9 +2695,9 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/laravel/nova/tree/v4.27.10"
+                "source": "https://github.com/laravel/nova/tree/v4.26.5"
             },
-            "time": "2023-08-11T04:57:43+00:00"
+            "time": "2023-07-14T16:46:26+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -4304,16 +4304,16 @@
         },
         {
             "name": "openspout/openspout",
-            "version": "v4.15.1",
+            "version": "v4.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/openspout/openspout.git",
-                "reference": "ef5396bfd44b3dfa092e78458966d25c7a2c931a"
+                "reference": "907a2ff042741b1f25b6e636d18ce9d7fc4c8333"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openspout/openspout/zipball/ef5396bfd44b3dfa092e78458966d25c7a2c931a",
-                "reference": "ef5396bfd44b3dfa092e78458966d25c7a2c931a",
+                "url": "https://api.github.com/repos/openspout/openspout/zipball/907a2ff042741b1f25b6e636d18ce9d7fc4c8333",
+                "reference": "907a2ff042741b1f25b6e636d18ce9d7fc4c8333",
                 "shasum": ""
             },
             "require": {
@@ -4381,7 +4381,7 @@
             ],
             "support": {
                 "issues": "https://github.com/openspout/openspout/issues",
-                "source": "https://github.com/openspout/openspout/tree/v4.15.1"
+                "source": "https://github.com/openspout/openspout/tree/v4.15.0"
             },
             "funding": [
                 {
@@ -4393,7 +4393,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-08-11T08:32:26+00:00"
+            "time": "2023-06-19T07:48:22+00:00"
         },
         {
             "name": "oscarotero/html-parser",
@@ -5361,16 +5361,16 @@
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "1.7.3",
+            "version": "1.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "3219c6ee25c9ea71e3d9bbaf39c67c9ebd499419"
+                "reference": "b2fe4d22a5426f38e014855322200b97b5362c0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/3219c6ee25c9ea71e3d9bbaf39c67c9ebd499419",
-                "reference": "3219c6ee25c9ea71e3d9bbaf39c67c9ebd499419",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/b2fe4d22a5426f38e014855322200b97b5362c0d",
+                "reference": "b2fe4d22a5426f38e014855322200b97b5362c0d",
                 "shasum": ""
             },
             "require": {
@@ -5413,9 +5413,9 @@
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "support": {
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
-                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.7.3"
+                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.7.2"
             },
-            "time": "2023-08-12T11:01:26+00:00"
+            "time": "2023-05-30T18:13:47+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -6221,16 +6221,16 @@
         },
         {
             "name": "psr/http-message",
-            "version": "2.0",
+            "version": "1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-message.git",
-                "reference": "402d35bcb92c70c026d1a6a9883f06b2ead23d71"
+                "reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-message/zipball/402d35bcb92c70c026d1a6a9883f06b2ead23d71",
-                "reference": "402d35bcb92c70c026d1a6a9883f06b2ead23d71",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/cb6ce4845ce34a8ad9e68117c10ee90a29919eba",
+                "reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba",
                 "shasum": ""
             },
             "require": {
@@ -6239,7 +6239,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -6254,7 +6254,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "https://www.php-fig.org/"
+                    "homepage": "http://www.php-fig.org/"
                 }
             ],
             "description": "Common interface for HTTP messages",
@@ -6268,9 +6268,9 @@
                 "response"
             ],
             "support": {
-                "source": "https://github.com/php-fig/http-message/tree/2.0"
+                "source": "https://github.com/php-fig/http-message/tree/1.1"
             },
-            "time": "2023-04-04T09:54:51+00:00"
+            "time": "2023-04-04T09:50:52+00:00"
         },
         {
             "name": "psr/log",
@@ -12359,27 +12359,27 @@
         },
         {
             "name": "pestphp/pest-plugin-laravel",
-            "version": "v2.2.0",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pestphp/pest-plugin-laravel.git",
-                "reference": "77a2838c1d3b09d147211e76a48987ba9a758279"
+                "reference": "db6295986e3c506dbf37c16ddc64c4a83e96bd75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pestphp/pest-plugin-laravel/zipball/77a2838c1d3b09d147211e76a48987ba9a758279",
-                "reference": "77a2838c1d3b09d147211e76a48987ba9a758279",
+                "url": "https://api.github.com/repos/pestphp/pest-plugin-laravel/zipball/db6295986e3c506dbf37c16ddc64c4a83e96bd75",
+                "reference": "db6295986e3c506dbf37c16ddc64c4a83e96bd75",
                 "shasum": ""
             },
             "require": {
-                "laravel/framework": "^10.18.0|^11.0",
-                "pestphp/pest": "^2.13.0",
+                "laravel/framework": "^10.15.0",
+                "pestphp/pest": "^2.8.3",
                 "php": "^8.1.0"
             },
             "require-dev": {
-                "laravel/dusk": "^7.9.3",
-                "orchestra/testbench": "^8.6.3",
-                "pestphp/pest-dev-tools": "^2.14.0"
+                "laravel/dusk": "^7.8.0",
+                "orchestra/testbench": "^8.5.10",
+                "pestphp/pest-dev-tools": "^2.12.0"
             },
             "type": "library",
             "extra": {
@@ -12412,7 +12412,7 @@
                 "unit"
             ],
             "support": {
-                "source": "https://github.com/pestphp/pest-plugin-laravel/tree/v2.2.0"
+                "source": "https://github.com/pestphp/pest-plugin-laravel/tree/v2.1.0"
             },
             "funding": [
                 {
@@ -12424,7 +12424,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-08-10T15:37:09+00:00"
+            "time": "2023-07-18T11:41:02+00:00"
         },
         {
             "name": "spatie/backtrace",
