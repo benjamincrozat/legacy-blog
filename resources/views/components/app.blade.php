@@ -1,7 +1,3 @@
-@php
-use App\Models\Category;
-@endphp
-
 <html lang="{{ app()->getLocale() }}" class="scroll-smooth">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -59,7 +55,7 @@ use App\Models\Category;
 
             <div class="flex items-center justify-between gap-8">
                 <x-menu trigger="Technologies">
-                    @foreach (Category::whereHas('posts')->get() as $category)
+                    @foreach ($categories as $category)
                         <x-menu-item
                             href="{{ route('categories.show', $category) }}"
                             class="hover:!bg-{{ $category->primary_color }} hover:!text-{{ $category->secondary_color }}"

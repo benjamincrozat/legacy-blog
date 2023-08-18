@@ -15,4 +15,12 @@ class Category extends Model
     {
         return $this->belongsToMany(Post::class);
     }
+
+    public function latest() : BelongsToMany
+    {
+        return $this
+            ->posts()
+            ->select(['posts.id', 'posts.image', 'posts.title', 'posts.slug', 'posts.description', 'posts.created_at', 'posts.updated_at'])
+            ->latest();
+    }
 }

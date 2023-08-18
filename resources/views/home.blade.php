@@ -44,7 +44,7 @@
             </div>
 
             <ul class="container grid grid-cols-2 gap-8 mt-16">
-                @foreach ($category->posts()->limit(4)->get() as $post)
+                @foreach ($category->latest->take(4) as $post)
                     <li>
                         <x-post :post="$post" />
                     </li>

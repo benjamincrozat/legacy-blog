@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Category;
+use Illuminate\Support\Facades\View;
 use Illuminate\Foundation\Application;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
@@ -22,5 +24,14 @@ class AppServiceProvider extends ServiceProvider
         Model::preventAccessingMissingAttributes(! app()->isProduction());
 
         Model::unguard();
+
+        View::composer(['components.app', 'home'], function ($view) {
+            static $categories;
+
+            $view->with([
+                'categories' => $categories ??= Category::with('latest')
+                    ->whereHas('posts')->get(),
+            ]);
+        });
     }
 }
