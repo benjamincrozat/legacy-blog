@@ -5,7 +5,7 @@
 
     <span class="opacity-30">/</span>
 
-    <span class="opacity-50">
+    <span class="opacity-50 line-clamp-1">
         {{ $slot }}
     </span>
 </nav>

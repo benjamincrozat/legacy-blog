@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\Merchant;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -19,6 +20,12 @@ class DatabaseSeeder extends Seeder
             'name' => 'CSS',
             'description' => 'CSS, or Cascading Style Sheets, is a language used to define and apply styles (like fonts, colors, and spacing) to your favorite web pages.',
             'primary_color' => 'blue-600',
+        ]);
+
+        Category::factory()->hasPosts(10)->create([
+            'name' => 'Development Tools',
+            'description' => 'Tools are essential to get the job done. Find and learn how to use the best free and paid ones for your next project.',
+            'primary_color' => 'orange-800',
         ]);
 
         Category::factory()->hasPosts(10)->create([
@@ -142,6 +149,11 @@ MARKDOWN,
         ]);
 
         Category::factory()->hasPosts(10)->create([
+            'name' => 'SEO',
+            'description' => 'Coding is great, but having real users is even better. Learn how to build sustainable long-term traffic with Search Engine Optimization (SEO).',
+        ]);
+
+        Category::factory()->hasPosts(10)->create([
             'name' => 'Tailwind CSS',
             'description' => 'Tailwind CSS is a utility-first framework that will make you fall in love with UI design again, and teach you to always question the status quo.',
             'primary_color' => 'cyan-400',
@@ -152,5 +164,7 @@ MARKDOWN,
             'description' => 'Vue.js is an approachable, performant and versatile framework for building web user interfaces.',
             'primary_color' => 'emerald-400',
         ]);
+
+        Merchant::factory(10)->create();
     }
 }

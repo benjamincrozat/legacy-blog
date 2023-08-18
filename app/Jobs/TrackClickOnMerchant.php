@@ -9,7 +9,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 
-class TrackEvent implements ShouldQueue
+class TrackClickOnMerchant implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
@@ -30,7 +30,7 @@ class TrackEvent implements ShouldQueue
         Http::withToken(config('services.pirsch.access_key'))
             ->retry(3)
             ->post('https://api.pirsch.io/api/v1/event', [
-                'event_name' => 'Clicked on Affiliate',
+                'event_name' => 'Clicked on Merchant',
                 'event_meta' => [
                     'id' => $this->id,
                     'name' => $this->name,

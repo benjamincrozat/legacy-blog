@@ -3,29 +3,24 @@
 namespace App\Models\Concerns;
 
 use App\Str;
+use App\Tree;
 use Spatie\Url\Url;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 
 trait PresentsPostAttributes
 {
-    public function introduction() : Attribute
+    public function tree() : Attribute
     {
         return Attribute::make(
-            fn (?string $value) => Str::markdown($value ?? '')
-        )->shouldCache();
+            fn () => (new Tree)->build($this->content)
+        );
     }
 
     public function content() : Attribute
     {
         return Attribute::make(
-            fn (string $value) => Str::markdown($value ?? '')
-        )->shouldCache();
-    }
-
-    public function conclusion() : Attribute
-    {
-        return Attribute::make(
-            fn (?string $value) => Str::markdown($value ?? '')
+            fn (string $value) => Blade::render(Str::markdown($value ?? ''))
         )->shouldCache();
     }
 

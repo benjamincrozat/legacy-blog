@@ -13,7 +13,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description')->nullable();
-            $table->string('twitter_url')->nullable();
+            $table->string('github_handle')->nullable();
+            $table->string('x_handle')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

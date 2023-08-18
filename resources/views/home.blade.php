@@ -2,19 +2,19 @@
     title="Learn about Laravel and its ecosystem."
 >
     <x-section class="container mt-24 text-center">
-        <x-slot:title class="text-5xl font-bold text-center">
-            <div class="flex items-center justify-center gap-8 mt-8">
-                <x-icon-laravel class="h-[3.25rem]" />
-                <x-icon-livewire class="h-12 mx-2" />
-                <x-icon-alpine-js class="h-8 mr-1" />
-                <x-icon-tailwind-css class="h-12 mr-1" />
-                <x-icon-vue-js class="h-12" />
+        <x-slot:title class="text-3xl font-bold text-center md:text-4xl lg:text-5xl">
+            <div class="flex items-center justify-center gap-4 mt-8 md:gap-8">
+                <x-icon-laravel class="h-10 md:h-[3.25rem]" />
+                <x-icon-livewire class="h-10 mx-2 md:h-12" />
+                <x-icon-alpine-js class="h-6 mr-1 md:h-8" />
+                <x-icon-tailwind-css class="h-8 mr-1 md:h-12" />
+                <x-icon-vue-js class="h-10 md:h-12" />
             </div>
 
-            <div class="mt-8">Learn about Laravel and its ecosystem.</div>
+            <div class="mt-8">Learn about Laravel and its&nbsp;ecosystem.</div>
         </x-slot:title>
 
-        <p class="mt-2 text-3xl">
+        <p class="mt-2 text-xl md:text-2xl lg:text-3xl">
             Join more than <span class="font-semibold text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">20,000</span> readers and skyrocket your web development skills.
         </p>
     </x-section>
@@ -24,7 +24,7 @@
             An endless amount of content for web developers.
         </x-slot:title>
 
-        <ul class="grid grid-cols-3 mt-8 gap-x-8 gap-y-16">
+        <ul class="grid mt-8 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
             @foreach ($categories as $category)
                 <li class="h-full">
                     <x-home.category :category="$category" />
@@ -43,7 +43,7 @@
                 {!! $category->long_description !!}
             </div>
 
-            <ul class="container grid grid-cols-2 gap-8 mt-16">
+            <ul class="container grid gap-8 mt-16 md:grid-cols-2">
                 @foreach ($category->latest->take(4) as $post)
                     <li>
                         <x-post :post="$post" />

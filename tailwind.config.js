@@ -33,16 +33,9 @@ module.exports = {
                                 'font-weight': '700',
                                 'text-decoration': 'none',
                                 '&::before': {
-                                    'color': colors.indigo[400],
                                     'content': '"# "',
-                                    'font-weight': defaultTheme.fontWeight.thin,
-                                    'opacity': '.3',
-                                    'transition': 'opacity 500ms cubic-bezier(.4, 0, .2, 1)',
-                                },
-                                '&:hover': {
-                                    '&::before': {
-                                        'opacity': '1',
-                                    },
+                                    'font-weight': '400',
+                                    'opacity': '.5',
                                 },
                             },
                         },

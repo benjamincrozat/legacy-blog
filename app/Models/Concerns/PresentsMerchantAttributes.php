@@ -3,19 +3,18 @@
 namespace App\Models\Concerns;
 
 use App\Str;
-use Illuminate\Support\Facades\Blade;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 
-trait PresentsCategoryAttributes
+trait PresentsMerchantAttributes
 {
-    public function description() : Attribute
+    public function take() : Attribute
     {
         return Attribute::make(
             fn (?string $value) => $value ? Str::markdown($value ?? '') : null
         )->shouldCache();
     }
 
-    public function longDescription() : Attribute
+    public function keyFeatures() : Attribute
     {
         return Attribute::make(
             fn (?string $value) => $value ? Str::markdown($value ?? '') : null
@@ -25,21 +24,21 @@ trait PresentsCategoryAttributes
     public function content() : Attribute
     {
         return Attribute::make(
-            fn (string $value) => $value ? Blade::render(Str::markdown($value)) : null
-        );
+            fn (?string $value) => $value ? Str::markdown($value ?? '') : null
+        )->shouldCache();
     }
 
-    public function primaryColor() : Attribute
+    public function pros() : Attribute
     {
         return Attribute::make(
-            fn (?string $value) => $value ?? 'black',
-        );
+            fn (?string $value) => $value ? Str::markdown($value ?? '') : null
+        )->shouldCache();
     }
 
-    public function secondaryColor() : Attribute
+    public function cons() : Attribute
     {
         return Attribute::make(
-            fn (?string $value) => $value ?? 'white',
-        );
+            fn (?string $value) => $value ? Str::markdown($value ?? '') : null
+        )->shouldCache();
     }
 }

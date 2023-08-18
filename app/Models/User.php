@@ -2,15 +2,16 @@
 
 namespace App\Models;
 
-use App\Models\Post;
+use Filament\Panel;
 use Illuminate\Support\Str;
 use Illuminate\Notifications\Notifiable;
+use Filament\Models\Contracts\FilamentUser;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements FilamentUser
 {
     use HasFactory, Notifiable;
 
@@ -35,13 +36,23 @@ class User extends Authenticatable
     {
         return Attribute::make(
             fn () => 'https://www.gravatar.com/avatar/' . md5($this->email)
+        );
+    }
+
+    public function description() : Attribute
+    {
+        return Attribute::make(
+            fn (?string $value) => Str::markdown($value ?? '')
         )->shouldCache();
     }
 
-    public function renderedDescription() : Attribute
+    public function canAccessPanel(Panel $panel) : bool
     {
-        return Attribute::make(
-            fn () => Str::markdown($this->description ?? '')
-        )->shouldCache();
+        return true;
+    }
+
+    public function getFilamentAvatarUrl() : ?string
+    {
+        return $this->gravatar;
     }
 }

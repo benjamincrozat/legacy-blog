@@ -30,7 +30,9 @@ class AppServiceProvider extends ServiceProvider
 
             $view->with([
                 'categories' => $categories ??= Category::with('latest')
-                    ->whereHas('posts')->get(),
+                    ->whereHas('posts')
+                    ->orderBy('name')
+                    ->get(),
             ]);
         });
     }

@@ -1,4 +1,4 @@
-<div {{ $attributes->merge(['class' => 'flex items-start gap-8']) }}>
+<div {{ $attributes->merge(['class' => 'flex items-start gap-6 md:gap-8']) }}>
     <img src="{{ $post->image }}" width="64" height="64" alt="{{ $post->title }}" class="flex-shrink-0 object-cover mt-1 aspect-square" />
 
     <div class="flex-grow">

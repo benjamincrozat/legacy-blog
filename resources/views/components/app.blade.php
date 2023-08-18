@@ -65,12 +65,53 @@
                     @endforeach
                 </x-menu>
 
-                <button class="flex items-center gap-2">
-                    For you
-                    <x-heroicon-o-chevron-down class="w-4 h-4 translate-y-px" />
-                </button>
+                <x-menu trigger="For you">
+                    <x-menu-item href="https://benjamincrozat.com/best-web-development-tools">
+                        See all the tools I use
+                    </x-menu-item>
+
+                    <x-menu-item href="https://github.com/benjamincrozat/benjamincrozat.com" target="_blank" rel="nofollow noopener noreferrer">
+                        Hack in my blog's source code
+                    </x-menu-item>
+
+                    <x-menu-item href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=30d&scale=day" target="_blank" rel="nofollow noopener noreferrer">
+                        Look at my blog's live analytics
+                    </x-menu-item>
+                </x-menu>
+
+                @auth
+                    <x-menu :hide-icon="true">
+                        <x-slot:trigger>
+                            <img
+                                src="{{ auth()->user()->gravatar }}?s=64"
+                                width="32"
+                                height="32"
+                                alt="{{ auth()->user()->name }}"
+                                class="rounded-full"
+                            />
+                        </x-slot:trigger>
+
+                        <x-menu-item href="/admin" icon="o-cog">
+                            Admin
+                        </x-menu-item>
+
+                        <x-menu-divider />
+
+                        <x-menu-item
+                            type="submit" form="logout"
+                            class="hover:!bg-red-400"
+                            icon="o-arrow-left-on-rectangle"
+                        >
+                            Log out
+                        </x-menu-item>
+                    </x-menu>
+                @endauth
             </div>
         </nav>
+
+        @auth
+            <form method="POST" action="{{ route('logout') }}" id="logout">@csrf</form>
+        @endauth
 
         <main>
             {{ $slot }}
@@ -80,7 +121,7 @@
             <footer class="container py-8 text-center">
                 <p>Domain name by <a href="#" class="font-medium text-white underline">Namecheap</a>, hosting by <a href="#" class="font-medium text-white underline">DigitalOcean</a>, and tracking by <a href="#" class="font-medium text-white underline">Fathom Analytics</a>.</p>
 
-                <p class="mt-4">Follow me on <a href="https://github.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer" class="font-medium text-white underline">GitHub</a> and <a href="https://x.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer" class="font-medium text-white underline">X</a>. For inquiries, <a href="mailto:hello@benjamincrozat.com" class="font-medium text-white underline">send me an email</a>.</p>
+                <p class="mt-4">Follow me on <a href="https://github.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer" class="font-medium text-white underline">GitHub</a> and <a href="https://x.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer" class="font-medium text-white underline">X</a>. For inquiries, <a href="mailto:hello@benjamincrozat.com" class="font-medium text-white underline">send&nbsp;me&nbsp;an&nbsp;email</a>.</p>
 
                 <p class="mt-16 text-xs tracking-widest uppercase opacity-50">© {{ config('app.name') }} {{ date('Y') }}. All rights reserved.</p>
             </footer>

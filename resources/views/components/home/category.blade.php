@@ -3,14 +3,14 @@
         {{ $category->name }}
     </h3>
 
-    <p class="flex-grow mt-4">
+    <div class="flex-grow mt-4">
         {!! $category->description !!}
-    </p>
+    </div>
 
     <p class="mt-6">
         <x-button
             href="{{ route('categories.show', $category) }}"
-            class="bg-{{ $category->primary_color }} text-{{ $category->secondary_color }}"
+            class="bg-{{ $category->primary_color }} text-{{ $category->secondary_color }} w-full"
         >
             Read about {{ $category->name }}
         </x-button>
