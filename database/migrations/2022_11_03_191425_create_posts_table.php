@@ -15,18 +15,14 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('title');
             $table->string('slug')->unique();
-            $table->text('introduction')->nullable();
             $table->text('content');
-            $table->text('conclusion')->nullable();
             $table->text('description')->nullable();
             $table->text('teaser')->nullable();
             $table->string('community_link')->nullable();
             $table->boolean('promotes_affiliate_links')->default(false);
+            $table->boolean('is_published')->default(false);
             $table->unsignedBigInteger('sessions')->default(0);
             $table->timestamps();
-            $table->datetime('modified_at')->nullable();
-
-            $table->fullText(['content', 'description']);
         });
     }
 
