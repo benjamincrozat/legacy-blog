@@ -4,7 +4,9 @@ namespace App\Providers\Filament;
 
 use Filament\Panel;
 use Filament\PanelProvider;
+use Filament\Navigation\MenuItem;
 use Filament\Support\Colors\Color;
+use Filament\Navigation\NavigationItem;
 use Filament\Http\Middleware\Authenticate;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Cookie\Middleware\EncryptCookies;
@@ -45,6 +47,17 @@ class AdminPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ])
-            ->sidebarCollapsibleOnDesktop();
+            ->sidebarCollapsibleOnDesktop()
+            ->navigationItems([
+                NavigationItem::make('Go to site')
+                    ->icon('heroicon-o-globe-alt')
+                    ->url(config('app.url')),
+            ])
+            ->userMenuItems([
+                MenuItem::make()
+                    ->label('Go to site')
+                    ->url(config('app.url'))
+                    ->icon('heroicon-o-globe-alt'),
+            ]);
     }
 }
