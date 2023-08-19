@@ -35,14 +35,14 @@ class User extends Authenticatable implements FilamentUser
     public function gravatar() : Attribute
     {
         return Attribute::make(
-            fn () => 'https://www.gravatar.com/avatar/' . md5($this->email)
+            fn () : string => 'https://www.gravatar.com/avatar/' . md5($this->email)
         );
     }
 
     public function description() : Attribute
     {
         return Attribute::make(
-            fn (?string $value) => Str::markdown($value ?? '')
+            fn (?string $value) : string => Str::markdown($value ?? '')
         )->shouldCache();
     }
 

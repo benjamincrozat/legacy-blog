@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\View\View;
+use Illuminate\Support\Collection;
 
 class ShowPostController extends Controller
 {
@@ -13,7 +14,7 @@ class ShowPostController extends Controller
             'recommended' => cache()->remember(
                 "post_{$post->id}_recommendations",
                 24 * 60 * 60, // 24 hours.
-                fn () => $post->recommendations,
+                fn () : Collection => $post->recommendations,
             ),
         ]);
     }

@@ -24,7 +24,7 @@ class Str extends \Illuminate\Support\Str
         $options = array_merge([
             'default_attributes' => [
                 Heading::class => [
-                    'id' => fn (Heading $heading) => Str::slug(
+                    'id' => fn (Heading $heading) : string => Str::slug(
                         static::childrenToText($heading)
                     ),
                 ],

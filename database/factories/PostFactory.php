@@ -18,7 +18,7 @@ class PostFactory extends Factory
             'user_id' => User::factory(),
             'image' => fake()->imageUrl(),
             'title' => fake()->sentence(),
-            'slug' => fn ($attributes) => Str::slug($attributes['title']),
+            'slug' => fn ($attributes) : string => Str::slug($attributes['title']),
             'introduction' => fake()->paragraph(),
             'content' => File::get(resource_path('markdown/benchmark.md')),
             'conclusion' => fake()->paragraph(),
@@ -31,6 +31,6 @@ class PostFactory extends Factory
 
     public function asCommunityLink() : static
     {
-        return $this->state(fn () => ['community_link' => fake()->url()]);
+        return $this->state(fn () : array => ['community_link' => fake()->url()]);
     }
 }

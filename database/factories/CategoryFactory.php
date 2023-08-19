@@ -15,7 +15,7 @@ class CategoryFactory extends Factory
     {
         return [
             'name' => ucfirst(fake()->word()),
-            'slug' => fn (array $attributes) => Str::slug($attributes['name']),
+            'slug' => fn (array $attributes) : string => Str::slug($attributes['name']),
             'description' => fake()->paragraph(),
             'long_description' => fake()->paragraph(),
             'content' => File::get(resource_path('markdown/benchmark.md')),

@@ -13,7 +13,7 @@ class AppServiceProvider extends ServiceProvider
 {
     public function register() : void
     {
-        $this->app->bind(RecommendClient::class, fn (Application $app) => RecommendClient::create(
+        $this->app->bind(RecommendClient::class, fn (Application $app) : RecommendClient => RecommendClient::create(
             $app['config']->get('services.algolia.id'),
             $app['config']->get('services.algolia.secret')
         ));
