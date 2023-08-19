@@ -70,7 +70,7 @@ class PostResource extends Resource
 
                         Forms\Components\Toggle::make('promotes_affiliate_links')
                             ->label('Is a commercial article')
-                            ->helperText('This article promotes affiliate links. If checked, the UI will focus on conversion.'),
+                            ->helperText('If checked, the UI will focus on conversion.'),
 
                         Forms\Components\Toggle::make('is_published')
                             ->label('Is published')
