@@ -23,45 +23,80 @@ class PostResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('user_id')
-                    ->relationship('user', 'name')
-                    ->required(),
+                Forms\Components\Section::make('Content')
+                    ->schema([
+                        Forms\Components\TextInput::make('title')
+                            ->required()
+                            ->maxLength(255),
 
-                Forms\Components\TextInput::make('image')
-                    ->url()
-                    ->maxLength(255),
+                        Forms\Components\TextInput::make('slug')
+                            ->required()
+                            ->maxLength(255)
+                            ->unique(Post::class, 'slug', ignoreRecord: true),
 
-                Forms\Components\TextInput::make('title')
-                    ->required()
-                    ->maxLength(255),
+                        Forms\Components\MarkdownEditor::make('content')
+                            ->required()
+                            ->maxLength(65535)
+                            ->columnSpanFull(),
 
-                Forms\Components\TextInput::make('slug')
-                    ->required()
-                    ->maxLength(255),
+                        Forms\Components\Textarea::make('description')
+                            ->maxLength(65535)
+                            ->columnSpanFull(),
 
-                Forms\Components\MarkdownEditor::make('content')
-                    ->required()
-                    ->maxLength(65535),
+                        Forms\Components\MarkdownEditor::make('teaser')
+                            ->maxLength(65535)
+                            ->columnSpanFull(),
+                    ])
+                    ->collapsible()
+                    ->columnSpan([
+                        'md' => 1,
+                        'lg' => 2,
+                    ]),
 
-                Forms\Components\Textarea::make('description')
-                    ->maxLength(65535),
+                Forms\Components\Section::make('Metadata')
+                    ->schema([
+                        Forms\Components\Select::make('user_id')
+                            ->relationship('user', 'name')
+                            ->required(),
 
-                Forms\Components\MarkdownEditor::make('teaser')
-                    ->maxLength(65535),
+                        Forms\Components\TextInput::make('image')
+                            ->url()
+                            ->maxLength(255),
 
-                Forms\Components\TextInput::make('community_link')
-                    ->url()
-                    ->maxLength(255),
+                        Forms\Components\TextInput::make('community_link')
+                            ->url()
+                            ->maxLength(255)
+                            ->helperText("When filled, the article will have a distinct appearance that makes it clear it's shared content."),
 
-                Forms\Components\Toggle::make('promotes_affiliate_links')
-                    ->label('Commercial')
-                    ->required(),
+                        Forms\Components\Toggle::make('promotes_affiliate_links')
+                            ->label('Is a commercial article')
+                            ->helperText('This article promotes affiliate links. If checked, the UI will focus on conversion.'),
 
-                Forms\Components\Toggle::make('is_published')
-                    ->label('Published')
-                    ->required(),
+                        Forms\Components\Toggle::make('is_published')
+                            ->label('Is published')
+                            ->helperText('When unchecked, the article is considered as a draft.'),
+
+                        Forms\Components\Group::make()
+                            ->schema([
+                                Forms\Components\Placeholder::make('created_at')
+                                    ->label('Created at')
+                                    ->content(fn (Post $record) : ?string => $record->created_at?->isoFormat('LLL')),
+
+                                Forms\Components\Placeholder::make('updated_at')
+                                    ->label('Last modified at')
+                                    ->content(fn (Post $record) : ?string => $record->updated_at?->isoFormat('LLL')),
+                            ])
+                            ->hidden(fn (?Post $record) => null === $record),
+                    ])
+                    ->collapsible()
+                    ->columnSpan([
+                        'lg' => 1,
+                    ]),
             ])
-            ->columns(1);
+            ->columns([
+                'md' => 1,
+                'lg' => 3,
+            ]);
     }
 
     public static function table(Table $table) : Table
