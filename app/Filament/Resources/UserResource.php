@@ -14,8 +14,6 @@ class UserResource extends Resource
 {
     protected static ?string $model = User::class;
 
-    protected static ?string $navigationGroup = 'Community';
-
     protected static ?string $navigationIcon = 'heroicon-o-users';
 
     public static function form(Form $form) : Form
@@ -27,8 +25,7 @@ class UserResource extends Resource
                     ->maxLength(255),
 
                 Forms\Components\MarkdownEditor::make('description')
-                    ->maxLength(65535)
-                    ->columnSpanFull(),
+                    ->maxLength(65535),
 
                 Forms\Components\TextInput::make('github_handle')
                     ->maxLength(255),
@@ -40,7 +37,13 @@ class UserResource extends Resource
                     ->email()
                     ->required()
                     ->maxLength(255),
-            ]);
+
+                Forms\Components\TextInput::make('password')
+                    ->password()
+                    ->maxLength(255)
+                    ->hiddenOn('edit'),
+            ])
+            ->columns(1);
     }
 
     public static function table(Table $table) : Table
@@ -77,6 +80,7 @@ class UserResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -100,6 +104,8 @@ class UserResource extends Resource
     {
         return [
             'index' => Pages\ListUsers::route('/'),
+            'create' => Pages\CreateUser::route('/create'),
+            'edit' => Pages\EditUser::route('/{record}/edit'),
         ];
     }
 }
