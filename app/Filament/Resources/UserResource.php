@@ -90,6 +90,7 @@ class UserResource extends Resource
             ->emptyStateActions([
                 Tables\Actions\CreateAction::make(),
             ])
+            ->defaultSort('id', 'desc')
             ->paginated([50, 100, 'all']);
     }
 
