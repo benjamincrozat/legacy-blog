@@ -33,14 +33,12 @@ I feel obligated to mention that my relative success is not correlated to my tec
 This is a small project. It certainly won't teach you how to maintain apps at huge scales. That being said, you can learn about:
 - Simplicity. Most developers underestimate its benefits.
 - Using the GPT API from OpenAI to create features that were unthinkable not so long ago.
-- Creating admin pages based on Laravel Nova. (I'm working on Filament's integration in the _feature/filament_ branch.)
+- Creating admin pages based on Filament.
 - Testing. A crucial part of ensuring everything stays stable. Because I can be forgetful, distracted and overconfident sometimes. These are flaws of human beings that can easily be mitigated by machines.
 - How to use various frontend technologies such as Livewire v3 + Volt, Alpine.js, and Tailwind CSS.
 - But you will also learn what you should avoid. This codebase is far from what I consider perfect.
 
 ## Requirements
-
-**This project requires Laravel Nova, which is a paid package. For now, I don't know how to make it optional, but meanwhile, you can switch to the *feature/filament* branch.**
 
 - PHP 8.2+
 - MySQL 8+
@@ -65,7 +63,7 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-Install the dependencies (if you don't have a Laravel Nova license, switch to the *feature/filament* branch):
+Install the dependencies:
 
 ```bash
 composer install
