@@ -39,13 +39,10 @@ class PostResource extends Resource
                             ->maxLength(65535)
                             ->columnSpanFull(),
 
-                        Forms\Components\Textarea::make('description')
-                            ->maxLength(65535)
-                            ->columnSpanFull(),
-
                         Forms\Components\MarkdownEditor::make('teaser')
                             ->maxLength(65535)
-                            ->columnSpanFull(),
+                            ->columnSpanFull()
+                            ->helperText('An overview of the article used in the feed with the intent to entice readers to click through.'),
                     ])
                     ->collapsible()
                     ->columnSpan([
@@ -62,6 +59,11 @@ class PostResource extends Resource
                         Forms\Components\TextInput::make('image')
                             ->url()
                             ->maxLength(255),
+
+                        Forms\Components\Textarea::make('description')
+                            ->maxLength(65535)
+                            ->rows(5)
+                            ->helperText('A short description used on the blog, social previews, and Google.'),
 
                         Forms\Components\TextInput::make('community_link')
                             ->url()
