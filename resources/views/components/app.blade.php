@@ -91,7 +91,7 @@
                             />
                         </x-slot:trigger>
 
-                        <x-menu-item href="/admin" icon="o-cog">
+                        <x-menu-item href="/admin/posts" icon="o-cog">
                             Admin
                         </x-menu-item>
 
