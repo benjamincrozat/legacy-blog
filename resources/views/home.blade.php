@@ -19,19 +19,21 @@
         </p>
     </x-section>
 
-    <x-section class="container mt-32">
-        <x-slot:title class="text-center">
-            An endless amount of content for web developers.
-        </x-slot:title>
+    @if ($categories->isNotEmpty())
+        <x-section class="container mt-32">
+            <x-slot:title class="text-center">
+                An endless amount of content for web developers.
+            </x-slot:title>
 
-        <ul class="grid mt-8 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-            @foreach ($categories as $category)
-                <li class="h-full">
-                    <x-home.category :category="$category" />
-                </li>
-            @endforeach
-        </ul>
-    </x-section>
+            <ul class="grid mt-8 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+                @foreach ($categories as $category)
+                    <li class="h-full">
+                        <x-home.category :category="$category" />
+                    </li>
+                @endforeach
+            </ul>
+        </x-section>
+    @endif
 
     @foreach ($categories as $category)
         <x-section class="mt-32">
