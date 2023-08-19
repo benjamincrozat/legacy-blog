@@ -9,6 +9,7 @@ use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Database\Eloquent\Model;
 use App\Filament\Resources\UserResource\Pages;
 
 class UserResource extends Resource
@@ -72,10 +73,12 @@ class UserResource extends Resource
 
                     Tables\Columns\Layout\Stack::make([
                         Tables\Columns\TextColumn::make('github_handle')
+                            ->searchable()
                             ->icon('icon-github')
                             ->label('GitHub'),
 
                         Tables\Columns\TextColumn::make('x_handle')
+                            ->searchable()
                             ->icon('icon-x')
                             ->label('X'),
                     ])
@@ -100,6 +103,20 @@ class UserResource extends Resource
                 Tables\Actions\CreateAction::make(),
             ])
             ->defaultSort('id', 'desc');
+    }
+
+    public static function getGloballySearchableAttributes() : array
+    {
+        return ['name', 'email', 'description', 'github_handle', 'x_handle'];
+    }
+
+    public static function getGlobalSearchResultDetails(Model $record) : array
+    {
+        return [
+            'Email' => $record->email,
+            'GitHub' => $record->github_handle,
+            'X' => $record->x_handle,
+        ];
     }
 
     public static function getRelations() : array

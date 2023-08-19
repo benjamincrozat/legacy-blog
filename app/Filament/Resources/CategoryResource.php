@@ -20,25 +20,53 @@ class CategoryResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('slug')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\Textarea::make('description')
-                    ->maxLength(65535)
-                    ->columnSpanFull(),
-                Forms\Components\Textarea::make('long_description')
-                    ->maxLength(65535)
-                    ->columnSpanFull(),
-                Forms\Components\Textarea::make('content')
-                    ->maxLength(65535)
-                    ->columnSpanFull(),
-                Forms\Components\TextInput::make('primary_color')
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('secondary_color')
-                    ->maxLength(255),
+                Forms\Components\Section::make('Content')
+                    ->schema([
+                        Forms\Components\TextInput::make('name')
+                            ->required()
+                            ->maxLength(255),
+
+                        Forms\Components\TextInput::make('slug')
+                            ->required()
+                            ->maxLength(255),
+
+                        Forms\Components\MarkdownEditor::make('description')
+                            ->maxLength(65535)
+                            ->columnSpanFull(),
+
+                        Forms\Components\MarkdownEditor::make('long_description')
+                            ->maxLength(65535)
+                            ->columnSpanFull(),
+
+                        Forms\Components\MarkdownEditor::make('content')
+                            ->maxLength(65535)
+                            ->columnSpanFull(),
+                    ])
+                    ->columns(2)
+                    ->columnSpan([
+                        'md' => 1,
+                        'lg' => 2,
+                    ])
+                    ->collapsible(),
+
+                Forms\Components\Section::make('Colors')
+                    ->schema([
+                        Forms\Components\TextInput::make('primary_color')
+                            ->label('Primary')
+                            ->maxLength(255),
+
+                        Forms\Components\TextInput::make('secondary_color')
+                            ->label('Secondary')
+                            ->maxLength(255),
+                    ])
+                    ->collapsible()
+                    ->columnSpan([
+                        'lg' => 1,
+                    ]),
+            ])
+            ->columns([
+                'md' => 1,
+                'lg' => 3,
             ]);
     }
 
@@ -46,22 +74,27 @@ class CategoryResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('slug')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('primary_color')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('secondary_color')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\Layout\Split::make([
+                    Tables\Columns\Layout\Stack::make([
+                        Tables\Columns\TextColumn::make('name')
+                            ->searchable()
+                            ->sortable()
+                            ->weight('medium'),
+
+                        Tables\Columns\TextColumn::make('slug')
+                            ->searchable()
+                            ->sortable()
+                            ->color('gray'),
+                    ]),
+
+                    Tables\Columns\Layout\Stack::make([
+                        Tables\Columns\TextColumn::make('primary_color')
+                            ->searchable(),
+
+                        Tables\Columns\TextColumn::make('secondary_color')
+                            ->searchable(),
+                    ]),
+                ]),
             ])
             ->filters([
                 //
@@ -80,6 +113,11 @@ class CategoryResource extends Resource
             ->emptyStateActions([
                 Tables\Actions\CreateAction::make(),
             ]);
+    }
+
+    public static function getGloballySearchableAttributes() : array
+    {
+        return ['name', 'slug', 'description', 'long_description', 'content', 'primary_color', 'secondary_color'];
     }
 
     public static function getRelations() : array

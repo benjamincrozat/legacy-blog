@@ -17,6 +17,7 @@ class TrackPageView
             config('services.pirsch.access_key') &&
             'GET' === $request->method() &&
             ! $request->hasHeader('X-Livewire') &&
+            ! str_contains($request->path(), 'admin') &&
             ! str_contains($request->path(), 'horizon') &&
             ! str_contains($request->path(), 'recommends/')
         ) {

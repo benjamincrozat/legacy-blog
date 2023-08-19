@@ -9,6 +9,7 @@ use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
 use Filament\Tables\Columns\ViewColumn;
+use Illuminate\Database\Eloquent\Model;
 use App\Filament\Resources\PostResource\Pages;
 
 class PostResource extends Resource
@@ -54,7 +55,9 @@ class PostResource extends Resource
                     ->schema([
                         Forms\Components\Select::make('user_id')
                             ->relationship('user', 'name')
-                            ->required(),
+                            ->required()
+                            ->searchable()
+                            ->default(auth()->id()),
 
                         Forms\Components\TextInput::make('image')
                             ->url()
@@ -116,7 +119,9 @@ class PostResource extends Resource
                     ->searchable()
                     ->sortable(),
 
-                ViewColumn::make('')->view('filament.tables.columns.post-overview'),
+                ViewColumn::make('')
+                    ->view('filament.tables.columns.post-overview')
+                    ->searchable(['title', 'slug']),
             ])
             ->filters([
                 //
@@ -136,6 +141,18 @@ class PostResource extends Resource
                 Tables\Actions\CreateAction::make(),
             ])
             ->defaultSort('id', 'desc');
+    }
+
+    public static function getGloballySearchableAttributes() : array
+    {
+        return ['title', 'slug', 'user.name', 'content', 'description', 'teaser'];
+    }
+
+    public static function getGlobalSearchResultDetails(Model $record) : array
+    {
+        return [
+            'Author' => $record->user->name,
+        ];
     }
 
     public static function getRelations() : array
