@@ -8,6 +8,7 @@ use Filament\Tables;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
+use Illuminate\Support\Facades\Hash;
 use App\Filament\Resources\UserResource\Pages;
 
 class UserResource extends Resource
@@ -43,7 +44,9 @@ class UserResource extends Resource
                 Forms\Components\TextInput::make('password')
                     ->password()
                     ->maxLength(255)
-                    ->hiddenOn('edit'),
+                    ->dehydrateStateUsing(fn (string $state) : string => Hash::make($state))
+                    ->dehydrated(fn (?string $state) : bool => filled($state))
+                    ->required(fn (string $operation) : bool => 'create' === $operation),
             ])
             ->columns(1);
     }
