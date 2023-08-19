@@ -28,10 +28,12 @@ class UserResource extends Resource
                     ->maxLength(65535),
 
                 Forms\Components\TextInput::make('github_handle')
-                    ->maxLength(255),
+                    ->maxLength(255)
+                    ->label('GitHub'),
 
                 Forms\Components\TextInput::make('x_handle')
-                    ->maxLength(255),
+                    ->maxLength(255)
+                    ->label('X'),
 
                 Forms\Components\TextInput::make('email')
                     ->email()
