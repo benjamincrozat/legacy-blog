@@ -22,45 +22,60 @@ class MerchantResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('icon')
                     ->maxLength(255),
+
                 Forms\Components\TextInput::make('screenshot')
                     ->maxLength(255),
+
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
+
                 Forms\Components\TextInput::make('slug')
                     ->required()
                     ->maxLength(255),
+
                 Forms\Components\TextInput::make('link')
                     ->required()
                     ->maxLength(255),
+
                 Forms\Components\Textarea::make('take')
                     ->maxLength(65535)
                     ->columnSpanFull(),
+
                 Forms\Components\TextInput::make('rating')
                     ->required()
                     ->numeric()
                     ->default(0),
+
                 Forms\Components\Textarea::make('pricing')
                     ->maxLength(65535)
                     ->columnSpanFull(),
+
                 Forms\Components\TextInput::make('annual_discount')
                     ->maxLength(255),
+
                 Forms\Components\TextInput::make('guarantee')
                     ->maxLength(255),
+
                 Forms\Components\Textarea::make('content')
                     ->maxLength(65535)
                     ->columnSpanFull(),
+
                 Forms\Components\Textarea::make('key_features')
                     ->maxLength(65535)
                     ->columnSpanFull(),
+
                 Forms\Components\Textarea::make('pros')
                     ->maxLength(65535)
                     ->columnSpanFull(),
+
                 Forms\Components\Textarea::make('cons')
                     ->maxLength(65535)
                     ->columnSpanFull(),
+
                 Forms\Components\TextInput::make('highlight_title')
                     ->maxLength(255),
+
                 Forms\Components\Textarea::make('highlight_text')
                     ->maxLength(65535)
                     ->columnSpanFull(),
@@ -71,33 +86,14 @@ class MerchantResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('icon')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('screenshot')
-                    ->searchable(),
+                Tables\Columns\ImageColumn::make('icon')
+                    ->circular(),
+
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('slug')
-                    ->searchable(),
+
                 Tables\Columns\TextColumn::make('link')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('rating')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('annual_discount')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('guarantee')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('highlight_title')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //
