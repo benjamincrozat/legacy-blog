@@ -77,17 +77,20 @@ class UserResource extends Resource
                         Tables\Columns\TextColumn::make('email')
                             ->searchable()
                             ->sortable()
+                            ->copyable()
                             ->color('gray'),
                     ]),
 
                     Tables\Columns\Layout\Stack::make([
                         Tables\Columns\TextColumn::make('github_handle')
                             ->searchable()
+                            ->copyable()
                             ->icon('icon-github')
                             ->label('GitHub'),
 
                         Tables\Columns\TextColumn::make('x_handle')
                             ->searchable()
+                            ->copyable()
                             ->icon('icon-x')
                             ->label('X'),
                     ])

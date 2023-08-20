@@ -9,12 +9,10 @@ use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
 use Filament\Tables\Filters\Filter;
-use Filament\Tables\Columns\ViewColumn;
 use Illuminate\Database\Eloquent\Model;
 use Filament\Tables\Filters\SelectFilter;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\PostResource\Pages;
-use App\Filament\Resources\PostResource\RelationManagers\CategoriesRelationManager;
 
 class PostResource extends Resource
 {
@@ -108,6 +106,10 @@ class PostResource extends Resource
                         ->url()
                         ->maxLength(255),
 
+                    Forms\Components\Select::make('Categories')
+                        ->relationship('categories', 'name')
+                        ->multiple(),
+
                     Forms\Components\Textarea::make('description')
                         ->maxLength(65535)
                         ->rows(5)
@@ -159,9 +161,14 @@ class PostResource extends Resource
                 ->searchable()
                 ->sortable(),
 
-            ViewColumn::make('')
-                ->view('filament.tables.columns.post-overview')
-                ->searchable(['title', 'slug']),
+            Tables\Columns\ImageColumn::make('image')
+                ->circular()
+                ->label(''),
+
+            Tables\Columns\TextColumn::make('title')
+                ->sortable()
+                ->searchable()
+                ->description(fn (Post $record) : string => $record->slug),
 
             Tables\Columns\TextColumn::make('Status')
                 ->badge()
@@ -187,7 +194,7 @@ class PostResource extends Resource
     public static function getRelations() : array
     {
         return [
-            CategoriesRelationManager::class,
+            //
         ];
     }
 
