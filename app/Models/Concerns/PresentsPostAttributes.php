@@ -20,7 +20,7 @@ trait PresentsPostAttributes
     public function content() : Attribute
     {
         return Attribute::make(
-            fn (string $value) : string => Blade::render(Str::markdown($value ?? ''))
+            fn (string $value) : string => Str::markdown(Blade::render($value ?? ''))
         )->shouldCache();
     }
 
