@@ -11,21 +11,21 @@ trait PresentsCategoryAttributes
     public function description() : Attribute
     {
         return Attribute::make(
-            fn (?string $value) : string => $value ? Str::markdown($value ?? '') : null
+            fn (?string $value) : ?string => $value ? Str::markdown($value ?? '') : null
         )->shouldCache();
     }
 
     public function longDescription() : Attribute
     {
         return Attribute::make(
-            fn (?string $value) : string => $value ? Str::markdown($value ?? '') : null
+            fn (?string $value) : ?string => $value ? Str::markdown($value ?? '') : null
         )->shouldCache();
     }
 
     public function content() : Attribute
     {
         return Attribute::make(
-            fn (string $value) : string => $value ? Blade::render(Str::markdown($value)) : null
+            fn (?string $value) : ?string => $value ? Blade::render(Str::markdown($value)) : null
         );
     }
 
