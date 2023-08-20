@@ -9,6 +9,7 @@ use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
 use App\Filament\Resources\CategoryResource\Pages;
+use App\Filament\Resources\CategoryResource\RelationManagers\PostsRelationManager;
 
 class CategoryResource extends Resource
 {
@@ -133,7 +134,7 @@ class CategoryResource extends Resource
     public static function getRelations() : array
     {
         return [
-            //
+            PostsRelationManager::class,
         ];
     }
 
