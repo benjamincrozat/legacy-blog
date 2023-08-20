@@ -54,16 +54,18 @@
             </a>
 
             <div class="flex items-center justify-between gap-8">
-                <x-menu trigger="Topics">
-                    @foreach ($categories as $category)
-                        <x-menu-item
-                            href="{{ route('categories.show', $category) }}"
-                            class="hover:!bg-{{ $category->primary_color }} hover:!text-{{ $category->secondary_color }}"
-                        >
-                            {{ $category->name }}
-                        </x-menu-item>
-                    @endforeach
-                </x-menu>
+                @if ($categories->isNotEmpty())
+                    <x-menu trigger="Topics">
+                        @foreach ($categories as $category)
+                            <x-menu-item
+                                href="{{ route('categories.show', $category) }}"
+                                class="hover:!bg-{{ $category->primary_color }} hover:!text-{{ $category->secondary_color }}"
+                            >
+                                {{ $category->name }}
+                            </x-menu-item>
+                        @endforeach
+                    </x-menu>
+                @endif
 
                 <x-menu trigger="For you">
                     <x-menu-item href="https://benjamincrozat.com/best-web-development-tools">
