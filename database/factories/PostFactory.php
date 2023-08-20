@@ -22,7 +22,9 @@ class PostFactory extends Factory
             'content' => File::get(resource_path('markdown/benchmark.md')),
             'description' => fake()->sentences(2, true),
             'teaser' => fake()->paragraph(),
-            'promotes_affiliate_links' => fake()->boolean(),
+            'commercial' => fake()->boolean(),
+            'community_link' => collect([fake()->url(), null])->random(),
+            'is_published' => fake()->boolean(),
             'sessions' => fake()->randomNumber(),
         ];
     }

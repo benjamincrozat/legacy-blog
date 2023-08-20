@@ -8,8 +8,10 @@ use Filament\Tables;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
+use Filament\Tables\Filters\Filter;
 use Filament\Tables\Columns\ViewColumn;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\PostResource\Pages;
 
 class PostResource extends Resource
@@ -73,7 +75,7 @@ class PostResource extends Resource
                             ->maxLength(255)
                             ->helperText("When filled, the article will have a distinct appearance that makes it clear it's shared content."),
 
-                        Forms\Components\Toggle::make('promotes_affiliate_links')
+                        Forms\Components\Toggle::make('commercial')
                             ->label('Is a commercial article')
                             ->helperText('If checked, the UI will focus on conversion.'),
 
@@ -122,9 +124,19 @@ class PostResource extends Resource
                 ViewColumn::make('')
                     ->view('filament.tables.columns.post-overview')
                     ->searchable(['title', 'slug']),
+
+                Tables\Columns\TextColumn::make('Status')
+                    ->badge()
+                    ->getStateUsing(fn (Post $record) : string => $record->is_published ? 'Published' : 'Draft')
+                    ->colors([
+                        'success' => 'Published',
+                    ]),
             ])
             ->filters([
-                //
+                Filter::make('Commercial')
+                    ->query(fn (Builder $query) : Builder => $query->where('commercial', true)),
+                Filter::make('Community Link')
+                    ->query(fn (Builder $query) : Builder => $query->whereNotNull('community_link')),
             ])
             ->actions([
                 Tables\Actions\EditAction::make()->button()->outlined()->icon(''),

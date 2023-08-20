@@ -87,6 +87,7 @@ class MerchantResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\ImageColumn::make('icon')
+                    ->label('')
                     ->circular(),
 
                 Tables\Columns\TextColumn::make('name')

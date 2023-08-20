@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->text('teaser')->nullable();
             $table->string('community_link')->nullable();
-            $table->boolean('promotes_affiliate_links')->default(false);
+            $table->boolean('commercial')->default(false);
             $table->boolean('is_published')->default(false);
             $table->unsignedBigInteger('sessions')->default(0);
             $table->timestamps();
