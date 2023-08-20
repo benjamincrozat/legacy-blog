@@ -54,7 +54,7 @@
             </a>
 
             <div class="flex items-center justify-between gap-8">
-                <x-menu trigger="Technologies">
+                <x-menu trigger="Topics">
                     @foreach ($categories as $category)
                         <x-menu-item
                             href="{{ route('categories.show', $category) }}"
