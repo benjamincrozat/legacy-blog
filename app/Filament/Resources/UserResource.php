@@ -24,34 +24,43 @@ class UserResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->required()
-                    ->maxLength(255),
+                Forms\Components\Section::make('Information')
+                    ->schema([
+                        Forms\Components\TextInput::make('name')
+                            ->required()
+                            ->maxLength(255)
+                            ->columnSpanFull(),
 
-                Forms\Components\MarkdownEditor::make('description')
-                    ->maxLength(65535),
+                        Forms\Components\MarkdownEditor::make('description')
+                            ->maxLength(65535)
+                            ->columnSpanFull(),
 
-                Forms\Components\TextInput::make('github_handle')
-                    ->maxLength(255)
-                    ->label('GitHub'),
+                        Forms\Components\TextInput::make('github_handle')
+                            ->maxLength(255)
+                            ->label('GitHub'),
 
-                Forms\Components\TextInput::make('x_handle')
-                    ->maxLength(255)
-                    ->label('X'),
+                        Forms\Components\TextInput::make('x_handle')
+                            ->maxLength(255)
+                            ->label('X'),
+                    ])
+                    ->columns(2),
 
-                Forms\Components\TextInput::make('email')
-                    ->email()
-                    ->required()
-                    ->maxLength(255),
+                Forms\Components\Section::make('Credentials')
+                    ->schema([
+                        Forms\Components\TextInput::make('email')
+                            ->email()
+                            ->required()
+                            ->maxLength(255),
 
-                Forms\Components\TextInput::make('password')
-                    ->password()
-                    ->maxLength(255)
-                    ->dehydrateStateUsing(fn (string $state) : string => Hash::make($state))
-                    ->dehydrated(fn (?string $state) : bool => filled($state))
-                    ->required(fn (string $operation) : bool => 'create' === $operation),
-            ])
-            ->columns(1);
+                        Forms\Components\TextInput::make('password')
+                            ->password()
+                            ->maxLength(255)
+                            ->dehydrateStateUsing(fn (string $state) : string => Hash::make($state))
+                            ->dehydrated(fn (?string $state) : bool => filled($state))
+                            ->required(fn (string $operation) : bool => 'create' === $operation),
+                    ])
+                    ->columns(2),
+            ]);
     }
 
     public static function table(Table $table) : Table
