@@ -25,7 +25,7 @@ trait PresentsCategoryAttributes
     public function content() : Attribute
     {
         return Attribute::make(
-            fn (?string $value) : ?string => $value ? Blade::render(Str::markdown($value)) : null
+            fn (?string $value) : ?string => Str::markdown(Blade::render($value ?? ''))
         );
     }
 
