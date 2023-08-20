@@ -5,7 +5,6 @@ namespace App\Models\Concerns;
 use App\Str;
 use App\Tree;
 use Spatie\Url\Url;
-use Illuminate\Support\Facades\Blade;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 
 trait PresentsPostAttributes
@@ -20,7 +19,7 @@ trait PresentsPostAttributes
     public function content() : Attribute
     {
         return Attribute::make(
-            fn (string $value) : string => Str::markdown(Blade::render($value ?? ''))
+            fn (string $value) : string => Str::markdown($value ?? '')
         )->shouldCache();
     }
 

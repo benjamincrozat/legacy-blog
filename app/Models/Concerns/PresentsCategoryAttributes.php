@@ -3,7 +3,6 @@
 namespace App\Models\Concerns;
 
 use App\Str;
-use Illuminate\Support\Facades\Blade;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 
 trait PresentsCategoryAttributes
@@ -11,21 +10,21 @@ trait PresentsCategoryAttributes
     public function description() : Attribute
     {
         return Attribute::make(
-            fn (?string $value) : ?string => $value ? Str::markdown($value ?? '') : null
+            fn (?string $value) : ?string => Str::markdown($value ?? '')
         )->shouldCache();
     }
 
     public function longDescription() : Attribute
     {
         return Attribute::make(
-            fn (?string $value) : ?string => $value ? Str::markdown($value ?? '') : null
+            fn (?string $value) : string => Str::markdown($value ?? '')
         )->shouldCache();
     }
 
     public function content() : Attribute
     {
         return Attribute::make(
-            fn (?string $value) : ?string => Str::markdown(Blade::render($value ?? ''))
+            fn (?string $value) : string => Str::markdown($value ?? '')
         );
     }
 
