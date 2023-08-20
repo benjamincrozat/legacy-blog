@@ -53,12 +53,6 @@ class AdminPanelProvider extends PanelProvider
                 NavigationItem::make('Go to site')
                     ->icon('heroicon-o-globe-alt')
                     ->url(config('app.url')),
-            ])
-            ->userMenuItems([
-                MenuItem::make()
-                    ->label('Go to site')
-                    ->url(config('app.url'))
-                    ->icon('heroicon-o-globe-alt'),
             ]);
     }
 }
