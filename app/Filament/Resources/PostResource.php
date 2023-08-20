@@ -13,6 +13,7 @@ use Filament\Tables\Columns\ViewColumn;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\PostResource\Pages;
+use App\Filament\Resources\PostResource\RelationManagers\CategoriesRelationManager;
 
 class PostResource extends Resource
 {
@@ -134,9 +135,11 @@ class PostResource extends Resource
             ])
             ->filters([
                 Filter::make('Commercial')
-                    ->query(fn (Builder $query) : Builder => $query->where('commercial', true)),
+                    ->query(fn (Builder $query) : Builder => $query->where('commercial', true))
+                    ->toggle(),
                 Filter::make('Community Link')
-                    ->query(fn (Builder $query) : Builder => $query->whereNotNull('community_link')),
+                    ->query(fn (Builder $query) : Builder => $query->whereNotNull('community_link'))
+                    ->toggle(),
             ])
             ->actions([
                 Tables\Actions\EditAction::make()->button()->outlined()->icon(''),
@@ -168,7 +171,7 @@ class PostResource extends Resource
     public static function getRelations() : array
     {
         return [
-            //
+            CategoriesRelationManager::class,
         ];
     }
 
