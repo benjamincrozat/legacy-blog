@@ -27,14 +27,14 @@ trait PresentsPostAttributes
     public function teaser() : Attribute
     {
         return Attribute::make(
-            fn (?string $value) : string => Str::markdown($value ?? '')
+            fn (?string $value) : ?string => Str::markdown($value ?? '')
         )->shouldCache();
     }
 
     public function communityLinkDomain() : Attribute
     {
         return Attribute::make(
-            fn (?string $value) : string => str_replace('www.', '', Url::fromString($value)->getHost())
+            fn (?string $value) : ?string => str_replace('www.', '', Url::fromString($value)->getHost())
         );
     }
 
