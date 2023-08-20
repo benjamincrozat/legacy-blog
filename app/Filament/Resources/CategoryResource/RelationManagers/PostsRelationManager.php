@@ -15,7 +15,8 @@ class PostsRelationManager extends RelationManager
     public function form(Form $form) : Form
     {
         return $form
-            ->schema(PostResource::getFormComponents());
+            ->schema(PostResource::getFormComponents())
+            ->columns(1);
     }
 
     public function table(Table $table) : Table
