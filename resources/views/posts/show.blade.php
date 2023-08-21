@@ -4,6 +4,10 @@
 >
     <div class="container mt-4 lg:max-w-screen-md">
         <x-breadcrumb>
+            <x-slot:parent href="{{ route('categories.show', $post->categories->first()) }}">
+                {{ $post->categories->first()?->name }}
+            </x-slot:parent>
+
             {{ $post->title }}
         </x-breadcrumb>
 

@@ -3,6 +3,16 @@
         Home
     </a>
 
+    @if (! empty($parent))
+        <span class="opacity-30">/</span>
+
+        <a href="{{ $parent->attributes->get('href', '#') }}" {{ $parent->attributes->merge([
+            'class' => 'font-medium text-indigo-400 underline',
+        ]) }}>
+            {!! $parent !!}
+        </a>
+    @endif
+
     <span class="opacity-30">/</span>
 
     <span class="opacity-50 line-clamp-1">

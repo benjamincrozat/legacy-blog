@@ -14,7 +14,7 @@ class CategoryFactory extends Factory
     public function definition() : array
     {
         return [
-            'name' => ucfirst(fake()->word()),
+            'name' => ucfirst(fake()->unique()->word()),
             'slug' => fn (array $attributes) : string => Str::slug($attributes['name']),
             'description' => fake()->paragraph(),
             'long_description' => fake()->paragraph(),
