@@ -6,11 +6,7 @@
     @if (! empty($parent))
         <span class="opacity-30">/</span>
 
-        <a href="{{ $parent->attributes->get('href', '#') }}" {{ $parent->attributes->merge([
-            'class' => 'font-medium text-indigo-400 underline',
-        ]) }}>
-            {!! $parent !!}
-        </a>
+        {!! $parent !!}
     @endif
 
     <span class="opacity-30">/</span>

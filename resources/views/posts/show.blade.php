@@ -4,9 +4,13 @@
 >
     <div class="container mt-4 lg:max-w-screen-md">
         <x-breadcrumb>
-            <x-slot:parent href="{{ route('categories.show', $post->categories->first()) }}">
-                {{ $post->categories->first()?->name }}
-            </x-slot:parent>
+            @if ($post->categories->isNotEmpty())
+                <x-slot:parent>
+                    <a href="{{ route('categories.show', $post->categories->first()) }}" class="font-medium text-indigo-400 underline">
+                        {{ $post->categories->first()->name }}
+                    </a>
+                </x-slot:parent>
+            @endif
 
             {{ $post->title }}
         </x-breadcrumb>
