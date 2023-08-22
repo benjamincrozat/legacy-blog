@@ -1,18 +1,18 @@
-# Privacy Policy
+# Privacy policy
 
 ## 1. Cookies
 
 This blog uses cookies associated with affiliate links to track user activity for commission purposes. No personal data is stored or used for any other purpose.
 
-## 2. Data Collection
+## 2. Data collection
 
 This blog utilizes a cookie-less, open source, and GDPR-compliant solution to track visitor activity. No personal data is collected through it.
 
-## 3. Data Protection
+## 3. Data protection
 
 Your privacy is of utmost importance. Any data that may be collected is stored securely and is not shared or sold to third parties.
 
-## 4. Your Rights
+## 4. Your rights
 
 Under the General Data Protection Regulation (GDPR), you have the right to access, modify, and delete any personal data that might be stored. To exercise these rights, please contact Benjamin Crozat at <a href="mailto:hello@benjamincrozat.com">hello@benjamincrozat.com</a>.
 
