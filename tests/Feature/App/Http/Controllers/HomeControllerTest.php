@@ -12,7 +12,5 @@ it('works and displays the categories', function () {
     get(route('home'))
         ->assertOk()
         ->assertViewIs('home')
-        ->assertViewHas(
-            'categories', fn (Collection $categories) => 3 === $categories->count()
-        );
+        ->assertViewHas('categories', fn (Collection $categories) => 3 === $categories->count());
 });

@@ -2,9 +2,8 @@
 
 namespace App\Filament\Resources\MerchantResource\Pages;
 
-use App\Filament\Resources\MerchantResource;
-use Filament\Actions;
 use Filament\Resources\Pages\CreateRecord;
+use App\Filament\Resources\MerchantResource;
 
 class CreateMerchant extends CreateRecord
 {

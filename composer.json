@@ -12,7 +12,6 @@
         "laravel/prompts": "^0.1.1",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.0@beta",
-        "livewire/volt": "^1.0@beta",
         "pestphp/pest-plugin-drift": "^2.2",
         "php-http/message-factory": "^1.1",
         "sentry/sentry-laravel": "^3.2",

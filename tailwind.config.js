@@ -4,6 +4,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
+        "./app/**/*.php",
         "./resources/views/**/*.blade.php",
     ],
 
@@ -29,15 +30,22 @@ module.exports = {
                     css: {
                         'h1, h2, h3, h4, h5, h6': {
                             'a:not([href^=http])': {
-                                'color': 'inherit',
-                                'font-weight': '700',
+                                'color': colors.inherit,
+                                'font-weight': defaultTheme.fontWeight.bold,
                                 'text-decoration': 'none',
                                 '&::before': {
                                     'content': '"# "',
-                                    'font-weight': '400',
-                                    'opacity': '.5',
+                                    'font-weight': defaultTheme.fontWeight.normal,
+                                    'opacity': defaultTheme.opacity[50],
                                 },
                             },
+                        },
+                        'iframe': {
+                            'width': '100% !important',
+                            'height': 'auto !important',
+                            'aspect-ratio': defaultTheme.aspectRatio.video,
+                            'border-radius': defaultTheme.borderRadius.md,
+                            'box-shadow': defaultTheme.boxShadow.lg,
                         },
                     },
                 },
