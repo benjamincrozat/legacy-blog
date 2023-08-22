@@ -8,10 +8,14 @@ use App\Http\Controllers\ShowMerchantController;
 
 Route::get('/', HomeController::class)->name('home');
 
-Route::get('/{post:slug}', ShowPostController::class)->name('posts.show');
-
 Route::get('/categories/{category:slug}', ShowCategoryController::class)->name('categories.show');
 
 Route::get('/recommends/{merchant:slug}', ShowMerchantController::class)->name('merchants.show');
 
+Route::view('/privacy', 'privacy')->name('privacy');
+
+Route::view('/terms', 'terms')->name('terms');
+
 Route::feeds();
+
+Route::get('/{post:slug}', ShowPostController::class)->name('posts.show');
