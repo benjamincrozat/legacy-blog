@@ -9,7 +9,7 @@ trait RendersAttributes
 {
     public function renderAttributeAsMarkdown(string $attribute) : Attribute
     {
-        return Attribute::make(function (string $value) use ($attribute) {
+        return Attribute::make(function (?string $value) use ($attribute) {
             return cache()->rememberForever(
                 $this->getAttributeRenderCacheKey($attribute, $value),
                 fn () => Str::markdown($value ?? '')
@@ -17,8 +17,8 @@ trait RendersAttributes
         })->shouldCache();
     }
 
-    public function getAttributeRenderCacheKey(string $attribute, string $value) : string
+    public function getAttributeRenderCacheKey(string $attribute, ?string $value) : string
     {
-        return sprintf('%s.%s.%s.%s', class_basename($this::class), $this->id, $attribute, sha1($value));
+        return sprintf('%s.%s.%s.%s', class_basename($this::class), $this->id, $attribute, sha1($value ?? ''));
     }
 }

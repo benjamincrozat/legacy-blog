@@ -19,21 +19,11 @@ trait PresentsPostAttributes
 
     public function content() : Attribute
     {
-        if (is_null(__FUNCTION__)) {
-            ray(__FUNCTION__);
-            exit;
-        }
-
         return $this->renderAttributeAsMarkdown(__FUNCTION__);
     }
 
     public function teaser() : Attribute
     {
-        if (is_null(__FUNCTION__)) {
-            ray(__FUNCTION__);
-            exit;
-        }
-
         return $this->renderAttributeAsMarkdown(__FUNCTION__);
     }
 
