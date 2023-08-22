@@ -12,7 +12,7 @@ abstract class BasePresenter
     ) {
     }
 
-    protected function renderAsMarkdown(string $key, string $value) : string
+    protected function renderAsMarkdown(string $key, ?string $value) : string
     {
         return (string) cache()->rememberForever(
             $this->getRenderCacheKey($key, $value),
