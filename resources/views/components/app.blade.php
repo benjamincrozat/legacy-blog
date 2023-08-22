@@ -50,7 +50,7 @@
 
     <body {{ $attributes->except(['description', 'image', 'title'])->merge(['class' => 'bg-gray-50 font-light']) }} x-data="{}">
         <nav class="container relative flex items-center justify-between py-4 sm:static lg:max-w-screen-md">
-            <a href="/">
+            <a wire:navigate href="/">
                 <span class="sr-only">{{ config('app.name') }}</span>
                 <x-icon-logo class="w-10 h-10" />
             </a>

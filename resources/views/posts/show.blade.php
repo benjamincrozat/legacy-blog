@@ -6,7 +6,7 @@
         <x-breadcrumb>
             @if ($post->categories->isNotEmpty())
                 <x-slot:parent>
-                    <a href="{{ route('categories.show', $post->categories->first()) }}" class="font-medium text-indigo-400 underline">
+                    <a wire:navigate href="{{ route('categories.show', $post->categories->first()) }}" class="font-medium text-indigo-400 underline">
                         {{ $post->categories->first()->name }}
                     </a>
                 </x-slot:parent>

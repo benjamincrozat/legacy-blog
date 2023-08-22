@@ -3,7 +3,7 @@
 
     <div class="flex-grow">
         <h3 class="font-bold ">
-            <a href="{{ route('posts.show', $post) }}" class="text-indigo-600 underline">{{ $post->title }}</a>
+            <a wire:navigate href="{{ route('posts.show', $post) }}" class="text-indigo-600 underline">{{ $post->title }}</a>
         </h3>
 
         <p class="mt-2">{{ $post->description }}</p>

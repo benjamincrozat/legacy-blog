@@ -1,5 +1,5 @@
 <nav {{ $attributes->merge(['class' => 'flex items-center gap-2']) }}>
-    <a href="{{ route('home') }}" class="font-medium text-indigo-400 underline">
+    <a wire:navigate href="{{ route('home') }}" class="font-medium text-indigo-400 underline">
         Home
     </a>
 
