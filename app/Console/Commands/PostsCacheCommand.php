@@ -5,7 +5,7 @@ namespace App\Console\Commands;
 use App\Models\Post;
 use Illuminate\Console\Command;
 
-class AnalyticsFetchCommand extends Command
+class PostsCacheCommand extends Command
 {
     protected $signature = 'posts:cache';
 
