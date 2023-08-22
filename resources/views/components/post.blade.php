@@ -8,6 +8,6 @@
 
         <p class="mt-2">{{ $post->description }}</p>
 
-        <p class="mt-2 opacity-60">Updated on {{ $post->updated_at->isoFormat('LL') }}</p>
+        <p class="mt-2 opacity-60">Updated on {{ $post->presenter()->lastUpdated() }}</p>
     </div>
 </div>

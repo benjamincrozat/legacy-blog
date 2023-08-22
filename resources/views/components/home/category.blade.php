@@ -1,5 +1,5 @@
 <div class="flex flex-col h-full">
-    <h3 class="leading-tight text-xl font-bold text-{{ $category->primary_color }}">
+    <h3 class="leading-tight text-xl font-bold text-{{ $category->presenter()->primaryColor() }}">
         {{ $category->name }}
     </h3>
 
@@ -10,7 +10,7 @@
     <p class="mt-6">
         <x-button
             href="{{ route('categories.show', $category) }}"
-            class="bg-{{ $category->primary_color }} text-{{ $category->secondary_color }} w-full"
+            class="bg-{{ $category->presenter()->primaryColor() }} text-{{ $category->presenter()->secondaryColor() }} w-full"
         >
             Read about {{ $category->name }}
         </x-button>

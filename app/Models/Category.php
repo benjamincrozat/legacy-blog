@@ -2,14 +2,14 @@
 
 namespace App\Models;
 
+use App\Models\Concerns\HasPresenter;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Concerns\PresentsCategoryAttributes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Category extends Model
 {
-    use HasFactory, PresentsCategoryAttributes;
+    use HasFactory, HasPresenter;
 
     public function posts() : BelongsToMany
     {

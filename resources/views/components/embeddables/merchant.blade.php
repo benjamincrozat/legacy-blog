@@ -13,11 +13,11 @@ try {
         ->first();
 
     $slug = $slug ?? $merchant->slug;
-    $content = $content ?? $merchant->content;
+    $content = $content ?? $merchant->presenter()->content();
     $screenshot = $screenshot ?? $merchant->screenshot;
-    $key_features = $key_features ?? $merchant->key_features;
-    $pros = $pros ?? $merchant->pros;
-    $cons = $cons ?? $merchant->cons;
+    $key_features = $key_features ?? $merchant->presenter()->keyFeatures();
+    $pros = $pros ?? $merchant->presenter()->pros();
+    $cons = $cons ?? $merchant->presenter()->cons();
 } catch (Exception $e) {
     echo '<p class="font-bold text-red-400">' . $e->getMessage() . '</p>';
     return;

@@ -16,12 +16,4 @@ class EditPost extends EditRecord
             Actions\DeleteAction::make(),
         ];
     }
-
-    protected function mutateFormDataBeforeFill(array $data) : array
-    {
-        $data['content'] = $this->record->getRawOriginal('content');
-        $data['teaser'] = $this->record->getRawOriginal('teaser');
-
-        return $data;
-    }
 }

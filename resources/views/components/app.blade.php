@@ -87,7 +87,7 @@
                     <x-menu :hide-icon="true">
                         <x-slot:trigger>
                             <img
-                                src="{{ auth()->user()->gravatar }}?s=64"
+                                src="{{ auth()->user()->presenter()->gravatar() }}?s=64"
                                 width="32"
                                 height="32"
                                 alt="{{ auth()->user()->name }}"

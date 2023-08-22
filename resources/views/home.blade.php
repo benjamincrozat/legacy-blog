@@ -38,11 +38,11 @@
     @foreach ($categories as $category)
         <x-section class="mt-32">
             <x-slot:title class="container lg:max-w-screen-md">
-                Learn <span class="text-{{ $category->primary_color }}">{{ $category->name }}</span>
+                Learn <span class="text-{{ $category->presenter()->primaryColor() }}">{{ $category->name }}</span>
             </x-slot:title>
 
             <div class="container mt-2 lg:max-w-screen-md">
-                {!! $category->long_description !!}
+                {!! $category->presenter()->longDescription() !!}
             </div>
 
             <ul class="container grid gap-8 mt-16 md:grid-cols-2">
@@ -54,7 +54,7 @@
             </ul>
 
             <p class="mt-16 text-center">
-                <x-button href="{{ route('categories.show', $category) }}" class="bg-{{ $category->primary_color ?? 'bg-black' }} text-{{ $category->secondary_color ?? 'white' }}">
+                <x-button href="{{ route('categories.show', $category) }}" class="bg-{{ $category->presenter()->primaryColor() ?? 'bg-black' }} text-{{ $category->presenter()->secondaryColor() ?? 'white' }}">
                     Read more about {{ $category->name }}
                 </x-button>
             </p>

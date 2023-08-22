@@ -9,7 +9,7 @@
 
         <article>
             <x-prose class="mt-8">
-                <h1>Learn <span class="{{ ! $category->primary_color ?: 'text-' . $category->primary_color }}">{{ $category->name }}</span></h1>
+                <h1>Learn <span class="{{ ! $category->presenter()->primaryColor() ?: 'text-' . $category->presenter()->primaryColor() }}">{{ $category->name }}</span></h1>
 
                 <p>This is the go-to place to learn all about {{ $category->name }}. I'm hard at work, writing an evergrowing amount of content covering the topic.</p>
 
@@ -29,7 +29,7 @@
                     </ul>
                 @endif
 
-                {!! $category->content !!}
+                {!! $category->presenter()->content() !!}
             </x-prose>
         </article>
     </div>

@@ -20,13 +20,13 @@
                 <h1>{{ $post->title }}</h1>
 
                 <p class="font-bold">Table of contents:</p>
-                <x-posts.tree :tree="$post->tree" />
+                <x-posts.tree :tree="$post->presenter()->tree()" />
 
                 @if ($post->image)
                     <img src="{{ $post->image }}" alt="{{ $post->title }}" class="w-full" />
                 @endif
 
-                {!! $post->content !!}
+                {!! $post->presenter()->content() !!}
             </x-prose>
         </article>
 
@@ -35,14 +35,14 @@
         <aside>
             <x-prose>
                 <img
-                    src="{{ $post->user->gravatar }}?s=256"
+                    src="{{ $post->user->presenter()->gravatar() }}?s=256"
                     alt="{{ $post->user->name }}"
                     class="float-right w-[96px] md:w-[128px] h-[96px] md:h-[128px] mt-2 mb-8 ml-8 rounded-full"
                 />
 
                 <h1>{{ $post->user->name }}</h1>
 
-                {!! $post->user->description !!}
+                {!! $post->user->presenter()->description() !!}
 
                 <p>Follow {{ $post->user->name }} on:</p>
 

@@ -16,11 +16,4 @@ class EditUser extends EditRecord
             Actions\DeleteAction::make(),
         ];
     }
-
-    protected function mutateFormDataBeforeFill(array $data) : array
-    {
-        $data['description'] = $this->record->getRawOriginal('description');
-
-        return $data;
-    }
 }

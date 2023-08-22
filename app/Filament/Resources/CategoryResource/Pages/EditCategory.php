@@ -16,13 +16,4 @@ class EditCategory extends EditRecord
             Actions\DeleteAction::make(),
         ];
     }
-
-    protected function mutateFormDataBeforeFill(array $data) : array
-    {
-        $data['description'] = $this->record->getRawOriginal('description');
-        $data['long_description'] = $this->record->getRawOriginal('long_description');
-        $data['content'] = $this->record->getRawOriginal('content');
-
-        return $data;
-    }
 }
