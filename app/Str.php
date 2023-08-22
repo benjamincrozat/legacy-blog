@@ -44,18 +44,15 @@ class Str extends \Illuminate\Support\Str
         ], $options);
 
         $environment = (new Environment($options))
+            ->addExtension(app(HighlightCodeExtension::class))
             ->addExtension(new AttributesExtension)
-            ->addExtension(new EmbedExtension)
             ->addExtension(new CommonMarkCoreExtension)
             ->addExtension(new DefaultAttributesExtension)
+            ->addExtension(app(EmbedExtension::class))
             ->addExtension(new ExternalLinkExtension)
             ->addExtension(new GithubFlavoredMarkdownExtension)
             ->addExtension(new SmartPunctExtension)
             ->addRenderer(Heading::class, new HeadingRenderer);
-
-        if (! app()->runningUnitTests()) {
-            $environment->addExtension(new HighlightCodeExtension('github-dark'));
-        }
 
         return (string) (new MarkdownConverter($environment))->convert($string);
     }
