@@ -14,6 +14,9 @@ class Tree
     public function build(string $html) : array
     {
         $domDocument = new DOMDocument;
+
+        $html = mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8');
+
         $domDocument->loadHTML($html);
 
         $headings = (new DOMXPath($domDocument))->query('//h2|//h3|//h4|//h5|//h6');
