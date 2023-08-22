@@ -50,69 +50,75 @@
 
     <body {{ $attributes->except(['description', 'image', 'title'])->merge(['class' => 'bg-gray-50 font-light']) }} x-data="{}">
         <div class="flex flex-col min-h-screen">
-            <nav class="container relative flex items-center justify-between py-4 sm:static lg:max-w-screen-md">
-                <a wire:navigate href="/">
-                    <span class="sr-only">{{ config('app.name') }}</span>
-                    <x-icon-logo class="w-10 h-10" />
-                </a>
+            @empty($hideNavigation)
+                <nav class="container relative flex items-center justify-between py-4 sm:static lg:max-w-screen-md">
+                    <a wire:navigate href="/">
+                        <span class="sr-only">{{ config('app.name') }}</span>
+                        <x-icon-logo class="w-10 h-10 fill-current" />
+                    </a>
 
-                <div class="flex items-center justify-between gap-8">
-                    @if ($categories->isNotEmpty())
-                        <x-menu trigger="Topics">
-                            @foreach ($categories as $category)
-                                <x-menu-item
-                                    href="{{ route('categories.show', $category) }}"
-                                    class="hover:!bg-{{ $category->primary_color }} hover:!text-{{ $category->secondary_color }}"
-                                >
-                                    {{ $category->name }}
+                    <div class="flex items-center justify-between gap-8">
+                        @if ($categories->isNotEmpty())
+                            <x-menu trigger="Topics">
+                                @foreach ($categories as $category)
+                                    <x-menu-item
+                                        href="{{ route('categories.show', $category) }}"
+                                        class="hover:!bg-{{ $category->primary_color }} hover:!text-{{ $category->secondary_color }}"
+                                    >
+                                        {{ $category->name }}
+                                    </x-menu-item>
+                                @endforeach
+                            </x-menu>
+                        @endif
+
+                        <x-menu trigger="For you">
+                            <x-menu-item href="https://benjamincrozat.com/best-web-development-tools">
+                                See all the tools I use
+                            </x-menu-item>
+
+                            <x-menu-item href="{{ route('pouest') }}">
+                                Instantly migrate PHPUnit tests to Pest for free
+                            </x-menu-item>
+
+                            <x-menu-item href="https://github.com/benjamincrozat/benjamincrozat.com" target="_blank" rel="nofollow noopener noreferrer">
+                                Hack in my blog's source code
+                            </x-menu-item>
+
+                            <x-menu-item href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=30d&scale=day" target="_blank" rel="nofollow noopener noreferrer">
+                                Look at my blog's live analytics
+                            </x-menu-item>
+                        </x-menu>
+
+                        @auth
+                            <x-menu :hide-icon="true">
+                                <x-slot:trigger>
+                                    <img
+                                        src="{{ auth()->user()->presenter()->gravatar() }}?s=64"
+                                        width="32"
+                                        height="32"
+                                        alt="{{ auth()->user()->name }}"
+                                        class="rounded-full"
+                                    />
+                                </x-slot:trigger>
+
+                                <x-menu-item href="/admin/posts" icon="o-cog">
+                                    Admin
                                 </x-menu-item>
-                            @endforeach
-                        </x-menu>
-                    @endif
 
-                    <x-menu trigger="For you">
-                        <x-menu-item href="https://benjamincrozat.com/best-web-development-tools">
-                            See all the tools I use
-                        </x-menu-item>
+                                <x-menu-divider />
 
-                        <x-menu-item href="https://github.com/benjamincrozat/benjamincrozat.com" target="_blank" rel="nofollow noopener noreferrer">
-                            Hack in my blog's source code
-                        </x-menu-item>
-
-                        <x-menu-item href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=30d&scale=day" target="_blank" rel="nofollow noopener noreferrer">
-                            Look at my blog's live analytics
-                        </x-menu-item>
-                    </x-menu>
-
-                    @auth
-                        <x-menu :hide-icon="true">
-                            <x-slot:trigger>
-                                <img
-                                    src="{{ auth()->user()->presenter()->gravatar() }}?s=64"
-                                    width="32"
-                                    height="32"
-                                    alt="{{ auth()->user()->name }}"
-                                    class="rounded-full"
-                                />
-                            </x-slot:trigger>
-
-                            <x-menu-item href="/admin/posts" icon="o-cog">
-                                Admin
-                            </x-menu-item>
-
-                            <x-menu-divider />
-
-                            <x-menu-item
-                                type="submit" form="logout"
-                                class="hover:!bg-red-400"
-                                icon="o-arrow-left-on-rectangle"
-                            >
-                                Log out
-                            </x-menu-item>
-                        </x-menu>
-                    @endauth
-                </div>
-            </nav>
+                                <x-menu-item
+                                    type="submit" form="logout"
+                                    class="hover:!bg-red-400"
+                                    icon="o-arrow-left-on-rectangle"
+                                >
+                                    Log out
+                                </x-menu-item>
+                            </x-menu>
+                        @endauth
+                    </div>
+                </nav>
+            @endempty
 
             @auth
                 <form method="POST" action="{{ route('logout') }}" id="logout">@csrf</form>
@@ -122,7 +128,7 @@
                 {{ $slot }}
             </main>
 
-            <div class="flex-grow mt-16 text-gray-300 bg-gray-900">
+            <div class="flex-grow mt-16 text-gray-300 @empty ($darkerFooter) bg-gray-900 @else bg-gray-950 @endempty">
                 <footer class="container py-8 text-center">
                     <p>Domain name by <a href="#" class="font-medium text-white underline">Namecheap</a>, hosting by <a href="#" class="font-medium text-white underline">DigitalOcean</a>, and tracking by <a href="#" class="font-medium text-white underline">Fathom Analytics</a>.</p>
 
