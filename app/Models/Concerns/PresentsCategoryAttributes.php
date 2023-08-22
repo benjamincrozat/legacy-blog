@@ -2,30 +2,20 @@
 
 namespace App\Models\Concerns;
 
-use App\Str;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 
 trait PresentsCategoryAttributes
 {
-    public function description() : Attribute
-    {
-        return Attribute::make(
-            fn (?string $value) : ?string => Str::markdown($value ?? '')
-        )->shouldCache();
-    }
+    use RendersAttributes;
 
     public function longDescription() : Attribute
     {
-        return Attribute::make(
-            fn (?string $value) : string => Str::markdown($value ?? '')
-        )->shouldCache();
+        return $this->renderAttributeAsMarkdown(__FUNCTION__);
     }
 
     public function content() : Attribute
     {
-        return Attribute::make(
-            fn (?string $value) : string => Str::markdown($value ?? '')
-        );
+        return $this->renderAttributeAsMarkdown(__FUNCTION__);
     }
 
     public function primaryColor() : Attribute

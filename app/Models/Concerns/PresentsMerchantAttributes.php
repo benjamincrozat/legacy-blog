@@ -2,43 +2,34 @@
 
 namespace App\Models\Concerns;
 
-use App\Str;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 
 trait PresentsMerchantAttributes
 {
+    use RendersAttributes;
+
     public function take() : Attribute
     {
-        return Attribute::make(
-            fn (?string $value) : string => $value ? Str::markdown($value ?? '') : null
-        )->shouldCache();
+        return $this->renderAttributeAsMarkdown(__FUNCTION__);
     }
 
     public function keyFeatures() : Attribute
     {
-        return Attribute::make(
-            fn (?string $value) : string => $value ? Str::markdown($value ?? '') : null
-        )->shouldCache();
+        return $this->renderAttributeAsMarkdown(__FUNCTION__);
     }
 
     public function content() : Attribute
     {
-        return Attribute::make(
-            fn (?string $value) : string => $value ? Str::markdown($value ?? '') : null
-        )->shouldCache();
+        return $this->renderAttributeAsMarkdown(__FUNCTION__);
     }
 
     public function pros() : Attribute
     {
-        return Attribute::make(
-            fn (?string $value) : string => $value ? Str::markdown($value ?? '') : null
-        )->shouldCache();
+        return $this->renderAttributeAsMarkdown(__FUNCTION__);
     }
 
     public function cons() : Attribute
     {
-        return Attribute::make(
-            fn (?string $value) : string => $value ? Str::markdown($value ?? '') : null
-        )->shouldCache();
+        return $this->renderAttributeAsMarkdown(__FUNCTION__);
     }
 }

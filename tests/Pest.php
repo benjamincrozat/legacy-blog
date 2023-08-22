@@ -13,8 +13,6 @@ uses(TestCase::class, LazilyRefreshDatabase::class)
     ->beforeEach(function () {
         Http::preventStrayRequests();
 
-        config()->set('torchlight.token', null);
-
         withoutMiddleware(TrackPageView::class);
 
         withoutVite();

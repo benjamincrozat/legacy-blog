@@ -4,7 +4,9 @@
 
     <title>{{ $title ?? config('app.name') }}</title>
 
-    @googlefonts
+    @unless(app()->runningUnitTests())
+        @googlefonts
+    @endunless
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>

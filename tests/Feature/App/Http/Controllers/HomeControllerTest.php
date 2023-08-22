@@ -6,7 +6,7 @@ use function Pest\Laravel\get;
 
 use Illuminate\Support\Collection;
 
-it('works and displays the categories', function () {
+test('the homepage works and displays the categories', function () {
     Category::factory(3)->hasPosts(3)->create();
 
     get(route('home'))

@@ -19,9 +19,6 @@
         "return_type_declaration": {
             "space_before": "one"
         },
-        "single_import_per_statement": {
-            "group_to_single_imports": true
-        },
         "yoda_style": true,
         "use_arrow_functions": true
     }

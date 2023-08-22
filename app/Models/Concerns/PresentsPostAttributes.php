@@ -2,13 +2,14 @@
 
 namespace App\Models\Concerns;
 
-use App\Str;
 use App\Tree;
 use Spatie\Url\Url;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 
 trait PresentsPostAttributes
 {
+    use RendersAttributes;
+
     public function tree() : Attribute
     {
         return Attribute::make(
@@ -18,16 +19,22 @@ trait PresentsPostAttributes
 
     public function content() : Attribute
     {
-        return Attribute::make(
-            fn (string $value) : string => Str::markdown($value ?? '')
-        )->shouldCache();
+        if (is_null(__FUNCTION__)) {
+            ray(__FUNCTION__);
+            exit;
+        }
+
+        return $this->renderAttributeAsMarkdown(__FUNCTION__);
     }
 
     public function teaser() : Attribute
     {
-        return Attribute::make(
-            fn (?string $value) : string => Str::markdown($value ?? '')
-        )->shouldCache();
+        if (is_null(__FUNCTION__)) {
+            ray(__FUNCTION__);
+            exit;
+        }
+
+        return $this->renderAttributeAsMarkdown(__FUNCTION__);
     }
 
     public function communityLinkDomain() : Attribute

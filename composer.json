@@ -15,13 +15,12 @@
         "pestphp/pest-plugin-drift": "^2.2",
         "php-http/message-factory": "^1.1",
         "sentry/sentry-laravel": "^3.2",
+        "spatie/commonmark-shiki-highlighter": "^2.1",
         "spatie/flysystem-dropbox": "^2.0",
         "spatie/laravel-feed": "^4.2",
         "spatie/laravel-google-fonts": "^1.2",
         "spatie/laravel-honeypot": "^4.3",
-        "spatie/url": "^2.2",
-        "torchlight/torchlight-commonmark": "^0.5.5",
-        "torchlight/torchlight-laravel": "^0.5.13"
+        "spatie/url": "^2.2"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.8",

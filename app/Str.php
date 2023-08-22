@@ -6,8 +6,8 @@ use League\CommonMark\Node\Node;
 use League\CommonMark\Node\Inline\Text;
 use League\CommonMark\MarkdownConverter;
 use League\CommonMark\Environment\Environment;
-use Torchlight\Commonmark\V2\TorchlightExtension;
 use League\CommonMark\Extension\Embed\EmbedExtension;
+use Spatie\CommonMarkShikiHighlighter\HighlightCodeExtension;
 use League\CommonMark\Extension\CommonMark\Node\Block\Heading;
 use League\CommonMark\Extension\Attributes\AttributesExtension;
 use League\CommonMark\Extension\SmartPunct\SmartPunctExtension;
@@ -51,8 +51,11 @@ class Str extends \Illuminate\Support\Str
             ->addExtension(new ExternalLinkExtension)
             ->addExtension(new GithubFlavoredMarkdownExtension)
             ->addExtension(new SmartPunctExtension)
-            ->addExtension(new TorchlightExtension)
             ->addRenderer(Heading::class, new HeadingRenderer);
+
+        if (! app()->runningUnitTests()) {
+            $environment->addExtension(new HighlightCodeExtension('github-dark'));
+        }
 
         return (string) (new MarkdownConverter($environment))->convert($string);
     }
