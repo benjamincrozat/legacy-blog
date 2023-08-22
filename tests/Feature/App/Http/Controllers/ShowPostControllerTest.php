@@ -10,5 +10,5 @@ test('a given post is shown', function () {
     get(route('posts.show', $post))
         ->assertOk()
         ->assertViewIs('posts.show')
-        ->assertViewHas('post', fn (Post $post) => $post->is($post));
+        ->assertViewHas('post');
 });

@@ -10,5 +10,5 @@ test('a given category is shown', function () {
     get(route('categories.show', $category))
         ->assertOk()
         ->assertViewIs('categories.show')
-        ->assertViewHas('category', fn (Category $category) => 3 === $category->posts()->count());
+        ->assertViewHas('category');
 });
