@@ -49,86 +49,88 @@
     <link rel="canonical" href="{{ url()->current() }}" />
 
     <body {{ $attributes->except(['description', 'image', 'title'])->merge(['class' => 'bg-gray-50 font-light']) }} x-data="{}">
-        <nav class="container relative flex items-center justify-between py-4 sm:static lg:max-w-screen-md">
-            <a wire:navigate href="/">
-                <span class="sr-only">{{ config('app.name') }}</span>
-                <x-icon-logo class="w-10 h-10" />
-            </a>
+        <div class="flex flex-col min-h-screen">
+            <nav class="container relative flex items-center justify-between py-4 sm:static lg:max-w-screen-md">
+                <a wire:navigate href="/">
+                    <span class="sr-only">{{ config('app.name') }}</span>
+                    <x-icon-logo class="w-10 h-10" />
+                </a>
 
-            <div class="flex items-center justify-between gap-8">
-                @if ($categories->isNotEmpty())
-                    <x-menu trigger="Topics">
-                        @foreach ($categories as $category)
-                            <x-menu-item
-                                href="{{ route('categories.show', $category) }}"
-                                class="hover:!bg-{{ $category->primary_color }} hover:!text-{{ $category->secondary_color }}"
-                            >
-                                {{ $category->name }}
+                <div class="flex items-center justify-between gap-8">
+                    @if ($categories->isNotEmpty())
+                        <x-menu trigger="Topics">
+                            @foreach ($categories as $category)
+                                <x-menu-item
+                                    href="{{ route('categories.show', $category) }}"
+                                    class="hover:!bg-{{ $category->primary_color }} hover:!text-{{ $category->secondary_color }}"
+                                >
+                                    {{ $category->name }}
+                                </x-menu-item>
+                            @endforeach
+                        </x-menu>
+                    @endif
+
+                    <x-menu trigger="For you">
+                        <x-menu-item href="https://benjamincrozat.com/best-web-development-tools">
+                            See all the tools I use
+                        </x-menu-item>
+
+                        <x-menu-item href="https://github.com/benjamincrozat/benjamincrozat.com" target="_blank" rel="nofollow noopener noreferrer">
+                            Hack in my blog's source code
+                        </x-menu-item>
+
+                        <x-menu-item href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=30d&scale=day" target="_blank" rel="nofollow noopener noreferrer">
+                            Look at my blog's live analytics
+                        </x-menu-item>
+                    </x-menu>
+
+                    @auth
+                        <x-menu :hide-icon="true">
+                            <x-slot:trigger>
+                                <img
+                                    src="{{ auth()->user()->presenter()->gravatar() }}?s=64"
+                                    width="32"
+                                    height="32"
+                                    alt="{{ auth()->user()->name }}"
+                                    class="rounded-full"
+                                />
+                            </x-slot:trigger>
+
+                            <x-menu-item href="/admin/posts" icon="o-cog">
+                                Admin
                             </x-menu-item>
-                        @endforeach
-                    </x-menu>
-                @endif
 
-                <x-menu trigger="For you">
-                    <x-menu-item href="https://benjamincrozat.com/best-web-development-tools">
-                        See all the tools I use
-                    </x-menu-item>
+                            <x-menu-divider />
 
-                    <x-menu-item href="https://github.com/benjamincrozat/benjamincrozat.com" target="_blank" rel="nofollow noopener noreferrer">
-                        Hack in my blog's source code
-                    </x-menu-item>
+                            <x-menu-item
+                                type="submit" form="logout"
+                                class="hover:!bg-red-400"
+                                icon="o-arrow-left-on-rectangle"
+                            >
+                                Log out
+                            </x-menu-item>
+                        </x-menu>
+                    @endauth
+                </div>
+            </nav>
 
-                    <x-menu-item href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=30d&scale=day" target="_blank" rel="nofollow noopener noreferrer">
-                        Look at my blog's live analytics
-                    </x-menu-item>
-                </x-menu>
+            @auth
+                <form method="POST" action="{{ route('logout') }}" id="logout">@csrf</form>
+            @endauth
 
-                @auth
-                    <x-menu :hide-icon="true">
-                        <x-slot:trigger>
-                            <img
-                                src="{{ auth()->user()->presenter()->gravatar() }}?s=64"
-                                width="32"
-                                height="32"
-                                alt="{{ auth()->user()->name }}"
-                                class="rounded-full"
-                            />
-                        </x-slot:trigger>
+            <main>
+                {{ $slot }}
+            </main>
 
-                        <x-menu-item href="/admin/posts" icon="o-cog">
-                            Admin
-                        </x-menu-item>
+            <div class="flex-grow mt-16 text-gray-300 bg-gray-900">
+                <footer class="container py-8 text-center">
+                    <p>Domain name by <a href="#" class="font-medium text-white underline">Namecheap</a>, hosting by <a href="#" class="font-medium text-white underline">DigitalOcean</a>, and tracking by <a href="#" class="font-medium text-white underline">Fathom Analytics</a>.</p>
 
-                        <x-menu-divider />
+                    <p class="mt-4">Follow me on <a href="https://github.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer" class="font-medium text-white underline">GitHub</a> and <a href="https://x.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer" class="font-medium text-white underline">X</a>. For inquiries, <a href="mailto:hello@benjamincrozat.com" class="font-medium text-white underline">send&nbsp;me&nbsp;an&nbsp;email</a>.</p>
 
-                        <x-menu-item
-                            type="submit" form="logout"
-                            class="hover:!bg-red-400"
-                            icon="o-arrow-left-on-rectangle"
-                        >
-                            Log out
-                        </x-menu-item>
-                    </x-menu>
-                @endauth
+                    <p class="mt-16 text-xs tracking-widest uppercase opacity-50">© {{ config('app.name') }} {{ date('Y') }}. All rights reserved.</p>
+                </footer>
             </div>
-        </nav>
-
-        @auth
-            <form method="POST" action="{{ route('logout') }}" id="logout">@csrf</form>
-        @endauth
-
-        <main>
-            {{ $slot }}
-        </main>
-
-        <div class="mt-16 text-gray-300 bg-gray-900">
-            <footer class="container py-8 text-center">
-                <p>Domain name by <a href="#" class="font-medium text-white underline">Namecheap</a>, hosting by <a href="#" class="font-medium text-white underline">DigitalOcean</a>, and tracking by <a href="#" class="font-medium text-white underline">Fathom Analytics</a>.</p>
-
-                <p class="mt-4">Follow me on <a href="https://github.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer" class="font-medium text-white underline">GitHub</a> and <a href="https://x.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer" class="font-medium text-white underline">X</a>. For inquiries, <a href="mailto:hello@benjamincrozat.com" class="font-medium text-white underline">send&nbsp;me&nbsp;an&nbsp;email</a>.</p>
-
-                <p class="mt-16 text-xs tracking-widest uppercase opacity-50">© {{ config('app.name') }} {{ date('Y') }}. All rights reserved.</p>
-            </footer>
         </div>
     </body>
 </html>
