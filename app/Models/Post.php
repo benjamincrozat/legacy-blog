@@ -8,6 +8,7 @@ use App\Models\Concerns\HasPresenter;
 use App\Models\Concerns\HasLocalScopes;
 use App\Models\Concerns\HasRelationships;
 use App\Models\Concerns\HasRecommendations;
+use Illuminate\Contracts\Database\Eloquent\Builder;
 
 class Post extends BaseModel implements Feedable
 {
@@ -31,10 +32,15 @@ class Post extends BaseModel implements Feedable
         });
     }
 
+    public function scopePublished(Builder $query) : void
+    {
+        $query->where('is_published', true);
+    }
+
     public function resolveRouteBindingQuery($query, $value, $field = null)
     {
         $query = parent::resolveRouteBindingQuery($query, $value, $field);
 
-        return $query->withUser();
+        return $query->published()->withUser();
     }
 }

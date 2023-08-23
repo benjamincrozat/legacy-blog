@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ShowPostController;
+use App\Http\Controllers\ListPostsController;
 use App\Http\Controllers\ShowCategoryController;
 use App\Http\Controllers\ShowMerchantController;
 
@@ -20,4 +21,5 @@ Route::view('/terms', 'terms')->name('terms');
 
 Route::feeds();
 
+Route::get('/posts', ListPostsController::class)->name('posts.index');
 Route::get('/{post:slug}', ShowPostController::class)->name('posts.show');

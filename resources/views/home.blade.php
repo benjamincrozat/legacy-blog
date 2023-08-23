@@ -46,7 +46,7 @@
             </x-prose>
 
             <ul class="container grid gap-8 mt-16 md:grid-cols-2">
-                @foreach ($category->latest->take(4) as $post)
+                @foreach ($category->latestPosts->take(4) as $post)
                     <li>
                         <x-post :post="$post" />
                     </li>

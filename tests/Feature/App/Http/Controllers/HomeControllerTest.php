@@ -4,11 +4,14 @@ use App\Models\Category;
 
 use function Pest\Laravel\get;
 
-test('the homepage works and displays the categories', function () {
-    Category::factory(3)->hasPosts(3)->create();
+test('the homepage works and displays the categories along with published posts', function () {
+    Category::factory(3)->hasPosts(5, ['is_published' => true])->create();
 
-    get(route('home'))
+    $response = get(route('home'))
         ->assertOk()
-        ->assertViewIs('home')
-        ->assertViewHas('categories');
+        ->assertViewIs('home');
+
+    $response->viewData('categories')->each(
+        fn (Category $category) => expect($category->latestPosts->isNotEmpty())->toBeTrue()
+    );
 });

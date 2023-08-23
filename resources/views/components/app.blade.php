@@ -68,6 +68,12 @@
                                         {{ $category->name }}
                                     </x-menu-item>
                                 @endforeach
+
+                                <x-menu-divider />
+
+                                <x-menu-item href="{{ route('posts.index') }}">
+                                    All
+                                </x-menu-item>
                             </x-menu>
                         @endif
 

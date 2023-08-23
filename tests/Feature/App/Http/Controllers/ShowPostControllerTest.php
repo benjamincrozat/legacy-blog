@@ -4,8 +4,8 @@ use App\Models\Post;
 
 use function Pest\Laravel\get;
 
-test('a given post is shown', function () {
-    $post = Post::factory()->create();
+test('a given published post is shown', function () {
+    $post = Post::factory()->published()->create();
 
     get(route('posts.show', $post))
         ->assertOk()

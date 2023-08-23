@@ -13,7 +13,7 @@
 
                 <p>This is the go-to place to learn all about {{ $category->name }}. I'm hard at work, writing an evergrowing amount of content covering the topic.</p>
 
-                @if (($posts = $category->posts()->latest()->get())->isNotEmpty())
+                @if ($posts->isNotEmpty())
                     <h2 id="{{ $slug = 'resources-about-' . Str::slug($category->name) }}">
                         <a href="#{{ $slug }}">Resources about {{ $category->name }}</a>
                     </h2>

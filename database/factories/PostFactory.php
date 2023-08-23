@@ -24,9 +24,13 @@ class PostFactory extends Factory
             'teaser' => fake()->paragraph(),
             'commercial' => fake()->boolean(),
             'community_link' => collect([fake()->url(), null])->random(),
-            'is_published' => fake()->boolean(),
             'sessions' => fake()->randomNumber(),
         ];
+    }
+
+    public function published() : static
+    {
+        return $this->state(fn () : array => ['is_published' => true]);
     }
 
     public function asCommunityLink() : static

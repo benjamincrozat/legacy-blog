@@ -11,6 +11,7 @@ trait HasFeedItems
     {
         return self::query()
             ->latest()
+            ->published()
             ->withUser()
             ->limit(10)
             ->get();

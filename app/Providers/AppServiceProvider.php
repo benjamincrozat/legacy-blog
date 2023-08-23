@@ -33,7 +33,7 @@ class AppServiceProvider extends ServiceProvider
             static $categories;
 
             $view->with([
-                'categories' => $categories ??= Category::with('latest')
+                'categories' => $categories ??= Category::with('latestPosts')
                     ->whereHas('posts')
                     ->orderBy('name')
                     ->get(),
