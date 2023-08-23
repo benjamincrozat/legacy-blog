@@ -8,9 +8,7 @@
 >
     <div class="container mt-16 lg:max-w-screen-md">
         <div class="text-center">
-            <a href="{{ route('pouest') }}">
-                <img src="{{ Vite::asset('resources/img/pouest.jpg') }}" alt="Instantly migrate PHPUnit tests to Pest" class="inline-block w-16 h-16 mx-auto shadow-lg rounded-2xl" />
-            </a>
+            <img src="{{ Vite::asset('resources/img/pouest.jpg') }}" alt="Instantly migrate PHPUnit tests to Pest" class="inline-block w-16 h-16 mx-auto shadow-lg rounded-2xl" />
 
             <h1 class="mt-6 text-xl font-bold text-white sm:text-2xl md:text-3xl">
                 Instantly migrate PHPUnit tests to Pest
