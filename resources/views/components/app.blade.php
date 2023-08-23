@@ -107,7 +107,7 @@
                                     />
                                 </x-slot:trigger>
 
-                                <x-menu-item href="/admin/posts" icon="o-cog">
+                                <x-menu-item href="/admin/posts" icon="o-cog" :no-wire-navigate="true">
                                     Admin
                                 </x-menu-item>
 
