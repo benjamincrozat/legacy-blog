@@ -32,7 +32,9 @@
                     class="float-right w-[96px] md:w-[128px] h-[96px] md:h-[128px] mt-2 mb-8 ml-8 rounded-full"
                 />
 
-                <h1>{{ $post->user->name }}</h1>
+                <h1 class="text-2xl">
+                    {{ $post->user->name }}
+                </h1>
 
                 {!! $post->user->presenter()->description() !!}
 

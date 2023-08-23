@@ -13,11 +13,15 @@ class Tree
 
     public function build(string $html) : array
     {
+        // Silent errors about invalid tags.
+        libxml_use_internal_errors(true);
+
         $domDocument = new DOMDocument;
 
-        $html = mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8');
-
-        $domDocument->loadHTML($html);
+        $domDocument->loadHTML(
+            // Fixes issues with special characters. I don't know why they occur only in the tree.
+            mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8')
+        );
 
         $headings = (new DOMXPath($domDocument))->query('//h2|//h3|//h4|//h5|//h6');
 

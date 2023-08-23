@@ -79,3 +79,9 @@ return $app;
 This is a YouTube video:
 
 https://www.youtube.com/watch?v=dQw4w9WgXcQ
+
+This is <strong>HTML</strong>.
+
+This is disallowed HTML:
+
+<script>window.alert('Hello, World!');</script>
