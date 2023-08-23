@@ -41,9 +41,9 @@
                 Learn <span class="text-{{ $category->presenter()->primaryColor() }}">{{ $category->name }}</span>
             </x-slot:title>
 
-            <div class="container mt-2 lg:max-w-screen-md">
+            <x-prose class="container mt-2 lg:max-w-screen-md">
                 {!! $category->presenter()->longDescription() !!}
-            </div>
+            </x-prose>
 
             <ul class="container grid gap-8 mt-16 md:grid-cols-2">
                 @foreach ($category->latest->take(4) as $post)
