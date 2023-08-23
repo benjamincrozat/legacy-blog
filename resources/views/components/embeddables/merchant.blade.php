@@ -2,10 +2,6 @@
 use App\Models\Merchant;
 
 try {
-    if (! $post = request()->route()->parameter('post')) {
-        return;
-    }
-
     $merchant = Merchant::query()
         ->where('id', $id)
         ->orWhere('slug', $id)

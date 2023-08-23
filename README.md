@@ -31,12 +31,11 @@ I feel obligated to mention that my relative success is not correlated to my tec
 ## What you will learn
 
 This is a small project. It certainly won't teach you how to maintain apps at huge scales. That being said, you can learn about:
-- Simplicity. Most developers underestimate its benefits.
+- Simplicity. Most developers underestimate its benefits. I love figuring out how to do more with less.
 - Using the GPT API from OpenAI to create features that were unthinkable not so long ago.
 - Creating admin pages based on Filament.
-- Testing. A crucial part of ensuring everything stays stable. Because I can be forgetful, distracted and overconfident sometimes. These are flaws of human beings that can easily be mitigated by machines.
-- How to use various frontend technologies such as Livewire v3 + Volt, Alpine.js, and Tailwind CSS.
-- But you will also learn what you should avoid. This codebase is far from what I consider perfect.
+- Testing. This is a crucial part in ensuring everything don't break and Google does not penalize me. Because I can be forgetful, distracted and overconfident sometimes. These are flaws of human beings that can easily be mitigated by machines.
+- How to use various frontend technologies such as Livewire v3, Volt, Alpine.js, and Tailwind CSS.
 
 ## Requirements
 
@@ -47,7 +46,7 @@ This is a small project. It certainly won't teach you how to maintain apps at hu
 
 The instructions below have been written assuming that you are using Laravel Valet. But you can run the project in whichever environment you want (Herd, Docker with Laravel Sail, Laragon, etc.).
 
-Clone the repository and cd into it:
+Clone the repository and `cd` into it:
 
 ```bash
 git clone git@github.com:benjamincrozat/benjamincrozat.com.git
