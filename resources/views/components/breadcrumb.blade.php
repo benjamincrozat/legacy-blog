@@ -3,12 +3,6 @@
         Home
     </a>
 
-    @if (! empty($parent))
-        <span class="opacity-30">/</span>
-
-        {!! $parent !!}
-    @endif
-
     <span class="opacity-30">/</span>
 
     <span class="opacity-50 line-clamp-1">
