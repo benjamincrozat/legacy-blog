@@ -12,7 +12,7 @@ Route::get('/categories/{category:slug}', ShowCategoryController::class)->name('
 
 Route::get('/recommends/{merchant:slug}', ShowMerchantController::class)->name('merchants.show');
 
-Route::view('/pouest', 'pouest')->name('pouest');
+Route::view('/phpunit-to-pest', 'pouest')->name('pouest');
 
 Route::view('/privacy', 'privacy')->name('privacy');
 
