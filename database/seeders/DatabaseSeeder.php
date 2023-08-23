@@ -10,31 +10,31 @@ class DatabaseSeeder extends Seeder
 {
     public function run() : void
     {
-        Category::factory()->hasPosts(10)->create([
+        Category::factory()->hasPosts(10)->createQuietly([
             'name' => 'Alpine.js',
             'description' => 'Alpine.js is a lightweight JavaScript framework for pragmatic developers building reactive web interfaces.',
             'primary_color' => 'cyan-600',
         ]);
 
-        Category::factory()->hasPosts(10)->create([
+        Category::factory()->hasPosts(10)->createQuietly([
             'name' => 'CSS',
             'description' => 'CSS, or Cascading Style Sheets, is a language used to define and apply styles (like fonts, colors, and spacing) to your favorite web pages.',
             'primary_color' => 'blue-600',
         ]);
 
-        Category::factory()->hasPosts(10)->create([
+        Category::factory()->hasPosts(10)->createQuietly([
             'name' => 'Development Tools',
             'description' => 'Tools are essential to get the job done. Find and learn how to use the best free and paid ones for your next project.',
             'primary_color' => 'orange-800',
         ]);
 
-        Category::factory()->hasPosts(10)->create([
+        Category::factory()->hasPosts(10)->createQuietly([
             'name' => 'GPT',
             'description' => 'GPT, or Generative Pre-trained Transformers, is a revolutionary LLM (Large Language Model) that changed world of artificial intelligence forever.',
             'primary_color' => 'emerald-500',
         ]);
 
-        Category::factory()->hasPosts(10)->create([
+        Category::factory()->hasPosts(10)->createQuietly([
             'name' => 'HTML',
             'description' => 'HTML, or HyperText Markup Language, is the standard markup language used to create and structure content for the web, which is then displayed by browsers.',
             'content' => <<<'MARKDOWN'
@@ -74,38 +74,38 @@ MARKDOWN,
             'primary_color' => 'orange-400',
         ]);
 
-        Category::factory()->hasPosts(10)->create([
+        Category::factory()->hasPosts(10)->createQuietly([
             'name' => 'Inertia.js',
             'description' => 'Create modern single-page React, Svelta, and Vue apps using classic server-side routing. Inertia.js works with any backend, and is tuned for Laravel.',
             'primary_color' => 'purple-400',
         ]);
 
-        Category::factory()->hasPosts(10)->create([
+        Category::factory()->hasPosts(10)->createQuietly([
             'name' => 'JavaScript',
             'description' => 'JavaScript is a versatile, high-level programming language that makes the web less boring by adding dynamic behavior.',
             'primary_color' => 'yellow-400',
             'secondary_color' => 'black',
         ]);
 
-        Category::factory()->hasPosts(10)->create([
+        Category::factory()->hasPosts(10)->createQuietly([
             'name' => 'Laravel',
             'description' => 'Laravel is a world-class web application framework with an expressive and elegant syntax used by the biggest companies in the world.',
             'primary_color' => 'red-400',
         ]);
 
-        Category::factory()->hasPosts(10)->create([
+        Category::factory()->hasPosts(10)->createQuietly([
             'name' => 'Livewire',
             'description' => 'Livewire is what enable Laravel developers to build interactive web applications without the hassle of dealing with complex JavaScript workflows.',
             'primary_color' => 'pink-400',
         ]);
 
-        Category::factory()->hasPosts(10)->create([
+        Category::factory()->hasPosts(10)->createQuietly([
             'name' => 'MySQL',
             'description' => 'MySQL is a popular database system used to store, organize, and retrieve data for websites and apps.',
             'primary_color' => '[#3d6e93]',
         ]);
 
-        Category::factory()->hasPosts(10)->create([
+        Category::factory()->hasPosts(10)->createQuietly([
             'name' => 'PHP',
             'description' => 'PHP, or Hypertext Preprocessor, is a server-side scripting language designed for web development, enabling you to create web application that can change while you are sleeping.',
             'content' => <<<'MARKDOWN'
@@ -148,23 +148,23 @@ MARKDOWN,
             'primary_color' => '[#4f5b93]',
         ]);
 
-        Category::factory()->hasPosts(10)->create([
+        Category::factory()->hasPosts(10)->createQuietly([
             'name' => 'SEO',
             'description' => 'Coding is great, but having real users is even better. Learn how to build sustainable long-term traffic with Search Engine Optimization (SEO).',
         ]);
 
-        Category::factory()->hasPosts(10)->create([
+        Category::factory()->hasPosts(10)->createQuietly([
             'name' => 'Tailwind CSS',
             'description' => 'Tailwind CSS is a utility-first framework that will make you fall in love with UI design again, and teach you to always question the status quo.',
             'primary_color' => 'cyan-400',
         ]);
 
-        Category::factory()->hasPosts(10)->create([
+        Category::factory()->hasPosts(10)->createQuietly([
             'name' => 'Vue.js',
             'description' => 'Vue.js is an approachable, performant and versatile framework for building web user interfaces.',
             'primary_color' => 'emerald-400',
         ]);
 
-        Merchant::factory(10)->create();
+        Merchant::factory(10)->createQuietly();
     }
 }
