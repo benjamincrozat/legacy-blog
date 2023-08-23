@@ -11,6 +11,20 @@ class Category extends Model
 {
     use HasFactory, HasPresenter;
 
+    public static function booted() : void
+    {
+        static::saved(function (self $model) {
+            $pending = dispatch(function () use ($model) {
+                $model->presenter()->longDescription();
+                $model->presenter()->content();
+            });
+
+            if (! app()->runningUnitTests()) {
+                $pending->afterResponse();
+            }
+        });
+    }
+
     public function posts() : BelongsToMany
     {
         return $this->belongsToMany(Post::class);

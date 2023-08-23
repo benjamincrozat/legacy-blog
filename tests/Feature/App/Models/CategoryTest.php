@@ -1,21 +1,15 @@
 <?php
 
-use App\Str;
 use App\Models\Category;
 
-test('attributes are rendered as markdown and cached when accessed for the first time', function (string $attribute) {
-    $category = Category::factory()->create();
+test('attributes are rendered and cached after saving', function () {
+    $model = Category::factory()->create();
 
-    $key = "Category.$category->id.$attribute." . sha1($category->$attribute);
+    $firstKey = "Category.$model->id.long_description." . sha1($model->long_description);
 
-    expect(cache()->has($key))->toBeFalse();
+    $secondKey = "Category.$model->id.content." . sha1($model->content);
 
-    $camelAttribute = Str::camel($attribute);
+    expect(cache()->has($firstKey))->toBeTrue();
 
-    $category->presenter()->$camelAttribute();
-
-    expect(cache()->has($key))->toBeTrue();
-})->with([
-    ['long_description'],
-    ['content'],
-]);
+    expect(cache()->has($secondKey))->toBeTrue();
+});

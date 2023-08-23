@@ -17,6 +17,20 @@ class Post extends BaseModel implements Feedable
         'modified_at' => 'date',
     ];
 
+    public static function booted() : void
+    {
+        static::saved(function (self $model) {
+            $pending = dispatch(function () use ($model) {
+                $model->presenter()->content();
+                $model->presenter()->teaser();
+            });
+
+            if (! app()->runningUnitTests()) {
+                $pending->afterResponse();
+            }
+        });
+    }
+
     public function resolveRouteBindingQuery($query, $value, $field = null)
     {
         $query = parent::resolveRouteBindingQuery($query, $value, $field);

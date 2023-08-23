@@ -1,21 +1,15 @@
 <?php
 
-use App\Str;
 use App\Models\Post;
 
-test('attributes are rendered as markdown and cached when accessed for the first time', function (string $attribute) {
-    $post = Post::factory()->create();
+test('attributes are rendered and cached after saving', function () {
+    $model = Post::factory()->create();
 
-    $key = "Post.$post->id.$attribute." . sha1($post->$attribute);
+    $firstKey = "Post.$model->id.content." . sha1($model->content);
 
-    expect(cache()->has($key))->toBeFalse();
+    $secondKey = "Post.$model->id.teaser." . sha1($model->teaser);
 
-    $camelAttribute = Str::camel($attribute);
+    expect(cache()->has($firstKey))->toBeTrue();
 
-    $post->presenter()->$camelAttribute();
-
-    expect(cache()->has($key))->toBeTrue();
-})->with([
-    ['content'],
-    ['teaser'],
-]);
+    expect(cache()->has($secondKey))->toBeTrue();
+});
