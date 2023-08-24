@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\CategoriesResource\RelationManagers;
+namespace App\Filament\Resources\CategoryResource\RelationManagers;
 
 use Filament\Forms;
 use Filament\Tables;
@@ -8,7 +8,7 @@ use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\RelationManagers\RelationManager;
 
-class PostsRelationManager extends RelationManager
+class PostRelationManager extends RelationManager
 {
     protected static string $relationship = 'posts';
 

@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\Model;
 use Filament\Tables\Filters\SelectFilter;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\PostResource\Pages;
-use App\Filament\Resources\PostsResource\RelationManagers\CategoriesRelationManager;
+use App\Filament\Resources\PostResource\RelationManagers\CategoryRelationManager;
 
 class PostResource extends Resource
 {
@@ -191,7 +191,7 @@ class PostResource extends Resource
     public static function getRelations() : array
     {
         return [
-            CategoriesRelationManager::class,
+            CategoryRelationManager::class,
         ];
     }
 

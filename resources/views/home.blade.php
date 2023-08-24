@@ -33,7 +33,7 @@
                 @endforeach
             </ul>
 
-            <div class="mt-8 text-center">
+            <div class="mt-16 text-center">
                 <a wire:navigate href="{{ route('posts.index') }}" class="text-xl font-bold underline">
                     There's even more to read about!
                 </a>

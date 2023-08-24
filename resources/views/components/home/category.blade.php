@@ -10,7 +10,7 @@
                 class="fill-current w-[40px] h-[40px] text-{{ $category->presenter()->primaryColor() }}"
             />
         @else
-            <x-heroicon-o-wrench-screwdriver class="w-[40px] h-[40px] text-{{ $category->presenter()->primaryColor() }}" />
+            <x-heroicon-s-wrench class="w-[40px] h-[40px] text-{{ $category->presenter()->primaryColor() }}" />
         @endif
     </div>
 

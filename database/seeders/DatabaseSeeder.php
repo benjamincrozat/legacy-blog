@@ -29,6 +29,11 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Category::factory()->createQuietly([
+            'name' => 'Hosting',
+            'primary_color' => 'gray-700',
+        ]);
+
+        Category::factory()->createQuietly([
             'name' => 'HTML',
             'description' => 'HTML, or HyperText Markup Language, is the standard markup language used to create and structure content for the web, which is then displayed by browsers.',
             'content' => <<<'MARKDOWN'
@@ -143,8 +148,14 @@ MARKDOWN,
         ]);
 
         Category::factory()->createQuietly([
+            'name' => 'Security',
+            'primary_color' => 'orange-700',
+        ]);
+
+        Category::factory()->createQuietly([
             'name' => 'SEO',
             'description' => 'Coding is great, but having real users is even better. Learn how to build sustainable long-term traffic with Search Engine Optimization (SEO).',
+            'primary_color' => '[#4285f4]',
         ]);
 
         Category::factory()->createQuietly([
@@ -155,6 +166,12 @@ MARKDOWN,
 
         Category::factory()->createQuietly([
             'name' => 'Testing',
+            'primary_color' => 'lime-600',
+        ]);
+
+        Category::factory()->createQuietly([
+            'name' => 'Tools',
+            'primary_color' => 'violet-600',
         ]);
 
         Category::factory()->createQuietly([
