@@ -182,6 +182,6 @@ MARKDOWN,
             'primary_color' => '[#42b883]',
         ]);
 
-        Merchant::factory(10)->createQuietly();
+        Merchant::factory(10)->create();
     }
 }
