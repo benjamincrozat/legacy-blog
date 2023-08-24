@@ -140,7 +140,7 @@
 
                     <p class="mt-4"><a href="/feed" class="font-medium text-white underline">Subscribe to feed</a>, and follow me on <a href="https://github.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer" class="font-medium text-white underline">GitHub</a> and <a href="https://x.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer" class="font-medium text-white underline">X</a>. For inquiries, <a href="mailto:hello@benjamincrozat.com" class="font-medium text-white underline">send&nbsp;me&nbsp;an&nbsp;email</a>.</p>
 
-                    <p class="mt-8">Read my <a href="{{ route('privacy') }}" class="underline">privacy policy</a> and <a href="{{ route('terms') }}" class="underline">terms of service</a>.</p>
+                    <p class="mt-8">Read my <a wire:navigate href="{{ route('privacy') }}" class="underline">privacy policy</a> and <a wire:navigate href="{{ route('terms') }}" class="underline">terms of service</a>.</p>
 
                     <p class="mt-8 text-xs tracking-widest uppercase opacity-50">© {{ config('app.name') }} {{ date('Y') }}. All rights reserved.</p>
                 </footer>
