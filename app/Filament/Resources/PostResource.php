@@ -107,10 +107,6 @@ class PostResource extends Resource
                         ->url()
                         ->maxLength(255),
 
-                    Forms\Components\Select::make('Categories')
-                        ->relationship('categories', 'name')
-                        ->multiple(),
-
                     Forms\Components\Textarea::make('description')
                         ->maxLength(65535)
                         ->rows(5)
