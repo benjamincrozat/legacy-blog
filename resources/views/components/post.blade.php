@@ -11,7 +11,7 @@
                         wire:navigate
                         href="{{ route('posts.show', $post) }}"
                     @endif
-                    class="text-indigo-600"
+                    class="text-indigo-600 underline"
                 >
                     {{ $post->title }}
                 </a>
