@@ -57,7 +57,7 @@
                         <x-icon-logo class="w-10 h-10 fill-current" />
                     </a>
 
-                    <div class="flex items-center justify-between gap-6 md:gap-8">
+                    <div class="flex items-center justify-between gap-8 text-sm">
                         <x-menu trigger="Topics">
                             @foreach ($categories as $category)
                                 <x-menu-item
