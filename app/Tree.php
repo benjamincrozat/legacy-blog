@@ -7,6 +7,9 @@ use Exception;
 use DOMElement;
 use DOMDocument;
 
+// This has been wrote by ChatGPT. I just applied some formatting and made it a class. Here's a trick:
+// 1. Use the Python code interpreter to increase the odds of getting the desired result.
+// 2. Once done, ask it to convert the code to PHP.
 class Tree
 {
     private array $stack = [];

@@ -62,11 +62,9 @@ class Str extends \Illuminate\Support\Str
         $text = '';
 
         foreach ($node->children() as $child) {
-            if ($child instanceof Text) {
-                $text .= $child->getLiteral();
-            } else {
-                $text .= static::childrenToText($child);
-            }
+            $text .= $child instanceof Text
+                ? $child->getLiteral()
+                : static::childrenToText($child);
         }
 
         return $text;

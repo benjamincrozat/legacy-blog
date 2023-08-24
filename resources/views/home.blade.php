@@ -6,9 +6,9 @@
             <div class="flex items-center justify-center gap-4 mt-8 md:gap-8">
                 <x-icon-laravel class="h-10 md:h-[3.25rem]" />
                 <x-icon-livewire class="h-10 mx-2 md:h-12" />
-                <x-icon-alpine-js class="h-6 mr-1 md:h-8" />
+                <x-icon-alpinejs class="h-6 mr-1 md:h-8" />
                 <x-icon-tailwind-css class="h-8 mr-1 md:h-12" />
-                <x-icon-vue-js class="h-10 md:h-12" />
+                <x-icon-vuejs class="h-10 md:h-12" />
             </div>
 
             <div class="mt-8">Learn about Laravel and its&nbsp;ecosystem.</div>
@@ -38,10 +38,21 @@
     @foreach ($categories as $category)
         <x-section class="mt-32">
             <x-slot:title class="container lg:max-w-screen-md">
-                Learn <span class="text-{{ $category->presenter()->primaryColor() }}">{{ $category->name }}</span>
+                <div class="flex items-center justify-between">
+                    <span>Learn <span class="text-{{ $category->presenter()->primaryColor() }}">{{ $category->name }}</span></span>
+
+                    @if (File::exists(resource_path("svg/$category->slug.svg")))
+                        <x-dynamic-component
+                            component="icon-{{ $category->slug }}"
+                            class="fill-current w-[48px] h-[48px] text-{{ $category->presenter()->primaryColor() }}"
+                        />
+                    @else
+                        <x-heroicon-o-wrench-screwdriver class="w-[48px] h-[48px] text-{{ $category->presenter()->primaryColor() }}" />
+                    @endif
+                </div>
             </x-slot:title>
 
-            <x-prose class="container mt-2 lg:max-w-screen-md">
+            <x-prose class="container mt-4 lg:max-w-screen-md">
                 {!! $category->presenter()->longDescription() !!}
             </x-prose>
 

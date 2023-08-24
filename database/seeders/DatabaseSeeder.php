@@ -23,12 +23,6 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Category::factory()->hasPosts(10, ['is_published' => true])->createQuietly([
-            'name' => 'Development Tools',
-            'description' => 'Tools are essential to get the job done. Find and learn how to use the best free and paid ones for your next project.',
-            'primary_color' => 'orange-800',
-        ]);
-
-        Category::factory()->hasPosts(10, ['is_published' => true])->createQuietly([
             'name' => 'GPT',
             'description' => 'GPT, or Generative Pre-trained Transformers, is a revolutionary LLM (Large Language Model) that changed world of artificial intelligence forever.',
             'primary_color' => 'emerald-500',
