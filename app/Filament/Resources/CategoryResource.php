@@ -115,6 +115,10 @@ class CategoryResource extends Resource
 
             Tables\Columns\TextColumn::make('secondary_color')
                 ->searchable(),
+
+            Tables\Columns\TextColumn::make('posts_count')
+                ->counts('posts')
+                ->sortable(),
         ];
     }
 

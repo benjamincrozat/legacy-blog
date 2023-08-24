@@ -2,7 +2,7 @@
     title="Learn about Laravel and its ecosystem."
 >
     <x-section class="container mt-24 text-center">
-        <x-slot:title class="text-3xl font-bold text-center md:text-4xl lg:text-5xl">
+        <x-slot:title class="font-bold text-center text-3xl/tight md:text-4xl/tight lg:text-5xl/tight">
             <div class="flex items-center justify-center gap-4 mt-8 md:gap-8">
                 <x-icon-laravel class="h-10 md:h-[3.25rem]" />
                 <x-icon-livewire class="h-10 mx-2 md:h-12" />
@@ -14,7 +14,7 @@
             <div class="mt-8">Learn about Laravel and its&nbsp;ecosystem.</div>
         </x-slot:title>
 
-        <p class="mt-2 text-xl md:text-2xl lg:text-3xl">
+        <p class="mt-2 text-xl/tight md:text-2xl/tight lg:text-3xl/tight">
             Join more than <span class="font-semibold text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">20,000</span> readers and skyrocket your web development skills.
         </p>
     </x-section>

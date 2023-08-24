@@ -11,6 +11,8 @@ class Category extends Model
 {
     use HasFactory, HasPresenter;
 
+    protected $withCount = ['posts'];
+
     public static function booted() : void
     {
         static::saved(function (self $model) {
