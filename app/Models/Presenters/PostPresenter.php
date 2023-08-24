@@ -5,6 +5,7 @@ namespace App\Models\Presenters;
 use App\Str;
 use App\Tree;
 use Spatie\Url\Url;
+use Illuminate\Support\Carbon;
 
 class PostPresenter extends BasePresenter
 {
@@ -43,6 +44,10 @@ class PostPresenter extends BasePresenter
 
     public function lastUpdated() : string
     {
-        return ($this->model->manually_updated_at ?? $this->model->created_at)->isoFormat('LL');
+        if (is_string($this->model->manually_updated_at)) {
+            $manuallyUpdatedAt = Carbon::parse($this->model->manually_updated_at);
+        }
+
+        return ($manuallyUpdatedAt ?? $this->model->created_at)->isoFormat('LL');
     }
 }
