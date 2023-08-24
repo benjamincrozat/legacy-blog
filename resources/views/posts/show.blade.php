@@ -3,11 +3,28 @@
     :description="$post->description"
 >
     <div class="container mt-4 lg:max-w-screen-md">
-        <x-breadcrumb>
+        <x-breadcrumb class="mb-8">
             {{ $post->title }}
         </x-breadcrumb>
 
-        <article class="mt-8">
+        @if ($post->categories->isNotEmpty())
+            <ul class="flex gap-1 mt-4">
+                @foreach ($post->categories as $category)
+                    <li>
+                        <a
+                            wire:navigate
+                            href="{{ route('categories.show', $category) }}"
+                            class="inline-block px-2 py-1 text-xs font-bold uppercase rounded leading-normal hover:opacity-75 transition-opacity
+                            bg-{{ $category->presenter()->primaryColor() }} text-{{ $category->presenter()->secondaryColor() }}"
+                        >
+                            {{ $category->name }}
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
+        @endif
+
+        <article class="mt-4">
             <x-prose>
                 <h1>{{ $post->title }}</h1>
 
