@@ -29,6 +29,7 @@
             @endif
 
             on <a href="{{ route('posts.show', $post) }}">{{ $post->presenter()->lastUpdated() }}</a>
+            @if ($post->community_link) <span class="mx-1 text-xs">•</span> {{ $post->presenter()->communityLinkDomain() }} @endif
         </p>
     </div>
 
