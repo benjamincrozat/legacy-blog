@@ -22,4 +22,5 @@ Route::view('/terms', 'terms')->name('terms');
 Route::feeds();
 
 Route::get('/posts', ListPostsController::class)->name('posts.index');
+
 Route::get('/{post:slug}', ShowPostController::class)->name('posts.show');
