@@ -45,7 +45,7 @@
         <x-section class="mt-32">
             <x-slot:title class="container md:max-w-screen-sm">
                 <div class="flex items-center justify-between">
-                    <span>Learn <span class="text-{{ $category->presenter()->primaryColor() }}">{{ $category->name }}</span></span>
+                    <span>Learn about <span class="text-{{ $category->presenter()->primaryColor() }}">{{ $category->name }}</span></span>
                     <x-category-icon :category="$category" />
                 </div>
             </x-slot:title>
