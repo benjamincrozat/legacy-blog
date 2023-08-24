@@ -62,19 +62,12 @@
                             @foreach ($categories as $category)
                                 <x-menu-item
                                     href="{{ route('categories.show', $category) }}"
-                                    class="hover:!bg-{{ $category->primary_color }} hover:!text-{{ $category->secondary_color }}"
+                                    class="hover:!bg-transparent hover:!text-inherit"
                                 >
+                                    <x-category-icon :category="$category" class="!w-[48px] !h-[48px]" />
                                     {{ $category->name }}
                                 </x-menu-item>
                             @endforeach
-
-                            @if ($categories->isNotEmpty())
-                                <x-menu-divider />
-                            @endif
-
-                            <x-menu-item href="{{ route('posts.index') }}">
-                                All
-                            </x-menu-item>
                         </x-menu>
 
                         <a wire:navigate href="{{ route('posts.index') }}">

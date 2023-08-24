@@ -4,9 +4,9 @@
     @if (File::exists(resource_path("svg/$category->slug.svg")))
         <x-dynamic-component
             component="icon-{{ $category->slug }}"
-            class="fill-current w-[32px] h-[32px] text-{{ $category->presenter()->primaryColor() }}"
+            class="fill-current w-[50%] h-[50%] text-{{ $category->presenter()->primaryColor() }}"
         />
     @else
-        <x-heroicon-s-wrench class="w-[32px] h-[32px] text-{{ $category->presenter()->primaryColor() }}" />
+        <x-heroicon-s-wrench class="w-[50%] h-[50%] text-{{ $category->presenter()->primaryColor() }}" />
     @endif
 </div>

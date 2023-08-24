@@ -12,7 +12,7 @@
 
     <ul
         {{ $attributes->merge([
-            'class' => '-mt-4 sm:mt-0 rounded absolute left-4 sm:left-auto right-4 sm:right-0 bg-white duration-500 shadow-lg top-full sm:min-w-[300px] py-2 z-20',
+            'class' => 'outline outline-1 outline-black/[.025] -mt-4 sm:mt-0 rounded absolute left-4 sm:left-auto right-4 sm:right-0 bg-white shadow-xl top-full sm:min-w-[300px] py-2 z-20 overflow-y-scroll max-h-[50vh]',
         ]) }}
         x-cloak
         x-show="open"
@@ -21,11 +21,4 @@
     >
         {{ $slot }}
     </ul>
-
-    <div
-        class="fixed inset-0 z-10 bg-black/5 backdrop-blur-md"
-        x-cloak
-        x-show="open"
-        x-transition.opacity.duration.200ms
-    ></div>
 </div>
