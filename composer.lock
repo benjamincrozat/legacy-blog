@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "214b6286b1355ae746ff4c626849cf1f",
+    "content-hash": "0a8d06ad9b7d2e7ed20eb5928f549910",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -3962,16 +3962,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v3.0.0-beta.11",
+            "version": "v3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "8c3eb912562248d89ca7f5de59de2b2ecdb25f2e"
+                "reference": "b2ba0baa66ddc294ba7b8b105d750dc5124056ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/8c3eb912562248d89ca7f5de59de2b2ecdb25f2e",
-                "reference": "8c3eb912562248d89ca7f5de59de2b2ecdb25f2e",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/b2ba0baa66ddc294ba7b8b105d750dc5124056ba",
+                "reference": "b2ba0baa66ddc294ba7b8b105d750dc5124056ba",
                 "shasum": ""
             },
             "require": {
@@ -4023,7 +4023,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v3.0.0-beta.11"
+                "source": "https://github.com/livewire/livewire/tree/v3.0.0"
             },
             "funding": [
                 {
@@ -4031,7 +4031,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-08-22T13:33:10+00:00"
+            "time": "2023-08-24T15:33:35+00:00"
         },
         {
             "name": "livewire/volt",
@@ -13910,10 +13910,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "livewire/livewire": 10,
-        "livewire/volt": 10
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
