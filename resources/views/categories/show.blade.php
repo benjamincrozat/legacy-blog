@@ -9,28 +9,24 @@
 
         <article>
             <x-prose class="mt-8">
-                <h1>Learn <span class="{{ ! $category->presenter()->primaryColor() ?: 'text-' . $category->presenter()->primaryColor() }}">{{ $category->name }}</span></h1>
-
-                <p>This is the go-to place to learn all about {{ $category->name }}. I'm hard at work, writing an evergrowing amount of content covering the topic.</p>
-
-                @if ($posts->isNotEmpty())
-                    <h2 id="{{ $slug = 'resources-about-' . Str::slug($category->name) }}">
-                        <a href="#{{ $slug }}">Resources about {{ $category->name }}</a>
-                    </h2>
-
-                    <ul>
-                        @foreach ($posts as $post)
-                            <li>
-                                <a wire:navigate href="{{ route('posts.show', $post) }}">
-                                    {{ $post->title }}
-                                </a>
-                            </li>
-                        @endforeach
-                    </ul>
-                @endif
+                <h1>Learn about <span class="{{ ! $category->presenter()->primaryColor() ?: 'text-' . $category->presenter()->primaryColor() }}">{{ $category->name }}</span></h1>
 
                 {!! $category->presenter()->content() !!}
             </x-prose>
         </article>
     </div>
+
+    <x-section class="mt-16">
+        <x-slot:title class="text-center">
+            Articles about {{ $category->name }}
+        </x-slot:title>
+
+        <ul class="container grid gap-8 mt-8 md:grid-cols-2 md:gap-16">
+            @foreach ($posts as $post)
+                <li>
+                    <x-post :post="$post" />
+                </li>
+            @endforeach
+        </ul>
+    </x-section>
 </x-app>
