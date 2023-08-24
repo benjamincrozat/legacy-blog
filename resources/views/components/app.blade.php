@@ -78,7 +78,7 @@
                         </x-menu>
 
                         <x-menu trigger="For you">
-                            <x-menu-item href="https://benjamincrozat.com/best-web-development-tools">
+                            <x-menu-item href="/best-web-development-tools">
                                 See all the tools I use
                             </x-menu-item>
 
