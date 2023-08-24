@@ -34,7 +34,7 @@ This is a small project. It certainly won't teach you how to maintain apps at hu
 - Simplicity. Most developers underestimate its benefits. I love figuring out how to do more with less.
 - Using the GPT API from OpenAI to create features that were unthinkable not so long ago.
 - Creating admin pages based on Filament.
-- Testing. This is a crucial part in ensuring everything don't break and Google does not penalize me. Because I can be forgetful, distracted and overconfident sometimes. These are flaws of human beings that can easily be mitigated by machines.
+- Testing. This is a crucial part in ensuring everything don't break and Google does not penalize me. Because I can be forgetful, distracted and overconfident sometimes. These are flaws of human beings that can easily be mitigated by machines. By the way, I don't aim for 100% code coverage, I don't think this metric reflects the stability of the codebase.
 - How to use various frontend technologies such as Livewire v3, Volt, Alpine.js, and Tailwind CSS.
 
 ## Requirements
