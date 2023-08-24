@@ -9,6 +9,7 @@ use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
 use App\Filament\Resources\CategoryResource\Pages;
+use App\Filament\Resources\CategoriesResource\RelationManagers\PostsRelationManager;
 
 class CategoryResource extends Resource
 {
@@ -101,27 +102,19 @@ class CategoryResource extends Resource
     public static function getTableColumns() : array
     {
         return [
-            Tables\Columns\Layout\Split::make([
-                Tables\Columns\Layout\Stack::make([
-                    Tables\Columns\TextColumn::make('name')
-                        ->searchable()
-                        ->sortable()
-                        ->weight('medium'),
+            Tables\Columns\TextColumn::make('name')
+                ->searchable()
+                ->sortable(),
 
-                    Tables\Columns\TextColumn::make('slug')
-                        ->searchable()
-                        ->sortable()
-                        ->color('gray'),
-                ]),
+            Tables\Columns\TextColumn::make('slug')
+                ->searchable()
+                ->sortable(),
 
-                Tables\Columns\Layout\Stack::make([
-                    Tables\Columns\TextColumn::make('primary_color')
-                        ->searchable(),
+            Tables\Columns\TextColumn::make('primary_color')
+                ->searchable(),
 
-                    Tables\Columns\TextColumn::make('secondary_color')
-                        ->searchable(),
-                ]),
-            ]),
+            Tables\Columns\TextColumn::make('secondary_color')
+                ->searchable(),
         ];
     }
 
@@ -133,7 +126,7 @@ class CategoryResource extends Resource
     public static function getRelations() : array
     {
         return [
-            //
+            PostsRelationManager::class,
         ];
     }
 

@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Model;
 use Filament\Tables\Filters\SelectFilter;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\PostResource\Pages;
+use App\Filament\Resources\PostsResource\RelationManagers\CategoriesRelationManager;
 
 class PostResource extends Resource
 {
@@ -51,7 +52,7 @@ class PostResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make()->button()->outlined()->icon(''),
-                Tables\Actions\DeleteAction::make()->link()->icon(''),
+                Tables\Actions\DeleteAction::make()->icon(''),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -194,7 +195,7 @@ class PostResource extends Resource
     public static function getRelations() : array
     {
         return [
-            //
+            CategoriesRelationManager::class,
         ];
     }
 
