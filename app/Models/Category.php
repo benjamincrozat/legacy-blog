@@ -34,7 +34,6 @@ class Category extends Model
     {
         return $this
             ->posts()
-            ->select(['posts.id', 'posts.image', 'posts.title', 'posts.slug', 'posts.description', 'posts.community_link', 'posts.created_at', 'posts.updated_at', 'posts.manually_updated_at'])
             ->latest()
             ->published();
     }
