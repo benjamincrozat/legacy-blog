@@ -45,8 +45,13 @@
         <x-section class="mt-32">
             <x-slot:title class="container md:max-w-screen-sm">
                 <div class="flex items-center justify-between">
-                    <span>Learn about <span class="text-{{ $category->presenter()->primaryColor() }}">{{ $category->name }}</span></span>
-                    <x-category-icon :category="$category" />
+                    <span>
+                        Learn about <span class="text-{{ $category->presenter()->primaryColor() }}">{{ $category->name }}</span>
+                    </span>
+
+                    <a wire:navigate href="{{ route('categories.show', $category) }}" class="flex-shrink-0">
+                        <x-category-icon :category="$category" />
+                    </a>
                 </div>
             </x-slot:title>
 

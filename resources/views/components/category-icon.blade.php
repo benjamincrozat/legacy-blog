@@ -1,5 +1,5 @@
 <div {{ $attributes->merge([
-    'class' => 'flex items-center justify-center flex-shrink-0 rounded-full w-[64px] h-[64px] bg-gradient-to-b from-' . $category->presenter()->primaryColor() . '/[.075] to-' . $category->presenter()->primaryColor() . '/[.025]',
+    'class' => 'flex items-center justify-center rounded-full w-[64px] h-[64px] bg-gradient-to-b from-' . $category->presenter()->primaryColor() . '/[.075] to-' . $category->presenter()->primaryColor() . '/[.025]',
 ]) }}>
     @if (File::exists(resource_path("svg/$category->slug.svg")))
         <x-dynamic-component

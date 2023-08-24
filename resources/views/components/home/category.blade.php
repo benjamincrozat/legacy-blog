@@ -4,7 +4,9 @@
             {{ $category->name }}
         </h3>
 
-        <x-category-icon :category="$category" />
+        <a wire:navigate href="{{ route('categories.show', $category) }}" class="flex-shrink-0">
+            <x-category-icon :category="$category" />
+        </a>
     </div>
 
     <div class="flex-grow mt-4">
