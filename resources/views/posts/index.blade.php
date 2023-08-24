@@ -6,7 +6,7 @@
             Everything I wrote about Laravel and its ecosystem.
         </x-slot:title>
 
-        <div class="container mt-16">
+        <div class="mt-16">
             <ul class="grid gap-8 md:grid-cols-2">
                 @foreach ($posts as $post)
                     <li>
