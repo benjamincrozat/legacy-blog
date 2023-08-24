@@ -8,7 +8,7 @@ $class = 'flex items-center w-full gap-3 px-4 py-2 text-left transition-colors d
             'wire:navigate' => empty($noWireNavigate) && Str::startsWith($href, '/') || Str::startsWith($href, config('app.url')),
         ]) }}>
             @if (! empty($icon))
-                <x-dynamic-component :component="'heroicon-' . $icon" class="w-5 h-5 translate-y-[.5px]" />
+                <x-dynamic-component :component="'heroicon-' . $icon" class="flex-shrink-0 w-5 h-5 translate-y-[.5px]" />
             @endif
 
             {{ $slot }}
@@ -16,7 +16,7 @@ $class = 'flex items-center w-full gap-3 px-4 py-2 text-left transition-colors d
     @else
         <button {{ $attributes->merge(compact('class')) }}>
             @if (! empty($icon))
-                <x-dynamic-component :component="'heroicon-' . $icon" class="w-5 h-5 translate-y-[.5px]" />
+                <x-dynamic-component :component="'heroicon-' . $icon" class="flex-shrink-0 w-5 h-5 translate-y-[.5px]" />
             @endif
 
             {{ $slot }}
