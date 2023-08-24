@@ -84,7 +84,7 @@
             Recommended
         </x-slot:title>
 
-        <ul class="grid mt-8 md:grid-cols-2 gap-x-8 gap-y-16">
+        <ul class="grid gap-8 mt-8 md:grid-cols-2 md:gap-16">
             @foreach ($recommended as $post)
                 <li>
                     <x-post :post="$post" />

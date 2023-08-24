@@ -25,7 +25,7 @@
                 An endless amount of content for web&nbsp;developers.
             </x-slot:title>
 
-            <ul class="grid mt-8 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+            <ul class="grid gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3 md:gap-16">
                 @foreach ($categories as $category)
                     <li class="h-full">
                         <x-home.category :category="$category" />
@@ -54,7 +54,7 @@
                 {!! $category->presenter()->longDescription() !!}
             </x-prose>
 
-            <ul class="container grid gap-8 mt-16 md:grid-cols-2">
+            <ul class="container grid gap-8 mt-16 md:gap-16 md:grid-cols-2">
                 @foreach ($category->latestPosts->take(4) as $post)
                     <li>
                         <x-post :post="$post" />
