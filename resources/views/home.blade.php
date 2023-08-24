@@ -80,9 +80,9 @@
         <x-prose class="mt-8">
             <img src="https://www.gravatar.com/avatar/{{ md5('hello@benjamincrozat.com') }}?s=256" width="128" height="128" alt="Benjamin Crozat" class="float-right mb-8 ml-8 rounded-full" />
 
-            <p>Hi! I'm Benjamin Crozat. I'm coming from the South of France and <strong>I've been a self-taught professional web developer for more than 10 years</strong>.</p>
+            <p>Hi! I'm Benjamin Crozat. I'm from the South of France and <strong>I've been a self-taught professional web developer for more than 10 years</strong>.</p>
 
-            <p>Coming from a modest family, <strong>being able to educate myself for free on the web changed my life for the better</strong>. <strong>Transmitting this knowledge to the community was a natural direction in my career.</strong> Therefore, I launched this blog in September 2022 with the goal to be in everyone's Google search.</p>
+            <p>Coming from a modest family, <strong>being able to educate myself for free on the web changed my life for the better</strong>. <strong>Giving back to the community was a natural direction in my career.</strong> Therefore, I launched this blog in September 2022 with the goal to be in everyone's Google search.</p>
         </x-prose>
     </x-section>
 </x-app>
