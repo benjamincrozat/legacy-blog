@@ -9,6 +9,7 @@ use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
 use App\Filament\Resources\CategoryResource\Pages;
+use Illuminate\Contracts\Database\Eloquent\Builder;
 use App\Filament\Resources\CategoryResource\RelationManagers\PostRelationManager;
 
 class CategoryResource extends Resource
@@ -33,6 +34,7 @@ class CategoryResource extends Resource
     {
         return $table
             ->columns(static::getTableColumns())
+            ->modifyQueryUsing(fn (Builder $query) => $query->withCount(['posts']))
             ->filters([
                 //
             ])
