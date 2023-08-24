@@ -36,7 +36,7 @@
 
         @if (! $post->community_link)
             <a href="{{ route('posts.show', $post) }}" class="flex-shrink-0">
-                <img src="{{ $post->image }}" width="64" height="64" alt="{{ $post->title }}" class="object-cover aspect-square" />
+                <img src="{{ $post->image }}" width="96" height="96" alt="{{ $post->title }}" class="object-cover aspect-square" />
             </a>
         @endif
     </div>

@@ -13,19 +13,19 @@ class DatabaseSeeder extends Seeder
         Category::factory()->createQuietly([
             'name' => 'Alpine.js',
             'description' => 'Alpine.js is a lightweight JavaScript framework for pragmatic developers building reactive web interfaces.',
-            'primary_color' => 'cyan-600',
+            'primary_color' => '[#77c1d2]',
         ]);
 
         Category::factory()->createQuietly([
             'name' => 'CSS',
             'description' => 'CSS, or Cascading Style Sheets, is a language used to define and apply styles (like fonts, colors, and spacing) to your favorite web pages.',
-            'primary_color' => 'blue-600',
+            'primary_color' => '[#264bdd]',
         ]);
 
         Category::factory()->createQuietly([
             'name' => 'GPT',
             'description' => 'GPT, or Generative Pre-trained Transformers, is a revolutionary LLM (Large Language Model) that changed world of artificial intelligence forever.',
-            'primary_color' => 'emerald-500',
+            'primary_color' => '[#12a37e]',
         ]);
 
         Category::factory()->createQuietly([
@@ -70,32 +70,34 @@ Continuing with our house analogy from before:
 - **[JavaScript](/categories/javascript) is the tech gadgets and electricity.** It adds functionality like turning on TVs, adjusting thermostats, and more.
 - **[PHP](/categories/php) (or other backend languages such as Python and Ruby) is the plumbing and hidden mechanisms that make certain features possible**, like having running water on demand.
 MARKDOWN,
-            'primary_color' => 'orange-400',
+            'primary_color' => '[#dc4a24]',
         ]);
 
         Category::factory()->createQuietly([
             'name' => 'Inertia.js',
             'description' => 'Create modern single-page React, Svelta, and Vue apps using classic server-side routing. Inertia.js works with any backend, and is tuned for Laravel.',
-            'primary_color' => 'purple-400',
+            'primary_color' => '[#8e59ea]',
         ]);
 
         Category::factory()->createQuietly([
             'name' => 'JavaScript',
             'description' => 'JavaScript is a versatile, high-level programming language that makes the web less boring by adding dynamic behavior.',
-            'primary_color' => 'yellow-400',
+            'primary_color' => '[#e8d44e]',
             'secondary_color' => 'black',
         ]);
 
         Category::factory()->createQuietly([
             'name' => 'Laravel',
             'description' => 'Laravel is a world-class web application framework with an expressive and elegant syntax used by the biggest companies in the world.',
-            'primary_color' => 'red-400',
+            'long_description' => "Laravel is a modern, elegant PHP framework that makes web development a breeze. With its expressive syntax, powerful tools, and vibrant community, **diving into the framework promises not only to elevate your coding skills but also to make the journey enjoyable**. Laravel might just be the magic touch you're looking for!",
+            'primary_color' => '[#f13d2e]',
         ]);
 
         Category::factory()->createQuietly([
             'name' => 'Livewire',
             'description' => 'Livewire is what enable Laravel developers to build interactive web applications without the hassle of dealing with complex JavaScript workflows.',
-            'primary_color' => 'pink-400',
+            'long_description' => '**Livewire seamlessly integrates with Laravel, allowing developers to build dynamic, modern web applications without leaving the comfort of their favorite programming language.** It blends the best of both worlds: the simplicity of Laravel and the reactivity of modern JavaScript frameworks.',
+            'primary_color' => '[#eb5a97]',
         ]);
 
         Category::factory()->createQuietly([
@@ -177,7 +179,7 @@ MARKDOWN,
         Category::factory()->createQuietly([
             'name' => 'Vue.js',
             'description' => 'Vue.js is an approachable, performant and versatile framework for building web user interfaces.',
-            'primary_color' => 'emerald-400',
+            'primary_color' => '[#42b883]',
         ]);
 
         Merchant::factory(10)->createQuietly();

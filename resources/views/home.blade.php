@@ -46,15 +46,7 @@
             <x-slot:title class="container md:max-w-screen-sm">
                 <div class="flex items-center justify-between">
                     <span>Learn <span class="text-{{ $category->presenter()->primaryColor() }}">{{ $category->name }}</span></span>
-
-                    @if (File::exists(resource_path("svg/$category->slug.svg")))
-                        <x-dynamic-component
-                            component="icon-{{ $category->slug }}"
-                            class="fill-current w-[48px] h-[48px] text-{{ $category->presenter()->primaryColor() }}"
-                        />
-                    @else
-                        <x-heroicon-o-wrench-screwdriver class="w-[48px] h-[48px] text-{{ $category->presenter()->primaryColor() }}" />
-                    @endif
+                    <x-category-icon :category="$category" />
                 </div>
             </x-slot:title>
 

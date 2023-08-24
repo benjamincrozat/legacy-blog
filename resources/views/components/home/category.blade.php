@@ -4,14 +4,7 @@
             {{ $category->name }}
         </h3>
 
-        @if (File::exists(resource_path("svg/$category->slug.svg")))
-            <x-dynamic-component
-                component="icon-{{ $category->slug }}"
-                class="fill-current w-[40px] h-[40px] text-{{ $category->presenter()->primaryColor() }}"
-            />
-        @else
-            <x-heroicon-s-wrench class="w-[40px] h-[40px] text-{{ $category->presenter()->primaryColor() }}" />
-        @endif
+        <x-category-icon :category="$category" />
     </div>
 
     <div class="flex-grow mt-4">

@@ -43,6 +43,6 @@ class PostPresenter extends BasePresenter
 
     public function lastUpdated() : string
     {
-        return ($this->model->updated_at ?? $this->model->created_at)->isoFormat('LL');
+        return ($this->model->manually_updated_at ?? $this->model->created_at)->isoFormat('LL');
     }
 }
