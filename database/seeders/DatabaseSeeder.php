@@ -161,7 +161,7 @@ MARKDOWN,
         Category::factory()->createQuietly([
             'name' => 'Tailwind CSS',
             'description' => 'Tailwind CSS is a utility-first framework that will make you fall in love with UI design again, and teach you to always question the status quo.',
-            'primary_color' => 'cyan-400',
+            'primary_color' => '[#38bdf9]',
         ]);
 
         Category::factory()->createQuietly([
