@@ -44,6 +44,8 @@ class PostPresenter extends BasePresenter
 
     public function lastUpdated() : string
     {
+        // I have no idea why sometimes, manually_updated_at is a string
+        // instead of being casted to a Carbon instance by Eloquent.
         if (is_string($this->model->manually_updated_at)) {
             $manuallyUpdatedAt = Carbon::parse($this->model->manually_updated_at);
         }
