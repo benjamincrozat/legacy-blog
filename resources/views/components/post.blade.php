@@ -1,7 +1,17 @@
 <div {{ $attributes->except('post')->merge(['class' => 'flex items-start gap-6 md:gap-8']) }}>
     <div class="flex-grow">
         <p class="font-bold ">
-            <a wire:navigate href="{{ route('posts.show', $post) }}" class="text-indigo-600">
+            <a
+                @if ($post->community_link)
+                    href="{{ $post->community_link }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                @else
+                    wire:navigate
+                    href="{{ route('posts.show', $post) }}"
+                @endif
+                class="text-indigo-600"
+            >
                 <span class="underline">{{ $post->title }}</span>
                 @if ($post->community_link)
                     <x-heroicon-o-arrow-right class="ml-1 inline w-4 h-4 translate-y-[-.5px]" />
@@ -18,7 +28,7 @@
                 Updated
             @endif
 
-            on {{ $post->presenter()->lastUpdated() }}
+            on <a href="{{ route('posts.show', $post) }}">{{ $post->presenter()->lastUpdated() }}</a>
         </p>
     </div>
 

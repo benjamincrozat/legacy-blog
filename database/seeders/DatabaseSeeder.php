@@ -154,6 +154,10 @@ MARKDOWN,
         ]);
 
         Category::factory()->createQuietly([
+            'name' => 'Testing',
+        ]);
+
+        Category::factory()->createQuietly([
             'name' => 'Vue.js',
             'description' => 'Vue.js is an approachable, performant and versatile framework for building web user interfaces.',
             'primary_color' => 'emerald-400',

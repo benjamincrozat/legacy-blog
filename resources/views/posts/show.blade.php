@@ -24,7 +24,7 @@
 
                 @if ($post->community_link)
                     <div class="text-xl text-center">
-                        <a href="{{ $post->community_link }}">
+                        <a href="{{ $post->community_link }}" target="_blank" rel="noopener noreferrer">
                             Read more on {{ $post->presenter()->communityLinkDomain() }}
                         </a>
                     </div>
@@ -49,7 +49,7 @@
 
                     {!! $post->user->presenter()->description() !!}
 
-                    <p><strong>Follow {{ $post->user->name }} on:</strong></p>
+                    <p><strong>Follow me on:</strong></p>
 
                     <ul>
                         <li><a href="https://github.com/{{ $post->user->github_handle }}" target="_blank" rel="nofollow noopener noreferrer">GitHub</a></li>
