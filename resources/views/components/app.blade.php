@@ -77,6 +77,10 @@
                             </x-menu-item>
                         </x-menu>
 
+                        <a wire:navigate href="{{ route('posts.index') }}">
+                            Latest
+                        </a>
+
                         <x-menu trigger="For you">
                             <x-menu-item href="/best-web-development-tools">
                                 See all the tools I use
