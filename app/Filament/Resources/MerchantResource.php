@@ -20,12 +20,6 @@ class MerchantResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('icon')
-                    ->maxLength(255),
-
-                Forms\Components\TextInput::make('screenshot')
-                    ->maxLength(255),
-
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
@@ -37,48 +31,6 @@ class MerchantResource extends Resource
                 Forms\Components\TextInput::make('link')
                     ->required()
                     ->maxLength(255),
-
-                Forms\Components\Textarea::make('take')
-                    ->maxLength(65535)
-                    ->columnSpanFull(),
-
-                Forms\Components\TextInput::make('rating')
-                    ->required()
-                    ->numeric()
-                    ->default(0),
-
-                Forms\Components\Textarea::make('pricing')
-                    ->maxLength(65535)
-                    ->columnSpanFull(),
-
-                Forms\Components\TextInput::make('annual_discount')
-                    ->maxLength(255),
-
-                Forms\Components\TextInput::make('guarantee')
-                    ->maxLength(255),
-
-                Forms\Components\Textarea::make('content')
-                    ->maxLength(65535)
-                    ->columnSpanFull(),
-
-                Forms\Components\Textarea::make('key_features')
-                    ->maxLength(65535)
-                    ->columnSpanFull(),
-
-                Forms\Components\Textarea::make('pros')
-                    ->maxLength(65535)
-                    ->columnSpanFull(),
-
-                Forms\Components\Textarea::make('cons')
-                    ->maxLength(65535)
-                    ->columnSpanFull(),
-
-                Forms\Components\TextInput::make('highlight_title')
-                    ->maxLength(255),
-
-                Forms\Components\Textarea::make('highlight_text')
-                    ->maxLength(65535)
-                    ->columnSpanFull(),
             ]);
     }
 
@@ -86,11 +38,8 @@ class MerchantResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('icon')
-                    ->label('')
-                    ->circular(),
-
                 Tables\Columns\TextColumn::make('name')
+                    ->description(fn (Merchant $record) : string => $record->slug)
                     ->searchable(),
 
                 Tables\Columns\TextColumn::make('link')

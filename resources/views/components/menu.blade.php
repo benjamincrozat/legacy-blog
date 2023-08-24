@@ -1,5 +1,5 @@
 <div class="sm:relative" x-data="{ open: false }">
-    <button class="flex items-center gap-2" @click="open = ! open">
+    <button class="flex items-center gap-2" x-bind:class="{ 'relative z-20': open }" @click="open = ! open">
         {{ $trigger }}
 
         @empty($hideIcon)
@@ -11,12 +11,21 @@
     </button>
 
     <ul
-        class="-mt-4 sm:mt-0 rounded absolute left-4 sm:left-auto right-4 sm:right-0 bg-white duration-500 shadow-lg top-full sm:min-w-[300px] py-2 z-10"
+        {{ $attributes->merge([
+            'class' => '-mt-4 sm:mt-0 rounded absolute left-4 sm:left-auto right-4 sm:right-0 bg-white duration-500 shadow-lg top-full sm:min-w-[300px] py-2 z-20',
+        ]) }}
         x-cloak
         x-show="open"
-        x-transition
+        x-transition.duration.300ms
         @click.away="open = false"
     >
         {{ $slot }}
     </ul>
+
+    <div
+        class="fixed inset-0 z-10 bg-black/5 backdrop-blur-md"
+        x-cloak
+        x-show="open"
+        x-transition.duration.300ms
+    ></div>
 </div>
