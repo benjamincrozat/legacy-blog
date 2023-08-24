@@ -62,7 +62,7 @@ class PostsFetchCommand extends Command
             'php-ai' => ['PHP', 'GPT'],
             'laravel-best-practices' => ['Laravel'],
             'best-laravel-hosting-providers' => ['Laravel', 'Hosting', 'Tools'],
-            'best-gdpr-compliant-google-analytics-alternatives' => ['SEO', 'Tools'],
+            'best-gdpr-compliant-google-analytics-alternatives' => ['Tools'],
             'laravel-collections' => ['Laravel'],
             'laravel-forge' => ['Laravel', 'Tools', 'Hosting'],
             'php-exceptions' => ['PHP'],
