@@ -15,7 +15,7 @@
                 <x-posts.tree :tree="$post->presenter()->tree()" />
 
                 @if ($post->image)
-                    <img src="{{ $post->image }}" alt="{{ $post->title }}" class="w-full" />
+                    <img src="{{ $post->presenter()->image() }}" alt="{{ $post->title }}" class="w-full" />
                 @endif
 
                 {!! $post->presenter()->content() !!}

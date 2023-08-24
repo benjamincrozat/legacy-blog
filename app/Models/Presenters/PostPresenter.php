@@ -2,11 +2,25 @@
 
 namespace App\Models\Presenters;
 
+use App\Str;
 use App\Tree;
 use Spatie\Url\Url;
 
 class PostPresenter extends BasePresenter
 {
+    public function image() : string
+    {
+        if (! Str::startsWith($this->model->image, 'https://res.cloudinary.com')) {
+            return $this->model->image;
+        }
+
+        if (str_contains($this->model->image, '/dpr_auto,f_auto,q_auto,w_auto')) {
+            return $this->model->image;
+        }
+
+        return str_replace('/upload', '/upload/dpr_auto,f_auto,q_auto,w_auto', $this->model->image);
+    }
+
     public function tree() : array
     {
         return (new Tree)->build($this->content());
