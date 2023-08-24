@@ -32,7 +32,7 @@
         </div>
 
         @if (! $post->community_link)
-            <a href="{{ route('posts.show', $post) }}" class="flex-shrink-0">
+            <a wire:navigate href="{{ route('posts.show', $post) }}" class="flex-shrink-0">
                 <img src="{{ $post->image }}" width="96" height="96" alt="{{ $post->title }}" class="object-cover aspect-square" />
             </a>
         @endif
