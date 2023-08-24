@@ -54,7 +54,7 @@
                 <nav class="container relative flex items-center justify-between py-4 sm:static lg:max-w-screen-md">
                     <a wire:navigate href="/">
                         <span class="sr-only">{{ config('app.name') }}</span>
-                        <x-icon-logo class="w-10 h-10 fill-current" />
+                        <x-icon-logo class="w-8 h-8 fill-current md:w-10 md:h-10" />
                     </a>
 
                     <div class="flex items-center justify-between gap-8 text-sm md:text-base">
