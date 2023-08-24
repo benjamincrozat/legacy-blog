@@ -11,7 +11,7 @@
             <x-prose>
                 <h1>{{ $post->title }}</h1>
 
-                @if (! empty($tree = $post->presenter()->tree()))
+                @if (! empty($tree = $post->presenter()->tree()) && count($tree) > 1)
                     <p class="font-bold">Table of contents:</p>
                     <x-posts.tree :tree="$tree" />
                 @endif
