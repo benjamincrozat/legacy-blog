@@ -26,6 +26,6 @@
         class="fixed inset-0 z-10 bg-black/5 backdrop-blur-md"
         x-cloak
         x-show="open"
-        x-transition.duration.300ms
+        x-transition.opacity.duration.200ms
     ></div>
 </div>
