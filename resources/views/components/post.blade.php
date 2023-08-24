@@ -28,12 +28,14 @@
                 Updated
             @endif
 
-            on <a href="{{ route('posts.show', $post) }}">{{ $post->presenter()->lastUpdated() }}</a>
+            on <a wire:navigate href="{{ route('posts.show', $post) }}">{{ $post->presenter()->lastUpdated() }}</a>
             @if ($post->community_link) <span class="mx-1 text-xs">•</span> {{ $post->presenter()->communityLinkDomain() }} @endif
         </p>
     </div>
 
     @if (! $post->community_link)
-        <img src="{{ $post->image }}" width="64" height="64" alt="{{ $post->title }}" class="flex-shrink-0 object-cover mt-1 aspect-square" />
+        <a href="{{ route('posts.show', $post) }}">
+            <img src="{{ $post->image }}" width="64" height="64" alt="{{ $post->title }}" class="flex-shrink-0 object-cover mt-1 aspect-square" />
+        </a>
     @endif
 </div>
