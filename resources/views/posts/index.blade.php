@@ -7,7 +7,7 @@
         </x-slot:title>
 
         <div class="mt-16">
-            <ul class="grid gap-8 md:grid-cols-2">
+            <ul class="grid gap-16 md:grid-cols-2">
                 @foreach ($posts as $post)
                     <li>
                         <x-post :post="$post" />

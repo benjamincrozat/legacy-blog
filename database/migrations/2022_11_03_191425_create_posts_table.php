@@ -23,6 +23,7 @@ return new class extends Migration
             $table->boolean('is_published')->default(false);
             $table->unsignedBigInteger('sessions')->default(0);
             $table->timestamps();
+            $table->timestamp('manually_updated_at')->nullable();
         });
     }
 

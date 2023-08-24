@@ -26,6 +26,9 @@ return new class extends Migration
             User::factory()->create([
                 'name' => 'Benjamin Crozat',
                 'email' => 'hello@benjamincrozat.com',
+                'description' => 'Freelance web developer turned content creator.',
+                'github_handle' => 'benjamincrozat',
+                'x_handle' => 'benjamincrozat',
             ]);
         }
     }

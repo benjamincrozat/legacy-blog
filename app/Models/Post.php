@@ -15,7 +15,7 @@ class Post extends BaseModel implements Feedable
     use HasFeedItems, HasLocalScopes, HasPresenter, HasRecommendations, HasRelationships;
 
     protected $casts = [
-        'modified_at' => 'date',
+        'manually_modified_at' => 'date',
     ];
 
     public static function booted() : void
