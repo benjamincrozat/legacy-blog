@@ -44,14 +44,14 @@
     @foreach ($categories as $category)
         <x-section class="mt-32">
             <x-slot:title class="container lg:max-w-screen-md">
-                <div class="flex items-center justify-between">
-                    <span>
-                        Learn about <span class="text-{{ $category->presenter()->primaryColor() }}">{{ $category->name }}</span>
-                    </span>
-
+                <div class="flex items-center gap-4">
                     <a wire:navigate href="{{ route('categories.show', $category) }}" class="flex-shrink-0">
                         <x-category-icon :category="$category" />
                     </a>
+
+                    <span>
+                        Learn about <span class="text-{{ $category->presenter()->primaryColor() }}">{{ $category->name }}</span>
+                    </span>
                 </div>
             </x-slot:title>
 
