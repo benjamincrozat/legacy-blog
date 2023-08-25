@@ -18,6 +18,10 @@ class CategoryPresenter extends BasePresenter
 
     public function tree() : array
     {
+        if (! $this->model->content) {
+            return [];
+        }
+
         return (new Tree)->build($this->content());
     }
 
