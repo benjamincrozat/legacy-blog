@@ -117,7 +117,11 @@
                                 <x-heroicon-o-ellipsis-horizontal class="w-5 h-5" />
                             </x-slot:trigger>
 
-                            <x-menu-item href="{{ route('home') }}#about" icon="s-user">
+                            <x-menu-item
+                                href="{{ route('home') }}#about"
+                                :no-wire-navigate="true"
+                                icon="s-user"
+                            >
                                 About
                             </x-menu-item>
                         </x-menu>
