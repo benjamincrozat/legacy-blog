@@ -21,6 +21,11 @@ class AppServiceProvider extends ServiceProvider
             $app['config']->get('services.algolia.id'),
             $app['config']->get('services.algolia.secret')
         ));
+
+        if ($this->app->environment('local')) {
+            $this->app->register(\Laravel\Telescope\TelescopeServiceProvider::class);
+            $this->app->register(TelescopeServiceProvider::class);
+        }
     }
 
     public function boot() : void

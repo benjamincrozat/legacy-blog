@@ -23,6 +23,4 @@ Route::view('/privacy', 'privacy')->name('privacy');
 
 Route::view('/terms', 'terms')->name('terms');
 
-Route::redirect('/admin', '/admin/posts');
-
 Route::get('/{post:slug}', ShowPostController::class)->name('posts.show');
