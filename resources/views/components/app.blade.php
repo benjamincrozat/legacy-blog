@@ -114,6 +114,7 @@
 
                         <x-menu :hide-icon="true" class="grid gap-4 py-4">
                             <x-slot:trigger>
+                                <span class="sr-only">More</span>
                                 <x-heroicon-o-ellipsis-horizontal class="w-5 h-5" />
                             </x-slot:trigger>
 
