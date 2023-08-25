@@ -126,7 +126,7 @@
                                 About
                             </x-menu-item>
 
-                            <x-menu-item href="https://x.com/benjamincrozat">
+                            <x-menu-item href="https://x.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer">
                                 <x-icon-x class="flex-shrink-0 w-5 h-5 translate-y-[.5px]" />
                                 Follow me on X
                             </x-menu-item>
