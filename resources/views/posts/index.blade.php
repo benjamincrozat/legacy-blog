@@ -3,7 +3,11 @@
 >
     <x-section class="container mt-16">
         <x-slot:title class="text-center">
-            Everything I wrote about Laravel and its ecosystem.
+            @if ($posts->currentPage() > 1)
+                Page {{ $posts->currentPage() }}
+            @else
+                The latest blog posts about Laravel and its ecosystem.
+            @endif
         </x-slot:title>
 
         <div class="mt-16">
