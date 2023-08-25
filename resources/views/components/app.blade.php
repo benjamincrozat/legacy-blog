@@ -77,7 +77,7 @@
                         <x-icon-logo class="w-8 h-8 fill-current md:w-10 md:h-10" />
                     </a>
 
-                    <div class="flex items-center justify-between gap-8 text-sm md:text-base">
+                    <div class="flex items-center justify-between text-sm gap-7 md:gap-8 md:text-base">
                         <x-menu trigger="Topics" class="grid gap-4 py-4">
                             @foreach ($categories as $category)
                                 <x-menu-item
@@ -112,15 +112,23 @@
                             </x-menu-item>
                         </x-menu>
 
+                        <x-menu :hide-icon="true" class="grid gap-4 py-4">
+                            <x-slot:trigger>
+                                <x-heroicon-o-ellipsis-horizontal class="w-5 h-5" />
+                            </x-slot:trigger>
+
+                            <x-menu-item href="{{ route('home') }}#about" icon="s-user">
+                                About
+                            </x-menu-item>
+                        </x-menu>
+
                         @auth
                             <x-menu :hide-icon="true">
                                 <x-slot:trigger>
                                     <img
                                         src="{{ auth()->user()->presenter()->gravatar() }}?s=64"
-                                        width="32"
-                                        height="32"
                                         alt="{{ auth()->user()->name }}"
-                                        class="rounded-full"
+                                        class="rounded-full w-[28px] h-[28px] md:w-[32px] md:h-[32px]"
                                     />
                                 </x-slot:trigger>
 
