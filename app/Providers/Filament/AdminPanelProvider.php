@@ -24,6 +24,7 @@ class AdminPanelProvider extends PanelProvider
         return $panel
             ->default()
             ->id('admin')
+            ->homeUrl(fn () => url('/admin/posts'))
             ->path('admin')
             ->login()
             ->colors([
