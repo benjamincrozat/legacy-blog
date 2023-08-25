@@ -10,16 +10,14 @@
             @endif
         </x-slot:title>
 
-        <div class="mt-16">
-            <ul class="grid gap-16 md:grid-cols-2">
-                @foreach ($posts as $post)
-                    <li>
-                        <x-post :post="$post" />
-                    </li>
-                @endforeach
-            </ul>
+        <ul class="grid gap-16 mt-8 md:grid-cols-2">
+            @foreach ($posts as $post)
+                <li>
+                    <x-post :post="$post" />
+                </li>
+            @endforeach
+        </ul>
 
-            {{ $posts->links() }}
-        </div>
+        {{ $posts->links() }}
     </x-section>
 </x-app>

@@ -39,5 +39,7 @@
                 </li>
             @endforeach
         </ul>
+
+        {{ $posts->links() }}
     </x-section>
 </x-app>

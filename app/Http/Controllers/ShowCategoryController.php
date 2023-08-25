@@ -10,7 +10,7 @@ class ShowCategoryController extends Controller
     public function __invoke(Category $category) : View
     {
         return view('categories.show', compact('category') + [
-            'posts' => $category->posts()->latest()->published()->get(),
+            'posts' => $category->posts()->latest()->published()->paginate(30),
         ]);
     }
 }
