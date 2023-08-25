@@ -38,6 +38,10 @@ class MerchantResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('id')
+                    ->label('ID')
+                    ->sortable(),
+
                 Tables\Columns\TextColumn::make('name')
                     ->description(fn (Merchant $record) : string => $record->slug)
                     ->searchable(),
@@ -59,7 +63,8 @@ class MerchantResource extends Resource
             ])
             ->emptyStateActions([
                 Tables\Actions\CreateAction::make(),
-            ]);
+            ])
+            ->defaultSort('id', 'desc');
     }
 
     public static function getRelations() : array
