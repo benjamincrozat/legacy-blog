@@ -94,6 +94,7 @@ MARKDOWN,
         Category::factory()->createQuietly([
             'name' => 'JavaScript',
             'description' => 'JavaScript is a versatile, high-level programming language that makes the web less boring by adding dynamic behavior.',
+            'long_description' => 'JavaScript breathes life into modern web pages, turning static content into dynamic, interactive experiences. **With its vast ecosystem, from frameworks to libraries, mastering JavaScript opens doors to endless creative possibilities.** Ready to unlock the magic?',
             'primary_color' => '[#e8d44e]',
             'secondary_color' => 'black',
         ]);
@@ -121,6 +122,7 @@ MARKDOWN,
         Category::factory()->createQuietly([
             'name' => 'PHP',
             'description' => 'PHP, or Hypertext Preprocessor, is a server-side scripting language designed for web development, enabling you to create web application that can change while you are sleeping.',
+            'long_description' => "**PHP makes starting your coding journey wonderfully accessible, thanks to its straightforward syntax and beginner-friendly nature.** With its **vast and supportive community**, there's always someone ready to lend a hand or share expertise. Plus, the **extensive ecosystem of tools and libraries** ensures that as your skills grow, PHP continues to offer endless possibilities.",
             'content' => <<<'MARKDOWN'
 ## What is PHP?
 
@@ -163,31 +165,36 @@ MARKDOWN,
 
         Category::factory()->createQuietly([
             'name' => 'Security',
-            'primary_color' => 'orange-700',
             'description' => 'Learn how to protect your Laravel applications from common security vulnerabilities.',
+            'long_description' => "**Security is the bedrock upon which digital trust is built.** When developers prioritize security, they're not just protecting data, they're fostering a deep trust with their users. Dive into security, and you'll discover **it's more than just protocols; it's a commitment to keeping promises in our digital age**.",
+            'primary_color' => 'orange-700',
         ]);
 
         Category::factory()->createQuietly([
             'name' => 'SEO',
             'description' => 'Coding is great, but having real users is even better. Learn how to build sustainable long-term traffic with Search Engine Optimization (SEO).',
+            'long_description' => "**SEO is like planting a seed for a tree that grows steadily, providing consistent and organic traffic over time.** In contrast, while social media can give you instant bursts of attention, they often fade quickly like fireworks. **If you're looking to build a sustainable digital presence, diving into SEO is like nurturing a garden that'll bear fruit year after year.**",
             'primary_color' => '[#4285f4]',
         ]);
 
         Category::factory()->createQuietly([
             'name' => 'Tailwind CSS',
             'description' => 'Tailwind CSS is a utility-first framework that will make you fall in love with UI design again, and teach you to always question the status quo.',
+            'long_description' => "**Tailwind CSS revolutionizes the way we approach design, favoring a pragmatic perspective over traditional best practices that often fall short in real-world applications.** By leveraging its utility-first classes, developers can rapidly craft intuitive and responsive UIs without the usual CSS fuss. If you're looking to breathe fresh air into your web design journey, Tailwind might just be the breeze you need.",
             'primary_color' => '[#38bdf9]',
         ]);
 
         Category::factory()->createQuietly([
             'name' => 'Testing',
             'description' => 'Testing is the most important step to ensure the stability of your web applications. Learn how to write tests that makes you confident when deploying new code.',
+            'long_description' => "**Automated testing is like a safety net for your code, catching mistakes before they reach your users.** It's the guardian that ensures stability, making deployments a breeze rather than a guessing game. Dive into it, and you'll find peace of mind in every line of code you write.",
             'primary_color' => 'lime-600',
         ]);
 
         Category::factory()->createQuietly([
             'name' => 'Tools',
             'description' => "The toolbelt of a developer is what allows them to do their magic. It's important to keep up with the latest and find new ways to be more productive and getting your time back.",
+            'long_description' => '**Developer tools are like the magic wands of the tech world, effortlessly turning hours of manual labor into mere minutes of automated brilliance.** With the right ones in their arsenal, developers not only fast-track their projects but also dive deeper into innovation.',
             'primary_color' => 'violet-600',
         ]);
 
