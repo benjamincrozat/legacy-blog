@@ -13,23 +13,35 @@ class DatabaseSeeder extends Seeder
         Category::factory()->createQuietly([
             'name' => 'Alpine.js',
             'description' => 'Alpine.js is a lightweight JavaScript framework for pragmatic developers building reactive web interfaces.',
+            'long_description' => '**Alpine.js offers a sprinkle of interactivity to your sites in a lightweight and intuitive package.** Dive into Alpine.js and discover a simpler way to breathe life into your web pages without the heavy lifting!',
             'primary_color' => '[#77c1d2]',
         ]);
 
         Category::factory()->createQuietly([
             'name' => 'CSS',
             'description' => 'CSS, or Cascading Style Sheets, is a language used to define and apply styles (like fonts, colors, and spacing) to your favorite web pages.',
+            'long_description' => "**CSS is the magic wand that transforms the basic structure of a web page into a visual masterpiece.** With it, you can dictate the colors, fonts, and layout, bringing your design visions to life on the digital canvas. Dive into CSS, and you'll discover a world where the line between art and code beautifully blurs.",
             'primary_color' => '[#264bdd]',
+        ]);
+
+        Category::factory()->createQuietly([
+            'name' => 'Databases',
+            'description' => 'Databases are the unsung heroes of our digital world, turning chaos into organized, accessible knowledge.',
+            'long_description' => "**Databases are the hidden powerhouses behind most of our favorite apps, websites, and services, organizing and storing data like a vast digital library.** Imagine having the knowledge to structure information efficiently and retrieve it in an instant. Dive into the world of databases, and you'll discover a fascinating blend of logic, design, and technology that touches every aspect of our digital lives.",
+            'primary_color' => 'stone-600',
         ]);
 
         Category::factory()->createQuietly([
             'name' => 'GPT',
             'description' => 'GPT, or Generative Pre-trained Transformers, is a revolutionary LLM (Large Language Model) that changed world of artificial intelligence forever.',
+            'long_description' => "**GPT is a groundbreaking artificial intelligence model designed to understand and generate human-like text** based on the context it's given. **Its applications are vast, from answering queries to crafting creative content.** Discover the future of digital communication and content generation!",
             'primary_color' => '[#12a37e]',
         ]);
 
         Category::factory()->createQuietly([
             'name' => 'Hosting',
+            'description' => 'Choose the right cloud hosting for your web applications and ensure their stability over time.',
+            'long_description' => '**Choosing a quality cloud host for your web application is like securing a strong foundation for your dream home.** With the right one, you can ensure optimal performance, security, and scalability, letting your application thrive and adapt to the changing digital landscape.',
             'primary_color' => 'gray-700',
         ]);
 
@@ -152,6 +164,7 @@ MARKDOWN,
         Category::factory()->createQuietly([
             'name' => 'Security',
             'primary_color' => 'orange-700',
+            'description' => 'Learn how to protect your Laravel applications from common security vulnerabilities.',
         ]);
 
         Category::factory()->createQuietly([
@@ -168,11 +181,13 @@ MARKDOWN,
 
         Category::factory()->createQuietly([
             'name' => 'Testing',
+            'description' => 'Testing is the most important step to ensure the stability of your web applications. Learn how to write tests that makes you confident when deploying new code.',
             'primary_color' => 'lime-600',
         ]);
 
         Category::factory()->createQuietly([
             'name' => 'Tools',
+            'description' => "The toolbelt of a developer is what allows them to do their magic. It's important to keep up with the latest and find new ways to be more productive and getting your time back.",
             'primary_color' => 'violet-600',
         ]);
 

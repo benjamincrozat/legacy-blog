@@ -97,7 +97,7 @@ class PostsFetchCommand extends Command
             'laravel-volt' => ['Laravel', 'Livewire'],
             'laravel-security-best-practices' => ['Laravel', 'Security'],
             'testing-without-mocking-frameworks' => ['Testing'],
-            'databases-without-domain-logic' => ['MySQL'],
+            'databases-without-domain-logic' => ['Databases'],
             'chat-widget-livewire-v3' => ['Livewire'],
             'flappyphpant-flappy-bird-clone-php' => ['PHP'],
             'block-compromised-password' => ['Security'],
