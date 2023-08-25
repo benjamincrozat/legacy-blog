@@ -31,7 +31,7 @@ class Str extends \Illuminate\Support\Str
             ],
             'embed' => [
                 'adapter' => new OscaroteroEmbedAdapter,
-                'allowed_domains' => ['github.com', 'twitter.com', 'vimeo.com', 'x.com', 'youtube.com'],
+                'allowed_domains' => ['twitter.com', 'x.com', 'youtube.com'],
                 'fallback' => 'link',
             ],
             'external_link' => [

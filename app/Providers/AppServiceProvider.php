@@ -15,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
 {
     public function register() : void
     {
-        $this->app->bind(EmbedExtension::class, fn () => new HighlightCodeExtension('github-dark'));
+        $this->app->bind(EmbedExtension::class, fn () => new EmbedExtension);
         $this->app->bind(HighlightCodeExtension::class, fn () => new HighlightCodeExtension('github-dark'));
         $this->app->bind(RecommendClient::class, fn (Application $app) : RecommendClient => RecommendClient::create(
             $app['config']->get('services.algolia.id'),
