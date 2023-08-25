@@ -1,6 +1,7 @@
 <x-app
     :title="$post->title"
     :description="$post->description"
+    :canonical="$post->community_link ?? null"
 >
     <div class="container mt-4 lg:max-w-screen-md">
         <x-breadcrumb class="mb-8">

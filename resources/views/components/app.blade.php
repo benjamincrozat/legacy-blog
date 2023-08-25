@@ -66,7 +66,7 @@
     <link rel="icon" type="image/jpeg" sizes="48x48" href="{{ Vite::asset('resources/img/48x48.jpg') }}" />
     <link rel="icon" type="image/jpeg" sizes="96x96" href="{{ Vite::asset('resources/img/96x96.jpg') }}" />
 
-    <link rel="canonical" href="{{ url()->current() }}" />
+    <link rel="canonical" href="{{ $canonical ?? url()->current() }}" />
 
     <body {{ $attributes->except(['description', 'image', 'title'])->merge(['class' => 'bg-gray-50 font-light']) }} x-data="{}">
         <div class="flex flex-col min-h-screen">
