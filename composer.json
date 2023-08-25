@@ -10,6 +10,7 @@
         "laravel/framework": "^10.0",
         "laravel/horizon": "^5.19",
         "laravel/prompts": "^0.1.1",
+        "laravel/telescope": "^4.16",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.0",
         "livewire/volt": "^1.0",
@@ -24,7 +25,6 @@
         "spatie/url": "^2.2"
     },
     "require-dev": {
-        "barryvdh/laravel-debugbar": "^3.8",
         "brianium/paratest": "^7.0",
         "fakerphp/faker": "^1.9.1",
         "laravel/pint": "^1.10",

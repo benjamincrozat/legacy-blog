@@ -5,7 +5,6 @@ namespace App\Providers\Filament;
 use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
-use Filament\Navigation\NavigationItem;
 use Filament\Http\Middleware\Authenticate;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Cookie\Middleware\EncryptCookies;
@@ -24,7 +23,7 @@ class AdminPanelProvider extends PanelProvider
         return $panel
             ->default()
             ->id('admin')
-            ->homeUrl(fn () => url('/admin/posts'))
+            ->homeUrl('/admin/posts')
             ->path('admin')
             ->login()
             ->colors([
@@ -48,11 +47,6 @@ class AdminPanelProvider extends PanelProvider
                 Authenticate::class,
             ])
             ->globalSearchKeyBindings(['command+k', 'ctrl+k'])
-            ->sidebarCollapsibleOnDesktop()
-            ->navigationItems([
-                NavigationItem::make('Go to site')
-                    ->icon('heroicon-o-globe-alt')
-                    ->url(config('app.url')),
-            ]);
+            ->sidebarCollapsibleOnDesktop();
     }
 }
