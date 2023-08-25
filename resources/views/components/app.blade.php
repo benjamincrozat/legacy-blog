@@ -68,7 +68,10 @@
 
     <link rel="canonical" href="{{ $canonical ?? url()->current() }}" />
 
-    <body {{ $attributes->except(['description', 'image', 'title'])->merge(['class' => 'bg-gray-50 font-light']) }} x-data="{}">
+    <body {{ $attributes->except(['description', 'image', 'title', 'canonical'])->merge([
+        'class' => 'bg-gray-50 font-light',
+        'x-data' => '{}',
+    ]) }}>
         <div class="flex flex-col min-h-screen">
             @empty($hideNavigation)
                 <nav class="container relative flex items-center justify-between py-4 sm:static lg:max-w-screen-md">
