@@ -43,7 +43,7 @@
 
     @foreach ($categories as $category)
         <x-section class="mt-32">
-            <x-slot:title class="container md:max-w-screen-sm">
+            <x-slot:title class="container lg:max-w-screen-md">
                 <div class="flex items-center justify-between">
                     <span>
                         Learn about <span class="text-{{ $category->presenter()->primaryColor() }}">{{ $category->name }}</span>
@@ -55,7 +55,7 @@
                 </div>
             </x-slot:title>
 
-            <x-prose class="container mt-4 md:max-w-screen-sm">
+            <x-prose class="container mt-4 lg:max-w-screen-md">
                 {!! $category->presenter()->longDescription() !!}
             </x-prose>
 
