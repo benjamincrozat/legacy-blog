@@ -1,6 +1,7 @@
 <?php
 
 use Tests\TestCase;
+use DG\BypassFinals;
 use Illuminate\Support\Facades\Http;
 use App\Http\Middleware\TrackPageView;
 
@@ -13,8 +14,13 @@ use Facades\Spatie\CommonMarkShikiHighlighter\HighlightCodeExtension;
 
 uses(TestCase::class, LazilyRefreshDatabase::class)
     ->beforeEach(function () {
+        BypassFinals::enable();
+
         HighlightCodeExtension::shouldReceive('register');
-        EmbedExtension::shouldReceive('register');
+        EmbedExtension::shouldReceive([
+            'configureSchema' => '',
+            'register' => '',
+        ]);
         Http::preventStrayRequests();
 
         withoutMiddleware(TrackPageView::class);
