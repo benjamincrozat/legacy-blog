@@ -1,5 +1,5 @@
 @php
-$class = 'flex items-center w-full gap-3 px-4 py-2 text-left transition-colors duration-500 group hover:bg-blue-400 hover:text-white';
+$class = 'flex items-center w-full gap-4 p-4 text-left transition-colors duration-500 group hover:bg-blue-400 hover:text-white';
 @endphp
 
 <li>

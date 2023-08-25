@@ -78,11 +78,11 @@
                     </a>
 
                     <div class="flex items-center justify-between gap-8 text-sm md:text-base">
-                        <x-menu trigger="Topics">
+                        <x-menu trigger="Topics" class="grid gap-4 py-4">
                             @foreach ($categories as $category)
                                 <x-menu-item
                                     href="{{ route('categories.show', $category) }}"
-                                    class="hover:!bg-transparent hover:!text-inherit"
+                                    class="hover:!bg-transparent hover:!text-inherit !py-0"
                                 >
                                     <x-category-icon :category="$category" class="!w-[48px] !h-[48px]" />
                                     {{ $category->name }}
@@ -95,12 +95,12 @@
                         </a>
 
                         <x-menu trigger="For you">
-                            <x-menu-item href="/best-web-development-tools" icon="o-cog">
+                            <x-menu-item href="/best-web-development-tools" icon="o-wrench">
                                 See all the tools I use
                             </x-menu-item>
 
                             <x-menu-item href="{{ route('pouest') }}" icon="o-forward">
-                                Instantly migrate PHPUnit tests to Pest for free
+                                Instantly migrate your tests to Pest for free
                             </x-menu-item>
 
                             <x-menu-item href="https://github.com/benjamincrozat/benjamincrozat.com" target="_blank" rel="nofollow noopener noreferrer" icon="o-code-bracket">
