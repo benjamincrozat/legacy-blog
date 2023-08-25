@@ -1,6 +1,6 @@
 <?php
 
-it('renders with the needed meta tags', function () {
+it('includes with the needed meta tags', function () {
     /** @var \NunoMaduro\LaravelMojito\ViewAssertion */
     $view = $this->assertView('components.app');
 
@@ -12,7 +12,7 @@ it('renders with the needed meta tags', function () {
     ]);
 });
 
-it('renders with the Tailwind CSS Play CDN included and configured to be almost barebones', function () {
+it("includes the Tailwind CSS Play CDN and it's configured to be barebones", function () {
     /** @var \NunoMaduro\LaravelMojito\ViewAssertion */
     $view = $this->assertView('components.app');
 
