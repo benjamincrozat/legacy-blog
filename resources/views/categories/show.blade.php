@@ -1,5 +1,5 @@
 <x-app
-    :title="$category->name"
+    title="Learn about {{ $category->name }}"
     :description="$category->description"
 >
     <div class="container mt-4 lg:max-w-screen-md">
