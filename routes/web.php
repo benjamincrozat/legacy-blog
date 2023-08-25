@@ -11,6 +11,8 @@ Route::get('/', HomeController::class)->name('home');
 
 Route::get('/categories/{category:slug}', ShowCategoryController::class)->name('categories.show');
 
+Route::get('/posts', ListPostsController::class)->name('posts.index');
+
 Route::get('/recommends/{merchant:slug}', ShowMerchantController::class)->name('merchants.show');
 
 Route::view('/phpunit-to-pest', 'pouest')->name('pouest');
@@ -21,6 +23,6 @@ Route::view('/terms', 'terms')->name('terms');
 
 Route::feeds();
 
-Route::get('/posts', ListPostsController::class)->name('posts.index');
+Route::redirect('/admin', '/admin/posts');
 
 Route::get('/{post:slug}', ShowPostController::class)->name('posts.show');
