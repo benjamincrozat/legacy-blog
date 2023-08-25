@@ -77,7 +77,7 @@
 
     <x-divider class="mt-[4.5rem]" />
 
-    <x-section class="container lg:max-w-screen-md">
+    <x-section id="about" class="container lg:max-w-screen-md">
         <x-slot:title class="text-center">
             About Benjamin Crozat
         </x-slot:title>
