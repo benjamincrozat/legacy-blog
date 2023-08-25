@@ -26,7 +26,6 @@
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.8",
         "brianium/paratest": "^7.0",
-        "dg/bypass-finals": "^1.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/pint": "^1.10",
         "laravel/sail": "^1.23",

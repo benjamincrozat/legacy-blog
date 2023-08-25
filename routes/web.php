@@ -17,11 +17,11 @@ Route::get('/recommends/{merchant:slug}', ShowMerchantController::class)->name('
 
 Route::view('/phpunit-to-pest', 'pouest')->name('pouest');
 
+Route::feeds();
+
 Route::view('/privacy', 'privacy')->name('privacy');
 
 Route::view('/terms', 'terms')->name('terms');
-
-Route::feeds();
 
 Route::redirect('/admin', '/admin/posts');
 

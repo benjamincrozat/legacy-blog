@@ -4,7 +4,7 @@ use App\Models\Category;
 
 use function Pest\Laravel\get;
 
-use Illuminate\Support\Collection;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 test('a given category is shown and contains all its published posts', function () {
     $category = Category::factory()->hasPosts(3, ['is_published' => true])->create();
@@ -13,5 +13,5 @@ test('a given category is shown and contains all its published posts', function 
         ->assertOk()
         ->assertViewIs('categories.show')
         ->assertViewHas('category')
-        ->assertViewHas('posts', fn (Collection $posts) => 3 === $posts->count());
+        ->assertViewHas('posts', fn (LengthAwarePaginator $posts) => 3 === $posts->count());
 });
