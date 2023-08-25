@@ -112,7 +112,7 @@
                             </x-menu-item>
                         </x-menu>
 
-                        <x-menu :hide-icon="true" class="grid gap-4 py-4">
+                        <x-menu :hide-icon="true">
                             <x-slot:trigger>
                                 <span class="sr-only">More</span>
                                 <x-heroicon-o-ellipsis-horizontal class="w-5 h-5" />
@@ -124,6 +124,11 @@
                                 icon="s-user"
                             >
                                 About
+                            </x-menu-item>
+
+                            <x-menu-item href="https://x.com/benjamincrozat">
+                                <x-icon-x class="flex-shrink-0 w-5 h-5 translate-y-[.5px]" />
+                                Follow me on X
                             </x-menu-item>
                         </x-menu>
 
