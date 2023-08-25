@@ -3,7 +3,7 @@
         <li>
             <a href="#{{ Str::slug($item['value']) }}">{{ $item['value'] }}</a>
 
-            <x-posts.tree :tree="$item['children']" />
+            <x-tree :tree="$item['children']" />
         </li>
     @endforeach
 </ul>

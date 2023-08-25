@@ -2,6 +2,8 @@
 
 namespace App\Models\Presenters;
 
+use App\Tree;
+
 class CategoryPresenter extends BasePresenter
 {
     public function longDescription() : string
@@ -12,6 +14,11 @@ class CategoryPresenter extends BasePresenter
     public function content() : string
     {
         return $this->renderAsMarkdown('content', $this->model->content);
+    }
+
+    public function tree() : array
+    {
+        return (new Tree)->build($this->content());
     }
 
     public function primaryColor() : string

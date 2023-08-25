@@ -28,9 +28,9 @@
             <x-prose>
                 <h1>{{ $post->title }}</h1>
 
-                @if (! empty($tree = $post->presenter()->tree()) && count($tree) > 1)
+                @if (! empty($tree = $post->presenter()->tree()))
                     <p class="font-bold">Table of contents:</p>
-                    <x-posts.tree :tree="$tree" />
+                    <x-tree :tree="$tree" />
                 @endif
 
                 @if ($post->image)
