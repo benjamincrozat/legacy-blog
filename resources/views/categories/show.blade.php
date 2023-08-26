@@ -16,10 +16,12 @@
                         $category->presenter()->content()
                     )))
                         @php
-                        $tree[] = [
-                            'value' => "Articles about $category->name",
-                            'children' => [],
-                        ];
+                        if ($posts->isNotEmpty()) {
+                            $tree[] = [
+                                'value' => "Articles about $category->name",
+                                'children' => [],
+                            ];
+                        }
                         @endphp
 
                         <p class="font-bold">Table of contents:</p>
@@ -41,22 +43,26 @@
                         </ul>
                     @endif
 
-                    <h2 id="articles-about-{{ Str::slug($category->name) }}">
-                        <a href="#articles-about-{{ Str::slug($category->name) }}">
-                            Articles about {{ $category->name }}
-                        </a>
-                    </h2>
+                    @if ($posts->isNotEmpty())
+                        <h2 id="articles-about-{{ Str::slug($category->name) }}">
+                            <a href="#articles-about-{{ Str::slug($category->name) }}">
+                                Articles about {{ $category->name }}
+                            </a>
+                        </h2>
+                    @endif
                 </div>
 
-                <div class="not-prose">
-                    <ul class="container grid gap-8 mt-8 md:grid-cols-2 md:gap-16">
-                        @foreach ($posts as $post)
-                            <li>
-                                <x-post :post="$post" />
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
+                @if ($posts->isNotEmpty())
+                    <div class="not-prose">
+                        <ul class="container grid gap-8 mt-8 md:grid-cols-2 md:gap-16">
+                            @foreach ($posts as $post)
+                                <li>
+                                    <x-post :post="$post" />
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
 
                 {{ $posts->links() }}
             </x-prose>
