@@ -4,6 +4,7 @@ namespace App\Actions;
 
 use App\Models\Post;
 use Illuminate\Support\Facades\Http;
+use Filament\Notifications\Notification;
 
 class GeneratePostTeaser
 {
@@ -35,6 +36,11 @@ PROMPT,
         $post->update([
             'teaser' => trim(trim($response['choices'][0]['message']['content']), '"\''),
         ]);
+
+        Notification::make()
+            ->title("Teaser for \"$post->title\" generated successfully!")
+            ->success()
+            ->send();
 
         return $post->fresh();
     }
