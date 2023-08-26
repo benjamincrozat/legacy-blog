@@ -17,9 +17,9 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->bind(EmbedExtension::class, fn () => new EmbedExtension);
         $this->app->bind(HighlightCodeExtension::class, fn () => new HighlightCodeExtension('github-dark'));
-        $this->app->bind(RecommendClient::class, fn (Application $app) : RecommendClient => RecommendClient::create(
-            $app['config']->get('services.algolia.id'),
-            $app['config']->get('services.algolia.secret')
+        $this->app->bind(RecommendClient::class, fn (Application $app) => RecommendClient::create(
+            $app['config']->get('scout.algolia.id'),
+            $app['config']->get('scout.algolia.secret')
         ));
 
         if ($this->app->environment('local')) {

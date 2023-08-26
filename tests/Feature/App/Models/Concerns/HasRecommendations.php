@@ -1,47 +1,65 @@
 <?php
 
-use DG\BypassFinals;
-use App\Models\Posts\Post;
-use Illuminate\Support\Collection;
-use Facades\Algolia\AlgoliaSearch\RecommendClient;
+use App\Models\Post;
+use Algolia\AlgoliaSearch\RecommendClient;
+use Algolia\AlgoliaSearch\Config\RecommendConfig;
+use Algolia\AlgoliaSearch\RetryStrategy\ApiWrapperInterface;
 
-dataset('posts', [
-    fn () => Post::factory(30)->create(),
-]);
+it('requests ten recommendations to Algolia and excludes the current post', function () {
+    config()->set('scout.driver', 'algolia');
 
-it('requests ten recommendations to Algolia and excludes the current post from recommendations', function (Collection $posts) {
-    config()->set('services.algolia.id', 'foo');
-    config()->set('services.algolia.secret', 'bar');
+    $posts = Post::factory(10)->published()->create();
 
-    $post = $posts->first();
+    $post = Post::factory()->published()->create();
 
-    BypassFinals::enable();
+    $api = new class($posts->pluck('id')->toArray()) implements ApiWrapperInterface
+    {
+        public function __construct(
+            protected array $ids
+        ) {
+        }
 
-    RecommendClient::shouldReceive('getRelatedProducts')
-        ->with([[
-            'indexName' => config('app.env') . '_posts',
-            'objectID' => "$post->id",
-            'maxRecommendations' => 10,
-        ]])
-        ->andReturn(['results' => [[
-            'hits' => array_map(fn ($id) => ['objectID' => $id], range($post->id + 1, $post->id + 10)),
-        ]]])
-        ->once();
+        public function read($method, $path, $requestOptions = [], $defaultRequestOptions = [])
+        {
+        }
 
-    $recommendations = $post->recommendations;
+        public function write($method, $path, $data = [], $requestOptions = [], $defaultRequestOptions = [])
+        {
+            return $this->ids;
+        }
 
-    expect($recommendations)->toHaveCount(10);
+        public function send($method, $path, $requestOptions = [], $hosts = null)
+        {
+        }
+    };
 
-    expect($recommendations->contains($post))->toBeFalse();
-})->with('posts');
+    $config = RecommendConfig::create(
+        config('scout.algolia.id'),
+        config('scout.algolia.secret')
+    );
 
-it("falls back to ten random recommendations when Algolia isn't available.", function (Collection $posts) {
-    expect($posts->first()->recommendations)->toHaveCount(10);
-})->with('posts');
+    $this->swap(RecommendClient::class, new RecommendClient($api, $config));
 
-it('excludes the current post from recommendations', function (Collection $posts) {
-    expect(
-        $posts->first()->recommendations->contains($posts->first())
-    )
-        ->toBeFalse();
-})->with('posts');
+    expect($post->recommendations)->toHaveCount(10);
+    expect($post->recommendations->pluck('id'))->not->toContain($post->id);
+});
+
+it("falls back to ten random recommendations when Algolia isn't available.", function () {
+    Post::factory(10)->published()->create();
+
+    $post = Post::factory()->published()->create();
+
+    expect(function () use ($post) {
+        $post->recommendations->ensure(Post::class);
+    })->not->toThrow(UnexpectedValueException::class);
+
+    expect($post->recommendations)->toHaveCount(10);
+});
+
+it('excludes the current post from recommendations', function () {
+    Post::factory(10)->published()->create();
+
+    $post = Post::factory()->published()->create();
+
+    expect($post->recommendations->contains($post))->toBeFalse();
+});

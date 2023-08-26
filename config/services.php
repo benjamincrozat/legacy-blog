@@ -30,11 +30,6 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
-    'algolia' => [
-        'id' => env('ALGOLIA_APP_ID'),
-        'secret' => env('ALGOLIA_SECRET'),
-    ],
-
     'convertkit' => [
         'api_key' => env('CONVERTKIT_API_KEY'),
         'api_secret' => env('CONVERTKIT_API_SECRET'),
