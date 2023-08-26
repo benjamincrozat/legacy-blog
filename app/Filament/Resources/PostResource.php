@@ -13,6 +13,7 @@ use Filament\Tables\Actions\Action;
 use Filament\Tables\Filters\Filter;
 use App\Jobs\GeneratePostDescription;
 use Illuminate\Database\Eloquent\Model;
+use Filament\Notifications\Notification;
 use Filament\Tables\Filters\SelectFilter;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\PostResource\Pages;
@@ -196,7 +197,14 @@ class PostResource extends Resource
                     ->default('gpt-3.5-turbo')
                     ->required(),
             ])
-            ->action(fn (Post $post, array $data) => GeneratePostDescription::dispatch($post, $data['model']));
+            ->action(function (Post $post, array $data) {
+                GeneratePostDescription::dispatch($post, $data['model']);
+
+                Notification::make()
+                    ->title("Description for \"$post->title\" is generating!")
+                    ->success()
+                    ->send();
+            });
     }
 
     public static function getGenerateTeaserAction() : Action
@@ -212,7 +220,14 @@ class PostResource extends Resource
                     ->default('gpt-3.5-turbo')
                     ->required(),
             ])
-            ->action(fn (Post $post, array $data) => GeneratePostTeaser::dispatch($post, $data['model']));
+            ->action(function (Post $post, array $data) {
+                GeneratePostTeaser::dispatch($post, $data['model']);
+
+                Notification::make()
+                    ->title("Teaser for \"$post->title\" is generating!")
+                    ->success()
+                    ->send();
+            });
     }
 
     public static function getGloballySearchableAttributes() : array

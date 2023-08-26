@@ -4,7 +4,6 @@ namespace App\Actions;
 
 use App\Models\Post;
 use Illuminate\Support\Facades\Http;
-use Filament\Notifications\Notification;
 
 class GeneratePostDescription
 {
@@ -63,11 +62,6 @@ PROMPT,
         $post->update([
             'description' => trim(trim($response['choices'][0]['message']['content']), '"\''),
         ]);
-
-        Notification::make()
-            ->title("Description for \"$post->title\" generated successfully!")
-            ->success()
-            ->send();
 
         return $post->fresh();
     }
