@@ -2,13 +2,11 @@
 
 namespace App\Models;
 
-use App\Models\Concerns\HasPresenter;
+use App\Models\Presenters\CategoryPresenter;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Category extends BaseModel
 {
-    use HasPresenter;
-
     public static function booted() : void
     {
         static::saved(function (self $model) {
@@ -21,6 +19,11 @@ class Category extends BaseModel
                 $pending->afterResponse();
             }
         });
+    }
+
+    public function presenter() : CategoryPresenter
+    {
+        return new CategoryPresenter($this);
     }
 
     public function posts() : BelongsToMany

@@ -22,7 +22,7 @@ trait HasFeedItems
         return FeedItem::create([
             'id' => route('posts.show', $this),
             'title' => $this->title,
-            'summary' => $this->teaser ?? $this->description,
+            'summary' => $this->teaser ? $this->presenter()->teaser() : $this->description,
             'updated' => $this->created_at,
             'link' => route('posts.show', $this),
             'authorName' => $this->user_name ?? $this->user->name,

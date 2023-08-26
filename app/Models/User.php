@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Filament\Panel;
-use App\Models\Concerns\HasPresenter;
+use App\Models\Presenters\UserPresenter;
 use Illuminate\Notifications\Notifiable;
 use Filament\Models\Contracts\FilamentUser;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -12,7 +12,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable implements FilamentUser
 {
-    use HasFactory, HasPresenter, Notifiable;
+    use HasFactory, Notifiable;
 
     protected $fillable = [
         'name', 'email', 'password',
@@ -37,6 +37,11 @@ class User extends Authenticatable implements FilamentUser
                 $pending->afterResponse();
             }
         });
+    }
+
+    public function presenter() : UserPresenter
+    {
+        return new UserPresenter($this);
     }
 
     public function posts() : HasMany
