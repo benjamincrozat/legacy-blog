@@ -7,12 +7,12 @@ use App\Models\Post;
 use Filament\Tables;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
+use App\Jobs\GeneratePostTeaser;
 use Filament\Resources\Resource;
-use App\Actions\GeneratePostTeaser;
 use Filament\Tables\Actions\Action;
 use Filament\Tables\Filters\Filter;
+use App\Jobs\GeneratePostDescription;
 use Illuminate\Database\Eloquent\Model;
-use App\Actions\GeneratePostDescription;
 use Filament\Notifications\Notification;
 use Filament\Tables\Filters\SelectFilter;
 use Illuminate\Database\Eloquent\Builder;
@@ -199,7 +199,7 @@ class PostResource extends Resource
             ])
             ->action(function (Post $post, array $data) {
                 dispatch(function () use ($post, $data) {
-                    (new GeneratePostDescription)->generate($post, $data['model']);
+                    GeneratePostDescription::dispatch($post, $data['model']);
 
                     Notification::make()
                         ->title("Description for \"$post->title\" generated successfully!")
@@ -224,7 +224,7 @@ class PostResource extends Resource
             ])
             ->action(function (Post $post, array $data) {
                 dispatch(function () use ($post, $data) {
-                    (new GeneratePostTeaser)->generate($post, $data['model']);
+                    GeneratePostTeaser::dispatch($post, $data['model']);
 
                     Notification::make()
                         ->title("Teaser for \"$post->title\" generated successfully!")
