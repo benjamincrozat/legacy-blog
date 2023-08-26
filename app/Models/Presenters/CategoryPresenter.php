@@ -6,23 +6,19 @@ use App\Tree;
 
 class CategoryPresenter extends BasePresenter
 {
-    public function longDescription() : string
+    public function longDescription(string $suffix = '') : string
     {
-        return $this->renderAsMarkdown('long_description', $this->model->long_description);
+        return $this->renderAsMarkdown('long_description', $this->model->long_description . $suffix);
     }
 
-    public function content() : string
+    public function content(string $suffix = '') : string
     {
-        return $this->renderAsMarkdown('content', $this->model->content);
+        return $this->renderAsMarkdown('content', $this->model->content . $suffix);
     }
 
-    public function tree() : array
+    public function tree(string $content) : array
     {
-        if (! $this->model->content) {
-            return [];
-        }
-
-        return (new Tree)->build($this->content());
+        return (new Tree)->build($content);
     }
 
     public function primaryColor() : string
