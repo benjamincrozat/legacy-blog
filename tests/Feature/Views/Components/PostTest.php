@@ -1,9 +1,10 @@
 <?php
 
 use App\Models\Post;
+use App\Models\Category;
 
 it('displays a post correctly', function () {
-    $post = Post::factory()->create();
+    $post = Post::factory()->hasCategories(3)->create();
 
     /** @var \NunoMaduro\LaravelMojito\ViewAssertion */
     $view = $this->assertView('components.post', compact('post'));
@@ -14,10 +15,16 @@ it('displays a post correctly', function () {
 
     $view->contains('Updated on');
     $view->contains($post->presenter()->lastUpdated());
+
+    $post->categories->each(function (Category $category) use ($view) {
+        $view
+            ->first('a[href="' . route('categories.show', $category) . '"]')
+            ->contains($category->name);
+    });
 });
 
 it('displays a community post correctly', function () {
-    $post = Post::factory()->asCommunityLink()->create();
+    $post = Post::factory()->hasCategories(3)->asCommunityLink()->create();
 
     /** @var \NunoMaduro\LaravelMojito\ViewAssertion */
     $view = $this->assertView('components.post', compact('post'));
@@ -28,4 +35,10 @@ it('displays a community post correctly', function () {
 
     $view->contains('Shared on');
     $view->contains($post->presenter()->lastUpdated());
+
+    $post->categories->each(function (Category $category) use ($view) {
+        $view
+            ->first('a[href="' . route('categories.show', $category) . '"]')
+            ->contains($category->name);
+    });
 });
