@@ -37,7 +37,7 @@
     </div>
 
     <x-section class="mt-16">
-        <x-slot:title class="text-center">
+        <x-slot:title class="!text-2xl text-center">
             Articles about {{ $category->name }}
         </x-slot:title>
 
