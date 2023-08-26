@@ -55,6 +55,7 @@ class Post extends BaseModel implements Feedable
             'description' => $this->content,
             'teaser' => $this->content,
             'community_link' => $this->community_link,
+            'categories' => $this->categories->pluck('name')->toArray(),
         ];
     }
 }

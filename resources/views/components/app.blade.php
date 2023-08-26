@@ -149,6 +149,10 @@
                                     Admin
                                 </x-menu-item>
 
+                                <x-menu-item href="/horizon" icon="o-queue-list" :no-wire-navigate="true">
+                                    Horizon
+                                </x-menu-item>
+
                                 <x-menu-divider />
 
                                 <x-menu-item
