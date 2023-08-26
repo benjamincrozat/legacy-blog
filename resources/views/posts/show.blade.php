@@ -86,9 +86,9 @@
         </x-slot:title>
 
         <ul class="grid gap-8 mt-8 md:grid-cols-2 md:gap-16">
-            @foreach ($recommended as $post)
+            @foreach ($recommendations as $recommendation)
                 <li>
-                    <x-post :post="$post" />
+                    <x-post :post="$recommendation" />
                 </li>
             @endforeach
         </ul>
