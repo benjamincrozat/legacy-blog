@@ -1,8 +1,8 @@
 <section {{ $attributes }}>
     @if (! empty($title))
-        <h2 {{ $title->attributes->merge(['class' => 'text-2xl md:text-3xl font-bold']) }}>
+        <{{ $title->attributes->get('tag', 'h2') }} {{ $title->attributes->merge(['class' => 'text-2xl md:text-3xl font-bold']) }}>
             {{ $title }}
-        </h2>
+        </{{ $title->attributes->get('tag', 'h2') }}>
     @endif
 
     {{ $slot }}
