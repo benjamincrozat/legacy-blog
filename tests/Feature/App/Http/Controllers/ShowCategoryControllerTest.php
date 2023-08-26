@@ -8,7 +8,10 @@ use function Pest\Laravel\get;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 test('a given category is shown and contains all its published posts', function () {
-    $category = Category::factory()->hasPosts(3, ['is_published' => true])->create();
+    $category = Category::factory()
+        ->hasPosts(3, ['is_published' => true])
+        ->hasRelated(3)
+        ->create();
 
     $response = get(route('categories.show', $category))
         ->assertOk()
@@ -27,5 +30,12 @@ test('a given category is shown and contains all its published posts', function 
     $category->posts->each(function (Post $post) use ($view) {
         $view->contains(route('posts.show', $post));
         $view->contains($post->title);
+    });
+
+    $view->contains('Related topics:');
+
+    $category->related->each(function (Category $category) use ($view) {
+        $view->contains(route('categories.show', $category));
+        $view->contains($category->name);
     });
 });

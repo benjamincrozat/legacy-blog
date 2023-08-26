@@ -23,6 +23,15 @@
                 @elseif ($category->description)
                     {!! $category->presenter()->description() !!}
                 @endif
+
+                @if ($category->related->isNotEmpty())
+                    <p><strong>Related topics:</strong></p>
+                    <ul>
+                        @foreach ($category->related as $relatedCategory)
+                            <li><a wire:navigate href="{{ route('categories.show', $relatedCategory) }}">{{ $relatedCategory->name }}</a></li>
+                        @endforeach
+                    </ul>
+                @endif
             </x-prose>
         </article>
     </div>

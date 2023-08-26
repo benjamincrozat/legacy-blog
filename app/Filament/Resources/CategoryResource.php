@@ -11,6 +11,7 @@ use Filament\Resources\Resource;
 use App\Filament\Resources\CategoryResource\Pages;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use App\Filament\Resources\CategoryResource\RelationManagers\PostRelationManager;
+use App\Filament\Resources\CategoryResource\RelationManagers\RelatedRelationManager;
 
 class CategoryResource extends Resource
 {
@@ -133,6 +134,7 @@ class CategoryResource extends Resource
     {
         return [
             PostRelationManager::class,
+            RelatedRelationManager::class,
         ];
     }
 
