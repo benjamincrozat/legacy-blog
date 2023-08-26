@@ -118,7 +118,7 @@
                         <x-menu :hide-icon="true">
                             <x-slot:trigger>
                                 <span class="sr-only">More</span>
-                                <x-heroicon-o-ellipsis-horizontal class="w-5 h-5" />
+                                <x-heroicon-o-ellipsis-vertical class="w-5 h-5" />
                             </x-slot:trigger>
 
                             <x-menu-item
