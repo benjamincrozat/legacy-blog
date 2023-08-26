@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Builder;
 trait HasLocalScopes
 {
     /**
-     * Get a sequence of posts using their ID, in the exact order provided.
+     * Get a sequence of posts using their IDs in the exact order provided.
      */
     public function scopeAsSequence(Builder $query, mixed $sequence) : void
     {
