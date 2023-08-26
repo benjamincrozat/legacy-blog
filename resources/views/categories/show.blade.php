@@ -1,7 +1,3 @@
-@php
-$contentSuffix = "## Articles about $category->name";
-@endphp
-
 <x-app
     title="Learn about {{ $category->name }}"
     :description="$category->description"
@@ -17,16 +13,23 @@ $contentSuffix = "## Articles about $category->name";
                     <h1>Learn about <span class="{{ ! $category->presenter()->primaryColor() ?: 'text-' . $category->presenter()->primaryColor() }}">{{ $category->name }}</span></h1>
 
                     @if (! empty($tree = $category->presenter()->tree(
-                        $category->presenter()->content($contentSuffix)
+                        $category->presenter()->content()
                     )))
+                        @php
+                        $tree[] = [
+                            'value' => "Articles about $category->name",
+                            'children' => [],
+                        ];
+                        @endphp
+
                         <p class="font-bold">Table of contents:</p>
                         <x-tree :tree="$tree" />
                     @endif
 
                     @if ($category->content)
-                        {!! $category->presenter()->content($contentSuffix) !!}
+                        {!! $category->presenter()->content() !!}
                     @elseif ($category->long_description)
-                        {!! $category->presenter()->longDescription($contentSuffix) !!}
+                        {!! $category->presenter()->longDescription() !!}
                     @endif
 
                     @if ($related->isNotEmpty())
@@ -37,6 +40,12 @@ $contentSuffix = "## Articles about $category->name";
                             @endforeach
                         </ul>
                     @endif
+
+                    <h2 id="articles-about-{{ Str::slug($category->name) }}">
+                        <a href="#articles-about-{{ Str::slug($category->name) }}">
+                            Articles about {{ $category->name }}
+                        </a>
+                    </h2>
                 </div>
 
                 <div class="not-prose">

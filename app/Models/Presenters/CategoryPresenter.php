@@ -6,14 +6,14 @@ use App\Tree;
 
 class CategoryPresenter extends BasePresenter
 {
-    public function longDescription(string $suffix = '') : string
+    public function longDescription() : string
     {
-        return $this->renderAsMarkdown('long_description', $this->model->long_description . $suffix);
+        return $this->renderAsMarkdown('long_description', $this->model->long_description);
     }
 
-    public function content(string $suffix = '') : string
+    public function content() : string
     {
-        return $this->renderAsMarkdown('content', $this->model->content . $suffix);
+        return $this->renderAsMarkdown('content', $this->model->content);
     }
 
     public function tree(string $content) : array
