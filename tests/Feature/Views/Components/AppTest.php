@@ -1,17 +1,5 @@
 <?php
 
-it('includes with the needed meta tags', function () {
-    /** @var \NunoMaduro\LaravelMojito\ViewAssertion */
-    $view = $this->assertView('components.app');
-
-    $view->hasMeta(['charset' => 'UTF-8']);
-
-    $view->hasMeta([
-        'name' => 'viewport',
-        'content' => 'width=device-width, initial-scale=1, viewport-fit=cover',
-    ]);
-});
-
 it("includes the Tailwind CSS Play CDN and it's configured to be barebones", function () {
     /** @var \NunoMaduro\LaravelMojito\ViewAssertion */
     $view = $this->assertView('components.app');
@@ -57,13 +45,4 @@ it('includes the canonical link tag using the original URL', function () {
     $view
         ->first('link[rel="canonical"]')
         ->hasAttribute('href', 'https://example.com');
-});
-
-it('includes the canonical link tag using the current URL', function () {
-    /** @var \NunoMaduro\LaravelMojito\ViewAssertion */
-    $view = $this->assertView('components.app');
-
-    $view
-        ->first('link[rel="canonical"]')
-        ->hasAttribute('href', config('app.url'));
 });

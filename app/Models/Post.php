@@ -4,15 +4,15 @@ namespace App\Models;
 
 use Spatie\Feed\Feedable;
 use App\Models\Concerns\HasFeedItems;
-use App\Models\Concerns\HasPresenter;
 use App\Models\Concerns\HasLocalScopes;
+use App\Models\Presenters\PostPresenter;
 use App\Models\Concerns\HasRelationships;
 use App\Models\Concerns\HasRecommendations;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 
 class Post extends BaseModel implements Feedable
 {
-    use HasFeedItems, HasLocalScopes, HasPresenter, HasRecommendations, HasRelationships;
+    use HasFeedItems, HasLocalScopes, HasRecommendations, HasRelationships;
 
     protected $casts = [
         'manually_updated_at' => 'date',
@@ -30,6 +30,11 @@ class Post extends BaseModel implements Feedable
                 $pending->afterResponse();
             }
         });
+    }
+
+    public function presenter() : PostPresenter
+    {
+        return new PostPresenter($this);
     }
 
     public function scopePublished(Builder $query) : void

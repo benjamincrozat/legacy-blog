@@ -23,7 +23,6 @@ class PostFactory extends Factory
             'description' => fake()->sentences(2, true),
             'teaser' => fake()->paragraph(),
             'commercial' => fake()->boolean(),
-            'community_link' => collect([fake()->url(), null])->random(),
             'sessions' => fake()->randomNumber(),
         ];
     }

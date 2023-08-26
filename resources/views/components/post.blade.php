@@ -1,7 +1,7 @@
 <div {{ $attributes->except('post') }}>
     <div class="flex items-start gap-6 md:gap-8">
         <div class="flex-grow">
-            <p class="font-bold ">
+            <p class="font-bold">
                 <a
                     @if ($post->community_link)
                         href="{{ $post->community_link }}"
@@ -21,12 +21,12 @@
 
             <p class="mt-2 opacity-60">
                 @if ($post->community_link)
-                    Shared
+                    Shared on
                 @else
-                    Updated
+                    Updated on
                 @endif
 
-                on <a wire:navigate href="{{ route('posts.show', $post) }}">{{ $post->presenter()->lastUpdated() }}</a>
+                <a wire:navigate href="{{ route('posts.show', $post) }}">{{ $post->presenter()->lastUpdated() }}</a>
                 @if ($post->community_link) <span class="mx-1 text-xs">•</span> {{ $post->presenter()->communityLinkDomain() }} @endif
             </p>
         </div>
