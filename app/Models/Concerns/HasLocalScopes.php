@@ -19,6 +19,11 @@ trait HasLocalScopes
             ->orderByRaw('FIELD(id, ' . $sequence->join(',') . ')');
     }
 
+    public function scopePublished(Builder $query) : void
+    {
+        $query->where('is_published', true);
+    }
+
     public function scopeWithUser(Builder $query) : void
     {
         $query
