@@ -8,8 +8,12 @@ use Filament\Tables;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
+use App\Actions\GeneratePostTeaser;
+use Filament\Tables\Actions\Action;
 use Filament\Tables\Filters\Filter;
 use Illuminate\Database\Eloquent\Model;
+use App\Actions\GeneratePostDescription;
+use Filament\Notifications\Notification;
 use Filament\Tables\Filters\SelectFilter;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\PostResource\Pages;
@@ -51,6 +55,10 @@ class PostResource extends Resource
                     ->toggle(),
             ])
             ->actions([
+                Tables\Actions\ActionGroup::make([
+                    static::getGenerateDescriptionAction(),
+                    static::getGenerateTeaserAction(),
+                ]),
                 Tables\Actions\EditAction::make()->button()->outlined()->icon(''),
                 Tables\Actions\DeleteAction::make()->icon(''),
             ])
@@ -174,6 +182,56 @@ class PostResource extends Resource
                     'success' => 'Published',
                 ]),
         ];
+    }
+
+    public static function getGenerateDescriptionAction() : Action
+    {
+        return Action::make('Generate description')
+            ->form([
+                Forms\Components\Select::make('model')
+                    ->options([
+                        'gpt-4' => 'GPT-4',
+                        'gpt-3.5-turbo-16k' => 'GPT-3.5 Turbo 16K',
+                        'gpt-3.5-turbo' => 'GPT-3.5 Turbo',
+                    ])
+                    ->default('gpt-3.5-turbo')
+                    ->required(),
+            ])
+            ->action(function (Post $post, array $data) {
+                dispatch(function () use ($post, $data) {
+                    (new GeneratePostDescription)->generate($post, $data['model']);
+
+                    Notification::make()
+                        ->title("Description for \"$post->title\" generated successfully!")
+                        ->success()
+                        ->send();
+                });
+            });
+    }
+
+    public static function getGenerateTeaserAction() : Action
+    {
+        return Action::make('Generate teaser')
+            ->form([
+                Forms\Components\Select::make('model')
+                    ->options([
+                        'gpt-4' => 'GPT-4',
+                        'gpt-3.5-turbo-16k' => 'GPT-3.5 Turbo 16K',
+                        'gpt-3.5-turbo' => 'GPT-3.5 Turbo',
+                    ])
+                    ->default('gpt-3.5-turbo')
+                    ->required(),
+            ])
+            ->action(function (Post $post, array $data) {
+                dispatch(function () use ($post, $data) {
+                    (new GeneratePostTeaser)->generate($post, $data['model']);
+
+                    Notification::make()
+                        ->title("Teaser for \"$post->title\" generated successfully!")
+                        ->success()
+                        ->send();
+                });
+            });
     }
 
     public static function getGloballySearchableAttributes() : array
