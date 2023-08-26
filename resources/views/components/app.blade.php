@@ -124,7 +124,7 @@
                             <x-menu-item
                                 href="{{ route('home') }}#about"
                                 :no-wire-navigate="true"
-                                icon="s-user"
+                                icon="o-question-mark-circle"
                             >
                                 About
                             </x-menu-item>
