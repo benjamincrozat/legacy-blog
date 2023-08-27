@@ -49,9 +49,7 @@ Instructions:
 PROMPT
                             : <<<PROMPT
 # {$this->post->title}
-{$this->post->introduction}
 {$this->post->content}
-{$this->post->conclusion}
 
 ---
 
