@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -23,12 +24,14 @@ return new class extends Migration
         });
 
         if (! app()->runningUnitTests()) {
-            User::factory()->create([
+            User::create([
                 'name' => 'Benjamin Crozat',
                 'email' => 'hello@benjamincrozat.com',
+                'email_verified_at' => now(),
                 'description' => 'Freelance web developer turned content creator.',
                 'github_handle' => 'benjamincrozat',
                 'x_handle' => 'benjamincrozat',
+                'password' => Hash::make('password'),
             ]);
         }
     }
