@@ -26,7 +26,7 @@
                     Updated on
                 @endif
 
-                <a wire:navigate href="{{ route('posts.show', $post) }}">{{ $post->presenter()->lastUpdated() }}</a>
+                <a wire:navigate href="{{ route('posts.show', $post) }}" class="underline">{{ $post->presenter()->lastUpdated() }}</a>
                 @if ($post->community_link) <span class="mx-1 text-xs">•</span> {{ $post->presenter()->communityLinkDomain() }} @endif
             </p>
         </div>

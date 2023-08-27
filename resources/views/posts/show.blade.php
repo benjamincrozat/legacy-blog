@@ -9,7 +9,7 @@
         </x-breadcrumb>
 
         @if ($post->categories->isNotEmpty())
-            <ul class="flex gap-1 mt-4">
+            <ul class="flex gap-1 mt-5">
                 @foreach ($post->categories as $category)
                     <li>
                         <a
