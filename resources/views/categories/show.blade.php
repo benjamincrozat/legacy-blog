@@ -13,7 +13,7 @@
                     <h1>Learn about <span class="{{ ! $category->presenter()->primaryColor() ?: 'text-' . $category->presenter()->primaryColor() }}">{{ $category->name }}</span></h1>
 
                     @if (! empty($tree = $category->presenter()->tree(
-                        $category->presenter()->content()
+                        $category->content ? $category->presenter()->content() : $category->presenter()->longDescription()
                     )))
                         @php
                         if ($posts->isNotEmpty()) {
