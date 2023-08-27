@@ -1,7 +1,7 @@
 <?php
 
 use App\Models\Post;
-use App\Actions\GeneratePostTeaser;
+use App\Jobs\GeneratePostTeaser;
 use Illuminate\Support\Facades\Http;
 
 it('asks GPT to generate a teaser for a given post', function () {
@@ -13,7 +13,7 @@ it('asks GPT to generate a teaser for a given post', function () {
 
     $post = Post::factory()->create();
 
-    (new GeneratePostTeaser)->generate($post);
+    GeneratePostTeaser::dispatch($post);
 
-    $this->assertEquals('Lorem ipsum dolor sit amet.', $post->teaser);
+    $this->assertEquals('Lorem ipsum dolor sit amet.', $post->fresh()->teaser);
 });

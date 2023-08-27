@@ -2,7 +2,7 @@
 
 use App\Models\Post;
 use Illuminate\Support\Facades\Http;
-use App\Actions\GeneratePostDescription;
+use App\Jobs\GeneratePostDescription;
 
 it('asks GPT to generate a description for a given post', function () {
     Http::fake([
@@ -13,7 +13,7 @@ it('asks GPT to generate a description for a given post', function () {
 
     $post = Post::factory()->create();
 
-    (new GeneratePostDescription)->generate($post);
+    GeneratePostDescription::dispatch($post);
 
-    $this->assertEquals('Lorem ipsum dolor sit amet.', $post->description);
+    $this->assertEquals('Lorem ipsum dolor sit amet.', $post->fresh()->description);
 });
