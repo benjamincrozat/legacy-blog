@@ -5,7 +5,6 @@ namespace App\Models\Presenters;
 use App\Str;
 use App\Tree;
 use Spatie\Url\Url;
-use Illuminate\Support\Carbon;
 
 class PostPresenter extends BasePresenter
 {
@@ -38,18 +37,12 @@ class PostPresenter extends BasePresenter
     }
 
     public function communityLinkDomain() : string
-    {
-        return str_replace('www.', '', Url::fromString($this->model->community_link)->getHost());
-    }
+        {
+            return str_replace('www.', '', Url::fromString($this->model->community_link)->getHost());
+        }
 
     public function lastUpdated() : string
     {
-        // I have no idea why sometimes, manually_updated_at is a string
-        // instead of being casted to a Carbon instance by Eloquent.
-        if (is_string($this->model->manually_updated_at)) {
-            $manuallyUpdatedAt = Carbon::parse($this->model->manually_updated_at);
-        }
-
-        return ($manuallyUpdatedAt ?? $this->model->created_at)->isoFormat('LL');
+        return ($this->model->manually_updated_at ?? $this->model->created_at)->isoFormat('LL');
     }
 }
