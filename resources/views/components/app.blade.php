@@ -1,7 +1,7 @@
 <html lang="{{ app()->getLocale() }}" class="scroll-smooth">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="description" content="{{ $description ?? '' }}" />
+    <meta name="description" content="{{ $description ?? 'Join more than 20,000 readers and skyrocket your web development skills with frequently updated content.' }}" />
     <meta property="og:title" content="{{ $title ?? config('app.name') }}" />
     @if (! empty($image))
         <meta property="og:image" content="{{ $image }}" />
@@ -10,7 +10,7 @@
     <meta property="og:url" content="{{ url()->current() }}" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:creator" content="@benjamincrozat" />
-    <meta name="twitter:description" content="{{ $description ?? '' }}" />
+    <meta name="twitter:description" content="{{ $description ?? 'Join more than 20,000 readers and skyrocket your web development skills with frequently updated content.' }}" />
     @if (! empty($image))
         <meta name="twitter:image" content="{{ $image }}" />
     @endif
