@@ -18,9 +18,7 @@
 
     <title>{{ $title ?? config('app.name') }}</title>
 
-    @unless(app()->runningUnitTests() && app()->runningInConsole())
-        @googlefonts
-    @endunless
+    @googlefonts
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
