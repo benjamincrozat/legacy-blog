@@ -26,4 +26,5 @@ Route::view('/privacy', 'privacy')->name('privacy');
 
 Route::view('/terms', 'terms')->name('terms');
 
+// This is a wildcard route. It must be the last one to avoid conflicts.
 Route::get('/{post:slug}', ShowPostController::class)->name('posts.show');

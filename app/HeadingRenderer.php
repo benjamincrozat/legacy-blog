@@ -15,10 +15,6 @@ class HeadingRenderer implements NodeRendererInterface, XmlNodeRendererInterface
 {
     /**
      * @param  Heading  $node
-     *
-     * {@inheritDoc}
-     *
-     * @psalm-suppress MoreSpecificImplementedParamType
      */
     public function render(Node $node, ChildNodeRendererInterface $childRenderer) : Stringable
     {
@@ -46,9 +42,6 @@ class HeadingRenderer implements NodeRendererInterface, XmlNodeRendererInterface
 
     /**
      * @param  Heading  $node
-     * @return array<string, scalar>
-     *
-     * @psalm-suppress MoreSpecificImplementedParamType
      */
     public function getXmlAttributes(Node $node) : array
     {
