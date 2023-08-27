@@ -48,7 +48,6 @@
             defer src="https://api.pirsch.io/pirsch-extended.js"
             id="pirschextendedjs"
             data-code="5N2hIsUQsCVX1LQtvPdJ3AGwQZHGxtt5"
-            data-disable-page-views
         ></script>
     @endif
 
