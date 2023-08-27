@@ -29,6 +29,18 @@
             <x-prose>
                 <h1>{{ $post->title }}</h1>
 
+                <p class="mb-8 -mt-6 opacity-60">
+                    @if ($post->community_link)
+                        Shared on
+                    @else
+                        Updated on
+                    @endif
+
+                    <time class="{{ ($post->manually_updated_at ?? $post->created_at)->toDateTimeString() }}">
+                        {{ $post->presenter()->lastUpdated() }}
+                    </time>
+                </p>
+
                 @if (! empty($tree = $post->presenter()->tree()))
                     <p class="font-bold">Table of contents:</p>
                     <x-tree :tree="$tree" />
@@ -62,7 +74,7 @@
                     />
 
                     <h1 class="text-2xl">
-                        {{ $post->user->name }}
+                        Written by {{ $post->user->name }}
                     </h1>
 
                     {!! $post->user->presenter()->description() !!}
