@@ -29,7 +29,7 @@
             <x-prose>
                 <h1>{{ $post->title }}</h1>
 
-                <p class="mb-8 -mt-6 opacity-60">
+                <p class="mb-8 -mt-6 opacity-75">
                     @if ($post->community_link)
                         Shared on
                     @else
