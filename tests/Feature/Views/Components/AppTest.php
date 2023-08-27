@@ -3,6 +3,9 @@
 use App\Models\User;
 
 use function Pest\Laravel\actingAs;
+
+use Illuminate\Support\Facades\Http;
+
 use function Pest\Laravel\assertGuest;
 
 it("includes the Tailwind CSS Play CDN and it's configured to be barebones", function () {
@@ -53,6 +56,10 @@ it('includes the canonical link tag using the original URL', function () {
 });
 
 it("includes the tracking script in production and when it's not user #1", function () {
+    Http::fake([
+        'fonts.googleapis.com/*' => Http::response(),
+    ]);
+
     app()['env'] = 'production';
 
     assertGuest();
@@ -64,6 +71,10 @@ it("includes the tracking script in production and when it's not user #1", funct
 });
 
 it("does not include the tracking script in production and when it's user #1", function () {
+    Http::fake([
+        'fonts.googleapis.com/*' => Http::response(),
+    ]);
+
     app()['env'] = 'production';
 
     actingAs(User::find(1) ?? User::factory()->create(['id' => 1]));
