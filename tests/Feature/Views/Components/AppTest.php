@@ -56,9 +56,7 @@ it('includes the canonical link tag using the original URL', function () {
 });
 
 it("includes the tracking script in production and when it's not user #1", function () {
-    Http::fake([
-        'fonts.googleapis.com/*' => Http::response(),
-    ]);
+    Http::fake();
 
     app()['env'] = 'production';
 
@@ -71,9 +69,7 @@ it("includes the tracking script in production and when it's not user #1", funct
 });
 
 it("does not include the tracking script in production and when it's user #1", function () {
-    Http::fake([
-        'fonts.googleapis.com/*' => Http::response(),
-    ]);
+    Http::fake();
 
     app()['env'] = 'production';
 
