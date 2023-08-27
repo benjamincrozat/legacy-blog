@@ -1,5 +1,10 @@
 <?php
 
+use App\Models\User;
+
+use function Pest\Laravel\actingAs;
+use function Pest\Laravel\assertGuest;
+
 it("includes the Tailwind CSS Play CDN and it's configured to be barebones", function () {
     /** @var \NunoMaduro\LaravelMojito\ViewAssertion */
     $view = $this->assertView('components.app');
@@ -45,4 +50,26 @@ it('includes the canonical link tag using the original URL', function () {
     $view
         ->first('link[rel="canonical"]')
         ->hasAttribute('href', 'https://example.com');
+});
+
+it("includes the tracking script in production and when it's not user #1", function () {
+    app()['env'] = 'production';
+
+    assertGuest();
+
+    /** @var \NunoMaduro\LaravelMojito\ViewAssertion */
+    $view = $this->assertView('components.app');
+
+    $view->contains('https://api.pirsch.io/pirsch-extended.js');
+});
+
+it("does not include the tracking script in production and when it's user #1", function () {
+    app()['env'] = 'production';
+
+    actingAs(User::find(1) ?? User::factory()->create(['id' => 1]));
+
+    /** @var \NunoMaduro\LaravelMojito\ViewAssertion */
+    $view = $this->assertView('components.app');
+
+    $view->doesNotContain('https://api.pirsch.io/pirsch-extended.js');
 });

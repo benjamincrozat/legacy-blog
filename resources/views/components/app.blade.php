@@ -180,7 +180,7 @@
             </div>
         </div>
 
-        @if (app()->isProduction())
+        @if (app()->isProduction() && auth()->id() !== 1)
             <script
                 src="https://api.pirsch.io/pirsch-extended.js"
                 id="pirschextendedjs"
