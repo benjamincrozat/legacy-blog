@@ -133,6 +133,8 @@ class PostResource extends Resource
                         ->label('Is published')
                         ->helperText('When unchecked, the article is considered as a draft.'),
 
+                    Forms\Components\DatePicker::make('manually_updated_at'),
+
                     Forms\Components\Group::make()
                         ->schema([
                             Forms\Components\Placeholder::make('created_at')
