@@ -80,12 +80,24 @@
                         <x-icon-logo class="w-8 h-8 fill-current md:w-10 md:h-10" />
                     </a>
 
-                    <div class="flex items-center justify-between text-sm gap-7 md:gap-8 md:text-base">
+                    <div class="flex items-center gap-7 md:gap-8">
                         <a wire:navigate href="{{ route('posts.index') }}">
-                            Latest
+                            @if (Route::is('posts.index'))
+                                <x-heroicon-s-fire class="w-6 h-6 mx-auto text-orange-400 md:w-7 md:h-7" />
+                            @else
+                                <x-heroicon-o-fire class="w-6 h-6 mx-auto md:w-7 md:h-7" />
+                            @endif
+
+                            <span class="text-xs font-normal @if (Route::is('posts.index')) text-orange-600 @endif">Latest</span>
                         </a>
-                        
-                        <x-menu trigger="Topics" class="grid gap-4 py-4">
+
+                        <x-menu class="grid gap-4 py-4">
+                            <x-slot:trigger>
+                                <x-heroicon-o-tag class="w-6 h-6 mx-auto md:w-7 md:h-7" x-show="! open" />
+                                <x-heroicon-s-tag class="w-6 h-6 mx-auto text-indigo-400 md:w-7 md:h-7" x-cloak x-show="open" />
+                                <span class="text-xs font-normal" x-bind:class="{ 'text-indigo-400': open }">Topics</span>
+                            </x-slot:trigger>
+
                             @foreach ($categories as $category)
                                 <x-menu-item
                                     href="{{ route('categories.show', $category) }}"
@@ -97,7 +109,13 @@
                             @endforeach
                         </x-menu>
 
-                        <x-menu trigger="For you">
+                        <x-menu>
+                            <x-slot:trigger>
+                                <x-heroicon-o-gift class="w-6 h-6 mx-auto md:w-7 md:h-7" x-show="! open" />
+                                <x-heroicon-s-gift class="w-6 h-6 mx-auto text-red-400 md:w-7 md:h-7" x-cloak x-show="open" />
+                                <span class="text-xs font-normal" x-bind:class="{ 'text-red-600': open }">For you</span>
+                            </x-slot:trigger>
+
                             <x-menu-item href="/best-web-development-tools" icon="o-wrench">
                                 See all the tools I use
                             </x-menu-item>
@@ -115,10 +133,10 @@
                             </x-menu-item>
                         </x-menu>
 
-                        <x-menu :hide-icon="true">
+                        <x-menu>
                             <x-slot:trigger>
-                                <span class="sr-only">More</span>
-                                <x-heroicon-o-ellipsis-vertical class="w-5 h-5 ml-[-.175rem]" />
+                                <x-heroicon-o-ellipsis-horizontal class="w-6 h-6 mx-auto transition-transform duration-300 md:w-7 md:h-7" x-bind:class="{ 'rotate-90': open }" />
+                                <span class="text-xs font-normal">More</span>
                             </x-slot:trigger>
 
                             <x-menu-item
@@ -141,8 +159,10 @@
                                     <img
                                         src="{{ auth()->user()->presenter()->gravatar() }}?s=64"
                                         alt="{{ auth()->user()->name }}"
-                                        class="rounded-full w-[28px] h-[28px] md:w-[32px] md:h-[32px]"
+                                        class="rounded-full w-[32px] h-[32px] md:w-[40px] md:h-[40px]"
                                     />
+
+                                    <span class="sr-only">{{ auth()->user()->name }}</span>
                                 </x-slot:trigger>
 
                                 <x-menu-item href="/admin/posts" icon="o-cog" :no-wire-navigate="true">
