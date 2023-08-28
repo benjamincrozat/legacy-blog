@@ -42,6 +42,7 @@ class CategoryResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make()->button()->outlined()->icon(''),
                 Tables\Actions\DeleteAction::make()->link()->icon(''),
+                static::getCacheAction(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -122,7 +123,29 @@ class CategoryResource extends Resource
             Tables\Columns\TextColumn::make('posts_count')
                 ->counts('posts')
                 ->sortable(),
+
+            Tables\Columns\TextColumn::make('cached')
+                ->badge()
+                ->getStateUsing(
+                    function (Category $category) : string {
+                        $cached = cache()->has("Category.$category->id.long_description." . sha1($category->long_description)) &&
+                                  cache()->has("Category.$category->id.content." . sha1($category->content));
+
+                        return $cached ? 'Cached' : 'Not cached';
+                    }
+                )
+                ->colors([
+                    'success' => 'Cached',
+                    'danger' => 'Not cached',
+                ]),
         ];
+    }
+
+    public static function getCacheAction() : Action
+    {
+        return Action::make('Cache')
+            ->action(fn (Post $post) => CacheRenderedPostAttributes::dispatch($post))
+            ->requiresConfirmation();
     }
 
     public static function getGloballySearchableAttributes() : array
