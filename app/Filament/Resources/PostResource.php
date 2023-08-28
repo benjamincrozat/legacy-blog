@@ -14,6 +14,7 @@ use Filament\Tables\Filters\Filter;
 use App\Jobs\GeneratePostDescription;
 use Illuminate\Database\Eloquent\Model;
 use Filament\Notifications\Notification;
+use App\Jobs\CacheRenderedPostAttributes;
 use Filament\Tables\Filters\SelectFilter;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\PostResource\Pages;
@@ -58,6 +59,7 @@ class PostResource extends Resource
                 Tables\Actions\ActionGroup::make([
                     static::getGenerateDescriptionAction(),
                     static::getGenerateTeaserAction(),
+                    static::getCacheAction(),
                 ]),
                 Tables\Actions\EditAction::make()->button()->outlined()->icon(''),
                 Tables\Actions\DeleteAction::make()->icon(''),
@@ -139,13 +141,13 @@ class PostResource extends Resource
                         ->schema([
                             Forms\Components\Placeholder::make('created_at')
                                 ->label('Created at')
-                                ->content(fn (Post $record) : ?string => $record->created_at?->isoFormat('LLL')),
+                                ->content(fn (Post $post) : ?string => $post->created_at?->isoFormat('LLL')),
 
                             Forms\Components\Placeholder::make('updated_at')
                                 ->label('Last modified at')
-                                ->content(fn (Post $record) : ?string => $record->updated_at?->isoFormat('LLL')),
+                                ->content(fn (Post $post) : ?string => $post->updated_at?->isoFormat('LLL')),
                         ])
-                        ->hidden(fn (?Post $record) => null === $record),
+                        ->hidden(fn (?Post $post) => null === $post),
                 ])
                 ->collapsible()
                 ->columnSpan([
@@ -175,13 +177,28 @@ class PostResource extends Resource
             Tables\Columns\TextColumn::make('title')
                 ->sortable()
                 ->searchable()
-                ->description(fn (Post $record) : string => $record->slug),
+                ->description(fn (Post $post) : string => $post->slug),
 
             Tables\Columns\TextColumn::make('Status')
                 ->badge()
-                ->getStateUsing(fn (Post $record) : string => $record->is_published ? 'Published' : 'Draft')
+                ->getStateUsing(fn (Post $post) : string => $post->is_published ? 'Published' : 'Draft')
                 ->colors([
                     'success' => 'Published',
+                ]),
+
+            Tables\Columns\TextColumn::make('cached')
+                ->badge()
+                ->getStateUsing(
+                    function (Post $post) : string {
+                        $cached = cache()->has("Post.$post->id.content." . sha1($post->content)) &&
+                                  cache()->has("Post.$post->id.teaser." . sha1($post->teaser));
+
+                        return $cached ? 'Cached' : 'Not cached';
+                    }
+                )
+                ->colors([
+                    'success' => 'Cached',
+                    'danger' => 'Not cached',
                 ]),
         ];
     }
@@ -232,15 +249,22 @@ class PostResource extends Resource
             });
     }
 
+    public static function getCacheAction() : Action
+    {
+        return Action::make('Cache')
+            ->action(fn (Post $post) => CacheRenderedPostAttributes::dispatch($post))
+            ->requiresConfirmation();
+    }
+
     public static function getGloballySearchableAttributes() : array
     {
         return ['title', 'slug', 'user.name', 'content', 'description', 'teaser'];
     }
 
-    public static function getGlobalSearchResultDetails(Model $record) : array
+    public static function getGlobalSearchResultDetails(Model $post) : array
     {
         return [
-            'Author' => $record->user->name,
+            'Author' => $post->user->name,
         ];
     }
 
