@@ -69,3 +69,11 @@ it('does not track page views for HTTP methods other than GET', function () {
 
     Queue::assertNotPushed(\App\Jobs\TrackPageView::class);
 });
+
+it('does not track page views for user #1', function () {
+    actingAs(User::factory()->create(['id' => 1]));
+
+    get(route('home'));
+
+    Queue::assertNotPushed(\App\Jobs\TrackPageView::class);
+});
