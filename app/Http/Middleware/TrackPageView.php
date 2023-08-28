@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use Symfony\Component\HttpFoundation\Response;
 
 class TrackPageView
@@ -23,15 +24,16 @@ class TrackPageView
             ! str_contains($request->path(), 'horizon') &&
             ! str_contains($request->path(), 'recommends/')
         ) {
-            // I dispatch the request instead as a job of using terminate().
-            // It's easier to test in my local and testing environments.
-            \App\Jobs\TrackPageView::dispatch(
-                $request->fullUrl(),
-                $request->ip(),
-                $request->userAgent(),
-                $request->header('Accept-Language'),
-                $request->header('Referer')
-            );
+            Http::withToken(config('services.pirsch.access_key'))
+                ->retry(3)
+                ->post('https://api.pirsch.io/api/v1/hit', [
+                    'url' => $request->fullUrl(),
+                    'ip' => $request->ip(),
+                    'user_agent' => $request->userAgent(),
+                    'accept_language' => $request->header('Accept-Language'),
+                    'referrer' => $request->header('Referer'),
+                ])
+                ->throw();
         }
     }
 }
