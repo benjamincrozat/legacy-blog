@@ -15,25 +15,28 @@ class TrackPageView
 
     public function terminate(Request $request, Response $response) : void
     {
-        if (
-            config('services.pirsch.access_key') &&
+        if ($this->shouldTrack($request)) {
+            $url = $request->fullUrl();
+            $ip = $request->ip();
+            $user_agent = $request->userAgent();
+            $accept_language = $request->header('Accept-Language');
+            $referrer = $request->header('Referer');
+
+            Http::withToken(config('services.pirsch.access_key'))
+                ->retry(3)
+                ->post('https://api.pirsch.io/api/v1/hit', compact('url', 'ip', 'user_agent', 'accept_language', 'referrer'))
+                ->throw();
+        }
+    }
+
+    protected function shouldTrack(Request $request) : bool
+    {
+        return config('services.pirsch.access_key') &&
             'GET' === $request->method() &&
             ! $request->hasHeader('X-Livewire') &&
             1 !== auth()->id() &&
             ! str_contains($request->path(), 'admin') &&
             ! str_contains($request->path(), 'horizon') &&
-            ! str_contains($request->path(), 'recommends/')
-        ) {
-            Http::withToken(config('services.pirsch.access_key'))
-                ->retry(3)
-                ->post('https://api.pirsch.io/api/v1/hit', [
-                    'url' => $request->fullUrl(),
-                    'ip' => $request->ip(),
-                    'user_agent' => $request->userAgent(),
-                    'accept_language' => $request->header('Accept-Language'),
-                    'referrer' => $request->header('Referer'),
-                ])
-                ->throw();
-        }
+            ! str_contains($request->path(), 'recommends/');
     }
 }

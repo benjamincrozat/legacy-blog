@@ -9,7 +9,6 @@ use function Pest\Laravel\postJson;
 
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Queue;
 use App\Http\Middleware\TrackPageView;
 
 use function Pest\Laravel\withMiddleware;
@@ -18,8 +17,6 @@ beforeEach(function () {
     config(['services.pirsch.access_key' => 'some-access-key']);
 
     Http::fake(['api.pirsch.io/api/v1/hit' => Http::response()]);
-
-    Queue::fake();
 
     withMiddleware(TrackPageView::class);
 });
@@ -57,7 +54,7 @@ it('does not track the page view for excluded paths', function ($path, $requires
 
     get($path);
 
-    Queue::assertNotPushed(\App\Jobs\TrackPageView::class);
+    Http::assertNothingSent();
 })->with([
     ['/admin', true],
     ['/horizon', true],
@@ -67,7 +64,7 @@ it('does not track the page view for excluded paths', function ($path, $requires
 it('does not track page views for HTTP methods other than GET', function () {
     postJson(route('subscribe'));
 
-    Queue::assertNotPushed(\App\Jobs\TrackPageView::class);
+    Http::assertNothingSent();
 });
 
 it('does not track page views for user #1', function () {
@@ -75,5 +72,5 @@ it('does not track page views for user #1', function () {
 
     get(route('home'));
 
-    Queue::assertNotPushed(\App\Jobs\TrackPageView::class);
+    Http::assertNothingSent();
 });

@@ -26,6 +26,10 @@ class ShowMerchantController extends Controller
             return;
         }
 
+        if (1 === $request->user()?->id) {
+            return;
+        }
+
         TrackClickOnMerchant::dispatch(
             "$merchant->id", // Pirsch's API crashes when an integer is passed.
             $merchant->name,
