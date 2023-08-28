@@ -68,7 +68,4 @@
             </x-prose>
         </article>
     </div>
-
-    <x-section class="mt-16">
-    </x-section>
 </x-app>
