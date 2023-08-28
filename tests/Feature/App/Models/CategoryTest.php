@@ -1,15 +1,16 @@
 <?php
 
 use App\Models\Category;
+use Illuminate\Support\Facades\Bus;
+use App\Jobs\CacheRenderedCategoryAttributes;
 
-test('attributes are rendered and cached after saving', function () {
-    $model = Category::factory()->create();
+test("a category's attributes are rendered and cached after saving", function () {
+    Bus::fake();
 
-    $firstKey = "Category.$model->id.long_description." . sha1($model->long_description);
+    $category = Category::factory()->create();
 
-    $secondKey = "Category.$model->id.content." . sha1($model->content);
-
-    expect(cache()->has($firstKey))->toBeTrue();
-
-    expect(cache()->has($secondKey))->toBeTrue();
+    Bus::assertDispatchedAfterResponse(
+        CacheRenderedCategoryAttributes::class,
+        fn (CacheRenderedCategoryAttributes $job) => $job->category->is($category)
+    );
 });

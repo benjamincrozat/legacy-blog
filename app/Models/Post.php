@@ -7,6 +7,7 @@ use Laravel\Scout\Searchable;
 use App\Models\Concerns\HasFeedItems;
 use App\Models\Concerns\HasLocalScopes;
 use App\Models\Presenters\PostPresenter;
+use App\Jobs\CacheRenderedPostAttributes;
 use App\Models\Concerns\HasRelationships;
 use App\Models\Concerns\HasRecommendations;
 
@@ -20,16 +21,9 @@ class Post extends BaseModel implements Feedable
 
     public static function booted() : void
     {
-        static::saved(function (self $model) {
-            $pending = dispatch(function () use ($model) {
-                $model->presenter()->content();
-                $model->presenter()->teaser();
-            });
-
-            if (! app()->runningUnitTests()) {
-                $pending->afterResponse();
-            }
-        });
+        static::saved(
+            fn (self $model) => CacheRenderedPostAttributes::dispatchAfterResponse($model)
+        );
     }
 
     public function presenter() : PostPresenter

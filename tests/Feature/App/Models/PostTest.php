@@ -1,15 +1,16 @@
 <?php
 
 use App\Models\Post;
+use Illuminate\Support\Facades\Bus;
+use App\Jobs\CacheRenderedPostAttributes;
 
-test('attributes are rendered and cached after saving', function () {
-    $model = Post::factory()->create();
+test("a post's attributes are rendered and cached after saving", function () {
+    Bus::fake();
 
-    $firstKey = "Post.$model->id.content." . sha1($model->content);
+    $post = Post::factory()->create();
 
-    $secondKey = "Post.$model->id.teaser." . sha1($model->teaser);
-
-    expect(cache()->has($firstKey))->toBeTrue();
-
-    expect(cache()->has($secondKey))->toBeTrue();
+    Bus::assertDispatchedAfterResponse(
+        CacheRenderedPostAttributes::class,
+        fn (CacheRenderedPostAttributes $job) => $job->post->is($post)
+    );
 });

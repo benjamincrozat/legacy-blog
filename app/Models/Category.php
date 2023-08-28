@@ -3,22 +3,16 @@
 namespace App\Models;
 
 use App\Models\Presenters\CategoryPresenter;
+use App\Jobs\CacheRenderedCategoryAttributes;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Category extends BaseModel
 {
     public static function booted() : void
     {
-        static::saved(function (self $model) {
-            $pending = dispatch(function () use ($model) {
-                $model->presenter()->longDescription();
-                $model->presenter()->content();
-            });
-
-            if (! app()->runningUnitTests()) {
-                $pending->afterResponse();
-            }
-        });
+        static::saved(
+            fn (self $model) => CacheRenderedCategoryAttributes::dispatchAfterResponse($model)
+        );
     }
 
     public function presenter() : CategoryPresenter
