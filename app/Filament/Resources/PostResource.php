@@ -199,8 +199,7 @@ class PostResource extends Resource
                 ->colors([
                     'success' => 'Cached',
                     'danger' => 'Not cached',
-                ])
-                ->sortable(),
+                ]),
         ];
     }
 
