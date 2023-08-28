@@ -88,6 +88,8 @@
             <p>Hi! I'm Benjamin Crozat. I'm from the South of France and <strong>I've been a self-taught professional web developer for more than 10 years</strong>.</p>
 
             <p>Coming from a modest family, <strong>being able to educate myself for free on the web changed my life for the better</strong>. <strong>Giving back to the community was a natural direction in my career.</strong> Therefore, I launched this blog in September 2022 with the goal to be in everyone's Google search.</p>
+
+            <p>Follow me on <a href="https://github.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer">GitHub</a> and <a href="https://x.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer">X</a>.</p>
         </x-prose>
     </x-section>
 </x-app>
