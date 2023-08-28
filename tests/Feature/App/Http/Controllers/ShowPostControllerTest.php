@@ -1,8 +1,11 @@
 <?php
 
 use App\Models\Post;
+use App\Models\User;
 
 use function Pest\Laravel\get;
+use function Pest\Laravel\actingAs;
+use function Pest\Laravel\assertGuest;
 
 test('a given published post is shown correctly', function () {
     Post::factory(3)->published()->create();
@@ -73,9 +76,30 @@ test('a given published community post is shown correctly', function () {
     });
 });
 
-test('a given unpublished cannot be shown', function () {
+test('a given unpublished post cannot be shown to guests', function () {
     $post = Post::factory()->create();
 
-    get(route('posts.show', $post))
+    assertGuest()
+        ->get(route('posts.show', $post))
         ->assertNotFound();
+});
+
+test('a given unpublished post cannot be shown to users', function () {
+    $user = User::find(2) ?? User::factory()->create(['id' => 2]);
+
+    $post = Post::factory()->create();
+
+    actingAs($user)
+        ->get(route('posts.show', $post))
+        ->assertNotFound();
+});
+
+test('a given unpublished post can be shown to user #1', function () {
+    $user = User::find(1) ?? User::factory()->create(['id' => 1]);
+
+    $post = Post::factory()->create();
+
+    actingAs($user)
+        ->get(route('posts.show', $post))
+        ->assertOk();
 });
