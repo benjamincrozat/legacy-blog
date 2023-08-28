@@ -81,6 +81,10 @@
                     </a>
 
                     <div class="flex items-center justify-between text-sm gap-7 md:gap-8 md:text-base">
+                        <a wire:navigate href="{{ route('posts.index') }}">
+                            Latest
+                        </a>
+                        
                         <x-menu trigger="Topics" class="grid gap-4 py-4">
                             @foreach ($categories as $category)
                                 <x-menu-item
@@ -92,10 +96,6 @@
                                 </x-menu-item>
                             @endforeach
                         </x-menu>
-
-                        <a wire:navigate href="{{ route('posts.index') }}">
-                            Latest
-                        </a>
 
                         <x-menu trigger="For you">
                             <x-menu-item href="/best-web-development-tools" icon="o-wrench">
