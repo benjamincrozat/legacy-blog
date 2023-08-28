@@ -55,9 +55,11 @@
                 </div>
             </x-slot:title>
 
-            <x-prose class="container mt-4 lg:max-w-screen-md">
-                {!! $category->presenter()->longDescription() !!}
-            </x-prose>
+            <div class="container mt-4 lg:max-w-screen-md">
+                <x-prose>
+                    {!! $category->presenter()->longDescription() !!}
+                </x-prose>
+            </div>
 
             <ul class="container grid gap-8 mt-16 md:gap-16 md:grid-cols-2">
                 @foreach ($category->latestPosts->take(4) as $post)

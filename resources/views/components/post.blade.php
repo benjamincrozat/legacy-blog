@@ -1,5 +1,5 @@
 <div {{ $attributes->except('post') }}>
-    <div class="flex items-start gap-6 md:gap-8">
+    <div class="flex items-start gap-6 lg:gap-8">
         <div class="flex-grow">
             <p class="font-bold">
                 <a
@@ -33,7 +33,7 @@
 
         @if ($post->image)
             <a wire:navigate href="{{ $post->community_link ? $post->community_link : route('posts.show', $post) }}" class="flex-shrink-0">
-                <img src="{{ $post->image }}" alt="{{ $post->title }}" class="object-cover aspect-square w-[80px] md:w-[96px] h-[80px] md:h-[96px]" />
+                <img src="{{ $post->image }}" alt="{{ $post->title }}" class="object-cover aspect-square w-[64px] lg:w-[96px] h-[64px] lg:h-[96px]" />
             </a>
         @endif
     </div>
