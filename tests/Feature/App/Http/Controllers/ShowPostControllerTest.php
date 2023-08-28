@@ -72,3 +72,10 @@ test('a given published community post is shown correctly', function () {
         $view->contains($post->title);
     });
 });
+
+test('a given unpublished cannot be shown', function () {
+    $post = Post::factory()->create();
+
+    get(route('posts.show', $post))
+        ->assertNotFound();
+});

@@ -35,7 +35,10 @@ class Post extends BaseModel implements Feedable
     {
         $query = parent::resolveRouteBindingQuery($query, $value, $field);
 
-        return $query->published();
+        return $query->unless(
+            request()->routeIs('filament.*'),
+            fn ($query) => $query->published(),
+        );
     }
 
     public function toSearchableArray() : array
