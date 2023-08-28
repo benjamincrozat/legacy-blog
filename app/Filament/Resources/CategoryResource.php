@@ -8,6 +8,8 @@ use App\Models\Category;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
+use Filament\Tables\Actions\Action;
+use App\Jobs\CacheRenderedCategoryAttributes;
 use App\Filament\Resources\CategoryResource\Pages;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use App\Filament\Resources\CategoryResource\RelationManagers\PostRelationManager;
@@ -144,7 +146,7 @@ class CategoryResource extends Resource
     public static function getCacheAction() : Action
     {
         return Action::make('Cache')
-            ->action(fn (Post $post) => CacheRenderedPostAttributes::dispatch($post))
+            ->action(fn (Category $category) => CacheRenderedCategoryAttributes::dispatch($category))
             ->requiresConfirmation();
     }
 
