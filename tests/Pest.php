@@ -3,10 +3,14 @@
 use Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use Illuminate\Support\Facades\Http;
+use App\Http\Middleware\TrackPageView;
 
 use function Pest\Laravel\withoutVite;
 
 use NunoMaduro\LaravelMojito\ViewAssertion;
+
+use function Pest\Laravel\withoutMiddleware;
+
 use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
 
 uses(TestCase::class, LazilyRefreshDatabase::class)
@@ -23,6 +27,7 @@ uses(TestCase::class, LazilyRefreshDatabase::class)
             return $this;
         });
 
+        withoutMiddleware(TrackPageView::class);
         withoutVite();
     })
     ->in('Feature');

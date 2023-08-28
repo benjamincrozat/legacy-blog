@@ -43,6 +43,15 @@
         }
     </script>
 
+    @if (app()->isProduction() && auth()->id() !== 1)
+        <script
+            src="https://api.pirsch.io/pirsch-extended.js"
+            id="pirschextendedjs"
+            data-code="5N2hIsUQsCVX1LQtvPdJ3AGwQZHGxtt5"
+            data-disable-page-views
+        ></script>
+    @endif
+
     @livewireStyles
 
     @livewireScripts
@@ -179,13 +188,5 @@
                 </footer>
             </div>
         </div>
-
-        @if (app()->isProduction() && auth()->id() !== 1)
-            <script
-                src="https://api.pirsch.io/pirsch-extended.js"
-                id="pirschextendedjs"
-                data-code="5N2hIsUQsCVX1LQtvPdJ3AGwQZHGxtt5"
-            ></script>
-        @endif
     </body>
 </html>
