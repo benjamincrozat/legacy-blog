@@ -13,6 +13,7 @@
                     @endif
                     class="text-indigo-600 underline"
                 >
+                    @if ($post->community_link) <x-heroicon-o-arrow-top-right-on-square class="inline w-4 h-4 mr-[.425rem] translate-y-[-2px]" /> @endif
                     {{ $post->title }}
                 </a>
             </p>
