@@ -34,7 +34,7 @@
 
         @if ($post->image)
             <a wire:navigate href="{{ $post->community_link ? $post->community_link : route('posts.show', $post) }}" class="flex-shrink-0">
-                <img src="{{ $post->image }}" alt="{{ $post->title }}" class="object-cover aspect-square w-[64px] lg:w-[96px] h-[64px] lg:h-[96px]" />
+                <img src="{{ $post->presenter()->thumbnail() }}" alt="{{ $post->title }}" class="object-cover aspect-square w-[64px] lg:w-[96px] h-[64px] lg:h-[96px]" />
             </a>
         @endif
     </div>

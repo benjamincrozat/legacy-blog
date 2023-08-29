@@ -8,6 +8,15 @@ use Spatie\Url\Url;
 
 class PostPresenter extends BasePresenter
 {
+    public function thumbnail() : string
+    {
+        if (! Str::startsWith($this->model->image, 'https://res.cloudinary.com')) {
+            return $this->model->image;
+        }
+
+        return str_replace('/upload', '/upload/dpr_auto,f_auto,q_auto,w_256', $this->model->image);
+    }
+
     public function image() : string
     {
         if (! Str::startsWith($this->model->image, 'https://res.cloudinary.com')) {
@@ -37,9 +46,9 @@ class PostPresenter extends BasePresenter
     }
 
     public function communityLinkDomain() : string
-        {
-            return str_replace('www.', '', Url::fromString($this->model->community_link)->getHost());
-        }
+    {
+        return str_replace('www.', '', Url::fromString($this->model->community_link)->getHost());
+    }
 
     public function lastUpdated() : string
     {
