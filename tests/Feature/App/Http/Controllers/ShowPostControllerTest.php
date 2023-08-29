@@ -2,12 +2,20 @@
 
 use App\Models\Post;
 use App\Models\User;
+use App\Jobs\TrackPageView;
 
 use function Pest\Laravel\get;
 use function Pest\Laravel\actingAs;
+
+use Illuminate\Support\Facades\Bus;
+
 use function Pest\Laravel\assertGuest;
 
-test('a given published post is shown correctly', function () {
+beforeEach(function () {
+    Bus::fake(TrackPageView::class);
+});
+
+test('a given published post is shown correctly and the page view is tracked', function () {
     Post::factory(3)->published()->create();
 
     $post = Post::factory()->published()->create();
@@ -41,6 +49,8 @@ test('a given published post is shown correctly', function () {
     $post->recommendations->each(function (Post $post) use ($view) {
         $view->contains($post->title);
     });
+
+    Bus::assertDispatchedAfterResponse(TrackPageView::class);
 });
 
 test('a given published community post is shown correctly', function () {
@@ -76,12 +86,14 @@ test('a given published community post is shown correctly', function () {
     });
 });
 
-test('a given unpublished post cannot be shown to guests', function () {
+test('a given unpublished post cannot be shown to guests and the page view is not tracked', function () {
     $post = Post::factory()->create();
 
     assertGuest()
         ->get(route('posts.show', $post))
         ->assertNotFound();
+
+    Bus::assertNotDispatchedAfterResponse(TrackPageView::class);
 });
 
 test('a given unpublished post cannot be shown to users', function () {
