@@ -75,7 +75,12 @@ test('a given published community post is shown correctly', function () {
     $view->contains('Read more on ' . $post->presenter()->communityLinkDomain());
 
     $view
-        ->first("a[href=\"$post->community_link\"]")
+        ->first("h1 a[href=\"$post->community_link\"]")
+        ->hasAttribute('target', '_blank')
+        ->hasAttribute('rel', 'noopener noreferrer');
+
+    $view
+        ->last("a[href=\"$post->community_link\"]")
         ->hasAttribute('target', '_blank')
         ->hasAttribute('rel', 'noopener noreferrer');
 

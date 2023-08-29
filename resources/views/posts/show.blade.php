@@ -30,7 +30,7 @@
             <x-prose>
                 @if ($post->community_link)
                     <h1>
-                        <a href="{{ $post->community_link }}" class="decoration-4">
+                        <a href="{{ $post->community_link }}" target="_blank" rel="noopener noreferrer" class="decoration-4">
                             {{ $post->title }}
                         </a>
                     </h1>
