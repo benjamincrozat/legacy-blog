@@ -14,7 +14,6 @@ use Filament\Tables\Filters\Filter;
 use App\Jobs\GeneratePostDescription;
 use Illuminate\Database\Eloquent\Model;
 use Filament\Notifications\Notification;
-use App\Jobs\CacheRenderedPostAttributes;
 use Filament\Tables\Filters\SelectFilter;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\PostResource\Pages;
@@ -59,7 +58,6 @@ class PostResource extends Resource
                 Tables\Actions\ActionGroup::make([
                     static::getGenerateDescriptionAction(),
                     static::getGenerateTeaserAction(),
-                    static::getCacheAction(),
                 ]),
                 Tables\Actions\EditAction::make()->button()->outlined()->icon(''),
                 Tables\Actions\DeleteAction::make()->icon(''),
@@ -177,29 +175,7 @@ class PostResource extends Resource
             Tables\Columns\TextColumn::make('title')
                 ->sortable()
                 ->searchable()
-                ->description(fn (Post $post) : string => $post->slug),
-
-            Tables\Columns\TextColumn::make('Status')
-                ->badge()
-                ->getStateUsing(fn (Post $post) : string => $post->is_published ? 'Published' : 'Draft')
-                ->colors([
-                    'success' => 'Published',
-                ]),
-
-            Tables\Columns\TextColumn::make('cached')
-                ->badge()
-                ->getStateUsing(
-                    function (Post $post) : string {
-                        $cached = cache()->has("Post.$post->id.content." . sha1($post->content)) &&
-                                  cache()->has("Post.$post->id.teaser." . sha1($post->teaser));
-
-                        return $cached ? 'Cached' : 'Not cached';
-                    }
-                )
-                ->colors([
-                    'success' => 'Cached',
-                    'danger' => 'Not cached',
-                ]),
+                ->description(fn (Post $post) => $post->slug),
         ];
     }
 
@@ -247,13 +223,6 @@ class PostResource extends Resource
                     ->success()
                     ->send();
             });
-    }
-
-    public static function getCacheAction() : Action
-    {
-        return Action::make('Cache')
-            ->action(fn (Post $post) => CacheRenderedPostAttributes::dispatch($post))
-            ->requiresConfirmation();
     }
 
     public static function getGloballySearchableAttributes() : array

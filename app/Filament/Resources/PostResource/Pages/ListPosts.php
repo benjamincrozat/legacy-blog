@@ -21,7 +21,6 @@ class ListPosts extends ListRecords
     public function getTabs() : array
     {
         return [
-            null => ListRecords\Tab::make('All'),
             'Published' => ListRecords\Tab::make()
                 ->query(fn (Builder $query) => $query->where('is_published', true)),
             'Draft' => ListRecords\Tab::make()
