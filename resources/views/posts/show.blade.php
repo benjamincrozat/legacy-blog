@@ -1,6 +1,7 @@
 <x-app
     :title="$post->title"
     :description="$post->description"
+    :image="$post->image"
     :canonical="$post->community_link ?? null"
 >
     <div class="container mt-4 lg:max-w-screen-md">
