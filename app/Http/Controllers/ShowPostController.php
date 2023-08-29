@@ -12,6 +12,9 @@ class ShowPostController extends Controller
 {
     public function __invoke(Request $request, Post $post) : View
     {
+        // I track visits for posts after it's been resolved to avoid messing up my analytics.
+        // Articles that have been removed but are still listed on Google might get clicks.
+
         dispatch(
             new TrackPageView(
                 $request->fullUrl(),
