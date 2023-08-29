@@ -28,7 +28,15 @@
 
         <article class="mt-4">
             <x-prose>
-                <h1>{{ $post->title }}</h1>
+                @if ($post->community_link)
+                    <h1>
+                        <a href="{{ $post->community_link }}" class="decoration-4">
+                            {{ $post->title }}
+                        </a>
+                    </h1>
+                @else
+                    <h1>{{ $post->title }}</h1>
+                @endif
 
                 <p class="mb-8 -mt-6 opacity-75">
                     @if ($post->community_link)
