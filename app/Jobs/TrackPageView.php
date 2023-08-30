@@ -16,7 +16,7 @@ class TrackPageView implements ShouldQueue
     public function __construct(
         public string $url,
         public string $ip,
-        public string $userAgent,
+        public ?string $userAgent,
         public ?string $acceptLanguage,
         public ?string $referrer
     ) {
@@ -29,7 +29,7 @@ class TrackPageView implements ShouldQueue
             ->post('https://api.pirsch.io/api/v1/hit', [
                 'url' => $this->url,
                 'ip' => $this->ip,
-                'user_agent' => $this->userAgent,
+                'user_agent' => $this->userAgent ?? '',
                 'accept_language' => $this->acceptLanguage ?? '',
                 'referrer' => $this->referrer ?? '',
             ])

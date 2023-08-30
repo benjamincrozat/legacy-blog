@@ -40,4 +40,19 @@ it('tracks page views', function () {
 
         return true;
     });
-});
+})->with([
+    [
+        'url' => fake()->url(),
+        'ip' => fake()->ipv4(),
+        'userAgent' => fake()->userAgent(),
+        'acceptLanguage' => 'en-us,en;q=0.5',
+        'referrer' => fake()->url(),
+    ],
+    [
+        'url' => fake()->url(),
+        'ip' => fake()->ipv4(),
+        'userAgent' => null,
+        'acceptLanguage' => null,
+        'referrer' => null,
+    ],
+]);
