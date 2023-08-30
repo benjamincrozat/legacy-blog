@@ -17,7 +17,7 @@ class TrackPageView implements ShouldQueue
         public string $url,
         public string $ip,
         public string $userAgent,
-        public string $acceptLanguage,
+        public ?string $acceptLanguage,
         public ?string $referrer
     ) {
     }
@@ -30,7 +30,7 @@ class TrackPageView implements ShouldQueue
                 'url' => $this->url,
                 'ip' => $this->ip,
                 'user_agent' => $this->userAgent,
-                'accept_language' => $this->acceptLanguage,
+                'accept_language' => $this->acceptLanguage ?? '',
                 'referrer' => $this->referrer ?? '',
             ])
             ->throw();
