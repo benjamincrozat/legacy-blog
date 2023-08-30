@@ -20,6 +20,8 @@ Route::view('/phpunit-to-pest', 'pouest')->name('pouest');
 
 Route::post('/subscribe', SubscribeController::class)->name('subscribe');
 
+Route::view('/sponsors', 'sponsors')->name('sponsors');
+
 Route::feeds();
 
 Route::view('/privacy', 'privacy')->name('privacy');
