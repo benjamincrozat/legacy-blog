@@ -10,7 +10,7 @@ class ListPostsController extends Controller
     public function __invoke() : View
     {
         return view('posts.index', [
-            'posts' => Post::latest()->published()->paginate(30),
+            'posts' => Post::latest()->published()->paginate(20),
         ]);
     }
 }
