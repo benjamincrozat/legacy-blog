@@ -65,7 +65,9 @@ it("includes the tracking script in production and when it's not user #1", funct
     /** @var \NunoMaduro\LaravelMojito\ViewAssertion */
     $view = $this->assertView('components.app');
 
-    $view->contains('https://api.pirsch.io/pirsch-extended.js');
+    $view
+        ->first('script[src="https://api.pirsch.io/pirsch-extended.js"]')
+        ->hasAttribute('data-disable-page-views', '');
 });
 
 it("does not include the tracking script in production and when it's user #1", function () {

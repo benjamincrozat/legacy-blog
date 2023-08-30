@@ -35,6 +35,7 @@
         "nunomaduro/laravel-mojito": "^0.2.10",
         "pestphp/pest": "^2.10",
         "pestphp/pest-plugin-laravel": "^2.0",
+        "pestphp/pest-plugin-livewire": "^2.1",
         "phpunit/phpunit": "^10.0",
         "spatie/laravel-horizon-watcher": "^1.0",
         "spatie/laravel-ignition": "^2.0",
