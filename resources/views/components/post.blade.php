@@ -45,7 +45,7 @@
 
     @if ($post->categories->isNotEmpty())
         <ul class="flex gap-1 mt-4">
-            @foreach ($post->categories as $category)
+            @foreach ($post->categories->sortBy('name') as $category)
                 <li>
                     <a
                         wire:navigate
