@@ -93,7 +93,7 @@
                 <li>Jeffrey Way reached out and offered me to write for the <a href="https://laracasts.com/blog" target="_blank" rel="nofollow noopener noreferrer">blog of Laracasts</a>.</li>
             </ol>
 
-            <p>Believe me, I'm just getting started!</p>
+            <p>Believe me, I'm just getting started and many other cool things are on the way!</p>
         </x-prose>
     </x-section>
 </x-app>
