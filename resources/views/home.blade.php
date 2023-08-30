@@ -83,9 +83,17 @@
 
             <p>Hi! I'm Benjamin Crozat. I'm from the South of France and <strong>I've been a self-taught professional web developer for more than 10 years</strong>.</p>
 
-            <p>Coming from a modest family, <strong>being able to educate myself for free on the web changed my life for the better</strong>. <strong>Giving back to the community was a natural direction in my career.</strong> Therefore, I launched this blog in September 2022 with the goal to be in everyone's Google search.</p>
+            <p>Coming from a modest family, <strong>being able to educate myself for free on the web changed my life for the better</strong>. Giving back to the community was a natural direction in my career.</p>
 
-            <p>Follow me on <a href="https://github.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer">GitHub</a> and <a href="https://x.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer">X</a>.</p>
+            <p>Therefore, I decided to take action to increase my reach:</p>
+
+            <ol>
+                <li>I launched this blog in September 2022 with the goal to be in everyone's Google search. <strong>I get more than 15,000 monthly clicks</strong>.</li>
+                <li>I also started growing my <a href="https://x.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer">X (formerly Twitter)</a> account at the same time, which has now <strong>over 4,000 followers</strong>.</li>
+                <li>Jeffrey Way reached out and offer me to write for the <a href="https://laracasts.com/blog" target="_blank" rel="nofollow noopener noreferrer">blog of Laracasts</a>.</li>
+            </ol>
+
+            <p>Believe me, I'm just getting started!</p>
         </x-prose>
     </x-section>
 </x-app>
