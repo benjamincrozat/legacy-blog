@@ -82,7 +82,7 @@
     </x-section>
 
     <div class="mt-16 text-center">
-        <a href="mailto:hello@benjamincrozat.com" class="inline-block px-6 py-3 text-xl font-bold text-white rounded bg-gradient-to-r from-orange-400 to-yellow-400">
+        <a href="mailto:hello@benjamincrozat.com" class="inline-block px-6 py-3 text-xl font-bold text-white rounded bg-gradient-to-r from-orange-500 to-yellow-400">
             Get in touch
         </a>
     </div>
