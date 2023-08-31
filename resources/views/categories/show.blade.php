@@ -38,7 +38,14 @@
                         <p><strong>Related topics:</strong></p>
                         <ul>
                             @foreach ($related as $relatedCategory)
-                                <li><a wire:navigate.hover href="{{ route('categories.show', $relatedCategory) }}">{{ $relatedCategory->name }}</a></li>
+                                <li>
+                                    <a
+                                        wire:navigate.hover
+                                        href="{{ route('categories.show', $relatedCategory) }}"
+                                    >
+                                        {{ $relatedCategory->name }}
+                                    </a>
+                                </li>
                             @endforeach
                         </ul>
                     @endif

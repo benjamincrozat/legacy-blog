@@ -95,8 +95,25 @@
                     <p>Follow me on:</p>
 
                     <ul>
-                        <li><a href="https://github.com/{{ $post->user->github_handle }}" target="_blank" rel="nofollow noopener noreferrer">GitHub</a></li>
-                        <li><a href="https://x.com/{{ $post->user->x_handle }}" target="_blank" rel="nofollow noopener noreferrer">X</a></li>
+                        <li>
+                            <a
+                                href="https://github.com/{{ $post->user->github_handle }}"
+                                target="_blank"
+                                rel="nofollow noopener noreferrer"
+                            >
+                                GitHub
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="https://x.com/{{ $post->user->x_handle }}"
+                                target="_blank"
+                                rel="nofollow noopener noreferrer"
+                            >
+                                X
+                            </a>
+                        </li>
                     </ul>
                 </x-prose>
             </aside>
