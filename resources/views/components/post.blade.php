@@ -8,7 +8,7 @@
                         target="_blank"
                         rel="noopener noreferrer"
                     @else
-                        wire:navigate
+                        wire:navigate.hover
                         href="{{ route('posts.show', $post) }}"
                     @endif
                     class="text-indigo-600 underline"
@@ -27,14 +27,14 @@
                     Updated on
                 @endif
 
-                <a wire:navigate href="{{ route('posts.show', $post) }}" class="underline">{{ $post->presenter()->lastUpdated() }}</a>
+                <a wire:navigate.hover href="{{ route('posts.show', $post) }}" class="underline">{{ $post->presenter()->lastUpdated() }}</a>
                 @if ($post->community_link) <span class="mx-1 text-xs">•</span> {{ $post->presenter()->communityLinkDomain() }} @endif
             </p>
         </div>
 
         @if ($post->image)
             <a
-                @if (! $post->community_link) wire:navigate @endif
+                @if (! $post->community_link) wire:navigate.hover @endif
                 href="{{ $post->community_link ? $post->community_link : route('posts.show', $post) }}"
                 class="flex-shrink-0"
             >
@@ -48,7 +48,7 @@
             @foreach ($post->categories->sortBy('name') as $category)
                 <li>
                     <a
-                        wire:navigate
+                        wire:navigate.hover
                         href="{{ route('categories.show', $category) }}"
                         class="inline-block px-2 py-1 text-xs font-bold uppercase rounded leading-normal hover:opacity-75 transition-opacity
                         bg-{{ $category->presenter()->primaryColor() }} text-{{ $category->presenter()->secondaryColor() }}"

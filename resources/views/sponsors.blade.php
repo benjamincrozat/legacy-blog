@@ -5,12 +5,12 @@
     class="text-gray-300 bg-gray-900"
 >
     <nav class="container flex items-center justify-between mt-4 lg:max-w-screen-md">
-        <a wire:navigate href="/">
+        <a wire:navigate.hover href="/">
             <span class="sr-only">{{ config('app.name') }}</span>
             <x-icon-logo class="w-8 h-8 fill-current md:w-10 md:h-10" />
         </a>
 
-        <a wire:navigate href="{{ route('home') }}" class="underline">
+        <a wire:navigate.hover href="{{ route('home') }}" class="underline">
             Back to the blog →
         </a>
     </nav>

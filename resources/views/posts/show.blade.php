@@ -14,7 +14,7 @@
                 @foreach ($post->categories as $category)
                     <li>
                         <a
-                            wire:navigate
+                            wire:navigate.hover
                             href="{{ route('categories.show', $category) }}"
                             class="inline-block px-2 py-1 text-xs font-bold uppercase rounded leading-normal hover:opacity-75 transition-opacity
                             bg-{{ $category->presenter()->primaryColor() }} text-{{ $category->presenter()->secondaryColor() }}"

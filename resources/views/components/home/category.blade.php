@@ -4,7 +4,7 @@
             {{ $category->name }}
         </h3>
 
-        <a wire:navigate href="{{ route('categories.show', $category) }}" class="flex-shrink-0">
+        <a wire:navigate.hover href="{{ route('categories.show', $category) }}" class="flex-shrink-0">
             <x-category-icon :category="$category" />
         </a>
     </div>

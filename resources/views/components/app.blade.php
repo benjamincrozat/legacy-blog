@@ -75,13 +75,13 @@
         <div class="flex flex-col min-h-screen">
             @empty($hideNavigation)
                 <nav class="container relative flex items-center justify-between py-4 sm:static lg:max-w-screen-md">
-                    <a wire:navigate href="/">
+                    <a wire:navigate.hover href="/">
                         <span class="sr-only">{{ config('app.name') }}</span>
                         <x-icon-logo class="w-8 h-8 fill-current md:w-10 md:h-10" />
                     </a>
 
                     <div class="flex items-center gap-7 md:gap-8">
-                        <a wire:navigate href="{{ route('posts.index') }}">
+                        <a wire:navigate.hover href="{{ route('posts.index') }}">
                             @if (Route::is('posts.index'))
                                 <x-heroicon-s-fire class="w-6 h-6 mx-auto text-orange-400 md:w-7 md:h-7" />
                             @else
@@ -215,7 +215,7 @@
 
                         <p class="mt-4"><a href="/feed" class="font-medium text-white underline">Subscribe to the feed</a>, and follow me on <a href="https://github.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer" class="font-medium text-white underline">GitHub</a> and <a href="https://x.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer" class="font-medium text-white underline">X</a>. For inquiries, <a href="mailto:hello@benjamincrozat.com" class="font-medium text-white underline">send&nbsp;me&nbsp;an&nbsp;email</a>.</p>
 
-                        <p class="mt-8">Read my <a wire:navigate href="{{ route('privacy') }}" class="underline">privacy policy</a> and <a wire:navigate href="{{ route('terms') }}" class="underline">terms of service</a>.</p>
+                        <p class="mt-8">Read my <a wire:navigate.hover href="{{ route('privacy') }}" class="underline">privacy policy</a> and <a wire:navigate.hover href="{{ route('terms') }}" class="underline">terms of service</a>.</p>
 
                         <p class="mt-8 text-xs tracking-widest uppercase opacity-50">© {{ config('app.name') }} {{ date('Y') }}. All rights reserved.</p>
                     </footer>
