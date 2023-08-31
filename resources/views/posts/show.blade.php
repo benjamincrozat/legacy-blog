@@ -92,7 +92,7 @@
 
                     {!! $post->user->presenter()->description() !!}
 
-                    <p><strong>Follow me on:</strong></p>
+                    <p>Follow me on:</p>
 
                     <ul>
                         <li><a href="https://github.com/{{ $post->user->github_handle }}" target="_blank" rel="nofollow noopener noreferrer">GitHub</a></li>
