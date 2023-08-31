@@ -86,7 +86,7 @@
             Get started now for <strong class="font-extrabold">$99/month</strong>
         </a>
 
-        <p class="mt-4 text-sm text-gray-400">Once the payment is done, you will receive instructions on how to send me your logo.</p>
+        <p class="mt-4 text-sm text-gray-400">Once the payment is done, you will receive instructions on how to send me your company name, logo, and landing page of choice.</p>
     </div>
 
     <x-section id="about" class="container mt-32 mb-16 lg:max-w-screen-md">
