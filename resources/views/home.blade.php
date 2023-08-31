@@ -18,13 +18,23 @@
             Join more than <span class="font-semibold text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">30,000</span> readers and skyrocket your web&nbsp;development&nbsp;skills.
         </p>
 
-        <div class="mt-16 text-3xl text-center font-handwriting">
-            <x-heroicon-o-arrow-up class="inline w-8 h-8" />
-            <p class="mt-2">
-                <a wire:navigate.hover href="{{ route('sponsors') }}" class="underline decoration-1 underline-offset-2">
-                    Be the first to display your business here!
-                </a>
-            </p>
+        <div class="flex items-center justify-between gap-4 mt-16">
+            <x-icon-dashed-circle class="w-16 h-16 opacity-10" />
+            <x-icon-dashed-circle class="w-16 h-16 opacity-10" />
+            <x-icon-dashed-circle class="w-16 h-16 opacity-10" />
+            <x-icon-dashed-circle class="w-16 h-16 opacity-10" />
+            <x-icon-dashed-circle class="w-16 h-16 opacity-10" />
+            <x-icon-dashed-circle class="hidden w-16 h-16 sm:inline opacity-10" />
+            <x-icon-dashed-circle class="hidden w-16 h-16 sm:inline opacity-10" />
+            <x-icon-dashed-circle class="hidden w-16 h-16 md:inline opacity-10" />
+            <x-icon-dashed-circle class="hidden w-16 h-16 md:inline opacity-10" />
+            <x-icon-dashed-circle class="hidden w-16 h-16 lg:inline opacity-10" />
+        </div>
+
+        <div class="flex items-center justify-center gap-4 mt-8 text-3xl text-center font-handwriting">
+            <a wire:navigate.hover href="{{ route('sponsors') }}">
+                <x-icon-arrow-to-top-left class="inline w-8 h-8 -translate-y-3" /> <span class="underline decoration-1 underline-offset-2">Be the first to showcase your business!</span>
+            </a>
         </div>
     </x-section>
 
