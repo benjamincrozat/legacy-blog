@@ -21,7 +21,7 @@
         <div class="mt-16 text-3xl text-center font-handwriting">
             <x-heroicon-o-arrow-up class="inline w-8 h-8" />
             <p class="mt-2">
-                <a wire:navigate.hover href="{{ route('sponsors') }}" class="underline decoration-2 underline-offset-2">
+                <a wire:navigate.hover href="{{ route('sponsors') }}" class="underline decoration-1 underline-offset-2">
                     Be the first to display your business here!
                 </a>
             </p>
