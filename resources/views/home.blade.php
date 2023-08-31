@@ -17,10 +17,19 @@
         <p class="mt-2 text-xl/tight md:text-2xl/tight lg:text-3xl/tight">
             Join more than <span class="font-semibold text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">30,000</span> readers and skyrocket your web&nbsp;development&nbsp;skills.
         </p>
+
+        <div class="mt-16 text-3xl text-center font-handwriting">
+            <x-heroicon-o-arrow-up class="inline w-8 h-8" />
+            <p class="mt-2">
+                <a wire:navigate.hover href="{{ route('sponsors') }}" class="underline decoration-2 underline-offset-2">
+                    Be the first to display your business here!
+                </a>
+            </p>
+        </div>
     </x-section>
 
     @if ($categories->isNotEmpty())
-        <x-section class="container mt-32">
+        <x-section class="container mt-16">
             <x-slot:title class="text-center">
                 An endless amount of content for web&nbsp;developers.
             </x-slot:title>

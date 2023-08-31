@@ -23,6 +23,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Outfit', ...defaultTheme.fontFamily.sans],
+                handwriting: ['Indie Flower', ...defaultTheme.fontFamily.sans],
             },
 
             typography: {

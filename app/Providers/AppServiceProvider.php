@@ -40,7 +40,7 @@ class AppServiceProvider extends ServiceProvider
         Model::unguard();
 
         // This categories variable I pass in this view composer is also used in the blog's navigation.
-        View::composer(['components.app', 'home'], function ($view) {
+        View::composer(['components.navigation', 'home'], function ($view) {
             static $categories;
 
             $view->with([
