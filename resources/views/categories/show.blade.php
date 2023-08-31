@@ -60,18 +60,20 @@
                 </div>
 
                 @if ($posts->isNotEmpty())
-                    <div class="not-prose">
-                        <ul class="container grid gap-8 mt-8 md:grid-cols-2 md:gap-16">
-                            @foreach ($posts as $post)
-                                <li>
-                                    <x-post :post="$post" />
-                                </li>
-                            @endforeach
-                        </ul>
+                    <div class="container">
+                        <div class="not-prose">
+                            <ul class="grid gap-8 mt-8 md:grid-cols-2 md:gap-16">
+                                @foreach ($posts as $post)
+                                    <li>
+                                        <x-post :post="$post" />
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+
+                        {{ $posts->links() }}
                     </div>
                 @endif
-
-                {{ $posts->links() }}
             </x-prose>
         </article>
     </div>
