@@ -83,7 +83,7 @@
 
     <div class="mt-16 text-center">
         <a href="mailto:hello@benjamincrozat.com" class="inline-block px-8 py-6 font-normal text-white transition-opacity rounded text-xl/tight bg-gradient-to-r from-orange-500 to-yellow-600 hover:opacity-75">
-            <strong class="font-extrabold">$99/month.</strong> <span class="mx-2 opacity-30">|</span> Get in touch!
+            <strong class="font-extrabold">$99/month</strong> <span class="mx-2 opacity-30">|</span> Get in touch!
         </a>
     </div>
 
