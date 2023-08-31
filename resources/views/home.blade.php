@@ -2,7 +2,7 @@
     title="Learn about Laravel and its ecosystem."
 >
     <x-section class="container mt-24 text-center">
-        <x-slot:title class="font-bold text-center text-3xl/none md:text-4xl/none lg:text-5xl/none">
+        <x-slot:title tag="h1" class="font-bold text-center text-3xl/none md:text-4xl/none lg:text-5xl/none">
             <div class="flex items-center justify-center gap-4 mt-8 md:gap-8">
                 <x-icon-laravel class="h-10 md:h-[3.25rem]" />
                 <x-icon-livewire class="h-10 mx-2 md:h-12" />
