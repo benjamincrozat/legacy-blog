@@ -81,10 +81,12 @@
         </div>
     </x-section>
 
-    <div class="mt-16 text-center">
+    <div class="container mt-16 text-center md:max-w-screen-sm">
         <a href="mailto:hello@benjamincrozat.com" class="inline-block px-8 py-6 font-normal text-white transition-opacity rounded text-xl/tight bg-gradient-to-r from-orange-500 to-yellow-600 hover:opacity-75">
             <strong class="font-extrabold">$99/month</strong> <span class="mx-2 opacity-30">|</span> Get in touch!
         </a>
+
+        <p class="mt-4 text-sm text-gray-400">Please send your logo, preferably in the SVG format. You will receive a Stripe link and your subscription will be cancellable at any moment.</p>
     </div>
 
     <x-section id="about" class="container mt-32 mb-16 lg:max-w-screen-md">
