@@ -82,7 +82,7 @@
     </x-section>
 
     <div class="container mt-16 text-center md:max-w-screen-sm">
-        <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/7de09977-485d-4dcd-8813-c17dd48eddc7" class="inline-block px-8 py-6 text-white transition-opacity rounded text-xl/tight bg-gradient-to-r from-orange-500 to-yellow-600 hover:opacity-75">
+        <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/7de09977-485d-4dcd-8813-c17dd48eddc7" class="inline-block py-5 text-white transition-opacity rounded px-7 text-xl/tight bg-gradient-to-r from-orange-500 to-yellow-600 hover:opacity-75">
             Get started now for <strong class="font-extrabold">$99/month</strong>
         </a>
 
