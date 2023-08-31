@@ -4,7 +4,7 @@
     :image="$post->image"
     :canonical="$post->community_link ?? null"
 >
-    <div class="container mt-4 lg:max-w-screen-md">
+    <div class="container mt-3 lg:max-w-screen-md">
         <x-breadcrumb class="mb-8">
             {{ $post->title }}
         </x-breadcrumb>
