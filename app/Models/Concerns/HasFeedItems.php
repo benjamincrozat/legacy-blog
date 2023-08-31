@@ -24,7 +24,10 @@ trait HasFeedItems
             'title' => $this->title,
             'summary' => $this->teaser ? $this->presenter()->teaser() : $this->description,
             'updated' => $this->created_at,
-            'link' => route('posts.show', $this),
+            'link' => route('posts.show', [
+                'post' => $this,
+                'utm_source' => 'feed',
+            ]),
             'authorName' => $this->user_name ?? $this->user->name,
         ]);
     }
