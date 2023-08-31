@@ -41,7 +41,7 @@ module.exports = {
                                 },
                             },
                         },
-                        'iframe': {
+                        'iframe[src^="https://www.youtube.com"]': {
                             'width': '100% !important',
                             'height': 'auto !important',
                             'aspect-ratio': defaultTheme.aspectRatio.video,
