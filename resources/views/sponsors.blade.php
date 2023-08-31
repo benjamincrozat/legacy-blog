@@ -82,11 +82,11 @@
     </x-section>
 
     <div class="container mt-16 text-center md:max-w-screen-sm">
-        <a href="mailto:hello@benjamincrozat.com" class="inline-block px-8 py-6 font-normal text-white transition-opacity rounded text-xl/tight bg-gradient-to-r from-orange-500 to-yellow-600 hover:opacity-75">
-            <strong class="font-extrabold">$99/month</strong> <span class="mx-2 opacity-30">|</span> Get in touch!
+        <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/7de09977-485d-4dcd-8813-c17dd48eddc7" class="inline-block px-8 py-6 text-white transition-opacity rounded text-xl/tight bg-gradient-to-r from-orange-500 to-yellow-600 hover:opacity-75">
+            Get started now for <strong class="font-extrabold">$99/month</strong>
         </a>
 
-        <p class="mt-4 text-sm text-gray-400">Please send your logo, preferably in the SVG format. You will receive a Stripe link and your subscription will be cancellable at any moment.</p>
+        <p class="mt-4 text-sm text-gray-400">Once the payment is done, you will receive instructions on how to send me your logo.</p>
     </div>
 
     <x-section id="about" class="container mt-32 mb-16 lg:max-w-screen-md">
