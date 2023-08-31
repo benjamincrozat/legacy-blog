@@ -27,7 +27,7 @@
         </p>
 
         <div class="mt-8">
-            <a href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=30d&scale=day" target="_blank" rel="nofollow noopener noreferrer" class="inline-block px-6 py-3 text-xl font-bold text-white bg-gray-800 rounded">
+            <a href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=30d&scale=day" target="_blank" rel="nofollow noopener noreferrer" class="inline-block px-6 py-3 text-xl font-bold text-white transition-opacity bg-gray-800 rounded hover:opacity-75">
                 See it for yourself
             </a>
         </div>
@@ -35,7 +35,7 @@
 
     <x-section class="container mt-24 md:mt-32 lg:max-w-screen-md">
         <x-slot:title class="!text-3xl font-bold text-center">
-            Put your logo on my homepage for $99 per month
+            Put your logo on my homepage
         </x-slot:title>
 
         <div class="flex items-center justify-between gap-8 mt-8 text-xl md:gap-12 md:mt-16">
@@ -82,8 +82,8 @@
     </x-section>
 
     <div class="mt-16 text-center">
-        <a href="mailto:hello@benjamincrozat.com" class="inline-block px-6 py-3 text-xl font-bold text-white rounded bg-gradient-to-r from-orange-500 to-yellow-600">
-            Only $99/month. Get in touch!
+        <a href="mailto:hello@benjamincrozat.com" class="inline-block px-8 py-6 font-normal text-white transition-opacity rounded text-xl/tight bg-gradient-to-r from-orange-500 to-yellow-600 hover:opacity-75">
+            <strong class="font-extrabold">$99/month.</strong> <span class="mx-2 opacity-30">|</span> Get in touch!
         </a>
     </div>
 
