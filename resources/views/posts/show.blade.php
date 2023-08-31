@@ -28,27 +28,31 @@
 
         <article class="mt-4">
             <x-prose>
-                @if ($post->community_link)
-                    <h1>
-                        <a href="{{ $post->community_link }}" target="_blank" rel="noopener noreferrer" class="decoration-4 underline-offset-4">
-                            {{ $post->title }}
-                        </a>
-                    </h1>
-                @else
-                    <h1>{{ $post->title }}</h1>
-                @endif
-
-                <p class="mb-8 -mt-6 opacity-75">
+                <div class="mb-8">
                     @if ($post->community_link)
-                        Shared on
+                        <h1>
+                            <a href="{{ $post->community_link }}" target="_blank" rel="noopener noreferrer" class="decoration-4 underline-offset-4">
+                                {{ $post->title }}
+                            </a>
+                        </h1>
                     @else
-                        Updated on
+                        <h1>{{ $post->title }}</h1>
                     @endif
 
-                    <time class="{{ ($post->manually_updated_at ?? $post->created_at)->toDateTimeString() }}">
-                        {{ $post->presenter()->lastUpdated() }}
-                    </time>
-                </p>
+                    @if ($post->is_published)
+                        <p class="-mt-6 opacity-75">
+                            @if ($post->community_link)
+                                Shared on
+                            @else
+                                Updated on
+                            @endif
+
+                            <time class="{{ ($post->manually_updated_at ?? $post->created_at)->toDateTimeString() }}">
+                                {{ $post->presenter()->lastUpdated() }}
+                            </time>
+                        </p>
+                    @endif
+                </div>
 
                 @if (! empty($tree = $post->presenter()->tree()))
                     <p class="font-bold">Table of contents:</p>
