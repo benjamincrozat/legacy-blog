@@ -4,19 +4,23 @@ use App\Models\Category;
 
 use function Pest\Laravel\get;
 
-test('the homepage works and displays the categories along with published posts', function () {
-    Category::factory(3)->hasPosts(5, ['is_published' => true])->create();
-    $highlighted = Category::factory()->hasPosts(5, ['is_published' => true])->create(['is_highlighted' => true]);
+test('the homepage works and displays the categories along with published posts with the highlighted ones first', function () {
+    $fakeCategories = Category::factory(3)
+        ->sequence(
+            ['is_highlighted' => true],
+            ['is_highlighted' => false],
+            ['is_highlighted' => false],
+        )
+        ->hasPosts(5, ['is_published' => true])
+        ->create();
 
-    $response = get(route('home'))
+    $categories = get(route('home'))
         ->assertOk()
-        ->assertViewIs('home');
+        ->assertViewIs('home')
+        ->viewData('categories')
+        ->each(
+            fn (Category $category) => expect($category->latestPosts->isNotEmpty())->toBeTrue()
+        );
 
-    $categories = $response->viewData('categories');
-
-    $categories->each(
-        fn (Category $category) => expect($category->latestPosts->isNotEmpty())->toBeTrue()
-    );
-
-    expect($categories->first()->id)->toBe($highlighted->id);
+    expect($categories->first()->id)->toBe($fakeCategories->first()->id);
 });
