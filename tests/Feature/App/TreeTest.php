@@ -3,12 +3,12 @@
 use App\Tree;
 use ValueError;
 
-it('generates a tree based on headings', function () {
+it('generates a tree based on headings, no matter which tags they contain', function () {
     $tree = (new Tree)->build(<<<'HTML'
 <h1>Heading 1</h1>
+<h2><a href="#">Heading 2</a></h2>
 <h2>Heading 2</h2>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
+<h3><strong>Heading 3</strong></h3>
 <h2>Heading 2</h2>
 HTML);
 
