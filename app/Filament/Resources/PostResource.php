@@ -176,6 +176,16 @@ class PostResource extends Resource
                 ->sortable()
                 ->searchable()
                 ->description(fn (Post $post) => $post->slug),
+
+            Tables\Columns\TextColumn::make('sessions_last_7_days')
+                ->sortable()
+                ->label('Sessions (7 days)')
+                ->toggleable(isToggledHiddenByDefault: true),
+
+            Tables\Columns\TextColumn::make('sessions_last_30_days')
+                ->sortable()
+                ->label('Sessions (30 days)')
+                ->toggleable(isToggledHiddenByDefault: true),
         ];
     }
 

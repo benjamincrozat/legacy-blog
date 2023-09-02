@@ -6,7 +6,6 @@
         "embed/embed": "^4.4",
         "filament/filament": "^3.0-stable",
         "guzzlehttp/guzzle": "^7.5",
-        "laravel/fortify": "^1.17",
         "laravel/framework": "^10.0",
         "laravel/horizon": "^5.19",
         "laravel/prompts": "^0.1.1",
