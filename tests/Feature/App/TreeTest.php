@@ -33,6 +33,6 @@ HTML);
     ]);
 });
 
-it('does not throw errors when content is empty', function () {
+it('does not throw a value error when content is empty', function () {
     expect(fn () => (new Tree)->build(''))->not->toThrow(ValueError::class);
 });

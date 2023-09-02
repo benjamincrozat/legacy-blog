@@ -37,6 +37,12 @@ This is a small project. It certainly won't teach you how to maintain apps at hu
 - Testing. This is a crucial part in ensuring everything don't break and Google does not penalize me. Because I can be forgetful, distracted and overconfident sometimes. These are flaws of human beings that can easily be mitigated by machines. By the way, I don't aim for 100% code coverage, I don't think this metric reflects the stability of the codebase.
 - How to use various frontend technologies such as Livewire v3, Volt, Alpine.js, and Tailwind CSS.
 
+## Notes
+
+- I don't care about code coverage and static analysis, so you won't find that here.
+- This pure and plain Laravel. If you know the framework, you can find your way around the codebase.
+- The tests are organized just like the source code. Most of the time, it makes it easier to know what is tested and what is not.
+
 ## Requirements
 
 - PHP 8.2+
