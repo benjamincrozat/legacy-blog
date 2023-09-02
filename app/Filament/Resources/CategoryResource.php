@@ -95,7 +95,7 @@ class CategoryResource extends Resource
                         ->label('Secondary')
                         ->maxLength(255),
 
-                    Forms\Components\Checkbox::make('highlight'),
+                    Forms\Components\Checkbox::make('is_highlighted'),
                 ])
                 ->collapsible()
                 ->columnSpan([

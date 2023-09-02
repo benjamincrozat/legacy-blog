@@ -48,7 +48,7 @@ class AppServiceProvider extends ServiceProvider
                 // This prevents the query from being run multiple times on the same request.
                 'categories' => $categories ??= Category::with('latestPosts')
                     ->whereHas('posts')
-                    ->orderBy('highlight', 'desc')
+                    ->orderBy('is_highlighted', 'desc')
                     ->orderBy('name')
                     ->get(),
             ]);

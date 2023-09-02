@@ -9,14 +9,14 @@ return new class extends Migration
     public function up() : void
     {
         Schema::table('categories', function (Blueprint $table) {
-            $table->boolean('highlight')->default(false);
+            $table->boolean('is_highlighted')->default(false);
         });
     }
 
     public function down() : void
     {
         Schema::table('categories', function (Blueprint $table) {
-            $table->dropColumn('highlight');
+            $table->dropColumn('is_highlighted');
         });
     }
 };
