@@ -32,15 +32,17 @@
             </p>
         </div>
 
-        @if ($post->image)
             <a
                 @if (! $post->community_link) wire:navigate.hover @endif
                 href="{{ $post->community_link ? $post->community_link : route('posts.show', $post) }}"
                 class="flex-shrink-0"
             >
-                <img src="{{ $post->presenter()->thumbnail() }}" alt="{{ $post->title }}" class="object-cover aspect-square w-[64px] lg:w-[96px] h-[64px] lg:h-[96px]" />
+                @if ($post->image)
+                    <img src="{{ $post->presenter()->thumbnail() }}" alt="{{ $post->title }}" class="object-cover aspect-square w-[64px] lg:w-[96px] h-[64px] lg:h-[96px]" />
+                @else
+                    <x-icon-document class="w-[64px] lg:w-[96px] h-[64px] lg:h-[96px]" />
+                @endif
             </a>
-        @endif
     </div>
 
     @if ($post->categories->isNotEmpty())
