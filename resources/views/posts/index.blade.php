@@ -6,7 +6,7 @@
             @if ($posts->currentPage() > 1)
                 Page {{ $posts->currentPage() }}
             @else
-                The latest blog posts about Laravel and its ecosystem.
+                The latest articles and tutorials about Laravel and its ecosystem.
             @endif
         </x-slot:title>
 
