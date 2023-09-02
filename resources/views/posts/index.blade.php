@@ -1,5 +1,5 @@
 <x-app
-    title="Everything I wrote about Laravel and its ecosystem."
+    title="The latest articles and tutorials about Laravel and its ecosystem."
 >
     <x-section class="container mt-16">
         <x-slot:title class="text-center">
