@@ -4,7 +4,7 @@
 
 # [benjamincrozat.com](https://benjamincrozat.com)
 
-This is the source code of my blog, [benjamincrozat.com](https://benjamincrozat.com). This blog was built with the TALL stack and gets more than **30K visitors per month**.
+This is the source code of my blog, [benjamincrozat.com](https://benjamincrozat.com). This blog was built with the TALL stack and gets more than **30,000 visitors per month**.
 
 <figure>
     <img src="https://github.com/benjamincrozat/benjamincrozat.com/assets/3613731/470cc829-c23f-4cdd-b769-68c2726fa738" alt="My Pirsch Analytics Dashboard." />
@@ -40,7 +40,7 @@ This is a small project. It certainly won't teach you how to maintain apps at hu
 ## Notes
 
 - I don't care about code coverage and static analysis, so you won't find that here.
-- This pure and plain Laravel. If you know the framework, you can find your way around the codebase.
+- This is pure and plain Laravel. If you know the framework, you can find your way around the codebase.
 - The tests are organized just like the source code. Most of the time, it makes it easier to know what is tested and what is not.
 - My commit history is garbage. I'm sorry, but when you are working alone of a project, it's hard to maintain discipline for such things. At some point, I should figure out how to generate the commit messages using AI.
 
