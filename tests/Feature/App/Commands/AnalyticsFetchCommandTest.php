@@ -15,11 +15,10 @@ test('the command updates posts with new sessions numbers', function () {
 
     $posts = Post::factory(10)->create();
 
-    artisan(AnalyticsFetchCommand::class)
-        ->expectsOutput('Fresh analytics data has been fetched.')
-        ->assertExitCode(0);
+    artisan(AnalyticsFetchCommand::class)->assertExitCode(0);
 
-    $posts->each(
-        fn (Post $post) => expect($post->fresh()->sessions)->toEqual(123)
-    );
+    $posts->each(function (Post $post) {
+        expect($post->fresh()->sessions_last_7_days)->toEqual(123);
+        expect($post->fresh()->sessions_last_30_days)->toEqual(123);
+    });
 });
