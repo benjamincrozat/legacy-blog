@@ -1,6 +1,7 @@
 <?php
 
 use App\Tree;
+use ValueError;
 
 it('generates a tree based on headings', function () {
     $tree = (new Tree)->build(<<<'HTML'
@@ -30,4 +31,8 @@ HTML);
             'children' => [],
         ],
     ]);
+});
+
+it('does not throw errors when content is empty', function () {
+    expect(fn () => (new Tree)->build(''))->not->toThrow(ValueError::class);
 });

@@ -23,7 +23,7 @@ class Tree
 
         $domDocument->loadHTML(
             // Fixes issues with special characters. I don't know why they occur only in the tree.
-            mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8')
+            mb_convert_encoding("<html>$html</html>", 'HTML-ENTITIES', 'UTF-8')
         );
 
         $headings = (new DOMXPath($domDocument))->query('//h2|//h3|//h4|//h5|//h6');
