@@ -12,21 +12,21 @@ class ShowMerchantController extends Controller
 {
     public function __invoke(Request $request, Merchant $merchant) : RedirectResponse
     {
-        $this->trackEvent($request, $merchant);
+        $this->trackEvent($merchant);
 
         $link = Url::fromString($merchant->link)
-            ->withQueryParameters($request->all());
+            ->withQueryParameters(request()->all());
 
         return redirect()->away($link);
     }
 
-    protected function trackEvent(Request $request, Merchant $merchant) : void
+    protected function trackEvent(Merchant $merchant) : void
     {
         if (! config('services.pirsch.access_key')) {
             return;
         }
 
-        if (1 === $request->user()?->id) {
+        if (1 === auth()->id()) {
             return;
         }
 
@@ -34,11 +34,11 @@ class ShowMerchantController extends Controller
             "$merchant->id", // Pirsch's API crashes when an integer is passed.
             $merchant->name,
             $merchant->link,
-            $request->fullUrl(),
-            $request->ip(),
-            $request->userAgent(),
-            $request->header('Accept-Language'),
-            $request->header('Referer')
+            request()->fullUrl(),
+            request()->ip(),
+            request()->userAgent(),
+            request()->header('Accept-Language'),
+            request()->header('Referer')
         );
     }
 }

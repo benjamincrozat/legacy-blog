@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Http\RedirectResponse;
 use Spatie\Honeypot\ProtectAgainstSpam;
@@ -14,13 +13,13 @@ class SubscribeController extends Controller
         $this->middleware(ProtectAgainstSpam::class);
     }
 
-    public function __invoke(Request $request) : RedirectResponse
+    public function __invoke() : RedirectResponse
     {
-        $request->validate(['email' => ['required', 'email']]);
+        request()->validate(['email' => ['required', 'email']]);
 
         Http::post('https://api.convertkit.com/v3/forms/' . config('services.convertkit.form_id') . '/subscribe', [
             'api_key' => config('services.convertkit.api_key'),
-            'email' => $request->email,
+            'email' => request('email'),
             'tags' => [config('services.convertkit.main_tag_id')],
         ])
             ->throw()

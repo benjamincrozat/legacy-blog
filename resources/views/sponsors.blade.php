@@ -15,8 +15,36 @@
         </a>
     </nav>
 
-    <x-section class="container mt-16 text-center md:mt-24">
-        <x-slot:title class="!text-5xl font-bold">
+    <div class="container mt-16 max-w-[400px] mx-auto md:mt-24">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 916 616">
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                    <stop offset="0%" style="stop-color: #24d3ee; stop-opacity: 1" />
+                    <stop offset="100%" style="stop-color: #49de80; stop-opacity: 1" />
+                </linearGradient>
+            </defs>
+
+            <style>
+                @keyframes draw {
+                    to {
+                        stroke-dashoffset: 0;
+                    }
+                }
+
+                .line {
+                    stroke: url(#gradient);
+                    stroke-dasharray: 3500;
+                    stroke-dashoffset: 3500;
+                    animation: draw 2s forwards ease-in-out;
+                }
+            </style>
+
+            <g fill="none" fill-rule="evenodd"><path stroke="#fff" stroke-opacity=".4" d="M8 608h900" /><path stroke="#fff" stroke-opacity=".15" d="M908 508H8m0-100h900m0-100H8m0-100h900m0-100H8M908 8H8" /><path stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="15" d="m8 608 100-42.180618L208 408l100 100 100 32.564033 100-61.164986L608 508l100-28.600953L808 108 908 8" class="line" /></g>
+        </svg>
+    </div>
+
+    <x-section class="container mt-12 text-center">
+        <x-slot:title tag="h1" class="!text-5xl font-bold">
             <span class="font-bold text-transparent bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text">
                 Get your company in the&nbsp;spotlight
             </span>
