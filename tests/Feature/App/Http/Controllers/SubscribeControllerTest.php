@@ -1,6 +1,7 @@
 <?php
 
 use function Pest\Laravel\from;
+
 use Illuminate\Support\Facades\Http;
 
 test('guests can subscribe to newsletter', function () {
