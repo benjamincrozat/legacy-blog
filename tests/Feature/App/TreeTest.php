@@ -1,7 +1,6 @@
 <?php
 
 use App\Tree;
-use ValueError;
 
 it('generates a tree based on headings, no matter which tags they contain', function () {
     $tree = (new Tree)->build(<<<'HTML'
