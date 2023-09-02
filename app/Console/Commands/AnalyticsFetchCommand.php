@@ -50,7 +50,7 @@ class AnalyticsFetchCommand extends Command
             ->throw()
             ->json();
 
-        return optional($statistics[0])['sessions'] ?? 0;
+        return optional(optional($statistics)[0])['sessions'] ?? 0;
     }
 
     protected function request() : PendingRequest
