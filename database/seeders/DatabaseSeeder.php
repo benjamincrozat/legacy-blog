@@ -70,6 +70,7 @@ class DatabaseSeeder extends Seeder
             'description' => 'Laravel is a world-class web application framework with an expressive and elegant syntax used by the biggest companies in the world.',
             'long_description' => "Laravel is a modern, elegant PHP framework that makes web development a breeze. With its expressive syntax, powerful tools, and vibrant community, **diving into the framework promises not only to elevate your coding skills but also to make the journey enjoyable**. Laravel might just be the magic touch you're looking for!",
             'primary_color' => '[#f13d2e]',
+            'highlight' => true,
         ]);
 
         Category::factory()->hasPosts(10, ['is_published' => true])->createQuietly([

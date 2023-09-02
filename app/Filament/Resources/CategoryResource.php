@@ -94,6 +94,8 @@ class CategoryResource extends Resource
                     Forms\Components\TextInput::make('secondary_color')
                         ->label('Secondary')
                         ->maxLength(255),
+
+                    Forms\Components\Checkbox::make('highlight'),
                 ])
                 ->collapsible()
                 ->columnSpan([
