@@ -18,7 +18,7 @@
                         @php
                         if ($posts->isNotEmpty()) {
                             $tree[] = [
-                                'value' => "Articles about $category->name",
+                                'value' => "Articles and tutorials about $category->name",
                                 'children' => [],
                             ];
                         }
@@ -51,9 +51,9 @@
                     @endif
 
                     @if ($posts->isNotEmpty())
-                        <h2 id="articles-about-{{ Str::slug($category->name) }}">
-                            <a href="#articles-about-{{ Str::slug($category->name) }}">
-                                Articles about {{ $category->name }}
+                        <h2 id="articles-and-tutorials-about-{{ Str::slug($category->name) }}">
+                            <a href="#articles-and-tutorials-about-{{ Str::slug($category->name) }}">
+                                Articles and tutorials about {{ $category->name }}
                             </a>
                         </h2>
                     @endif
