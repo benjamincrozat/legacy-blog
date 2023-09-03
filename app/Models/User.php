@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Filament\Panel;
+use App\Models\Concerns\LogsActivity;
 use App\Models\Presenters\UserPresenter;
 use Illuminate\Notifications\Notifiable;
 use Filament\Models\Contracts\FilamentUser;
@@ -12,7 +13,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable implements FilamentUser
 {
-    use HasFactory, Notifiable;
+    use HasFactory, LogsActivity, Notifiable;
 
     protected $fillable = [
         'name', 'email', 'password',

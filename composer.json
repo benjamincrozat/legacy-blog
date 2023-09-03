@@ -20,6 +20,7 @@
         "sentry/sentry-laravel": "^3.2",
         "spatie/commonmark-shiki-highlighter": "^2.1",
         "spatie/flysystem-dropbox": "^2.0",
+        "spatie/laravel-activitylog": "^4.7",
         "spatie/laravel-feed": "^4.2",
         "spatie/laravel-google-fonts": "^1.2",
         "spatie/laravel-honeypot": "^4.3",

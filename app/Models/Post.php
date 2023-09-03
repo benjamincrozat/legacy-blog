@@ -5,6 +5,7 @@ namespace App\Models;
 use Spatie\Feed\Feedable;
 use Laravel\Scout\Searchable;
 use App\Models\Concerns\HasFeedItems;
+use App\Models\Concerns\LogsActivity;
 use App\Models\Concerns\HasLocalScopes;
 use App\Models\Presenters\PostPresenter;
 use App\Jobs\CacheRenderedPostAttributes;
@@ -13,7 +14,7 @@ use App\Models\Concerns\HasRecommendations;
 
 class Post extends BaseModel implements Feedable
 {
-    use HasFeedItems, HasLocalScopes, HasRecommendations, HasRelationships, Searchable;
+    use HasFeedItems, HasLocalScopes, HasRecommendations, HasRelationships, LogsActivity, Searchable;
 
     protected $casts = [
         'manually_updated_at' => 'date',

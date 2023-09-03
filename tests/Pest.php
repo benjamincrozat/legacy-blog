@@ -27,7 +27,10 @@ uses(TestCase::class, LazilyRefreshDatabase::class)
             return $this;
         });
 
+        activity()->disableLogging();
+
         withoutMiddleware(TrackPageView::class);
+
         withoutVite();
     })
     ->in('Feature');

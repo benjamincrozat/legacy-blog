@@ -2,12 +2,15 @@
 
 namespace App\Models;
 
+use App\Models\Concerns\LogsActivity;
 use App\Models\Presenters\CategoryPresenter;
 use App\Jobs\CacheRenderedCategoryAttributes;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Category extends BaseModel
 {
+    use LogsActivity;
+
     public static function booted() : void
     {
         static::saved(
