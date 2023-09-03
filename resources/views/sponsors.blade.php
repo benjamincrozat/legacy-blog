@@ -1,5 +1,5 @@
 <x-app
-    title="Sponsor me to get your company in the spotlight"
+    title="Want to sponsor me? Here's your media kit."
     :hide-navigation="true"
     :hide-footer="true"
     class="text-gray-300 bg-gray-900"
@@ -44,26 +44,26 @@
     </div>
 
     <x-section class="container mt-12 text-center">
-        <x-slot:title tag="h1" class="!text-5xl font-bold">
+        <x-slot:title tag="h1" class="!text-3xl sm:!text-4xl md:!text-5xl font-bold">
             <span class="font-bold text-transparent bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text">
-                Get your company in the&nbsp;spotlight
+                Get your company in the&nbsp;spotlight.
             </span>
         </x-slot:title>
 
-        <p class="mt-4 text-2xl md:mt-2 lg:text-3xl">
+        <p class="mt-4 text-xl md:text-2xl md:mt-2 lg:text-3xl">
             More than <span class="font-semibold text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">30,000</span> eager developers visit&nbsp;my&nbsp;blog&nbsp;each&nbsp;month.
         </p>
 
-        <div class="mt-8">
+        <div class="mt-16">
             <a href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=30d&scale=day" target="_blank" rel="nofollow noopener noreferrer" class="inline-block px-6 py-3 text-xl font-bold text-white transition-opacity bg-gray-800 rounded hover:opacity-75">
-                See it for yourself
+                Access my analytics dashboard
             </a>
         </div>
     </x-section>
 
     <x-section class="container mt-24 md:mt-32 lg:max-w-screen-md">
         <x-slot:title class="!text-3xl font-bold text-center">
-            Put your logo on my homepage
+            Put your link and logo on my homepage
         </x-slot:title>
 
         <div class="flex items-center justify-between gap-8 mt-8 text-xl md:gap-12 md:mt-16">
@@ -115,6 +115,8 @@
         </a>
 
         <p class="mt-4 text-sm text-gray-400">Once the payment is done, you will receive instructions on how to send me your company name, logo, and landing page of choice.</p>
+
+        <p class="mt-4">Need a custom deal? <a href="mailto:hello@benjamincrozat.com" class="font-medium underline">Reach out!</a></p>
     </div>
 
     <x-section id="about" class="container mt-32 mb-16 lg:max-w-screen-md">
