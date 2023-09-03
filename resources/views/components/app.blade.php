@@ -70,7 +70,7 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    @if (app()->isProduction())
+    @if (config('services.adsense.enabled') && app()->isProduction())
         <script
             async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592"
             crossorigin="anonymous"
