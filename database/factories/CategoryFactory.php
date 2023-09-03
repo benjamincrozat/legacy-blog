@@ -19,6 +19,9 @@ class CategoryFactory extends Factory
             'description' => fake()->paragraph(),
             'long_description' => fake()->paragraph(),
             'content' => File::get(resource_path('markdown/benchmark.md')),
+            'primary_color' => collect([
+                'amber-400', 'blue-400', 'cyan-400', 'emerald-400', 'fuchsia-400', 'gray-800', 'green-400', 'indigo-400', 'orange-400', 'pink-400', 'purple-400', 'red-400', 'rose-400', 'sky-400', 'teal-400', 'violet-400', 'yellow-400',
+            ])->random(),
         ];
     }
 }

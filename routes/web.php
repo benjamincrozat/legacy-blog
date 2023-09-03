@@ -22,11 +22,11 @@ Route::post('/subscribe', SubscribeController::class)->name('subscribe');
 
 Route::view('/sponsors', 'sponsors')->name('sponsors');
 
-Route::feeds();
-
 Route::view('/privacy', 'privacy')->name('privacy');
 
 Route::view('/terms', 'terms')->name('terms');
+
+Route::feeds();
 
 // This is a wildcard route. It must be the last one to avoid conflicts.
 Route::get('/{post:slug}', ShowPostController::class)->name('posts.show');

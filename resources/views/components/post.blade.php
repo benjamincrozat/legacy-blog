@@ -40,7 +40,7 @@
                 @if ($post->image)
                     <img src="{{ $post->presenter()->thumbnail() }}" alt="{{ $post->title }}" class="object-cover aspect-square w-[64px] lg:w-[96px] h-[64px] lg:h-[96px]" />
                 @else
-                    <x-icon-document class="w-[64px] lg:w-[96px] h-[64px] lg:h-[96px]" />
+                    <x-icon-post-image-placeholder class="w-[64px] lg:w-[96px] h-[64px] lg:h-[96px]" />
                 @endif
             </a>
     </div>
