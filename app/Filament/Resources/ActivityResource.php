@@ -8,7 +8,7 @@ use Filament\Tables\Table;
 use Filament\Resources\Resource;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Activitylog\Models\Activity;
-use App\Filament\Resources\UserResource\Pages;
+use App\Filament\Resources\ActivityResource\Pages;
 
 class ActivityResource extends Resource
 {
