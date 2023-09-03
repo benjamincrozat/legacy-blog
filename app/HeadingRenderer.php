@@ -11,6 +11,10 @@ use League\CommonMark\Renderer\NodeRendererInterface;
 use League\CommonMark\Renderer\ChildNodeRendererInterface;
 use League\CommonMark\Extension\CommonMark\Node\Block\Heading;
 
+/**
+ * This class allows me to render headings with an anchor
+ * link to itself, just like in Laravel's documentation.
+ */
 class HeadingRenderer implements NodeRendererInterface, XmlNodeRendererInterface
 {
     /**
