@@ -70,6 +70,13 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+    @if (app()->isProduction())
+        <script
+            async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592"
+            crossorigin="anonymous"
+        ></script>
+    @endif
+
     <x-feed-links />
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ Vite::asset('resources/img/apple-touch-icon.jpg') }}" />
