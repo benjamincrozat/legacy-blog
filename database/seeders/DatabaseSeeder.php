@@ -11,6 +11,7 @@ class DatabaseSeeder extends Seeder
     public function run() : void
     {
         Category::factory(10)
+            // Users also are created in posts.
             ->hasPosts(10, ['is_published' => true])
             ->createQuietly();
 
