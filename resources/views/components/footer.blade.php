@@ -11,7 +11,7 @@
         </p>
 
         <p class="mt-8">
-            Read my <a wire:navigate.hover href="{{ route('privacy') }}" class="underline">privacy policy</a> and <a wire:navigate.hover href="{{ route('terms') }}" class="underline">terms of service</a>.
+            <a wire:navigate.hover href="{{ route('media-kit') }}" class="underline">Media kit</a> <span class="mx-2 text-xs">•</span> <a wire:navigate.hover href="{{ route('privacy') }}" class="underline">Privacy policy</a> <span class="mx-2 text-xs">•</span> <a wire:navigate.hover href="{{ route('terms') }}" class="underline">Terms of service</a>
         </p>
 
         <p class="mt-8 text-xs tracking-widest uppercase opacity-50">

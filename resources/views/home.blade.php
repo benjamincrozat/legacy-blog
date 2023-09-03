@@ -32,7 +32,7 @@
         </div>
 
         <div class="flex items-center justify-center gap-4 mt-8 text-3xl text-center font-handwriting">
-            <a wire:navigate.hover href="{{ route('sponsors') }}">
+            <a wire:navigate.hover href="{{ route('media-kit') }}">
                 <x-icon-arrow-to-top-left class="inline w-8 h-8 -translate-y-3" /> <span class="underline decoration-1 underline-offset-2">Be the first to showcase your business!</span>
             </a>
         </div>

@@ -40,7 +40,7 @@
                 <span class="text-xs font-normal" x-bind:class="{ 'text-red-600': open }">For you</span>
             </x-slot:trigger>
 
-            <x-menu-item href="{{ route('sponsors') }}" icon="s-star" class="text-yellow-400 hover:text-yellow-400">
+            <x-menu-item href="{{ route('media-kit') }}" icon="s-star" class="text-yellow-400 hover:text-yellow-400">
                 <strong class="text-black transition-colors group-hover:text-white">Get more eyes on your business</strong>
             </x-menu-item>
 
