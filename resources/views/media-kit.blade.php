@@ -61,6 +61,68 @@
         </div>
     </x-section>
 
+    <x-section class="container mt-24 md:mt-32">
+        <x-slot:title class="!text-3xl font-bold text-center">
+            My blog by the numbers
+        </x-slot:title>
+
+        <div class="grid grid-cols-2 gap-16 mt-16 md:grid-cols-3">
+            <div class="col-span-1" x-data="{ count: 0, target: 30000 }" x-intersect.half="animateNumber">
+                <div class="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl">+<span x-text="Math.round(count).toLocaleString()">30,000</span></div>
+                <div class="text-indigo-400 sm:text-xl lg:text-2xl xl:text-3xl">monthly visitors</div>
+            </div>
+
+            <div class="col-span-1" x-data="{ count: 0, target: 50000 }" x-intersect.half="animateNumber">
+                <div class="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl">+<span x-text="Math.round(count).toLocaleString()">50,000</span></div>
+                <div class="text-indigo-400 sm:text-xl lg:text-2xl xl:text-3xl">monthly page views</div>
+            </div>
+
+            <div class="col-span-1" x-data="{ count: 0, target: 35000 }" x-intersect.half="animateNumber">
+                <div class="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl">+<span x-text="Math.round(count).toLocaleString()">35,000</span></div>
+                <div class="text-indigo-400 sm:text-xl lg:text-2xl xl:text-3xl">monthly sessions</div>
+            </div>
+
+            <div class="col-span-1" x-data="{ count: 0, target: 70 }" x-intersect.half="animateNumber">
+                <div class="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl">+<span x-text="Math.round(count).toLocaleString()">70</span>%</div>
+                <div class="text-indigo-400 sm:text-xl lg:text-2xl xl:text-3xl">visitors on desktop</div>
+            </div>
+
+            <div class="col-span-1">
+                <div class="text-xl sm:text-2xl xl:text-3xl">
+                    India, United States, Indonesia, France, Germany
+                </div>
+
+                <div class="text-indigo-400 sm:text-xl lg:text-2xl xl:text-3xl">
+                    in the top 5
+                </div>
+            </div>
+        </div>
+    </x-section>
+
+    <script>
+        function animateNumber() {
+            const duration = 1000;
+
+            const stepTime = 20;
+
+            const steps = duration / stepTime;
+
+            const increment = this.target / steps;
+
+            const interval = setInterval(() => {
+                if (this.count < this.target) {
+                    this.count += increment;
+
+                    if (this.count > this.target) {
+                        this.count = this.target;
+                    }
+                } else {
+                    clearInterval(interval);
+                }
+            }, stepTime);
+        }
+    </script>
+
     <x-section class="container mt-24 md:mt-32 lg:max-w-screen-md">
         <x-slot:title class="!text-3xl font-bold text-center">
             Put your link and logo on my homepage
