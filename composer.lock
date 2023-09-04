@@ -2812,16 +2812,16 @@
         },
         {
             "name": "kirschbaum-development/eloquent-power-joins",
-            "version": "3.2.2",
+            "version": "3.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kirschbaum-development/eloquent-power-joins.git",
-                "reference": "23650f7707e25190511ab15b22a95e3a32ad277b"
+                "reference": "e9d936e0071d47796735b40ed6cce5dfd0a4305d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kirschbaum-development/eloquent-power-joins/zipball/23650f7707e25190511ab15b22a95e3a32ad277b",
-                "reference": "23650f7707e25190511ab15b22a95e3a32ad277b",
+                "url": "https://api.github.com/repos/kirschbaum-development/eloquent-power-joins/zipball/e9d936e0071d47796735b40ed6cce5dfd0a4305d",
+                "reference": "e9d936e0071d47796735b40ed6cce5dfd0a4305d",
                 "shasum": ""
             },
             "require": {
@@ -2868,9 +2868,9 @@
             ],
             "support": {
                 "issues": "https://github.com/kirschbaum-development/eloquent-power-joins/issues",
-                "source": "https://github.com/kirschbaum-development/eloquent-power-joins/tree/3.2.2"
+                "source": "https://github.com/kirschbaum-development/eloquent-power-joins/tree/3.2.3"
             },
-            "time": "2023-08-28T10:27:02+00:00"
+            "time": "2023-09-04T10:21:44+00:00"
         },
         {
             "name": "laravel/fortify",
@@ -2938,16 +2938,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v10.21.0",
+            "version": "v10.21.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "96b15c7ac382a9adb4a56d40c640e782d669a112"
+                "reference": "ae93199f5349fd8a02364424249aad2a90185a95"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/96b15c7ac382a9adb4a56d40c640e782d669a112",
-                "reference": "96b15c7ac382a9adb4a56d40c640e782d669a112",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/ae93199f5349fd8a02364424249aad2a90185a95",
+                "reference": "ae93199f5349fd8a02364424249aad2a90185a95",
                 "shasum": ""
             },
             "require": {
@@ -3134,7 +3134,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2023-08-29T13:55:56+00:00"
+            "time": "2023-09-04T14:34:36+00:00"
         },
         {
             "name": "laravel/horizon",
@@ -4178,16 +4178,16 @@
         },
         {
             "name": "livewire/volt",
-            "version": "v1.1.1",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/volt.git",
-                "reference": "9e99869a1946e1ea925e7527a95dbe10fd721d4e"
+                "reference": "73e7df2be41ee162fc2ca467a7ef3642ad67321f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/volt/zipball/9e99869a1946e1ea925e7527a95dbe10fd721d4e",
-                "reference": "9e99869a1946e1ea925e7527a95dbe10fd721d4e",
+                "url": "https://api.github.com/repos/livewire/volt/zipball/73e7df2be41ee162fc2ca467a7ef3642ad67321f",
+                "reference": "73e7df2be41ee162fc2ca467a7ef3642ad67321f",
                 "shasum": ""
             },
             "require": {
@@ -4246,7 +4246,7 @@
                 "issues": "https://github.com/livewire/volt/issues",
                 "source": "https://github.com/livewire/volt"
             },
-            "time": "2023-08-30T16:14:22+00:00"
+            "time": "2023-08-31T17:16:12+00:00"
         },
         {
             "name": "masterminds/html5",
@@ -5269,16 +5269,16 @@
         },
         {
             "name": "pestphp/pest",
-            "version": "v2.16.1",
+            "version": "v2.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pestphp/pest.git",
-                "reference": "55b92666482b7d4320b7869c4eea7333d35c5631"
+                "reference": "cc6c5bf1999cd1c4d28d21f849c495df792573ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pestphp/pest/zipball/55b92666482b7d4320b7869c4eea7333d35c5631",
-                "reference": "55b92666482b7d4320b7869c4eea7333d35c5631",
+                "url": "https://api.github.com/repos/pestphp/pest/zipball/cc6c5bf1999cd1c4d28d21f849c495df792573ff",
+                "reference": "cc6c5bf1999cd1c4d28d21f849c495df792573ff",
                 "shasum": ""
             },
             "require": {
@@ -5355,7 +5355,7 @@
             ],
             "support": {
                 "issues": "https://github.com/pestphp/pest/issues",
-                "source": "https://github.com/pestphp/pest/tree/v2.16.1"
+                "source": "https://github.com/pestphp/pest/tree/v2.17.0"
             },
             "funding": [
                 {
@@ -5367,7 +5367,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-08-29T09:30:36+00:00"
+            "time": "2023-09-03T23:20:57+00:00"
         },
         {
             "name": "pestphp/pest-plugin",
@@ -5505,26 +5505,26 @@
         },
         {
             "name": "pestphp/pest-plugin-drift",
-            "version": "v2.3.0",
+            "version": "v2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pestphp/pest-plugin-drift.git",
-                "reference": "fdd29f22a7532bcfc5531dd046e8caa364a83e6c"
+                "reference": "f1ddeabdc153024e626222be3f6bd250aba3d9ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pestphp/pest-plugin-drift/zipball/fdd29f22a7532bcfc5531dd046e8caa364a83e6c",
-                "reference": "fdd29f22a7532bcfc5531dd046e8caa364a83e6c",
+                "url": "https://api.github.com/repos/pestphp/pest-plugin-drift/zipball/f1ddeabdc153024e626222be3f6bd250aba3d9ad",
+                "reference": "f1ddeabdc153024e626222be3f6bd250aba3d9ad",
                 "shasum": ""
             },
             "require": {
-                "nikic/php-parser": "^4.16.0",
-                "pestphp/pest": "^2.9.5",
+                "nikic/php-parser": "^4.17.1",
+                "pestphp/pest": "^2.16.1",
                 "php": "^8.1.0",
                 "symfony/finder": "^6.3.0"
             },
             "require-dev": {
-                "pestphp/pest-dev-tools": "^2.12.0"
+                "pestphp/pest-dev-tools": "^2.16.0"
             },
             "type": "library",
             "extra": {
@@ -5555,7 +5555,7 @@
             ],
             "support": {
                 "issues": "https://github.com/pestphp/pest-plugin-drift/issues",
-                "source": "https://github.com/pestphp/pest-plugin-drift/tree/v2.3.0"
+                "source": "https://github.com/pestphp/pest-plugin-drift/tree/v2.4.0"
             },
             "funding": [
                 {
@@ -5571,7 +5571,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-08-15T11:19:31+00:00"
+            "time": "2023-09-03T09:29:00+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -13735,16 +13735,16 @@
         },
         {
             "name": "spatie/ray",
-            "version": "1.37.2",
+            "version": "1.37.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/ray.git",
-                "reference": "dea16182d4bc9d9833adec7e39fbb3d7b553425d"
+                "reference": "37d351c57b5183a88754f477d2e5f610c7b355ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/ray/zipball/dea16182d4bc9d9833adec7e39fbb3d7b553425d",
-                "reference": "dea16182d4bc9d9833adec7e39fbb3d7b553425d",
+                "url": "https://api.github.com/repos/spatie/ray/zipball/37d351c57b5183a88754f477d2e5f610c7b355ce",
+                "reference": "37d351c57b5183a88754f477d2e5f610c7b355ce",
                 "shasum": ""
             },
             "require": {
@@ -13795,7 +13795,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/ray/issues",
-                "source": "https://github.com/spatie/ray/tree/1.37.2"
+                "source": "https://github.com/spatie/ray/tree/1.37.4"
             },
             "funding": [
                 {
@@ -13807,7 +13807,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2023-05-17T06:35:47+00:00"
+            "time": "2023-09-04T07:17:56+00:00"
         },
         {
             "name": "symfony/dom-crawler",
@@ -14020,5 +14020,5 @@
         "php": "^8.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
