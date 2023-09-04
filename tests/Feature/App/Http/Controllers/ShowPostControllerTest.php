@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Bus;
 use function Pest\Laravel\assertGuest;
 
 beforeEach(function () {
-    Bus::fake(TrackPageView::class);
+    Bus::fake(TrackPageView::class)->serializeAndRestore();
 });
 
 test('a given published post is shown correctly and the page view is tracked', function () {

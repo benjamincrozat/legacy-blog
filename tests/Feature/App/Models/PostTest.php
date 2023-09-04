@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Bus;
 use App\Jobs\CacheRenderedPostAttributes;
 
 test("a post's attributes are rendered and cached after saving", function () {
-    Bus::fake();
+    Bus::fake()->serializeAndRestore();
 
     $post = Post::factory()->create();
 

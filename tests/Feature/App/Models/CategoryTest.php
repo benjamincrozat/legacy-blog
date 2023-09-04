@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Bus;
 use App\Jobs\CacheRenderedCategoryAttributes;
 
 test("a category's attributes are rendered and cached after saving", function () {
-    Bus::fake();
+    Bus::fake()->serializeAndRestore();
 
     $category = Category::factory()->create();
 

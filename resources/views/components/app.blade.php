@@ -108,5 +108,7 @@
                 <x-footer class="flex-grow mt-16 text-gray-300 @empty ($darkerFooter) bg-gray-900 @else bg-gray-950 @endempty" />
             @endempty
         </div>
+
+        <x-status />
     </body>
 </html>

@@ -54,8 +54,14 @@
         </x-section>
     @endif
 
+    <x-divider />
+
+    <x-newsletter />
+
+    <x-divider />
+
     @foreach ($categories as $category)
-        <x-section class="mt-32">
+        <x-section class="mt-16">
             <x-slot:title class="container lg:max-w-screen-md">
                 <div class="flex items-center gap-4">
                     <a wire:navigate.hover href="{{ route('categories.show', $category) }}" class="flex-shrink-0">
@@ -92,7 +98,7 @@
 
     <x-divider class="mt-[4.5rem]" />
 
-    <x-section id="about" class="container lg:max-w-screen-md">
+    <x-section id="about" class="container lg:max-w-screen-md scroll-mt-8">
         <x-slot:title class="text-center">
             About Benjamin Crozat
         </x-slot:title>

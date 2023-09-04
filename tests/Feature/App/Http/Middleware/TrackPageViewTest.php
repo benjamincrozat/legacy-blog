@@ -15,7 +15,7 @@ use function Pest\Laravel\withMiddleware;
 beforeEach(function () {
     config(['services.pirsch.access_key' => 'some-access-key']);
 
-    Queue::fake();
+    Queue::fake()->serializeAndRestore();
 
     withMiddleware(TrackPageView::class);
 });

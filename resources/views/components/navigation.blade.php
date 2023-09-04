@@ -1,10 +1,10 @@
-<nav class="container relative flex items-center justify-between py-4 sm:static lg:max-w-screen-md">
+<nav {{ $attributes->merge(['class' => 'container relative flex items-center justify-between py-4 sm:static lg:max-w-screen-md']) }}>
     <a wire:navigate.hover href="/">
         <span class="sr-only">{{ config('app.name') }}</span>
         <x-icon-logo class="w-8 h-8 fill-current md:w-10 md:h-10" />
     </a>
 
-    <div class="flex items-center gap-7 md:gap-8">
+    <div class="flex items-center gap-6 sm:gap-7 md:gap-8">
         <a wire:navigate.hover href="{{ route('posts.index') }}">
             @if (Route::is('posts.index'))
                 <x-heroicon-s-fire class="w-6 h-6 mx-auto text-orange-400 md:w-7 md:h-7" />
@@ -18,8 +18,8 @@
         <x-menu class="grid gap-4 py-4">
             <x-slot:trigger>
                 <x-heroicon-o-tag class="w-6 h-6 mx-auto md:w-7 md:h-7" x-show="! open" />
-                <x-heroicon-s-tag class="w-6 h-6 mx-auto text-indigo-400 md:w-7 md:h-7" x-cloak x-show="open" />
-                <span class="text-xs font-normal" x-bind:class="{ 'text-indigo-400': open }">Topics</span>
+                <x-heroicon-s-tag class="w-6 h-6 mx-auto text-emerald-400 md:w-7 md:h-7" x-cloak x-show="open" />
+                <span class="text-xs font-normal" x-bind:class="{ 'text-emerald-600': open }">Topics</span>
             </x-slot:trigger>
 
             @foreach ($categories as $category)
@@ -33,15 +33,26 @@
             @endforeach
         </x-menu>
 
+        <a href="{{ route('home') }}#newsletter">
+            <x-heroicon-o-envelope class="w-6 h-6 mx-auto md:w-7 md:h-7" />
+            <span class="text-xs font-normal">
+                News
+            </span>
+        </a>
+
         <x-menu>
             <x-slot:trigger>
                 <x-heroicon-o-gift class="w-6 h-6 mx-auto md:w-7 md:h-7" x-show="! open" />
-                <x-heroicon-s-gift class="w-6 h-6 mx-auto text-red-400 md:w-7 md:h-7" x-cloak x-show="open" />
-                <span class="text-xs font-normal" x-bind:class="{ 'text-red-600': open }">For you</span>
+                <x-heroicon-s-gift class="w-6 h-6 mx-auto text-rose-400 md:w-7 md:h-7" x-cloak x-show="open" />
+                <span class="text-xs font-normal" x-bind:class="{ 'text-rose-600': open }">For you</span>
             </x-slot:trigger>
 
             <x-menu-item href="{{ route('media-kit') }}" icon="s-star" class="text-yellow-400 hover:text-yellow-400">
                 <strong class="text-black transition-colors group-hover:text-white">Get more eyes on your business</strong>
+            </x-menu-item>
+
+            <x-menu-item no-wire-navigate href="{{ route('home') }}#newsletter" icon="s-envelope" class="text-indigo-400 hover:text-indigo-400">
+                <strong class="text-black transition-colors group-hover:text-white">Follow my journey</strong>
             </x-menu-item>
 
             <x-menu-item href="/best-web-development-tools" icon="o-wrench">
@@ -62,9 +73,13 @@
         </x-menu>
 
         <x-menu>
-            <x-slot:trigger>
-                <x-heroicon-o-ellipsis-horizontal class="w-6 h-6 mx-auto transition-transform duration-300 md:w-7 md:h-7" x-bind:class="{ 'rotate-90': open }" />
-                <span class="text-xs font-normal">More</span>
+            <x-slot:trigger @class(['-mx-2' => auth()->check()])>
+                <x-heroicon-o-ellipsis-horizontal
+                    class="w-6 h-6 mx-auto transition-transform duration-300 md:w-7 md:h-7"
+                    x-bind:class="{ 'rotate-90': open }"
+                />
+
+                <span class="@auth sr-only sm:not-sr-only @endauth text-xs font-normal">More</span>
             </x-slot:trigger>
 
             <x-menu-item

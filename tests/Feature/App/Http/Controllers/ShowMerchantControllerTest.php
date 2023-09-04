@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Queue;
 beforeEach(function () {
     config(['services.pirsch.access_key' => 'some-access-key']);
 
-    Queue::fake(TrackClickOnMerchant::class);
+    Queue::fake(TrackClickOnMerchant::class)->serializeAndRestore();
 });
 
 it('tracks the click and redirects to the merchant', function () {

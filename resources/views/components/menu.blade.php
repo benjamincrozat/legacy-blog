@@ -1,5 +1,7 @@
 <div class="sm:relative" x-data="{ open: false }">
-    <button x-bind:class="{ 'relative z-20': open }" @click="open = ! open">
+    <button {{ $trigger->attributes->merge([
+        'x-bind:class' => "{ 'relative z-20': open }",
+    ]) }} @click="open = ! open">
         {{ $trigger }}
     </button>
 
