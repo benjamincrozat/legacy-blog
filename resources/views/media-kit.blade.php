@@ -93,7 +93,7 @@
                 </div>
 
                 <div class="text-indigo-400 sm:text-xl lg:text-2xl xl:text-3xl">
-                    in the top 5
+                    in the top 5 countries
                 </div>
             </div>
         </div>
