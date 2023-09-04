@@ -5,7 +5,7 @@
 
     <ul
         {{ $attributes->merge([
-            'class' => 'outline outline-1 outline-black/[.025] -mt-4 sm:mt-0 rounded absolute left-4 sm:left-auto right-4 sm:right-0 bg-white shadow-xl top-full sm:min-w-[400px] py-2 z-20 overflow-y-scroll max-h-[50vh] text-base',
+            'class' => 'outline outline-1 outline-black/[.025] -mt-4 sm:mt-0 rounded absolute left-4 sm:left-auto right-4 sm:right-0 bg-white shadow-xl top-full sm:min-w-[400px] py-2 z-20 overflow-y-scroll max-h-[75vh] md:max-h-[50vh] text-base',
         ]) }}
         x-cloak
         x-show="open"
