@@ -62,7 +62,7 @@
     </x-section>
 
     <x-section class="container mt-24 md:mt-32">
-        <x-slot:title class="!text-3xl font-bold text-center">
+        <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
             My blog by the numbers
         </x-slot:title>
 
@@ -124,7 +124,7 @@
     </script>
 
     <x-section class="container mt-24 md:mt-32 lg:max-w-screen-md">
-        <x-slot:title class="!text-3xl font-bold text-center">
+        <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
             Put your link and logo on my homepage
         </x-slot:title>
 
@@ -182,7 +182,7 @@
     </div>
 
     <x-section id="about" class="container mt-32 mb-16 lg:max-w-screen-md">
-        <x-slot:title class="!text-3xl font-bold text-center">
+        <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
             Who you are sponsoring
         </x-slot:title>
 
