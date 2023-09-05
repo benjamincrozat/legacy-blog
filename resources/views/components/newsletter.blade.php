@@ -11,7 +11,7 @@
     </x-slot:title>
 
     <p class="container mt-6 text-center lg:max-w-screen-md sm:text-xl">
-        <span class="font-medium text-indigo-400 bg-indigo-300/30">Get exclusive, interesting and insightful information</span> in your inbox about my experiences building with Laravel and its ecosystem.
+        <span class="font-medium">Join 400+ developers.</span> <span class="font-medium text-indigo-400 bg-indigo-200/30">Get exclusive, interesting and insightful information</span> in your inbox about my experiences building with Laravel and its ecosystem.
     </p>
 
     <div class="container mt-8 md:max-w-screen-sm">
