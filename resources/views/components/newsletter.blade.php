@@ -18,7 +18,7 @@
         <form method="POST" action="{{ route('subscribe') }}" class="flex items-stretch justify-center gap-2">
             @csrf
 
-            <input type="text" id="email" name="email" value="{{ old('email') }}" placeholder="johndoe@example.com" required class="flex-grow block px-4 py-3 placeholder-gray-300 border-0 rounded shadow shadow-black/5" />
+            <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="johndoe@example.com" required class="flex-grow block px-4 py-3 placeholder-gray-300 border-0 rounded shadow shadow-black/5" />
 
             <x-button class="px-6 text-white bg-indigo-400 shadow-lg sm:px-8 shadow-blue-700/20">
                 Subscribe
