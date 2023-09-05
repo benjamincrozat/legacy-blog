@@ -1,5 +1,5 @@
 <x-app
-    title="Want to sponsor me? Here's your media kit."
+    title="Sponsor me and get your company in the spotlight."
     :hide-navigation="true"
     :hide-footer="true"
     class="text-gray-300 bg-gray-900"
