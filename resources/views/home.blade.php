@@ -18,7 +18,9 @@
             Join more than <span class="font-semibold text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">30,000</span> readers and skyrocket your web&nbsp;development&nbsp;skills.
         </p>
 
-        <div class="container flex items-center justify-between gap-4 mt-16 lg:max-w-screen-md">
+        <p class="mt-16 text-xl font-medium">Deep gratitude to the sponsors who back&nbsp;me!</p>
+
+        <div class="container flex items-center justify-between gap-4 mt-8 lg:max-w-screen-md">
             <a href="https://useflipp.com/?utm_campaign=sponsorship&utm_source=benjamincrozat.com&utm_medium=logolink" target="_blank" rel="noopener">
                 <img loading="lazy" src="{{ Vite::asset('resources/img/flipp.png') }}" alt="Flipp" class="h-8 sm:h-10" />
                 <span class="sr-only">Flipp</span>
