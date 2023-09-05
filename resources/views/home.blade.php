@@ -41,10 +41,10 @@
                 <span class="sr-only">redirect.pizza</span>
             </a>
 
-            <x-icon-dashed-circle class="w-12 h-12 opacity-10" />
-            <x-icon-dashed-circle class="w-12 h-12 opacity-10" />
-            <x-icon-dashed-circle class="w-12 h-12 opacity-10" />
-            <x-icon-dashed-circle class="w-12 h-12 opacity-10" />
+            <x-icon-dashed-circle class="w-12 h-12 md:w-14 md:h-14 opacity-10" />
+            <x-icon-dashed-circle class="w-12 h-12 md:w-14 md:h-14 opacity-10" />
+            <x-icon-dashed-circle class="w-12 h-12 md:w-14 md:h-14 opacity-10" />
+            <x-icon-dashed-circle class="w-12 h-12 md:w-14 md:h-14 opacity-10" />
         </div>
 
         <div class="flex items-center justify-center gap-4 mt-8 text-2xl text-center sm:text-3xl font-handwriting">
