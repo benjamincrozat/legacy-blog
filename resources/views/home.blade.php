@@ -18,7 +18,9 @@
             Join more than <span class="font-semibold text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">30,000</span> readers and skyrocket your web&nbsp;development&nbsp;skills.
         </p>
 
-        <p class="mt-16 text-xl font-medium">Deep gratitude to the sponsors who back&nbsp;me!</p>
+        <x-divider />
+
+        <p class="text-xl font-medium">Deep gratitude to the sponsors who back&nbsp;me!</p>
 
         <div class="container flex items-center justify-between gap-4 mt-8 lg:max-w-screen-md">
             <a href="https://useflipp.com/?utm_campaign=sponsorship&utm_source=benjamincrozat.com&utm_medium=logolink" target="_blank" rel="noopener">
@@ -38,6 +40,8 @@
                 <x-icon-arrow-to-top-left class="inline w-8 h-8 -translate-y-3" /> <span class="underline decoration-1 underline-offset-2">Showcase your business too!</span>
             </a>
         </div>
+
+        <x-divider />
     </x-section>
 
     @if ($categories->isNotEmpty())
