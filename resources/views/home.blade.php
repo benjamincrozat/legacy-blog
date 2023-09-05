@@ -45,7 +45,7 @@
     </x-section>
 
     @if ($categories->isNotEmpty())
-        <x-section class="container mt-16">
+        <x-section class="container">
             <x-slot:title class="text-center">
                 An endless amount of content for web&nbsp;developers.
             </x-slot:title>
