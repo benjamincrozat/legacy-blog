@@ -86,9 +86,9 @@
                         class="float-right w-[96px] md:w-[128px] h-[96px] md:h-[128px] mt-2 mb-8 ml-8 rounded-full"
                     />
 
-                    <h1 class="text-2xl">
+                    <h3 class="text-2xl">
                         Written by {{ $post->user->name }}
-                    </h1>
+                    </h3>
 
                     {!! $post->user->presenter()->description() !!}
 
