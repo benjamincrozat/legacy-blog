@@ -92,6 +92,11 @@
                 <div class="text-indigo-400 sm:text-xl lg:text-2xl xl:text-3xl">followers on X</div>
             </div>
 
+            <div class="col-span-1" x-data="{ count: 0, target: 400 }" x-intersect.half="animateNumber">
+                <div class="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl">+<span x-text="Math.round(count).toLocaleString()">400</span></div>
+                <div class="text-indigo-400 sm:text-xl lg:text-2xl xl:text-3xl">subscribers to the newsletter</div>
+            </div>
+
             <div class="col-span-1">
                 <div class="text-xl sm:text-2xl xl:text-3xl">
                     India, United States, Indonesia, France, Germany
