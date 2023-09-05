@@ -22,7 +22,7 @@
 
         <p class="text-lg font-medium sm:text-xl">Deep gratitude to the sponsors who back&nbsp;me!</p>
 
-        <div class="container grid grid-cols-3 gap-4 mt-8 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 place-items-center md:gap-8">
+        <div class="container grid grid-cols-3 gap-4 mt-8 sm:grid-cols-4 lg:grid-cols-6 place-items-center md:gap-6 lg:gap-8">
             <a
                 href="https://useflipp.com/?utm_campaign=sponsorship&utm_source=benjamincrozat.com&utm_medium=logolink"
                 target="_blank"
@@ -41,10 +41,10 @@
                 <span class="sr-only">redirect.pizza</span>
             </a>
 
-            <x-icon-dashed-circle class="w-12 h-12 sm:w-16 sm:h-16 opacity-10" />
-            <x-icon-dashed-circle class="w-12 h-12 sm:w-16 sm:h-16 opacity-10" />
-            <x-icon-dashed-circle class="w-12 h-12 sm:w-16 sm:h-16 opacity-10" />
-            <x-icon-dashed-circle class="w-12 h-12 sm:w-16 sm:h-16 opacity-10" />
+            <x-icon-dashed-circle class="w-12 h-12 opacity-10" />
+            <x-icon-dashed-circle class="w-12 h-12 opacity-10" />
+            <x-icon-dashed-circle class="w-12 h-12 opacity-10" />
+            <x-icon-dashed-circle class="w-12 h-12 opacity-10" />
         </div>
 
         <div class="flex items-center justify-center gap-4 mt-8 text-2xl text-center sm:text-3xl font-handwriting">
