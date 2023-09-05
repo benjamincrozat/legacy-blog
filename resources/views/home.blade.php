@@ -20,7 +20,7 @@
 
         <x-divider />
 
-        <p class="text-xl font-medium">Deep gratitude to the sponsors who back&nbsp;me!</p>
+        <p class="text-lg font-medium sm:text-xl">Deep gratitude to the sponsors who back&nbsp;me!</p>
 
         <div class="container flex items-center justify-between gap-4 mt-8 lg:max-w-screen-md">
             <a href="https://useflipp.com/?utm_campaign=sponsorship&utm_source=benjamincrozat.com&utm_medium=logolink" target="_blank" rel="noopener">
