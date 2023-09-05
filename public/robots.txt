@@ -1,5 +1,3 @@
 User-agent: *
 
 Disallow: /recommends/*
-
-Sitemap: https://benjamincrozat.com/sitemap.xml
