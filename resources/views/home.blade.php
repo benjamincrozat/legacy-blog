@@ -22,17 +22,30 @@
 
         <p class="text-lg font-medium sm:text-xl">Deep gratitude to the sponsors who back&nbsp;me!</p>
 
-        <div class="container flex items-center justify-between gap-4 mt-8 lg:max-w-screen-md">
-            <a href="https://useflipp.com/?utm_campaign=sponsorship&utm_source=benjamincrozat.com&utm_medium=logolink" target="_blank" rel="noopener">
+        <div class="container flex items-center justify-between gap-4 mt-8 md:gap-8 lg:max-w-screen-md">
+            <a
+                href="https://useflipp.com/?utm_campaign=sponsorship&utm_source=benjamincrozat.com&utm_medium=logolink"
+                target="_blank"
+                rel="noopener"
+                class="shrink-0"
+            >
                 <img loading="lazy" src="{{ Vite::asset('resources/img/flipp.png') }}" alt="Flipp" class="h-8 sm:h-10" />
                 <span class="sr-only">Flipp</span>
             </a>
-            <x-icon-dashed-circle class="w-12 h-12 sm:w-16 sm:h-16 opacity-10" />
-            <x-icon-dashed-circle class="w-12 h-12 sm:w-16 sm:h-16 opacity-10" />
-            <x-icon-dashed-circle class="w-12 h-12 sm:w-16 sm:h-16 opacity-10" />
-            <x-icon-dashed-circle class="hidden w-12 h-12 sm:w-16 sm:h-16 sm:inline opacity-10" />
-            <x-icon-dashed-circle class="hidden w-12 h-12 sm:w-16 sm:h-16 sm:inline opacity-10" />
-            <x-icon-dashed-circle class="hidden w-12 h-12 sm:w-16 sm:h-16 md:inline opacity-10" />
+
+            <a
+                href="https://redirect.pizza/?utm_source=benjamincrozat.com&utm_medium=logo&utm_campaign=sponsorship"
+                target="_blank"
+                rel="noopener"
+                class="shrink-0"
+            >
+                <img loading="lazy" src="{{ Vite::asset('resources/img/redirect-pizza.png') }}" alt="redirect.pizza" class="h-8 sm:h-10" />
+                <span class="sr-only">redirect.pizza</span>
+            </a>
+
+            <x-icon-dashed-circle class="w-12 h-12 shrink-0 sm:w-16 sm:h-16 opacity-10" />
+            <x-icon-dashed-circle class="w-12 h-12 shrink-0 sm:w-16 sm:h-16 opacity-10" />
+            <x-icon-dashed-circle class="hidden w-12 h-12 shrink-0 sm:w-16 sm:h-16 sm:inline opacity-10" />
         </div>
 
         <div class="flex items-center justify-center gap-4 mt-8 text-2xl text-center sm:text-3xl font-handwriting">
