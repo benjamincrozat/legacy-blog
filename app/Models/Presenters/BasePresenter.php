@@ -20,7 +20,7 @@ abstract class BasePresenter
         );
     }
 
-    protected function getRenderCacheKey(string $key, ?string $value) : string
+    public function getRenderCacheKey(string $key, ?string $value) : string
     {
         return sprintf('%s.%s.%s.%s', class_basename($this->model::class), $this->model->id, $key, sha1($value ?? ''));
     }

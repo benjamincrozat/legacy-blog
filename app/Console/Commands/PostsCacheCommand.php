@@ -15,7 +15,16 @@ class PostsCacheCommand extends Command
     {
         Post::cursor()->each(function (Post $post) {
             dispatch(function () use ($post) {
+                cache()->forget(
+                    $post->presenter()->getRenderCacheKey('content', $post->content)
+                );
+
                 $post->presenter()->content();
+
+                cache()->forget(
+                    $post->presenter()->getRenderCacheKey('teaser', $post->teaser)
+                );
+
                 $post->presenter()->teaser();
             });
         });

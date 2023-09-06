@@ -15,7 +15,16 @@ class CategoriesCacheCommand extends Command
     {
         Category::cursor()->each(function (Category $category) {
             dispatch(function () use ($category) {
+                cache()->forget(
+                    $category->presenter()->getRenderCacheKey('long_description', $category->long_description)
+                );
+
                 $category->presenter()->longDescription();
+
+                cache()->forget(
+                    $category->presenter()->getRenderCacheKey('content', $category->content)
+                );
+
                 $category->presenter()->content();
             });
         });
