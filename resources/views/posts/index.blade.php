@@ -1,12 +1,12 @@
 <x-app
-    title="The latest articles and tutorials about Laravel and its ecosystem."
+    title="The latest articles and tutorials"
 >
     <x-section class="container mt-16">
         <x-slot:title class="text-center">
             @if ($posts->currentPage() > 1)
                 Page {{ $posts->currentPage() }}
             @else
-                The latest articles and tutorials about Laravel and its ecosystem.
+                The latest articles and tutorials
             @endif
         </x-slot:title>
 
