@@ -16,6 +16,8 @@ class AnalyticsFetchCommand extends Command
 
     public function handle() : void
     {
+        activity()->disableLogging();
+
         Post::cursor()->each(function (Post $post) {
             $post->update([
                 'sessions_last_7_days' => $this->fetch("/$post->slug", now()->subWeek()),
