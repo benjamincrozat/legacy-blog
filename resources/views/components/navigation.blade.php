@@ -74,8 +74,8 @@
 
         <x-menu.base>
             <x-slot:trigger @class([
-                '-mx-2' => auth()->check(),
-                '-ml-2' => auth()->guest(),
+                '-mx-2 sm:mx-0' => auth()->check(),
+                '-ml-2 sm:ml-0' => auth()->guest(),
             ])>
                 <x-heroicon-o-ellipsis-horizontal
                     class="w-6 h-6 mx-auto transition-transform duration-300 md:w-7 md:h-7"
