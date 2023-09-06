@@ -10,6 +10,8 @@ trait LogsActivity
 
     public function getActivitylogOptions() : LogOptions
     {
-        return LogOptions::defaults();
+        return LogOptions::defaults()
+            ->logAll()
+            ->logExcept(['created_at', 'updated_at']);
     }
 }

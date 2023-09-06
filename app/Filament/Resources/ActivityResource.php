@@ -39,6 +39,8 @@ class ActivityResource extends Resource
                 Forms\Components\TextInput::make('causer_id'),
 
                 Forms\Components\Textarea::make('properties')
+                    ->formatStateUsing(fn (Model $record) => $record->getRawOriginal('properties'))
+                    ->json()
                     ->columnSpanFull(),
             ]);
     }
