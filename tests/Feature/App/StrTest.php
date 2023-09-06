@@ -23,5 +23,5 @@ it('headings contain a link to themselves', function () {
 it('adds the adaquate attributes to external links', function () {
     expect(Str::markdown('https://example.com'))
         ->toContain('target="_blank"')
-        ->toContain('rel="nofollow noopener noreferrer"');
+        ->toContain('rel="nofollow noopener"');
 });

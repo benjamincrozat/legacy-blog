@@ -31,7 +31,7 @@
                 <div class="mb-8">
                     @if ($post->community_link)
                         <h1>
-                            <a href="{{ $post->community_link }}" target="_blank" rel="noopener noreferrer" class="decoration-4 underline-offset-4">
+                            <a href="{{ $post->community_link }}" target="_blank" rel="noopener" class="decoration-4 underline-offset-4">
                                 {{ $post->title }}
                             </a>
                         </h1>
@@ -67,7 +67,7 @@
 
                 @if ($post->community_link)
                     <div class="text-xl text-center">
-                        <a href="{{ $post->community_link }}" target="_blank" rel="noopener noreferrer">
+                        <a href="{{ $post->community_link }}" target="_blank" rel="noopener">
                             Read more on {{ $post->presenter()->communityLinkDomain() }}
                         </a>
                     </div>
@@ -99,7 +99,7 @@
                             <a
                                 href="https://github.com/{{ $post->user->github_handle }}"
                                 target="_blank"
-                                rel="nofollow noopener noreferrer"
+                                rel="nofollow noopener"
                             >
                                 GitHub
                             </a>
@@ -109,7 +109,7 @@
                             <a
                                 href="https://x.com/{{ $post->user->x_handle }}"
                                 target="_blank"
-                                rel="nofollow noopener noreferrer"
+                                rel="nofollow noopener"
                             >
                                 X
                             </a>

@@ -6,7 +6,7 @@
                     @if ($post->community_link)
                         href="{{ $post->community_link }}"
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noopener"
                     @else
                         wire:navigate.hover
                         href="{{ route('posts.show', $post) }}"

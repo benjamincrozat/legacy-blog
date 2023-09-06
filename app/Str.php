@@ -7,6 +7,7 @@ use League\CommonMark\Node\Inline\Text;
 use League\CommonMark\MarkdownConverter;
 use League\CommonMark\Environment\Environment;
 use League\CommonMark\Extension\Embed\EmbedExtension;
+use League\CommonMark\Extension\CommonMark\Node\Inline\Link;
 use Spatie\CommonMarkShikiHighlighter\HighlightCodeExtension;
 use League\CommonMark\Extension\CommonMark\Node\Block\Heading;
 use League\CommonMark\Extension\Attributes\AttributesExtension;
@@ -39,7 +40,7 @@ class Str extends \Illuminate\Support\Str
                 'open_in_new_window' => true,
                 'nofollow' => 'external',
                 'noopener' => 'external',
-                'noreferrer' => 'external',
+                'noreferrer' => '',
             ],
         ], $options);
 

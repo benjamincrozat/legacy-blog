@@ -63,11 +63,11 @@
                 Instantly migrate your tests to Pest for free
             </x-menu-item>
 
-            <x-menu-item href="https://github.com/benjamincrozat/benjamincrozat.com" target="_blank" rel="nofollow noopener noreferrer" icon="o-code-bracket">
+            <x-menu-item href="https://github.com/benjamincrozat/benjamincrozat.com" target="_blank" rel="nofollow noopener" icon="o-code-bracket">
                 Hack in my blog's source code
             </x-menu-item>
 
-            <x-menu-item href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=30d&scale=day" target="_blank" rel="nofollow noopener noreferrer" icon="o-chart-pie">
+            <x-menu-item href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=30d&scale=day" target="_blank" rel="nofollow noopener" icon="o-chart-pie">
                 Look at my blog's live analytics
             </x-menu-item>
         </x-menu>
@@ -90,7 +90,7 @@
                 About
             </x-menu-item>
 
-            <x-menu-item href="https://x.com/benjamincrozat" target="_blank" rel="nofollow noopener noreferrer">
+            <x-menu-item href="https://x.com/benjamincrozat" target="_blank" rel="nofollow noopener">
                 <x-icon-x class="flex-shrink-0 w-5 h-5 translate-y-[.5px]" />
                 Follow me on X
             </x-menu-item>

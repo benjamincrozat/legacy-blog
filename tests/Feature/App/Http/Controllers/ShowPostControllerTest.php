@@ -39,12 +39,12 @@ test('a given published post is shown correctly and the page view is tracked', f
     $view
         ->first("a[href=\"https://github.com/{$post->user->github_handle}\"]")
         ->hasAttribute('target', '_blank')
-        ->hasAttribute('rel', 'nofollow noopener noreferrer');
+        ->hasAttribute('rel', 'nofollow noopener');
 
     $view
         ->first("a[href=\"https://x.com/{$post->user->x_handle}\"]")
         ->hasAttribute('target', '_blank')
-        ->hasAttribute('rel', 'nofollow noopener noreferrer');
+        ->hasAttribute('rel', 'nofollow noopener');
 
     $post->recommendations->each(function (Post $post) use ($view) {
         $view->contains($post->title);
@@ -77,12 +77,12 @@ test('a given published community post is shown correctly', function () {
     $view
         ->first("h1 a[href=\"$post->community_link\"]")
         ->hasAttribute('target', '_blank')
-        ->hasAttribute('rel', 'noopener noreferrer');
+        ->hasAttribute('rel', 'noopener');
 
     $view
         ->last("a[href=\"$post->community_link\"]")
         ->hasAttribute('target', '_blank')
-        ->hasAttribute('rel', 'noopener noreferrer');
+        ->hasAttribute('rel', 'noopener');
 
     $view->doesNotContain($post->user->name);
 
