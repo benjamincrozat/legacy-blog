@@ -27,6 +27,15 @@ uses(TestCase::class, LazilyRefreshDatabase::class)
             return $this;
         });
 
+        ViewAssertion::macro('doesNotHaveAttribute', function (string $attribute) {
+            Assert::assertEmpty(
+                $this->getRootElement()->getAttribute($attribute),
+                "Failed asserting that the {$attribute} does not exist within `{$this->html}`."
+            );
+
+            return $this;
+        });
+
         activity()->disableLogging();
 
         withoutMiddleware(TrackPageView::class);
