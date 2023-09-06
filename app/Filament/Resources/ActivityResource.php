@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use Filament\Forms;
 use Filament\Tables;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
@@ -21,7 +22,25 @@ class ActivityResource extends Resource
     public static function form(Form $form) : Form
     {
         return $form
-            ->schema([]);
+            ->schema([
+                Forms\Components\TextInput::make('log_name'),
+
+                Forms\Components\Textarea::make('description')
+                    ->columnSpanFull(),
+
+                Forms\Components\TextInput::make('subject_type'),
+
+                Forms\Components\TextInput::make('event'),
+
+                Forms\Components\TextInput::make('subject_id'),
+
+                Forms\Components\TextInput::make('causer_type'),
+
+                Forms\Components\TextInput::make('causer_id'),
+
+                Forms\Components\Textarea::make('properties')
+                    ->columnSpanFull(),
+            ]);
     }
 
     public static function table(Table $table) : Table
@@ -84,6 +103,7 @@ class ActivityResource extends Resource
     {
         return [
             'index' => Pages\ListActivities::route('/'),
+            'view' => Pages\ViewActivity::route('/{record}'),
         ];
     }
 }
