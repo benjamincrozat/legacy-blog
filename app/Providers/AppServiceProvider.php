@@ -43,15 +43,17 @@ class AppServiceProvider extends ServiceProvider
         View::composer(['components.navigation', 'home'], function ($view) {
             static $categories;
 
-            $view->with([
-                // If the static variable declared above has already been set, use it. Otherwise, set it.
-                // This prevents the query from being run multiple times on the same request.
-                'categories' => $categories ??= Category::with('latestPosts')
+            // If the static variable declared above has already been set, use it. Otherwise, set it.
+            // This prevents the query from being run multiple times on the same request.
+            $categories ??= cache()->remember('categories', 60 * 60 * 24, function () {
+                return Category::with('latestPosts')
                     ->whereHas('posts')
                     ->orderBy('is_highlighted', 'desc')
                     ->orderBy('name')
-                    ->get(),
-            ]);
+                    ->get();
+            });
+
+            $view->with(compact('categories'));
         });
     }
 }

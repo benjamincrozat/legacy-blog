@@ -30,7 +30,7 @@ trait HasRecommendations
             } catch (Exception $e) {
                 // Whenever the API throws an error, we silently report it.
                 report($e);
-            } finally {
+
                 // But we always return a random set of posts, which is better than nothing.
                 return static::query()
                     ->with('categories')
