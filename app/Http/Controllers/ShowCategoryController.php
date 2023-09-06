@@ -11,7 +11,7 @@ class ShowCategoryController extends Controller
     {
         return view('categories.show', compact('category') + [
             'related' => $category->related()->orderBy('name')->get(),
-            'posts' => $category->posts()->latest()->published()->paginate(30),
+            'posts' => $category->posts()->with('categories')->latest()->published()->paginate(30),
         ]);
     }
 }
