@@ -197,7 +197,7 @@
         </x-slot:title>
 
         <x-prose class="mt-8 text-xl prose-invert">
-            <x-about />
+            {!! Str::markdown(file_get_contents(resource_path('markdown/about.md'))) !!}
         </x-prose>
     </x-section>
 </x-app>

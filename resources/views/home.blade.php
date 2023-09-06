@@ -1,7 +1,7 @@
 <x-app
     title="Learn about Laravel and its ecosystem."
 >
-    <x-section class="mt-12 text-center">
+    <x-section class="mt-16 text-center">
         <x-slot:title tag="h1" class="container font-bold text-center text-3xl/none md:text-4xl/none lg:text-5xl/none">
             <div class="flex items-center justify-center gap-4 mt-8 md:gap-8">
                 <x-icon-laravel class="h-10 md:h-[3.25rem]" />
@@ -122,7 +122,7 @@
         </x-slot:title>
 
         <x-prose class="mt-8">
-            <x-about />
+            {!! Str::markdown(file_get_contents(resource_path('markdown/about.md'))) !!}
         </x-prose>
     </x-section>
 </x-app>

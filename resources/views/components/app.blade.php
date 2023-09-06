@@ -93,7 +93,7 @@
     ]) }}>
         <div class="flex flex-col min-h-screen">
             @empty($hideNavigation)
-                <x-navigation />
+                <x-navigation class="mt-4" />
             @endempty
 
             @auth

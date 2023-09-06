@@ -2,7 +2,7 @@
     title="Learn about {{ $category->name }}"
     :description="$category->description"
 >
-    <div class="mt-4">
+    <div class="mt-16">
         <x-breadcrumb class="container lg:max-w-screen-md">
             {{ $category->name }}
         </x-breadcrumb>
