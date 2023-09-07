@@ -12,5 +12,7 @@ class DisablePrimaryKeyRequirement
     public function handle(MigrationsStarted $event) : void
     {
         DB::statement('SET SESSION sql_require_primary_key = 0');
+
+        activity()->disableLogging();
     }
 }
