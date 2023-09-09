@@ -112,9 +112,18 @@ class PostResource extends Resource
                         ->searchable()
                         ->default(auth()->id()),
 
-                    Forms\Components\TextInput::make('image')
-                        ->url()
-                        ->maxLength(255),
+                    SpatieMediaLibraryFileUpload::make('image')
+                        ->collection('image')
+                        ->conversion('optimized')
+                        ->disk('media-library')
+                        ->downloadable()
+                        ->imageCropAspectRatio('16:9')
+                        ->imageEditor()
+                        ->imageResizeMode('cover')
+                        ->imageResizeTargetHeight('1080')
+                        ->imageResizeTargetWidth('1920')
+                        ->multiple()
+                        ->visibility('public'),
 
                     Forms\Components\Textarea::make('description')
                         ->maxLength(65535)
@@ -151,26 +160,6 @@ class PostResource extends Resource
                 ->collapsible()
                 ->columnSpan([
                     'lg' => 1,
-                ]),
-
-            Forms\Components\Section::make()
-                ->schema([
-                    SpatieMediaLibraryFileUpload::make('images')
-                        ->collection('images')
-                        ->conversion('optimized')
-                        ->disk('media-library')
-                        ->downloadable()
-                        ->imageCropAspectRatio('16:9')
-                        ->imageEditor()
-                        ->imageResizeMode('cover')
-                        ->imageResizeTargetHeight('1080')
-                        ->imageResizeTargetWidth('1920')
-                        ->multiple()
-                        ->visibility('public'),
-                ])
-                ->columnSpan([
-                    'md' => 1,
-                    'lg' => 2,
                 ]),
         ];
     }
