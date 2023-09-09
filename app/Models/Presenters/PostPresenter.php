@@ -17,17 +17,14 @@ class PostPresenter extends BasePresenter
         return str_replace('/upload', '/upload/dpr_auto,f_auto,q_auto,w_256', $this->model->image);
     }
 
-    public function image() : string
+    public function image() : ?string
     {
-        if (! Str::startsWith($this->model->image, 'https://res.cloudinary.com')) {
-            return $this->model->image;
-        }
+        return $this->model->getFirstMedia('image')?->getAvailableFullUrl(['optimized']);
+    }
 
-        if (str_contains($this->model->image, '/dpr_auto,f_auto,q_auto,w_auto')) {
-            return $this->model->image;
-        }
-
-        return str_replace('/upload', '/upload/dpr_auto,f_auto,q_auto,w_auto', $this->model->image);
+    public function imagePreview() : ?string
+    {
+        return $this->model->getFirstMedia('image')?->getAvailableFullUrl(['preview']);
     }
 
     public function tree() : array

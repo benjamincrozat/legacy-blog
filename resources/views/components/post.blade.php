@@ -37,11 +37,7 @@
                 href="{{ $post->community_link ? $post->community_link : route('posts.show', $post) }}"
                 class="flex-shrink-0"
             >
-                @if ($post->image)
-                    <img src="{{ $post->presenter()->thumbnail() }}" alt="{{ $post->title }}" class="object-cover aspect-square w-[64px] lg:w-[96px] h-[64px] lg:h-[96px]" />
-                @else
-                    <x-icon-post-image-placeholder class="w-[64px] lg:w-[96px] h-[64px] lg:h-[96px]" />
-                @endif
+                <img src="{{ $post->presenter()->image() }}" alt="{{ $post->title }}" class="object-cover aspect-square w-[64px] lg:w-[96px] h-[64px] lg:h-[96px]" />
             </a>
     </div>
 

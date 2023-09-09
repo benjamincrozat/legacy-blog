@@ -1,7 +1,7 @@
 <x-app
     :title="$post->title"
     :description="$post->description"
-    :image="$post->image"
+    :image="$post->presenter()->image()"
     :canonical="$post->community_link ?? null"
 >
     <div class="container mt-16 lg:max-w-screen-md">
@@ -59,9 +59,7 @@
                     <x-tree :tree="$tree" />
                 @endif
 
-                @if ($post->image)
-                    <img src="{{ $post->presenter()->image() }}" alt="{{ $post->title }}" class="w-full" />
-                @endif
+                <img src="{{ $post->presenter()->image() }}" alt="{{ $post->title }}" class="w-full" />
 
                 {!! $post->presenter()->content() !!}
 

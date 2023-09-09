@@ -3,17 +3,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="description" content="{{ $description ?? 'Join more than 30,000 readers and skyrocket your web development skills.' }}" />
     <meta property="og:title" content="{{ $title ?? config('app.name') }}" />
-    @if (! empty($image))
-        <meta property="og:image" content="{{ $image ?? 'https://i.useflipp.com/gw6mxpkgy4v8.png?watermark=useflipp.com&title=' . urlencode($title) . '&body=' . urlencode($description) }}" />
-    @endif
+    <meta property="og:image" content="{{ $image ?? 'https://i.useflipp.com/gw6mxpkgy4v8.png?watermark=useflipp.com&title=' . urlencode($title ?? '') . '&body=' . urlencode($description ?? '') }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ url()->current() }}" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:creator" content="@benjamincrozat" />
     <meta name="twitter:description" content="{{ $description ?? 'Join more than 30,000 readers and skyrocket your web development skills.' }}" />
-    @if (! empty($image))
-        <meta name="twitter:image" content="{{ $image ?? 'https://i.useflipp.com/gw6mxpkgy4v8.png?watermark=useflipp.com&title=' . urlencode($title) . '&body=' . urlencode($description) }}" />
-    @endif
+    <meta name="twitter:image" content="{{ $image ?? 'https://i.useflipp.com/gw6mxpkgy4v8.png?watermark=useflipp.com&title=' . urlencode($title ?? '') . '&body=' . urlencode($description ?? '') }}" />
     <meta name="twitter:title" content="{{ $title ?? config('app.name') }}" />
 
     <title>{{ $title ?? config('app.name') }}</title>

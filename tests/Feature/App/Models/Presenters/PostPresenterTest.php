@@ -2,13 +2,12 @@
 
 use App\Models\Post;
 
-it('presents the image with the right Cloudinary parameters', function () {
-    $post = Post::factory()->create([
-        'image' => 'https://res.cloudinary.com/foo/image/upload/v123/image',
-    ]);
+it('presents the image', function () {
+    ($post = Post::factory()->create())
+        ->addMediaFromUrl(fake()->imageUrl(50, 50))
+        ->toMediaCollection('image');
 
-    expect($post->presenter()->image())
-        ->toBe('https://res.cloudinary.com/foo/image/upload/dpr_auto,f_auto,q_auto,w_auto/v123/image');
+    expect($post->presenter()->image())->not->toBeNull();
 });
 
 it('presents the community link domain', function () {
