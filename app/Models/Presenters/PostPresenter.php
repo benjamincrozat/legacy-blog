@@ -19,12 +19,12 @@ class PostPresenter extends BasePresenter
 
     public function image() : ?string
     {
-        return $this->model->getFirstMedia('image')?->getAvailableFullUrl(['optimized']);
+        return $this->model->getFirstMedia('image')?->getAvailableFullUrl(['optimized']) ?? 'https://i.useflipp.com/gw6mxpkgy4v8.png?watermark=useflipp.com&title=' . urlencode($this->model->title ?? '') . '&body=' . urlencode($this->model->description ?? '');
     }
 
     public function imagePreview() : ?string
     {
-        return $this->model->getFirstMedia('image')?->getAvailableFullUrl(['preview']);
+        return $this->model->getFirstMedia('image')?->getAvailableFullUrl(['preview']) ?? 'https://i.useflipp.com/gw6mxpkgy4v8.png?watermark=useflipp.com&title=' . urlencode($this->model->title ?? '') . '&body=' . urlencode($this->model->description ?? '');
     }
 
     public function tree() : array
