@@ -122,7 +122,6 @@ class PostResource extends Resource
                         ->imageResizeMode('cover')
                         ->imageResizeTargetHeight('1080')
                         ->imageResizeTargetWidth('1920')
-                        ->multiple()
                         ->visibility('public'),
 
                     Forms\Components\Textarea::make('description')
