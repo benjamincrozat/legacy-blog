@@ -28,13 +28,13 @@ it('checks the boxes for technical SEO', function () {
     $view
         ->hasMeta([
             'name' => 'twitter:image',
-            'content' => 'https://i.useflipp.com/gw6mxpkgy4v8.png?watermark=useflipp.com&title=' . urlencode($post->title) . '&body=' . urlencode($post->description),
+            'content' => 'https://via.placeholder.com/640x480.png/003344?text=Image%20not%20set.',
         ]);
 
     $view
         ->hasMeta([
             'property' => 'og:image',
-            'content' => 'https://i.useflipp.com/gw6mxpkgy4v8.png?watermark=useflipp.com&title=' . urlencode($post->title) . '&body=' . urlencode($post->description),
+            'content' => 'https://via.placeholder.com/640x480.png/003344?text=Image%20not%20set.',
         ]);
 
     $view
