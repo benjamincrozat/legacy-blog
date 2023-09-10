@@ -104,6 +104,15 @@ class PostResource extends Resource
                         ->maxLength(65535)
                         ->columnSpanFull()
                         ->helperText('An overview of the article used in the feed with the intent to entice readers to click through.'),
+
+                    SpatieMediaLibraryFileUpload::make('images')
+                        ->collection('images')
+                        ->conversion('optimized')
+                        ->disk('media-library')
+                        ->downloadable()
+                        ->imageEditor()
+                        ->imageResizeMode('cover')
+                        ->visibility('public'),
                 ])
                 ->collapsible()
                 ->columnSpan([
