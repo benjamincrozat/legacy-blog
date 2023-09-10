@@ -21,7 +21,12 @@ trait HasLocalScopes
 
     public function scopePublished(Builder $query) : void
     {
-        $query->where('is_published', true);
+        $query->where('published_at', '<=', now());
+    }
+
+    public function scopeUnpublished(Builder $query) : void
+    {
+        $query->whereNull('published_at')->orWhere('published_at', '>', now());
     }
 
     public function scopeWithUser(Builder $query) : void

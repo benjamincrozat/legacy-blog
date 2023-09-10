@@ -12,7 +12,7 @@ class DatabaseSeeder extends Seeder
     {
         Category::factory(10)
             // Users also are created in posts.
-            ->hasPosts(10, ['is_published' => true])
+            ->hasPosts(10, ['published_at' => now()])
             ->createQuietly();
 
         Merchant::factory(10)->create();

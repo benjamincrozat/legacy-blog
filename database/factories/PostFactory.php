@@ -30,7 +30,7 @@ class PostFactory extends Factory
 
     public function published() : static
     {
-        return $this->state(fn () : array => ['is_published' => true]);
+        return $this->state(fn () : array => ['published_at' => now()]);
     }
 
     public function asCommunityLink() : static

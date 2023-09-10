@@ -11,7 +11,7 @@ test('the homepage works and displays the categories along with published posts 
             ['is_highlighted' => false],
             ['is_highlighted' => false],
         )
-        ->hasPosts(5, ['is_published' => true])
+        ->hasPosts(5, ['published_at' => now()])
         ->create();
 
     $categories = get(route('home'))

@@ -39,7 +39,7 @@
                         <h1>{{ $post->title }}</h1>
                     @endif
 
-                    @if ($post->is_published)
+                    @if ($post->published_at)
                         <p class="-mt-6 opacity-75">
                             @if ($post->community_link)
                                 Shared on

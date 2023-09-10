@@ -62,7 +62,7 @@ class PostResource extends Resource
                         ->excludeAttributes(['slug'])
                         ->beforeReplicaSaved(function (Model $replica) : void {
                             $replica->slug = Str::random(6);
-                            $replica->is_published = false;
+                            $replica->published_at = null;
                         }),
                     static::getGenerateDescriptionAction(),
                     static::getGenerateTeaserAction(),
@@ -154,11 +154,12 @@ class PostResource extends Resource
                         ->label('Is a commercial article')
                         ->helperText('If checked, the UI will focus on conversion.'),
 
-                    Forms\Components\Toggle::make('is_published')
-                        ->label('Is published')
-                        ->helperText('When unchecked, the article is considered as a draft.'),
+                    Forms\Components\DateTimePicker::make('published_at')
+                        ->timezone('UTC')
+                        ->helperText('When not set, the article is considered as a draft.'),
 
-                    Forms\Components\DatePicker::make('manually_updated_at'),
+                    Forms\Components\DatePicker::make('manually_updated_at')
+                        ->timezone('UTC'),
 
                     Forms\Components\Group::make()
                         ->schema([

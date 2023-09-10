@@ -9,7 +9,7 @@ use Illuminate\Pagination\LengthAwarePaginator;
 
 test('a given category is shown and contains all its published posts', function () {
     $category = Category::factory()
-        ->hasPosts(3, ['is_published' => true])
+        ->hasPosts(3, ['published_at' => now()])
         ->hasRelated(3)
         ->create();
 

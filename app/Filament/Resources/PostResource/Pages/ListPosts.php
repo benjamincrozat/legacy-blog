@@ -22,9 +22,9 @@ class ListPosts extends ListRecords
     {
         return [
             'Published' => ListRecords\Tab::make()
-                ->query(fn (Builder $query) => $query->where('is_published', true)),
+                ->query(fn (Builder $query) => $query->published()),
             'Draft' => ListRecords\Tab::make()
-                ->query(fn (Builder $query) => $query->where('is_published', false)),
+                ->query(fn (Builder $query) => $query->unpublished()),
         ];
     }
 }

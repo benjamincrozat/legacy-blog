@@ -19,12 +19,33 @@ class PostPresenter extends BasePresenter
 
     public function image() : ?string
     {
-        return $this->model->getFirstMedia('image')?->getAvailableFullUrl(['optimized']) ?? 'https://i.useflipp.com/gw6mxpkgy4v8.png?watermark=useflipp.com&title=' . urlencode($this->model->title ?? '') . '&body=' . urlencode($this->model->description ?? '');
+        $media = $this->model->getFirstMedia('image');
+
+        if (app()->isProduction() && ! $media) {
+            return $this->fallbackImage();
+        } elseif (! $media) {
+            return 'https://via.placeholder.com/640x480.png/003344?text=Image%20not%20set.';
+        }
+
+        return $media->getAvailableFullUrl(['optimized']);
     }
 
     public function imagePreview() : ?string
     {
-        return $this->model->getFirstMedia('image')?->getAvailableFullUrl(['preview']) ?? 'https://i.useflipp.com/gw6mxpkgy4v8.png?watermark=useflipp.com&title=' . urlencode($this->model->title ?? '') . '&body=' . urlencode($this->model->description ?? '');
+        $media = $this->model->getFirstMedia('image');
+
+        if (app()->isProduction() && ! $media) {
+            return $this->fallbackImage();
+        } elseif (! $media) {
+            return 'https://via.placeholder.com/300x300.png/003344?text=Image%20not%20set.';
+        }
+
+        return $media->getAvailableFullUrl(['preview']);
+    }
+
+    public function fallbackImage() : string
+    {
+        return 'https://i.useflipp.com/gw6mxpkgy4v8.png?watermark=useflipp.com&title=' . urlencode($this->model->title ?? '') . '&body=' . urlencode($this->model->description ?? '');
     }
 
     public function tree() : array
