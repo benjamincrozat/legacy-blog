@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Str;
 use Filament\Forms;
 use App\Models\Post;
 use Filament\Tables;
@@ -57,6 +58,12 @@ class PostResource extends Resource
             ])
             ->actions([
                 Tables\Actions\ActionGroup::make([
+                    Tables\Actions\ReplicateAction::make()
+                        ->excludeAttributes(['slug'])
+                        ->beforeReplicaSaved(function (Model $replica) : void {
+                            $replica->slug = Str::random(6);
+                            $replica->is_published = false;
+                        }),
                     static::getGenerateDescriptionAction(),
                     static::getGenerateTeaserAction(),
                 ]),
