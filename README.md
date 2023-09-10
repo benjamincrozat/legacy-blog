@@ -87,10 +87,10 @@ Migrate the database with some fake data:
 php artisan migrate --seed
 ```
 
-Install the frontend dependencies and build the assets:
+Install the frontend dependencies and build the assets using [Bun](https://bun.sh) (use NPM or Yarn if you prefer):
 
 ```bash
-yarn && yarn build
+bun install && bun run build
 ```
 
 ## Testing
