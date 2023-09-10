@@ -74,15 +74,7 @@ class Post extends BaseModel implements Feedable, HasMedia
             ])
             ->singleFile();
 
-        $this
-            ->addMediaCollection('images')
-            ->acceptsMimeTypes([
-                'image/gif',
-                'image/jpeg',
-                'image/png',
-                'image/svg+xml',
-                'image/webp',
-            ]);
+        $this->addMediaCollection('images');
     }
 
     public function registerMediaConversions(Media $media = null) : void
