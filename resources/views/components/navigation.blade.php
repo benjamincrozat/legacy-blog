@@ -1,7 +1,7 @@
 <nav {{ $attributes->merge(['class' => 'container relative flex items-center justify-between sm:static lg:max-w-screen-md']) }}>
     <a wire:navigate.hover href="/">
         <span class="sr-only">{{ config('app.name') }}</span>
-        <x-icon-logo class="w-8 h-8 fill-current md:w-10 md:h-10" />
+        <x-icon-logo class="w-8 h-8 transition-transform duration-[400ms] ease-in-out fill-current group hover:rotate-45 md:w-10 md:h-10" />
     </a>
 
     <div class="flex items-center gap-6 sm:gap-7 md:gap-8">
