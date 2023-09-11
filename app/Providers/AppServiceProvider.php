@@ -8,18 +8,13 @@ use Illuminate\Foundation\Application;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
 use Algolia\AlgoliaSearch\RecommendClient;
-use League\CommonMark\Extension\Embed\EmbedExtension;
-use Spatie\CommonMarkShikiHighlighter\HighlightCodeExtension;
 
 class AppServiceProvider extends ServiceProvider
 {
     public function register() : void
     {
-        // These are registered in the container because I swap
-        // them up during testing to speed everything up.
-
-        $this->app->bind(EmbedExtension::class, fn () => new EmbedExtension);
-        $this->app->bind(HighlightCodeExtension::class, fn () => new HighlightCodeExtension('github-dark'));
+        // This is registered in the container because I swap
+        // it up during testing to avoid real API calls.
         $this->app->bind(RecommendClient::class, fn (Application $app) => RecommendClient::create(
             $app['config']->get('scout.algolia.id'),
             $app['config']->get('scout.algolia.secret')
