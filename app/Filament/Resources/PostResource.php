@@ -112,6 +112,7 @@ class PostResource extends Resource
                         ->downloadable()
                         ->imageEditor()
                         ->imageResizeMode('cover')
+                        ->multiple()
                         ->visibility('public'),
                 ])
                 ->collapsible()
