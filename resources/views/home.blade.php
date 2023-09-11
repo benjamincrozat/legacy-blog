@@ -20,29 +20,34 @@
 
         <p class="mt-16 text-lg font-medium sm:text-xl">Deep gratitude to the sponsors who back&nbsp;me!</p>
 
-        <div class="container grid grid-cols-2 gap-4 mt-8 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 place-items-center md:gap-6 lg:gap-8">
+        <div class="container flex flex-wrap items-stretch gap-4 mt-8 text-sm text-left">
             <a
                 href="https://useflipp.com/?utm_campaign=sponsorship&utm_source=benjamincrozat.com&utm_medium=logolink"
                 target="_blank"
                 rel="noopener"
+                class="flex flex-col w-full p-4 transition-colors rounded md:px-8 md:flex-1 bg-gray-100/50 hover:bg-blue-50 md:py-7 sm:w-auto"
             >
-                <img loading="lazy" src="{{ Vite::asset('resources/img/flipp.png') }}" alt="Flipp" class="h-7" />
-                <span class="sr-only">Flipp</span>
+                <div class="flex items-end flex-grow">
+                    <img loading="lazy" src="{{ Vite::asset('resources/img/flipp.png') }}" alt="Flipp" class="inline h-8" />
+                </div>
+                <p class="sr-only">Flipp</p>
+                <p class="mt-4 font-bold">Flipp</p>
+                <p class="text-gray-600">Image generation through API.</p>
             </a>
 
             <a
                 href="https://redirect.pizza/?utm_source=benjamincrozat.com&utm_medium=logo&utm_campaign=sponsorship"
                 target="_blank"
                 rel="noopener"
+                class="flex flex-col w-full p-4 transition-colors rounded md:px-8 md:flex-1 bg-gray-100/50 hover:bg-blue-50 md:py-7 sm:w-auto"
             >
-                <img loading="lazy" src="{{ Vite::asset('resources/img/redirect-pizza.png') }}" alt="redirect.pizza" class="h-8 sm:h-10" />
-                <span class="sr-only">redirect.pizza</span>
+                <div class="flex items-end flex-grow">
+                    <img loading="lazy" src="{{ Vite::asset('resources/img/redirect-pizza.png') }}" alt="redirect.pizza" class="inline h-9 md:h-10" />
+                </div>
+                <p class="sr-only">redirect.pizza</p>
+                <p class="mt-4 font-bold">redirect.pizza</p>
+                <p class="text-gray-600">Domain redirects delivered hassle-free.</p>
             </a>
-
-            <x-icon-dashed-circle class="w-12 h-12 md:w-14 md:h-14 opacity-10" />
-            <x-icon-dashed-circle class="w-12 h-12 md:w-14 md:h-14 opacity-10" />
-            <x-icon-dashed-circle class="w-12 h-12 md:w-14 md:h-14 opacity-10" />
-            <x-icon-dashed-circle class="w-12 h-12 md:w-14 md:h-14 opacity-10" />
         </div>
 
         <div class="mt-8 text-center">
