@@ -66,10 +66,6 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" />
-
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-
     <x-feed-links />
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ Vite::asset('resources/img/apple-touch-icon.jpg') }}" />
@@ -80,11 +76,16 @@
 
     <link rel="canonical" href="{{ $canonical ?? url()->current() }}" />
 
-    <body {{ $attributes->except(['description', 'image', 'title', 'canonical'])->merge([
-        'class' => 'bg-gray-50 font-light',
-        'x-data' => '{}',
-        'x-init' => '$nextTick(() => document.querySelectorAll(\'pre code\').forEach(el => hljs.highlightElement(el)))',
-    ]) }}>
+    <body
+        {{ $attributes->except(['description', 'image', 'title', 'canonical'])->merge([
+            'class' => 'bg-gray-50 font-light',
+        ]) }}
+        x-data="{}"
+        x-init="$nextTick(
+            () => document.querySelectorAll('pre code').forEach(
+                el => hljs.highlightElement(el)
+            )
+        )">
         <div class="flex flex-col min-h-screen">
             @empty($hideNavigation)
                 <x-navigation class="mt-4" />
