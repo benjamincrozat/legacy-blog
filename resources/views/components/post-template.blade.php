@@ -3,8 +3,7 @@
         <div class="flex-grow">
             <p class="font-bold">
                 <a
-                    wire:navigate.hover
-                    href="{{ route('media-kit') }}"
+                    href="{{ route('media-kit') }}#write"
                     class="text-orange-400 underline"
                 >
                     {{ $title }}
@@ -17,8 +16,7 @@
         </div>
 
         <a
-            wire:navigate.hover
-            href="{{ route('media-kit') }}"
+            href="{{ route('media-kit') }}#write"
             class="flex-shrink-0"
         >
             <img src="{{ fake()->imageUrl() }}" class="object-cover aspect-square w-[64px] lg:w-[96px] h-[64px] lg:h-[96px]" />
@@ -28,8 +26,7 @@
     <ul class="flex gap-1 mt-4">
         <li>
             <a
-                wire:navigate.hover
-                href="{{ route('media-kit') }}"
+                href="{{ route('media-kit') }}#write"
                 class="inline-block px-2 py-1 text-xs font-bold leading-normal text-white uppercase transition-opacity rounded bg-gradient-to-r from-orange-400 to-yellow-400 hover:opacity-75"
             >
                 Sponsored
@@ -37,13 +34,11 @@
         </li>
 
         <li>
-            <a
-                wire:navigate.hover
-                href="{{ route('media-kit') }}"
-                class="inline-block px-2 py-1 text-xs font-bold leading-normal text-white uppercase transition-opacity rounded bg-gray-200/50 hover:opacity-75"
+            <span
+                class="inline-block px-2 py-1 text-xs font-bold leading-normal text-white uppercase transition-opacity rounded cursor-default bg-gray-200/50 hover:opacity-75"
             >
                 <span class="opacity-0">Category</span>
-            </a>
+            </span>
         </li>
     </ul>
 </div>
