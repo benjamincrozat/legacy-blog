@@ -40,13 +40,11 @@ class AppServiceProvider extends ServiceProvider
 
             // If the static variable declared above has already been set, use it. Otherwise, set it.
             // This prevents the query from being run multiple times on the same request.
-            $categories ??= cache()->remember('categories', 60 * 60 * 24, function () {
-                return Category::with('latestPosts')
-                    ->whereHas('posts')
-                    ->orderBy('is_highlighted', 'desc')
-                    ->orderBy('name')
-                    ->get();
-            });
+            $categories ??= Category::with('latestPosts')
+                ->whereHas('posts')
+                ->orderBy('is_highlighted', 'desc')
+                ->orderBy('name')
+                ->get();
 
             $view->with(compact('categories'));
         });

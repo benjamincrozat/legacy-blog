@@ -1,5 +1,5 @@
 <x-app
-    title="Latest"
+    title="Latest articles"
 >
     <x-section class="container mt-16">
         <x-slot:title class="text-center">

@@ -24,7 +24,7 @@ class Category extends BaseModel
     {
         return $this
             ->posts()
-            ->with('categories')
+            ->with('categories', 'media')
             ->latest()
             ->published();
     }
