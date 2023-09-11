@@ -41,8 +41,7 @@ test('the categories creation component works', function () {
         ->fillForm($attributes = [
             'name' => fake()->word(),
             'slug' => fake()->slug(),
-            'long_description' => fake()->paragraph(),
-            'content' => fake()->paragraphs(3, true),
+            'description' => fake()->paragraph(),
         ])
         ->call('create')
         ->assertHasNoFormErrors();
@@ -75,8 +74,7 @@ test('the categories edit component works', function () {
         ->assertFormSet([
             'name' => $category->name,
             'slug' => $category->slug,
-            'long_description' => $category->long_description,
-            'content' => $category->content,
+            'description' => $category->description,
         ]);
 });
 

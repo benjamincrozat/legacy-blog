@@ -54,7 +54,7 @@
 
     <x-section class="container mt-32">
         <x-slot:title class="text-center">
-            Popular
+            Popular articles
         </x-slot:title>
 
         <ul class="grid gap-16 mt-8 md:grid-cols-2">

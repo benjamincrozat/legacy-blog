@@ -69,14 +69,6 @@ class CategoryResource extends Resource
                     Forms\Components\MarkdownEditor::make('description')
                         ->maxLength(65535)
                         ->columnSpanFull(),
-
-                    Forms\Components\MarkdownEditor::make('long_description')
-                        ->maxLength(65535)
-                        ->columnSpanFull(),
-
-                    Forms\Components\MarkdownEditor::make('content')
-                        ->maxLength(65535)
-                        ->columnSpanFull(),
                 ])
                 ->columns(2)
                 ->columnSpan([
@@ -129,7 +121,7 @@ class CategoryResource extends Resource
 
     public static function getGloballySearchableAttributes() : array
     {
-        return ['name', 'slug', 'description', 'long_description', 'content', 'primary_color', 'secondary_color'];
+        return ['name', 'slug', 'description', 'primary_color', 'secondary_color'];
     }
 
     public static function getRelations() : array

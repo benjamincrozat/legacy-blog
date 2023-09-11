@@ -4,9 +4,9 @@
     <x-section class="container mt-16">
         <x-slot:title class="text-center">
             @if ($posts->currentPage() > 1)
-                Page {{ $posts->currentPage() }}
+                Page {{ $posts->currentPage() }} of the latest articles
             @else
-                Latest
+                Latest articles
             @endif
         </x-slot:title>
 
