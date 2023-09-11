@@ -6,9 +6,7 @@ use League\CommonMark\Node\Node;
 use League\CommonMark\Node\Inline\Text;
 use League\CommonMark\MarkdownConverter;
 use League\CommonMark\Environment\Environment;
-use League\CommonMark\Extension\Embed\EmbedExtension;
 use League\CommonMark\Extension\CommonMark\Node\Inline\Link;
-use Spatie\CommonMarkShikiHighlighter\HighlightCodeExtension;
 use League\CommonMark\Extension\CommonMark\Node\Block\Heading;
 use League\CommonMark\Extension\Attributes\AttributesExtension;
 use League\CommonMark\Extension\SmartPunct\SmartPunctExtension;
@@ -45,14 +43,9 @@ class Str extends \Illuminate\Support\Str
         ], $options);
 
         $environment = (new Environment($options))
-            // This extension comes from the container so I can swap
-            // it at runtime when testing. Because it's quite slow.
-            ->addExtension(app(HighlightCodeExtension::class))
             ->addExtension(new AttributesExtension)
             ->addExtension(new CommonMarkCoreExtension)
             ->addExtension(new DefaultAttributesExtension)
-            // Same thing there.
-            ->addExtension(app(EmbedExtension::class))
             ->addExtension(new ExternalLinkExtension)
             ->addExtension(new GithubFlavoredMarkdownExtension)
             ->addExtension(new SmartPunctExtension)
