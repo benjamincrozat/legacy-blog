@@ -20,18 +20,18 @@
 
         <p class="mt-16 text-lg font-medium sm:text-xl">Deep gratitude to the sponsors who back&nbsp;me!</p>
 
-        <div class="container flex flex-wrap items-stretch gap-4 mt-8 text-sm text-left">
+        <div class="container grid gap-4 mt-8 text-sm sm:grid-cols-2 md:grid-cols-3">
             <a
                 href="https://useflipp.com/?utm_campaign=sponsorship&utm_source=benjamincrozat.com&utm_medium=logolink"
                 target="_blank"
                 rel="noopener"
-                class="flex flex-col w-full p-4 transition-colors rounded md:px-8 md:flex-1 bg-gray-100/50 hover:bg-blue-50 md:py-7 sm:w-auto"
+                class="flex flex-col w-full p-4 text-left transition-colors rounded bg-gray-100/75 md:px-8 hover:bg-blue-50 md:py-7"
             >
                 <div class="flex items-end flex-grow">
                     <img loading="lazy" src="{{ Vite::asset('resources/img/flipp.png') }}" alt="Flipp" class="inline h-8" />
                 </div>
                 <p class="sr-only">Flipp</p>
-                <p class="mt-4 font-bold">Flipp</p>
+                <p class="mt-4 font-medium">Flipp</p>
                 <p class="text-gray-600">Image generation through API.</p>
             </a>
 
@@ -39,19 +39,19 @@
                 href="https://redirect.pizza/?utm_source=benjamincrozat.com&utm_medium=logo&utm_campaign=sponsorship"
                 target="_blank"
                 rel="noopener"
-                class="flex flex-col w-full p-4 transition-colors rounded md:px-8 md:flex-1 bg-gray-100/50 hover:bg-blue-50 md:py-7 sm:w-auto"
+                class="flex flex-col p-4 text-left transition-colors rounded bg-gray-100/75 md:px-8 hover:bg-blue-50 md:py-7"
             >
                 <div class="flex items-end flex-grow">
                     <img loading="lazy" src="{{ Vite::asset('resources/img/redirect-pizza.png') }}" alt="redirect.pizza" class="inline h-9 md:h-10" />
                 </div>
                 <p class="sr-only">redirect.pizza</p>
-                <p class="mt-4 font-bold">redirect.pizza</p>
+                <p class="mt-4 font-medium">redirect.pizza</p>
                 <p class="text-gray-600">Domain redirects delivered hassle-free.</p>
             </a>
         </div>
 
         <div class="mt-8 text-center">
-            <a wire:navigate.hover href="{{ route('media-kit') }}" class="text-2xl sm:-ml-10 sm:text-3xl font-handwriting">
+            <a wire:navigate.hover href="{{ route('media-kit') }}" class="text-2xl sm:-ml-11 sm:text-3xl font-handwriting">
                 <x-icon-arrow-to-top-left class="inline w-8 h-8 -translate-y-3" /> <span class="underline decoration-1 underline-offset-2">Showcase your business too!</span>
             </a>
         </div>
