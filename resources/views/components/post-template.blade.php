@@ -1,13 +1,8 @@
-<div {{ $attributes->except('post') }}>
+<a href="{{ route('media-kit') }}#write" {{ $attributes->except('post') }}>
     <div class="flex items-start gap-6 lg:gap-8">
         <div class="flex-grow">
-            <p class="font-bold">
-                <a
-                    href="{{ route('media-kit') }}#write"
-                    class="text-orange-400 underline"
-                >
-                    {{ $title }}
-                </a>
+            <p class="font-bold text-orange-400 underline">
+                {{ $title }}
             </p>
 
             <p class="mt-2">{{ $description }}</p>
@@ -15,30 +10,24 @@
             <div class="h-[1rem] w-1/2 mt-4 mb-2 bg-gray-200/50"></div>
         </div>
 
-        <a
-            href="{{ route('media-kit') }}#write"
-            class="flex-shrink-0"
-        >
-            <div class="w-[64px] lg:w-[96px] h-[64px] lg:h-[96px] bg-gray-800"></div>
-        </a>
+        <div class="flex-shrink-0 w-[64px] lg:w-[96px] h-[64px] lg:h-[96px] bg-gray-800"></div>
     </div>
 
     <ul class="flex gap-1 mt-4">
         <li>
-            <a
-                href="{{ route('media-kit') }}#write"
-                class="inline-block px-2 py-1 text-xs font-bold leading-normal text-white uppercase transition-opacity rounded bg-gradient-to-r from-orange-400 to-yellow-400 hover:opacity-75"
+            <span
+                class="inline-block px-2 py-1 text-xs font-bold leading-normal text-white uppercase rounded bg-gradient-to-r from-orange-400 to-yellow-400"
             >
                 Sponsored
-            </a>
+            </span>
         </li>
 
         <li>
             <span
-                class="inline-block px-2 py-1 text-xs font-bold leading-normal text-white uppercase transition-opacity rounded cursor-default bg-gray-200/50 hover:opacity-75"
+                class="inline-block px-2 py-1 text-xs font-bold leading-normal text-white uppercase rounded bg-gray-200/50"
             >
                 <span class="opacity-0">Category</span>
             </span>
         </li>
     </ul>
-</div>
+</a>
