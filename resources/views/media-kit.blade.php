@@ -1,5 +1,6 @@
 <x-app
     title="Sponsor me and get your company in the spotlight."
+    description="More than 30,000 eager developers visit my blog each month. Why don't you introduce your brand?"
     :hide-navigation="true"
     :hide-footer="true"
     class="text-gray-300 bg-gray-900"
