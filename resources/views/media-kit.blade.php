@@ -229,7 +229,7 @@
                 </h3>
 
                 <p class="mt-2">
-                    <strong class="font-medium text-white">Backlinks are such an important ranking factor on Google.</strong> You want to accumulate as many as you can, and my blog is there to help you.
+                    <strong class="font-medium text-white">Links are such an important ranking factor on Google.</strong> You want to accumulate as many as you can, and my blog is there to help you.
                 </p>
             </div>
 

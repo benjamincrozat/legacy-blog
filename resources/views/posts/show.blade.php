@@ -129,7 +129,7 @@
             <li>
                 <x-post-template
                     title="Your sponsored article here"
-                    description="Talk about your business, stay on top of everything for a week, and get a valuable backlink for life."
+                    description="Talk about your business, stay on top of everything for a week, and get a valuable link for life."
                 />
             </li>
 
