@@ -10,7 +10,6 @@ use App\Models\Concerns\HasFeedItems;
 use App\Models\Concerns\LogsActivity;
 use App\Models\Concerns\HasLocalScopes;
 use App\Models\Presenters\PostPresenter;
-use App\Jobs\CacheRenderedPostAttributes;
 use App\Models\Concerns\HasRelationships;
 use App\Models\Concerns\HasRecommendations;
 use Spatie\MediaLibrary\InteractsWithMedia;
@@ -23,13 +22,6 @@ class Post extends BaseModel implements Feedable, HasMedia
     protected $casts = [
         'manually_updated_at' => 'date',
     ];
-
-    public static function booted() : void
-    {
-        static::saved(
-            fn (self $model) => CacheRenderedPostAttributes::dispatchAfterResponse($model)
-        );
-    }
 
     public function presenter() : PostPresenter
     {

@@ -27,19 +27,6 @@ class User extends Authenticatable implements FilamentUser
         'email_verified_at' => 'datetime',
     ];
 
-    public static function booted() : void
-    {
-        static::saved(function (self $model) {
-            $pending = dispatch(function () use ($model) {
-                $model->presenter()->description();
-            });
-
-            if (! app()->runningUnitTests()) {
-                $pending->afterResponse();
-            }
-        });
-    }
-
     public function presenter() : UserPresenter
     {
         return new UserPresenter($this);
