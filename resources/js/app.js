@@ -2,6 +2,7 @@ import 'highlight.js/styles/github-dark.css'
 import hljs from 'highlight.js/lib/core'
 import bash from 'highlight.js/lib/languages/bash'
 import blade from 'highlightjs-blade'
+import css from 'highlight.js/lib/languages/css'
 import diff from 'highlight.js/lib/languages/diff'
 import javascript from 'highlight.js/lib/languages/javascript'
 import json from 'highlight.js/lib/languages/json'
@@ -15,6 +16,7 @@ import.meta.glob([
 
 hljs.registerLanguage('bash', bash)
 hljs.registerLanguage('blade', blade)
+hljs.registerLanguage('css', css)
 hljs.registerLanguage('diff', diff)
 hljs.registerLanguage('javascript', javascript)
 hljs.registerLanguage('json', json)
