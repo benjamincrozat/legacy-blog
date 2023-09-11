@@ -68,23 +68,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" />
 
-    @if (config('services.adsense.enabled') && app()->isProduction())
-        <script
-            async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461630254419592"
-            crossorigin="anonymous"
-        ></script>
-    @endif
-
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('pre code').forEach(el => hljs.highlightElement(el))
-        })
-
-        document.addEventListener('livewire:navigated', () => {
-            document.querySelectorAll('pre code').forEach(el => hljs.highlightElement(el))
-        })
-    </script>
 
     <x-feed-links />
 
@@ -99,6 +83,7 @@
     <body {{ $attributes->except(['description', 'image', 'title', 'canonical'])->merge([
         'class' => 'bg-gray-50 font-light',
         'x-data' => '{}',
+        'x-init' => '$nextTick(() => document.querySelectorAll(\'pre code\').forEach(el => hljs.highlightElement(el)))',
     ]) }}>
         <div class="flex flex-col min-h-screen">
             @empty($hideNavigation)
