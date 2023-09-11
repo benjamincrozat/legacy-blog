@@ -18,9 +18,7 @@
             Join more than <span class="font-semibold text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">30,000</span> readers and skyrocket your web&nbsp;development&nbsp;skills.
         </p>
 
-        <x-divider />
-
-        <p class="text-lg font-medium sm:text-xl">Deep gratitude to the sponsors who back&nbsp;me!</p>
+        <p class="mt-16 text-lg font-medium sm:text-xl">Deep gratitude to the sponsors who back&nbsp;me!</p>
 
         <div class="container grid grid-cols-2 gap-4 mt-8 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 place-items-center md:gap-6 lg:gap-8">
             <a
@@ -52,12 +50,24 @@
                 <x-icon-arrow-to-top-left class="inline w-8 h-8 -translate-y-3" /> <span class="underline decoration-1 underline-offset-2">Showcase your business too!</span>
             </a>
         </div>
+    </x-section>
 
-        <x-divider />
+    <x-section class="container mt-32">
+        <x-slot:title class="text-center">
+            Popular
+        </x-slot:title>
+
+        <ul class="grid gap-16 mt-8 md:grid-cols-2">
+            @foreach ($posts as $post)
+                <li>
+                    <x-post :post="$post" />
+                </li>
+            @endforeach
+        </ul>
     </x-section>
 
     @if ($categories->isNotEmpty())
-        <x-section class="container">
+        <x-section class="container mt-32">
             <x-slot:title class="text-center">
                 An endless amount of content for web&nbsp;developers.
             </x-slot:title>
@@ -72,51 +82,9 @@
         </x-section>
     @endif
 
-    <x-divider />
+    <x-newsletter class="mt-32" />
 
-    <x-newsletter />
-
-    <x-divider />
-
-    @foreach ($categories as $category)
-        <x-section class="mt-16">
-            <x-slot:title class="container lg:max-w-screen-md">
-                <div class="flex items-center gap-4">
-                    <a wire:navigate.hover href="{{ route('categories.show', $category) }}" class="flex-shrink-0">
-                        <x-category-icon :category="$category" />
-                    </a>
-
-                    <span>
-                        Learn about <span class="text-{{ $category->presenter()->primaryColor() }}">{{ $category->name }}</span>
-                    </span>
-                </div>
-            </x-slot:title>
-
-            <div class="container mt-4 lg:max-w-screen-md">
-                <x-prose>
-                    {!! $category->presenter()->longDescription() !!}
-                </x-prose>
-            </div>
-
-            <ul class="container grid gap-8 mt-16 md:gap-16 md:grid-cols-2">
-                @foreach ($category->latestPosts->take(4) as $post)
-                    <li>
-                        <x-post :post="$post" />
-                    </li>
-                @endforeach
-            </ul>
-
-            <p class="mt-16 text-center">
-                <x-button href="{{ route('categories.show', $category) }}" class="bg-{{ $category->presenter()->primaryColor() ?? 'bg-black' }} text-{{ $category->presenter()->secondaryColor() ?? 'white' }}">
-                    Read more about {{ $category->name }}
-                </x-button>
-            </p>
-        </x-section>
-    @endforeach
-
-    <x-divider class="mt-[4.5rem]" />
-
-    <x-section id="about" class="container lg:max-w-screen-md scroll-mt-8">
+    <x-section id="about" class="container mt-32 lg:max-w-screen-md scroll-mt-8">
         <x-slot:title class="text-center">
             About Benjamin Crozat
         </x-slot:title>

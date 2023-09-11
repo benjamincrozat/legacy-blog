@@ -23,19 +23,10 @@ test('a given category is shown and contains all its published posts', function 
     $view = $response->assertView('categories.show');
 
     $view
-        ->contains("Learn about $category->name")
-        ->contains($category->presenter()->content())
-        ->contains("Articles and tutorials about $category->name");
+        ->contains("Learn about $category->name");
 
     $category->posts->each(function (Post $post) use ($view) {
         $view->contains(route('posts.show', $post));
         $view->contains($post->title);
-    });
-
-    $view->contains('Related topics:');
-
-    $category->related->each(function (Category $category) use ($view) {
-        $view->contains(route('categories.show', $category));
-        $view->contains($category->name);
     });
 });
