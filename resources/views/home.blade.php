@@ -25,7 +25,7 @@
                 href="https://useflipp.com/?utm_campaign=sponsorship&utm_source=benjamincrozat.com&utm_medium=logolink"
                 target="_blank"
                 rel="noopener"
-                class="flex flex-col w-full p-4 text-left transition-colors rounded bg-gray-100/75 md:px-8 hover:bg-blue-50 md:py-7"
+                class="flex flex-col w-full p-4 text-left transition-colors rounded bg-gray-100/75 hover:bg-blue-50 md:p-6"
             >
                 <div class="flex items-end flex-grow">
                     <img loading="lazy" src="{{ Vite::asset('resources/img/flipp.png') }}" alt="Flipp" class="inline h-8" />
@@ -39,7 +39,7 @@
                 href="https://redirect.pizza/?utm_source=benjamincrozat.com&utm_medium=logo&utm_campaign=sponsorship"
                 target="_blank"
                 rel="noopener"
-                class="flex flex-col p-4 text-left transition-colors rounded bg-gray-100/75 md:px-8 hover:bg-blue-50 md:py-7"
+                class="flex flex-col p-4 text-left transition-colors rounded bg-gray-100/75 hover:bg-blue-50 md:p-6"
             >
                 <div class="flex items-end flex-grow">
                     <img loading="lazy" src="{{ Vite::asset('resources/img/redirect-pizza.png') }}" alt="redirect.pizza" class="inline h-9 md:h-10" />
@@ -63,6 +63,13 @@
         </x-slot:title>
 
         <ul class="grid gap-16 mt-8 md:grid-cols-2">
+            <li>
+                <x-post-template
+                    title="Your sponsored article here"
+                    description="Talk about your business, stay on top of everything for a week, and get a valuable backlink for life."
+                />
+            </li>
+
             @foreach ($posts as $post)
                 <li>
                     <x-post :post="$post" />
