@@ -45,8 +45,8 @@
             <x-icon-dashed-circle class="w-12 h-12 md:w-14 md:h-14 opacity-10" />
         </div>
 
-        <div class="flex items-center justify-center gap-4 mt-8 text-2xl text-center sm:text-3xl font-handwriting">
-            <a wire:navigate.hover href="{{ route('media-kit') }}">
+        <div class="mt-8 text-center">
+            <a wire:navigate.hover href="{{ route('media-kit') }}" class="text-2xl sm:-ml-10 sm:text-3xl font-handwriting">
                 <x-icon-arrow-to-top-left class="inline w-8 h-8 -translate-y-3" /> <span class="underline decoration-1 underline-offset-2">Showcase your business too!</span>
             </a>
         </div>
