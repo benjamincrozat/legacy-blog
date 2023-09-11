@@ -12,7 +12,7 @@ class HomeController extends Controller
         // Seems barebones, but I pass a variable thanks to
         // a view composer in AppServiceProvider.php.
         return view('home', [
-            'posts' => Post::with('categories')->published()->orderBy('sessions_last_7_days', 'desc')->paginate(10),
+            'posts' => Post::with('categories', 'media')->published()->orderBy('sessions_last_7_days', 'desc')->paginate(10),
         ]);
     }
 }
