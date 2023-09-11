@@ -143,7 +143,7 @@
                 </h3>
 
                 <p class="mt-2">
-                    My audience is exclusively made of English-speaking web developers from all over the world.
+                    <strong class="font-medium text-white">My audience is exclusively made of English-speaking web developers</strong> from all over the world.
                 </p>
             </div>
 
@@ -157,7 +157,7 @@
                 </h3>
 
                 <p class="mt-2">
-                    Even in 2023, links are more important than ever. If you are in the software business, getting one from this blog will benefit you.
+                    Even in 2023, <strong class="font-medium text-white">links are more important than ever for Google</strong>. If you are in the software business, getting one from this blog will benefit you.
                 </p>
             </div>
 
@@ -171,7 +171,7 @@
                 </h3>
 
                 <p class="mt-2">
-                    Writing all this content takes time and money. Your kind sponsorship will help me keep this boat afloat.
+                    Writing all this content takes time and money. <strong class="font-medium text-white">Your kind sponsorship will help me keep this boat afloat.</strong>
                 </p>
             </div>
 
@@ -201,7 +201,7 @@
                 </h3>
 
                 <p class="mt-2">
-                    From Monday to Sunday, you will be on top of every other article on this blog. In the homepage, in the "latest" page, and in the recommendations of every article.
+                    <strong class="font-medium text-white">From Monday to Sunday, you article will stay on top of every other article</strong> on this blog. In the homepage, in the "latest" page, and in the recommendations of every article.
                 </p>
             </div>
 
@@ -215,7 +215,7 @@
                 </h3>
 
                 <p class="mt-2">
-                    Developers are constantly looking for inovative companies selling services that can improve their productivity and help buy their time back.
+                    Developers are constantly looking for <strong class="font-medium text-white">inovative companies selling services that improve their productivity and allow them buy their time back</strong>.
                 </p>
             </div>
 
@@ -229,7 +229,7 @@
                 </h3>
 
                 <p class="mt-2">
-                    Backlinks are such an important ranking factor on Google. You want to accumulate as many as you can, and my blog is there to help you.
+                    <strong class="font-medium text-white">Backlinks are such an important ranking factor on Google.</strong> You want to accumulate as many as you can, and my blog is there to help you.
                 </p>
             </div>
 
