@@ -2,6 +2,8 @@
 
 namespace App\Models\Presenters;
 
+use App\Str;
+
 class UserPresenter extends BasePresenter
 {
     public function gravatar() : string
@@ -11,6 +13,6 @@ class UserPresenter extends BasePresenter
 
     public function description() : string
     {
-        return $this->renderAsMarkdown('description', $this->model->description);
+        return Str::markdown($this->model->description ?? '');
     }
 }

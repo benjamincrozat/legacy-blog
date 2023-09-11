@@ -55,12 +55,12 @@ class PostPresenter extends BasePresenter
 
     public function content() : string
     {
-        return $this->renderAsMarkdown('content', $this->model->content);
+        return Str::markdown($this->model->content ?? '');
     }
 
     public function teaser() : string
     {
-        return $this->renderAsMarkdown('teaser', $this->model->teaser);
+        return Str::markdown($this->model->teaser ?? '');
     }
 
     public function communityLinkDomain() : string
