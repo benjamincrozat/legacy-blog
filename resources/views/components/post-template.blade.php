@@ -10,7 +10,7 @@
             <div class="h-[1rem] w-1/2 mt-4 mb-2 bg-gray-200/50"></div>
         </div>
 
-        <div class="flex-shrink-0 w-[64px] lg:w-[96px] h-[64px] lg:h-[96px] bg-gray-800"></div>
+        <div class="flex-shrink-0 w-[64px] lg:w-[96px] h-[64px] lg:h-[96px] bg-gray-200/50"></div>
     </div>
 
     <ul class="flex gap-1 mt-4">
