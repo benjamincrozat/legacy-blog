@@ -13,7 +13,7 @@
         </a>
     </nav>
 
-    <div class="container mt-16 max-w-[400px] mx-auto md:mt-24">
+    <div class="container mt-16 max-w-[320px] md:max-w-[400px] mx-auto md:mt-24">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 916 616">
             <defs>
                 <linearGradient id="gradient" x1="0%" y1="100%" x2="0%" y2="0%">
@@ -53,7 +53,7 @@
         </p>
 
         <div class="mt-16">
-            <a href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=30d&scale=day" target="_blank" rel="nofollow noopener" class="inline-block px-6 py-3 font-bold text-white transition-opacity bg-gray-800 rounded md:text-xl hover:opacity-75">
+            <a href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=30d&scale=day" target="_blank" rel="nofollow noopener" class="inline-block px-6 py-3 font-bold text-white transition-opacity bg-gray-800 rounded hover:opacity-75">
                 Access my analytics dashboard
             </a>
         </div>
@@ -67,32 +67,32 @@
         <div class="grid grid-cols-2 gap-16 mt-16 md:grid-cols-3">
             <div class="col-span-1" x-data="{ count: 0, target: 30000 }" x-intersect.half="animateNumber">
                 <div class="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl">+<span x-text="Math.round(count).toLocaleString()">30,000</span></div>
-                <div class="text-indigo-400 sm:text-xl lg:text-2xl xl:text-3xl">monthly visitors</div>
+                <div class="text-indigo-400">monthly visitors</div>
             </div>
 
             <div class="col-span-1" x-data="{ count: 0, target: 50000 }" x-intersect.half="animateNumber">
                 <div class="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl">+<span x-text="Math.round(count).toLocaleString()">50,000</span></div>
-                <div class="text-indigo-400 sm:text-xl lg:text-2xl xl:text-3xl">monthly page views</div>
+                <div class="text-indigo-400">monthly page views</div>
             </div>
 
             <div class="col-span-1" x-data="{ count: 0, target: 35000 }" x-intersect.half="animateNumber">
                 <div class="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl">+<span x-text="Math.round(count).toLocaleString()">35,000</span></div>
-                <div class="text-indigo-400 sm:text-xl lg:text-2xl xl:text-3xl">monthly sessions</div>
+                <div class="text-indigo-400">monthly sessions</div>
             </div>
 
             <div class="col-span-1" x-data="{ count: 0, target: 70 }" x-intersect.half="animateNumber">
                 <div class="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl">+<span x-text="Math.round(count).toLocaleString()">70</span>%</div>
-                <div class="text-indigo-400 sm:text-xl lg:text-2xl xl:text-3xl">visitors on desktop</div>
+                <div class="text-indigo-400">visitors on desktop</div>
             </div>
 
             <div class="col-span-1" x-data="{ count: 0, target: 4100 }" x-intersect.half="animateNumber">
                 <div class="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl">+<span x-text="Math.round(count).toLocaleString()">4100</span></div>
-                <div class="text-indigo-400 sm:text-xl lg:text-2xl xl:text-3xl">followers on X</div>
+                <div class="text-indigo-400">followers on X</div>
             </div>
 
             <div class="col-span-1" x-data="{ count: 0, target: 400 }" x-intersect.half="animateNumber">
                 <div class="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl">+<span x-text="Math.round(count).toLocaleString()">400</span></div>
-                <div class="text-indigo-400 sm:text-xl lg:text-2xl xl:text-3xl">subscribers to the newsletter</div>
+                <div class="text-indigo-400">subscribers to the newsletter</div>
             </div>
 
             <div class="col-span-1">
@@ -100,7 +100,7 @@
                     India, United States, Indonesia, France, Germany
                 </div>
 
-                <div class="text-indigo-400 sm:text-xl lg:text-2xl xl:text-3xl">
+                <div class="text-indigo-400">
                     in the top 5 countries
                 </div>
             </div>
@@ -131,14 +131,14 @@
         }
     </script>
 
-    <x-section id="display" class="container mt-24 scroll-mt-4 md:mt-32 md:text-xl lg:max-w-screen-md">
+    <x-section id="display" class="container mt-24 scroll-mt-4 md:mt-32 lg:max-w-screen-md">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
             Put your link and logo on my homepage
         </x-slot:title>
 
         <div class="flex items-center justify-between gap-8 mt-8 md:mt-16 md:gap-12">
             <div>
-                <h3 class="font-bold">
+                <h3 class="text-xl font-bold">
                     Get more targeted traffic
                 </h3>
 
@@ -152,7 +152,7 @@
 
         <div class="flex items-center justify-between gap-8 mt-16 md:gap-12">
             <div>
-                <h3 class="font-bold">
+                <h3 class="text-xl font-bold">
                     Boost your rankings on Google
                 </h3>
 
@@ -166,7 +166,7 @@
 
         <div class="flex items-center justify-between gap-8 mt-16 md:gap-12">
             <div>
-                <h3 class="font-bold">
+                <h3 class="text-xl font-bold">
                     Support a content creator
                 </h3>
 
@@ -180,7 +180,7 @@
     </x-section>
 
     <div class="container mt-16 text-center md:max-w-screen-sm">
-        <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/7de09977-485d-4dcd-8813-c17dd48eddc7" class="inline-block py-5 text-white transition-opacity rounded px-7 text-xl/tight bg-gradient-to-r from-orange-500 to-yellow-600 hover:opacity-75">
+        <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/7de09977-485d-4dcd-8813-c17dd48eddc7" class="inline-block px-4 py-3 text-white transition-opacity rounded bg-gradient-to-r from-orange-500 to-yellow-600 hover:opacity-75">
             Get started for <strong class="font-extrabold">$49/month</strong>
         </a>
 
@@ -189,14 +189,14 @@
         <p class="mt-4">Need a custom deal? <a href="mailto:hello@benjamincrozat.com" class="font-medium underline">Reach out!</a></p>
     </div>
 
-    <x-section id="write" class="container mt-24 scroll-mt-4 md:mt-32 md:text-xl lg:max-w-screen-md">
+    <x-section id="write" class="container mt-24 scroll-mt-4 md:mt-32 lg:max-w-screen-md">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
             Write about your business
         </x-slot:title>
 
         <div class="flex items-center justify-between gap-8 mt-8 md:mt-16 md:gap-12">
             <div>
-                <h3 class="font-bold">
+                <h3 class="text-xl font-bold">
                     Stay on top of other articles for an entire week
                 </h3>
 
@@ -210,7 +210,7 @@
 
         <div class="flex items-center justify-between gap-8 mt-8 md:mt-16 md:gap-12">
             <div>
-                <h3 class="font-bold">
+                <h3 class="text-xl font-bold">
                     Talk directly to thousands of developers
                 </h3>
 
@@ -224,7 +224,7 @@
 
         <div class="flex items-center justify-between gap-8 mt-8 md:mt-16 md:gap-12">
             <div>
-                <h3 class="font-bold">
+                <h3 class="text-xl font-bold">
                     Get a valuable backlink, <strong>FOR LIFE</strong>
                 </h3>
 
@@ -238,7 +238,7 @@
 
         <div class="flex items-center justify-between gap-8 mt-8 md:mt-16 md:gap-12">
             <div>
-                <h3 class="font-bold">
+                <h3 class="text-xl font-bold">
                     Support a content creator
                 </h3>
 
@@ -252,7 +252,7 @@
     </x-section>
 
     <div class="container mt-16 text-center md:max-w-screen-sm">
-        <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/cc173e8e-bafe-48a2-a406-b42b68a7150d" class="inline-block py-5 text-white transition-opacity rounded px-7 text-xl/tight bg-gradient-to-r from-orange-500 to-yellow-600 hover:opacity-75">
+        <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/cc173e8e-bafe-48a2-a406-b42b68a7150d" class="inline-block px-4 py-3 text-white transition-opacity rounded bg-gradient-to-r from-orange-500 to-yellow-600 hover:opacity-75">
             Get started for <strong class="font-extrabold">$299</strong>
         </a>
 
@@ -261,7 +261,7 @@
         <p class="mt-4">Need more? <a href="mailto:hello@benjamincrozat.com" class="font-medium underline">Reach out!</a></p>
     </div>
 
-    <x-section id="about" class="container mt-32 mb-16 md:text-xl lg:max-w-screen-md">
+    <x-section id="about" class="container mt-32 mb-16 lg:max-w-screen-md">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
             Who you are sponsoring
         </x-slot:title>
