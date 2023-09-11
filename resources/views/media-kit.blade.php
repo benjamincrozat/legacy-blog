@@ -53,7 +53,7 @@
         </p>
 
         <div class="mt-16">
-            <a href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=30d&scale=day" target="_blank" rel="nofollow noopener" class="inline-block px-6 py-3 text-xl font-bold text-white transition-opacity bg-gray-800 rounded hover:opacity-75">
+            <a href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=30d&scale=day" target="_blank" rel="nofollow noopener" class="inline-block px-6 py-3 font-bold text-white transition-opacity bg-gray-800 rounded md:text-xl hover:opacity-75">
                 Access my analytics dashboard
             </a>
         </div>
