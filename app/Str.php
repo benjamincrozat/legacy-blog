@@ -28,6 +28,9 @@ class Str extends \Illuminate\Support\Str
                     ),
                 ],
             ],
+            'disallowed_raw_html' => [
+                'disallowed_tags' => ['title', 'textarea', 'style', 'xmp', 'noembed', 'noframes', 'script', 'plaintext'],
+            ],
             'embed' => [
                 'adapter' => new OscaroteroEmbedAdapter,
                 'allowed_domains' => ['twitter.com', 'youtube.com'],
