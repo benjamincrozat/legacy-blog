@@ -131,7 +131,7 @@
         }
     </script>
 
-    <x-section id="display" class="container mt-24 md:mt-32 lg:max-w-screen-md">
+    <x-section id="display" class="container mt-24 scroll-mt-4 md:mt-32 lg:max-w-screen-md">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
             Put your link and logo on my homepage
         </x-slot:title>
@@ -189,7 +189,7 @@
         <p class="mt-4">Need a custom deal? <a href="mailto:hello@benjamincrozat.com" class="font-medium underline">Reach out!</a></p>
     </div>
 
-    <x-section id="write" class="container mt-24 md:mt-32 lg:max-w-screen-md">
+    <x-section id="write" class="container mt-24 scroll-mt-4 md:mt-32 lg:max-w-screen-md">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
             Write about your business
         </x-slot:title>

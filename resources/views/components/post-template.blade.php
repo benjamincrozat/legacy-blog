@@ -19,7 +19,7 @@
             href="{{ route('media-kit') }}#write"
             class="flex-shrink-0"
         >
-            <img src="{{ fake()->imageUrl() }}" class="object-cover aspect-square w-[64px] lg:w-[96px] h-[64px] lg:h-[96px]" />
+            <div class="w-[64px] lg:w-[96px] h-[64px] lg:h-[96px] bg-gray-800"></div>
         </a>
     </div>
 
