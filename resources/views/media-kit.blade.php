@@ -215,7 +215,7 @@
                 </h3>
 
                 <p class="mt-2">
-                    Developers are constantly looking for <strong class="font-medium text-white">inovative companies selling services that improve their productivity and allow them buy their time back</strong>.
+                    Developers are constantly looking for <strong class="font-medium text-white">innovative companies selling services that improve their productivity and allow them to buy their time back</strong>.
                 </p>
             </div>
 
