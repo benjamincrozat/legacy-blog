@@ -20,7 +20,7 @@
 
         <p class="mt-16 text-lg font-medium sm:text-xl">Deep gratitude to the sponsors who back&nbsp;me!</p>
 
-        <div class="container grid grid-cols-2 gap-4 mt-8 text-sm place-items-center sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+        <div class="container grid grid-cols-2 gap-4 mt-8 place-items-center sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
             <a
                 href="https://useflipp.com/?utm_campaign=sponsorship&utm_source=benjamincrozat.com&utm_medium=logolink"
                 target="_blank"
