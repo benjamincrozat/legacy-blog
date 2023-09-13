@@ -19,7 +19,7 @@
         @googlefonts('handwriting')
     @endunless
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script async src="https://cdn.tailwindcss.com"></script>
     <script defer>
         tailwind.config = {
             corePlugins: [
