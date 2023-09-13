@@ -19,8 +19,8 @@
         @googlefonts('handwriting')
     @endunless
 
-    <script async src="https://cdn.tailwindcss.com"></script>
-    <script defer>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
         tailwind.config = {
             corePlugins: [
                 'accentColor',
