@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}" class="scroll-smooth">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="description" content="{{ $description ?? 'Join more than 30,000 readers and skyrocket your web development skills.' }}" />
-    <meta property="og:title" content="{{ $title ?? config('app.name') }}" />
-    <meta property="og:image" content="{{ $image ?? 'https://i.useflipp.com/gw6mxpkgy4v8.png?watermark=useflipp.com&title=' . urlencode($title ?? '') . '&body=' . urlencode($description ?? '') }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ url()->current() }}" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:creator" content="@benjamincrozat" />
-    <meta name="twitter:description" content="{{ $description ?? 'Join more than 30,000 readers and skyrocket your web development skills.' }}" />
-    <meta name="twitter:image" content="{{ $image ?? 'https://i.useflipp.com/gw6mxpkgy4v8.png?watermark=useflipp.com&title=' . urlencode($title ?? '') . '&body=' . urlencode($description ?? '') }}" />
-    <meta name="twitter:title" content="{{ $title ?? config('app.name') }}" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="description" content="{{ $description ?? 'Join more than 30,000 readers and skyrocket your web development skills.' }}" />
+        <meta property="og:title" content="{{ $title ?? config('app.name') }}" />
+        <meta property="og:image" content="{{ $image ?? 'https://i.useflipp.com/gw6mxpkgy4v8.png?watermark=useflipp.com&title=' . urlencode($title ?? '') . '&body=' . urlencode($description ?? '') }}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="{{ url()->current() }}" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@benjamincrozat" />
+        <meta name="twitter:description" content="{{ $description ?? 'Join more than 30,000 readers and skyrocket your web development skills.' }}" />
+        <meta name="twitter:image" content="{{ $image ?? 'https://i.useflipp.com/gw6mxpkgy4v8.png?watermark=useflipp.com&title=' . urlencode($title ?? '') . '&body=' . urlencode($description ?? '') }}" />
+        <meta name="twitter:title" content="{{ $title ?? config('app.name') }}" />
 
-    <title>{{ $title ?? config('app.name') }}</title>
+        <title>{{ $title ?? config('app.name') }}</title>
 
-    @unless(app()->runningUnitTests())
-        @googlefonts
-        @googlefonts('handwriting')
-    @endunless
+        @unless(app()->runningUnitTests())
+            @googlefonts
+            @googlefonts('handwriting')
+        @endunless
 
-    @if (app()->isProduction() && auth()->id() !== 1)
-        <script
-            defer src="https://api.pirsch.io/pirsch-extended.js"
-            id="pirschextendedjs"
-            data-code="5N2hIsUQsCVX1LQtvPdJ3AGwQZHGxtt5"
-            data-disable-page-views
-        ></script>
-    @endif
+        @if (app()->isProduction() && auth()->id() !== 1)
+            <script
+                defer src="https://api.pirsch.io/pirsch-extended.js"
+                id="pirschextendedjs"
+                data-code="5N2hIsUQsCVX1LQtvPdJ3AGwQZHGxtt5"
+                data-disable-page-views
+            ></script>
+        @endif
 
-    @livewireStyles
+        @livewireStyles
 
-    @livewireScripts
+        @livewireScripts
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <x-feed-links />
+        <x-feed-links />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ Vite::asset('resources/img/apple-touch-icon.jpg') }}" />
-    <link rel="icon" type="image/jpeg" sizes="16x16" href="{{ Vite::asset('resources/img/16x16.jpg') }}" />
-    <link rel="icon" type="image/jpeg" sizes="32x32" href="{{ Vite::asset('resources/img/32x32.jpg') }}" />
-    <link rel="icon" type="image/jpeg" sizes="48x48" href="{{ Vite::asset('resources/img/48x48.jpg') }}" />
-    <link rel="icon" type="image/jpeg" sizes="96x96" href="{{ Vite::asset('resources/img/96x96.jpg') }}" />
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ Vite::asset('resources/img/apple-touch-icon.jpg') }}" />
+        <link rel="icon" type="image/jpeg" sizes="16x16" href="{{ Vite::asset('resources/img/16x16.jpg') }}" />
+        <link rel="icon" type="image/jpeg" sizes="32x32" href="{{ Vite::asset('resources/img/32x32.jpg') }}" />
+        <link rel="icon" type="image/jpeg" sizes="48x48" href="{{ Vite::asset('resources/img/48x48.jpg') }}" />
+        <link rel="icon" type="image/jpeg" sizes="96x96" href="{{ Vite::asset('resources/img/96x96.jpg') }}" />
 
-    <link rel="canonical" href="{{ $canonical ?? url()->current() }}" />
-
+        <link rel="canonical" href="{{ $canonical ?? url()->current() }}" />
+    </head>
     <body
         {{ $attributes->except(['description', 'image', 'title', 'canonical'])->merge([
             'class' => 'bg-gray-50 font-light',
