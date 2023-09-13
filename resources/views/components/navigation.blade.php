@@ -9,14 +9,14 @@
                 <x-heroicon-o-fire class="h-6 mx-auto md:h-7" />
             @endif
 
-            <span class="text-xs font-normal @if (Route::is('posts.index')) text-orange-600 @endif">Latest</span>
+            <div class="text-xs font-normal @if (Route::is('posts.index')) text-orange-600 @endif">Latest</div>
         </a>
 
         <x-menu.base class="grid gap-4 py-4 leading-none">
             <x-slot:trigger>
                 <x-heroicon-o-tag class="h-6 mx-auto md:h-7" x-show="! open" />
                 <x-heroicon-s-tag class="h-6 mx-auto text-emerald-400 md:h-7" x-cloak x-show="open" />
-                <span class="text-xs font-normal" x-bind:class="{ 'text-emerald-600': open }">Topics</span>
+                <div class="text-xs font-normal" x-bind:class="{ 'text-emerald-600': open }">Topics</div>
             </x-slot:trigger>
 
             @foreach ($categories as $category)
@@ -32,16 +32,16 @@
 
         <a href="{{ route('home') }}#newsletter">
             <x-heroicon-o-envelope class="h-6 mx-auto md:h-7" />
-            <span class="text-xs font-normal">
+            <div class="text-xs font-normal">
                 News
-            </span>
+            </div>
         </a>
 
         <x-menu.base>
             <x-slot:trigger>
                 <x-heroicon-o-gift class="h-6 mx-auto md:h-7" x-show="! open" />
                 <x-heroicon-s-gift class="h-6 mx-auto text-rose-400 md:h-7" x-cloak x-show="open" />
-                <span class="text-xs font-normal" x-bind:class="{ 'text-rose-600': open }">For you</span>
+                <div class="text-xs font-normal" x-bind:class="{ 'text-rose-600': open }">For you</div>
             </x-slot:trigger>
 
             <x-menu.item href="{{ route('media-kit') }}" icon="s-star" class="text-yellow-400 hover:text-yellow-400">
@@ -79,7 +79,7 @@
                     x-bind:class="{ 'rotate-90': open }"
                 />
 
-                <span class="sr-only ">More</span>
+                <div class="sr-only ">More</div>
             </x-slot:trigger>
 
             <x-menu.item
@@ -106,7 +106,7 @@
                         class="rounded-full w-[32px] h-[32px] md:w-[40px] md:h-[40px]"
                     />
 
-                    <span class="sr-only">{{ auth()->user()->name }}</span>
+                    <div class="sr-only">{{ auth()->user()->name }}</div>
                 </x-slot:trigger>
 
                 <x-menu.item href="/admin/posts" icon="o-cog" :no-wire-navigate="true">
