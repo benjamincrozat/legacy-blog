@@ -20,7 +20,7 @@
     @endunless
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+    <script defer>
         tailwind.config = {
             corePlugins: [
                 'accentColor',

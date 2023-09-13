@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\Category;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Vite;
 use Illuminate\Foundation\Application;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
@@ -48,5 +49,9 @@ class AppServiceProvider extends ServiceProvider
 
             $view->with(compact('categories'));
         });
+
+        Vite::useScriptTagAttributes([
+            'defer' => true,
+        ]);
     }
 }
