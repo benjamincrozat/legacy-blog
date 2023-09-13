@@ -100,6 +100,7 @@
             <x-menu.base :hide-icon="true">
                 <x-slot:trigger>
                     <img
+                        loading="lazy"
                         src="{{ auth()->user()->presenter()->gravatar() }}?s=64"
                         alt="{{ auth()->user()->name }}"
                         class="rounded-full w-[32px] h-[32px] md:w-[40px] md:h-[40px]"

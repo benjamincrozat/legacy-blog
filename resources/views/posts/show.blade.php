@@ -59,7 +59,7 @@
                     <x-tree :tree="$tree" />
                 @endif
 
-                <img src="{{ $post->presenter()->image() }}" alt="{{ $post->title }}" class="w-full" />
+                <img loading="lazy" src="{{ $post->presenter()->image() }}" alt="{{ $post->title }}" class="w-full" />
 
                 {!! $post->presenter()->content() !!}
 
@@ -79,6 +79,7 @@
             <aside>
                 <x-prose>
                     <img
+                        loading="lazy"
                         src="{{ $post->user->presenter()->gravatar() }}?s=256"
                         alt="{{ $post->user->name }}"
                         class="float-right w-[96px] md:w-[128px] h-[96px] md:h-[128px] mt-2 mb-8 ml-8 rounded-full"
