@@ -4,18 +4,18 @@
     <div class="flex items-center gap-6 sm:gap-7 md:gap-8">
         <a wire:navigate.hover href="{{ route('posts.index') }}">
             @if (Route::is('posts.index'))
-                <x-heroicon-s-fire class="w-6 h-6 mx-auto text-orange-400 md:w-7 md:h-7" />
+                <x-heroicon-s-fire class="h-6 mx-auto text-orange-400 md:h-7" />
             @else
-                <x-heroicon-o-fire class="w-6 h-6 mx-auto md:w-7 md:h-7" />
+                <x-heroicon-o-fire class="h-6 mx-auto md:h-7" />
             @endif
 
             <span class="text-xs font-normal @if (Route::is('posts.index')) text-orange-600 @endif">Latest</span>
         </a>
 
-        <x-menu.base class="grid gap-4 py-4">
+        <x-menu.base class="grid gap-4 py-4 leading-none">
             <x-slot:trigger>
-                <x-heroicon-o-tag class="w-6 h-6 mx-auto md:w-7 md:h-7" x-show="! open" />
-                <x-heroicon-s-tag class="w-6 h-6 mx-auto text-emerald-400 md:w-7 md:h-7" x-cloak x-show="open" />
+                <x-heroicon-o-tag class="h-6 mx-auto md:h-7" x-show="! open" />
+                <x-heroicon-s-tag class="h-6 mx-auto text-emerald-400 md:h-7" x-cloak x-show="open" />
                 <span class="text-xs font-normal" x-bind:class="{ 'text-emerald-600': open }">Topics</span>
             </x-slot:trigger>
 
@@ -31,7 +31,7 @@
         </x-menu.base>
 
         <a href="{{ route('home') }}#newsletter">
-            <x-heroicon-o-envelope class="w-6 h-6 mx-auto md:w-7 md:h-7" />
+            <x-heroicon-o-envelope class="h-6 mx-auto md:h-7" />
             <span class="text-xs font-normal">
                 News
             </span>
@@ -39,8 +39,8 @@
 
         <x-menu.base>
             <x-slot:trigger>
-                <x-heroicon-o-gift class="w-6 h-6 mx-auto md:w-7 md:h-7" x-show="! open" />
-                <x-heroicon-s-gift class="w-6 h-6 mx-auto text-rose-400 md:w-7 md:h-7" x-cloak x-show="open" />
+                <x-heroicon-o-gift class="h-6 mx-auto md:h-7" x-show="! open" />
+                <x-heroicon-s-gift class="h-6 mx-auto text-rose-400 md:h-7" x-cloak x-show="open" />
                 <span class="text-xs font-normal" x-bind:class="{ 'text-rose-600': open }">For you</span>
             </x-slot:trigger>
 
@@ -75,7 +75,7 @@
                 '-ml-2 sm:ml-0' => auth()->guest(),
             ])>
                 <x-heroicon-o-ellipsis-horizontal
-                    class="w-6 h-6 mx-auto transition-transform duration-300 md:w-7 md:h-7"
+                    class="h-6 mx-auto transition-transform duration-300 md:h-7"
                     x-bind:class="{ 'rotate-90': open }"
                 />
 
