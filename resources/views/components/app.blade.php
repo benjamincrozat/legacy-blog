@@ -19,27 +19,6 @@
         @googlefonts('handwriting')
     @endunless
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            corePlugins: [
-                'accentColor',
-                'backgroundColor',
-                'borderColor',
-                'boxShadowColor',
-                'caretColor',
-                'divideColor',
-                'gradientColorStops',
-                'outlineColor',
-                'placeholderColor',
-                'ringColor',
-                'ringOffsetColor',
-                'textDecorationColor',
-                'textColor',
-            ],
-        }
-    </script>
-
     @if (app()->isProduction() && auth()->id() !== 1)
         <script
             defer src="https://api.pirsch.io/pirsch-extended.js"

@@ -1,6 +1,9 @@
 <div {{ $attributes->except('category')->merge(['class' => 'flex flex-col h-full']) }}>
     <div class="flex items-center justify-between">
-        <h3 class="leading-tight text-xl font-bold text-{{ $category->presenter()->primaryColor() }}">
+        <h3
+            class="text-xl font-bold leading-tight"
+            style="color: {{ $category->presenter()->primaryColor() }}"
+        >
             {{ $category->name }}
         </h3>
 
@@ -16,7 +19,7 @@
     <p class="mt-6">
         <x-button
             href="{{ route('categories.show', $category) }}"
-            class="bg-{{ $category->presenter()->primaryColor() }} text-{{ $category->presenter()->secondaryColor() }} w-full"
+            style="color: {{ $category->presenter()->secondaryColor() }}; background-color: {{ $category->presenter()->primaryColor() }}"
         >
             Read about {{ $category->name }}
         </x-button>
