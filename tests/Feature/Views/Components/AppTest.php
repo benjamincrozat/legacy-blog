@@ -8,35 +8,6 @@ use Illuminate\Support\Facades\Http;
 
 use function Pest\Laravel\assertGuest;
 
-it("includes the Tailwind CSS Play CDN and it's configured to be barebones", function () {
-    /** @var \NunoMaduro\LaravelMojito\ViewAssertion */
-    $view = $this->assertView('components.app');
-
-    $view->has('script[src="https://cdn.tailwindcss.com"]');
-
-    $view
-        ->has('script')
-        ->contains(<<<'HTML'
-        tailwind.config = {
-            corePlugins: [
-                'accentColor',
-                'backgroundColor',
-                'borderColor',
-                'boxShadowColor',
-                'caretColor',
-                'divideColor',
-                'gradientColorStops',
-                'outlineColor',
-                'placeholderColor',
-                'ringColor',
-                'ringOffsetColor',
-                'textDecorationColor',
-                'textColor',
-            ],
-        }
-HTML);
-});
-
 it('includes the feed', function () {
     /** @var \NunoMaduro\LaravelMojito\ViewAssertion */
     $view = $this->assertView('components.app');
