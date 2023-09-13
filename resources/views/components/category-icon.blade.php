@@ -9,4 +9,6 @@
     @else
         <x-heroicon-s-wrench class="w-[50%] h-[50%]" style="color: {{ $category->presenter()->primaryColor() }}" />
     @endif
+
+    <span class="sr-only">{{ $category->name }}</span>
 </div>
