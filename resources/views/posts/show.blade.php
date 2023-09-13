@@ -16,8 +16,8 @@
                         <a
                             wire:navigate.hover
                             href="{{ route('categories.show', $category) }}"
-                            class="inline-block px-2 py-1 text-xs font-bold uppercase rounded leading-normal hover:opacity-75 transition-opacity
-                            bg-{{ $category->presenter()->primaryColor() }} text-{{ $category->presenter()->secondaryColor() }}"
+                            class="inline-block px-2 py-1 text-xs font-bold leading-normal uppercase transition-opacity rounded hover:opacity-75"
+                            style="color: {{ $category->presenter()->secondaryColor() }}; background-color: {{ $category->presenter()->primaryColor() }}"
                         >
                             {{ $category->name }}
                         </a>
