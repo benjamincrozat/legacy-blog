@@ -20,6 +20,7 @@ class Post extends BaseModel implements Feedable, HasMedia
     use HasFeedItems, HasLocalScopes, HasRecommendations, HasRelationships, InteractsWithMedia, LogsActivity, Searchable;
 
     protected $casts = [
+        'published_at' => 'datetime',
         'manually_updated_at' => 'date',
     ];
 

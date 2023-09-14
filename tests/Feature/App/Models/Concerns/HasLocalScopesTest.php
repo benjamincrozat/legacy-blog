@@ -14,12 +14,3 @@ it('gets posts as a sequence', function () {
     expect($sequence->get(2)->id)->toEqual($ids->get(2));
     expect($sequence->get(3)->id)->toEqual($ids->get(3));
 });
-
-it('has a withUser() scope', function () {
-    Post::factory()->create();
-
-    $post = Post::withUser()->first();
-
-    expect($post->user->name)->toEqual($post->user_name);
-    expect($post->user->email)->toEqual($post->user_email);
-});

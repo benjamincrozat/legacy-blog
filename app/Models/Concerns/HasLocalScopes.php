@@ -28,19 +28,4 @@ trait HasLocalScopes
     {
         $query->whereNull('published_at')->orWhere('published_at', '>', now());
     }
-
-    public function scopeWithUser(Builder $query) : void
-    {
-        $query
-            ->addSelect([
-                'user_name' => User::select('name')
-                    ->whereColumn('id', 'posts.user_id')
-                    ->limit(1),
-            ])
-            ->addSelect([
-                'user_email' => User::select('email')
-                    ->whereColumn('id', 'posts.user_id')
-                    ->limit(1),
-            ]);
-    }
 }

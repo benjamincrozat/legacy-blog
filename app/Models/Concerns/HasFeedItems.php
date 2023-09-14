@@ -12,7 +12,6 @@ trait HasFeedItems
         return self::query()
             ->latest()
             ->published()
-            ->withUser()
             ->limit(10)
             ->get();
     }
@@ -23,12 +22,12 @@ trait HasFeedItems
             'id' => route('posts.show', $this),
             'title' => $this->title,
             'summary' => view('feed-item', ['post' => $this])->render(),
-            'updated' => $this->created_at,
+            'updated' => $this->published_at,
             'link' => route('posts.show', [
                 'post' => $this,
                 'utm_source' => 'feed',
             ]),
-            'authorName' => $this->user_name ?? $this->user->name,
+            'authorName' => $this->user->name,
         ]);
     }
 }

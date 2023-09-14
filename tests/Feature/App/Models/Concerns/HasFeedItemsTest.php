@@ -13,18 +13,19 @@ test('the feed works', function () {
 });
 
 test('values are mapped correctly', function () {
-    $posts = Post::factory(10)->published()->create();
+    Post::factory(10)
+        ->published()
+        ->create()
+        ->each(function (Post $post) {
+            $item = $post->toFeedItem();
 
-    $posts->each(function (Post $post) {
-        $item = $post->toFeedItem();
+            $link = route('posts.show', $post);
 
-        $link = route('posts.show', $post);
-
-        $this->assertEquals($link, $item->id);
-        $this->assertEquals($post->title, $item->title);
-        $this->assertEquals($post->presenter()->teaser(), $item->summary);
-        $this->assertEquals($post->created_at, $item->updated);
-        $this->assertEquals("$link?utm_source=feed", $item->link);
-        $this->assertEquals($post->user->name, $item->authorName);
-    });
+            expect($item->id)->toBe($link);
+            expect($item->title)->toBe($post->title);
+            expect($item->summary)->toBe(view('feed-item', compact('post'))->render());
+            expect($item->updated->eq($post->published_at))->toBeTrue();
+            expect($item->link)->toBe("$link?utm_source=feed");
+            expect($item->authorName)->toBe($post->user->name);
+        });
 });
