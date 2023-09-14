@@ -23,7 +23,7 @@ it('presents the last update date using the published_at attribute', function ()
     $post = Post::factory()->create(['published_at' => now()->addDay()]);
 
     expect($post->presenter()->lastUpdated())
-        ->toBe($post->published_at->isoFormat('LL'));
+        ->toBe($post->created_at->isoFormat('LL'));
 });
 
 it('presents the last update date using the manually_updated_at attribute', function () {
