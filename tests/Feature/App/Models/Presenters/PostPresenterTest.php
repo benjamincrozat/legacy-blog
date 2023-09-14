@@ -23,7 +23,7 @@ it('presents the last update date using the published_at attribute', function ()
     $post = Post::factory()->create(['published_at' => now()->addDay()]);
 
     expect($post->presenter()->lastUpdated())
-        ->toBe($post->created_at->isoFormat('LL'));
+        ->toBe($post->published_at->isoFormat('LL'));
 });
 
 it('presents the last update date using the manually_updated_at attribute', function () {
@@ -34,4 +34,11 @@ it('presents the last update date using the manually_updated_at attribute', func
 
     expect($post->presenter()->lastUpdated())
         ->toBe($post->manually_updated_at->isoFormat('LL'));
+});
+
+it('presents the last update date using the created_at attribute when manually_updated_at and published_at are null', function () {
+    $post = Post::factory()->create();
+
+    expect($post->presenter()->lastUpdated())
+        ->toBe($post->created_at->isoFormat('LL'));
 });

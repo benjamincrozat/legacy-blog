@@ -68,8 +68,12 @@ class PostPresenter extends BasePresenter
         return str_replace('www.', '', Url::fromString($this->model->community_link)->getHost());
     }
 
-    public function lastUpdated() : ?string
+    public function lastUpdated() : string
     {
-        return ($this->model->manually_updated_at ?? $this->model->created_at)->isoFormat('LL');
+        $date = $this->model->manually_updated_at
+            ?? $this->model->published_at
+            ?? $this->model->created_at;
+
+        return $date->isoFormat('LL');
     }
 }

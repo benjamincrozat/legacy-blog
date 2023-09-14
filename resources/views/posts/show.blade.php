@@ -39,25 +39,10 @@
                         <h1>{{ $post->title }}</h1>
                     @endif
 
-                    @if ($post->published_at)
-                        <p class="-mt-6 opacity-75">
-                            @if ($post->community_link)
-                                Shared on
-                            @else
-                                Updated on
-                            @endif
-
-                            <time class="{{ ($post->manually_updated_at ?? $post->created_at)->toDateTimeString() }}">
-                                {{ $post->presenter()->lastUpdated() }}
-                            </time>
-                        </p>
-                    @endif
+                    <x-post.date :post="$post" />
                 </div>
 
-                @if (! empty($tree = $post->presenter()->tree()))
-                    <p class="font-bold">Table of contents:</p>
-                    <x-tree :tree="$tree" />
-                @endif
+                <x-post.tree.trunk :tree="$post->presenter()->tree()" />
 
                 <img loading="lazy" src="{{ $post->presenter()->image() }}" alt="{{ $post->title }}" class="w-full" />
 
@@ -76,46 +61,7 @@
         @if (! $post->community_link)
             <x-divider />
 
-            <aside>
-                <x-prose>
-                    <img
-                        loading="lazy"
-                        src="{{ $post->user->presenter()->gravatar() }}?s=256"
-                        alt="{{ $post->user->name }}"
-                        class="float-right w-[96px] md:w-[128px] h-[96px] md:h-[128px] mt-2 mb-8 ml-8 rounded-full"
-                    />
-
-                    <h3 class="text-2xl">
-                        Written by {{ $post->user->name }}
-                    </h3>
-
-                    {!! $post->user->presenter()->description() !!}
-
-                    <p>Follow me on:</p>
-
-                    <ul>
-                        <li>
-                            <a
-                                href="https://github.com/{{ $post->user->github_handle }}"
-                                target="_blank"
-                                rel="nofollow noopener"
-                            >
-                                GitHub
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                href="https://x.com/{{ $post->user->x_handle }}"
-                                target="_blank"
-                                rel="nofollow noopener"
-                            >
-                                X
-                            </a>
-                        </li>
-                    </ul>
-                </x-prose>
-            </aside>
+            <x-post.author :author="$post->user" />
         @endif
     </div>
 
