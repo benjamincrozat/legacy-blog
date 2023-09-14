@@ -52,6 +52,10 @@
                 <strong class="text-black transition-colors group-hover:text-white">Follow my journey</strong>
             </x-menu.item>
 
+            <x-menu.item no-wire-navigate href="/feed" icon="s-rss" class="text-orange-400 hover:text-orange-400">
+                <strong class="text-black transition-colors group-hover:text-white">Never miss new content</strong>
+            </x-menu.item>
+
             <x-menu.item href="/best-web-development-tools" icon="o-wrench">
                 See all the tools I use
             </x-menu.item>
