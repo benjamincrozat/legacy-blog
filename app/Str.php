@@ -13,7 +13,6 @@ use League\CommonMark\Extension\SmartPunct\SmartPunctExtension;
 use League\CommonMark\Extension\GithubFlavoredMarkdownExtension;
 use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
 use League\CommonMark\Extension\ExternalLink\ExternalLinkExtension;
-use League\CommonMark\Extension\Embed\Bridge\OscaroteroEmbedAdapter;
 use League\CommonMark\Extension\DefaultAttributes\DefaultAttributesExtension;
 
 class Str extends \Illuminate\Support\Str
@@ -30,11 +29,6 @@ class Str extends \Illuminate\Support\Str
             ],
             'disallowed_raw_html' => [
                 'disallowed_tags' => ['title', 'textarea', 'style', 'xmp', 'noembed', 'noframes', 'script', 'plaintext'],
-            ],
-            'embed' => [
-                'adapter' => new OscaroteroEmbedAdapter,
-                'allowed_domains' => ['twitter.com', 'youtube.com'],
-                'fallback' => 'link',
             ],
             'external_link' => [
                 'internal_hosts' => preg_replace('/https?:\/\//', '', config('app.url')),

@@ -20,13 +20,6 @@ class AppServiceProvider extends ServiceProvider
             $app['config']->get('scout.algolia.id'),
             $app['config']->get('scout.algolia.secret')
         ));
-
-        // Telescope is useful for debugging, but it's not something
-        // I want to run anywhere else than the local environment.
-        if ($this->app->environment('local')) {
-            $this->app->register(\Laravel\Telescope\TelescopeServiceProvider::class);
-            $this->app->register(TelescopeServiceProvider::class);
-        }
     }
 
     public function boot() : void
