@@ -1,8 +1,8 @@
 <a href="{{ route('media-kit') }}#write" {{ $attributes->except('post') }}>
     <div class="flex items-start gap-6 lg:gap-8">
         <div class="flex-grow">
-            <p class="font-bold text-orange-400 underline">
-                {{ $title }}
+            <p class="font-bold text-orange-400">
+                <x-heroicon-s-star class="inline h-4 mr-[.175rem] translate-y-[-2px]" /> <span class="underline">{{ $title }}</span>
             </p>
 
             <p class="mt-2">{{ $description }}</p>
