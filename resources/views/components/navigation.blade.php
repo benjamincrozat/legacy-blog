@@ -30,13 +30,6 @@
             @endforeach
         </x-menu.base>
 
-        <a href="{{ route('home') }}#newsletter">
-            <x-heroicon-o-envelope class="h-6 mx-auto md:h-7" />
-            <div class="text-xs font-normal">
-                News
-            </div>
-        </a>
-
         <x-menu.base>
             <x-slot:trigger>
                 <x-heroicon-o-gift class="h-6 mx-auto md:h-7" x-show="! open" />
