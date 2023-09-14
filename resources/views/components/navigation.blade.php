@@ -61,7 +61,7 @@
             </x-menu.item>
 
             <x-menu.item href="{{ route('pouest') }}" icon="o-forward">
-                Instantly migrate your tests to Pest for free
+                Migrate your tests to Pest for free
             </x-menu.item>
 
             <x-menu.item href="https://github.com/benjamincrozat/benjamincrozat.com" target="_blank" rel="nofollow noopener" icon="o-code-bracket">
