@@ -73,7 +73,7 @@
             </x-menu.item>
         </x-menu.base>
 
-        <x-menu.base>
+        <x-menu.base :self-center="true">
             <x-slot:trigger @class([
                 '-mx-2 sm:mx-0' => auth()->check(),
                 '-ml-2 sm:ml-0' => auth()->guest(),
@@ -82,7 +82,6 @@
                     class="h-6 mx-auto transition-transform duration-300 md:h-7"
                     x-bind:class="{ 'rotate-90': open }"
                 />
-
                 <div class="sr-only ">More</div>
             </x-slot:trigger>
 

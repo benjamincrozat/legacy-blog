@@ -1,4 +1,4 @@
-<div class="sm:relative" x-data="{ open: false }">
+<div class="sm:relative @if (! empty($selfCenter)) self-center @endif" x-data="{ open: false }">
     <button {{ $trigger->attributes->merge([
         'x-bind:class' => "{ 'relative z-20': open }",
     ]) }} @click="open = ! open">
