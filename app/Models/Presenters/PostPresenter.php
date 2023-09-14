@@ -5,6 +5,7 @@ namespace App\Models\Presenters;
 use App\Str;
 use App\Tree;
 use Spatie\Url\Url;
+use Illuminate\Support\Carbon;
 
 class PostPresenter extends BasePresenter
 {
@@ -73,6 +74,10 @@ class PostPresenter extends BasePresenter
         $date = $this->model->manually_updated_at
             ?? $this->model->published_at
             ?? $this->model->created_at;
+
+        if (is_string($date)) {
+            $date = Carbon::parse($date);
+        }
 
         return $date->isoFormat('LL');
     }
