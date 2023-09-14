@@ -20,7 +20,7 @@ it('presents the community link domain', function () {
 });
 
 it('presents the last update date', function () {
-    $post = Post::factory()->create();
+    $post = Post::factory()->published()->create();
 
     expect($post->presenter()->lastUpdated())
         ->toBe($post->created_at->isoFormat('LL'));

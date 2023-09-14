@@ -4,7 +4,7 @@ use App\Models\Post;
 use App\Models\Category;
 
 it('displays a post correctly', function () {
-    $post = Post::factory()->hasCategories(3)->create();
+    $post = Post::factory()->published()->hasCategories(3)->create();
 
     /** @var \NunoMaduro\LaravelMojito\ViewAssertion */
     $view = $this->assertView('components.post', compact('post'));
@@ -24,7 +24,7 @@ it('displays a post correctly', function () {
 });
 
 it('displays a community post correctly', function () {
-    $post = Post::factory()->hasCategories(3)->asCommunityLink()->create();
+    $post = Post::factory()->published()->hasCategories(3)->asCommunityLink()->create();
 
     /** @var \NunoMaduro\LaravelMojito\ViewAssertion */
     $view = $this->assertView('components.post', compact('post'));
