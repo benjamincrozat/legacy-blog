@@ -19,13 +19,18 @@ it('presents the community link domain', function () {
         ->toBe('example.com');
 });
 
-it('presents the last update date', function () {
-    $post = Post::factory()->published()->create();
+it('presents the last update date using the published_at attribute', function () {
+    $post = Post::factory()->create(['published_at' => now()->addDay()]);
 
     expect($post->presenter()->lastUpdated())
-        ->toBe($post->created_at->isoFormat('LL'));
+        ->toBe($post->published_at->isoFormat('LL'));
+});
 
-    $post->update(['manually_updated_at' => now()->addDay()]);
+it('presents the last update date using the manually_updated_at attribute', function () {
+    $post = Post::factory()->create([
+        'published_at' => now()->addDay(),
+        'manually_updated_at' => now()->addDays(2),
+    ]);
 
     expect($post->presenter()->lastUpdated())
         ->toBe($post->manually_updated_at->isoFormat('LL'));

@@ -47,8 +47,8 @@ class Post extends BaseModel implements Feedable, HasMedia
             'title' => $this->title,
             'slug' => $this->slug,
             'content' => $this->content,
-            'description' => $this->content,
-            'teaser' => $this->content,
+            'description' => $this->description,
+            'teaser' => $this->teaser,
             'community_link' => $this->community_link,
             'categories' => $this->categories->pluck('name')->toArray(),
         ];
