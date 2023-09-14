@@ -33,10 +33,12 @@ class Post extends BaseModel implements Feedable, HasMedia
     {
         $query = parent::resolveRouteBindingQuery($query, $value, $field);
 
-        return $query->unless(
-            request()->routeIs('filament.*') || 1 === auth()->id(),
-            fn ($query) => $query->published(),
-        );
+        return $query
+            ->with('categories')
+            ->unless(
+                request()->routeIs('filament.*') || 1 === auth()->id(),
+                fn ($query) => $query->published(),
+            );
     }
 
     public function toSearchableArray() : array

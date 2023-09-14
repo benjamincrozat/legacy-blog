@@ -34,7 +34,7 @@ class AppServiceProvider extends ServiceProvider
 
             // If the static variable declared above has already been set, use it. Otherwise, set it.
             // This prevents the query from being run multiple times on the same request.
-            $categories ??= Category::with('latestPosts')
+            $categories ??= Category::query()
                 ->whereHas('posts')
                 ->orderBy('is_highlighted', 'desc')
                 ->orderBy('name')
