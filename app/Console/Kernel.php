@@ -13,7 +13,7 @@ class Kernel extends ConsoleKernel
     {
         $schedule
             ->command(AnalyticsFetchCommand::class)
-            ->hourly();
+            ->daily();
 
         $schedule
             ->command(CleanActivitylogCommand::class)
