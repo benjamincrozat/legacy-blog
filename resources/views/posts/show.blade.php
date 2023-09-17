@@ -31,8 +31,10 @@
 
                 <img loading="lazy" src="{{ $post->presenter()->image() }}" alt="{{ $post->title }}" class="w-full" />
 
-                <div class="my-8">
-                    <x-post.newsletter />
+                <div class="not-prose">
+                    <div class="my-8">
+                        <x-post.newsletter />
+                    </div>
                 </div>
 
                 {!! $post->presenter()->content() !!}
