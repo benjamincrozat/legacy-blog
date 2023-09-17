@@ -82,8 +82,4 @@
             @endforeach
         </ul>
     </x-section>
-
-    <x-divider />
-
-    <x-newsletter />
 </x-app>
