@@ -27,8 +27,8 @@ $subscribe = function () {
         id="newsletter"
         class="text-center"
         x-data="{
-            title: 'I share what I learn, <span class=\'font-semibold text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text\'>for&nbsp;free</span>.',
-            button: 'Join 400+ developers',
+            title: null,
+            button: null,
             done: false,
         }"
         @subscribing="() => {
@@ -47,7 +47,7 @@ $subscribe = function () {
 
         <p
             class="mt-6 text-2xl font-bold md:mt-8 md:text-3xl lg:text-4xl xl:text-5xl"
-            x-html="title"
+            x-html="title || $el.innerHTML"
             x-ref="title"
         >
             I share what I learn, <span class="font-semibold text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">for&nbsp;free</span>.
@@ -75,7 +75,7 @@ $subscribe = function () {
                 x-bind:class="{ 'disabled:shadow-none disabled:bg-emerald-400': done, }"
                 :disabled="done"
                 x-ref="button"
-                x-text="button"
+                x-text="button || $el.textContent"
             >
                 Join 400+ developers
             </button>
