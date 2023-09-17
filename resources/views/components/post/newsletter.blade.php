@@ -19,7 +19,7 @@ $subscribe = function () {
 
     $validated = $this->validate();
 
-    //(new Subscribe)->subscribe($validated['email']);
+    (new Subscribe)->subscribe($validated['email']);
 
     $this->done = true;
 };
