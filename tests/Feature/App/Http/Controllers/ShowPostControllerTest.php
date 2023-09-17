@@ -23,9 +23,11 @@ test('a given published post is shown correctly and the page view is tracked', f
     $link = route('posts.show', $post);
 
     /** @var NunoMaduro\LaravelMojito\ViewAssertion */
-    $view = get($link)
+    $response = get($link)
         ->assertOk()
-        ->assertView('posts.show');
+        ->assertSeeVolt('newsletter');
+
+    $view = $response->assertView('posts.show');
 
     $view->has('title')->contains($post->title);
 

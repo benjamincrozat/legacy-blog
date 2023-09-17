@@ -19,14 +19,14 @@ $subscribe = function () {
 
     $validated = $this->validate();
 
-    (new Subscribe)->subscribe($validated['email']);
+    app(Subscribe::class)->subscribe($validated['email']);
 
     $this->done = true;
 };
 
 ?>
 
-@volt
+@volt('newsletter')
     <aside class="@if (! $done) -mt-3 @endif text-center sm:mx-auto sm:max-w-[480px]">
         @if ($done)
             <x-icon-envelope class="h-24 mx-auto" />
