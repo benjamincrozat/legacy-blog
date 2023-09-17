@@ -6,7 +6,7 @@ use Facades\App\Actions\Subscribe;
 it('subscribe a visitor', function () {
     Subscribe::shouldReceive('subscribe')->once();
 
-    Volt::test('newsletter')
+    Volt::test('newsletter-form')
         ->assertSet('email', '')
         ->assertSet('done', false)
         ->assertSee('I share what I learn')

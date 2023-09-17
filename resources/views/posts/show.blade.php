@@ -32,7 +32,7 @@
                 <img loading="lazy" src="{{ $post->presenter()->image() }}" alt="{{ $post->title }}" class="w-full" />
 
                 <div class="not-prose">
-                    <x-post.newsletter />
+                    <x-newsletter-form />
                 </div>
 
                 {!! $post->presenter()->content() !!}

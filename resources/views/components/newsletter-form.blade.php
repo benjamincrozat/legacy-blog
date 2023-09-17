@@ -26,15 +26,22 @@ $subscribe = function () {
 
 ?>
 
-@volt('newsletter')
-    <aside class="text-center sm:mx-auto sm:max-w-[480px]">
+@volt('newsletter-form')
+    <aside id="newsletter" class="text-center">
         @if ($done)
             <x-icon-envelope class="h-24 mx-auto" />
         @else
             <x-icon-envelope-closed class="h-24 mx-auto" />
         @endif
 
-        <p class="mt-4 text-xl font-bold md:text-2xl" x-ref="title">
+        <p
+            @if (request()->routeIs('home'))
+                class="mt-6 text-2xl font-bold md:mt-8 md:text-3xl lg:text-4xl xl:text-5xl"
+            @else
+                class="mt-4 text-xl font-bold md:mt-6 md:text-2xl"
+            @endif
+            x-ref="title"
+        >
             @if ($done)
                 Done. Check your inbox!
             @else
@@ -43,7 +50,7 @@ $subscribe = function () {
         </p>
 
         <form
-            class="mt-4 md:mt-5"
+            class="sm:max-w-[480px] sm:mx-auto mt-4 md:mt-6"
             @submit.prevent="$wire.subscribe(); $refs.button.textContent = 'Subscribing…'; $refs.title.textContent = 'Getting everything ready…'"
         >
             @csrf

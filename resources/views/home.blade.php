@@ -105,8 +105,8 @@
         </ul>
     </x-section>
 
-    <div class="mt-32">
-        <x-newsletter />
+    <div class="container mt-32">
+        <x-newsletter-form />
     </div>
 
     <x-section id="about" class="container mt-32 lg:max-w-screen-md scroll-mt-8">
