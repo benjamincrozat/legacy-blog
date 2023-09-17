@@ -27,7 +27,7 @@ $subscribe = function () {
 ?>
 
 @volt
-    <aside class="text-center sm:mx-auto sm:max-w-[480px]">
+    <aside class="@if (! $done) -mt-8 @endif text-center sm:mx-auto sm:max-w-[480px]">
         @if ($done)
             <x-icon-envelope class="h-24 mx-auto" />
         @else
