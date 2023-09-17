@@ -6,8 +6,9 @@ use function Livewire\Volt\rules;
 use function Livewire\Volt\state;
 
 state([
-    'email' => '',
     'done' => false,
+    'email' => '',
+    'homepage' => request()->routeIs('home'),
 ]);
 
 rules(['email' => 'required|email']);
@@ -15,7 +16,7 @@ rules(['email' => 'required|email']);
 $subscribe = function () {
     $validated = $this->validate();
 
-    app(Subscribe::class)->subscribe($validated['email']);
+    // app(Subscribe::class)->subscribe($validated['email']);
 
     $this->dispatch('done', true);
 };
@@ -27,9 +28,10 @@ $subscribe = function () {
         id="newsletter"
         class="text-center"
         x-data="{
-            title: null,
             button: null,
             done: false,
+            homepage: @entangle('homepage'),
+            title: null,
         }"
         @subscribing="() => {
             title = 'Getting everything ready…'
@@ -46,7 +48,11 @@ $subscribe = function () {
         <x-icon-envelope-closed class="h-24 mx-auto" x-show="! done" />
 
         <p
-            class="mt-6 text-2xl font-bold md:mt-8 md:text-3xl lg:text-4xl xl:text-5xl"
+            class="mt-4 md:mt-6"
+            x-bind:class="{
+                'text-2xl/snug font-bold md:text-3xl/snug lg:text-4xl/snug xl:text-5xl/snug': homepage,
+                'text-xl/none font-bold md:text-2xl/none': ! homepage,
+            }"
             x-html="title || $el.innerHTML"
             x-ref="title"
         >
@@ -54,7 +60,7 @@ $subscribe = function () {
         </p>
 
         <form
-            class="sm:max-w-[480px] sm:mx-auto mt-8 md:mt-10"
+            class="sm:max-w-[480px] sm:mx-auto mt-4 md:mt-6"
             @submit.prevent="$wire.subscribe(); $dispatch('subscribing')"
         >
             @csrf
