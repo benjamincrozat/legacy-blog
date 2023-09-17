@@ -1,36 +1,81 @@
-<x-section {{ $attributes->merge([
-    'id' => 'newsletter',
-    'class' => 'container scroll-mt-8',
-]) }}>
-    <x-slot:title class="text-3xl sm:!text-4xl md:!text-5xl text-center">
-        <x-icon-envelope class="h-32 mx-auto" />
+<?php
 
-        <div class="mt-8">
-            I share what I learn, <span class="font-semibold text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">for&nbsp;free</span>!
-        </div>
-    </x-slot:title>
+use App\Actions\Subscribe;
 
-    <p class="mt-6 text-center lg:max-w-screen-md md:mx-auto sm:text-xl">
-        <span class="font-medium">Join +400 developers.</span> <span class="font-medium text-indigo-400 bg-indigo-200/30">Get exclusive, interesting and insightful information</span> in your inbox about my experiences building with Laravel and its ecosystem.
-    </p>
+use function Livewire\Volt\rules;
+use function Livewire\Volt\state;
 
-    <div class="mt-8 md:mx-auto md:max-w-screen-sm">
-        <form method="POST" action="{{ route('subscribe') }}" class="flex items-stretch justify-center gap-1 sm:gap-2">
+state([
+    'email' => '',
+    'done' => false,
+]);
+
+rules(['email' => 'required|email']);
+
+$subscribe = function () {
+    if ($this->done) {
+        return;
+    }
+
+    $validated = $this->validate();
+
+    app(Subscribe::class)->subscribe($validated['email']);
+
+    $this->done = true;
+};
+
+?>
+
+@volt('home-newsletter')
+    <aside id="newsletter" class="container text-center lg:max-w-screen-md">
+        @if ($done)
+            <x-icon-envelope class="h-24 mx-auto" />
+        @else
+            <x-icon-envelope-closed class="h-24 mx-auto" />
+        @endif
+
+        <p class="mt-6 text-2xl font-bold md:mt-8 md:text-3xl lg:text-4xl xl:text-5xl" x-ref="title">
+            @if ($done)
+                Done. Check your inbox!
+            @else
+                I share what I learn, <span class="font-semibold text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">for&nbsp;free</span>.
+            @endif
+        </p>
+
+        <form
+            class="sm:max-w-[480px] sm:mx-auto mt-6 md:mt-8"
+            @submit.prevent="$wire.subscribe(); $refs.button.textContent = 'Subscribing…'; $refs.title.textContent = 'Getting everything ready…'"
+        >
             @csrf
 
-            <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="johndoe@example.com" required class="flex-grow w-full px-4 py-3 placeholder-gray-300 border-0 rounded shadow shadow-black/5" />
+            <input
+                type="text"
+                id="email"
+                wire:model="email"
+                placeholder="johndoe@example.com"
+                required
+                @if ($done) disabled @endif
+                class="w-full disabled:ring-1 disabled:ring-emerald-400 px-[.85rem] placeholder-gray-300 h-[44px] border-0 rounded shadow shadow-black/5 disabled:text-emerald-400 disabled:shadow-none transition-colors duration-500"
+            />
 
-            <x-button class="px-4 text-white bg-indigo-400 shadow-lg sm:px-6 md:px-8 shadow-blue-700/20">
-                Subscribe
-            </x-button>
+            <button
+                class="bg-indigo-400 shadow-lg shadow-blue-700/20 h-[44px] font-bold rounded mt-2 px-8 text-white transition-colors duration-500
+                @if ($done) disabled:shadow-none disabled:bg-emerald-400 @endif"
+                @if ($done) disabled @endif
+                x-ref="button"
+            >
+                @if ($done)
+                    Thank you!
+                @else
+                    Join 400+ developers
+                @endif
+            </button>
         </form>
 
         @error('email')
-            <p class="text-center text-red-400">
+            <p class="mt-4 text-center text-red-400">
                 {{ $message }}
             </p>
         @enderror
-    </div>
-
-    {{ $slot }}
-</x-section>
+    </aside>
+@endvolt
