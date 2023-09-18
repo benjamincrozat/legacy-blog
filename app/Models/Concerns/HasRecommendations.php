@@ -13,10 +13,6 @@ trait HasRecommendations
     {
         return Attribute::make(function () {
             try {
-                if ('algolia' !== config('scout.driver')) {
-                    throw new Exception("Scout's driver is not configured.");
-                }
-
                 $recommendations = RecommendClient::getRelatedProducts([[
                     'indexName' => config('scout.prefix') . 'posts',
                     'objectID' => "$this->id",

@@ -1,16 +1,15 @@
 <?php
 
 use App\Models\Post;
+
+use function Pest\Laravel\swap;
+
 use Algolia\AlgoliaSearch\RecommendClient;
 use Algolia\AlgoliaSearch\Config\RecommendConfig;
 use Algolia\AlgoliaSearch\RetryStrategy\ApiWrapperInterface;
 
-it('requests ten published recommendations to Algolia and excludes the current published post', function () {
-    config()->set('scout.driver', 'algolia');
-
+beforeEach(function () {
     $posts = Post::factory(10)->published()->create();
-
-    $post = Post::factory()->published()->create();
 
     $api = new class($posts->pluck('id')->toArray()) implements ApiWrapperInterface
     {
@@ -38,15 +37,17 @@ it('requests ten published recommendations to Algolia and excludes the current p
         config('scout.algolia.secret')
     );
 
-    $this->swap(RecommendClient::class, new RecommendClient($api, $config));
+    swap(RecommendClient::class, new RecommendClient($api, $config));
+});
+
+it('requests ten published recommendations to Algolia and excludes the current published post', function () {
+    $post = Post::factory()->published()->create();
 
     expect($post->recommendations)->toHaveCount(10);
     expect($post->recommendations->pluck('id'))->not->toContain($post->id);
 });
 
 it("falls back to ten random published recommendations when Algolia isn't available.", function () {
-    Post::factory(10)->published()->create();
-
     $post = Post::factory()->published()->create();
 
     expect(function () use ($post) {
@@ -57,8 +58,6 @@ it("falls back to ten random published recommendations when Algolia isn't availa
 });
 
 it('excludes the current published post from recommendations', function () {
-    Post::factory(10)->published()->create();
-
     $post = Post::factory()->published()->create();
 
     expect($post->recommendations->contains($post))->toBeFalse();

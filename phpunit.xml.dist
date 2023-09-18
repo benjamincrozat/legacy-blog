@@ -29,5 +29,7 @@
         <env name="TELESCOPE_ENABLED" value="false"/>
         <env name="FILAMENT_FILESYSTEM_DISK" value="local"/>
         <env name="MEDIA_DISK" value="local"/>
+        <env name="ALGOLIA_APP_ID" value="null"/>
+        <env name="ALGOLIA_SECRET" value="null"/>
     </php>
 </phpunit>

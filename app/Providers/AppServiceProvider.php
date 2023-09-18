@@ -15,10 +15,12 @@ class AppServiceProvider extends ServiceProvider
 {
     public function register() : void
     {
-        $this->app->bind(RecommendClient::class, fn (Application $app) => RecommendClient::create(
-            $app['config']->get('scout.algolia.id'),
-            $app['config']->get('scout.algolia.secret')
-        ));
+        $this->app->bind(RecommendClient::class, function (Application $app) {
+            return RecommendClient::create(
+                $app['config']->get('scout.algolia.id'),
+                $app['config']->get('scout.algolia.secret')
+            );
+        });
 
         $this->app->bind(Subscribe::class, fn () => new Subscribe);
     }
