@@ -1,5 +1,5 @@
 @if ($categories->isNotEmpty())
-    <ul class="flex gap-1 mt-5">
+    <ul {{ $attributes->merge(['class' => 'flex gap-1']) }}>
         @foreach ($categories as $category)
             <li>
                 <a

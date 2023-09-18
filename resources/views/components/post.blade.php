@@ -41,5 +41,5 @@
             </a>
     </div>
 
-    <x-post.categories :categories="$post->categories" />
+    <x-post.categories :categories="$post->categories" class="mt-4" />
 </div>
