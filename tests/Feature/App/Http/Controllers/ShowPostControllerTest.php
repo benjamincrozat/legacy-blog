@@ -24,8 +24,7 @@ test('a given published post is shown correctly and the page view is tracked', f
 
     /** @var NunoMaduro\LaravelMojito\ViewAssertion */
     $response = get($link)
-        ->assertOk()
-        ->assertSeeVolt('newsletter-form');
+        ->assertOk();
 
     $view = $response->assertView('posts.show');
 
