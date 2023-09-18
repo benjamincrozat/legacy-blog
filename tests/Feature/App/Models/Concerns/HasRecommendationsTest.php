@@ -5,7 +5,7 @@ use Algolia\AlgoliaSearch\RecommendClient;
 use Algolia\AlgoliaSearch\Config\RecommendConfig;
 use Algolia\AlgoliaSearch\RetryStrategy\ApiWrapperInterface;
 
-it('requests ten recommendations to Algolia and excludes the current post', function () {
+it('requests ten published recommendations to Algolia and excludes the current published post', function () {
     config()->set('scout.driver', 'algolia');
 
     $posts = Post::factory(10)->published()->create();
@@ -44,7 +44,7 @@ it('requests ten recommendations to Algolia and excludes the current post', func
     expect($post->recommendations->pluck('id'))->not->toContain($post->id);
 });
 
-it("falls back to ten random recommendations when Algolia isn't available.", function () {
+it("falls back to ten random published recommendations when Algolia isn't available.", function () {
     Post::factory(10)->published()->create();
 
     $post = Post::factory()->published()->create();
@@ -56,7 +56,7 @@ it("falls back to ten random recommendations when Algolia isn't available.", fun
     expect($post->recommendations)->toHaveCount(10);
 });
 
-it('excludes the current post from recommendations', function () {
+it('excludes the current published post from recommendations', function () {
     Post::factory(10)->published()->create();
 
     $post = Post::factory()->published()->create();
