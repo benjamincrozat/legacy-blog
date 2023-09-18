@@ -136,7 +136,8 @@
             <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 512.001 512.001" class="h-32 mx-auto"><path fill="#374151" d="M420.818 326.609H91.182v-16.33c0-39.392 31.934-71.326 71.326-71.326h186.986c39.392 0 71.326 31.934 71.326 71.326v16.33h-.002zM179.583 100.652h152.839v138.3H179.583z"/><path fill="#d1d5db" d="M349.492 224.544h-2.666V100.652c0-7.957-6.451-14.409-14.409-14.409h-149.33c-25.357-5.738-44.355-28.437-44.355-55.503v-1.921h234.537v1.921c0 10.023-2.637 19.872-7.624 28.48-3.99 6.886-1.643 15.702 5.244 19.692 6.886 3.993 15.702 1.643 19.692-5.244 7.529-12.994 11.507-27.837 11.507-42.928V14.41c0-7.958-6.451-14.41-14.41-14.41H124.323c-7.958 0-14.409 6.452-14.409 14.409v16.33c0 37.453 23.267 68.463 55.26 79.742v114.062h-2.666c-47.275 0-85.735 38.46-85.735 85.735v16.33c0 7.957 6.451 14.409 14.409 14.409h110.611l40.234 160.085c1.61 6.405 7.369 10.898 13.974 10.898s12.365-4.491 13.974-10.898l31.147-123.928c1.939-7.718-2.744-15.548-10.463-17.487-7.718-1.947-15.548 2.744-17.487 10.463L256 438.474l-24.493-97.457H420.82c7.958 0 14.409-6.452 14.409-14.409v-16.33c-.002-47.274-38.461-85.734-85.737-85.734zm-155.5-109.483h124.016v109.483H193.992V115.061zM406.409 312.2H105.591v-1.921c0-31.383 25.533-56.917 56.917-56.917h186.985c31.383 0 56.917 25.533 56.917 56.917v1.921z"/></svg>
 
             <p class="flex-grow mt-8 font-bold">
-                Pin your logo on my homepage on in the footer of every article
+                Pin your link and logo<br />
+                on my homepage and the footer
             </p>
 
             <p class="text-center">
@@ -163,7 +164,8 @@
 
     <x-section id="display" class="container mt-24 scroll-mt-4 md:mt-32 lg:max-w-screen-md">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
-            Pin your link and logo on my homepage and in the footer of articles
+            Pin your link and logo<br />
+            on my homepage and the footer
         </x-slot:title>
 
         <div class="flex items-center justify-between gap-8 mt-8 md:gap-12">

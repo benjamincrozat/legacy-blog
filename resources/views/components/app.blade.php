@@ -70,7 +70,11 @@
             </main>
 
             @empty($hideFooter)
-                <x-footer class="flex-grow mt-16 text-gray-300 @empty ($darkerFooter) bg-gray-900 @else bg-gray-950 @endempty" />
+                <x-footer @class([
+                    'flex-grow mt-16' => true,
+                    'bg-gray-100' => empty($darkerFooter),
+                    'bg-gray-950' => ! empty($darkerFooter)
+                ]) />
             @endempty
         </div>
 
