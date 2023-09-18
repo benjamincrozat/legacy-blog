@@ -40,7 +40,7 @@ it('displays popular posts', function () {
         ->viewData('popular');
 
     expect($popular)->toBeInstanceOf(Collection::class);
-    expect($popular)->toHaveCount(10);
+    expect($popular)->toHaveCount(11);
     expect(fn () => $popular->ensure(Post::class))->not->toThrow(UnexpectedValueException::class);
 });
 
@@ -54,6 +54,6 @@ it('displays the latest posts', function () {
         ->viewData('latest');
 
     expect($latest)->toBeInstanceOf(Collection::class);
-    expect($latest)->toHaveCount(10);
+    expect($latest)->toHaveCount(11);
     expect(fn () => $latest->ensure(Post::class))->not->toThrow(UnexpectedValueException::class);
 });
