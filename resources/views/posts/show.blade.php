@@ -76,4 +76,10 @@
             @endforeach
         </ul>
     </x-section>
+
+    <x-divider class="!mt-20" />
+
+    <x-sponsors>
+        <x-slot:title>Huge thanks to my sponsors!</x-slot:title>
+    </x-sponsors>
 </x-app>
