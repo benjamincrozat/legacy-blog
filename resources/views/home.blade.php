@@ -20,7 +20,17 @@
 
         <p class="mt-16 text-lg font-medium sm:text-xl">Deep gratitude to the sponsors who back&nbsp;me!</p>
 
-        <div class="container flex flex-wrap items-center justify-center gap-8 mt-8 sm:justify-start">
+        <div class="container flex flex-wrap items-center justify-center gap-8 mt-8 md:gap-12 sm:justify-start">
+            <a
+                href="https://beyondco.de/?utm_source=benjamincrozat&utm_medium=logo&utm_campaign=benjamincrozat"
+                target="_blank"
+                rel="noopener"
+                class="text-center"
+            >
+                <x-icon-beyond-code class="inline h-8" />
+                <span class="sr-only">Beyond Code</span>
+            </a>
+
             <a
                 href="https://useflipp.com/?utm_campaign=sponsorship&utm_source=benjamincrozat.com&utm_medium=logolink"
                 target="_blank"
