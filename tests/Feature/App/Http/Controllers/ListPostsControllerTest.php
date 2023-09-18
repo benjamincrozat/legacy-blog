@@ -12,5 +12,5 @@ it('it listed published posts with pagination', function () {
     get(route('posts.index'))
         ->assertOk()
         ->assertViewIs('posts.index')
-        ->assertViewHas('posts', fn (LengthAwarePaginator $posts) => 20 === $posts->count());
+        ->assertViewHas('posts', fn (LengthAwarePaginator $posts) => 21 === $posts->count());
 });
