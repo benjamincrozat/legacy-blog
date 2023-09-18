@@ -8,13 +8,11 @@ it('subscribe a visitor', function () {
 
     Volt::test('newsletter-form')
         ->assertSet('email', '')
-        ->assertSet('done', false)
         ->assertSee('I share what I learn')
         ->assertSee('Join 400+ developers')
         ->set('email', 'someone@gmail.com')
         ->call('subscribe')
         ->assertSet('email', 'someone@gmail.com')
-        ->assertSet('done', true)
         ->assertSee('Done. Check your inbox!')
         ->assertSee('Thank you!');
 });

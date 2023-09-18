@@ -24,7 +24,7 @@ trait HasRecommendations
                 ]]);
 
                 // We return the posts in the order Algolia recommends.
-                return static::with('categories', 'media')->asSequence(
+                return static::with('categories', 'media')->published()->asSequence(
                     Arr::pluck($recommendations['results'][0]['hits'], 'objectID')
                 )->get();
             } catch (Exception $e) {
@@ -34,6 +34,7 @@ trait HasRecommendations
                 // But we always return a random set of posts, which is better than nothing.
                 return static::query()
                     ->with('categories', 'media')
+                    ->published()
                     ->inRandomOrder()
                     ->whereNotIn('id', [$this->id])
                     ->limit(10)

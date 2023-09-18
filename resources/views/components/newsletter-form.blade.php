@@ -16,7 +16,7 @@ rules(['email' => 'required|email']);
 $subscribe = function () {
     $validated = $this->validate();
 
-    // app(Subscribe::class)->subscribe($validated['email']);
+    app(Subscribe::class)->subscribe($validated['email']);
 
     $this->dispatch('done', true);
 };
