@@ -210,13 +210,15 @@
     </x-section>
 
     <div class="container mt-16 text-center md:max-w-screen-sm">
-        <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/7de09977-485d-4dcd-8813-c17dd48eddc7" class="inline-block px-4 py-3 text-white transition-opacity rounded bg-gradient-to-r from-orange-500 to-yellow-600 hover:opacity-75">
+        <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/7de09977-485d-4dcd-8813-c17dd48eddc7?discount=0" class="inline-block px-4 py-3 text-white transition-opacity rounded bg-gradient-to-r from-orange-500 to-yellow-600 hover:opacity-75">
             Get started for <strong class="font-extrabold">$49/month</strong>
         </a>
 
         <p class="mt-4 text-sm text-gray-400">Once the payment is done, you will receive instructions on how to send me your company name, logo, and landing page of choice.</p>
 
-        <p class="mt-4">Need a custom deal? <a href="mailto:hello@benjamincrozat.com" class="font-medium underline">Reach out!</a></p>
+        <p class="mt-4">
+            Simplify your accounting with <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/6b81c388-5b8c-4365-815e-de11e6951135?discount=0" class="font-medium underline">yearly payments</a>.
+        </p>
     </div>
 
     <x-section id="write" class="container mt-24 scroll-mt-4 md:mt-32 lg:max-w-screen-md">
