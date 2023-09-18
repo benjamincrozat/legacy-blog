@@ -27,7 +27,7 @@
                 rel="noopener"
                 class="text-center"
             >
-                <x-icon-beyond-code class="inline h-8" />
+                <x-icon-beyond-code class="inline h-9" />
                 <span class="sr-only">Beyond Code</span>
             </a>
 
