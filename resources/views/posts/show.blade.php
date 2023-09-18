@@ -31,10 +31,6 @@
 
                 <img loading="lazy" src="{{ $post->presenter()->image() }}" alt="{{ $post->title }}" class="w-full" />
 
-                <div class="not-prose">
-                    <x-newsletter-form />
-                </div>
-
                 {!! $post->presenter()->content() !!}
 
                 @if ($post->community_link)
