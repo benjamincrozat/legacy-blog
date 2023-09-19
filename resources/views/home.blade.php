@@ -47,7 +47,7 @@
     @if ($categories->isNotEmpty())
         <x-section class="container mt-32">
             <x-slot:title class="text-center">
-                An endless amount of content for web&nbsp;developers.
+                A variety of topics
             </x-slot:title>
 
             <ul class="grid gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3 md:gap-16">
