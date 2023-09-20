@@ -29,7 +29,9 @@
 
                 <x-post.tree.trunk :tree="$post->presenter()->tree()" />
 
-                <img loading="lazy" src="{{ $post->presenter()->image() }}" alt="{{ $post->title }}" class="w-full" />
+                @if ($image = $post->presenter()->image())
+                    <img loading="lazy" src="{{ $image }}" alt="{{ $post->title }}" class="w-full" />
+                @endif
 
                 {!! $post->presenter()->content() !!}
 

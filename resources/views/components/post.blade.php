@@ -32,13 +32,20 @@
             </p>
         </div>
 
+        @if ($image = $post->presenter()->imagePreview())
             <a
                 @if (! $post->community_link) wire:navigate.hover @endif
                 href="{{ $post->community_link ? $post->community_link : route('posts.show', $post) }}"
                 class="flex-shrink-0"
             >
-                <img loading="lazy" src="{{ $post->presenter()->imagePreview() }}" alt="{{ $post->title }}" class="object-cover aspect-square w-[64px] lg:w-[96px] h-[64px] lg:h-[96px]" />
+                <img
+                    loading="lazy"
+                    src="{{ $image }}"
+                    alt="{{ $post->title }}"
+                    class="object-cover aspect-square w-[64px] lg:w-[96px] h-[64px] lg:h-[96px]"
+                />
             </a>
+        @endif
     </div>
 
     <x-post.categories :categories="$post->categories" class="mt-4" />

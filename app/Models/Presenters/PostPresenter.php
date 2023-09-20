@@ -9,44 +9,14 @@ use Illuminate\Support\Carbon;
 
 class PostPresenter extends BasePresenter
 {
-    public function thumbnail() : string
-    {
-        if (! Str::startsWith($this->model->image, 'https://res.cloudinary.com')) {
-            return $this->model->image;
-        }
-
-        return str_replace('/upload', '/upload/dpr_auto,f_auto,q_auto,w_256', $this->model->image);
-    }
-
     public function image() : ?string
     {
-        $media = $this->model->getFirstMedia('image');
-
-        if (app()->isProduction() && ! $media) {
-            return $this->fallbackImage();
-        } elseif (! $media) {
-            return 'https://via.placeholder.com/640x480.png/003344?text=Image%20not%20set.';
-        }
-
-        return $media->getAvailableFullUrl(['optimized']);
+        return $this->model->getFirstMedia('image')?->getAvailableFullUrl(['optimized']);
     }
 
     public function imagePreview() : ?string
     {
-        $media = $this->model->getFirstMedia('image');
-
-        if (app()->isProduction() && ! $media) {
-            return $this->fallbackImage();
-        } elseif (! $media) {
-            return 'https://via.placeholder.com/300x300.png/003344?text=Image%20not%20set.';
-        }
-
-        return $media->getAvailableFullUrl(['preview']);
-    }
-
-    public function fallbackImage() : string
-    {
-        return 'https://i.useflipp.com/gw6mxpkgy4v8.png?watermark=useflipp.com&title=' . urlencode($this->model->title ?? '') . '&body=' . urlencode($this->model->description ?? '');
+        return $this->model->getFirstMedia('image')?->getAvailableFullUrl(['preview']);
     }
 
     public function tree() : array

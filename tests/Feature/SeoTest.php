@@ -25,16 +25,22 @@ it('checks the boxes for technical SEO', function () {
         ])
         ->contains($post->title);
 
+    $queryString = http_build_query([
+        'title' => $post->title,
+        'body' => $post->description,
+        'watermark' => 'useflipp.com',
+    ]);
+
     $view
         ->hasMeta([
             'name' => 'twitter:image',
-            'content' => 'https://via.placeholder.com/640x480.png/003344?text=Image%20not%20set.',
+            'content' => "https://i.useflipp.com/gw6mxpkgy4v8.png?$queryString",
         ]);
 
     $view
         ->hasMeta([
             'property' => 'og:image',
-            'content' => 'https://via.placeholder.com/640x480.png/003344?text=Image%20not%20set.',
+            'content' => "https://i.useflipp.com/gw6mxpkgy4v8.png?$queryString",
         ]);
 
     $view
