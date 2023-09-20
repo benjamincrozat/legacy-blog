@@ -92,5 +92,7 @@ $subscribe = function () {
                 {{ $message }}
             </p>
         @enderror
+
+        <p class="mt-8">Powered by <a href="/recommends/mailcoach"><x-icon-mailcoach class="inline-block mr-[.175rem] h-4 translate-y-[-2px]" /> <span class="font-medium">Mailcoach</span></a></p>
     </aside>
 @endvolt
