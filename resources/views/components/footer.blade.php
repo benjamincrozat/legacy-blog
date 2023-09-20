@@ -27,7 +27,14 @@
                 rel="noopener"
                 class="text-center"
             >
-                <img loading="lazy" src="{{ Vite::asset('resources/img/flipp.png') }}" alt="Flipp" class="inline h-8" />
+                <img
+                    loading="lazy"
+                    src="{{ Vite::asset('resources/img/flipp.png') }}"
+                    width="400"
+                    height="124"
+                    alt="Flipp"
+                    class="inline w-auto h-8"
+                />
             </a>
 
             <a
@@ -36,7 +43,14 @@
                 rel="noopener"
                 class="text-center"
             >
-                <img loading="lazy" src="{{ Vite::asset('resources/img/redirect-pizza.png') }}" alt="redirect.pizza" class="inline h-10" />
+                <img
+                    loading="lazy"
+                    src="{{ Vite::asset('resources/img/redirect-pizza.png') }}"
+                    width="400"
+                    height="124"
+                    alt="redirect.pizza"
+                    class="inline w-auto h-10"
+                />
             </a>
         </div>
 

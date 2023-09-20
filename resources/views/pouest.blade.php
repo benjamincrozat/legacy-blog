@@ -18,7 +18,7 @@
         </div>
 
         <div class="mt-8 md:mt-16">
-            <livewire:pouest />
+            <livewire:pouest :lazy="true" />
         </div>
 
         <x-prose class="mt-8 md:mt-16 prose-invert prose-a:decoration-[#f471b5]/50 prose-a:text-[#f471b5] prose-a:underline-offset-4">
