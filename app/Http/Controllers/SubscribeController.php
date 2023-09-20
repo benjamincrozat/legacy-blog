@@ -15,7 +15,7 @@ class SubscribeController extends Controller
 
     public function __invoke() : RedirectResponse
     {
-        $validated = request()->validate(['email' => ['required', 'email']]);
+        $validated = request()->validate(['email' => 'required|email']);
 
         (new Subscribe)->subscribe($validated['email']);
 
