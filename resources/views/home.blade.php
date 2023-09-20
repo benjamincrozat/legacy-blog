@@ -5,10 +5,11 @@
         <x-slot:title tag="h1" class="container font-bold text-center text-3xl/none md:text-4xl/none lg:text-5xl/none">
             <div class="flex items-center justify-center gap-4 mt-8 md:gap-8">
                 <x-icon-laravel class="h-10 md:h-[3.25rem]" />
-                <x-icon-livewire class="h-10 mx-2 md:h-12" />
-                <x-icon-alpinejs class="h-6 mr-1 md:h-8" />
-                <x-icon-tailwind-css class="h-8 mr-1 md:h-12" />
-                <x-icon-vuejs class="h-10 md:h-12" />
+                <x-icon-inertiajs class="h-6 md:h-8" />
+                <x-icon-livewire class="h-8 md:h-12" />
+                <x-icon-alpinejs class="h-6 md:h-8" />
+                <x-icon-tailwindcss class="h-8 md:h-12" />
+                <x-icon-vuejs class="h-9 md:h-11" />
             </div>
 
             <div class="mt-8">Learn about Laravel and its&nbsp;ecosystem.</div>
