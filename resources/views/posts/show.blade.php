@@ -16,7 +16,7 @@
                 <div class="mb-8">
                     @if ($post->community_link)
                         <h1>
-                            <a href="{{ $post->community_link }}" target="_blank" rel="noopener" class="decoration-4 underline-offset-4">
+                            <a href="{{ $post->community_link }}" target="_blank" rel="noopener" class="underline">
                                 {{ $post->title }}
                             </a>
                         </h1>
