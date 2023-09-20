@@ -8,11 +8,9 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
 use App\Console\Commands\AnalyticsFetchCommand;
 
-dataset('posts', [
-    [
-        fn () => Post::factory(3)->create(),
-    ],
-]);
+dataset('posts', [[
+    fn () => Post::factory(3)->create(),
+]]);
 
 beforeEach(function () {
     Http::fake([
