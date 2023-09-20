@@ -16,10 +16,18 @@
 
         <title>{{ $title ?? config('app.name') }}</title>
 
+        @vite(['resources/css/app.css'])
+
+        @livewireStyles
+
         @unless(app()->runningUnitTests())
             @googlefonts
             @googlefonts('handwriting')
         @endunless
+
+        @vite(['resources/js/app.js'])
+
+        @livewireScripts
 
         @if (app()->isProduction() && auth()->id() !== 1)
             <script
@@ -29,12 +37,6 @@
                 data-disable-page-views
             ></script>
         @endif
-
-        @livewireStyles
-
-        @livewireScripts
-
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         <x-feed-links />
 
