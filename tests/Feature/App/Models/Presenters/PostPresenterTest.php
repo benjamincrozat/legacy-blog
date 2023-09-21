@@ -13,6 +13,16 @@ it('presents the image', function () {
     expect($post->presenter()->image())->not->toBeNull();
 });
 
+it('presents the image preview', function () {
+    $post = Post::factory()->create();
+
+    $file = UploadedFile::fake()->image('foo.jpg');
+
+    $post->addMedia($file)->toMediaCollection('image');
+
+    expect($post->presenter()->imagePreview())->not->toBeNull();
+});
+
 it('presents the community link domain', function () {
     $post = Post::factory()->create([
         'community_link' => 'https://www.example.com',
