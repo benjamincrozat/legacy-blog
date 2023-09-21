@@ -1,7 +1,7 @@
 <nav {{ $attributes->merge(['class' => 'container relative flex items-center justify-between sm:static lg:max-w-screen-md']) }}>
     <x-logo />
 
-    <div class="flex items-baseline gap-8">
+    <div class="flex items-baseline gap-6 sm:gap-7 md:gap-8">
         <a wire:navigate.hover href="{{ route('posts.index') }}">
             @if (Route::is('posts.index'))
                 <x-heroicon-s-fire class="h-6 mx-auto text-orange-400 md:h-7" />
@@ -67,7 +67,10 @@
         </x-menu.base>
 
         <x-menu.base :self-center="true">
-            <x-slot:trigger>
+            <x-slot:trigger @class([
+                '-mx-1 sm:mx-0' => auth()->check(),
+                '-ml-1 sm:ml-0' => auth()->guest(),
+            ])>
                 <x-heroicon-o-ellipsis-horizontal
                     class="h-6 mx-auto transition-transform duration-300 md:h-7"
                     x-bind:class="{ 'rotate-90': open }"
