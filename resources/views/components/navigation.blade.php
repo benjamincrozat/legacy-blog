@@ -49,8 +49,8 @@
                 <strong class="text-black transition-colors group-hover:text-white">Never miss new content</strong>
             </x-menu.item>
 
-            <x-menu.item href="/best-web-development-tools" icon="o-wrench">
-                See all the tools I use
+            <x-menu.item href="/best-web-development-tools" icon="s-wrench" class="text-emerald-400 hover:text-emerald-400">
+                <strong class="text-black transition-colors group-hover:text-white">See all the tools I use</strong>
             </x-menu.item>
 
             <x-menu.item href="{{ route('pouest') }}" icon="o-forward">
