@@ -16,7 +16,7 @@ trait HasRecommendations
                 $recommendations = RecommendClient::getRelatedProducts([[
                     'indexName' => config('scout.prefix') . 'posts',
                     'objectID' => "$this->id",
-                    'maxRecommendations' => 10,
+                    'maxRecommendations' => 11,
                 ]]);
 
                 // We return the posts in the order Algolia recommends.
@@ -33,7 +33,7 @@ trait HasRecommendations
                     ->published()
                     ->inRandomOrder()
                     ->whereNotIn('id', [$this->id])
-                    ->limit(10)
+                    ->limit(11)
                     ->get();
             }
         })->shouldCache();
