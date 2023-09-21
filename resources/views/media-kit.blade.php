@@ -97,7 +97,7 @@
 
             <div class="col-span-1">
                 <div class="text-xl sm:text-2xl xl:text-3xl">
-                    India, United States, Indonesia, France, Germany
+                    India, Indonesia, United States, Germany, United Kingdom
                 </div>
 
                 <div class="text-indigo-400">
