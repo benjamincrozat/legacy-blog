@@ -1,11 +1,14 @@
 <?php
 
 use App\Models\Post;
+use Illuminate\Http\UploadedFile;
 
 it('presents the image', function () {
-    ($post = Post::factory()->create())
-        ->addMediaFromUrl(fake()->imageUrl(50, 50))
-        ->toMediaCollection('image');
+    $post = Post::factory()->create();
+
+    $file = UploadedFile::fake()->image('foo.jpg');
+
+    $post->addMedia($file)->toMediaCollection('image');
 
     expect($post->presenter()->image())->not->toBeNull();
 });
