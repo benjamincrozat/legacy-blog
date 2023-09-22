@@ -26,7 +26,7 @@ I feel obligated to mention that my relative success is not correlated to my tec
 
 - **I don't need pull requests.** This is a project I'm working on alone, and I only have time for the bad code I write myself. 😅
 - **This isn't an opportunity for mentoring.** Please try to resolve your issues on your own. If you tried your hardest, then you can [open a new discussion](https://github.com/benjamincrozat/benjamincrozat.com/discussions/new/choose)! Also, feedback is welcome (but useful feedback, not something like "whAt aBoUt SrP DudE?"
-- **This isn't a reference for SEO.** If you want to rank on Google, **write content people search for** and **BE PATIENT**. [I actually wrote about my journey on the blog.](https://benjamincrozat.com/seo-case-study)
+- **The code from this codebase won't help you rank on Google.** Getting organic traffic requires **hard work**, to **write content people search for** (aka smart work), and **lots and lots of patience**. [I actually wrote about my journey on the blog.](https://benjamincrozat.com/seo-case-study)
 
 ## What you will learn
 
@@ -42,7 +42,7 @@ This is a small project. It certainly won't teach you how to maintain apps at hu
 - **I don't care about code coverage and static analysis**, so you won't find that here.
 - **This is pure and plain Laravel.** If you know the framework, you can find your way around the codebase.
 - **The tests are organized just like the source code.** Most of the time, it makes it easier to know what is tested and what is not.
-- **My commit history is garbage.** I'm sorry, but when you are working alone of a project, it's hard to maintain discipline for such things. At some point, I should figure out how to generate the commit messages using AI.
+- **My commit history is garbage.** I'm sorry and I know it's wrong. But when you are working alone of a project, it's hard to maintain discipline for such things.
 
 ## Requirements
 
