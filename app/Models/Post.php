@@ -11,13 +11,12 @@ use App\Models\Concerns\LogsActivity;
 use App\Models\Concerns\HasLocalScopes;
 use App\Models\Presenters\PostPresenter;
 use App\Models\Concerns\HasRelationships;
-use App\Models\Concerns\HasRecommendations;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class Post extends BaseModel implements Feedable, HasMedia
 {
-    use HasFeedItems, HasLocalScopes, HasRecommendations, HasRelationships, InteractsWithMedia, LogsActivity, Searchable;
+    use HasFeedItems, HasLocalScopes, HasRelationships, InteractsWithMedia, LogsActivity, Searchable;
 
     protected $casts = [
         'published_at' => 'datetime',

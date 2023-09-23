@@ -44,12 +44,12 @@ class PostCacheRepository implements PostRepositoryContract
         );
     }
 
-    public function recommendations(array $ids, int $exclude) : Collection
+    public function recommendations(int $id) : Collection
     {
         return cache()->remember(
-            "post_{$exclude}_recommendations",
+            "post_{$id}_recommendations",
             60 * 60 * 24,
-            fn () => $this->repository->recommendations($ids, $exclude)
+            fn () => $this->repository->recommendations($id)
         );
     }
 }

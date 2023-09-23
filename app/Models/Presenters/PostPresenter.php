@@ -26,12 +26,18 @@ class PostPresenter extends BasePresenter
 
     public function content() : string
     {
-        return Str::markdown($this->model->content ?? '');
+        return cache()->rememberForever(
+            "post_{$this->model->id}_content",
+            fn () => Str::markdown($this->model->content ?? '')
+        );
     }
 
     public function teaser() : string
     {
-        return Str::markdown($this->model->teaser ?? '');
+        return cache()->rememberForever(
+            "post_{$this->model->id}_content",
+            fn () => Str::markdown($this->model->teaser ?? '')
+        );
     }
 
     public function communityLinkDomain() : string

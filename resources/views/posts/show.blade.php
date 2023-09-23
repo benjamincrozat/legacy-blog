@@ -33,7 +33,7 @@
                     <img loading="lazy" src="{{ $image }}" alt="{{ $post->title }}" class="w-full" />
                 @endif
 
-                {!! $post->presenter()->content() !!}
+                {{-- {!! $post->content !!} --}}
 
                 @if ($post->community_link)
                     <div class="text-xl text-center">

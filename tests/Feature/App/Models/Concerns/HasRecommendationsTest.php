@@ -44,7 +44,7 @@ it('requests ten published recommendations to Algolia and excludes the current p
     $post = Post::factory()->published()->create();
 
     expect($post->recommendations)->toHaveCount(10);
-    expect($post->recommendations->pluck('id'))->not->toContain($post->id);
+    expect($post->recommendations)->not->toContain($post->id);
 });
 
 it("falls back to ten random published recommendations when Algolia isn't available.", function () {
@@ -60,5 +60,6 @@ it("falls back to ten random published recommendations when Algolia isn't availa
 it('excludes the current published post from recommendations', function () {
     $post = Post::factory()->published()->create();
 
-    expect($post->recommendations->contains($post))->toBeFalse();
+    expect(in_array($post->id, $post->recommendations))
+        ->toBeFalse();
 });

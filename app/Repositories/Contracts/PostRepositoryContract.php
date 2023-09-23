@@ -14,5 +14,5 @@ interface PostRepositoryContract
 
     public function popular() : Collection;
 
-    public function recommendations(array $ids, int $exclude) : Collection;
+    public function recommendations(int $id) : Collection;
 }

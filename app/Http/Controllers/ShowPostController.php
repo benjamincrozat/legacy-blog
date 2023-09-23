@@ -13,7 +13,6 @@ class ShowPostController extends Controller
         $post = Posts::get($slug);
 
         // I track visits for posts after it's been resolved to avoid messing up my analytics.
-
         dispatch(
             new TrackPageView(
                 request()->fullUrl(),
@@ -25,10 +24,7 @@ class ShowPostController extends Controller
         )->afterResponse();
 
         return view('posts.show', compact('post') + [
-            'recommendations' => Posts::recommendations(
-                $post->recommendations,
-                $post->id
-            ),
+            'recommendations' => Posts::recommendations($post->id),
         ]);
     }
 }

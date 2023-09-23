@@ -3,7 +3,9 @@
 namespace App\Repositories;
 
 use App\Models\Post;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
+use Facades\Algolia\AlgoliaSearch\RecommendClient;
 use App\Repositories\Contracts\PostRepositoryContract;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
@@ -39,12 +41,28 @@ class PostRepository implements PostRepositoryContract
             ->get();
     }
 
-    public function recommendations(array $ids, int $exclude) : Collection
+    public function recommendations(int $id) : Collection
     {
+        $recommendations = cache()->rememberForever("post_{$id}_recommendations", function () {
+            if (empty(config('scout.algolia.id')) || empty(config('scout.algolia.secret'))) {
+                return;
+            }
+
+            return RecommendClient::getRelatedProducts([[
+                'indexName' => config('scout.prefix') . 'posts',
+                'objectID' => 'id',
+                'maxRecommendations' => 11,
+            ]]);
+        });
+
+        if (! empty($recommendations['results'][0]['hits'])) {
+            $ids = Arr::pluck($recommendations['results'][0]['hits'], 'objectID');
+        }
+
         return Post::query()
             ->with('categories', 'media')
             ->published()
-            ->whereNotIn('id', [$exclude])
+            ->whereNotIn('id', [$id])
             ->unless(
                 empty($ids),
                 fn ($query) => $query->asSequence($ids),
