@@ -10,7 +10,7 @@
             rel="noopener"
             class="text-center"
         >
-            <x-icon-beyond-code class="inline h-9" />
+            <x-icon-beyond-code class="inline h-7 md:h-9" />
             <span class="sr-only">Beyond Code</span>
         </a>
 
@@ -26,7 +26,7 @@
                 width="400"
                 height="124"
                 alt="Flipp"
-                class="inline w-auto h-8"
+                class="inline w-auto h-6 md:h-8"
             />
         </a>
 
@@ -42,13 +42,13 @@
                 width="400"
                 height="124"
                 alt="redirect.pizza"
-                class="inline w-auto h-10"
+                class="inline w-auto h-8 md:h-10"
             />
         </a>
     </div>
 
     <div class="mt-8 text-center">
-        <a wire:navigate.hover href="{{ route('media-kit') }}" class="text-2xl sm:-ml-11 sm:text-3xl font-handwriting">
+        <a wire:navigate.hover href="{{ route('media-kit') }}" class="text-xl md:text-2xl sm:-ml-11 sm:text-3xl font-handwriting">
             <x-icon-arrow-to-top-left class="inline w-8 h-8 -translate-y-3" /> <span class="underline decoration-1 underline-offset-2">Showcase your business too!</span>
         </a>
     </div>

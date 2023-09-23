@@ -19,12 +19,12 @@
             Join more than <span class="font-semibold text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">35,000</span> readers and skyrocket your web&nbsp;development&nbsp;skills.
         </p>
 
-        <x-sponsors class="mt-16">
+        <x-sponsors class="mt-8 md:mt-16">
             <x-slot:title>I'm grateful for my sponsors!</x-slot:title>
         </x-sponsors>
     </x-section>
 
-    <x-section class="container mt-32">
+    <x-section class="container mt-16 md:mt-32">
         <x-slot:title class="text-center">
             Popular articles
         </x-slot:title>
