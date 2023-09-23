@@ -7,7 +7,7 @@
             {{ $category->name }}
         </h3>
 
-        <a wire:navigate.hover href="{{ route('categories.show', $category) }}" class="flex-shrink-0">
+        <a wire:navigate.hover href="{{ route('categories.show', $category->slug) }}" class="flex-shrink-0">
             <x-category-icon :category="$category" />
         </a>
     </div>
@@ -18,7 +18,7 @@
 
     <p class="mt-6">
         <x-button
-            href="{{ route('categories.show', $category) }}"
+            href="{{ route('categories.show', $category->slug) }}"
             style="color: {{ $category->presenter()->secondaryColor() }}; background-color: {{ $category->presenter()->primaryColor() }}"
         >
             Read about {{ $category->name }}

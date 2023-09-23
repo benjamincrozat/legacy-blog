@@ -12,7 +12,7 @@ it('checks the boxes for technical SEO', function () {
     $post = Post::factory()->published()->create();
 
     /** @var \NunoMaduro\LaravelMojito\ViewAssertion */
-    $view = get(route('posts.show', $post))->assertView('posts.show');
+    $view = get(route('posts.show', $post->slug))->assertView('posts.show');
 
     $view
         ->first('title')

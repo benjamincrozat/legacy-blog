@@ -20,7 +20,7 @@ test('a given published post is shown correctly and the page view is tracked', f
 
     $post = Post::factory()->published()->create();
 
-    $link = route('posts.show', $post);
+    $link = route('posts.show', $post->slug);
 
     /** @var NunoMaduro\LaravelMojito\ViewAssertion */
     $response = get($link)
@@ -60,7 +60,7 @@ test('a given published community post is shown correctly', function () {
     $post = Post::factory()->asCommunityLink()->published()->create();
 
     /** @var NunoMaduro\LaravelMojito\ViewAssertion */
-    $view = get(route('posts.show', $post))
+    $view = get(route('posts.show', $post->slug))
         ->assertOk()
         ->assertView('posts.show');
 
@@ -96,7 +96,7 @@ test('a given unpublished post cannot be shown to guests and the page view is no
     $post = Post::factory()->create();
 
     assertGuest()
-        ->get(route('posts.show', $post))
+        ->get(route('posts.show', $post->slug))
         ->assertNotFound();
 
     Bus::assertNotDispatchedAfterResponse(TrackPageView::class);
@@ -108,7 +108,7 @@ test('a given unpublished post cannot be shown to users', function () {
     $post = Post::factory()->create();
 
     actingAs($user)
-        ->get(route('posts.show', $post))
+        ->get(route('posts.show', $post->slug))
         ->assertNotFound();
 });
 
@@ -118,6 +118,6 @@ test('a given unpublished post can be shown to user #1', function () {
     $post = Post::factory()->create();
 
     actingAs($user)
-        ->get(route('posts.show', $post))
+        ->get(route('posts.show', $post->slug))
         ->assertOk();
 });

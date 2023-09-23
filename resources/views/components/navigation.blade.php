@@ -21,7 +21,7 @@
 
             @foreach ($categories as $category)
                 <x-menu.item
-                    href="{{ route('categories.show', $category) }}"
+                    href="{{ route('categories.show', $category->slug) }}"
                     class="hover:!bg-transparent hover:!text-inherit !py-0"
                 >
                     <x-category-icon :category="$category" class="!w-[48px] !h-[48px]" />

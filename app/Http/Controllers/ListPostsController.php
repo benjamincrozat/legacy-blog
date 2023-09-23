@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
 use Illuminate\View\View;
+use Facades\App\Repositories\PostCacheRepository as Posts;
 
 class ListPostsController extends Controller
 {
     public function __invoke() : View
     {
         return view('posts.index', [
-            'posts' => Post::with('categories', 'media')->latest()->published()->paginate(21),
+            'posts' => Posts::latest(),
         ]);
     }
 }

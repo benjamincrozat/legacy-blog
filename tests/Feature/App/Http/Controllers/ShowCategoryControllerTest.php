@@ -26,7 +26,7 @@ test('a given category is shown and contains all its published posts', function 
         ->contains("Learn about $category->name");
 
     $category->posts->each(function (Post $post) use ($view) {
-        $view->contains(route('posts.show', $post));
+        $view->contains(route('posts.show', $post->slug));
         $view->contains($post->title);
     });
 });

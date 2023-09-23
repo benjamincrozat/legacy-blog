@@ -11,7 +11,7 @@ it('displays a post correctly', function () {
 
     $view
         ->first('a')
-        ->hasAttribute('href', route('posts.show', $post));
+        ->hasAttribute('href', route('posts.show', $post->slug));
 
     $view->contains('Updated on');
     $view->contains($post->presenter()->lastUpdated());

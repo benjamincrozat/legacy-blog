@@ -9,7 +9,7 @@
                         rel="noopener"
                     @else
                         wire:navigate.hover
-                        href="{{ route('posts.show', $post) }}"
+                        href="{{ route('posts.show', $post->slug) }}"
                     @endif
                     class="text-indigo-600 underline"
                 >
@@ -27,7 +27,7 @@
                     Updated on
                 @endif
 
-                <a wire:navigate.hover href="{{ route('posts.show', $post) }}" class="underline">{{ $post->presenter()->lastUpdated() }}</a>
+                <a wire:navigate.hover href="{{ route('posts.show', $post->slug) }}" class="underline">{{ $post->presenter()->lastUpdated() }}</a>
                 @if ($post->community_link) <span class="mx-1 text-xs">•</span> {{ $post->presenter()->communityLinkDomain() }} @endif
             </p>
         </div>
@@ -35,7 +35,7 @@
         @if ($image = $post->presenter()->imagePreview())
             <a
                 @if (! $post->community_link) wire:navigate.hover @endif
-                href="{{ $post->community_link ? $post->community_link : route('posts.show', $post) }}"
+                href="{{ $post->community_link ? $post->community_link : route('posts.show', $post->slug) }}"
                 class="flex-shrink-0"
             >
                 <img

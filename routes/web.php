@@ -10,7 +10,7 @@ use App\Http\Controllers\ShowMerchantController;
 
 Route::get('/', HomeController::class)->name('home');
 
-Route::get('/categories/{category:slug}', ShowCategoryController::class)->name('categories.show');
+Route::get('/categories/{slug}', ShowCategoryController::class)->name('categories.show');
 
 Route::get('/posts', ListPostsController::class)->name('posts.index');
 
@@ -29,4 +29,4 @@ Route::view('/terms', 'terms')->name('terms');
 Route::feeds();
 
 // This is a wildcard route. It must be the last one to avoid conflicts.
-Route::get('/{post:slug}', ShowPostController::class)->name('posts.show');
+Route::get('/{slug}', ShowPostController::class)->name('posts.show');

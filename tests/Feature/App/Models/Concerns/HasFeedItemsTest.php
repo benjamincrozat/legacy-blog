@@ -19,7 +19,7 @@ test('values are mapped correctly', function () {
         ->each(function (Post $post) {
             $item = $post->toFeedItem();
 
-            $link = route('posts.show', $post);
+            $link = route('posts.show', $post->slug);
 
             expect($item->id)->toBe($link);
             expect($item->title)->toBe($post->title);

@@ -29,18 +29,6 @@ class Post extends BaseModel implements Feedable, HasMedia
         return new PostPresenter($this);
     }
 
-    public function resolveRouteBindingQuery($query, $value, $field = null)
-    {
-        $query = parent::resolveRouteBindingQuery($query, $value, $field);
-
-        return $query
-            ->with('categories')
-            ->unless(
-                request()->routeIs('filament.*') || 1 === auth()->id(),
-                fn ($query) => $query->published(),
-            );
-    }
-
     public function toSearchableArray() : array
     {
         return [
