@@ -19,9 +19,19 @@
             Join more than <span class="font-semibold text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">35,000</span> readers and skyrocket your web&nbsp;development&nbsp;skills.
         </p>
 
-        <x-sponsors class="mt-8 md:mt-16">
-            <x-slot:title>I'm grateful for my sponsors!</x-slot:title>
-        </x-sponsors>
+        <div class="container mt-8 text-center md:mt-16">
+            <p class="text-lg font-medium sm:text-xl">
+                I'm grateful for my sponsors!
+            </p>
+
+            <x-sponsors class="justify-center sm:justify-start" />
+
+            <div class="mt-8 text-center">
+                <a wire:navigate.hover href="{{ route('media-kit') }}" class="text-xl md:text-2xl sm:-ml-11 sm:text-3xl font-handwriting">
+                    <x-icon-arrow-to-top-left class="inline w-8 h-8 -translate-y-3" /> <span class="underline decoration-1 underline-offset-2">Showcase your business too!</span>
+                </a>
+            </div>
+        </div>
     </x-section>
 
     <x-section class="container mt-16 md:mt-32">
