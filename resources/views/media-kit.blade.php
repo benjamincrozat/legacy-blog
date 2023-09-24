@@ -217,7 +217,7 @@
         </a>
 
         <p class="mt-4">
-            Or simplify your accounting with <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/6b81c388-5b8c-4365-815e-de11e6951135?discount=0" class="font-medium underline">yearly payments</a>.
+            Or simplify your accounting with <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/54994675-a900-4693-99f0-22997bbd8441?discount=0" class="font-medium underline">yearly payments</a>.
         </p>
 
         <p class="mt-4 text-sm text-gray-400">Once the payment is done, you will receive instructions on how to send me your company name, logo, and landing page of choice.</p>
