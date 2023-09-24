@@ -1,4 +1,4 @@
-![Benjamin Crozat](https://www.gravatar.com/avatar/d58b99650fe5d74abeb9d9dad5da55ad?s=256){: .float-right .mb-8 .ml-8 .rounded-full width="128" height="128"}
+![Benjamin Crozat](https://www.gravatar.com/avatar/d58b99650fe5d74abeb9d9dad5da55ad?s=256){: .float-right .mb-8 .ml-8 .rounded-full width="128" height="128" loading="lazy"}
 
 Hi! I'm Benjamin Crozat. I'm from the South of France and **I've been a self-taught professional web developer for more than 10 years**.
 
