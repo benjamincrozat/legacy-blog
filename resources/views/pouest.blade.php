@@ -4,7 +4,6 @@
     image="{{ Vite::asset('resources/img/pouest-banner.jpg') }}"
     :hide-navigation="true"
     :hide-footer="true"
-    :darker-footer="true"
     class="text-gray-300 bg-gray-900"
 >
     <div class="container mt-8 mb-16 lg:max-w-screen-md">
