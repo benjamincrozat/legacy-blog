@@ -287,7 +287,7 @@
 
     <div class="container mt-16 text-center md:max-w-screen-sm">
         <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/cc173e8e-bafe-48a2-a406-b42b68a7150d" class="inline-block px-4 py-3 text-white transition-opacity rounded bg-gradient-to-r from-orange-500 to-yellow-600 hover:opacity-75">
-            Get started for <strong class="font-extrabold">$299</strong>
+            Get started for <strong class="font-extrabold">$499</strong>
         </a>
 
         <p class="mt-4 text-sm text-gray-400">Once the payment is done, you will receive instructions on how to send me your content.</p>
