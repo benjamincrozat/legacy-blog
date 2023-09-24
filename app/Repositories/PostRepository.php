@@ -20,13 +20,13 @@ class PostRepository implements PostRepositoryContract
             ->first();
     }
 
-    public function latest(bool $paginated = true) : LengthAwarePaginator|Collection
+    public function latest(int $page = null) : LengthAwarePaginator|Collection
     {
         return Post::with('categories', 'media')
             ->published()
             ->latest()
             ->when(
-                $paginated,
+                $page,
                 fn ($query) => $query->paginate(21),
                 fn ($query) => $query->limit(11)->get(),
             );

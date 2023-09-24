@@ -22,17 +22,17 @@ class PostCacheRepository implements PostRepositoryContract
         );
     }
 
-    public function latest(bool $paginated = true) : LengthAwarePaginator|Collection
+    public function latest(int $page = null) : LengthAwarePaginator|Collection
     {
         $key = str('posts_latest')
             ->when(
-                $paginated,
-                fn (Stringable $str) => $str->append('_paginated')
+                $page,
+                fn (Stringable $str) => $str->append("_page_$page")
             );
 
         return cache()->rememberForever(
             $key,
-            fn () => $this->repository->latest($paginated)
+            fn () => $this->repository->latest($page)
         );
     }
 

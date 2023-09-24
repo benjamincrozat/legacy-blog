@@ -11,7 +11,7 @@ class HomeController extends Controller
     {
         return view('home', [
             'popular' => Posts::popular(),
-            'latest' => Posts::latest(paginated: false),
+            'latest' => Posts::latest(),
         ]);
     }
 }

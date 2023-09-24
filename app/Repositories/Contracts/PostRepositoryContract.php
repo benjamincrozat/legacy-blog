@@ -10,7 +10,7 @@ interface PostRepositoryContract
 {
     public function get(string $slug) : ?Post;
 
-    public function latest(bool $paginated = true) : LengthAwarePaginator|Collection;
+    public function latest(int $page = null) : LengthAwarePaginator|Collection;
 
     public function popular() : Collection;
 
