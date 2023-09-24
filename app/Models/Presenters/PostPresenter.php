@@ -21,7 +21,10 @@ class PostPresenter extends BasePresenter
 
     public function tree() : array
     {
-        return (new Tree)->build($this->content());
+        return cache()->rememberForever(
+            "post_{$this->model->id}_tree",
+            fn () => (new Tree)->build($this->content())
+        );
     }
 
     public function content() : string
