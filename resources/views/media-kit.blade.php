@@ -60,6 +60,14 @@
 
     <x-section class="container mt-24 md:mt-32">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
+            These companies trust me
+        </x-slot:title>
+
+        <x-sponsors class="justify-center" />
+    </x-section>
+
+    <x-section class="container mt-24 md:mt-32">
+        <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
             My blog by the numbers
         </x-slot:title>
 
