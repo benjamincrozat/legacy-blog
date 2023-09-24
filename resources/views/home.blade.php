@@ -24,7 +24,7 @@
                 I'm grateful for my sponsors!
             </p>
 
-            <x-sponsors class="justify-center sm:justify-start" />
+            <x-sponsors class="justify-center" />
 
             <div class="mt-8 text-center">
                 <a wire:navigate.hover href="{{ route('media-kit') }}" class="text-xl md:text-2xl sm:-ml-11 sm:text-3xl font-handwriting">
