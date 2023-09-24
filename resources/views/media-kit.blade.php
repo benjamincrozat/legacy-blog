@@ -212,8 +212,8 @@
     </x-section>
 
     <div class="container mt-16 text-center md:max-w-screen-sm">
-        <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/7de09977-485d-4dcd-8813-c17dd48eddc7?discount=0" class="inline-block px-4 py-3 text-white transition-opacity rounded bg-gradient-to-r from-orange-500 to-yellow-600 hover:opacity-75">
-            Get started for <strong class="font-extrabold">$49/month</strong>
+        <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/46d80f6a-3631-492a-8e6b-0f42d288ccce?discount=0" class="inline-block px-4 py-3 text-white transition-opacity rounded bg-gradient-to-r from-orange-500 to-yellow-600 hover:opacity-75">
+            Get started for <strong class="font-extrabold">$79/month</strong>
         </a>
 
         <p class="mt-4">
