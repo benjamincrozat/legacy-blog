@@ -58,7 +58,7 @@
             </x-menu.item>
 
             <x-menu.item href="https://github.com/benjamincrozat/benjamincrozat.com" target="_blank" rel="nofollow noopener" icon="o-code-bracket">
-                Hack in my blog's source code
+                Fork this blog on GitHub
             </x-menu.item>
 
             <x-menu.item href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=30d&scale=day" target="_blank" rel="nofollow noopener" icon="o-chart-pie">
