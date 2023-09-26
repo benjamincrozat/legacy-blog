@@ -92,10 +92,6 @@
         </ul>
     </x-section>
 
-    <div class="container mt-32">
-        <x-newsletter-form />
-    </div>
-
     <x-section id="about" class="container mt-32 lg:max-w-screen-md scroll-mt-8">
         <x-slot:title class="text-center">
             About Benjamin Crozat
