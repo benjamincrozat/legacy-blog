@@ -18,7 +18,7 @@ it('displays a post correctly', function () {
 
     $post->categories->each(function (Category $category) use ($view) {
         $view
-            ->first('a[href="' . route('categories.show', $category) . '"]')
+            ->first('a[href="' . route('categories.show', $category->slug) . '"]')
             ->contains($category->name);
     });
 });
@@ -38,7 +38,7 @@ it('displays a community post correctly', function () {
 
     $post->categories->each(function (Category $category) use ($view) {
         $view
-            ->first('a[href="' . route('categories.show', $category) . '"]')
+            ->first('a[href="' . route('categories.show', $category->slug) . '"]')
             ->contains($category->name);
     });
 });

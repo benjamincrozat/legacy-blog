@@ -38,6 +38,8 @@ uses(TestCase::class, LazilyRefreshDatabase::class)
 
         activity()->disableLogging();
 
+        cache()->flush();
+
         withoutMiddleware(TrackPageView::class);
 
         withoutVite();

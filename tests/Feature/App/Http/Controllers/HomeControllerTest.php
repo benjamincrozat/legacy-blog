@@ -31,7 +31,7 @@ it('displays the categories and put the highlighted ones first', function () {
 });
 
 it('displays popular posts', function () {
-    Post::factory(15)->published()->create();
+    Post::factory(15)->published()->createQuietly();
 
     /** @var Illuminate\Support\Collection */
     $popular = get(route('home'))
@@ -45,7 +45,7 @@ it('displays popular posts', function () {
 });
 
 it('displays the latest posts', function () {
-    Post::factory(15)->published()->create();
+    Post::factory(15)->published()->createQuietly();
 
     /** @var Illuminate\Support\Collection */
     $latest = get(route('home'))

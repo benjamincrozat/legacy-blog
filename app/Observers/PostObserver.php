@@ -9,14 +9,20 @@ class PostObserver
 {
     public $afterCommit = true;
 
-    public function created(Post $post) : void
+    public function saved(Post $post) : void
     {
-        //
-    }
+        Posts::get($post->slug);
 
-    public function updated(Post $post) : void
-    {
-        //
+        Posts::latest();
+
+        Posts::popular();
+
+        Post::query()
+            ->published()
+            ->whereNotIn('id', [$post->id])->cursor()
+            ->each(function (Post $post) {
+                Posts::recommendations($post->id);
+            });
     }
 
     public function deleted(Post $post) : void
@@ -33,15 +39,5 @@ class PostObserver
             ->each(function (Post $post) {
                 Posts::recommendations($post->id);
             });
-    }
-
-    public function restored(Post $post) : void
-    {
-        //
-    }
-
-    public function forceDeleted(Post $post) : void
-    {
-        //
     }
 }

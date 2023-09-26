@@ -13,7 +13,7 @@ test('a given category is shown and contains all its published posts', function 
         ->hasRelated(3)
         ->create();
 
-    $response = get(route('categories.show', $category))
+    $response = get(route('categories.show', $category->slug))
         ->assertOk()
         ->assertViewHas('posts', fn (LengthAwarePaginator $posts) => 3 === $posts->count());
 

@@ -3,7 +3,6 @@
 namespace App\Repositories;
 
 use App\Models\Post;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Facades\Algolia\AlgoliaSearch\RecommendClient;
 use App\Repositories\Contracts\PostRepositoryContract;
@@ -43,31 +42,35 @@ class PostRepository implements PostRepositoryContract
 
     public function recommendations(int $id) : Collection
     {
-        $recommendations = cache()->rememberForever("post_{$id}_recommendations", function () {
-            if (empty(config('scout.algolia.id')) || empty(config('scout.algolia.secret'))) {
-                return;
-            }
-
-            return RecommendClient::getRelatedProducts([[
-                'indexName' => config('scout.prefix') . 'posts',
-                'objectID' => 'id',
-                'maxRecommendations' => 11,
-            ]]);
-        });
-
-        if (! empty($recommendations['results'][0]['hits'])) {
-            $ids = Arr::pluck($recommendations['results'][0]['hits'], 'objectID');
-        }
+        $ids = $this->getAlgoliaRecommendations()->pluck('objectID');
 
         return Post::query()
             ->with('categories', 'media')
             ->published()
             ->whereNotIn('id', [$id])
             ->unless(
-                empty($ids),
+                ! empty($ids),
                 fn ($query) => $query->asSequence($ids),
                 fn ($query) => $query->inRandomOrder()->limit(11)
             )
             ->get();
+    }
+
+    protected function getAlgoliaRecommendations() : Collection
+    {
+        if (! $this->algoliaEnabled()) {
+            return collect();
+        }
+
+        return collect(RecommendClient::getRelatedProducts([[
+            'indexName' => config('scout.prefix') . 'posts',
+            'objectID' => 'id',
+            'maxRecommendations' => 11,
+        ]]));
+    }
+
+    protected function algoliaEnabled() : bool
+    {
+        return ! empty(config('scout.algolia.id')) && ! empty(config('scout.algolia.secret'));
     }
 }

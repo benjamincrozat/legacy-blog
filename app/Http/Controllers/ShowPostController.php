@@ -12,6 +12,8 @@ class ShowPostController extends Controller
     {
         $post = Posts::get($slug);
 
+        abort_if(is_null($post), 404);
+
         // I track visits for posts after it's been resolved to avoid messing up my analytics.
         dispatch(
             new TrackPageView(

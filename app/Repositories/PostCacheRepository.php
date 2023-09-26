@@ -4,7 +4,6 @@ namespace App\Repositories;
 
 use App\Models\Post;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Stringable;
 use App\Repositories\Contracts\PostRepositoryContract;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
@@ -24,11 +23,11 @@ class PostCacheRepository implements PostRepositoryContract
 
     public function latest(int $page = null) : LengthAwarePaginator|Collection
     {
-        $key = str('posts_latest')
-            ->when(
-                $page,
-                fn (Stringable $str) => $str->append("_page_$page")
-            );
+        $key = 'posts_latest';
+
+        if ($page) {
+            $key .= "_page_$page";
+        }
 
         return cache()->rememberForever(
             $key,
@@ -40,15 +39,14 @@ class PostCacheRepository implements PostRepositoryContract
     {
         return cache()->rememberForever(
             'posts_popular',
-            fn () => $this->repository->popular(),
+            fn () => $this->repository->popular()
         );
     }
 
     public function recommendations(int $id) : Collection
     {
-        return cache()->remember(
+        return cache()->rememberForever(
             "post_{$id}_recommendations",
-            60 * 60 * 24,
             fn () => $this->repository->recommendations($id)
         );
     }
