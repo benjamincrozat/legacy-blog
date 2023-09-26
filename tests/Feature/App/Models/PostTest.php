@@ -1,8 +1,35 @@
 <?php
 
 use App\Models\Post;
+use App\Events\PostSaved;
+use App\Events\PostDeleted;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Event;
 use App\Models\Presenters\PostPresenter;
+
+it('dispatches an event when saved', function () {
+    Event::fake([PostSaved::class]);
+
+    $post = Post::factory()->published()->forUser()->create();
+
+    Event::assertDispatched(
+        PostSaved::class,
+        fn (PostSaved $event) => $event->post->is($post)
+    );
+});
+
+it('refreshes the cache when deleted', function () {
+    Event::fake([PostDeleted::class]);
+
+    $post = Post::factory()->published()->forUser()->createQuietly();
+
+    $post->delete();
+
+    Event::assertDispatched(
+        PostDeleted::class,
+        fn (PostDeleted $event) => $event->post->is($post)
+    );
+});
 
 it('casts the published_at attribute to a Carbon instance', function () {
     $post = Post::factory()->published()->create();
