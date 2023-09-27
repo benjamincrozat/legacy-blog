@@ -11,7 +11,7 @@ it('asks GPT to generate a teaser for a given post', function () {
         ]),
     ]);
 
-    $post = Post::factory()->create();
+    $post = Post::factory()->published()->create();
 
     GeneratePostTeaser::dispatch($post);
 

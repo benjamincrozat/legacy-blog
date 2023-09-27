@@ -2,12 +2,14 @@
 
 use App\Models\Post;
 use App\Models\User;
+use App\Events\PostSaved;
 use App\Jobs\TrackPageView;
 
 use function Pest\Laravel\get;
 use function Pest\Laravel\actingAs;
 
 use Illuminate\Support\Facades\Bus;
+use Illuminate\Support\Facades\Event;
 
 use function Pest\Laravel\assertGuest;
 
@@ -15,6 +17,8 @@ use Facades\App\Repositories\PostCacheRepository as Posts;
 
 beforeEach(function () {
     Bus::fake(TrackPageView::class)->serializeAndRestore();
+
+    Event::fake([PostSaved::class]);
 });
 
 test('a given published post is shown correctly and the page view is tracked', function () {
@@ -94,7 +98,7 @@ test('a given published community post is shown correctly', function () {
     });
 });
 
-test('a given unpublished post cannot be shown to guests and the page view is not tracked', function () {
+test('a given unpublished post cannot be shown and the page view is not tracked', function () {
     $post = Post::factory()->create();
 
     assertGuest()

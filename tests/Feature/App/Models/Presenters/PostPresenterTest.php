@@ -1,7 +1,13 @@
 <?php
 
 use App\Models\Post;
+use App\Events\PostSaved;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Event;
+
+beforeEach(function () {
+    Event::fake([PostSaved::class]);
+});
 
 it('presents the image', function () {
     $post = Post::factory()->create();
@@ -33,7 +39,7 @@ it('presents the community link domain', function () {
 });
 
 it('presents the last update date using the published_at attribute', function () {
-    $post = Post::factory()->create(['published_at' => now()->addDay()]);
+    $post = Post::factory()->createQuietly(['published_at' => now()->addDay()]);
 
     expect($post->presenter()->lastUpdated())
         ->toBe($post->published_at->isoFormat('LL'));
