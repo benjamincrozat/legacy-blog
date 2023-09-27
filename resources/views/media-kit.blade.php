@@ -69,7 +69,7 @@
     <div class="mt-8 bg-gray-200/50 md:mt-16">
         <div class="container lg:max-w-screen-md">
             <div class="py-8 md:flex md:items-center md:gap-8">
-                <img loading="lazy" src="{{ Vite::asset('/resources/img/sebastian.jpg') }}" width="96" height="96" class="flex-shrink-0 aspect-square w-[96px] order-2 h-[96px] rounded-full mx-auto" alt="Sebastian Schlein" />
+                <img loading="lazy" src="{{ Vite::asset('resources/img/sebastian.jpg') }}" width="96" height="96" class="flex-shrink-0 aspect-square w-[96px] order-2 h-[96px] rounded-full mx-auto" alt="Sebastian Schlein" />
 
                 <blockquote class="order-1 mt-6 md:text-xl md:mt-0">
                     Benjamin is overtaking us on some Google search results, so I'm jumping on board before he raises his prices.
