@@ -19,7 +19,7 @@
             Join more than <span class="font-semibold text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">35,000</span> readers and skyrocket your web&nbsp;development&nbsp;skills.
         </p>
 
-        <div class="container mt-8 text-center md:mt-16">
+        <div class="container text-center mt-14 md:mt-28">
             <p class="text-lg font-medium sm:text-xl">
                 I'm grateful for my sponsors!
             </p>
