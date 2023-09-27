@@ -28,6 +28,7 @@
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.9",
+        "barryvdh/laravel-ide-helper": "^2.13",
         "brianium/paratest": "^7.0",
         "fakerphp/faker": "^1.9.1",
         "laravel/pint": "^1.10",
@@ -58,7 +59,10 @@
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi",
-            "@php artisan filament:upgrade"
+            "@php artisan filament:upgrade",
+            "@php artisan ide-helper:generate",
+            "@php artisan ide-helper:meta",
+            "@php artisan ide-helper:models --nowrite"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
