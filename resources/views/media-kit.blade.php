@@ -66,7 +66,7 @@
         <x-sponsors class="justify-center" />
     </x-section>
 
-    <div class="mt-8 bg-gray-200/50 md:mt-16">
+    <div class="mt-24 bg-gradient-to-r from-gray-200/30 to-gray-200/10 md:mt-32">
         <div class="container lg:max-w-screen-md">
             <div class="py-8 md:flex md:items-center md:gap-8">
                 <img loading="lazy" src="{{ Vite::asset('resources/img/sebastian.jpg') }}" width="96" height="96" class="flex-shrink-0 aspect-square w-[96px] order-2 h-[96px] rounded-full mx-auto" alt="Sebastian Schlein" />

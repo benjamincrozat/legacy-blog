@@ -5,14 +5,12 @@ namespace App\Repositories;
 use App\Models\Post;
 use Illuminate\Support\Collection;
 use Algolia\AlgoliaSearch\RecommendClient;
-use Illuminate\Config\Repository as ConfigRepository;
 use App\Repositories\Contracts\PostRepositoryContract;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 class PostRepository implements PostRepositoryContract
 {
     public function __construct(
-        public ConfigRepository $config,
         public RecommendClient $recommend
     ) {
     }
@@ -77,7 +75,7 @@ class PostRepository implements PostRepositoryContract
     protected function getAlgoliaRecommendations(int $id) : Collection
     {
         return $this->algoliaEnabled() ? collect($this->recommend->getRelatedProducts([[
-            'indexName' => $this->config->get('scout.prefix') . 'posts',
+            'indexName' => config('scout.prefix') . 'posts',
             'objectID' => "$id",
             'maxRecommendations' => 11,
         ]])) : new Collection;
@@ -85,7 +83,7 @@ class PostRepository implements PostRepositoryContract
 
     protected function algoliaEnabled() : bool
     {
-        return ! empty($this->config->get('scout.algolia.id')) &&
-               ! empty($this->config->get('scout.algolia.secret'));
+        return ! empty(config('scout.algolia.id')) &&
+               ! empty(config('scout.algolia.secret'));
     }
 }
