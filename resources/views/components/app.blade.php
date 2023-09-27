@@ -72,7 +72,7 @@
             </main>
 
             @empty($hideFooter)
-                <x-footer class="flex-grow mt-16 bg-gradient-to-r from-gray-200/30 to-gray-200/10" />
+                <x-footer class="flex-grow mt-16 bg-gradient-to-r from-gray-200/[.35] to-gray-200/[.15]" />
             @endempty
         </div>
 
