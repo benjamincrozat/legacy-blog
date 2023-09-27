@@ -20,13 +20,13 @@
         </p>
 
         <div class="container text-center mt-14 md:mt-28">
-            <p class="text-lg font-medium sm:text-xl">
-                I'm grateful for my sponsors!
+            <p class="font-medium sm:text-xl">
+                From apps makers, to SaaS, and web hosting, my sponsors are worth checking out!
             </p>
 
-            <x-sponsors class="justify-center" />
+            <x-sponsors />
 
-            <div class="mt-8 text-center">
+            <div class="text-center mt-9">
                 <a wire:navigate.hover href="{{ route('media-kit') }}" class="text-xl md:text-2xl sm:-ml-11 sm:text-3xl font-handwriting">
                     <x-icon-arrow-to-top-left class="inline w-8 h-8 -translate-y-3" /> <span class="underline decoration-1 underline-offset-2">Showcase your business too!</span>
                 </a>
