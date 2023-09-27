@@ -27,7 +27,7 @@
             <x-sponsors />
 
             <div class="text-center mt-9">
-                <a wire:navigate.hover href="{{ route('media-kit') }}" class="text-xl md:text-2xl sm:-ml-10 sm:text-3xl font-handwriting">
+                <a wire:navigate.hover href="{{ route('media-kit') }}" class="text-xl -ml-9 md:text-2xl sm:-ml-10 sm:text-3xl font-handwriting">
                     <x-icon-arrow-to-top-left class="inline w-8 h-8 -translate-y-3" /> <span class="underline decoration-1 underline-offset-2">Showcase your business too!</span>
                 </a>
             </div>
