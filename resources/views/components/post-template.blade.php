@@ -1,8 +1,17 @@
 <a href="{{ route('media-kit') }}#write" {{ $attributes->except('post') }}>
     <div class="flex items-start gap-6 lg:gap-8">
         <div class="flex-grow">
-            <p class="font-bold text-orange-400">
-                <x-heroicon-s-star class="inline h-4 mr-[.175rem] translate-y-[-2px]" /> <span class="underline">{{ $title }}</span>
+            <p
+                class="font-bold text-orange-400"
+                x-data="{ animate: false }"
+            >
+                <x-heroicon-s-star
+                    class="inline h-4 mr-[.175rem] transition-transform duration-[2s] translate-y-[-2px]"
+                    x-bind:class="{ 'rotate-[360deg]': animate }"
+                    x-intersect="animate = true"
+                />
+
+                <span class="underline">{{ $title }}</span>
             </p>
 
             <p class="mt-2">{{ $description }}</p>
