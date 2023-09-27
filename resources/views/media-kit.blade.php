@@ -4,13 +4,9 @@
     :hide-navigation="true"
     :hide-footer="true"
 >
-    <nav class="container flex items-center justify-between mt-4 lg:max-w-screen-md">
-        <x-logo />
-
-        <a wire:navigate.hover href="{{ route('home') }}" class="underline">
-            Back to the blog →
-        </a>
-    </nav>
+    @empty($hideNavigation)
+        <x-navigation class="mt-4" />
+    @endempty
 
     <div
         class="!h-[175px] md:!h-[200px] container flex items-end justify-center gap-2 md:gap-4 mt-16 md:mt-24 md:max-w-screen-sm"
