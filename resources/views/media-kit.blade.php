@@ -12,35 +12,54 @@
         </a>
     </nav>
 
-    <div class="container mt-16 max-w-[320px] md:max-w-[400px] mx-auto md:mt-24">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 916 616">
-            <defs>
-                <linearGradient id="gradient" x1="0%" y1="100%" x2="0%" y2="0%">
-                    <stop offset="0%" style="stop-color: #24d3ee; stop-opacity: 1" />
-                    <stop offset="100%" style="stop-color: #49de80; stop-opacity: 1" />
-                </linearGradient>
-            </defs>
+    <div
+        class="!h-[175px] md:!h-[200px] container flex items-end justify-center gap-2 md:gap-4 mt-16 md:mt-24 md:max-w-screen-sm"
+        x-data="{ animate: false }"
+    >
+        <div
+            class="w-8 h-0 transition-all duration-500 rounded-t-lg md:w-16 bg-gradient-to-b from-blue-400 via-cyan-300 to-transparent delay-0"
+            x-bind:class="{ '!h-[25px] md:!h-[50px]': animate }"
+            x-intersect="animate = true"
+        ></div>
 
-            <style>
-                @keyframes draw {
-                    to {
-                        stroke-dashoffset: 0;
-                    }
-                }
+        <div
+            class="w-8 h-0 transition-all duration-500 delay-75 rounded-t-lg md:w-16 bg-gradient-to-b from-blue-400 via-cyan-300 to-transparent"
+            x-bind:class="{ '!h-[50px] md:!h-[75px]': animate }"
+            x-intersect="animate = true"
+        ></div>
 
-                .line {
-                    stroke: url(#gradient);
-                    stroke-dasharray: 3500;
-                    stroke-dashoffset: 3500;
-                    animation: draw 2s forwards ease-in-out;
-                }
-            </style>
+        <div
+            class="w-8 h-0 transition-all duration-500 delay-100 rounded-t-lg md:w-16 bg-gradient-to-b from-blue-400 via-cyan-300 to-transparent"
+            x-bind:class="{ '!h-[75px] md:!h-[100px]': animate }"
+            x-intersect="animate = true"
+        ></div>
 
-            <g fill="none" fill-rule="evenodd"><path stroke="#182454" stroke-opacity=".4" d="M8 608h900" /><path stroke="#182454" stroke-opacity=".15" d="M908 508H8m0-100h900m0-100H8m0-100h900m0-100H8M908 8H8" /><path stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="15" d="m8 608 100-42.180618L208 408l100 100 100 32.564033 100-61.164986L608 508l100-28.600953L808 108 908 8" class="line" /></g>
-        </svg>
+        <div
+            class="w-8 h-0 transition-all duration-500 delay-150 rounded-t-lg md:w-16 bg-gradient-to-b from-blue-400 via-cyan-300 to-transparent"
+            x-bind:class="{ '!h-[100px] md:!h-[125px]': animate }"
+            x-intersect="animate = true"
+        ></div>
+
+        <div
+            class="w-8 h-0 transition-all duration-500 delay-200 rounded-t-lg md:w-16 bg-gradient-to-b from-blue-400 via-cyan-300 to-transparent"
+            x-bind:class="{ '!h-[125px] md:!h-[150px]': animate }"
+            x-intersect="animate = true"
+        ></div>
+
+        <div
+            class="w-8 h-0 transition-all duration-500 delay-300 rounded-t-lg md:w-16 bg-gradient-to-b from-blue-400 via-cyan-300 to-transparent"
+            x-bind:class="{ '!h-[150px] md:!h-[175px]': animate }"
+            x-intersect="animate = true"
+        ></div>
+
+        <div
+            class="w-8 h-0 transition-all duration-500 delay-[400ms] md:w-16 bg-gradient-to-b from-blue-400 via-cyan-300 rounded-md to-transparent"
+            x-bind:class="{ '!h-[175px] md:!h-[200px]': animate }"
+            x-intersect="animate = true"
+        ></div>
     </div>
 
-    <x-section class="container mt-12 text-center">
+    <x-section class="container mt-8 text-center md:mt-12">
         <x-slot:title tag="h1" class="!text-3xl sm:!text-4xl md:!text-5xl font-bold">
             <span class="font-bold text-transparent bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text">
                 Get your company in the&nbsp;spotlight.
