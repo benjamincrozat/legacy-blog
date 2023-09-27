@@ -248,8 +248,8 @@
             Get started for $79/month
         </a>
 
-        <p class="mt-4">
-            Or simplify your accounting with <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/54994675-a900-4693-99f0-22997bbd8441?discount=0" class="font-medium underline">yearly payments</a>.
+        <p class="mt-4 font-medium">
+            Or simplify your accounting with <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/54994675-a900-4693-99f0-22997bbd8441?discount=0" class="underline">yearly payments</a>.
         </p>
 
         <p class="mt-4 text-sm">Once the payment is done, you will receive instructions on how to send me your company name, logo, and landing page of choice.</p>
