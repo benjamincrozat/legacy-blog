@@ -3,13 +3,45 @@
 >
     <x-section class="mt-16 text-center">
         <x-slot:title tag="h1" class="container font-bold text-center text-3xl/none md:text-4xl/none lg:text-5xl/none">
-            <div class="flex items-center justify-center gap-4 mt-8 md:gap-8">
-                <x-icon-laravel class="h-10 md:h-[3.25rem]" />
-                <x-icon-inertiajs class="h-6 md:h-8" />
-                <x-icon-livewire class="h-8 md:h-12" />
-                <x-icon-alpinejs class="h-6 md:h-8" />
-                <x-icon-tailwindcss class="h-8 md:h-12" />
-                <x-icon-vuejs class="h-9 md:h-11" />
+            <div
+                class="flex items-center justify-center gap-4 mt-8 md:gap-8"
+                x-data="{ animate: false }"
+            >
+                <x-icon-laravel
+                    class="transition-all duration-500 delay-0 scale-75 opacity-0 h-10 md:h-[3.25rem]"
+                    x-bind:class="{ '!scale-100 opacity-100': animate }"
+                    x-intersect="animate = true"
+                />
+
+                <x-icon-inertiajs
+                    class="h-6 transition-all duration-500 delay-75 scale-75 opacity-0 md:h-8"
+                    x-bind:class="{ '!scale-100 opacity-100': animate }"
+                    x-intersect="animate = true"
+                />
+
+                <x-icon-livewire
+                    class="h-8 transition-all duration-500 delay-100 scale-75 opacity-0 md:h-12"
+                    x-bind:class="{ '!scale-100 opacity-100': animate }"
+                    x-intersect="animate = true"
+                />
+
+                <x-icon-alpinejs
+                    class="h-6 transition-all duration-500 delay-150 scale-75 opacity-0 md:h-8"
+                    x-bind:class="{ '!scale-100 opacity-100': animate }"
+                    x-intersect="animate = true"
+                />
+
+                <x-icon-tailwindcss
+                    class="h-8 transition-all duration-500 delay-200 scale-75 opacity-0 md:h-12"
+                    x-bind:class="{ '!scale-100 opacity-100': animate }"
+                    x-intersect="animate = true"
+                />
+
+                <x-icon-vuejs
+                    class="transition-all duration-500 delay-300 scale-75 opacity-0 h-9 md:h-11"
+                    x-bind:class="{ '!scale-100 opacity-100': animate }"
+                    x-intersect="animate = true"
+                />
             </div>
 
             <div class="mt-8">Learn about Laravel and its&nbsp;ecosystem.</div>
