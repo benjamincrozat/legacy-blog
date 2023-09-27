@@ -74,7 +74,7 @@
                 <blockquote class="order-1 mt-6 md:text-xl md:mt-0">
                     Benjamin is overtaking us on some Google search results, so I'm jumping on board before he raises his prices.
 
-                    <cite class="block mt-8 text-sm not-italic md:text-base">
+                    <cite class="block mt-8">
                         Sebastian Schlein, co-founder of <a href="https://beyondco.de" class="text-indigo-400 underline">Beyond Code</a>.
                     </cite>
                 </blockquote>
