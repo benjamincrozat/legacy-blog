@@ -66,6 +66,22 @@
         <x-sponsors class="justify-center" />
     </x-section>
 
+    <div class="mt-8 bg-gray-200/50 md:mt-16">
+        <div class="container lg:max-w-screen-md">
+            <div class="py-8 md:flex md:items-center md:gap-8">
+                <img loading="lazy" src="{{ Vite::asset('/resources/img/sebastian.jpg') }}" width="96" height="96" class="flex-shrink-0 aspect-square w-[96px] order-2 h-[96px] rounded-full mx-auto" alt="Sebastian Schlein" />
+
+                <blockquote class="order-1 mt-6 md:text-xl md:mt-0">
+                    Benjamin is overtaking us on some Google search results, so I'm jumping on board before he raises his prices.
+
+                    <cite class="block mt-8 text-sm not-italic md:text-base">
+                        Sebastian Schlein, co-founder of <a href="https://beyondco.de" class="text-indigo-400 underline">Beyond Code</a>.
+                    </cite>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
     <x-section class="container mt-24 md:mt-32">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
             My blog by the numbers
