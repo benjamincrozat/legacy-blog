@@ -4,12 +4,17 @@ namespace App\Repositories;
 
 use App\Models\Post;
 use Illuminate\Support\Collection;
-use Facades\Algolia\AlgoliaSearch\RecommendClient;
+use Algolia\AlgoliaSearch\RecommendClient;
 use App\Repositories\Contracts\PostRepositoryContract;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 class PostRepository implements PostRepositoryContract
 {
+    public function __construct(
+        public RecommendClient $recommend
+    ) {
+    }
+
     public function get(string $slug) : ?Post
     {
         return Post::query()
@@ -42,7 +47,7 @@ class PostRepository implements PostRepositoryContract
 
     public function recommendations(int $id) : Collection
     {
-        $ids = $this->getAlgoliaRecommendations()->pluck('objectID');
+        $ids = $this->getAlgoliaRecommendations($id)->pluck('objectID');
 
         return Post::query()
             ->with('categories', 'media')
@@ -56,15 +61,15 @@ class PostRepository implements PostRepositoryContract
             ->get();
     }
 
-    protected function getAlgoliaRecommendations() : Collection
+    protected function getAlgoliaRecommendations(int $id) : Collection
     {
         if (! $this->algoliaEnabled()) {
             return collect();
         }
 
-        return collect(RecommendClient::getRelatedProducts([[
+        return collect($this->recommend->getRelatedProducts([[
             'indexName' => config('scout.prefix') . 'posts',
-            'objectID' => 'id',
+            'objectID' => "$id",
             'maxRecommendations' => 11,
         ]]));
     }

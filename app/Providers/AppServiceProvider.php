@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
 
         $this->app->bind(CategoryCacheRepository::class, CategoryCacheRepository::class);
 
-        $this->app->bind(PostRepository::class, fn () => new PostRepository);
+        $this->app->bind(PostRepository::class, PostRepository::class);
 
         $this->app->bind(PostCacheRepository::class, PostCacheRepository::class);
 
