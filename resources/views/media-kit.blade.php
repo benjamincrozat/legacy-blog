@@ -244,8 +244,8 @@
     </x-section>
 
     <div class="container mt-16 text-center md:max-w-screen-sm">
-        <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/46d80f6a-3631-492a-8e6b-0f42d288ccce?discount=0" class="inline-block px-6 py-3 text-white transition-opacity bg-orange-400 rounded hover:opacity-75">
-            Get started for <strong class="font-extrabold">$79/month</strong>
+        <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/46d80f6a-3631-492a-8e6b-0f42d288ccce?discount=0" class="inline-block px-6 py-3 font-bold text-white transition-opacity bg-orange-400 rounded hover:opacity-75">
+            Get started for $79/month
         </a>
 
         <p class="mt-4">
@@ -318,8 +318,8 @@
     </x-section>
 
     <div class="container mt-16 text-center md:max-w-screen-sm">
-        <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/cc173e8e-bafe-48a2-a406-b42b68a7150d" class="inline-block px-6 py-3 text-white transition-opacity bg-orange-400 rounded hover:opacity-75">
-            Get started for <strong class="font-extrabold">$499</strong>
+        <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/cc173e8e-bafe-48a2-a406-b42b68a7150d" class="inline-block px-6 py-3 font-bold text-white transition-opacity bg-orange-400 rounded hover:opacity-75">
+            Get started for $499
         </a>
 
         <p class="mt-4 text-sm">Once the payment is done, you will receive instructions on how to send me your content.</p>
