@@ -13,43 +13,43 @@
         x-data="{ animate: false }"
     >
         <div
-            class="w-8 h-0 transition-all duration-500 rounded-t-lg md:w-16 bg-gradient-to-b from-blue-400 via-cyan-300 to-transparent delay-0"
+            class="w-8 h-0 transition-all duration-500 rounded-lg md:w-12 bg-gradient-to-b from-blue-400 to-cyan-300 delay-0"
             x-bind:class="{ '!h-[25px] md:!h-[50px]': animate }"
             x-intersect="animate = true"
         ></div>
 
         <div
-            class="w-8 h-0 transition-all duration-500 delay-75 rounded-t-lg md:w-16 bg-gradient-to-b from-blue-400 via-cyan-300 to-transparent"
+            class="w-8 h-0 transition-all duration-500 delay-75 rounded-lg md:w-12 bg-gradient-to-b from-blue-400 to-cyan-300"
             x-bind:class="{ '!h-[50px] md:!h-[75px]': animate }"
             x-intersect="animate = true"
         ></div>
 
         <div
-            class="w-8 h-0 transition-all duration-500 delay-100 rounded-t-lg md:w-16 bg-gradient-to-b from-blue-400 via-cyan-300 to-transparent"
+            class="w-8 h-0 transition-all duration-500 delay-100 rounded-lg md:w-12 bg-gradient-to-b from-blue-400 to-cyan-300"
             x-bind:class="{ '!h-[75px] md:!h-[100px]': animate }"
             x-intersect="animate = true"
         ></div>
 
         <div
-            class="w-8 h-0 transition-all duration-500 delay-150 rounded-t-lg md:w-16 bg-gradient-to-b from-blue-400 via-cyan-300 to-transparent"
+            class="w-8 h-0 transition-all duration-500 delay-150 rounded-lg md:w-12 bg-gradient-to-b from-blue-400 to-cyan-300"
             x-bind:class="{ '!h-[100px] md:!h-[125px]': animate }"
             x-intersect="animate = true"
         ></div>
 
         <div
-            class="w-8 h-0 transition-all duration-500 delay-200 rounded-t-lg md:w-16 bg-gradient-to-b from-blue-400 via-cyan-300 to-transparent"
+            class="w-8 h-0 transition-all duration-500 delay-200 rounded-lg md:w-12 bg-gradient-to-b from-blue-400 to-cyan-300"
             x-bind:class="{ '!h-[125px] md:!h-[150px]': animate }"
             x-intersect="animate = true"
         ></div>
 
         <div
-            class="w-8 h-0 transition-all duration-500 delay-300 rounded-t-lg md:w-16 bg-gradient-to-b from-blue-400 via-cyan-300 to-transparent"
+            class="w-8 h-0 transition-all duration-500 delay-300 rounded-lg md:w-12 bg-gradient-to-b from-blue-400 to-cyan-300"
             x-bind:class="{ '!h-[150px] md:!h-[175px]': animate }"
             x-intersect="animate = true"
         ></div>
 
         <div
-            class="w-8 h-0 transition-all duration-500 delay-[400ms] md:w-16 bg-gradient-to-b from-blue-400 via-cyan-300 rounded-md to-transparent"
+            class="w-8 h-0 transition-all duration-500 delay-[400ms] md:w-12 bg-gradient-to-b from-blue-400 to-cyan-300 rounded-md"
             x-bind:class="{ '!h-[175px] md:!h-[200px]': animate }"
             x-intersect="animate = true"
         ></div>
@@ -91,7 +91,7 @@
 
                     <cite class="block mt-8 text-gray-500">
                         Sebastian Schlein<br />
-                        Co-founder of <a href="https://beyondco.de" class="text-indigo-400 underline">Beyond Code</a>.
+                        Co-founder of <a href="https://beyondco.de" class="text-indigo-400 underline">Beyond Code</a>
                     </cite>
                 </blockquote>
             </div>
