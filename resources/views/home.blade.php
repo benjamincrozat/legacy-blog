@@ -48,40 +48,8 @@
         </x-slot:title>
 
         <p class="container mt-2 text-xl/tight md:text-2xl/tight lg:text-3xl/tight">
-            Join more than
-            <span
-                class="font-semibold text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text"
-                x-data="{ count: 0, target: 35000 }" x-intersect="animateNumber"
-                x-text="Math.round(count).toLocaleString()"
-            >
-                35,000
-            </span>
-            readers and skyrocket your web&nbsp;development&nbsp;skills.
+            Join more than <span class="font-semibold text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">35,000</span> readers and skyrocket your web&nbsp;development&nbsp;skills.
         </p>
-
-        <script>
-            function animateNumber() {
-                const duration = 1000
-
-                const stepTime = 20
-
-                const steps = duration / stepTime
-
-                const increment = this.target / steps
-
-                const interval = setInterval(() => {
-                    if (this.count < this.target) {
-                        this.count += increment
-
-                        if (this.count > this.target) {
-                            this.count = this.target
-                        }
-                    } else {
-                        clearInterval(interval)
-                    }
-                }, stepTime)
-            }
-        </script>
 
         <div class="container text-center mt-14 md:mt-28">
             <p class="font-medium sm:text-xl">
