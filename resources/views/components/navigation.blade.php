@@ -41,14 +41,6 @@
                 <strong class="text-black transition-colors group-hover:text-white">Get more eyes on your business</strong>
             </x-menu.item>
 
-            <x-menu.item no-wire-navigate href="{{ route('home') }}#newsletter" icon="s-envelope" class="text-indigo-400 hover:text-indigo-400">
-                <strong class="text-black transition-colors group-hover:text-white">Follow my journey</strong>
-            </x-menu.item>
-
-            <x-menu.item no-wire-navigate href="/feed" icon="s-rss" class="text-orange-400 hover:text-orange-400">
-                <strong class="text-black transition-colors group-hover:text-white">Never miss new content</strong>
-            </x-menu.item>
-
             <x-menu.item href="/best-web-development-tools" icon="s-wrench" class="text-emerald-400 hover:text-emerald-400">
                 <strong class="text-black transition-colors group-hover:text-white">See all the tools I use</strong>
             </x-menu.item>
@@ -77,6 +69,10 @@
                 />
                 <div class="sr-only ">More</div>
             </x-slot:trigger>
+
+            <x-menu.item no-wire-navigate href="/feed" icon="s-rss" class="text-orange-400 hover:text-orange-400">
+                <strong class="text-black transition-colors group-hover:text-white">Never miss new content</strong>
+            </x-menu.item>
 
             <x-menu.item
                 href="{{ route('home') }}#about"
