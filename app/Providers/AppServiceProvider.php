@@ -21,11 +21,11 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->bind(CategoryRepository::class, fn () => new CategoryRepository);
 
-        $this->app->bind(CategoryCacheRepository::class, CategoryRepository::class);
+        $this->app->bind(CategoryCacheRepository::class, CategoryCacheRepository::class);
 
         $this->app->bind(PostRepository::class, PostRepository::class);
 
-        $this->app->bind(PostCacheRepository::class, PostRepository::class);
+        $this->app->bind(PostCacheRepository::class, PostCacheRepository::class);
 
         $this->app->bind(RecommendClient::class, function (Application $app) {
             return RecommendClient::create(
