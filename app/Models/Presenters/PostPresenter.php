@@ -38,7 +38,7 @@ class PostPresenter extends BasePresenter
     public function teaser() : string
     {
         return cache()->rememberForever(
-            "post_{$this->model->id}_content",
+            "post_{$this->model->id}_teaser",
             fn () => Str::markdown($this->model->teaser ?? '')
         );
     }
