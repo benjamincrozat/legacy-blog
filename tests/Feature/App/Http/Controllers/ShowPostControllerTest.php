@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Event;
 
 use function Pest\Laravel\assertGuest;
 
-use Facades\App\Repositories\PostCacheRepository as Posts;
+use Facades\App\Repositories\PostCacheRepository;
 
 beforeEach(function () {
     Bus::fake(TrackPageView::class)->serializeAndRestore();
@@ -53,7 +53,7 @@ test('a given published post is shown correctly and the page view is tracked', f
         ->hasAttribute('target', '_blank')
         ->hasAttribute('rel', 'nofollow noopener');
 
-    Posts::recommendations($post->id)->each(function (Post $post) use ($view) {
+    PostCacheRepository::recommendations($post->id)->each(function (Post $post) use ($view) {
         $view->contains($post->title);
     });
 
@@ -93,7 +93,7 @@ test('a given published community post is shown correctly', function () {
 
     $view->doesNotContain($post->user->name);
 
-    Posts::recommendations($post->id)->each(function (Post $post) use ($view) {
+    PostCacheRepository::recommendations($post->id)->each(function (Post $post) use ($view) {
         $view->contains($post->title);
     });
 });

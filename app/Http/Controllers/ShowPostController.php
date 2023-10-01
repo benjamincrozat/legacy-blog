@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\View\View;
 use App\Jobs\TrackPageView;
-use Facades\App\Repositories\PostCacheRepository as Posts;
+use Facades\App\Repositories\PostCacheRepository;
 
 class ShowPostController extends Controller
 {
     public function __invoke(string $slug) : View
     {
-        $post = Posts::get($slug);
+        $post = PostCacheRepository::get($slug);
 
         abort_if(is_null($post), 404);
 
@@ -26,7 +26,7 @@ class ShowPostController extends Controller
         )->afterResponse();
 
         return view('posts.show', compact('post') + [
-            'recommendations' => Posts::recommendations($post->id),
+            'recommendations' => PostCacheRepository::recommendations($post->id),
         ]);
     }
 }

@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
 
         $this->app->bind(PostRepository::class, PostRepository::class);
 
-        $this->app->bind(PostCacheRepository::class, PostCacheRepository::class);
+        $this->app->bind(PostCacheRepository::class, PostRepository::class);
 
         $this->app->bind(RecommendClient::class, function (Application $app) {
             return RecommendClient::create(
