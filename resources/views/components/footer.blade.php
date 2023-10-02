@@ -7,7 +7,7 @@
         </p>
 
         <p class="mt-4">
-            <a href="/feed" class="font-medium underline">Subscribe to the feed</a>, and follow me on <a href="https://github.com/benjamincrozat" target="_blank" rel="nofollow noopener" class="font-medium underline">GitHub</a> and <a href="https://x.com/benjamincrozat" target="_blank" rel="nofollow noopener" class="font-medium underline">X</a>. For inquiries, <a href="mailto:hello@benjamincrozat.com" class="font-medium underline">send&nbsp;me&nbsp;an&nbsp;email</a>.
+            <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/6a0e4856-0fc4-4d47-9ca5-630dfd9ba82e?discount=0">Support the blog</a>, <a href="/feed" class="font-medium underline">Subscribe to the feed</a>, and follow me on <a href="https://github.com/benjamincrozat" target="_blank" rel="nofollow noopener" class="font-medium underline">GitHub</a> and <a href="https://x.com/benjamincrozat" target="_blank" rel="nofollow noopener" class="font-medium underline">X</a>. For inquiries, <a href="mailto:hello@benjamincrozat.com" class="font-medium underline">send&nbsp;me&nbsp;an&nbsp;email</a>.
         </p>
 
         @if (! request()->routeIs('home'))

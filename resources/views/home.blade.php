@@ -66,7 +66,7 @@
                 <span class="mx-2">or</span>
 
                 <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/6a0e4856-0fc4-4d47-9ca5-630dfd9ba82e?discount=0" class="text-xl md:text-2xl sm:text-3xl">
-                    <span class="underline decoration-1 underline-offset-2">support my efforts</span>!
+                    <span class="underline decoration-1 underline-offset-2">support the blog</span>!
                 </a>
             </div>
         </div>
