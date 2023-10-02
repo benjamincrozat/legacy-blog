@@ -12,11 +12,9 @@ class PostDeleted implements ShouldQueue
     {
         cache()->forget("post_{$event->postSlug}");
 
-        cache()->forget('posts_latest');
+        cache()->tags(['posts'])->flush();
 
         Posts::latest();
-
-        cache()->forget('posts_popurlar');
 
         Posts::popular();
 
@@ -25,8 +23,6 @@ class PostDeleted implements ShouldQueue
             ->whereNotIn('id', [$event->postId])
             ->cursor()
             ->each(function (Post $post) {
-                cache()->forget("posts_{$post->id}_recommendations");
-
                 Posts::recommendations($post->id);
             });
     }

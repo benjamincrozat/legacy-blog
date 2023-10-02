@@ -29,7 +29,7 @@ class PostCacheRepository implements PostRepositoryContract
             $key .= "_page_$page";
         }
 
-        return cache()->rememberForever(
+        return cache()->tags(['posts'])->rememberForever(
             $key,
             fn () => $this->repository->latest($page)
         );
@@ -37,7 +37,7 @@ class PostCacheRepository implements PostRepositoryContract
 
     public function popular() : Collection
     {
-        return cache()->rememberForever(
+        return cache()->tags(['posts'])->rememberForever(
             'posts_popular',
             fn () => $this->repository->popular()
         );
@@ -45,7 +45,7 @@ class PostCacheRepository implements PostRepositoryContract
 
     public function recommendations(int $id) : Collection
     {
-        return cache()->rememberForever(
+        return cache()->tags(['posts'])->rememberForever(
             "post_{$id}_recommendations",
             fn () => $this->repository->recommendations($id)
         );

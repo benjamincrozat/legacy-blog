@@ -11,7 +11,7 @@ use Spatie\MediaLibrary\HasMedia;
 use App\Models\Concerns\HasFeedItems;
 use App\Models\Concerns\LogsActivity;
 use App\Models\Concerns\HasLocalScopes;
-use App\Models\Presenters\PostPresenter;
+use App\Presenters\PostPresenter;
 use App\Models\Concerns\HasRelationships;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;

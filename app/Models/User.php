@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Filament\Panel;
 use App\Models\Concerns\LogsActivity;
-use App\Models\Presenters\UserPresenter;
+use App\Presenters\UserPresenter;
 use Illuminate\Notifications\Notifiable;
 use Filament\Models\Contracts\FilamentUser;
 use Illuminate\Database\Eloquent\Relations\HasMany;

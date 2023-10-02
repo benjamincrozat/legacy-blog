@@ -12,13 +12,11 @@ class PostSaved implements ShouldQueue
     {
         cache()->forget("post_{$event->post->slug}");
 
+        cache()->tags(['posts'])->flush();
+
         Posts::get($event->post->slug);
 
-        cache()->forget('posts_latest');
-
         Posts::latest();
-
-        cache()->forget('posts_popular');
 
         Posts::popular();
 
@@ -27,8 +25,6 @@ class PostSaved implements ShouldQueue
             ->whereNotIn('id', [$event->post->id])
             ->cursor()
             ->each(function (Post $post) {
-                cache()->forget("posts_{$post->id}_recommendations");
-
                 Posts::recommendations($post->id);
             });
     }

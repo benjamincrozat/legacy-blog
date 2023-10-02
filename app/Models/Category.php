@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use App\Models\Concerns\LogsActivity;
-use App\Models\Presenters\CategoryPresenter;
+use App\Presenters\CategoryPresenter;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Category extends BaseModel

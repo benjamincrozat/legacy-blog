@@ -5,7 +5,7 @@ use App\Events\PostSaved;
 use App\Events\PostDeleted;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Event;
-use App\Models\Presenters\PostPresenter;
+use App\Presenters\PostPresenter;
 
 it('dispatches an event when saved', function () {
     Event::fake([PostSaved::class]);

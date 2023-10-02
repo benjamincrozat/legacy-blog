@@ -47,6 +47,8 @@
         <link rel="icon" type="image/jpeg" sizes="96x96" href="{{ Vite::asset('resources/img/96x96.jpg') }}" />
 
         <link rel="canonical" href="{{ $canonical ?? url()->current() }}" />
+
+        <meta name="theme-color" content="#f9fafb" />
     </head>
     <body
         {{ $attributes->except(['description', 'image', 'title', 'canonical'])->merge([
