@@ -27,7 +27,7 @@ it('refreshes the cache when deleted', function () {
 
     Event::assertDispatched(
         PostDeleted::class,
-        fn (PostDeleted $event) => $event->post->is($post)
+        fn (PostDeleted $event) => $event->postId === $post->id
     );
 });
 

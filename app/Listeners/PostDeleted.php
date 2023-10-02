@@ -3,25 +3,31 @@
 namespace App\Listeners;
 
 use App\Models\Post;
+use App\Facades\Posts;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Facades\App\Repositories\PostCacheRepository;
 
 class PostDeleted implements ShouldQueue
 {
     public function handle(\App\Events\PostDeleted $event) : void
     {
-        cache()->forget("post_{$event->post->slug}");
+        cache()->forget("post_{$event->postSlug}");
 
-        PostCacheRepository::latest();
+        cache()->forget('posts_latest');
 
-        PostCacheRepository::popular();
+        Posts::latest();
+
+        cache()->forget('posts_popurlar');
+
+        Posts::popular();
 
         Post::query()
             ->published()
-            ->whereNotIn('id', [$event->post->id])
+            ->whereNotIn('id', [$event->postId])
             ->cursor()
             ->each(function (Post $post) {
-                PostCacheRepository::recommendations($post->id);
+                cache()->forget("posts_{$post->id}_recommendations");
+
+                Posts::recommendations($post->id);
             });
     }
 }

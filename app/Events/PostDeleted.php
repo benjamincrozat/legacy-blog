@@ -11,8 +11,14 @@ class PostDeleted
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
+    public int $postId;
+
+    public string $postSlug;
+
     public function __construct(
-        public Post $post
+        Post $post
     ) {
+        $this->postId = $post->id;
+        $this->postSlug = $post->slug;
     }
 }

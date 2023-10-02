@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\View\View;
-use Facades\App\Repositories\PostCacheRepository;
+use App\Facades\Posts;
 
 class HomeController extends Controller
 {
     public function __invoke() : View
     {
         return view('home', [
-            'popular' => PostCacheRepository::popular(),
-            'latest' => PostCacheRepository::latest(),
+            'popular' => Posts::popular(),
+            'latest' => Posts::latest(),
         ]);
     }
 }

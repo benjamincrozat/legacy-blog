@@ -2,13 +2,13 @@
 
 use App\Models\Post;
 use Illuminate\Support\Collection;
-use Facades\App\Repositories\PostCacheRepository;
+use App\Facades\Posts;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 it('fetches a given article', function () {
     $created = Post::factory()->published()->createQuietly();
 
-    $fetched = PostCacheRepository::get($created->slug);
+    $fetched = Posts::get($created->slug);
 
     expect($fetched)->toBeInstanceOf(Post::class);
 });
@@ -16,7 +16,7 @@ it('fetches a given article', function () {
 it('fetches the latest articles without pagination', function () {
     Post::factory(10)->published()->createQuietly();
 
-    $latest = PostCacheRepository::latest();
+    $latest = Posts::latest();
 
     expect($latest)
         ->toBeInstanceOf(Collection::class)
@@ -26,7 +26,7 @@ it('fetches the latest articles without pagination', function () {
 it('fetches the latest articles with pagination', function () {
     Post::factory(10)->published()->createQuietly();
 
-    $latest = PostCacheRepository::latest(2);
+    $latest = Posts::latest(2);
 
     expect($latest)
         ->toBeInstanceOf(LengthAwarePaginator::class)
@@ -36,7 +36,7 @@ it('fetches the latest articles with pagination', function () {
 it('fetches popular articles', function () {
     Post::factory(10)->published()->createQuietly();
 
-    $popular = PostCacheRepository::popular();
+    $popular = Posts::popular();
 
     expect($popular)
         ->toBeInstanceOf(Collection::class)
@@ -46,7 +46,7 @@ it('fetches popular articles', function () {
 it('fetches recommendations for a given article', function () {
     Post::factory(10)->published()->createQuietly();
 
-    $recommendations = PostCacheRepository::recommendations(
+    $recommendations = Posts::recommendations(
         Post::factory()->published()->create()->id
     );
 

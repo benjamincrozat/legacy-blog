@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\View\View;
-use Facades\App\Repositories\CategoryCacheRepository as Categories;
+use App\Facades\Categories;
 
 class ShowCategoryController extends Controller
 {
