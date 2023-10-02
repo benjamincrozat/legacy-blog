@@ -58,9 +58,15 @@
 
             <x-sponsors />
 
-            <div class="text-center mt-9">
-                <a wire:navigate.hover href="{{ route('media-kit') }}" class="text-xl -ml-9 md:text-2xl sm:-ml-10 sm:text-3xl font-handwriting">
-                    <x-icon-arrow-to-top-left class="inline w-8 h-8 -translate-y-3" /> <span class="underline decoration-1 underline-offset-2">Showcase your business too!</span>
+            <div class="inline-flex flex-wrap items-center justify-center mt-9 font-handwriting">
+                <a wire:navigate.hover href="{{ route('media-kit') }}" class="text-xl -ml-9 md:text-2xl sm:-ml-10 sm:text-3xl">
+                    <x-icon-arrow-to-top-left class="inline w-8 h-8 -translate-y-3" /> <span class="underline decoration-1 underline-offset-2">Showcase your business too</span>
+                </a>
+
+                <span class="mx-2">or</span>
+
+                <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/6a0e4856-0fc4-4d47-9ca5-630dfd9ba82e?discount=0" class="text-xl md:text-2xl sm:text-3xl">
+                    <span class="underline decoration-1 underline-offset-2">support my efforts</span>!
                 </a>
             </div>
         </div>
