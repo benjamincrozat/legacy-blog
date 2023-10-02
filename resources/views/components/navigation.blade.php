@@ -70,7 +70,7 @@
                 <div class="sr-only ">More</div>
             </x-slot:trigger>
 
-            <x-menu.item no-wire-navigate href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/6a0e4856-0fc4-4d47-9ca5-630dfd9ba82e?discount=0" icon="s-heart" class="text-rose-400">
+            <x-menu.item no-wire-navigate href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/eb4c5ce9-c87e-4497-ab6b-b0922654e658?discount=0" icon="s-heart" class="text-rose-400">
                 <strong class="text-black transition-colors group-hover:text-white">Support my efforts</strong>
             </x-menu.item>
 
