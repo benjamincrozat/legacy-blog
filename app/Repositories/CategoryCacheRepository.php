@@ -15,7 +15,7 @@ class CategoryCacheRepository implements CategoryRepositoryContract
 
     public function get(string $slug) : ?Category
     {
-        return cache()->rememberForever(
+        return cache()->tags(['categories'])->rememberForever(
             "category_$slug",
             fn () => Category::where('slug', $slug)->first()
         );
@@ -23,7 +23,7 @@ class CategoryCacheRepository implements CategoryRepositoryContract
 
     public function posts(Category $category) : LengthAwarePaginator
     {
-        return cache()->rememberForever(
+        return cache()->tags(['posts'])->rememberForever(
             "category_{$category->id}_posts",
             fn () => $this->repository->posts($category)
         );

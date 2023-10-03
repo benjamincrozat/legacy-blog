@@ -41,6 +41,14 @@ return [
         'main_tag_id' => env('CONVERTKIT_MAIN_TAG_ID'),
     ],
 
+    'lemonsqueezy' => [
+        'sponsored_content' => env('SPONSORED_CONTENT_CHECKOUT_LINK'),
+        'sponsorships' => [
+            'monthly' => env('MONTHLY_SPONSORSHIP_CHECKOUT_LINK'),
+            'yearly' => env('YEARLY_SPONSORSHIP_CHECKOUT_LINK'),
+        ],
+    ],
+
     'pirsch' => [
         'access_key' => env('PIRSCH_ACCESS_KEY'),
         'client_id' => env('PIRSCH_CLIENT_ID'),
