@@ -25,7 +25,7 @@
                     x-intersect="animate = true"
                 />
 
-                <x-icon-alpinejs
+                <x-icon-alpine-js
                     class="h-6 transition-all duration-500 delay-150 scale-75 opacity-0 md:h-8"
                     x-bind:class="{ '!scale-100 opacity-100': animate }"
                     x-intersect="animate = true"
@@ -37,7 +37,7 @@
                     x-intersect="animate = true"
                 />
 
-                <x-icon-vuejs
+                <x-icon-vue-js
                     class="transition-all duration-500 delay-300 scale-75 opacity-0 h-9 md:h-11"
                     x-bind:class="{ '!scale-100 opacity-100': animate }"
                     x-intersect="animate = true"
