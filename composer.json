@@ -24,7 +24,8 @@
         "spatie/laravel-google-fonts": "^1.2",
         "spatie/laravel-honeypot": "^4.3",
         "spatie/laravel-medialibrary": "^10.0.0",
-        "spatie/url": "^2.2"
+        "spatie/url": "^2.2",
+        "stevebauman/unfinalize": "^1.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.9",
@@ -65,7 +66,8 @@
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
             "@php artisan ide-helper:generate",
             "@php artisan ide-helper:meta",
-            "@php artisan ide-helper:models --nowrite"
+            "@php artisan ide-helper:models --nowrite",
+            "@php vendor/bin/unfinalize run --mark-final"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
@@ -81,6 +83,9 @@
             ]
         }
     },
+    "unfinalize": [
+        "algolia/algoliasearch-client-php"
+    ],
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
