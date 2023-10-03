@@ -42,6 +42,9 @@ module.exports = {
                                 },
                             },
                         },
+                        'a': {
+                            'font-weight': 'inherit',
+                        },
                         'iframe[src^="https://www.youtube.com"]': {
                             'width': '100% !important',
                             'height': 'auto !important',
