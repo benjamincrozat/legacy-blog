@@ -74,7 +74,8 @@
 
     <x-section class="container mt-16 md:mt-32">
         <x-slot:title class="text-center">
-            Popular articles
+            <x-icon-trend class="h-16 mx-auto" />
+            <div class="mt-2">Popular articles</div>
         </x-slot:title>
 
         <ul class="grid gap-16 mt-8 md:grid-cols-2">
@@ -96,7 +97,8 @@
     @if ($categories->isNotEmpty())
         <x-section class="container mt-32">
             <x-slot:title class="text-center">
-                A variety of topics
+                <x-icon-tag class="h-16 mx-auto" />
+                <div class="mt-2">A variety of topics</div>
             </x-slot:title>
 
             <ul class="grid gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3 md:gap-16">
@@ -111,7 +113,8 @@
 
     <x-section class="container mt-32">
         <x-slot:title class="text-center">
-            Latest articles
+            <x-icon-timeline class="h-16 mx-auto" />
+            <div class="mt-2">Latest articles</div>
         </x-slot:title>
 
         <ul class="grid gap-16 mt-8 md:grid-cols-2">
@@ -132,7 +135,8 @@
 
     <x-section id="about" class="container mt-32 lg:max-w-screen-md scroll-mt-8">
         <x-slot:title class="text-center">
-            About Benjamin Crozat
+            <x-icon-anonymous class="h-16 mx-auto" />
+            <div class="mt-2">About Benjamin Crozat</div>
         </x-slot:title>
 
         <x-prose class="mt-8">
