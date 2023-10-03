@@ -3,7 +3,7 @@
 >
     <x-section class="container mt-16">
         <x-slot:title class="text-center">
-            <x-icon-timeline class="h-16 mx-auto" />
+            <x-icon-clock class="h-16 mx-auto" />
 
             <div class="mt-2">
                 @if ($posts->currentPage() > 1)

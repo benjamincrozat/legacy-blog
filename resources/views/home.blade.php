@@ -113,7 +113,7 @@
 
     <x-section class="container mt-32">
         <x-slot:title class="text-center">
-            <x-icon-timeline class="h-16 mx-auto" />
+            <x-icon-clock class="h-16 mx-auto" />
             <div class="mt-2">Latest articles</div>
         </x-slot:title>
 
