@@ -28,7 +28,7 @@ return new class extends Migration
                 'name' => 'Benjamin Crozat',
                 'email' => 'hello@benjamincrozat.com',
                 'email_verified_at' => now(),
-                'description' => "Laravel developer turned content creator.\r\n**[Get more eyes on your business](/media-kit) thanks to my 35,000 monthly visitors.**",
+                'description' => "Laravel developer turned content creator.\r\n**[Get more eyes on your business](/media-kit) thanks to my 40,000 monthly visitors.**",
                 'github_handle' => 'benjamincrozat',
                 'x_handle' => 'benjamincrozat',
                 'password' => Hash::make('password'),
