@@ -3,11 +3,6 @@
 use App\Models\Post;
 use Illuminate\Support\Facades\Http;
 use App\Jobs\GeneratePostDescription;
-use Illuminate\Support\Facades\Event;
-
-beforeEach(function () {
-    Event::fake([PostSaved::class]);
-});
 
 it('asks GPT to generate a description for a given post', function () {
     Http::fake([

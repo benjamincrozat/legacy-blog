@@ -2,16 +2,14 @@
 
 namespace App\Models;
 
-use App\Events\PostSaved;
 use Spatie\Feed\Feedable;
-use App\Events\PostDeleted;
 use Laravel\Scout\Searchable;
 use Spatie\Image\Manipulations;
+use App\Presenters\PostPresenter;
 use Spatie\MediaLibrary\HasMedia;
 use App\Models\Concerns\HasFeedItems;
 use App\Models\Concerns\LogsActivity;
 use App\Models\Concerns\HasLocalScopes;
-use App\Presenters\PostPresenter;
 use App\Models\Concerns\HasRelationships;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
@@ -23,11 +21,6 @@ class Post extends BaseModel implements Feedable, HasMedia
     protected $casts = [
         'published_at' => 'datetime',
         'manually_updated_at' => 'date',
-    ];
-
-    protected $dispatchesEvents = [
-        'saved' => PostSaved::class,
-        'deleted' => PostDeleted::class,
     ];
 
     public function presenter() : PostPresenter

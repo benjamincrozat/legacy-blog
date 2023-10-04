@@ -2,16 +2,10 @@
 
 use App\Models\Post;
 use App\Models\Category;
-use App\Events\PostSaved;
 
 use function Pest\Laravel\get;
 
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Event;
-
-beforeEach(function () {
-    Event::fake([PostSaved::class]);
-});
 
 it('displays the categories and put the highlighted ones first', function () {
     $fakeCategories = Category::factory(3)

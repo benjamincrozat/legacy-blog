@@ -57,28 +57,33 @@ class PostRepository implements PostRepositoryContract
     {
         $ids = $this->getAlgoliaRecommendations($id)->pluck('objectID');
 
-        /** @var Collection */
-        $recommendations = Post::query()
+        return Post::query()
             ->with('categories', 'media')
             ->published()
             ->whereNotIn('id', [$id])
-            ->unless(
-                ! empty($ids),
+            ->when(
+                $ids->isNotEmpty(),
                 fn ($query) => $query->asSequence($ids),
                 fn ($query) => $query->inRandomOrder()->limit(11)
             )
             ->get();
-
-        return $recommendations;
     }
 
     protected function getAlgoliaRecommendations(int $id) : Collection
     {
-        return $this->algoliaEnabled() ? collect($this->recommend->getRelatedProducts([[
-            'indexName' => config('scout.prefix') . 'posts',
-            'objectID' => "$id",
-            'maxRecommendations' => 11,
-        ]])) : new Collection;
+        if (! $this->algoliaEnabled()) {
+            return collect();
+        }
+
+        $recommendations = cache()->remember("post_{$id}_raw_recommendations", 60 * 60 * 24, function () use ($id) {
+            return collect($this->recommend->getRelatedProducts([[
+                'indexName' => config('scout.prefix') . 'posts',
+                'objectID' => "$id",
+                'maxRecommendations' => 11,
+            ]]));
+        });
+
+        return $recommendations ?? collect();
     }
 
     protected function algoliaEnabled() : bool

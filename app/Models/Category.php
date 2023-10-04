@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use App\Events\CategorySaved;
-use App\Events\CategoryDeleted;
 use App\Models\Concerns\LogsActivity;
 use App\Presenters\CategoryPresenter;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -11,11 +9,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class Category extends BaseModel
 {
     use LogsActivity;
-
-    protected $dispatchesEvents = [
-        'saved' => CategorySaved::class,
-        'deleted' => CategoryDeleted::class,
-    ];
 
     public function presenter() : CategoryPresenter
     {

@@ -4,14 +4,14 @@ namespace App\Providers;
 
 use App\Models\Category;
 use App\Actions\Subscribe;
+use App\Repositories\PostRepository;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Vite;
 use Illuminate\Foundation\Application;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
-use App\Repositories\PostCacheRepository;
+use App\Repositories\CategoryRepository;
 use Algolia\AlgoliaSearch\RecommendClient;
-use App\Repositories\CategoryCacheRepository;
 use App\Repositories\Contracts\PostRepositoryContract;
 use App\Repositories\Contracts\CategoryRepositoryContract;
 
@@ -19,9 +19,9 @@ class AppServiceProvider extends ServiceProvider
 {
     public function register() : void
     {
-        $this->app->bind(CategoryRepositoryContract::class, CategoryCacheRepository::class);
+        $this->app->bind(CategoryRepositoryContract::class, CategoryRepository::class);
 
-        $this->app->bind(PostRepositoryContract::class, PostCacheRepository::class);
+        $this->app->bind(PostRepositoryContract::class, PostRepository::class);
 
         $this->app->bind(RecommendClient::class, function (Application $app) {
             return RecommendClient::create(
@@ -56,8 +56,6 @@ class AppServiceProvider extends ServiceProvider
             $view->with(compact('categories'));
         });
 
-        Vite::useScriptTagAttributes([
-            'defer' => true,
-        ]);
+        Vite::useScriptTagAttributes(['defer' => true]);
     }
 }

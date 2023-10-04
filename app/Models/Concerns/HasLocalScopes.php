@@ -2,7 +2,7 @@
 
 namespace App\Models\Concerns;
 
-use App\Models\User;
+use Illuminate\Support\Collection;
 use Illuminate\Database\Eloquent\Builder;
 
 trait HasLocalScopes
@@ -10,7 +10,7 @@ trait HasLocalScopes
     /**
      * Get a sequence of posts using their IDs in the exact order provided.
      */
-    public function scopeAsSequence(Builder $query, mixed $sequence) : void
+    public function scopeAsSequence(Builder $query, Collection|array $sequence) : void
     {
         $sequence = collect($sequence);
 

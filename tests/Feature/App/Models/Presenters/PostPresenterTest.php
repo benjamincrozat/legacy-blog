@@ -1,13 +1,7 @@
 <?php
 
 use App\Models\Post;
-use App\Events\PostSaved;
 use Illuminate\Http\UploadedFile;
-use Illuminate\Support\Facades\Event;
-
-beforeEach(function () {
-    Event::fake([PostSaved::class]);
-});
 
 it('presents the image', function () {
     $post = Post::factory()->create();

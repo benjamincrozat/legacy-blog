@@ -2,20 +2,12 @@
 
 use App\Models\Post;
 use App\Models\User;
-use App\Events\PostSaved;
 
 use function Pest\Laravel\actingAs;
 use function Pest\Livewire\livewire;
-
-use Illuminate\Support\Facades\Event;
-
 use function Pest\Laravel\assertGuest;
 
 use App\Filament\Resources\PostResource;
-
-beforeEach(function () {
-    Event::fake([PostSaved::class]);
-});
 
 it('lets users list posts', function () {
     actingAs(User::factory()->create())
