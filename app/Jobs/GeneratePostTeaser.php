@@ -40,8 +40,6 @@ class GeneratePostTeaser implements ShouldQueue
             ->throw()
             ->json('choices.0.message.content');
 
-        dd($teaser);
-
         $this->post->update(compact('teaser'));
     }
 }
