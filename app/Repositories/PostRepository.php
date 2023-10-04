@@ -55,7 +55,9 @@ class PostRepository implements PostRepositoryContract
 
     public function recommendations(int $id) : Collection
     {
-        $ids = $this->getAlgoliaRecommendations($id)->pluck('objectID');
+        $ids = $this->getAlgoliaRecommendations($id)->pluck('objectID')->filter();
+
+        dd($ids);
 
         return Post::query()
             ->with('categories', 'media')
@@ -83,7 +85,7 @@ class PostRepository implements PostRepositoryContract
             ]]));
         });
 
-        return $recommendations ?? collect();
+        return collect($recommendations['results'][0]['hits']);
     }
 
     protected function algoliaEnabled() : bool
