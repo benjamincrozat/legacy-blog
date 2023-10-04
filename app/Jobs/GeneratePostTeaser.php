@@ -22,7 +22,7 @@ class GeneratePostTeaser implements ShouldQueue
 
     public function handle() : void
     {
-        $response = Http::withToken(config('services.openai.api_key'))
+        $teaser = Http::withToken(config('services.openai.api_key'))
             ->timeout(300)
             ->baseUrl('https://api.openai.com/v1')
             ->post('/chat/completions', [
@@ -30,23 +30,16 @@ class GeneratePostTeaser implements ShouldQueue
                 'messages' => [
                     [
                         'role' => 'user',
-                        'content' => <<<PROMPT
-{$this->post->title}
-{$this->post->content}
-
----
-
-Tease this article without giving away the crucial details. Give the user a reason to click, but don't overdo it. Your tone must be the same as in the article and you must avoid repetitions. Speak using the first person as if you were the author.
-PROMPT,
+                        'content' => view('prompts.generate-post-teaser', [
+                            'post' => $this->post,
+                        ])->render(),
                     ],
                 ],
                 'max_tokens' => 1024,
             ])
             ->throw()
-            ->json();
+            ->json('choices.0.message.content');
 
-        $this->post->update([
-            'teaser' => trim(trim($response['choices'][0]['message']['content']), '"\''),
-        ]);
+        $this->post->update(compact('teaser'));
     }
 }
