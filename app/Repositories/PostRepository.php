@@ -57,8 +57,6 @@ class PostRepository implements PostRepositoryContract
     {
         $ids = $this->getAlgoliaRecommendations($id)->pluck('objectID')->filter();
 
-        dd($ids);
-
         return Post::query()
             ->with('categories', 'media')
             ->published()
