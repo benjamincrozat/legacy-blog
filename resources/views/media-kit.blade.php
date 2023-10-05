@@ -57,7 +57,7 @@
 
     <x-section class="container mt-8 text-center md:mt-12">
         <x-slot:title tag="h1" class="!text-3xl sm:!text-4xl md:!text-5xl font-bold">
-            <span class="font-bold text-transparent bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text">
+            <span class="font-bold text-transparent bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text">
                 Get your company in the&nbsp;spotlight.
             </span>
         </x-slot:title>
@@ -67,7 +67,7 @@
         </p>
 
         <div class="mt-16">
-            <a href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=30d&scale=day" target="_blank" rel="nofollow noopener" class="inline-block px-6 py-3 font-bold transition-opacity bg-gray-200 rounded hover:opacity-75">
+            <a href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=30d&scale=day" target="_blank" rel="nofollow noopener" class="inline-block px-6 py-3 font-bold transition-opacity rounded bg-gradient-to-r from-gray-200/50 to-gray-200 hover:opacity-75">
                 Access my analytics dashboard
             </a>
         </div>
@@ -195,7 +195,7 @@
             </p>
 
             <p class="text-center">
-                <x-button href="#display" class="mt-4 px-3 !py-2 text-sm font-bold bg-blue-600 text-white">
+                <x-button href="#display" class="mt-4 px-3 !py-2 text-sm font-bold bg-gradient-to-r from-blue-500 to-blue-600 shadow-md shadow-blue-100 text-white">
                     Learn more
                 </x-button>
             </p>
@@ -209,7 +209,7 @@
             </p>
 
             <p class="text-center">
-                <x-button href="#write" class="mt-4 px-3 !py-2 text-sm font-bold bg-blue-600 text-white">
+                <x-button href="#write" class="mt-4 px-3 !py-2 text-sm font-bold bg-gradient-to-r from-blue-500 to-blue-600 shadow-md shadow-blue-100 text-white">
                     Learn more
                 </x-button>
             </p>
@@ -223,7 +223,7 @@
             </p>
 
             <p class="text-center">
-                <x-button href="mailto:hello@benjamincrozat.com" class="mt-4 px-3 !py-2 text-sm font-bold bg-green-500 text-white">
+                <x-button href="mailto:hello@benjamincrozat.com" class="mt-4 px-3 !py-2 text-sm font-bold bg-gradient-to-r from-green-500 to-green-600 shadow-md shadow-green-100 text-white">
                     Reach out
                 </x-button>
             </p>
@@ -243,7 +243,7 @@
                 </h3>
 
                 <p class="mt-2">
-                    <strong class="font-medium">My audience is exclusively made of English-speaking web developers</strong> from all over the world.
+                    <strong class="font-medium">My audience is exclusively made of English-speaking web developers</strong> from all over the world, and I let you tap into it.
                 </p>
             </div>
 
@@ -257,7 +257,7 @@
                 </h3>
 
                 <p class="mt-2">
-                    Even in 2023, <strong class="font-medium">links are more important than ever for Google</strong>. If you are in the software business, getting some from this blog will benefit you.
+                    Even in {{ date('Y') }}, <strong class="font-medium">links still give you an edge over your competition on Google</strong>. If you are in the software business, getting one from this blog will benefit you.
                 </p>
             </div>
 
@@ -280,7 +280,7 @@
     </x-section>
 
     <div class="container mt-16 text-center md:max-w-screen-sm">
-        <a href="{{ config('services.lemonsqueezy.sponsorships.monthly') }}" class="inline-block px-6 py-3 font-bold text-white transition-opacity bg-orange-400 rounded hover:opacity-75">
+        <a href="{{ config('services.lemonsqueezy.sponsorships.monthly') }}" class="inline-block px-6 py-3 font-bold text-white transition-opacity rounded shadow-lg bg-gradient-to-r from-orange-500 to-orange-400 shadow-orange-100 hover:opacity-75">
             Get started for $49/month
         </a>
 
@@ -303,7 +303,7 @@
                 </h3>
 
                 <p class="mt-2">
-                    <strong class="font-medium">From Monday to Sunday, you article will stay on top of every other article</strong> on this blog. In the homepage, in the "latest" page, and in the recommendations of every article.
+                    <strong class="font-medium">From Monday to Sunday, your article will stay on top of every other article</strong> on this blog. In the homepage, in the "latest" page, and in the recommendations of every article.
                 </p>
             </div>
 
@@ -354,7 +354,7 @@
     </x-section>
 
     <div class="container mt-16 text-center md:max-w-screen-sm">
-        <a href="{{ config('services.lemonsqueezy.sponsored_content') }}" class="inline-block px-6 py-3 font-bold text-white transition-opacity bg-orange-400 rounded hover:opacity-75">
+        <a href="{{ config('services.lemonsqueezy.sponsored_content') }}" class="inline-block px-6 py-3 font-bold text-white transition-opacity rounded shadow-lg bg-gradient-to-r from-orange-500 to-orange-400 shadow-orange-100 hover:opacity-75">
             Get started for $499
         </a>
 
