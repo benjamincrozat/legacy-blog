@@ -16,7 +16,7 @@
 
     <x-section class="container mt-24 md:mt-32">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
-            These companies are helping
+            These companies are helping me
         </x-slot:title>
 
         <p class="text-xl text-center mt-7">

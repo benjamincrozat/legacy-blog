@@ -85,6 +85,7 @@
         :img-url="Vite::asset('resources/img/sebastian.jpg')"
         img-alt="Sebastian Schlein"
         author-name="Sebastien Schlein"
+        class="mt-8 md:mt-16"
     >
         “Benjamin is overtaking us on some Google search results, so I'm jumping on board before he raises his prices.”
 
