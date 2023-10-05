@@ -25,8 +25,8 @@ class Category extends BaseModel
         return $this
             ->posts()
             ->with('categories', 'media')
-            ->latest()
-            ->published();
+            ->published()
+            ->orderByDesc('published_at');
     }
 
     public function related() : BelongsToMany
