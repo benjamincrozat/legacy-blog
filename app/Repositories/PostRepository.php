@@ -30,7 +30,7 @@ class PostRepository implements PostRepositoryContract
         $posts = Post::query()
             ->with('categories', 'media')
             ->published()
-            ->latest()
+            ->orderByDesc('published_at')
             ->when(
                 $page,
                 fn ($query) => $query->paginate(21),
