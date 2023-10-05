@@ -10,8 +10,8 @@ trait HasFeedItems
     public static function getFeedItems() : Collection
     {
         return self::query()
-            ->latest()
             ->published()
+            ->orderByDesc('published_at')
             ->limit(10)
             ->get();
     }
