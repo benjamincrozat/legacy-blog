@@ -150,7 +150,7 @@
 
         <div class="mt-16">
             <h3 class="font-bold text-center text-2xl/tight md:text-3xl/tight">
-                Take a quizz once you read the article!
+                Take a quizz once you read an article.
             </h3>
 
             <p class="mt-8">Description coming soon.</p>
