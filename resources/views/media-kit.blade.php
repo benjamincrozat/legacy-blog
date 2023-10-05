@@ -81,22 +81,17 @@
         <x-sponsors class="justify-center" />
     </x-section>
 
-    <div class="mt-24 bg-gradient-to-r from-gray-200/[.35] to-gray-200/[.15] md:mt-32">
-        <div class="container lg:max-w-screen-md">
-            <div class="py-8 md:flex md:items-center md:gap-8">
-                <img loading="lazy" src="{{ Vite::asset('resources/img/sebastian.jpg') }}" width="96" height="96" class="flex-shrink-0 aspect-square w-[96px] order-2 h-[96px] rounded-full mx-auto" alt="Sebastian Schlein" />
+    <x-testimonial
+        :img-url="Vite::asset('resources/img/sebastian.jpg')"
+        img-alt="Sebastian Schlein"
+        author-name="Sebastien Schlein"
+    >
+        “Benjamin is overtaking us on some Google search results, so I'm jumping on board before he raises his prices.”
 
-                <blockquote class="order-1 mt-6 text-xl md:mt-0">
-                    “Benjamin is overtaking us on some Google search results, so I'm jumping on board before he raises his prices.”
-
-                    <cite class="block mt-8 text-gray-500">
-                        Sebastian Schlein<br />
-                        Co-founder of <a href="https://beyondco.de" class="text-indigo-400 underline">Beyond Code</a>
-                    </cite>
-                </blockquote>
-            </div>
-        </div>
-    </div>
+        <x-slot:author-details>
+            Co-founder of <a href="https://beyondco.de" class="text-indigo-400 underline">Beyond Code</a>
+        </x-slot:author-details>
+    </x-testimonial>
 
     <x-section class="container mt-24 md:mt-32">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
