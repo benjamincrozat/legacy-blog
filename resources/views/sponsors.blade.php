@@ -196,7 +196,7 @@
         </div>
 
         <p class="mt-8 font-normal text-center">
-            Demigod isn't enough? <a wire:navigate href="{{ route('media-kit') }}" class="font-medium underline">Check out what my offer for businesses.</a>
+            Demigod isn't enough? <a wire:navigate href="{{ route('media-kit') }}" class="font-medium underline">Check out what I offer for businesses.</a>
         </p>
     </x-section>
 
