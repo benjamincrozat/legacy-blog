@@ -26,6 +26,19 @@
         <x-sponsors class="justify-center" />
     </x-section>
 
+    <x-testimonial
+        :img-url="Vite::asset('resources/img/sebastian.jpg')"
+        img-alt="Sebastian Schlein"
+        author-name="Sebastien Schlein"
+        class="mt-8 md:mt-16"
+    >
+        “Benjamin is overtaking us on some Google search results, so I'm jumping on board before he raises his prices.”
+
+        <x-slot:author-details>
+            Co-founder of <a href="https://beyondco.de" class="text-indigo-400 underline">Beyond Code</a>
+        </x-slot:author-details>
+    </x-testimonial>
+
     <x-section class="container mt-24 md:mt-32">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
             I'm already in motion
