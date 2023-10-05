@@ -110,6 +110,53 @@
         }
     </script>
 
+    <x-section class="container mt-24 lg:max-w-screen-md md:mt-32">
+        <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
+            Here's my roadmap<br />
+            to make this blog even better
+        </x-slot:title>
+
+        <div class="mt-16">
+            <h3 class="font-bold text-center text-2xl/tight md:text-3xl/tight">
+                Fresh job offers
+            </h3>
+
+            <p class="mt-8">Description coming soon.</p>
+        </div>
+
+        <div class="mt-16">
+            <h3 class="font-bold text-center text-2xl/tight md:text-3xl/tight">
+                Ask questions on articles
+            </h3>
+
+            <p class="mt-8">Description coming soon.</p>
+        </div>
+
+        <div class="mt-16">
+            <h3 class="font-bold text-center text-2xl/tight md:text-3xl/tight">
+                Share your content to improve your reach
+            </h3>
+
+            <p class="mt-8">Description coming soon.</p>
+        </div>
+
+        <div class="mt-16">
+            <h3 class="font-bold text-center text-2xl/tight md:text-3xl/tight">
+                Ask questions on articles
+            </h3>
+
+            <p class="mt-8">Description coming soon.</p>
+        </div>
+
+        <div class="mt-16">
+            <h3 class="font-bold text-center text-2xl/tight md:text-3xl/tight">
+                Did you understand this article? Take a quizz!
+            </h3>
+
+            <p class="mt-8">Description coming soon.</p>
+        </div>
+    </x-section>
+
     <x-section id="tiers" class="container mt-32 mb-16">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
             Convinced? Choose your tier!
