@@ -14,6 +14,11 @@
         </span>
     </h1>
 
+    <h2 class="mt-4 text-center text-xl/tight md:text-2xl/tight lg:text-3xl/tight">
+        My goal is to be in every Laravel developer's Google search.<br />
+        This requires to write <strong class="font-medium underline">a lot</strong> of content.
+    </h2>
+
     <x-section class="container mt-24 md:mt-32">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
             These companies are helping me
@@ -25,19 +30,6 @@
 
         <x-sponsors class="justify-center" />
     </x-section>
-
-    <x-testimonial
-        :img-url="Vite::asset('resources/img/sebastian.jpg')"
-        img-alt="Sebastian Schlein"
-        author-name="Sebastien Schlein"
-        class="mt-8 md:mt-16"
-    >
-        “Benjamin is overtaking us on some Google search results, so I'm jumping on board before he raises his prices.”
-
-        <x-slot:author-details>
-            Co-founder of <a href="https://beyondco.de" class="text-indigo-400 underline">Beyond Code</a>
-        </x-slot:author-details>
-    </x-testimonial>
 
     <x-section class="container mt-24 md:mt-32">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
@@ -125,8 +117,12 @@
 
     <x-section class="container mt-24 lg:max-w-screen-md md:mt-32">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
-            Here's my roadmap<br />
-            to make this blog even better
+            <x-icon-roadmap class="h-16 mx-auto" />
+
+            <div class="mt-2">
+                Here's my roadmap<br />
+                to make this blog even better
+            </div>
         </x-slot:title>
 
         <div class="mt-16">
@@ -134,7 +130,7 @@
                 Fresh job offers
             </h3>
 
-            <p class="mt-8">Description coming soon.</p>
+            <p class="mt-8 text-xl text-center">Description coming soon.</p>
         </div>
 
         <div class="mt-16">
@@ -142,7 +138,7 @@
                 Ask questions on articles
             </h3>
 
-            <p class="mt-8">Description coming soon.</p>
+            <p class="mt-8 text-xl text-center">Description coming soon.</p>
         </div>
 
         <div class="mt-16">
@@ -150,7 +146,7 @@
                 Share your content to improve your reach
             </h3>
 
-            <p class="mt-8">Description coming soon.</p>
+            <p class="mt-8 text-xl text-center">Description coming soon.</p>
         </div>
 
         <div class="mt-16">
@@ -158,7 +154,7 @@
                 Ask questions on articles
             </h3>
 
-            <p class="mt-8">Description coming soon.</p>
+            <p class="mt-8 text-xl text-center">Description coming soon.</p>
         </div>
 
         <div class="mt-16">
@@ -166,7 +162,7 @@
                 Take a quizz once you read an article.
             </h3>
 
-            <p class="mt-8">Description coming soon.</p>
+            <p class="mt-8 text-xl text-center">Description coming soon.</p>
         </div>
     </x-section>
 
@@ -176,17 +172,17 @@
         </x-slot:title>
 
         <div class="flex flex-wrap gap-4 mt-16">
-            <div class="flex flex-col flex-1 p-4 border rounded-lg md:p-6">
+            <div class="flex flex-col flex-1 p-4 border rounded-lg">
                 <div class="text-center">
                     <x-icon-good-samaritan class="h-16 mx-auto" />
                     <p class="mt-5 text-xl">Good samaritan</p>
-                    <p class="text-3xl font-medium">$5/month</p>
+                    <p class="text-3xl font-medium">$1/month</p>
                 </div>
 
                 <ul class="flex-grow mt-4">
                     <li class="flex items-center gap-2">
                         <x-heroicon-o-check class="flex-shrink-0 h-4" />
-                        <span>You receive my external gratitude!</span>
+                        <span>You receive my eternal gratitude!</span>
                     </li>
                 </ul>
 
@@ -202,13 +198,13 @@
                         <span class="inline-block mt-5 text-transparent bg-gradient-to-r from-blue-500 to-blue-400 bg-clip-text">Superhero</span>
                     </p>
 
-                    <p class="text-3xl font-medium">$10/month</p>
+                    <p class="text-3xl font-medium">$5/month</p>
                 </div>
 
                 <ul class="flex-grow mt-4">
                     <li class="flex items-center gap-2">
                         <x-heroicon-o-check class="flex-shrink-0 h-4" />
-                        <span>You receive my external gratitude!</span>
+                        <span>You receive my eternal gratitude!</span>
                     </li>
 
                     <li class="flex items-center gap-2 mt-2 font-bold text-blue-400">
@@ -229,13 +225,13 @@
                         <span class="inline-block mt-5 text-transparent bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text">Demigod</span>
                     </p>
 
-                    <p class="text-3xl font-medium">$20/month</p>
+                    <p class="text-3xl font-medium">$10/month</p>
                 </div>
 
                 <ul class="flex-grow mt-4">
                     <li class="flex items-center gap-2">
                         <x-heroicon-o-check class="flex-shrink-0 h-4" />
-                        <span>You receive my external gratitude!</span>
+                        <span>You receive my eternal gratitude!</span>
                     </li>
 
                     <li class="flex items-center gap-2 mt-2">
