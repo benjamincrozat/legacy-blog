@@ -125,30 +125,17 @@
             </div>
         </x-slot:title>
 
+        <p class="mt-8 text-xl text-center">
+            Not only I need to constantly write new content, but I want to build a community.<br />
+            This requires some development work. Take a look at the timeline.
+        </p>
+
         <div class="mt-16">
             <h3 class="font-bold text-2xl/tight md:text-3xl/tight">
                 <x-icon-suitcase class="h-16" />
 
                 <div class="mt-4">
-                    Fresh job offers
-                </div>
-            </h3>
-
-            <div class="flex items-start gap-16 mt-6">
-                <div class="flex-grow text-xl">
-                    <p>Commodo et minim non elit ullamco quis ut consequat qui consectetur non. Amet sint quis sint ullamco mollit sit eiusmod anim officia duis. Est ex consequat ullamco consectetur sint. Consequat quis consectetur dolore ut deserunt enim dolore elit ut irure.</p>
-                </div>
-
-                <div class="bg-gray-200 h-[240px] aspect-square"></div>
-            </div>
-        </div>
-
-        <div class="mt-16">
-            <h3 class="font-bold text-2xl/tight md:text-3xl/tight">
-                <x-icon-conversation class="h-16" />
-
-                <div class="mt-2">
-                    Ask questions on articles
+                    Q4 2023: Fresh job offers
                 </div>
             </h3>
 
@@ -166,8 +153,26 @@
                 <x-icon-sharing class="h-16" />
 
                 <div class="mt-4">
-                    Share your content for free.<br />
+                    Q1 2024: Share your content for free.<br />
                     Reach more people.
+                </div>
+            </h3>
+
+            <div class="flex items-start gap-16 mt-6">
+                <div class="flex-grow text-xl">
+                    <p>Commodo et minim non elit ullamco quis ut consequat qui consectetur non. Amet sint quis sint ullamco mollit sit eiusmod anim officia duis. Est ex consequat ullamco consectetur sint. Consequat quis consectetur dolore ut deserunt enim dolore elit ut irure.</p>
+                </div>
+
+                <div class="bg-gray-200 h-[240px] aspect-square"></div>
+            </div>
+        </div>
+
+        <div class="mt-16">
+            <h3 class="font-bold text-2xl/tight md:text-3xl/tight">
+                <x-icon-conversation class="h-16" />
+
+                <div class="mt-2">
+                    Q2 2024: Ask questions on articles
                 </div>
             </h3>
 
@@ -185,7 +190,7 @@
                 <x-icon-qa class="h-16" />
 
                 <div class="mt-4">
-                    Take a quizz once you read an article.
+                    Q3 2024: Take a quizz once you read an article.
                 </div>
             </h3>
 
