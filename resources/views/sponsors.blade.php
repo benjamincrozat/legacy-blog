@@ -15,7 +15,7 @@
     </h1>
 
     <h2 class="mt-4 text-center text-xl/tight md:text-2xl/tight lg:text-3xl/tight">
-        My goal is to be in every Laravel developer's Google search.<br />
+        My goal is to be in everyone's Google search.<br />
         This requires to write <strong class="font-medium underline">a lot</strong> of content.
     </h2>
 
