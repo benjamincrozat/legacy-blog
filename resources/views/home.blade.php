@@ -26,19 +26,19 @@
                     x-intersect="animate = true"
                 />
 
-                <x-icon-alpine-js
+                <x-icon-alpinejs
                     class="h-6 transition-all duration-500 delay-150 scale-75 opacity-0 md:h-8"
                     x-bind:class="{ '!scale-100 opacity-100': animate }"
                     x-intersect="animate = true"
                 />
 
-                <x-icon-tailwindcss
+                <x-icon-tailwind-css
                     class="h-8 transition-all duration-500 delay-200 scale-75 opacity-0 md:h-12"
                     x-bind:class="{ '!scale-100 opacity-100': animate }"
                     x-intersect="animate = true"
                 />
 
-                <x-icon-vue-js
+                <x-icon-vuejs
                     class="transition-all duration-500 delay-300 scale-75 opacity-0 h-9 md:h-11"
                     x-bind:class="{ '!scale-100 opacity-100': animate }"
                     x-intersect="animate = true"
