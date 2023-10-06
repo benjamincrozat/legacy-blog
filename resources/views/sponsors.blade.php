@@ -21,18 +21,6 @@
 
     <x-section class="container mt-24 md:mt-32">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
-            These companies are helping me
-        </x-slot:title>
-
-        <p class="text-xl text-center mt-7">
-            Their participation propulsed my MRR (Monthly Recurring Revenue) to <strong class="font-bold">$194.50</strong> already!
-        </p>
-
-        <x-sponsors class="justify-center" />
-    </x-section>
-
-    <x-section class="container mt-24 md:mt-32">
-        <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
             I'm already in motion
         </x-slot:title>
 
@@ -115,6 +103,18 @@
         }
     </script>
 
+    <x-section class="container mt-24 md:mt-32">
+        <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
+            These companies are helping me
+        </x-slot:title>
+
+        <p class="text-xl text-center mt-7">
+            Their participation propulsed my MRR (Monthly Recurring Revenue) to <strong class="font-bold">$194.50</strong> already!
+        </p>
+
+        <x-sponsors class="justify-center" />
+    </x-section>
+
     <x-section class="container mt-24 xl:max-w-screen-lg md:mt-32">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
             <x-icon-roadmap class="h-16 mx-auto" />
@@ -139,12 +139,14 @@
                 </div>
             </h3>
 
-            <div class="flex items-start gap-16 mt-6">
+            <div class="flex flex-wrap items-start gap-16 mt-6 md:flex-nowrap">
                 <div class="flex-grow text-xl">
                     <p>Commodo et minim non elit ullamco quis ut consequat qui consectetur non. Amet sint quis sint ullamco mollit sit eiusmod anim officia duis. Est ex consequat ullamco consectetur sint. Consequat quis consectetur dolore ut deserunt enim dolore elit ut irure.</p>
                 </div>
 
-                <div class="bg-gray-200 h-[240px] aspect-square"></div>
+                <div class="bg-gray-200 grid place-items-center text-gray-600 md:h-[240px] aspect-square w-full md:w-auto">
+                    Soon…
+                </div>
             </div>
         </div>
 
@@ -158,12 +160,14 @@
                 </div>
             </h3>
 
-            <div class="flex items-start gap-16 mt-6">
+            <div class="flex flex-wrap items-start gap-16 mt-6 md:flex-nowrap">
                 <div class="flex-grow text-xl">
                     <p>Commodo et minim non elit ullamco quis ut consequat qui consectetur non. Amet sint quis sint ullamco mollit sit eiusmod anim officia duis. Est ex consequat ullamco consectetur sint. Consequat quis consectetur dolore ut deserunt enim dolore elit ut irure.</p>
                 </div>
 
-                <div class="bg-gray-200 h-[240px] aspect-square"></div>
+                <div class="bg-gray-200 grid place-items-center text-gray-600 md:h-[240px] aspect-square w-full md:w-auto">
+                    Soon…
+                </div>
             </div>
         </div>
 
@@ -176,12 +180,14 @@
                 </div>
             </h3>
 
-            <div class="flex items-start gap-16 mt-6">
+            <div class="flex flex-wrap items-start gap-16 mt-6 md:flex-nowrap">
                 <div class="flex-grow text-xl">
                     <p>Commodo et minim non elit ullamco quis ut consequat qui consectetur non. Amet sint quis sint ullamco mollit sit eiusmod anim officia duis. Est ex consequat ullamco consectetur sint. Consequat quis consectetur dolore ut deserunt enim dolore elit ut irure.</p>
                 </div>
 
-                <div class="bg-gray-200 h-[240px] aspect-square"></div>
+                <div class="bg-gray-200 grid place-items-center text-gray-600 md:h-[240px] aspect-square w-full md:w-auto">
+                    Soon…
+                </div>
             </div>
         </div>
 
@@ -194,12 +200,14 @@
                 </div>
             </h3>
 
-            <div class="flex items-start gap-16 mt-6">
+            <div class="flex flex-wrap items-start gap-16 mt-6 md:flex-nowrap">
                 <div class="flex-grow text-xl">
                     <p>Commodo et minim non elit ullamco quis ut consequat qui consectetur non. Amet sint quis sint ullamco mollit sit eiusmod anim officia duis. Est ex consequat ullamco consectetur sint. Consequat quis consectetur dolore ut deserunt enim dolore elit ut irure.</p>
                 </div>
 
-                <div class="bg-gray-200 h-[240px] aspect-square"></div>
+                <div class="bg-gray-200 grid place-items-center text-gray-600 md:h-[240px] aspect-square w-full md:w-auto">
+                    Soon…
+                </div>
             </div>
         </div>
     </x-section>
@@ -210,7 +218,7 @@
         </x-slot:title>
 
         <div class="flex flex-wrap gap-4 mt-16">
-            <div class="flex flex-col flex-1 p-4 border rounded-lg">
+            <div class="flex flex-col w-full p-4 border rounded-lg md:w-auto md:flex-1">
                 <div class="text-center">
                     <x-icon-good-samaritan class="h-16 mx-auto" />
                     <p class="mt-5 text-xl">Good samaritan</p>
@@ -229,7 +237,7 @@
                 </a>
             </div>
 
-            <div class="flex flex-col flex-1 p-4 border border-blue-400 rounded-lg md:p-6">
+            <div class="flex flex-col w-full p-4 border border-blue-400 rounded-lg md:w-auto md:flex-1 md:p-6">
                 <div class="text-center">
                     <p class="text-xl font-normal">
                         <x-icon-superhero class="h-16 mx-auto" />
@@ -256,7 +264,7 @@
                 </a>
             </div>
 
-            <div class="flex flex-col flex-1 p-4 border border-orange-400 rounded-lg md:p-6">
+            <div class="flex flex-col w-full p-4 border border-orange-400 rounded-lg md:w-auto md:flex-1 md:p-6">
                 <div class="text-center">
                     <p class="text-xl font-normal">
                         <x-icon-demigod class="h-16 mx-auto" />
