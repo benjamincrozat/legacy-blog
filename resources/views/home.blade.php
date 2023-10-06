@@ -1,5 +1,6 @@
 <x-app
     title="Learn about Laravel and its ecosystem."
+    :image="Vite::asset('resources/img/og-image-homepage.jpg')"
 >
     <x-section class="mt-16 text-center">
         <x-slot:title tag="h1" class="container font-bold text-center text-3xl/none md:text-4xl/none lg:text-5xl/none">
