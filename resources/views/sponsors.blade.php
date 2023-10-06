@@ -115,7 +115,7 @@
         }
     </script>
 
-    <x-section class="container mt-24 lg:max-w-screen-md md:mt-32">
+    <x-section class="container mt-24 xl:max-w-screen-lg md:mt-32">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
             <x-icon-roadmap class="h-16 mx-auto" />
 
@@ -126,43 +126,76 @@
         </x-slot:title>
 
         <div class="mt-16">
-            <h3 class="font-bold text-center text-2xl/tight md:text-3xl/tight">
-                Fresh job offers
+            <h3 class="font-bold text-2xl/tight md:text-3xl/tight">
+                <x-icon-suitcase class="h-16" />
+
+                <div class="mt-4">
+                    Fresh job offers
+                </div>
             </h3>
 
-            <p class="mt-8 text-xl text-center">Description coming soon.</p>
+            <div class="flex items-start gap-16 mt-6">
+                <div class="flex-grow text-xl">
+                    <p>Commodo et minim non elit ullamco quis ut consequat qui consectetur non. Amet sint quis sint ullamco mollit sit eiusmod anim officia duis. Est ex consequat ullamco consectetur sint. Consequat quis consectetur dolore ut deserunt enim dolore elit ut irure.</p>
+                </div>
+
+                <div class="bg-gray-200 h-[240px] aspect-square"></div>
+            </div>
         </div>
 
         <div class="mt-16">
-            <h3 class="font-bold text-center text-2xl/tight md:text-3xl/tight">
-                Ask questions on articles
+            <h3 class="font-bold text-2xl/tight md:text-3xl/tight">
+                <x-icon-conversation class="h-16" />
+
+                <div class="mt-2">
+                    Ask questions on articles
+                </div>
             </h3>
 
-            <p class="mt-8 text-xl text-center">Description coming soon.</p>
+            <div class="flex items-start gap-16 mt-6">
+                <div class="flex-grow text-xl">
+                    <p>Commodo et minim non elit ullamco quis ut consequat qui consectetur non. Amet sint quis sint ullamco mollit sit eiusmod anim officia duis. Est ex consequat ullamco consectetur sint. Consequat quis consectetur dolore ut deserunt enim dolore elit ut irure.</p>
+                </div>
+
+                <div class="bg-gray-200 h-[240px] aspect-square"></div>
+            </div>
         </div>
 
         <div class="mt-16">
-            <h3 class="font-bold text-center text-2xl/tight md:text-3xl/tight">
-                Share your content to improve your reach
+            <h3 class="font-bold text-2xl/tight md:text-3xl/tight">
+                <x-icon-sharing class="h-16" />
+
+                <div class="mt-4">
+                    Share your content for free.<br />
+                    Reach more people.
+                </div>
             </h3>
 
-            <p class="mt-8 text-xl text-center">Description coming soon.</p>
+            <div class="flex items-start gap-16 mt-6">
+                <div class="flex-grow text-xl">
+                    <p>Commodo et minim non elit ullamco quis ut consequat qui consectetur non. Amet sint quis sint ullamco mollit sit eiusmod anim officia duis. Est ex consequat ullamco consectetur sint. Consequat quis consectetur dolore ut deserunt enim dolore elit ut irure.</p>
+                </div>
+
+                <div class="bg-gray-200 h-[240px] aspect-square"></div>
+            </div>
         </div>
 
         <div class="mt-16">
-            <h3 class="font-bold text-center text-2xl/tight md:text-3xl/tight">
-                Ask questions on articles
+            <h3 class="font-bold text-2xl/tight md:text-3xl/tight">
+                <x-icon-qa class="h-16" />
+
+                <div class="mt-4">
+                    Take a quizz once you read an article.
+                </div>
             </h3>
 
-            <p class="mt-8 text-xl text-center">Description coming soon.</p>
-        </div>
+            <div class="flex items-start gap-16 mt-6">
+                <div class="flex-grow text-xl">
+                    <p>Commodo et minim non elit ullamco quis ut consequat qui consectetur non. Amet sint quis sint ullamco mollit sit eiusmod anim officia duis. Est ex consequat ullamco consectetur sint. Consequat quis consectetur dolore ut deserunt enim dolore elit ut irure.</p>
+                </div>
 
-        <div class="mt-16">
-            <h3 class="font-bold text-center text-2xl/tight md:text-3xl/tight">
-                Take a quizz once you read an article.
-            </h3>
-
-            <p class="mt-8 text-xl text-center">Description coming soon.</p>
+                <div class="bg-gray-200 h-[240px] aspect-square"></div>
+            </div>
         </div>
     </x-section>
 
