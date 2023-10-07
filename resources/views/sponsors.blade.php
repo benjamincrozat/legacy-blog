@@ -1,5 +1,6 @@
 <x-app
-    title="Invest in the best resources for Laravel developers"
+    title="Support a growing resource for Laravel developers"
+    description="My goal is to be in everyone's Google search. See how you can contribute."
     :hide-navigation="true"
     :hide-footer="true"
 >
@@ -17,7 +18,7 @@
 
         <h2 class="mt-4 text-center text-xl/tight md:text-2xl/tight lg:text-3xl/tight">
             My goal is to be in everyone's Google search.<br class="hidden sm:inline" />
-            This requires <strong class="font-medium underline">a lot</strong> of work.
+            See how <strong class="font-medium underline">you</strong> can contribute.
         </h2>
 
         <ul class="grid grid-cols-2 gap-4 mt-16 md:grid-cols-4">
