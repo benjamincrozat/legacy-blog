@@ -16,7 +16,6 @@ class PostFactory extends Factory
     {
         return [
             'user_id' => User::factory(),
-            'image' => fake()->imageUrl(),
             'title' => fake()->sentence(),
             'slug' => fn ($attributes) : string => Str::slug($attributes['title']),
             'content' => File::get(resource_path('markdown/benchmark.md')),
