@@ -7,59 +7,61 @@
         <x-navigation class="mt-4" />
     @endempty
 
-    <h1 class="!text-3xl sm:!text-4xl md:!text-5xl font-bold text-center mt-16">
-        <span class="text-transparent bg-gradient-to-r from-blue-500 to-blue-400 bg-clip-text">
-            Invest in the best resource<br />
-            for Laravel developers
-        </span>
-    </h1>
+    <div class="container xl:max-w-screen-lg">
+        <h1 class="!text-4xl/none lg:!text-5xl/none font-bold text-center mt-16">
+            <span class="text-transparent bg-gradient-to-r from-blue-500 to-blue-400 bg-clip-text">
+                Invest in the best resource<br class="hidden sm:inline" />
+                for Laravel developers
+            </span>
+        </h1>
 
-    <h2 class="mt-4 text-center text-xl/tight md:text-2xl/tight lg:text-3xl/tight">
-        My goal is to be in everyone's Google search.<br />
-        This requires to write <strong class="font-medium underline">a lot</strong> of content.
-    </h2>
+        <h2 class="mt-4 text-center text-xl/tight md:text-2xl/tight lg:text-3xl/tight">
+            My goal is to be in everyone's Google search.<br class="hidden sm:inline" />
+            This requires to write <strong class="font-medium underline">a lot</strong> of content.
+        </h2>
 
-    <ul class="container flex items-start justify-center gap-4 mt-16 xl:max-w-screen-lg">
-        <li class="flex-1">
-            <a href="#numbers" class="block p-4 text-center border rounded md:p-6">
-                <x-icon-trend class="h-16 mx-auto" />
+        <ul class="grid grid-cols-2 gap-4 mt-16 md:grid-cols-4">
+            <li class="col-span-1">
+                <a href="#numbers" class="block h-full p-4 text-center border rounded md:p-6">
+                    <x-icon-trend class="h-16 mx-auto" />
 
-                <span class="block mt-4 text-xl font-bold">
-                    The numbers
-                </span>
-            </a>
-        </li>
+                    <span class="block mt-4 font-bold sm:text-lg md:text-xl">
+                        The numbers
+                    </span>
+                </a>
+            </li>
 
-        <li class="flex-1">
-            <a href="#roadmap" class="block p-4 text-center border rounded md:p-6">
-                <x-icon-roadmap class="h-16 mx-auto" />
+            <li class="col-span-1">
+                <a href="#roadmap" class="block h-full p-4 text-center border rounded md:p-6">
+                    <x-icon-roadmap class="h-16 mx-auto" />
 
-                <span class="block mt-4 text-xl font-bold">
-                    The roadmap
-                </span>
-            </a>
-        </li>
+                    <span class="block mt-4 font-bold sm:text-lg md:text-xl">
+                        The roadmap
+                    </span>
+                </a>
+            </li>
 
-        <li class="flex-1">
-            <a href="#tiers" class="block p-4 text-center border rounded md:p-6">
-                <x-icon-podium class="h-16 mx-auto" />
+            <li class="col-span-1">
+                <a href="#tiers" class="block h-full p-4 text-center border rounded md:p-6">
+                    <x-icon-podium class="h-16 mx-auto" />
 
-                <span class="block mt-4 text-xl font-bold">
-                    The tiers
-                </span>
-            </a>
-        </li>
+                    <span class="block mt-4 font-bold sm:text-lg md:text-xl">
+                        The tiers
+                    </span>
+                </a>
+            </li>
 
-        <li class="flex-1">
-            <a href="#about" class="block p-4 text-center border rounded md:p-6">
-                <x-icon-anonymous class="h-16 mx-auto" />
+            <li class="col-span-1">
+                <a href="#about" class="block h-full p-4 text-center border rounded md:p-6">
+                    <x-icon-anonymous class="h-16 mx-auto" />
 
-                <span class="block mt-4 text-xl font-bold">
-                    Who's asking?
-                </span>
-            </a>
-        </li>
-    </ul>
+                    <span class="block mt-4 font-bold sm:text-lg md:text-xl">
+                        Who's asking?
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
 
     <x-section id="numbers" class="container mt-24 md:mt-32 scroll-mt-4">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
