@@ -78,7 +78,7 @@ class PostResource extends Resource
             ->emptyStateActions([
                 Tables\Actions\CreateAction::make(),
             ])
-            ->defaultSort('id', 'desc');
+            ->defaultSort('published_at', 'desc');
     }
 
     public static function getFormComponents() : array
