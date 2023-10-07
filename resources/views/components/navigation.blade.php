@@ -71,7 +71,7 @@
             </x-slot:trigger>
 
             <x-menu.item href="{{ route('sponsors') }}" icon="s-heart" class="text-rose-400">
-                <strong class="text-black transition-colors group-hover:text-white">Support my efforts</strong>
+                <strong class="text-black transition-colors group-hover:text-white">Support the blog, and get your rewards!</strong>
             </x-menu.item>
 
             <x-menu.item no-wire-navigate href="/feed" icon="s-rss" class="text-orange-400">

@@ -67,7 +67,7 @@
                 <span class="mx-2">or</span>
 
                 <a wire:navigate.hover href="{{ route('sponsors') }}" class="text-xl md:text-2xl sm:text-3xl">
-                    <span class="underline decoration-1 underline-offset-2">support the blog</span>!
+                    <span class="underline decoration-1 underline-offset-2">support the blog, and get your rewards</span>!
                 </a>
             </div>
         </div>
