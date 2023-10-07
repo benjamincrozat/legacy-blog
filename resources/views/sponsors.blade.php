@@ -8,17 +8,17 @@
         <x-navigation class="mt-4" />
     @endempty
 
-    <div class="container xl:max-w-screen-lg">
-        <h1 class="!text-4xl/none lg:!text-5xl/none font-bold text-center mt-16">
-            <span class="text-transparent bg-gradient-to-r from-blue-500 to-blue-400 bg-clip-text">
-                Support a growing resource<br class="hidden sm:inline" />
-                for Laravel developers
-            </span>
+    <div class="container mt-16 xl:max-w-screen-lg">
+        <x-icon-gift class="h-24 mx-auto" />
+
+        <h1 class="!text-4xl/none mt-4 lg:!text-5xl/none font-bold text-center">
+            <span class="text-transparent bg-gradient-to-r from-blue-500 to-blue-400 bg-clip-text">Support this blog</span>, and
+            <span class="text-transparent bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text">get your rewards!</span>
         </h1>
 
         <h2 class="mt-4 text-center text-xl/tight md:text-2xl/tight lg:text-3xl/tight">
-            My goal is to be in everyone's Google search.<br class="hidden sm:inline" />
-            See how <strong class="font-medium underline">you</strong> can contribute.
+            My goal is to be in every Laravel developer's Google search.<br class="hidden sm:inline" />
+            See how <strong class="font-normal underline">you</strong> can contribute.
         </h2>
 
         <ul class="grid grid-cols-2 gap-4 mt-16 md:grid-cols-4">
@@ -47,7 +47,7 @@
                     <x-icon-podium class="h-16 mx-auto" />
 
                     <span class="block mt-4 font-bold sm:text-lg md:text-xl">
-                        The tiers
+                        Tiers and rewards
                     </span>
                 </a>
             </li>
@@ -66,7 +66,7 @@
 
     <x-section id="numbers" class="container mt-24 md:mt-32 scroll-mt-4">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
-            I'm already in motion
+            I will go even further with your support
         </x-slot:title>
 
         <div class="grid grid-cols-2 gap-16 mt-8 md:grid-cols-3">
@@ -158,7 +158,7 @@
 
     <x-section class="container mt-24 md:mt-32">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
-            These companies are helping me
+            These companies are already onboard
         </x-slot:title>
 
         <p class="text-xl text-center mt-7">
@@ -266,7 +266,7 @@
 
     <x-section id="tiers" class="container mt-32 mb-16 scroll-mt-4">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
-            Convinced? Choose your tier!
+            Choose your tier, and get your rewards!
         </x-slot:title>
 
         <div class="flex flex-wrap gap-4 mt-16">
