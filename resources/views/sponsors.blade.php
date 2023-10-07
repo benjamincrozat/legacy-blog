@@ -1,6 +1,6 @@
 <x-app
-    title="Support a growing resource for Laravel developers"
-    description="My goal is to be in everyone's Google search. See how you can contribute."
+    title="Support this blog, and get your rewards!"
+    description="My goal is to be in every Laravel developer's Google search. See how you can contribute."
     :hide-navigation="true"
     :hide-footer="true"
 >
