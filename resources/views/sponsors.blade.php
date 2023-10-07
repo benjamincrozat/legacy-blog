@@ -414,7 +414,7 @@
         </blockquote>
     </div>
 
-    <x-section id="about" class="container mt-32 mb-16 lg:max-w-screen-md">
+    <x-section id="about" class="container mt-32 mb-16 lg:max-w-screen-md scroll-mt-4">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
             Who you are sponsoring
         </x-slot:title>
