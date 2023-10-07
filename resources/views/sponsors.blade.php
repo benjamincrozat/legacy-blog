@@ -377,7 +377,7 @@
 
             <div class="flex items-center justify-between gap-8 mt-4">
                 <cite class="block not-italic text-gray-600">
-                    <a href="https://alexandergaal.at" target="_blank" rel="noopener" class="text-blue-600 underline">Alexander Gaal</a>, CEO at Gipfel Web Development
+                    <a href="https://alexandergaal.at" target="_blank" rel="noopener" class="text-blue-600 underline">Alexander Kroneis</a>, CEO at Gipfel Web Development
                 </cite>
 
                 <img src="{{ Vite::asset('resources/img/alexander.jpg') }}" alt="Alexander Gaal" class="aspect-square object-cover w-[36px] md:w-[48px] rounded-full h-[36px] md:h-[48px]" />
