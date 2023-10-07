@@ -282,6 +282,16 @@
                         <x-heroicon-o-check class="flex-shrink-0 h-4" />
                         <span>You receive my eternal gratitude!</span>
                     </li>
+
+                    <li class="flex items-center gap-2 mt-2 opacity-50">
+                        <x-heroicon-o-x-mark class="flex-shrink-0 h-4" />
+                        <del>Display your name on my homepage.</del>
+                    </li>
+
+                    <li class="flex items-center gap-2 mt-2 opacity-50">
+                        <x-heroicon-o-x-mark class="flex-shrink-0 h-4" />
+                        <del>Add a link to a non-commercial project.</del>
+                    </li>
                 </ul>
 
                 <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/eb4c5ce9-c87e-4497-ab6b-b0922654e658?discount=0" class="table px-6 py-3 mx-auto mt-8 font-normal transition-opacity duration-500 bg-gray-200 rounded hover:opacity-50">
@@ -308,6 +318,11 @@
                     <li class="flex items-center gap-2 mt-2 font-bold text-blue-400">
                         <x-heroicon-o-check class="flex-shrink-0 h-4" />
                         <span>Display your name on my homepage.</span>
+                    </li>
+
+                    <li class="flex items-center gap-2 mt-2 opacity-50">
+                        <x-heroicon-o-x-mark class="flex-shrink-0 h-4" />
+                        <del>Add a link to a non-commercial project.</del>
                     </li>
                 </ul>
 
