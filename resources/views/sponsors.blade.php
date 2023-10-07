@@ -19,7 +19,49 @@
         This requires to write <strong class="font-medium underline">a lot</strong> of content.
     </h2>
 
-    <x-section class="container mt-24 md:mt-32">
+    <ul class="container flex items-start justify-center gap-4 mt-16 xl:max-w-screen-lg">
+        <li class="flex-1">
+            <a href="#numbers" class="block p-4 text-center border rounded md:p-6">
+                <x-icon-trend class="h-16 mx-auto" />
+
+                <span class="block mt-4 text-xl font-bold">
+                    The numbers
+                </span>
+            </a>
+        </li>
+
+        <li class="flex-1">
+            <a href="#roadmap" class="block p-4 text-center border rounded md:p-6">
+                <x-icon-roadmap class="h-16 mx-auto" />
+
+                <span class="block mt-4 text-xl font-bold">
+                    The roadmap
+                </span>
+            </a>
+        </li>
+
+        <li class="flex-1">
+            <a href="#tiers" class="block p-4 text-center border rounded md:p-6">
+                <x-icon-podium class="h-16 mx-auto" />
+
+                <span class="block mt-4 text-xl font-bold">
+                    The tiers
+                </span>
+            </a>
+        </li>
+
+        <li class="flex-1">
+            <a href="#about" class="block p-4 text-center border rounded md:p-6">
+                <x-icon-anonymous class="h-16 mx-auto" />
+
+                <span class="block mt-4 text-xl font-bold">
+                    Who's asking?
+                </span>
+            </a>
+        </li>
+    </ul>
+
+    <x-section id="numbers" class="container mt-24 md:mt-32 scroll-mt-4">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
             I'm already in motion
         </x-slot:title>
@@ -115,7 +157,7 @@
         <x-sponsors class="justify-center" />
     </x-section>
 
-    <x-section class="container mt-24 xl:max-w-screen-lg md:mt-32">
+    <x-section id="roadmap" class="container mt-24 scroll-mt-4 xl:max-w-screen-lg md:mt-32">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
             <x-icon-roadmap class="h-16 mx-auto" />
 
@@ -211,7 +253,7 @@
         </div>
     </x-section>
 
-    <x-section id="tiers" class="container mt-32 mb-16">
+    <x-section id="tiers" class="container mt-32 mb-16 scroll-mt-4">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
             Convinced? Choose your tier!
         </x-slot:title>
@@ -231,7 +273,7 @@
                     </li>
                 </ul>
 
-                <a href="#" class="table px-6 py-3 mx-auto mt-8 font-normal transition-opacity duration-500 bg-gray-200 rounded hover:opacity-50">
+                <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/eb4c5ce9-c87e-4497-ab6b-b0922654e658?discount=0" class="table px-6 py-3 mx-auto mt-8 font-normal transition-opacity duration-500 bg-gray-200 rounded hover:opacity-50">
                     Get started
                 </a>
             </div>
@@ -258,7 +300,7 @@
                     </li>
                 </ul>
 
-                <a href="#" class="table px-6 py-3 mx-auto mt-8 font-bold text-white transition-opacity duration-500 bg-blue-400 rounded hover:opacity-50">
+                <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/6a0e4856-0fc4-4d47-9ca5-630dfd9ba82e?discount=0" class="table px-6 py-3 mx-auto mt-8 font-bold text-white transition-opacity duration-500 bg-blue-400 rounded hover:opacity-50">
                     Get started
                 </a>
             </div>
@@ -290,7 +332,7 @@
                     </li>
                 </ul>
 
-                <a href="#" class="table px-6 py-3 mx-auto mt-8 font-bold text-white transition-opacity duration-500 bg-orange-400 rounded hover:opacity-50">
+                <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/b95f140c-c882-4d81-b285-90a9b51e8228?discount=0" class="table px-6 py-3 mx-auto mt-8 font-bold text-white transition-opacity duration-500 bg-orange-400 rounded hover:opacity-50">
                     Get started
                 </a>
             </div>
