@@ -126,7 +126,7 @@
         </x-slot:title>
 
         <p class="mt-8 text-xl text-center">
-            Not only I need to constantly write new content, but I want to build a community.<br />
+            Not only I need to constantly write new free content, but I want to build a community.<br />
             This requires some development work. Take a look at the timeline.
         </p>
 
@@ -141,7 +141,7 @@
 
             <div class="flex flex-wrap items-start gap-16 mt-6 md:flex-nowrap">
                 <div class="flex-grow text-xl">
-                    <p>Commodo et minim non elit ullamco quis ut consequat qui consectetur non. Amet sint quis sint ullamco mollit sit eiusmod anim officia duis. Est ex consequat ullamco consectetur sint. Consequat quis consectetur dolore ut deserunt enim dolore elit ut irure.</p>
+                    <p>Successful companies use the web to make money, which makes developers incredible assets. I will allow companies to promote their job offers, which will help thousands of developers browsing my blog find their dream job.</p>
                 </div>
 
                 <div class="bg-gray-200 grid place-items-center text-gray-600 md:h-[240px] aspect-square w-full md:w-auto">
@@ -155,14 +155,13 @@
                 <x-icon-sharing class="h-16" />
 
                 <div class="mt-4">
-                    Q1 2024: Share your content for free.<br />
-                    Reach more people.
+                    Q1 2024: Share your content
                 </div>
             </h3>
 
             <div class="flex flex-wrap items-start gap-16 mt-6 md:flex-nowrap">
                 <div class="flex-grow text-xl">
-                    <p>Commodo et minim non elit ullamco quis ut consequat qui consectetur non. Amet sint quis sint ullamco mollit sit eiusmod anim officia duis. Est ex consequat ullamco consectetur sint. Consequat quis consectetur dolore ut deserunt enim dolore elit ut irure.</p>
+                    <p>Some developers are also proficient writers. I want to help them reach more people. I currently share articles from the community, and I want to allow anyone to do the same.</p>
                 </div>
 
                 <div class="bg-gray-200 grid place-items-center text-gray-600 md:h-[240px] aspect-square w-full md:w-auto">
@@ -182,7 +181,7 @@
 
             <div class="flex flex-wrap items-start gap-16 mt-6 md:flex-nowrap">
                 <div class="flex-grow text-xl">
-                    <p>Commodo et minim non elit ullamco quis ut consequat qui consectetur non. Amet sint quis sint ullamco mollit sit eiusmod anim officia duis. Est ex consequat ullamco consectetur sint. Consequat quis consectetur dolore ut deserunt enim dolore elit ut irure.</p>
+                    <p>Help from other community members is crucial to level up our skills. Being able to comment on articles will be extremely valuable for developers.</p>
                 </div>
 
                 <div class="bg-gray-200 grid place-items-center text-gray-600 md:h-[240px] aspect-square w-full md:w-auto">
@@ -202,7 +201,7 @@
 
             <div class="flex flex-wrap items-start gap-16 mt-6 md:flex-nowrap">
                 <div class="flex-grow text-xl">
-                    <p>Commodo et minim non elit ullamco quis ut consequat qui consectetur non. Amet sint quis sint ullamco mollit sit eiusmod anim officia duis. Est ex consequat ullamco consectetur sint. Consequat quis consectetur dolore ut deserunt enim dolore elit ut irure.</p>
+                    <p>Learning should be fun and I want my blog to be the best resource of the web for web developers to sharpen their skills. What better way to confirm your knowledge than answering questions?</p>
                 </div>
 
                 <div class="bg-gray-200 grid place-items-center text-gray-600 md:h-[240px] aspect-square w-full md:w-auto">
