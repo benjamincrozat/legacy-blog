@@ -354,7 +354,7 @@
         </p>
     </x-section>
 
-    <div class="container grid gap-4 mt-4 md:grid-cols-3">
+    <div class="container grid gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-3">
         <blockquote class="flex flex-col p-6 rounded-lg from-gray-200/30 bg-gradient-to-r to-gray-200/20">
             <p class="flex-grow">
                 Benjamin is an inspirational content creator. I deeply appreciate his efforts for the Laravel community.
