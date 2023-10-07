@@ -5,10 +5,8 @@ $class = 'flex items-center w-full gap-4 p-4 text-left transition-colors duratio
 <li>
     @if ($href = $attributes->get('href'))
         <a {{ $attributes->merge(compact('class'))->when(
-            empty($noWireNavigate) && Str::startsWith($href, '/') || Str::startsWith($href, config('app.url')),
-            function ($attributes) {
-                $attributes->merge(['wire:navigate.hover' => true]);
-            }
+            empty($noWireNavigate) && (Str::startsWith($href, '/') || Str::startsWith($href, config('app.url'))),
+            fn ($attributes) => $attributes->merge(['wire:navigate.hover' => true])
         ) }}>
             @if (! empty($icon))
                 <x-dynamic-component :component="'heroicon-' . $icon" class="flex-shrink-0 w-5 h-5 translate-y-[.5px]" />
