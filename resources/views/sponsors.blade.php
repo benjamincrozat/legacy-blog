@@ -375,8 +375,8 @@
                 Benjamin is an inspirational content creator. I deeply appreciate his efforts for the Laravel community.
             </p>
 
-            <div class="flex items-center justify-between gap-4 mt-4">
-                <cite class="block text-sm not-italic text-gray-600">
+            <div class="flex items-center justify-between gap-8 mt-4">
+                <cite class="block not-italic text-gray-600">
                     <a href="https://alexandergaal.at" target="_blank" rel="noopener" class="text-blue-600 underline">Alexander Gaal</a>, CEO at Gipfel Web Development
                 </cite>
 
@@ -389,8 +389,8 @@
                 Benjamin is one of those few people with deep knowledge in writing, SEO, and Laravel best practices. He's the right person to get this project to the moon.
             </p>
 
-            <div class="flex items-center justify-between gap-4 mt-4">
-                <cite class="block text-sm not-italic text-gray-600">
+            <div class="flex items-center justify-between gap-8 mt-4">
+                <cite class="block not-italic text-gray-600">
                     <a href="https://tabacitu.ro" target="_blank" rel="noopener" class="text-blue-600 underline">Cristian Tăbăcitu</a>, creator of Backpack for Laravel
                 </cite>
 
@@ -404,8 +404,8 @@
                 A real resource for all developers, from beginners to seniors!
             <p>
 
-            <div class="flex items-center justify-between gap-4 mt-4">
-                <cite class="block text-sm not-italic text-gray-600">
+            <div class="flex items-center justify-between gap-8 mt-4">
+                <cite class="block not-italic text-gray-600">
                     <a href="https://wendelladriel.com" target="_blank" rel="noopener" class="text-blue-600 underline">Wendell Adriel</a>, creator of Lift and Validated DTO for Laravel
                 </cite>
 
