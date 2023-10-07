@@ -7,7 +7,14 @@
                 {{ $slot }}
 
                 <cite class="block mt-8 text-gray-500">
-                    {{ $authorName }}<br />
+                    @if (empty($authorUrl))
+                        {{ $authorName }}
+                    @else
+                        <a href="{{ $authorUrl }}" class="text-blue-600 underline">{{ $authorName }}</a>
+                    @endif
+
+                    <br />
+
                     {!! $authorDetails !!}
                 </cite>
             </blockquote>

@@ -354,18 +354,50 @@
         </p>
     </x-section>
 
-    <x-testimonial
-        :img-url="Vite::asset('resources/img/cristian.jpg')"
-        img-alt="Cristian Tăbăcitu"
-        author-name="Cristian Tăbăcitu"
-        class="mt-16"
-    >
-        “Benjamin is one of those few people with deep knowledge in writing, SEO, and Laravel best practices. He's the right person to get this project to the moon.”
+    <div class="container grid gap-4 mt-4 md:grid-cols-3">
+        <blockquote class="flex flex-col p-6 rounded-lg from-gray-200/30 bg-gradient-to-r to-gray-200/20">
+            <p class="flex-grow">
+                Benjamin is an inspirational content creator. I deeply appreciate his efforts for the Laravel community.
+            </p>
 
-        <x-slot:author-details>
-            Creator of Backpack for Laravel
-        </x-slot:author-details>
-    </x-testimonial>
+            <div class="flex items-center justify-between gap-4 mt-4">
+                <cite class="block text-sm not-italic text-gray-600">
+                    <a href="https://alexandergaal.at" target="_blank" rel="noopener" class="text-blue-600 underline">Alexander Gaal</a>, CEO at Gipfel Web Development
+                </cite>
+
+                <img src="{{ Vite::asset('resources/img/alexander.jpg') }}" alt="Alexander Gaal" class="aspect-square object-cover w-[36px] md:w-[48px] rounded-full h-[36px] md:h-[48px]" />
+            </div>
+        </blockquote>
+
+        <blockquote class="flex flex-col p-6 rounded-lg from-gray-200/30 bg-gradient-to-r to-gray-200/20">
+            <p class="flex-grow">
+                Benjamin is one of those few people with deep knowledge in writing, SEO, and Laravel best practices. He's the right person to get this project to the moon.
+            </p>
+
+            <div class="flex items-center justify-between gap-4 mt-4">
+                <cite class="block text-sm not-italic text-gray-600">
+                    <a href="https://tabacitu.ro" target="_blank" rel="noopener" class="text-blue-600 underline">Cristian Tăbăcitu</a>, creator of Backpack for Laravel
+                </cite>
+
+                <img src="{{ Vite::asset('resources/img/cristian.jpg') }}" alt="Cristian Tăbăcitu" class="aspect-square object-cover w-[36px] md:w-[48px] rounded-full h-[36px] md:h-[48px]" />
+            </div>
+        </blockquote>
+
+        <blockquote class="flex flex-col p-6 rounded-lg from-gray-200/30 bg-gradient-to-r to-gray-200/20">
+            <p class="flex-grow">
+                Benjamin's writing style is unique, providing clean and minimal articles, even for complex subjects.<br />
+                A real resource for all developers, from beginners to seniors!
+            <p>
+
+            <div class="flex items-center justify-between gap-4 mt-4">
+                <cite class="block text-sm not-italic text-gray-600">
+                    <a href="https://wendelladriel.com" target="_blank" rel="noopener" class="text-blue-600 underline">Wendell Adriel</a>, creator of Lift and Validated DTO for Laravel
+                </cite>
+
+                <img src="{{ Vite::asset('resources/img/wendell.jpg') }}" alt="Wendell Adriel" class="aspect-square object-cover w-[36px] md:w-[48px] rounded-full h-[36px] md:h-[48px]" />
+            </div>
+        </blockquote>
+    </div>
 
     <x-section id="about" class="container mt-32 mb-16 lg:max-w-screen-md">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
