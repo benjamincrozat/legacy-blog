@@ -10,14 +10,14 @@
     <div class="container xl:max-w-screen-lg">
         <h1 class="!text-4xl/none lg:!text-5xl/none font-bold text-center mt-16">
             <span class="text-transparent bg-gradient-to-r from-blue-500 to-blue-400 bg-clip-text">
-                Invest in the best resource<br class="hidden sm:inline" />
+                Support a growing resource<br class="hidden sm:inline" />
                 for Laravel developers
             </span>
         </h1>
 
         <h2 class="mt-4 text-center text-xl/tight md:text-2xl/tight lg:text-3xl/tight">
             My goal is to be in everyone's Google search.<br class="hidden sm:inline" />
-            This requires to write <strong class="font-medium underline">a lot</strong> of content.
+            This requires <strong class="font-medium underline">a lot</strong> of work.
         </h2>
 
         <ul class="grid grid-cols-2 gap-4 mt-16 md:grid-cols-4">
@@ -103,6 +103,14 @@
                 </div>
 
                 <div>clicks each month on Google</div>
+            </div>
+
+            <div class="col-span-1" x-data="{ count: 0, target: 80 }" x-intersect.half="animateNumber">
+                <div class="text-3xl font-extralight sm:text-5xl lg:text-6xl xl:text-7xl">
+                    +<span x-text="Math.round(count).toLocaleString()">80</span>
+                </div>
+
+                <div>articles written</div>
             </div>
 
             <div class="col-span-1">
