@@ -109,7 +109,7 @@
         </x-slot:title>
 
         <p class="text-xl text-center mt-7">
-            Their participation propulsed my MRR (Monthly Recurring Revenue) to <strong class="font-bold">$194.50</strong> already!
+            Their participation added <strong class="font-bold">$194.50</strong> to my MRR (Monthly Recurring Revenue) already!
         </p>
 
         <x-sponsors class="justify-center" />
