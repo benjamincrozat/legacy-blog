@@ -245,7 +245,7 @@
             Choose your tier, and get your rewards!
         </x-slot:title>
 
-        <div class="flex flex-wrap gap-4 mt-16">
+        <div class="flex flex-wrap gap-4 mt-8">
             <div class="flex flex-col w-full p-4 border rounded-lg md:w-auto md:flex-1">
                 <div class="text-center">
                     <x-icon-good-samaritan class="h-16 mx-auto" />
