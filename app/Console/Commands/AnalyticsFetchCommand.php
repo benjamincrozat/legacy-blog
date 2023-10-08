@@ -18,11 +18,15 @@ class AnalyticsFetchCommand extends Command
     {
         activity()->disableLogging();
 
+        $this->info('Fetching analytics data…');
+
         Post::cursor()->each(function (Post $post) {
             $post->update([
                 'sessions_last_7_days' => $this->fetch("/$post->slug", now()->subWeek()),
                 'sessions_last_30_days' => $this->fetch("/$post->slug", now()->subDays(30)),
             ]);
+
+            $this->info("Data for $post->slug has been fetched.");
         });
 
         $this->info('Fresh analytics data has been fetched.');
