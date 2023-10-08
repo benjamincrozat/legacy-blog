@@ -28,6 +28,9 @@ Route::view('/privacy', 'privacy')->name('privacy');
 
 Route::view('/terms', 'terms')->name('terms');
 
+Route::view('/dummy-store', 'dummy-store.index')->name('dummy-store.index');
+Route::view('/dummy-store/cart', 'dummy-store.cart')->name('dummy-store.cart');
+
 Route::feeds();
 
 // This is a wildcard route. It must be the last one to avoid conflicts.

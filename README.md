@@ -1,4 +1,4 @@
-[![Laravel Forge Site Deployment Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fforge.laravel.com%2Fsite-badges%2F853f706f-237e-49ce-9812-7d452d57c0bb%3Fdate%3D1%26commit%3D1&style=for-the-badge)](https://forge.laravel.com)
+[![Laravel Forge Site Deployment Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fforge.laravel.com%2Fsite-badges%2Fd43de459-aca8-4a36-9b50-8952279f1f68%3Fdate%3D1%26commit%3D1&style=for-the-badge)](https://forge.laravel.com/servers/651685/sites/2125048)
 
 <img src="https://github.com/benjamincrozat/benjamincrozat.com/assets/3613731/d80fbb79-7de6-4b2d-ab62-602890c6aa82" width="64" height="64" alt="The logo of the blog of Benjamin Crozat." />
 
