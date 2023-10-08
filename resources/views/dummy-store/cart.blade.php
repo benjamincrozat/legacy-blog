@@ -1,9 +1,6 @@
 <?php
 
 use function Livewire\Volt\state;
-use function Livewire\Volt\layout;
-
-layout('components.dummy-store.layout');
 
 state('count', fn () => cache()->get(sha1(request()->ip()) . '_count', 0));
 
@@ -15,9 +12,13 @@ $remove = function () {
 
 ?>
 
-<x-dummy-store.layout>
+<x-app
+    :hide-navigation="true"
+    :hide-footer="true"
+    class="!bg-gray-50 !text-gray-600"
+>
     @volt
-        <div>
+        <div class="container py-8">
             <div>
                 <a wire:navigate.hover href="{{ route('dummy-store.index') }}">
                     ← Back
@@ -55,4 +56,4 @@ $remove = function () {
             </footer>
         </div>
     @endvolt
-</x-dummy-store.layout>
+</x-app>
