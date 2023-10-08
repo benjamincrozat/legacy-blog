@@ -250,23 +250,13 @@
                 <div class="text-center">
                     <x-icon-good-samaritan class="h-16 mx-auto" />
                     <p class="mt-5 text-xl">Good samaritan</p>
-                    <p class="text-3xl font-medium">$1/month</p>
+                    <p class="text-3xl font-medium">Pay what you want</p>
                 </div>
 
                 <ul class="flex-grow mt-4">
                     <li class="flex items-center gap-2">
                         <x-heroicon-o-check class="flex-shrink-0 h-4" />
                         <span>You receive my eternal gratitude!</span>
-                    </li>
-
-                    <li class="flex items-center gap-2 mt-2 opacity-50">
-                        <x-heroicon-o-x-mark class="flex-shrink-0 h-4" />
-                        <del>Display your name on my homepage.</del>
-                    </li>
-
-                    <li class="flex items-center gap-2 mt-2 opacity-50">
-                        <x-heroicon-o-x-mark class="flex-shrink-0 h-4" />
-                        <del>Add a link to a non-commercial project.</del>
                     </li>
                 </ul>
 
@@ -294,11 +284,6 @@
                     <li class="flex items-center gap-2 mt-2 font-bold text-blue-400">
                         <x-heroicon-o-check class="flex-shrink-0 h-4" />
                         <span>Display your name on my homepage.</span>
-                    </li>
-
-                    <li class="flex items-center gap-2 mt-2 opacity-50">
-                        <x-heroicon-o-x-mark class="flex-shrink-0 h-4" />
-                        <del>Add a link to a non-commercial project.</del>
                     </li>
                 </ul>
 
