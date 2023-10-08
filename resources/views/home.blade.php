@@ -99,7 +99,7 @@
         <x-section class="container mt-32">
             <x-slot:title class="text-center">
                 <x-icon-tag class="h-16 mx-auto" />
-                <div class="mt-2">A variety of topics</div>
+                <div class="mt-2">I cover a lot of topics</div>
             </x-slot:title>
 
             <ul class="grid gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3 md:gap-16">
