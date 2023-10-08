@@ -183,83 +183,59 @@
             This requires some development work. Take a look at the timeline.
         </p>
 
-        <div class="mt-16">
+        <div class="sm:mr-[16.66%] md:mr-[33.33%] mt-16">
             <h3 class="font-bold text-2xl/tight md:text-3xl/tight">
                 <x-icon-suitcase class="h-16" />
 
-                <div class="mt-4">
+                <div class="mt-8">
                     Q4 2023: Fresh job offers
                 </div>
             </h3>
 
-            <div class="flex flex-wrap items-start gap-16 mt-6 md:flex-nowrap">
-                <div class="flex-grow text-xl">
-                    <p>Successful companies use the web to make money, which makes developers incredible assets. I will allow companies to promote their job offers, which will help thousands of developers browsing my blog find their dream job.</p>
-                </div>
-
-                <div class="bg-gray-200 grid place-items-center text-gray-600 md:h-[240px] aspect-square w-full md:w-auto">
-                    Soon…
-                </div>
+            <div class="mt-6 text-xl">
+                <p>Successful companies use the web to make money, which makes developers incredible assets. I will allow companies to promote their job offers, which will help thousands of developers browsing my blog find their dream job.</p>
             </div>
         </div>
 
-        <div class="mt-16">
+        <div class="sm:ml-[16.66%] md:ml-[33.33%] mt-16 sm:text-right">
             <h3 class="font-bold text-2xl/tight md:text-3xl/tight">
-                <x-icon-sharing class="h-16" />
+                <x-icon-sharing class="inline h-16" />
 
-                <div class="mt-4">
+                <div class="mt-8">
                     Q1 2024: Share your content
                 </div>
             </h3>
 
-            <div class="flex flex-wrap items-start gap-16 mt-6 md:flex-nowrap">
-                <div class="flex-grow text-xl">
-                    <p>Some developers are also proficient writers. I want to help them reach more people. I currently share articles from the community, and I want to allow anyone to do the same.</p>
-                </div>
-
-                <div class="bg-gray-200 grid place-items-center text-gray-600 md:h-[240px] aspect-square w-full md:w-auto">
-                    Soon…
-                </div>
+            <div class="mt-6 text-xl">
+                <p>Some developers are also proficient writers. I want to help them reach more people. I currently share articles from the community, and I want to allow anyone to do the same.</p>
             </div>
         </div>
 
-        <div class="mt-16">
+        <div class="sm:mr-[16.66%] md:mr-[33.33%] mt-16">
             <h3 class="font-bold text-2xl/tight md:text-3xl/tight">
                 <x-icon-conversation class="h-16" />
 
-                <div class="mt-2">
+                <div class="mt-8">
                     Q2 2024: Ask questions on articles
                 </div>
             </h3>
 
-            <div class="flex flex-wrap items-start gap-16 mt-6 md:flex-nowrap">
-                <div class="flex-grow text-xl">
-                    <p>Help from other community members is crucial to level up our skills. Being able to comment on articles will be extremely valuable for developers.</p>
-                </div>
-
-                <div class="bg-gray-200 grid place-items-center text-gray-600 md:h-[240px] aspect-square w-full md:w-auto">
-                    Soon…
-                </div>
+            <div class="mt-6 text-xl">
+                <p>Help from other community members is crucial to level up our skills. Being able to comment on articles will be extremely valuable for developers.</p>
             </div>
         </div>
 
-        <div class="mt-16">
+        <div class="sm:ml-[16.66%] md:ml-[33.33%] sm:text-right mt-16">
             <h3 class="font-bold text-2xl/tight md:text-3xl/tight">
-                <x-icon-qa class="h-16" />
+                <x-icon-qa class="inline h-16" />
 
-                <div class="mt-4">
-                    Q3 2024: Take a quizz once you read an article.
+                <div class="mt-8">
+                    Q3 2024: Take a quizz once you read an article
                 </div>
             </h3>
 
-            <div class="flex flex-wrap items-start gap-16 mt-6 md:flex-nowrap">
-                <div class="flex-grow text-xl">
-                    <p>Learning should be fun and I want my blog to be the best resource of the web for web developers to sharpen their skills. What better way to confirm your knowledge than answering questions?</p>
-                </div>
-
-                <div class="bg-gray-200 grid place-items-center text-gray-600 md:h-[240px] aspect-square w-full md:w-auto">
-                    Soon…
-                </div>
+            <div class="flex-grow mt-6 text-xl">
+                <p>Learning should be fun and I want my blog to be the best resource of the web for web developers to sharpen their skills. What better way to confirm your knowledge than answering questions?</p>
             </div>
         </div>
     </x-section>
