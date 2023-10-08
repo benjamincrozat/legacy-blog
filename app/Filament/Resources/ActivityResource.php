@@ -15,6 +15,8 @@ class ActivityResource extends Resource
 {
     protected static ?string $model = Activity::class;
 
+    protected static ?string $navigationGroup = 'Others';
+
     protected static ?string $navigationIcon = 'heroicon-o-list-bullet';
 
     protected static ?string $recordTitleAttribute = 'id';

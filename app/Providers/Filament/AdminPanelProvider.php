@@ -48,7 +48,6 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->databaseNotifications()
             ->globalSearchKeyBindings(['command+k', 'ctrl+k'])
-            ->sidebarCollapsibleOnDesktop()
-            ->spa();
+            ->sidebarCollapsibleOnDesktop();
     }
 }
