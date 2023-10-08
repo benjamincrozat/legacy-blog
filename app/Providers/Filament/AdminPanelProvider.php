@@ -32,6 +32,10 @@ class AdminPanelProvider extends PanelProvider
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->globalSearchKeyBindings(['command+k', 'ctrl+k'])
             ->id('admin')
+            ->navigationGroups([
+                'Blog',
+                'Others',
+            ])
             ->middleware([
                 EncryptCookies::class,
                 AddQueuedCookiesToResponse::class,
