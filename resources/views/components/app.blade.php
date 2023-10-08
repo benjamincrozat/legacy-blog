@@ -20,6 +20,8 @@
 
         @livewireStyles
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism-twilight.min.css" />
+
         @unless(app()->runningUnitTests())
             @googlefonts
             @googlefonts('handwriting')
@@ -28,6 +30,24 @@
         @vite(['resources/js/app.js'])
 
         @livewireScripts
+
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-bash.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-css.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-diff.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-dockerfile.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-html.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-http.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-javascript.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-json.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-nginx.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-php-extras.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-php.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-phpdoc.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-sass.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-scss.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-typescript.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-yaml.min.js"></script>
 
         @if (app()->isProduction() && auth()->id() !== 1)
             <script
@@ -55,11 +75,8 @@
             'class' => 'bg-gray-50 font-light',
         ]) }}
         x-data="{}"
-        x-init="$nextTick(
-            () => document.querySelectorAll('pre code').forEach(
-                el => hljs.highlightElement(el)
-            )
-        )">
+        x-init="Prism.highlightAll()"
+    >
         <div class="flex flex-col min-h-screen">
             @empty($hideNavigation)
                 <x-navigation class="mt-4" />
