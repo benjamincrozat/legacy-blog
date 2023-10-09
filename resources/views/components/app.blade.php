@@ -38,7 +38,7 @@
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-dockerfile.min.js"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-html.min.js"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-http.min.js"></script>
-        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-javascript.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-js.min.js"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-json.min.js"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-nginx.min.js"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-php-extras.min.js"></script>
