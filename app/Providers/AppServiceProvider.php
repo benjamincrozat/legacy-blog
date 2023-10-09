@@ -40,11 +40,7 @@ class AppServiceProvider extends ServiceProvider
         Model::unguard();
 
         // This categories variable I pass in this view composer is also used in the blog's navigation.
-        View::composer(['components.navigation', 'home'], function ($view) {
-            static $categories;
-
-            // If the static variable declared above has already been set, use it. Otherwise, set it.
-            // This prevents the query from being run multiple times on the same request.
+        View::composer('components.navigation', function ($view) {
             $categories ??= cache()->rememberForever('categories', function () {
                 return Category::query()
                     ->whereHas('posts')

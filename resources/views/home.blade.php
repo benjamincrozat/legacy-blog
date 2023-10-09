@@ -88,23 +88,6 @@
         </ul>
     </x-section>
 
-    @if ($categories->isNotEmpty())
-        <x-section class="container mt-32">
-            <x-slot:title class="text-center">
-                <x-icon-tag class="h-16 mx-auto" />
-                <div class="mt-2">I cover a lot of topics</div>
-            </x-slot:title>
-
-            <ul class="grid gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3 md:gap-16">
-                @foreach ($categories as $category)
-                    <li class="h-full">
-                        <x-home.category :category="$category" />
-                    </li>
-                @endforeach
-            </ul>
-        </x-section>
-    @endif
-
     <x-section class="container mt-32">
         <x-slot:title class="text-center">
             <x-icon-clock class="h-16 mx-auto" />
