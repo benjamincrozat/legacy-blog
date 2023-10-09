@@ -12,7 +12,7 @@
             />
         </a>
     @else
-        <div class="bg-gray-200 aspect-video"></div>
+        <div class="mb-4 bg-gray-200 aspect-video"></div>
     @endif
 
     <p class="font-bold">
