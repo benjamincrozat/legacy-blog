@@ -19,6 +19,6 @@ class CategoryRepository implements CategoryRepositoryContract
             ->with('categories', 'media')
             ->latest()
             ->published()
-            ->paginate(21);
+            ->paginate(20);
     }
 }

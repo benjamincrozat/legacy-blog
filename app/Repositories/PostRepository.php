@@ -33,8 +33,8 @@ class PostRepository implements PostRepositoryContract
             ->orderByDesc('published_at')
             ->when(
                 $page,
-                fn ($query) => $query->paginate(21),
-                fn ($query) => $query->limit(11)->get(),
+                fn ($query) => $query->paginate(20),
+                fn ($query) => $query->limit(10)->get(),
             );
 
         return $posts;
@@ -47,7 +47,7 @@ class PostRepository implements PostRepositoryContract
             ->with('categories', 'media')
             ->published()
             ->orderBy('sessions_last_7_days', 'desc')
-            ->limit(11)
+            ->limit(10)
             ->get();
 
         return $posts;
@@ -64,7 +64,7 @@ class PostRepository implements PostRepositoryContract
             ->when(
                 $ids->isNotEmpty(),
                 fn ($query) => $query->asSequence($ids),
-                fn ($query) => $query->inRandomOrder()->limit(11)
+                fn ($query) => $query->inRandomOrder()->limit(10)
             )
             ->get();
     }
@@ -79,7 +79,7 @@ class PostRepository implements PostRepositoryContract
             return collect($this->recommend->getRelatedProducts([[
                 'indexName' => config('scout.prefix') . 'posts',
                 'objectID' => "$id",
-                'maxRecommendations' => 11,
+                'maxRecommendations' => 10,
             ]]));
         });
 

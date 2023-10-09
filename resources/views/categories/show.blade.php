@@ -12,13 +12,6 @@
         </x-slot:title>
 
         <ul class="grid gap-16 mt-8 md:grid-cols-2">
-            <li>
-                <x-post-template
-                    title="Your sponsored article here"
-                    description="Talk about your business, stay on top of everything for a week, and get a valuable link for life."
-                />
-            </li>
-
             @foreach ($posts as $post)
                 <li>
                     <x-post :post="$post" />
