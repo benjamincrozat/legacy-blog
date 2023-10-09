@@ -47,6 +47,9 @@
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-sql.min.js"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-typescript.min.js"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-yaml.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => Prism.languages['html'] = Prism.languages.markup)
+        </script>
 
         @if (app()->isProduction() && auth()->id() !== 1)
             <script
