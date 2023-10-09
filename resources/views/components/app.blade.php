@@ -74,7 +74,7 @@
             'class' => 'bg-gray-50 font-light',
         ]) }}
         x-data="{}"
-        x-init="Prism.highlightAll()"
+        x-init="$nextTick(() => Prism.highlightAll())"
     >
         <div class="flex flex-col min-h-screen">
             @empty($hideNavigation)
