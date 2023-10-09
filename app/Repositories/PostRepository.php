@@ -33,7 +33,7 @@ class PostRepository implements PostRepositoryContract
             ->orderByDesc('published_at')
             ->when(
                 $page,
-                fn ($query) => $query->paginate(19),
+                fn ($query) => $query->paginate(21),
                 fn ($query) => $query->limit(9)->get(),
             );
 
