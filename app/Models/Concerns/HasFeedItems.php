@@ -12,7 +12,7 @@ trait HasFeedItems
         return self::query()
             ->published()
             ->orderByDesc('published_at')
-            ->limit(10)
+            ->limit(9)
             ->get();
     }
 

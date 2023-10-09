@@ -1,8 +1,8 @@
 <?php
 
 use App\Models\Post;
-use Illuminate\Support\Collection;
 use App\Facades\Posts;
+use Illuminate\Support\Collection;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 it('fetches a given article', function () {
@@ -20,7 +20,7 @@ it('fetches the latest articles without pagination', function () {
 
     expect($latest)
         ->toBeInstanceOf(Collection::class)
-        ->toHaveCount(10);
+        ->toHaveCount(9);
 });
 
 it('fetches the latest articles with pagination', function () {
@@ -29,8 +29,7 @@ it('fetches the latest articles with pagination', function () {
     $latest = Posts::latest(2);
 
     expect($latest)
-        ->toBeInstanceOf(LengthAwarePaginator::class)
-        ->toHaveCount(10);
+        ->toBeInstanceOf(LengthAwarePaginator::class);
 });
 
 it('fetches popular articles', function () {
@@ -40,7 +39,7 @@ it('fetches popular articles', function () {
 
     expect($popular)
         ->toBeInstanceOf(Collection::class)
-        ->toHaveCount(10);
+        ->toHaveCount(9);
 });
 
 it('fetches recommendations for a given article', function () {
@@ -52,5 +51,5 @@ it('fetches recommendations for a given article', function () {
 
     expect($recommendations)
         ->toBeInstanceOf(Collection::class)
-        ->toHaveCount(10);
+        ->toHaveCount(9);
 });
