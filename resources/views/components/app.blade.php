@@ -33,19 +33,18 @@
 
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-bash.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-css-extras.min.js"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-css.min.js"></script>
-        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-diff.min.js"></script>
-        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-dockerfile.min.js"></script>
-        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-html.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-git.min.js"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-http.min.js"></script>
-        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-js.min.js"></script>
-        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-json.min.js"></script>
-        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-nginx.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-ini.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-javascript.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-less.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-markup.min.js"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-php-extras.min.js"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-php.min.js"></script>
-        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-phpdoc.min.js"></script>
-        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-sass.min.js"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-scss.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-sql.min.js"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-typescript.min.js"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-yaml.min.js"></script>
 
