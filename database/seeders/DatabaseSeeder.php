@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Opening;
 use App\Models\Category;
 use App\Models\Merchant;
 use Illuminate\Database\Seeder;
@@ -16,5 +17,7 @@ class DatabaseSeeder extends Seeder
             ->createQuietly();
 
         Merchant::factory(10)->create();
+
+        Opening::factory(10)->create();
     }
 }

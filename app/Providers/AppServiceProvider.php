@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Opening;
 use App\Models\Category;
 use App\Actions\Subscribe;
 use App\Repositories\PostRepository;
@@ -41,15 +42,23 @@ class AppServiceProvider extends ServiceProvider
 
         // This categories variable I pass in this view composer is also used in the blog's navigation.
         View::composer('components.navigation', function ($view) {
-            $categories ??= cache()->rememberForever('categories', function () {
-                return Category::query()
-                    ->whereHas('posts')
-                    ->orderBy('is_highlighted', 'desc')
-                    ->orderBy('name')
-                    ->get();
-            });
+            $categories ??= Category::query()
+                ->whereHas('posts')
+                ->orderBy('is_highlighted', 'desc')
+                ->orderBy('name')
+                ->get();
 
             $view->with(compact('categories'));
+        });
+
+        View::composer('*', function ($view) {
+            static $opening;
+
+            $opening ??= Opening::query()
+                ->inRandomOrder()
+                ->first();
+
+            $view->with(compact('opening'));
         });
 
         Vite::useScriptTagAttributes(['defer' => true]);

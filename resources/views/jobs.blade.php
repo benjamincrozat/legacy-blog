@@ -11,15 +11,34 @@
         </h1>
 
         <h2 class="mt-2 text-center text-xl/tight md:text-2xl/tight lg:text-3xl/tight">
-            Find the ideal candidate faster.
+            Find the ideal candidate <strong class="font-medium">faster</strong>.
         </h2>
 
         <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/ffe977d4-b50b-416e-b213-0b94449ae916?discount=0" class="table px-6 py-3 mx-auto font-bold text-white bg-orange-400 rounded mt-14">
-            Get started for $149 per offer for a month
+            Get started for $149
         </a>
 
         <p class="mt-4 text-sm text-center">Once the payment is done, you will receive instructions on how to send me your job offers.</p>
     </div>
+
+    <x-section id="numbers" class="container mt-16 xl:max-w-screen-lg scroll-mt-4">
+        <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
+            See how it works
+        </x-slot:title>
+
+        <div class="flex flex-wrap gap-8 mt-8 md:flex-nowrap md:items-start md:justify-between md:gap-16">
+            <div class="bg-black aspect-video h-[200px]"></div>
+
+            <div>
+                <p>In a nutshell:</p>
+                <ol class="grid gap-2 pl-4 mt-2 ml-4 list-decimal">
+                    <li>Job offers are displayed at the top of the blog, <strong class="font-medium">on every page</strong>.</li>
+                    <li><strong class="font-medium">They also are listed on a dedicated page</strong>, which has a link in the blog's navigation.</li>
+                    <li>Your job offers stay on my blog for <strong class="font-medium">an entire month</strong>.</li>
+                </ol>
+            </div>
+        </div>
+    </x-section>
 
     <x-section id="numbers" class="container mt-24 md:mt-32 scroll-mt-4">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
