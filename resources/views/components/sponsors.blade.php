@@ -2,7 +2,7 @@
     $attributes
         ->merge(['class' => 'grid items-center grid-cols-2 gap-4 sm:gap-6 md:gap-8 mt-8 md:gap-12'])
         ->when(
-            request()->routeIs('media-kit'),
+            request()->routeIs('media-kit', 'jobs.create'),
             fn ($attributes) => $attributes->merge(['class' => 'lg:grid-cols-5']),
             fn ($attributes) => $attributes->merge(['class' => 'lg:grid-cols-4']),
         )
@@ -33,7 +33,7 @@
         />
     </a>
 
-    @if (request()->routeIs('media-kit'))
+    @if (request()->routeIs('media-kit', 'jobs.create'))
         <a
             href="https://larajobs.com?utm_source=benjamincrozat&utm_medium=logo&utm_campaign=benjamincrozat"
             target="_blank"

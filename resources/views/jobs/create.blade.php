@@ -24,7 +24,7 @@
                     <span class="sr-only">Decrease quantity</span>
                 </button>
 
-                <span class="grid w-[32px] h-[32px] place-items-center" x-text="quantity">1</span>
+                <span class="grid w-[32px] h-[32px] place-items-center font-mono" x-text="quantity">1</span>
 
                 <button
                     class="w-[32px] h-[32px] grid place-items-center text-white bg-gray-800 rounded-full"
@@ -36,7 +36,7 @@
             </div>
 
             <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/ffe977d4-b50b-416e-b213-0b94449ae916?discount=0" class="px-6 py-3 font-bold text-white bg-orange-400 rounded">
-                Get started for $<span x-text="149 * quantity">149</span>
+                Get started for $<span class="font-mono" x-text="149 * quantity">149</span>
             </a>
         </div>
 
@@ -60,6 +60,14 @@
                 </ol>
             </div>
         </div>
+    </x-section>
+
+    <x-section class="container mt-24 md:mt-32">
+        <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
+            These people trust me
+        </x-slot:title>
+
+        <x-sponsors class="justify-center" />
     </x-section>
 
     <x-section id="numbers" class="container mt-24 md:mt-32 scroll-mt-4">
