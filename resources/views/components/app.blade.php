@@ -83,6 +83,16 @@
         x-init="$nextTick(() => Prism.highlightAll())"
     >
         <div class="flex flex-col min-h-screen">
+            <div class="bg-indigo-400 text-indigo-50">
+                <div class="container py-3 text-xs text-center">
+                    <p>
+                        <a href="mailto:hello@benjamincrozat.com?body={{ rawurlencode('Please introduce yourself, include a sentence or two pitch, and a link to the offer. I will send you a payment link.') }}">
+                            <strong class="font-medium text-white">Your job offer here</strong>, exposed to 40,000 developers for&nbsp;a&nbsp;month&nbsp;($149).
+                        </a>
+                    </p>
+                </div>
+            </div>
+
             @empty($hideNavigation)
                 <x-navigation class="mt-4" />
             @endempty
