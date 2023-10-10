@@ -20,7 +20,8 @@
                     class="w-[32px] h-[32px] grid place-items-center text-white bg-gray-800 rounded-full"
                     @click="quantity <= 1 ? (quantity = 1) : quantity--"
                 >
-                    -
+                    <x-heroicon-s-minus class="w-4 h-4" />
+                    <span class="sr-only">Decrease quantity</span>
                 </button>
 
                 <span class="grid w-[32px] h-[32px] place-items-center" x-text="quantity">1</span>
@@ -29,7 +30,8 @@
                     class="w-[32px] h-[32px] grid place-items-center text-white bg-gray-800 rounded-full"
                     @click="quantity++"
                 >
-                    +
+                    <x-heroicon-s-plus class="w-4 h-4" />
+                    <span class="sr-only">Increase quantity</span>
                 </button>
             </div>
 
