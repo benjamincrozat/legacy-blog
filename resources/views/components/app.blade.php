@@ -84,13 +84,13 @@
     >
         <div class="flex flex-col min-h-screen">
             <div class="bg-indigo-400 text-indigo-50">
-                <div class="container py-3 text-xs text-center">
+                <aside class="container py-3 text-xs text-center">
                     <p>
                         <a href="mailto:hello@benjamincrozat.com?body={{ rawurlencode("Please introduce yourself, include a sentence or two pitch for your job offer, and don\'t forget the link. I will reply ASAP with the payment instructions.") }}">
                             <strong class="font-medium text-white">Your job offer here</strong>, exposed to 40,000 developers for&nbsp;a&nbsp;month&nbsp;($149).
                         </a>
                     </p>
-                </div>
+                </aside>
             </div>
 
             @empty($hideNavigation)
