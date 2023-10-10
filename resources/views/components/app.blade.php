@@ -84,7 +84,7 @@
     >
         <div class="flex flex-col min-h-screen">
             @if (! request()->routeIs('dummy-store.*', 'jobs.*', 'media-kit', 'sponsors'))
-                <aside class="text-sm text-indigo-700 bg-indigo-50">
+                <aside class="text-sm text-indigo-700 bg-gradient-to-r from-indigo-50 to-indigo-50/50">
                     @if ($opening)
                         <a href="{{ $opening->link }}" class="container block py-3 text-center md:max-w-screen-sm">
                             <p>{{ $opening->company }} is looking for a <strong class="font-medium">{{ $opening->description }}</strong>! <x-heroicon-o-megaphone class="inline w-4 h-4 -translate-y-px" /></p>
