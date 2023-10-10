@@ -186,7 +186,7 @@
             </p>
 
             <p class="text-center">
-                <x-button href="#display" class="mt-4 px-3 !py-2 text-sm font-bold bg-gradient-to-r from-blue-500 to-blue-600 shadow-md shadow-blue-100 text-white">
+                <x-button href="#display" class="mt-4 px-3 !py-2 text-sm font-bold bg-blue-600 text-white">
                     Learn more
                 </x-button>
             </p>
@@ -200,7 +200,7 @@
             </p>
 
             <p class="text-center">
-                <x-button href="#write" class="mt-4 px-3 !py-2 text-sm font-bold bg-gradient-to-r from-blue-500 to-blue-600 shadow-md shadow-blue-100 text-white">
+                <x-button href="#write" class="mt-4 px-3 !py-2 text-sm font-bold bg-blue-600 text-white">
                     Learn more
                 </x-button>
             </p>
@@ -214,7 +214,7 @@
             </p>
 
             <p class="text-center">
-                <x-button href="mailto:hello@benjamincrozat.com" class="mt-4 px-3 !py-2 text-sm font-bold bg-gradient-to-r from-green-500 to-green-600 shadow-md shadow-green-100 text-white">
+                <x-button href="mailto:hello@benjamincrozat.com" class="mt-4 px-3 !py-2 text-sm font-bold bg-green-500 shadow-md shadow-green-100 text-white">
                     Reach out
                 </x-button>
             </p>
@@ -271,7 +271,7 @@
     </x-section>
 
     <div class="container mt-16 text-center md:max-w-screen-sm">
-        <a href="{{ config('services.lemonsqueezy.sponsorships.monthly') }}" class="inline-block px-6 py-3 font-bold text-white transition-opacity rounded shadow-lg bg-gradient-to-r from-orange-500 to-orange-400 shadow-orange-100 hover:opacity-75">
+        <a href="{{ config('services.lemonsqueezy.sponsorships.monthly') }}" class="inline-block px-6 py-3 font-bold text-white transition-opacity bg-orange-400 rounded hover:opacity-75">
             Get started for $49/month
         </a>
 
@@ -345,7 +345,7 @@
     </x-section>
 
     <div class="container mt-16 text-center md:max-w-screen-sm">
-        <a href="{{ config('services.lemonsqueezy.sponsored_content') }}" class="inline-block px-6 py-3 font-bold text-white transition-opacity rounded shadow-lg bg-gradient-to-r from-orange-500 to-orange-400 shadow-orange-100 hover:opacity-75">
+        <a href="{{ config('services.lemonsqueezy.sponsored_content') }}" class="inline-block px-6 py-3 font-bold text-white transition-opacity bg-orange-400 rounded hover:opacity-75">
             Get started for $499
         </a>
 
