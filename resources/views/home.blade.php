@@ -52,7 +52,7 @@
             Join more than <span class="font-semibold text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">40,000</span> readers and skyrocket your web&nbsp;development&nbsp;skills.
         </p>
 
-        <div class="container text-center mt-14 md:mt-28">
+        <div class="container mt-16 text-center">
             <p class="font-medium sm:text-xl">
                 From apps makers, to SaaS, and web hosting, my sponsors are worth checking out!
             </p>
@@ -67,7 +67,7 @@
         </div>
     </x-section>
 
-    <x-section class="container mt-16 md:mt-32">
+    <x-section class="container mt-16">
         <x-slot:title class="text-center">
             Popular articles
         </x-slot:title>
