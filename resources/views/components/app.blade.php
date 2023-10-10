@@ -84,13 +84,11 @@
     >
         <div class="flex flex-col min-h-screen">
             @if (! request()->routeIs('jobs.create'))
-                <div class="bg-indigo-400 text-indigo-50">
-                    <aside class="container py-3 text-sm text-center">
-                        <a wire:navigate.hover href="{{ route('jobs.create') }}">
-                            <strong class="font-medium text-white">Your job offer here</strong>, exposed to 40,000 developers for&nbsp;a&nbsp;month.
-                        </a>
-                    </aside>
-                </div>
+                <aside class="bg-indigo-400 text-indigo-50">
+                    <a wire:navigate.hover href="{{ route('jobs.create') }}" class="container block py-3 text-sm text-center">
+                        <strong class="font-medium text-white">Your job offer here</strong>, exposed to 40,000 developers for&nbsp;a&nbsp;month.
+                    </a>
+                </aside>
             @endif
 
             @empty($hideNavigation)
