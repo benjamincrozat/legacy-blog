@@ -69,8 +69,7 @@
 
     <x-section class="container mt-16 md:mt-32">
         <x-slot:title class="text-center">
-            <x-icon-trend class="h-16 mx-auto" />
-            <div class="mt-2">Popular articles</div>
+            Popular articles
         </x-slot:title>
 
         <ul class="grid gap-16 mt-8 md:grid-cols-2 lg:grid-cols-3">
@@ -84,8 +83,7 @@
 
     <x-section class="container mt-32">
         <x-slot:title class="text-center">
-            <x-icon-clock class="h-16 mx-auto" />
-            <div class="mt-2">Latest articles</div>
+            Latest articles
         </x-slot:title>
 
         <ul class="grid gap-16 mt-8 md:grid-cols-2 lg:grid-cols-3">
@@ -95,12 +93,15 @@
                 </li>
             @endforeach
         </ul>
+
+        <x-button :href="route('posts.index')" class="table w-full px-6 mx-auto mt-8 bg-gray-200 sm:w-auto">
+            See more
+        </x-button>
     </x-section>
 
     <x-section id="about" class="container mt-32 lg:max-w-screen-md scroll-mt-8">
         <x-slot:title class="text-center">
-            <x-icon-anonymous class="h-16 mx-auto" />
-            <div class="mt-2">About Benjamin Crozat</div>
+            About Benjamin Crozat
         </x-slot:title>
 
         <x-prose class="mt-8">
