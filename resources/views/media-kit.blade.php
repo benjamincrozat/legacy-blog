@@ -1,13 +1,8 @@
 <x-app
     title="Sponsor me and get your company in the spotlight."
     description="More than 40,000 eager developers visit my blog each month. Why don't you introduce your brand?"
-    :hide-navigation="true"
     :hide-footer="true"
 >
-    @empty($hideNavigation)
-        <x-navigation class="mt-4" />
-    @endempty
-
     <div
         class="!h-[175px] md:!h-[200px] container flex items-end justify-center gap-2 md:gap-4 mt-16 md:mt-24 md:max-w-screen-sm"
         x-data="{ animate: false }"

@@ -22,6 +22,8 @@ Route::post('/subscribe', SubscribeController::class)->name('subscribe');
 
 Route::view('/media-kit', 'media-kit')->name('media-kit');
 
+Route::view('/jobs/create', 'jobs.create')->name('jobs.create');
+
 Route::view('/sponsors', 'sponsors')->name('sponsors');
 
 Route::view('/privacy', 'privacy')->name('privacy');
