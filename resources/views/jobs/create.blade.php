@@ -35,7 +35,7 @@
                 </button>
             </div>
 
-            <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/ffe977d4-b50b-416e-b213-0b94449ae916?discount=0" class="px-6 py-3 font-bold text-white bg-orange-400 rounded">
+            <a :href="`https://benjamincrozat.lemonsqueezy.com/checkout/buy/ffe977d4-b50b-416e-b213-0b94449ae916?discount=0&quantity=${quantity}`" class="px-6 py-3 font-bold text-white bg-orange-400 rounded">
                 Get started for $<span class="font-mono" x-text="149 * quantity">149</span>
             </a>
         </div>
