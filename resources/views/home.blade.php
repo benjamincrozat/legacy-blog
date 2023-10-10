@@ -63,12 +63,6 @@
                 <a wire:navigate.hover href="{{ route('media-kit') }}" class="text-xl -ml-9 md:text-2xl sm:-ml-10 sm:text-3xl">
                     <x-icon-arrow-to-top-left class="inline w-8 h-8 -translate-y-3" /> <span class="underline decoration-1 underline-offset-2">Showcase your business too</span>
                 </a>
-
-                <span class="mx-2">or</span>
-
-                <a wire:navigate.hover href="{{ route('sponsors') }}" class="text-xl md:text-2xl sm:text-3xl">
-                    <span class="underline decoration-1 underline-offset-2">support the blog, and get your rewards</span>!
-                </a>
             </div>
         </div>
     </x-section>
