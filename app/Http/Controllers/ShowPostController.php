@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Facades\Posts;
 use Illuminate\View\View;
 use App\Jobs\TrackPageView;
-use App\Facades\Posts;
 
 class ShowPostController extends Controller
 {

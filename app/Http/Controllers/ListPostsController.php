@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\View\View;
 use App\Facades\Posts;
+use Illuminate\View\View;
 
 class ListPostsController extends Controller
 {
