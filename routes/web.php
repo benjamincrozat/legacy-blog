@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ShowPostController;
 use App\Http\Controllers\ListPostsController;
 use App\Http\Controllers\SubscribeController;
+use App\Http\Controllers\ListOpeningsController;
 use App\Http\Controllers\ShowCategoryController;
 use App\Http\Controllers\ShowMerchantController;
 
@@ -22,7 +23,8 @@ Route::post('/subscribe', SubscribeController::class)->name('subscribe');
 
 Route::view('/media-kit', 'media-kit')->name('media-kit');
 
-Route::view('/jobs', 'jobs')->name('jobs');
+Route::get('/jobs', ListOpeningsController::class)->name('jobs.index');
+Route::view('/jobs/create', 'jobs.create')->name('jobs.create');
 
 Route::view('/sponsors', 'sponsors')->name('sponsors');
 

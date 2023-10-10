@@ -1,5 +1,5 @@
 <nav {{ $attributes->merge(['class' => 'container relative flex items-center justify-between sm:static lg:max-w-screen-md']) }}>
-    <x-logo />
+    <x-logo class="-translate-y-px" />
 
     <div class="flex items-baseline gap-6 sm:gap-7 md:gap-8">
         <a wire:navigate.hover href="{{ route('posts.index') }}">
@@ -30,6 +30,16 @@
             @endforeach
         </x-menu.base>
 
+        <a wire:navigate.hover href="{{ route('jobs.index') }}">
+            @if (request()->routeIs('jobs.*'))
+                <x-heroicon-s-briefcase class="h-6 mx-auto text-indigo-400 md:h-7" />
+            @else
+                <x-heroicon-o-briefcase class="h-6 mx-auto md:h-7" />
+            @endif
+
+            <div class="text-xs font-normal @if (request()->routeIs('jobs.*')) text-indigo-600 @endif">Jobs</div>
+        </a>
+
         <x-menu.base>
             <x-slot:trigger>
                 <x-heroicon-o-gift class="h-6 mx-auto md:h-7" x-show="! open" />
@@ -37,12 +47,20 @@
                 <div class="text-xs font-normal" x-bind:class="{ 'text-rose-600': open }">For you</div>
             </x-slot:trigger>
 
-            <x-menu.item href="{{ route('media-kit') }}" icon="s-star" class="text-yellow-400 hover:text-yellow-400">
+            <x-menu.item href="{{ route('media-kit') }}" icon="s-star" class="text-yellow-400">
                 <strong class="text-black transition-colors group-hover:text-white">Get more eyes on your business</strong>
             </x-menu.item>
 
-            <x-menu.item href="/best-web-development-tools" icon="s-wrench" class="text-emerald-400 hover:text-emerald-400">
+            <x-menu.item href="{{ route('jobs.create') }}" icon="s-briefcase" class="text-indigo-400">
+                <strong class="text-black transition-colors group-hover:text-white">Expose your job offers to 40,000 developers</strong>
+            </x-menu.item>
+
+            <x-menu.item href="/best-web-development-tools" icon="s-wrench" class="text-emerald-400">
                 <strong class="text-black transition-colors group-hover:text-white">See all the tools I use</strong>
+            </x-menu.item>
+
+            <x-menu.item href="{{ route('jobs.index') }}" icon="s-magnifying-glass">
+                Find a job
             </x-menu.item>
 
             <x-menu.item href="{{ route('pouest') }}" icon="o-forward">

@@ -7,16 +7,36 @@
 
         <h1 class="!text-4xl/none mt-8 lg:!text-5xl/none font-bold text-center">
             Your job offers
-            <span class="text-transparent bg-gradient-to-r from-green-500 to-green-400 bg-clip-text">exposed to 40,000 developers!</span>
+            <span class="text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">exposed to 40,000 developers!</span>
         </h1>
 
         <h2 class="mt-2 text-center text-xl/tight md:text-2xl/tight lg:text-3xl/tight">
             Find the ideal candidate <strong class="font-medium">faster</strong>.
         </h2>
 
-        <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/ffe977d4-b50b-416e-b213-0b94449ae916?discount=0" class="table px-6 py-3 mx-auto font-bold text-white bg-orange-400 rounded mt-14">
-            Get started for $149
-        </a>
+        <div class="flex items-center justify-center gap-8 mt-14" x-data="{ quantity: 1 }">
+            <div class="flex items-center gap-2">
+                <button
+                    class="w-[32px] h-[32px] grid place-items-center text-white bg-gray-800 rounded-full"
+                    @click="quantity <= 1 ? (quantity = 1) : quantity--"
+                >
+                    -
+                </button>
+
+                <span class="grid w-[32px] h-[32px] place-items-center" x-text="quantity">1</span>
+
+                <button
+                    class="w-[32px] h-[32px] grid place-items-center text-white bg-gray-800 rounded-full"
+                    @click="quantity++"
+                >
+                    +
+                </button>
+            </div>
+
+            <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/ffe977d4-b50b-416e-b213-0b94449ae916?discount=0" class="px-6 py-3 font-bold text-white bg-orange-400 rounded">
+                Get started for $<span x-text="149 * quantity">149</span>
+            </a>
+        </div>
 
         <p class="mt-4 text-sm text-center">Once the payment is done, you will receive instructions on how to send me your job offers.</p>
     </div>

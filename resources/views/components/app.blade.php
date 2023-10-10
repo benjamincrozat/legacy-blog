@@ -83,17 +83,15 @@
         x-init="$nextTick(() => Prism.highlightAll())"
     >
         <div class="flex flex-col min-h-screen">
-            @if (! request()->routeIs('dummy-store.*', 'jobs', 'media-kit', 'sponsors'))
-                <aside class="text-indigo-700 bg-indigo-50">
+            @if (! request()->routeIs('dummy-store.*', 'jobs.*', 'media-kit', 'sponsors'))
+                <aside class="text-sm text-center text-indigo-700 bg-indigo-50">
                     @if ($opening)
-                        <div class="container py-3 text-sm text-center">
-                            <p><strong class="font-medium">{{ $opening->company }} is hiring!</strong> <x-heroicon-o-megaphone class="inline w-4 h-4 -translate-y-px" /></p>
-                            <p>“{{ $opening->description }}”</p>
-                            <p class="mt-2"><a href="{{ $opening->link }}" class="font-medium">Learn more →</a></p>
-                        </div>
+                        <a href="{{ $opening->link }}" class="container block py-3">
+                            <p>{{ $opening->company }} is looking for a <strong class="font-medium">{{ $opening->description }}</strong>! <x-heroicon-o-megaphone class="inline w-4 h-4 -translate-y-px" /></p>
+                        </a>
                     @else
-                        <a wire:navigate.hover href="{{ route('jobs') }}" class="container block py-3 text-sm text-center">
-                            <strong class="font-medium">Your job offer here</strong>, exposed to 40,000 developers for&nbsp;a&nbsp;month.
+                        <a wire:navigate.hover href="{{ route('jobs.create') }}" class="container block py-3">
+                            <strong class="font-medium">Your job offer here</strong>, exposed to 40,000 developers each month.
                         </a>
                     @endif
                 </aside>

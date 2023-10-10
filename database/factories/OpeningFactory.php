@@ -30,7 +30,7 @@ class OpeningFactory extends Factory
 
         return [
             'company' => fake()->company(),
-            'description' => "We are based in $city and we are looking for a $remote $title.",
+            'description' => "$remote $title",
             'link' => fake()->url(),
         ];
     }
