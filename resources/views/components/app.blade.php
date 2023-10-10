@@ -83,7 +83,7 @@
         x-init="$nextTick(() => Prism.highlightAll())"
     >
         <div class="flex flex-col min-h-screen">
-            @if (! request()->routeIs('jobs.create'))
+            @if (! request()->routeIs('jobs.create', 'media-kit', 'sponsors'))
                 <aside class="bg-indigo-400 text-indigo-50">
                     <a wire:navigate.hover href="{{ route('jobs.create') }}" class="container block py-3 text-sm text-center">
                         <strong class="font-medium text-white">Your job offer here</strong>, exposed to 40,000 developers for&nbsp;a&nbsp;month.
