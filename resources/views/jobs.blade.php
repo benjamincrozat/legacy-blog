@@ -104,4 +104,14 @@
             }, stepTime)
         }
     </script>
+
+    <x-section id="about" class="container mt-32 mb-16 lg:max-w-screen-md">
+        <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
+            Who am I?
+        </x-slot:title>
+
+        <x-prose class="mt-8">
+            {!! Str::markdown(file_get_contents(resource_path('markdown/about.md'))) !!}
+        </x-prose>
+    </x-section>
 </x-app>
