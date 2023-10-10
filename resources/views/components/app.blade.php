@@ -84,14 +84,18 @@
     >
         <div class="flex flex-col min-h-screen">
             @if (! request()->routeIs('dummy-store.*', 'jobs.*', 'media-kit', 'sponsors'))
-                <aside class="text-sm text-center text-indigo-700 bg-indigo-50">
+                <aside class="text-sm text-indigo-700 bg-indigo-50">
                     @if ($opening)
-                        <a href="{{ $opening->link }}" class="container block py-3">
+                        <a href="{{ $opening->link }}" class="container block py-3 text-center md:max-w-screen-sm">
                             <p>{{ $opening->company }} is looking for a <strong class="font-medium">{{ $opening->description }}</strong>! <x-heroicon-o-megaphone class="inline w-4 h-4 -translate-y-px" /></p>
                         </a>
                     @else
-                        <a wire:navigate.hover href="{{ route('jobs.create') }}" class="container block py-3">
-                            <strong class="font-medium">Your job offer here</strong>, exposed to 40,000 developers each month.
+                        <a href="https://larajobs.com?utm_source=benjamincrozat&utm_medium=banner&utm_campaign=benjamincrozat" target="_blank" rel="noopener sponsored" class="container flex items-center justify-between gap-4 py-3 md:gap-8 lg:max-w-screen-md">
+                            <span>
+                                “Looking for your dream job? I recommend LaraJobs. <span class="font-medium underline">Find it now!</span>”
+                            </span>
+
+                            <img loading="lazy" src="https://www.gravatar.com/avatar/d58b99650fe5d74abeb9d9dad5da55ad?s=256" alt="Benjamin Crozat" class="rounded-full w-[48px] h-[48px]" />
                         </a>
                     @endif
                 </aside>

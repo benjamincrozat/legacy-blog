@@ -29,7 +29,7 @@
                 @endforeach
             </ul>
         @else
-            <p class="mt-8 text-xl text-center">
+            <p class="mt-8 text-xl text-center text-gray-400">
                 There are no job offers yet. <a wire:navigate.hover href="{{ route('jobs.create') }}" class="text-indigo-600 underline">Post yours.</a>
             </p>
         @endif

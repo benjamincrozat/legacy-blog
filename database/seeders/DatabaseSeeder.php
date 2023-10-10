@@ -18,6 +18,6 @@ class DatabaseSeeder extends Seeder
 
         Merchant::factory(10)->create();
 
-        Opening::factory(30)->create();
+        // Opening::factory(30)->create();
     }
 }
