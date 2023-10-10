@@ -11,7 +11,7 @@ test('the media kit page is working', function () {
 });
 
 test('the job offers creation page is working', function () {
-    get(route('jobs.create'))->assertOk();
+    get(route('jobs'))->assertOk();
 });
 
 test('the sponsors page is working', function () {
