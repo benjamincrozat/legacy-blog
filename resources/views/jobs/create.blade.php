@@ -17,6 +17,8 @@
         <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/ffe977d4-b50b-416e-b213-0b94449ae916?discount=0" class="table px-6 py-3 mx-auto font-bold text-white bg-orange-400 rounded mt-14">
             Get started for $149 per offer for a month
         </a>
+
+        <p class="mt-4 text-sm text-center">Once the payment is done, you will receive instructions on how to send me your job offers.</p>
     </div>
 
     <x-section id="numbers" class="container mt-24 md:mt-32 scroll-mt-4">
