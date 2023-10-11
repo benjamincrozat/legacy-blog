@@ -49,9 +49,11 @@
         </x-slot:title>
 
         <div class="flex flex-wrap gap-8 mt-8 md:flex-nowrap md:items-start md:justify-between md:gap-16">
-            <div class="bg-black aspect-video h-[200px]"></div>
+            <div class="w-full grid place-items-center md:max-w-[33.33%] h-full bg-black aspect-video rounded-lg shadow-lg">
+                <x-heroicon-s-play class="w-16 h-16 text-white" />
+            </div>
 
-            <div>
+            <div class="flex-grow">
                 <p>In a nutshell:</p>
                 <ol class="grid gap-2 pl-4 mt-2 ml-4 list-decimal">
                     <li>Job offers are displayed at the top of the blog, <strong class="font-medium">on every page</strong>.</li>
