@@ -245,7 +245,7 @@
                 <div class="text-center">
                     <x-icon-good-samaritan class="h-16 mx-auto" />
                     <p class="mt-5 text-xl">Good samaritan</p>
-                    <p class="text-3xl font-medium">Pay what you want</p>
+                    <p class="text-3xl font-medium">One-time, your price</p>
                 </div>
 
                 <ul class="flex-grow mt-4">
