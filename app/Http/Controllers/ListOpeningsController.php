@@ -12,7 +12,7 @@ class ListOpeningsController extends Controller
         return view('jobs.index', [
             'openings' => Opening::query()
                 ->latest()
-                ->get(),
+                ->paginate(30),
         ]);
     }
 }
