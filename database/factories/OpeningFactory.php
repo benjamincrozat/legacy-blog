@@ -23,12 +23,15 @@ class OpeningFactory extends Factory
         ])->random();
 
         $title = collect([
-            'back-end Laravel developer',
-            'front-end React developer',
-            'front-end Vue.js developer',
+            'back-end JavaScript developer',
+            'front-end JavaScript developer',
+            'full-stack JavaScript developer',
             'full-stack Laravel developer',
             'full-stack PHP developer',
             'full-stack WordPress developer',
+            'Node.js developer',
+            'React developer',
+            'Vue.js developer',
         ])->random();
 
         return [
