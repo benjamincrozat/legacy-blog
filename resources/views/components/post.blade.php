@@ -1,19 +1,15 @@
 <div {{ $attributes->except('post')->merge(['class' => 'flex flex-col']) }}>
-    @if ($image = $post->presenter()->image())
-        <a
-            @if (! $post->community_link) wire:navigate.hover @endif
-            href="{{ $post->community_link ? $post->community_link : route('posts.show', $post->slug) }}"
-        >
-            <img
-                loading="lazy"
-                src="{{ $image }}"
-                alt="{{ $post->title }}"
-                class="object-cover mb-4 aspect-video"
-            />
-        </a>
-    @else
-        <div class="mb-4 bg-gray-200 aspect-video"></div>
-    @endif
+    <a
+        @if (! $post->community_link) wire:navigate.hover @endif
+        href="{{ $post->community_link ? $post->community_link : route('posts.show', $post->slug) }}"
+    >
+        <img
+            loading="lazy"
+            src="{{ $post->presenter()->image() ?? Vite::asset('resources/img/placeholder.jpg') }}"
+            alt="{{ $post->title }}"
+            class="object-cover mb-4 aspect-video"
+        />
+    </a>
 
     <p class="font-bold">
         <a

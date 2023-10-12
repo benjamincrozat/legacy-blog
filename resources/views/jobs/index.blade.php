@@ -47,13 +47,15 @@
 
             {{ $openings->links() }}
         @else
-            <p class="mt-8 text-xl text-center text-gray-400">
-                There are no job offers yet.
-            </p>
+            <div class="mt-8 text-xl text-center text-gray-400">
+                <p>
+                    There are no job offers yet.
+                </p>
 
-            <p class="mt-8 text-xl text-center text-gray-400">
-                Are you a business owner? <a wire:navigate.hover href="{{ route('jobs.create') }}" class="text-indigo-600 underline">Post yours.</a>
-            </p>
+                <p class="mt-8">
+                    Are you a business owner? <a wire:navigate.hover href="{{ route('jobs.create') }}" class="text-indigo-600 underline">Post yours.</a>
+                </p>
+            </div>
         @endif
     </x-section>
 </x-app>
