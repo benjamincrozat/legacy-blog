@@ -13,10 +13,9 @@
 
         <article class="mt-4">
             <x-prose>
-                <div class="mb-8">
-                    <h1>{{ $post->title }}</h1>
-                    <x-post.date :post="$post" />
-                </div>
+                <h1>{{ $post->title }}</h1>
+
+                <x-post.date :post="$post" class="mb-8" />
 
                 <x-post.tree.trunk :tree="$post->presenter()->tree()" />
 
