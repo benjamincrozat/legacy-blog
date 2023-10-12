@@ -41,7 +41,7 @@ $add = function () {
         <div class="grid grid-cols-3 gap-8 mt-8">
             @foreach (range(1, 9) as $item)
                 <div>
-                    <img src="https://via.placeholder.com/512x512.png/f3f4f6" />
+                    <img loading="lazy" src="https://via.placeholder.com/512x512.png/f3f4f6" />
 
                     <div class="flex items-start justify-between mt-4">
                         <div>

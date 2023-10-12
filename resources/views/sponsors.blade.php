@@ -336,7 +336,7 @@
                     <a href="https://alexandergaal.at" target="_blank" rel="noopener" class="text-blue-600 underline">Alexander Kroneis</a>, CEO at Gipfel Web Development
                 </cite>
 
-                <img src="{{ Vite::asset('resources/img/alexander.jpg') }}" alt="Alexander Gaal" class="aspect-square object-cover w-[36px] md:w-[48px] rounded-full h-[36px] md:h-[48px]" />
+                <img loading="lazy" src="{{ Vite::asset('resources/img/alexander.jpg') }}" alt="Alexander Gaal" class="aspect-square object-cover w-[36px] md:w-[48px] rounded-full h-[36px] md:h-[48px]" />
             </div>
         </blockquote>
 
@@ -350,7 +350,7 @@
                     <a href="https://tabacitu.ro" target="_blank" rel="noopener" class="text-blue-600 underline">Cristian Tăbăcitu</a>, creator of Backpack for Laravel
                 </cite>
 
-                <img src="{{ Vite::asset('resources/img/cristian.jpg') }}" alt="Cristian Tăbăcitu" class="aspect-square object-cover w-[36px] md:w-[48px] rounded-full h-[36px] md:h-[48px]" />
+                <img loading="lazy" src="{{ Vite::asset('resources/img/cristian.jpg') }}" alt="Cristian Tăbăcitu" class="aspect-square object-cover w-[36px] md:w-[48px] rounded-full h-[36px] md:h-[48px]" />
             </div>
         </blockquote>
 
@@ -365,7 +365,7 @@
                     <a href="https://wendelladriel.com" target="_blank" rel="noopener" class="text-blue-600 underline">Wendell Adriel</a>, creator of Lift and Validated DTO for Laravel
                 </cite>
 
-                <img src="{{ Vite::asset('resources/img/wendell.jpg') }}" alt="Wendell Adriel" class="aspect-square object-cover w-[36px] md:w-[48px] rounded-full h-[36px] md:h-[48px]" />
+                <img loading="lazy" src="{{ Vite::asset('resources/img/wendell.jpg') }}" alt="Wendell Adriel" class="aspect-square object-cover w-[36px] md:w-[48px] rounded-full h-[36px] md:h-[48px]" />
             </div>
         </blockquote>
     </div>

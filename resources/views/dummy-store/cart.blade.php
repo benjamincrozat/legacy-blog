@@ -30,7 +30,7 @@ $remove = function () {
                     @foreach (range(1, cache()->get(sha1(request()->ip()).'_count')) as $item)
                         <div class="flex items-center justify-between gap-4">
                             <div class="flex items-center gap-4">
-                                <img src="https://via.placeholder.com/256x256.png/f3f4f6" width="128" height="128" />
+                                <img loading="lazy" src="https://via.placeholder.com/256x256.png/f3f4f6" width="128" height="128" />
 
                                 <div>
                                     <div>{{ fake()->sentence(2) }}</div>
