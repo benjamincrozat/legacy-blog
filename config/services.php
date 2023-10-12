@@ -42,10 +42,14 @@ return [
     ],
 
     'lemonsqueezy' => [
+        'job_offer' => env('LEMONSQUEEZY_JOB_OFFER_CHECKOUT_LINK'),
         'sponsored_content' => env('LEMONSQUEEZY_SPONSORED_CONTENT_CHECKOUT_LINK'),
         'sponsorships' => [
             'monthly' => env('LEMONSQUEEZY_MONTHLY_SPONSORSHIP_CHECKOUT_LINK'),
             'yearly' => env('LEMONSQUEEZY_YEARLY_SPONSORSHIP_CHECKOUT_LINK'),
+            'one_time' => env('LEMONSQUEEZY_MONTHLY_ONE_TIME_SPONSORSHIP_CHECKOUT_LINK'),
+            'monthly_superhero' => env('LEMONSQUEEZY_MONTHLY_SUPERHERO_SPONSORSHIP_CHECKOUT_LINK'),
+            'monthly_demigod' => env('LEMONSQUEEZY_MONTHLY_DEMIGOD_SPONSORSHIP_CHECKOUT_LINK'),
         ],
     ],
 

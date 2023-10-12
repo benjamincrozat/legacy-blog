@@ -255,7 +255,7 @@
                     </li>
                 </ul>
 
-                <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/eb4c5ce9-c87e-4497-ab6b-b0922654e658?discount=0" class="table px-6 py-3 mx-auto mt-8 font-normal transition-opacity duration-500 bg-gray-200 rounded hover:opacity-50">
+                <a href="{{ config('services.lemonsqueezy.sponsorships.one_time') }}" class="table px-6 py-3 mx-auto mt-8 font-normal transition-opacity duration-500 bg-gray-200 rounded hover:opacity-50">
                     Get started
                 </a>
             </div>
@@ -282,7 +282,7 @@
                     </li>
                 </ul>
 
-                <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/6a0e4856-0fc4-4d47-9ca5-630dfd9ba82e?discount=0" class="table px-6 py-3 mx-auto mt-8 font-bold text-white transition-opacity duration-500 bg-blue-400 rounded hover:opacity-50">
+                <a href="{{ config('services.lemonsqueezy.sponsorships.monthly_superhero') }}" class="table px-6 py-3 mx-auto mt-8 font-bold text-white transition-opacity duration-500 bg-blue-400 rounded hover:opacity-50">
                     Get started
                 </a>
             </div>
@@ -314,7 +314,7 @@
                     </li>
                 </ul>
 
-                <a href="https://benjamincrozat.lemonsqueezy.com/checkout/buy/b95f140c-c882-4d81-b285-90a9b51e8228?discount=0" class="table px-6 py-3 mx-auto mt-8 font-bold text-white transition-opacity duration-500 bg-orange-400 rounded hover:opacity-50">
+                <a href="{{ config('services.lemonsqueezy.sponsorships.monthly_demigod') }}" class="table px-6 py-3 mx-auto mt-8 font-bold text-white transition-opacity duration-500 bg-orange-400 rounded hover:opacity-50">
                     Get started
                 </a>
             </div>
