@@ -53,7 +53,7 @@
                 </p>
 
                 <p class="mt-8">
-                    Are you a business owner? <a wire:navigate.hover href="{{ route('jobs.create') }}" class="text-indigo-600 underline">Post yours.</a>
+                    Are you a business owner? <a wire:navigate.hover href="{{ route('jobs.create') }}" class="text-indigo-600 underline">Post yours</a> and be featured.
                 </p>
             </div>
         @endif
