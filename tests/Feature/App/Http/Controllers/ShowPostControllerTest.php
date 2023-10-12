@@ -39,6 +39,10 @@ test('a given published post is shown correctly and the page view is tracked', f
     $view->first('link[rel="canonical"]')->hasAttribute('href', $link);
 
     $view
+        ->first('h1')
+        ->contains($post->title);
+
+    $view
         ->first("a[href=\"https://github.com/{$post->user->github_handle}\"]")
         ->hasAttribute('target', '_blank')
         ->hasAttribute('rel', 'nofollow noopener');
@@ -77,9 +81,8 @@ test('a given published community post is shown correctly', function () {
     $view->contains('Read more on ' . $post->presenter()->communityLinkDomain());
 
     $view
-        ->first("h1 a[href=\"$post->community_link\"]")
-        ->hasAttribute('target', '_blank')
-        ->hasAttribute('rel', 'noopener');
+        ->first('h1')
+        ->contains($post->title);
 
     $view
         ->last("a[href=\"$post->community_link\"]")
