@@ -29,13 +29,29 @@ class TrackPageView
 
     protected function shouldTrack(Request $request) : bool
     {
-        return config('services.pirsch.access_key') &&
-            'GET' === $request->method() &&
-            ! $request->hasHeader('X-Livewire') &&
-            // I'm always on the blog, I don't want to track my own visits.
-            1 !== auth()->id() &&
-            // Tracking for posts will happen in ShowPostController to avoid
-            // tracking visits on the ones that don't exist anymore.
-            ! $request->routeIs('filament.*', 'horizon.*', 'merchants.show', 'posts.show');
+        if (! config('services.pirsch.access_key')) {
+            return false;
+        }
+
+        if ($request->hasHeader('X-Livewire')) {
+            return false;
+        }
+
+        // I'm always on the blog, let's not inflate the numbers.
+        if (1 === auth()->id()) {
+            return false;
+        }
+
+        // Check \App\Http\Controllers\ShowPostController to see
+        // why I blocked posts.show at the middleware level.
+        if ($request->routeIs('filament.*', 'horizon.*', 'merchants.show', 'posts.show')) {
+            return false;
+        }
+
+        if ('GET' !== $request->method()) {
+            return false;
+        }
+
+        return true;
     }
 }
