@@ -5,7 +5,7 @@
     <x-section class="container mt-16">
         <x-slot:title class="text-center">
             @if ($posts->currentPage() > 1)
-                Page {{ $posts->currentPage() }}
+                Page {{ $posts->currentPage() }} of {{ $category->name }}
             @else
                 {{ $category->name }}
             @endif
