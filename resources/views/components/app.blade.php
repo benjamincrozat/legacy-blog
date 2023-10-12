@@ -90,7 +90,7 @@
                             <p>{{ $opening->company }} is looking for a <strong class="font-medium">{{ $opening->description }}</strong>! <x-heroicon-o-megaphone class="inline w-4 h-4 -translate-y-px" /></p>
                         </a>
                     @else
-                        <a href="https://larajobs.com?utm_source=benjamincrozat&utm_medium=banner&utm_campaign=benjamincrozat" target="_blank" rel="noopener sponsored" class="container flex items-center justify-center gap-4 py-3 md:gap-8">
+                        <a href="https://larajobs.com?utm_source=benjamincrozat&utm_medium=banner&utm_campaign=benjamincrozat" target="_blank" rel="noopener sponsored" class="container flex items-center justify-center gap-4 py-3">
                             <span>
                                 “Looking for your dream job? I recommend <span class="font-medium underline">LaraJobs</span>.”
                             </span>
