@@ -34,7 +34,7 @@
     </a>
 
     <a
-        href="https://inspector.dev/laravel"
+        href="https://inspector.dev/laravel?utm_source=benjamincrozat&utm_medium=logo&utm_campaign=benjamincrozat"
         target="_blank"
         rel="noopener"
         class="text-center"
