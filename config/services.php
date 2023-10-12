@@ -42,10 +42,10 @@ return [
     ],
 
     'lemonsqueezy' => [
-        'sponsored_content' => env('SPONSORED_CONTENT_CHECKOUT_LINK'),
+        'sponsored_content' => env('LEMONSQUEEZY_SPONSORED_CONTENT_CHECKOUT_LINK'),
         'sponsorships' => [
-            'monthly' => env('MONTHLY_SPONSORSHIP_CHECKOUT_LINK'),
-            'yearly' => env('YEARLY_SPONSORSHIP_CHECKOUT_LINK'),
+            'monthly' => env('LEMONSQUEEZY_MONTHLY_SPONSORSHIP_CHECKOUT_LINK'),
+            'yearly' => env('LEMONSQUEEZY_YEARLY_SPONSORSHIP_CHECKOUT_LINK'),
         ],
     ],
 
