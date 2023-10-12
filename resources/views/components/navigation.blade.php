@@ -55,7 +55,7 @@
                 <strong class="text-black transition-colors group-hover:text-white">Expose your job offers to 40,000 developers</strong>
             </x-menu.item>
 
-            <x-menu.item href="/best-web-development-tools" icon="s-wrench" class="text-emerald-400">
+            <x-menu.item href="https://benjamincrozat.com/best-web-development-tools" icon="s-wrench" class="text-emerald-400">
                 <strong class="text-black transition-colors group-hover:text-white">See all the tools I use</strong>
             </x-menu.item>
 
