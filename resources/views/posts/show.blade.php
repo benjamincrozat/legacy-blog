@@ -14,16 +14,7 @@
         <article class="mt-4">
             <x-prose>
                 <div class="mb-8">
-                    @if ($post->community_link)
-                        <h1>
-                            <a href="{{ $post->community_link }}" target="_blank" rel="noopener" class="underline">
-                                {{ $post->title }}
-                            </a>
-                        </h1>
-                    @else
-                        <h1>{{ $post->title }}</h1>
-                    @endif
-
+                    <h1>{{ $post->title }}</h1>
                     <x-post.date :post="$post" />
                 </div>
 
