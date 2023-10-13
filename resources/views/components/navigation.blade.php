@@ -52,7 +52,7 @@
             </x-menu.item>
 
             <x-menu.item href="{{ route('openings.create') }}" icon="s-briefcase" class="text-indigo-400">
-                <strong class="text-black transition-colors group-hover:text-white">Expose your job offers to 40,000 developers</strong>
+                <strong class="text-black transition-colors group-hover:text-white">Post your job offers to 40,000 potential hires</strong>
             </x-menu.item>
 
             <x-menu.item href="https://benjamincrozat.com/best-web-development-tools" icon="s-wrench" class="text-emerald-400">

@@ -64,7 +64,7 @@
             <div class="flex-grow">
                 <p>In a nutshell:</p>
                 <ol class="grid gap-2 pl-4 mt-2 ml-4 list-decimal">
-                    <li>Your job offers are randomly displayed in front of every potential candidates <strong class="font-medium">on every page</strong>.</li>
+                    <li>Your job offers are randomly displayed in front of every potential hires <strong class="font-medium">on every page</strong>.</li>
                     <li>They also are listed on a <a wire:navigate.hover href="{{ route('openings.index') }}" class="underline">dedicated page</a> <strong class="font-medium">above everyone else's</strong>.</li>
                     <li>Your job offers stay on my blog for <strong class="font-medium">an entire month</strong>.</li>
                 </ol>
@@ -92,7 +92,7 @@
                     <span x-text="Math.round(count).toLocaleString()">40,000</span>
                 </div>
 
-                <div>monthly visitors</div>
+                <div>monthly developers passing by</div>
             </div>
 
             <div class="col-span-1" x-data="{ count: 0, target: 63000 }" x-intersect.half="animateNumber">
@@ -174,7 +174,7 @@
 
             <p><strong>“The amount of developers passing by</strong> to sharpen their skills thanks to the technical content I write <strong>is massive</strong>. And the growth is not stopping anytime soon.</p>
 
-            <p>My audience is made of <strong>English-speaking developers from all over the world</strong>. Your ideal candidate has to be here and I make sure they don't miss your job offer.</p>
+            <p>My audience is made of <strong>English-speaking developers from all over the world</strong>. Your ideal hire has to be here and I make sure they don't miss your job offer.</p>
 
             <p><strong>People are always looking for new adventures and better work conditions.</strong> Take it as an opportunity to attract the ideal hire!”</p>
         </x-prose>
