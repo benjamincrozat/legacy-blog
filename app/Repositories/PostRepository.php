@@ -17,8 +17,7 @@ class PostRepository implements PostRepositoryContract
 
     public function get(string $slug) : ?Post
     {
-        return Post::query()
-            ->where('slug', $slug)
+        return Post::where('slug', $slug)
             ->with('categories', 'media')
             ->published()
             ->first();
@@ -27,8 +26,7 @@ class PostRepository implements PostRepositoryContract
     public function latest(int $page = null) : LengthAwarePaginator|Collection
     {
         /** @var LengthAwarePaginator|Collection */
-        $posts = Post::query()
-            ->with('categories', 'media')
+        $posts = Post::with('categories', 'media')
             ->published()
             ->orderByDesc('published_at')
             ->when(
@@ -43,8 +41,7 @@ class PostRepository implements PostRepositoryContract
     public function popular() : Collection
     {
         /** @var LengthAwarePaginator|Collection */
-        $posts = Post::query()
-            ->with('categories', 'media')
+        $posts = Post::with('categories', 'media')
             ->published()
             ->orderBy('sessions_last_7_days', 'desc')
             ->limit(9)
@@ -57,8 +54,7 @@ class PostRepository implements PostRepositoryContract
     {
         $ids = $this->getAlgoliaRecommendations($id)->pluck('objectID')->filter();
 
-        return Post::query()
-            ->with('categories', 'media')
+        return Post::with('categories', 'media')
             ->published()
             ->whereNotIn('id', [$id])
             ->when(

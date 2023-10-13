@@ -63,7 +63,7 @@
                 <p>In a nutshell:</p>
                 <ol class="grid gap-2 pl-4 mt-2 ml-4 list-decimal">
                     <li>Your job offers are randomly displayed at the top of the blog, <strong class="font-medium">on every page</strong>.</li>
-                    <li>They also are listed on a <a wire:navigate.hover href="{{ route('jobs.index') }}" class="underline">dedicated page</a> <strong class="font-medium">above everyone else's</strong>.</li>
+                    <li>They also are listed on a <a wire:navigate.hover href="{{ route('openings.index') }}" class="underline">dedicated page</a> <strong class="font-medium">above everyone else's</strong>.</li>
                     <li>Your job offers stay on my blog for <strong class="font-medium">an entire month</strong>.</li>
                 </ol>
             </div>

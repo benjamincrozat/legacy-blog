@@ -23,8 +23,8 @@ Route::post('/subscribe', SubscribeController::class)->name('subscribe');
 
 Route::view('/media-kit', 'media-kit')->name('media-kit');
 
-Route::get('/jobs', ListOpeningsController::class)->name('jobs.index');
-Route::view('/jobs/create', 'jobs.create')->name('jobs.create');
+Route::get('/jobs', ListOpeningsController::class)->name('openings.index');
+Route::view('/jobs/create', 'openings.create')->name('openings.create');
 
 Route::view('/sponsors', 'sponsors')->name('sponsors');
 

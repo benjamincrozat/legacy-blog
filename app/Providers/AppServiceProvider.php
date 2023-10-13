@@ -42,8 +42,7 @@ class AppServiceProvider extends ServiceProvider
 
         // This categories variable I pass in this view composer is also used in the blog's navigation.
         View::composer('components.navigation', function ($view) {
-            $categories ??= Category::query()
-                ->whereHas('posts')
+            $categories ??= Category::whereHas('posts')
                 ->orderBy('is_highlighted', 'desc')
                 ->orderBy('name')
                 ->get();
@@ -54,9 +53,7 @@ class AppServiceProvider extends ServiceProvider
         View::composer('*', function ($view) {
             static $opening;
 
-            $opening ??= Opening::query()
-                ->inRandomOrder()
-                ->first();
+            $opening ??= Opening::inRandomOrder()->first();
 
             $view->with(compact('opening'));
         });

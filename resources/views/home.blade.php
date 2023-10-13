@@ -81,6 +81,26 @@
         </ul>
     </x-section>
 
+    @if ($openings->isNotEmpty())
+        <x-section class="container mt-16 md:mt-32">
+            <x-slot:title class="text-center">
+                Lastest job offers
+            </x-slot:title>
+
+            <ul class="grid gap-16 mt-8 md:grid-cols-2">
+                @foreach ($openings as $opening)
+                    <li>
+                        <x-opening :opening="$opening" />
+                    </li>
+                @endforeach
+            </ul>
+
+            <x-button :href="route('openings.index')" class="table w-full px-6 mx-auto mt-10 bg-gray-200 sm:w-auto">
+                See more
+            </x-button>
+        </x-section>
+    @endif
+
     <x-section class="container mt-32">
         <x-slot:title class="text-center">
             Latest articles
@@ -94,7 +114,7 @@
             @endforeach
         </ul>
 
-        <x-button :href="route('posts.index')" class="table w-full px-6 mx-auto mt-8 bg-gray-200 sm:w-auto">
+        <x-button :href="route('posts.index')" class="table w-full px-6 mx-auto mt-10 bg-gray-200 sm:w-auto">
             See more
         </x-button>
     </x-section>

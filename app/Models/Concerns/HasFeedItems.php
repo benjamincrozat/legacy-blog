@@ -9,8 +9,7 @@ trait HasFeedItems
 {
     public static function getFeedItems() : Collection
     {
-        return self::query()
-            ->published()
+        return self::published()
             ->orderByDesc('published_at')
             ->limit(9)
             ->get();

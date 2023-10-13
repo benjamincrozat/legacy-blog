@@ -30,7 +30,7 @@
             @endforeach
         </x-menu.base>
 
-        <a wire:navigate.hover href="{{ route('jobs.index') }}">
+        <a wire:navigate.hover href="{{ route('openings.index') }}">
             @if (request()->routeIs('jobs.*'))
                 <x-heroicon-s-briefcase class="h-6 mx-auto text-indigo-400 md:h-7" />
             @else
@@ -51,7 +51,7 @@
                 <strong class="text-black transition-colors group-hover:text-white">Get more eyes on your business</strong>
             </x-menu.item>
 
-            <x-menu.item href="{{ route('jobs.create') }}" icon="s-briefcase" class="text-indigo-400">
+            <x-menu.item href="{{ route('openings.create') }}" icon="s-briefcase" class="text-indigo-400">
                 <strong class="text-black transition-colors group-hover:text-white">Expose your job offers to 40,000 developers</strong>
             </x-menu.item>
 
@@ -59,7 +59,7 @@
                 <strong class="text-black transition-colors group-hover:text-white">See all the tools I use</strong>
             </x-menu.item>
 
-            <x-menu.item href="{{ route('jobs.index') }}" icon="s-magnifying-glass">
+            <x-menu.item href="{{ route('openings.index') }}" icon="s-magnifying-glass">
                 Find a job
             </x-menu.item>
 

@@ -9,10 +9,8 @@ class ListOpeningsController extends Controller
 {
     public function __invoke() : View
     {
-        return view('jobs.index', [
-            'openings' => Opening::query()
-                ->latest()
-                ->paginate(30),
+        return view('openings.index', [
+            'openings' => Opening::latest()->paginate(30),
         ]);
     }
 }

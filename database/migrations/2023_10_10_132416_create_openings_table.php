@@ -14,7 +14,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug');
             $table->text('description')->nullable();
-            $table->string('link');
+            $table->string('link')->nullable();
             $table->string('location')->nullable();
             $table->string('remote_status')->nullable();
             $table->unsignedBigInteger('minimum_salary')->nullable();
