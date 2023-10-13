@@ -1,54 +1,56 @@
 <x-app
-    title="Expose your job offers to 40,000 developers each month"
+    title="Post your job offers to 40,000 developers each month"
     description="If you are hiring web developers, my blog can redirect a relevant audience to your job offers, today."
 >
     <div class="container mt-16">
         <x-icon-people class="h-24 mx-auto" />
 
         <h1 class="!text-4xl/none mt-8 lg:!text-5xl/none font-bold text-center">
-            Your job offers
-            <span class="text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">exposed to 40,000 developers!</span>
+            Post your job offers
+            <span class="text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">to 40,000 developers!</span>
         </h1>
 
         <h2 class="mt-2 text-center text-xl/tight md:text-2xl/tight lg:text-3xl/tight">
-            Find the ideal candidate <strong class="font-medium">faster</strong>.
+            Hire the ideal developer <strong class="font-medium">faster</strong>.
         </h2>
 
-        <div class="flex items-center justify-center gap-8 mt-14" x-data="{ quantity: 1 }">
-            <div class="flex items-center gap-2">
-                <button
-                    class="w-[32px] h-[32px] grid place-items-center text-white bg-gray-800 rounded-full"
-                    @click="quantity <= 1 ? (quantity = 1) : quantity--"
-                >
-                    <x-heroicon-s-minus class="w-4 h-4" />
-                    <span class="sr-only">Decrease quantity</span>
-                </button>
+        <div x-data="{ quantity: 1 }">
+            <div class="flex items-center justify-center gap-8 mt-14">
+                <div class="flex items-center gap-2">
+                    <button
+                        class="w-[32px] h-[32px] grid place-items-center text-white bg-gray-800 rounded-full"
+                        @click="quantity <= 1 ? (quantity = 1) : quantity--"
+                    >
+                        <x-heroicon-s-minus class="w-4 h-4" />
+                        <span class="sr-only">Decrease quantity</span>
+                    </button>
 
-                <span class="grid w-[32px] h-[32px] place-items-center font-mono" x-text="quantity">1</span>
+                    <span class="grid w-[32px] h-[32px] place-items-center font-mono" x-text="quantity">1</span>
 
-                <button
-                    class="w-[32px] h-[32px] grid place-items-center text-white bg-gray-800 rounded-full"
-                    @click="quantity++"
+                    <button
+                        class="w-[32px] h-[32px] grid place-items-center text-white bg-gray-800 rounded-full"
+                        @click="quantity++"
+                    >
+                        <x-heroicon-s-plus class="w-4 h-4" />
+                        <span class="sr-only">Increase quantity</span>
+                    </button>
+                </div>
+
+                <a
+                    :href="`{{ config('services.lemonsqueezy.job_offer') }}&quantity=${quantity}`"
+                    class="px-6 py-3 font-bold text-white bg-orange-400 rounded"
                 >
-                    <x-heroicon-s-plus class="w-4 h-4" />
-                    <span class="sr-only">Increase quantity</span>
-                </button>
+                    Get started for $<span class="font-mono" x-text="149 * quantity">149</span>
+                </a>
             </div>
 
-            <a
-                :href="`{{ config('services.lemonsqueezy.job_offer') }}&quantity=${quantity}`"
-                class="px-6 py-3 font-bold text-white bg-orange-400 rounded"
-            >
-                Get started for $<span class="font-mono" x-text="149 * quantity">149</span>
-            </a>
+            <p class="mt-4 text-sm text-center">Once the payment is done, you will receive instructions on how to send me your job <span x-text="quantity > 1 ? 'offers' : 'offer'">offers</span>.</p>
         </div>
-
-        <p class="mt-4 text-sm text-center">Once the payment is done, you will receive instructions on how to send me your job offers.</p>
     </div>
 
     <x-section id="numbers" class="container mt-16 xl:max-w-screen-lg scroll-mt-4">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
-            See how it works
+            See how job posting work on my blog
         </x-slot:title>
 
         <div class="flex flex-wrap gap-8 mt-8 md:flex-nowrap md:items-start md:justify-between md:gap-16">
@@ -62,7 +64,7 @@
             <div class="flex-grow">
                 <p>In a nutshell:</p>
                 <ol class="grid gap-2 pl-4 mt-2 ml-4 list-decimal">
-                    <li>Your job offers are randomly displayed at the top of the blog, <strong class="font-medium">on every page</strong>.</li>
+                    <li>Your job offers are randomly displayed in front of every potential candidates <strong class="font-medium">on every page</strong>.</li>
                     <li>They also are listed on a <a wire:navigate.hover href="{{ route('openings.index') }}" class="underline">dedicated page</a> <strong class="font-medium">above everyone else's</strong>.</li>
                     <li>Your job offers stay on my blog for <strong class="font-medium">an entire month</strong>.</li>
                 </ol>
@@ -80,7 +82,7 @@
 
     <x-section id="numbers" class="container mt-24 md:mt-32 scroll-mt-4">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
-            Get an ever growing amount of eyes on your job offers
+            Post your job offers to an ever growing amount of developers
         </x-slot:title>
 
         <div class="grid grid-cols-2 gap-16 mt-8 md:grid-cols-3">
@@ -164,11 +166,17 @@
 
     <x-section id="about" class="container mt-32 mb-16 lg:max-w-screen-md">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
-            Who am I?
+            Why post your job offers on my blog
         </x-slot:title>
 
-        <x-prose class="mt-8">
-            {!! Str::markdown(file_get_contents(resource_path('markdown/about.md'))) !!}
+        <x-prose class="mt-8 text-xl">
+            <img loading="lazy" src="https://www.gravatar.com/avatar/d58b99650fe5d74abeb9d9dad5da55ad?s=256" width="128" height="128" alt="Benjamin Crozat" class="float-right mb-8 ml-8 rounded-full" />
+
+            <p><strong>“The amount of developers passing by</strong> to sharpen their skills thanks to the technical content I write <strong>is massive</strong>. And the growth is not stopping anytime soon.</p>
+
+            <p>My audience is made of <strong>English-speaking developers from all over the world</strong>. Your ideal candidate has to be here and I make sure they don't miss your job offer.</p>
+
+            <p><strong>People are always looking for new adventures and better work conditions.</strong> Take it as an opportunity to attract the ideal hire!”</p>
         </x-prose>
     </x-section>
 </x-app>
