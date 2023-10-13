@@ -36,12 +36,11 @@ class OpeningFactory extends Factory
 
         return [
             'company' => fake()->company(),
-            'title' => $title = ucfirst("$remote $title in $city, $country"),
-            'slug' => Str::slug($title),
+            'title' => ucfirst("$remote $title in $city, $country"),
+            'slug' => fn (array $attributes) : string => Str::slug($attributes['title']),
             'description' => fake()->paragraphs(3, true),
-            'link' => collect([null, fake()->url()])->random(),
             'location' => "$city, $country",
-            'remote_status' => collect(['remote', 'partially_remote', 'on_site'])->random(),
+            'remote_status' => collect(['full', 'partial', 'on_site'])->random(),
             'minimum_salary' => collect([25000, 30000, 35000])->random(),
             'maximum_salary' => collect([45000, 50000, 55000])->random(),
             'created_at' => fake()->dateTimeBetween('-1 month'),

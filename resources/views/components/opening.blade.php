@@ -1,33 +1,35 @@
-<div class="flex items-start justify-between gap-6">
-    <div class="flex flex-col">
-        <p class="font-bold">
-            <a href="{{ $opening->link ?? '#' }}" @if ($opening->link) target="_blank" rel="noopener" @endif class="text-indigo-600 underline">
-                @if ($opening->link)
-                    <x-heroicon-o-arrow-top-right-on-square
-                        class="inline w-4 h-4 mr-[.425rem] translate-y-[-2px]"
-                    />
-                @endif
+<div class="flex items-start gap-6">
+    <a href="#" class="flex-shrink-0">
+        <img
+            src="{{ fake()->imageUrl() }}"
+            width="64"
+            height="64"
+            alt="{{ $opening->company }}'s logo"
+            class="mt-1 aspect-square w-[48px] md:w-[64px] h-[48px] md:h-[64px]"
+        />
+    </a>
 
+    <div class="flex flex-col">
+        <p class="font-bold sm:text-lg md:text-xl">
+            <a href="{{ route('openings.show', $opening) }}" class="text-indigo-600 underline">
                 {{ $opening->title }}
             </a>
         </p>
 
-        <p class="flex-grow">
-            {{ $opening->company }} <span class="mx-1 text-xs">•</span>
-            {{ money($opening->minimum_salary) }}-{{ money($opening->maximum_salary) }} <span class="mx-1 text-xs">•</span>
-            {{ $opening->location }}
+        <p class="flex-grow mt-2">
+            <strong class="font-bold">Company:</strong> {{ $opening->company }}
         </p>
 
         <p class="mt-2">
-            <a href="#" class="underline">{{ $opening->created_at->diffForHumans() }}</a>
+            <strong class="font-bold">Salary:</strong> {{ money($opening->minimum_salary) }}-{{ money($opening->maximum_salary) }}
+        </p>
+
+        <p class="mt-2">
+            <strong class="font-bold">Location:</strong> {{ $opening->location }}
+        </p>
+
+        <p class="mt-2">
+            Published {{ $opening->created_at->diffForHumans() }}
         </p>
     </div>
-
-    <img
-        src="{{ fake()->imageUrl() }}"
-        width="64"
-        height="64"
-        alt="{{ $opening->company }}'s logo"
-        class="flex-shrink-0 mt-1 aspect-square"
-    />
 </div>

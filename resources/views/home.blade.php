@@ -84,7 +84,7 @@
     @if ($openings->isNotEmpty())
         <x-section class="container mt-16 md:mt-32">
             <x-slot:title class="text-center">
-                Lastest job offers
+                @choice(':count job offer is available|:count job offers are available', $openings->count())
             </x-slot:title>
 
             <ul class="grid gap-16 mt-8 md:grid-cols-2">

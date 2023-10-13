@@ -24,6 +24,8 @@ class AdminPanelProvider extends PanelProvider
     {
         return $panel
             ->authMiddleware([Authenticate::class])
+            ->brandLogo(fn () => view('filament.logo'))
+            ->brandLogoHeight('2rem')
             ->colors(['primary' => Color::Indigo])
             ->databaseNotifications()
             ->default()

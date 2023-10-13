@@ -31,13 +31,13 @@
         </x-menu.base>
 
         <a wire:navigate.hover href="{{ route('openings.index') }}">
-            @if (request()->routeIs('jobs.*'))
+            @if (request()->routeIs('openings.*'))
                 <x-heroicon-s-briefcase class="h-6 mx-auto text-indigo-400 md:h-7" />
             @else
                 <x-heroicon-o-briefcase class="h-6 mx-auto md:h-7" />
             @endif
 
-            <div class="text-xs font-normal @if (request()->routeIs('jobs.*')) text-indigo-600 @endif">Jobs</div>
+            <div class="text-xs font-normal @if (request()->routeIs('openings.*')) text-indigo-600 @endif">Jobs</div>
         </a>
 
         <x-menu.base>
@@ -57,10 +57,6 @@
 
             <x-menu.item href="https://benjamincrozat.com/best-web-development-tools" icon="s-wrench" class="text-emerald-400">
                 <strong class="text-black transition-colors group-hover:text-white">See all the tools I use</strong>
-            </x-menu.item>
-
-            <x-menu.item href="{{ route('openings.index') }}" icon="s-magnifying-glass">
-                Find a job
             </x-menu.item>
 
             <x-menu.item href="{{ route('pouest') }}" icon="o-forward">

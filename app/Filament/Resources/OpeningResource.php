@@ -83,19 +83,14 @@ class OpeningResource extends Resource
 
                     Forms\Components\Select::make('remote_status')
                         ->options([
-                            'remote' => 'Remote',
-                            'partially_remote' => 'Partially remote',
+                            'full' => 'Full',
+                            'partial' => 'Partial',
                             'on_site' => 'On-site',
                         ])
-                        ->default('remote'),
+                        ->default('full'),
 
                     Forms\Components\TextInput::make('location')
                         ->maxLength(255),
-
-                    Forms\Components\TextInput::make('link')
-                        ->url()
-                        ->maxLength(255)
-                        ->helperText("When filled, the opening will have a distinct appearance that makes it clear it's shared."),
 
                     Forms\Components\Group::make()
                         ->schema([

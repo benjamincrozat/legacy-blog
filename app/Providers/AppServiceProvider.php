@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
 use App\Repositories\CategoryRepository;
 use Algolia\AlgoliaSearch\RecommendClient;
+use Illuminate\Contracts\Database\Eloquent\Builder;
 use App\Repositories\Contracts\PostRepositoryContract;
 use App\Repositories\Contracts\CategoryRepositoryContract;
 
@@ -42,7 +43,7 @@ class AppServiceProvider extends ServiceProvider
 
         // This categories variable I pass in this view composer is also used in the blog's navigation.
         View::composer('components.navigation', function ($view) {
-            $categories ??= Category::whereHas('posts')
+            $categories ??= Category::whereHas('posts', fn (Builder $query) => $query->published())
                 ->orderBy('is_highlighted', 'desc')
                 ->orderBy('name')
                 ->get();
@@ -51,11 +52,11 @@ class AppServiceProvider extends ServiceProvider
         });
 
         View::composer('*', function ($view) {
-            static $opening;
+            static $randomOpening;
 
-            $opening ??= Opening::inRandomOrder()->first();
+            $randomOpening ??= Opening::inRandomOrder()->first();
 
-            $view->with(compact('opening'));
+            $view->with(compact('randomOpening'));
         });
 
         Vite::useScriptTagAttributes(['defer' => true]);

@@ -10,7 +10,7 @@ class ListOpeningsController extends Controller
     public function __invoke() : View
     {
         return view('openings.index', [
-            'openings' => Opening::latest()->paginate(30),
+            'openings' => Opening::latest()->get(),
         ]);
     }
 }
