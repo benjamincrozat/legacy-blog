@@ -24,6 +24,18 @@
             </div>
         </x-section>
     @else
-        <p>There are no job offers yet. Do you have a business? <a wire:navigate.hover href="{{ route('openings.create') }}">Post yours</a>! Or go check <a href="https://larajobs.com?utm_source=benjamincrozat&utm_medium=recommendation&utm_campaign=benjamincrozat">LaraJobs</a>!</p>
+        <div class="container mt-8 text-center lg:max-w-screen-md">
+            <p class="text-2xl">
+                There are no job offers at the moment.
+            </p>
+
+            <p class="mt-8 text-2xl">
+                Do you have a business? Tons of developers are waiting!
+            </p>
+
+            <x-button :href="route('openings.create')" class="px-6 mt-10 text-white bg-orange-400">
+                Post your job offer
+            </x-button>
+        </div>
     @endif
 </x-app>
