@@ -6,6 +6,8 @@
         <img
             loading="lazy"
             src="{{ $post->presenter()->image() ?? Vite::asset('resources/img/placeholder.jpg') }}"
+            width="1000"
+            width="562"
             alt="{{ $post->title }}"
             class="object-cover mb-4 aspect-video"
         />

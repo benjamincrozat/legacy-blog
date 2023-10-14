@@ -20,7 +20,14 @@
                 <x-post.tree.trunk :tree="$post->presenter()->tree()" />
 
                 @if ($image = $post->presenter()->image())
-                    <img loading="lazy" src="{{ $image }}" alt="{{ $post->title }}" class="w-full" />
+                    <img
+                        loading="lazy"
+                        src="{{ $image }}"
+                        width="1000"
+                        height="562"
+                        alt="{{ $post->title }}"
+                        class="object-cover w-full aspect-video"
+                    />
                 @endif
 
                 {!! $post->presenter()->content() !!}
