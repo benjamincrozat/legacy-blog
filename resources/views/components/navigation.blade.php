@@ -64,7 +64,7 @@
             </x-menu.item>
 
             <x-menu.item href="{{ route('pint-express') }}" icon="o-paint-brush">
-                Format and beautify your PHP code on the web
+                Format and beautify your PHP code
             </x-menu.item>
 
             <x-menu.item href="https://github.com/benjamincrozat/benjamincrozat.com" target="_blank" rel="nofollow noopener" icon="o-code-bracket">
