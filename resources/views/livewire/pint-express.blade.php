@@ -26,7 +26,7 @@ $format = function () {
         $this->code = "<?php $this->code";
     }
 
-    File::put($path = sys_get_temp_dir() . "$hash", $this->code);
+    File::put($path = sys_get_temp_dir() . "/$hash", $this->code);
 
     $binary = config('pint-express.php_binary');
 
