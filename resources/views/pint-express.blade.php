@@ -3,10 +3,10 @@
     description="Pint Express lets you leverage Laravel Pint on the web to quickly format and beautify any PHP code snippet using the Laravel, PER, PSR-12, or Symfony coding style presets."
     :hide-navigation="true"
     :hide-footer="true"
-    class="py-8"
+    class="pb-8"
 >
     <div class="container lg:max-w-screen-md">
-        <x-breadcrumb class="mb-7 md:mb-14">
+        <x-breadcrumb class="mt-8 mb-7 md:mb-14">
             Format and beautify your PHP code on the web
         </x-breadcrumb>
 
