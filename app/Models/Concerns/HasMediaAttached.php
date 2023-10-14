@@ -26,6 +26,10 @@ trait HasMediaAttached
             ->fit(Manipulations::FIT_CONTAIN, 1500, 1500);
 
         $this
+            ->addMediaConversion('small')
+            ->fit(Manipulations::FIT_CONTAIN, 640, 640);
+
+        $this
             ->addMediaConversion('preview')
             ->fit(Manipulations::FIT_CROP, 300, 300);
     }
