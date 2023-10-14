@@ -83,7 +83,7 @@
         x-init="$nextTick(() => Prism.highlightAll())"
     >
         <div class="flex flex-col min-h-screen">
-            @if (! request()->routeIs('dummy-store.*', 'media-kit', 'openings.*', 'sponsors'))
+            @if (! request()->routeIs('dummy-store.*', 'media-kit', 'openings.*', 'pouest', 'sponsors'))
                 @if ($randomOpening)
                     <a href="{{ route('openings.show', $randomOpening) }}" class="block text-sm text-indigo-700 bg-gradient-to-r from-indigo-50 to-indigo-50/50">
                         <div class="container py-3 text-center sm:max-w-[420px]">
