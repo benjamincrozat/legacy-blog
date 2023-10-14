@@ -1,18 +1,18 @@
 <x-app
-    title="Format and beautify your PHP code with Pint Express"
-    description="Pint Express lets you use Laravel Pint to quickly format and beautify any PHP code snippet using the Laravel, PER, PSR-12, or Symfony coding style presets."
+    title="Format and beautify your PHP code on the web"
+    description="Pint Express lets you leverage Laravel Pint on the web to quickly format and beautify any PHP code snippet using the Laravel, PER, PSR-12, or Symfony coding style presets."
     :hide-navigation="true"
     :hide-footer="true"
     class="py-8"
 >
     <div class="container lg:max-w-screen-md">
         <x-breadcrumb class="mb-7 md:mb-14">
-            Format and beautify your PHP code with Pint Express
+            Format and beautify your PHP code on the web
         </x-breadcrumb>
 
         <div class="text-2xl text-center sm:text-3xl md:text-4xl lg:text-5xl">Pint Express</div>
 
-        <h1 class="text-lg font-thin text-center sm:text-xl md:text-2xl lg:text-3xl">Format and beautify your PHP code</h1>
+        <h1 class="text-lg font-thin text-center sm:text-xl md:text-2xl lg:text-3xl">Format and beautify your PHP code on the web</h1>
     </div>
 
     <x-section class="container mt-8 md:mt-16 lg:max-w-screen-md">
