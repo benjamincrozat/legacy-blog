@@ -96,7 +96,7 @@
             </ul>
 
             <x-button :href="route('openings.index')" class="table w-full px-6 mx-auto mt-10 bg-gray-200 sm:w-auto">
-                See more
+                Learn more about job offers
             </x-button>
         </x-section>
     @endif
@@ -115,7 +115,7 @@
         </ul>
 
         <x-button :href="route('posts.index')" class="table w-full px-6 mx-auto mt-10 bg-gray-200 sm:w-auto">
-            See more
+            See more of the latest articles
         </x-button>
     </x-section>
 
