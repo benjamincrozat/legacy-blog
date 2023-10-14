@@ -55,6 +55,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->path('admin')
             ->sidebarCollapsibleOnDesktop()
+            ->spa()
             ->widgets([
                 Widgets\AccountWidget::class,
                 Widgets\FilamentInfoWidget::class,
