@@ -11,7 +11,7 @@ class PostPresenter extends BasePresenter
 {
     public function image() : ?string
     {
-        return $this->model->getFirstMedia('image')?->getAvailableFullUrl(['optimized']);
+        return $this->model->getFirstMedia('image')?->getAvailableFullUrl(['medium']);
     }
 
     public function imagePreview() : ?string
