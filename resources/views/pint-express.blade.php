@@ -9,7 +9,7 @@
             Format and beautify your PHP code on the web
         </x-breadcrumb>
 
-        <x-icon-pint-express class="h-16 mx-auto rounded-lg sm:h-24 md:h-28 lg:h-32" />
+        <img src="{{ Vite::asset('resources/img/pint-express.jpg') }}" width="256" height="256" alt="Pint Express" class="object-cover w-auto h-20 mx-auto rounded-lg md:rounded-xl lg:rounded-3xl sm:h-24 md:h-28 lg:h-32" />
 
         <div class="mt-4 text-center text-2xl/tight sm:text-3xl/tight md:text-4xl/tight lg:text-5xl/tight">Pint Express</div>
 
