@@ -19,6 +19,7 @@ Route::get('/posts', ListPostsController::class)->name('posts.index');
 Route::get('/recommends/{merchant:slug}', ShowMerchantController::class)->name('merchants.show');
 
 Route::view('/phpunit-to-pest', 'pouest')->name('pouest');
+Route::view('/pint-express', 'pint-express')->name('pint-express');
 
 Route::post('/subscribe', SubscribeController::class)->name('subscribe');
 
