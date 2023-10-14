@@ -10,6 +10,7 @@
         "laravel/fortify": "^1.17",
         "laravel/framework": "^10.0",
         "laravel/horizon": "^5.19",
+        "laravel/octane": "^2.1",
         "laravel/prompts": "^0.1.1",
         "laravel/scout": "^10.2",
         "laravel/tinker": "^2.8",
