@@ -22,8 +22,8 @@ trait HasMediaAttached
     public function registerMediaConversions(Media $media = null) : void
     {
         $this
-            ->addMediaConversion('optimized')
-            ->fit(Manipulations::FIT_CONTAIN, 1500, 1500);
+            ->addMediaConversion('large')
+            ->fit(Manipulations::FIT_CONTAIN, 1200, 1200);
 
         $this
             ->addMediaConversion('medium')

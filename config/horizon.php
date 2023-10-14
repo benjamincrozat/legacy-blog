@@ -198,7 +198,7 @@ return [
             'supervisor-1' => [
                 'balanceCooldown' => 3,
                 'balanceMaxShift' => 1,
-                'maxProcesses' => 10,
+                'maxProcesses' => 1,
                 'timeout' => 120,
             ],
         ],
