@@ -17,8 +17,8 @@ class CategoryRepository implements CategoryRepositoryContract
     {
         return $category->posts()
             ->with('categories', 'media')
-            ->latest()
             ->published()
+            ->orderByDesc('published_at')
             ->paginate(21);
     }
 }
