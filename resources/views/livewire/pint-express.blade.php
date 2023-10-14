@@ -28,8 +28,10 @@ $format = function () {
 
     File::put($path = sys_get_temp_dir() . "$hash", $this->code);
 
+    $binary = config('pint-express.php_binary');
+
     $result = Process::path(base_path())
-        ->run("/opt/homebrew/bin/php vendor/bin/pint $path --preset $this->preset")
+        ->run("$binary vendor/bin/pint $path --preset $this->preset")
         ->throw();
 
     $this->result = File::get($path);
