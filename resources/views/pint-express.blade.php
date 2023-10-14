@@ -9,9 +9,9 @@
             Format and beautify your PHP code on the web
         </x-breadcrumb>
 
-        <div class="text-2xl text-center sm:text-3xl md:text-4xl lg:text-5xl">Pint Express</div>
+        <div class="text-center text-2xl/tight sm:text-3xl/tight md:text-4xl/tight lg:text-5xl/tight">Pint Express</div>
 
-        <h1 class="font-thin text-center sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">Format and beautify your PHP code on the web</h1>
+        <h1 class="text-center text-gray-500 lg:font-thin sm:text-lg/tight md:text-xl/tight lg:text-2xl/tight xl:text-3xl/tight">Format and beautify your PHP code on the web</h1>
     </div>
 
     <x-section class="container mt-8 md:mt-16 lg:max-w-screen-md">
