@@ -1,6 +1,7 @@
 <x-app
     title="Format and beautify your PHP code on the web"
     description="Pint Express lets you leverage Laravel Pint on the web to quickly format and beautify any PHP code snippet using the Laravel, PER, PSR-12, or Symfony coding style presets."
+    image="{{ Vite::asset('resources/img/og-image-pint-express.jpg') }}"
     :hide-navigation="true"
     class="pb-8"
 >
