@@ -1,7 +1,7 @@
 <div {{ $attributes }}>
     <footer class="container py-8 text-center">
         <p>
-            Hosting by <a href="{{ route('merchants.show', 'ploi') }}" target="_blank" rel="noopener" class="font-medium underline">Ploi</a> + <a href="{{ route('merchants.show', 'digitalocean') }}" target="_blank" rel="noopener" class="font-medium underline">DigitalOcean</a>,
+            Hosting by <a href="{{ route('merchants.show', 'digitalocean') }}" target="_blank" rel="noopener" class="font-medium underline">DigitalOcean</a> + <a href="{{ route('merchants.show', 'ploi') }}" target="_blank" rel="noopener" class="font-medium underline">Ploi</a>,
             tracking by <a href="{{ route('merchants.show', 'pirsch-analytics') }}" target="_blank" rel="noopener" class="font-medium underline">Pirsch Analytics</a>, and some illustrations come from <a href="https://www.freepik.com" target="_blank" rel="nofollow noopener" class="font-medium underline">Freepik</a>.
         </p>
 
