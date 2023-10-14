@@ -172,7 +172,7 @@
         <x-prose class="mt-8 text-xl">
             <img loading="lazy" src="https://www.gravatar.com/avatar/d58b99650fe5d74abeb9d9dad5da55ad?s=256" width="128" height="128" alt="Benjamin Crozat" class="float-right mb-8 ml-8 rounded-full" />
 
-            <p><strong>“The amount of developers passing by</strong> to sharpen their skills thanks to the technical content I write <strong>is massive</strong>. And the growth is not stopping anytime soon.</p>
+            <p><strong>“The amount of developers passing by</strong> to sharpen their diverse skills (CSS, database, JavaScript, Laravel, PHP, SEO, Vue.js, etc.) thanks to the technical content I write <strong>is massive</strong>. And the growth is not stopping anytime soon.</p>
 
             <p>My audience is made of <strong>English-speaking developers from all over the world</strong>. Your ideal hire has to be here and I make sure they don't miss your job offer.</p>
 
