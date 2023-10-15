@@ -24,18 +24,8 @@
             </div>
         </x-section>
     @else
-        <div class="container mt-8 text-center lg:max-w-screen-md">
-            <p class="text-2xl">
-                There are no job offers at the moment.
-            </p>
-
-            <p class="mt-8 text-2xl">
-                Do you have a business? Tons of developers are waiting!
-            </p>
-
-            <x-button :href="route('openings.create')" class="px-6 mt-10 text-white bg-orange-400">
-                Post your job offer
-            </x-button>
-        </div>
+        <p class="container text-2xl mt-8 text-center lg:max-w-screen-md">
+            There are no job offers at the moment.
+        </p>
     @endif
 </x-app>
