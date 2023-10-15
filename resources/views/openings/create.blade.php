@@ -14,38 +14,14 @@
             Hire the ideal developer <strong class="font-medium">faster</strong>.
         </h2>
 
-        <div x-data="{ quantity: 1 }">
-            <div class="flex items-center justify-center gap-8 mt-14">
-                <div class="flex items-center gap-2">
-                    <button
-                        class="w-[32px] h-[32px] grid place-items-center text-white bg-gray-800 rounded-full"
-                        @click="quantity <= 1 ? (quantity = 1) : quantity--"
-                    >
-                        <x-heroicon-s-minus class="w-4 h-4" />
-                        <span class="sr-only">Decrease quantity</span>
-                    </button>
+        <a
+            href="{{ config('services.lemonsqueezy.job_offer') }}"
+            class="table px-6 py-3 mx-auto font-bold text-white bg-orange-400 rounded mt-14"
+        >
+            Get started for $149
+        </a>
 
-                    <span class="grid w-[32px] h-[32px] place-items-center font-mono" x-text="quantity">1</span>
-
-                    <button
-                        class="w-[32px] h-[32px] grid place-items-center text-white bg-gray-800 rounded-full"
-                        @click="quantity++"
-                    >
-                        <x-heroicon-s-plus class="w-4 h-4" />
-                        <span class="sr-only">Increase quantity</span>
-                    </button>
-                </div>
-
-                <a
-                    :href="`{{ config('services.lemonsqueezy.job_offer') }}&quantity=${quantity}`"
-                    class="px-6 py-3 font-bold text-white bg-orange-400 rounded"
-                >
-                    Get started for $<span class="font-mono" x-text="149 * quantity">149</span>
-                </a>
-            </div>
-
-            <p class="mt-4 text-sm text-center">Once the payment is done, you will receive instructions on how to send me your job <span x-text="quantity > 1 ? 'offers' : 'offer'">offers</span>.</p>
-        </div>
+        <p class="mt-4 text-sm text-center">Once the payment is done, you will receive instructions on how to send me your job offer.</p>
     </div>
 
     <x-section id="numbers" class="container mt-16 xl:max-w-screen-lg scroll-mt-4">
