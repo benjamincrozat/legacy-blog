@@ -61,20 +61,26 @@ $again = function () {
     @else
         <form wire:submit="format" class="grid gap-2">
             <div>
-                <label for="preset" class="sr-only">
+                <label for="preset" class="text-xs font-bold uppercase">
                     Preset
                 </label>
 
-                <select id="preset" wire:model="preset" required class="w-full px-4 py-3 border-gray-200 rounded">
+                <select id="preset" wire:model="preset" required class="w-full px-4 py-3 mt-1 border-gray-200 rounded">
                     <option value="laravel" selected>Laravel code style</option>
                     <option value="per" selected>PER code style</option>
                     <option value="psr12" selected>PSR-12 code style</option>
                     <option value="symfony" selected>Symfony code style</option>
                 </select>
+
+                @error('preset')
+                    <div class="text-sm font-medium text-red-400">
+                        {{ $message }}
+                    </div>
+                @enderror
             </div>
 
             <div>
-                <label for="code" class="sr-only">
+                <label for="code" class="text-xs font-bold uppercase">
                     Code
                 </label>
 
@@ -83,9 +89,15 @@ $again = function () {
                     wire:model="code"
                     placeholder="Your PHP code snippet here…"
                     required
-                    class="w-full min-h-[30vh] px-4 py-3 placeholder-gray-300 border-gray-200 rounded resize-none"
+                    class="mt-1 w-full min-h-[30vh] px-4 py-3 placeholder-gray-300 border-gray-200 rounded resize-none"
                     x-ref="code"
                 ></textarea>
+
+                @error('code')
+                    <div class="text-sm font-medium text-red-400">
+                        {{ $message }}
+                    </div>
+                @enderror
             </div>
 
             <x-button class="bg-[#ffa301] text-white mt-2">
