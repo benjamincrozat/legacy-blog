@@ -66,10 +66,10 @@ $again = function () {
                 </label>
 
                 <select id="preset" wire:model="preset" required class="w-full px-4 py-3 border-gray-200 rounded">
-                    <option value="laravel" selected>Laravel</option>
-                    <option value="per" selected>PER</option>
-                    <option value="psr12" selected>PSR-12</option>
-                    <option value="symfony" selected>Symfony</option>
+                    <option value="laravel" selected>Laravel code style</option>
+                    <option value="per" selected>PER code style</option>
+                    <option value="psr12" selected>PSR-12 code style</option>
+                    <option value="symfony" selected>Symfony code style</option>
                 </select>
             </div>
 
