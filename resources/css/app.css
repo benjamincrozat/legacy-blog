@@ -5,3 +5,25 @@
 [x-cloak] {
     @apply hidden;
 }
+
+pre[class*="language-"]::selection {
+    background: hsl(0, 0%, 50%)
+}
+
+pre[class*="language-"]::selection {
+    background: hsl(0, 0%, 50%)
+}
+
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
+    background: hsl(0, 0%, 50%)
+}
+
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
+    background: hsl(0, 0%, 50%)
+}
