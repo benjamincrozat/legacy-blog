@@ -5,9 +5,9 @@
     <div class="container mt-16">
         <x-icon-people class="h-24 mx-auto" />
 
-        <h1 class="!text-4xl/none mt-8 lg:!text-5xl/none font-bold text-center">
+        <h1 class="!text-3xl md:!text-4xl/none mt-8 lg:!text-5xl/none font-bold text-center">
             Post your job offers
-            <span class="text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">to 40,000 developers!</span>
+            <span class="text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">to 40,000 web developers!</span>
         </h1>
 
         <h2 class="mt-2 text-center text-xl/tight md:text-2xl/tight lg:text-3xl/tight">
