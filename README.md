@@ -42,7 +42,7 @@ This is a small project. It certainly won't teach you how to maintain apps at hu
 - **I don't care about code coverage and static analysis**, so you won't find that here.
 - **This is pure and plain Laravel.** If you know the framework, you can find your way around the codebase.
 - **The tests are organized just like the source code.** Most of the time, it makes it easier to know what is tested and what is not.
-- **My commit history is garbage.** I'm sorry and I know it's wrong. But when you are working alone of a project, it's hard to maintain discipline for such things.
+- **My commit history is garbage.** I'm sorry and I know it's wrong. But when you are working alone on a project, it's hard to maintain discipline for such things.
 
 ## Requirements
 
