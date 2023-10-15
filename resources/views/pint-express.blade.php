@@ -23,7 +23,7 @@
 
     <section class="container mt-8 md:mt-16 lg:max-w-screen-md">
         <x-prose>
-            <h2>Meet Pint Express; a simple and solid PHP beautifier.</h2>
+            <h2>Meet Pint Express: a simple and solid PHP beautifier.</h2>
 
             <p>Pint Express serves as a convenient PHP beautifier, specifically designed to make your life easier when dealing with PHP code. Whether you're a seasoned developer or someone new to the game, handling messy or inconsistent code can be a headache. That's where Pint Express comes in, offering a smooth experience to bring your code up to a more readable and maintainable standard.</p>
 
