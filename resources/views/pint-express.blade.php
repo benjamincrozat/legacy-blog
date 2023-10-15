@@ -21,7 +21,7 @@
         <livewire:pint-express />
     </x-section>
 
-    <section class="container mt-8 md:mt-16 lg:max-w-screen-md">
+    <section class="container mt-16 lg:max-w-screen-md">
         <x-prose>
             <h2>Meet Pint Express: a simple and solid PHP beautifier.</h2>
 
