@@ -33,7 +33,7 @@
 
             <h2>What is Laravel Pint?</h2>
 
-            <p><a href="https://laravel.com/docs/pint" rel="nofollow noopener">Laravel Pint</a> is an opinionated PHP code style fixer engineered for minimalists who appreciate clean and consistent code. Built on the well-established <a href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer" rel="nofollow noopener">PHP-CS-Fixer</a>, it offers a seamless way to enforce a uniform coding style across your Laravel project. If you've been yearning for a tool that just "gets" how Laravel code should look and feel, Laravel Pint is your answer.</p>
+            <p><a href="https://laravel.com/docs/pint" rel="nofollow noopener">Laravel Pint</a> is an opinionated PHP code style fixer engineered for minimalists who appreciate clean and consistent code. Built on the well-established <a href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer" rel="nofollow noopener">PHP-CS-Fixer</a>, it offers a seamless way to enforce a uniform coding style across your Laravel or PHP project. If you've been yearning for a tool that just "gets" how Laravel code should look and feel, Laravel Pint is your answer.</p>
 
             <p>The beauty of Laravel Pint lies in its simplicity. Installation is typically a non-issue, especially if you're using recent releases of the Laravel framework, where Pint comes pre-installed. You can start using it right away without any configuration hassles, and yet it still offers the flexibility for customization if you need it.</p>
 
