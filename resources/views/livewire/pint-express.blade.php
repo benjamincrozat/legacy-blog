@@ -49,7 +49,7 @@ $again = function () {
 <div>
     @if ($result)
         <x-prose>
-            <pre><code class="language-php">{{ $result }}</code></pre>
+            <pre><code class="language-php" x-effect="$nextTick(() => Prism.highlightAll())">{{ $result }}</code></pre>
         </x-prose>
 
         <x-button
