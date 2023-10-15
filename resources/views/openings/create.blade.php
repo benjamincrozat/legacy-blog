@@ -1,12 +1,12 @@
 <x-app
-    title="Post your job offers to 40,000 developers each month"
-    description="If you are hiring web developers, my blog can redirect a relevant audience to your job offers, today."
+    title="Post your job offer to 40,000 developers each month"
+    description="If you are hiring web developers, my blog can redirect a relevant audience to your job offer, today."
 >
     <div class="container mt-16">
         <x-icon-people class="h-24 mx-auto" />
 
         <h1 class="!text-3xl md:!text-4xl/none mt-8 lg:!text-5xl/none font-bold text-center">
-            Post your job offers
+            Post your job offer
             <span class="text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">to 40,000 web developers!</span>
         </h1>
 
@@ -32,7 +32,7 @@
         <div class="flex flex-wrap gap-8 mt-8 md:flex-nowrap md:items-start md:justify-between md:gap-16">
             <div
                 class="w-full grid place-items-center md:max-w-[33.33%] h-full bg-black aspect-video rounded-lg shadow-lg"
-                @click="alert("Coming soon! I'm still making adjustments to how I handle job offers.")"
+                @click="alert("Coming soon! I'm still making adjustments to how I handle job offer.")"
             >
                 <x-heroicon-s-play class="w-16 h-16 text-white" />
             </div>
@@ -40,9 +40,9 @@
             <div class="flex-grow">
                 <p>In a nutshell:</p>
                 <ol class="grid gap-2 pl-4 mt-2 ml-4 list-decimal">
-                    <li>Your job offers are randomly displayed in front of every potential hires <strong class="font-medium">on every page</strong>.</li>
+                    <li>Your job offer are randomly displayed in front of every potential hires <strong class="font-medium">on every page</strong>.</li>
                     <li>They also are listed on a <a wire:navigate.hover href="{{ route('openings.index') }}" class="underline">dedicated page</a> <strong class="font-medium">above everyone else's</strong>.</li>
-                    <li>Your job offers stay on my blog for <strong class="font-medium">an entire month</strong>.</li>
+                    <li>Your job offer stay on my blog for <strong class="font-medium">an entire month</strong>.</li>
                 </ol>
             </div>
         </div>
@@ -58,7 +58,7 @@
 
     <x-section id="numbers" class="container mt-24 md:mt-32 scroll-mt-4">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
-            Post your job offers to an ever growing amount of developers
+            Post your job offer to an ever growing amount of developers
         </x-slot:title>
 
         <div class="grid grid-cols-2 gap-16 mt-8 md:grid-cols-3">
@@ -142,7 +142,7 @@
 
     <x-section id="about" class="container mt-32 mb-16 lg:max-w-screen-md">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
-            Why post your job offers on my blog
+            Why post your job offer on my blog
         </x-slot:title>
 
         <x-prose class="mt-8 text-xl">
