@@ -15,6 +15,10 @@ use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
 
 uses(TestCase::class, LazilyRefreshDatabase::class)
     ->beforeEach(function () {
+        Http::fake([
+            'api.torchlight.dev/highlight' => Http::response(),
+        ]);
+
         Http::preventStrayRequests();
 
         ViewAssertion::macro('doesNotContain', function (string $string) {

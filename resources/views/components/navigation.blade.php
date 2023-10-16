@@ -130,16 +130,6 @@
                 <x-menu.item href="/horizon" icon="o-queue-list" :no-wire-navigate="true">
                     Horizon
                 </x-menu.item>
-
-                <x-menu.divider />
-
-                <x-menu.item
-                    type="submit" form="logout"
-                    class="hover:!bg-red-400"
-                    icon="o-arrow-left-on-rectangle"
-                >
-                    Log out
-                </x-menu.item>
             </x-menu.base>
         @endauth
     </div>

@@ -80,10 +80,6 @@
                 <x-navigation class="mt-4" />
             @endempty
 
-            @auth
-                <form method="POST" action="{{ route('logout') }}" id="logout" class="hidden">@csrf</form>
-            @endauth
-
             <main>
                 {{ $slot }}
             </main>
