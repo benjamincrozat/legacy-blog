@@ -10,7 +10,7 @@
     </a>
 
     <div class="flex flex-col">
-        <p class="font-bold sm:text-lg md:text-xl">
+        <p class="font-bold">
             <a href="{{ route('openings.show', $opening) }}" class="text-indigo-600 underline">
                 {{ $opening->title }}
             </a>
