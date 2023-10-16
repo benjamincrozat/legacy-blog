@@ -38,6 +38,8 @@ $format = function () {
         $this->error = $result->output();
     } else {
         $this->result = File::get($path);
+
+        $this->error = '';
     }
 
     File::delete($path);
