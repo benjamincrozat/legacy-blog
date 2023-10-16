@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Process;
 
 state([
     'code' => '',
+    'error' => '',
     'preset' => 'laravel',
     'result' => '',
 ]);
@@ -22,19 +23,22 @@ $format = function () {
 
     $hash = sha1($this->code);
 
-    if (! Str::startsWith($this->code, '<?php', '<?')) {
-        $this->code = "<?php $this->code";
-    }
+    $code = ! Str::startsWith($this->code, '<?php', '<?')
+        ? "<?php $this->code"
+        : $this->code;
 
-    File::put($path = sys_get_temp_dir() . "/$hash", $this->code);
+    File::put($path = sys_get_temp_dir() . "/$hash", $code);
 
     $binary = config('pint-express.php_binary');
 
     $result = Process::path(base_path())
-        ->run("$binary vendor/bin/pint $path --preset $this->preset")
-        ->throw();
+        ->run("$binary vendor/bin/pint $path --preset $this->preset");
 
-    $this->result = File::get($path);
+    if ($result->failed()) {
+        $this->error = $result->output();
+    } else {
+        $this->result = File::get($path);
+    }
 
     File::delete($path);
 };
@@ -47,6 +51,12 @@ $again = function () {
 ?>
 
 <div>
+    @if ($error)
+        <div class="p-4 mb-4 overflow-x-scroll text-red-600 rounded-lg bg-red-50">
+            {{ $error }}
+        </div>
+    @endif
+
     @if ($result)
         <div class="text-right">
             <x-button
