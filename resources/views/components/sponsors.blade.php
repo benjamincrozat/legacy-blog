@@ -3,8 +3,8 @@
         ->merge(['class' => 'grid items-center grid-cols-2 gap-4 sm:gap-6 md:gap-8 mt-8 md:gap-12'])
         ->when(
             request()->routeIs('media-kit', 'openings.create', 'sponsors'),
-            fn ($attributes) => $attributes->merge(['class' => 'lg:grid-cols-4 xl:grid-cols-6']),
-            fn ($attributes) => $attributes->merge(['class' => 'lg:grid-cols-3 xl:grid-cols-5']),
+            fn ($attributes) => $attributes->merge(['class' => 'lg:grid-cols-4']),
+            fn ($attributes) => $attributes->merge(['class' => 'lg:grid-cols-3 xl:grid-cols-6']),
         )
 }}>
     <a
@@ -60,6 +60,16 @@
             <span class="sr-only">LaraJobs</span>
         </a>
     @endif
+
+    <a
+        href="https://opentoworkremote.com/?utm_campaign=sponsorship&utm_source=benjamincrozat.com&utm_medium=logo"
+        target="_blank"
+        rel="noopener"
+        class="font-bold text-center text-lg/none"
+    >
+        OpenToWork<br />
+        Remote.com
+    </a>
 
     <a
         href="https://ploi.io/?utm_campaign=sponsorship&utm_source=benjamincrozat.com&utm_medium=logo"
