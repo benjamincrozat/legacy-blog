@@ -28,8 +28,6 @@
 
         @vite(['resources/js/app.js'])
 
-        @livewireScripts
-
         @if (app()->isProduction() && auth()->id() !== 1)
             <script
                 defer src="https://api.pirsch.io/pirsch-extended.js"
@@ -89,6 +87,6 @@
             @endempty
         </div>
 
-        <x-status />
+        @livewireScriptConfig
     </body>
 </html>

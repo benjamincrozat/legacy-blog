@@ -5,7 +5,6 @@ use App\Models\Merchant;
 
 use function Pest\Laravel\get;
 use function Pest\Laravel\actingAs;
-use function Pest\Laravel\postJson;
 
 use Illuminate\Support\Facades\Queue;
 use App\Http\Middleware\TrackPageView;
@@ -42,12 +41,6 @@ it('does not track the page view for excluded paths', function ($path, $requires
 
 it('does not track the page view for non-existing posts', function () {
     get('/foo');
-
-    Queue::assertNotPushed(\App\Jobs\TrackPageView::class);
-});
-
-it('does not track page views for HTTP methods other than GET', function () {
-    postJson(route('subscribe'));
 
     Queue::assertNotPushed(\App\Jobs\TrackPageView::class);
 });

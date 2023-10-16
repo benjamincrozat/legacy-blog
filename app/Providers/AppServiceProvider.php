@@ -4,7 +4,6 @@ namespace App\Providers;
 
 use App\Models\Opening;
 use App\Models\Category;
-use App\Actions\Subscribe;
 use App\Repositories\PostRepository;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Vite;
@@ -31,8 +30,6 @@ class AppServiceProvider extends ServiceProvider
                 $app['config']->get('scout.algolia.secret')
             );
         });
-
-        $this->app->bind(Subscribe::class, fn () => new Subscribe);
     }
 
     public function boot() : void

@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ShowPostController;
 use App\Http\Controllers\ListPostsController;
-use App\Http\Controllers\SubscribeController;
 use App\Http\Controllers\ShowOpeningController;
 use App\Http\Controllers\ListOpeningsController;
 use App\Http\Controllers\ShowCategoryController;
@@ -20,8 +19,6 @@ Route::get('/recommends/{merchant:slug}', ShowMerchantController::class)->name('
 
 Route::view('/phpunit-to-pest', 'pouest')->name('pouest');
 Route::view('/pint-express', 'pint-express')->name('pint-express');
-
-Route::post('/subscribe', SubscribeController::class)->name('subscribe');
 
 Route::view('/media-kit', 'media-kit')->name('media-kit');
 
