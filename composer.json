@@ -7,7 +7,6 @@
         "filament/filament": "^3.0",
         "filament/spatie-laravel-media-library-plugin": "^3.0",
         "guzzlehttp/guzzle": "^7.5",
-        "laravel/fortify": "^1.17",
         "laravel/framework": "^10.0",
         "laravel/horizon": "^5.19",
         "laravel/octane": "^2.1",
