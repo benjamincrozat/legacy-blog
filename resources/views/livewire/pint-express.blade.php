@@ -62,9 +62,9 @@ $again = function () {
     @if ($result)
         <div class="text-right">
             <x-button
-                class="inline-flex items-center gap-2 !px-3 !py-2 text-sm bg-gray-700 text-white"
+                class="inline-flex items-center gap-2 !px-3 !py-2 text-sm border rounded"
                 x-data="{ copy() { navigator.clipboard.writeText($refs.code.textContent) }, }"
-                @click="copy(); $el.textContent = 'Copied!'"
+                @click="copy(); $el.textContent = 'Copied'"
             >
                 <x-heroicon-o-clipboard-document class="w-4 h-4 -translate-y-px" />
                 Copy
