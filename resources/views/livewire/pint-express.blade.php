@@ -63,7 +63,7 @@ $again = function () {
         <div class="text-right">
             <x-button
                 class="inline-flex items-center gap-2 !px-3 !py-2 text-sm border rounded"
-                x-data="{ copy() { navigator.clipboard.writeText($refs.code.textContent) }, }"
+                x-data="{ copy() { navigator.clipboard.writeText(`{{ addslashes($result) }}`) }, }"
                 @click="copy(); $el.textContent = 'Copied'"
             >
                 <x-heroicon-o-clipboard-document class="w-4 h-4 -translate-y-px" />
@@ -71,8 +71,8 @@ $again = function () {
             </x-button>
         </div>
 
-        <x-prose class="mt-4">
-            <pre><code class="language-php" x-effect="$nextTick(() => Prism.highlightAll())" x-ref="code">{{ $result }}</code></pre>
+        <x-prose class="mt-4" x-ref="pre">
+            {!! Str::markdown("```php\n$result\n```") !!}
         </x-prose>
 
         <x-button

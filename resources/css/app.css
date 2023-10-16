@@ -6,24 +6,19 @@
     @apply hidden;
 }
 
-pre[class*="language-"]::selection {
-    background: hsl(0, 0%, 100%)
+pre {
+    @apply my-4 overflow-x-auto rounded;
 }
 
-pre[class*="language-"]::selection {
-    background: hsl(0, 0%, 100%)
+pre code.torchlight {
+    @apply block py-4 min-w-max;
 }
 
-pre[class*="language-"]::-moz-selection,
-pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection,
-code[class*="language-"] ::-moz-selection {
-    background: hsl(0, 0%, 100%)
+pre code.torchlight .line {
+    @apply px-4;
 }
 
-pre[class*="language-"]::selection,
-pre[class*="language-"] ::selection,
-code[class*="language-"]::selection,
-code[class*="language-"] ::selection {
-    background: hsl(0, 0%, 100%)
+pre code.torchlight .line-number,
+pre code.torchlight .summary-caret {
+    @apply mr-4;
 }

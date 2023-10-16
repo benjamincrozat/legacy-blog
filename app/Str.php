@@ -6,6 +6,7 @@ use League\CommonMark\Node\Node;
 use League\CommonMark\Node\Inline\Text;
 use League\CommonMark\MarkdownConverter;
 use League\CommonMark\Environment\Environment;
+use Torchlight\Commonmark\V2\TorchlightExtension;
 use League\CommonMark\Extension\CommonMark\Node\Inline\Link;
 use League\CommonMark\Extension\CommonMark\Node\Block\Heading;
 use League\CommonMark\Extension\Attributes\AttributesExtension;
@@ -46,6 +47,7 @@ class Str extends \Illuminate\Support\Str
             ->addExtension(new ExternalLinkExtension)
             ->addExtension(new GithubFlavoredMarkdownExtension)
             ->addExtension(new SmartPunctExtension)
+            ->addExtension(new TorchlightExtension)
             // This new renderer adds an anchor link, just like in Laravel's documentation.
             ->addRenderer(Heading::class, new HeadingRenderer);
 

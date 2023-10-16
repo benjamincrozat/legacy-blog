@@ -23,11 +23,12 @@
         "spatie/flysystem-dropbox": "^2.0",
         "spatie/laravel-activitylog": "^4.7",
         "spatie/laravel-feed": "^4.2",
-        "spatie/laravel-google-fonts": "^1.2",
         "spatie/laravel-honeypot": "^4.3",
         "spatie/laravel-medialibrary": "^10.0.0",
         "spatie/url": "^2.2",
-        "stevebauman/unfinalize": "^1.0"
+        "stevebauman/unfinalize": "^1.0",
+        "torchlight/torchlight-commonmark": "^0.5.5",
+        "torchlight/torchlight-laravel": "^0.5.14"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.9",
