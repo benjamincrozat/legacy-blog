@@ -51,9 +51,7 @@ $again = function () {
         <div class="text-right">
             <x-button
                 class="inline-flex items-center gap-2 !px-3 !py-2 text-sm bg-gray-700 text-white"
-                x-data="{
-                    copy() { navigator.clipboard.writeText($refs.code.textContent) },
-                }"
+                x-data="{ copy() { navigator.clipboard.writeText($refs.code.textContent) }, }"
                 @click="copy(); $el.textContent = 'Copied!'"
             >
                 <x-heroicon-o-clipboard-document class="w-4 h-4 -translate-y-px" />
@@ -66,7 +64,7 @@ $again = function () {
         </x-prose>
 
         <x-button
-            class="table mx-auto mt-4 bg-gray-200"
+            class="table px-6 mx-auto mt-4 bg-gray-200"
             wire:click="again"
         >
             Again
