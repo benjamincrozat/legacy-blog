@@ -48,8 +48,21 @@ $again = function () {
 
 <div>
     @if ($result)
-        <x-prose>
-            <pre><code class="language-php" x-effect="$nextTick(() => Prism.highlightAll())">{{ $result }}</code></pre>
+        <div class="text-right">
+            <x-button
+                class="inline-flex items-center gap-2 !px-3 !py-2 text-sm bg-gray-700 text-white"
+                x-data="{
+                    copy() { navigator.clipboard.writeText($refs.code.textContent) },
+                }"
+                @click="copy(); $el.textContent = 'Copied!'"
+            >
+                <x-heroicon-o-clipboard-document class="w-4 h-4 -translate-y-px" />
+                Copy
+            </x-button>
+        </div>
+
+        <x-prose class="mt-4">
+            <pre><code class="language-php" x-effect="$nextTick(() => Prism.highlightAll())" x-ref="code">{{ $result }}</code></pre>
         </x-prose>
 
         <x-button
