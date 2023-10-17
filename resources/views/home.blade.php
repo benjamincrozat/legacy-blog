@@ -54,7 +54,7 @@
 
         <div class="container text-center mt-14 md:mt-28">
             <p class="font-medium sm:text-xl">
-                From apps makers, to SaaS, and web hosting, my sponsors are worth checking out!
+                From apps makers, to SaaS, web hosting, and more, my sponsors are worth checking out!
             </p>
 
             <x-sponsors />
