@@ -74,6 +74,8 @@
                 @endif
             @endif
 
+            <div class="h-px bg-gradient-to-r from-transparent via-indigo-200/75 to-transparent"></div>
+
             @empty($hideNavigation)
                 <x-navigation class="mt-4" />
             @endempty
@@ -83,7 +85,9 @@
             </main>
 
             @empty($hideFooter)
-                <x-footer class="flex-grow mt-16 bg-gradient-to-r from-gray-200/[.35] to-gray-200/[.15]" />
+                <div class="mt-16"></div>
+
+                <x-footer class="flex-grow bg-gradient-to-r from-gray-200/[.35] to-gray-200/[.15]" />
             @endempty
         </div>
 
