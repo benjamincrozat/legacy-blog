@@ -74,7 +74,7 @@
                 @endif
             @endif
 
-            <div class="h-px bg-gradient-to-r from-indigo-200/75 via-indigo-200/50 to-transparent"></div>
+            <div class="h-px bg-indigo-50"></div>
 
             @empty($hideNavigation)
                 <x-navigation class="mt-4" />

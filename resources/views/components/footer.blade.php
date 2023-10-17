@@ -1,4 +1,4 @@
-<div class="h-px bg-gradient-to-r from-gray-300/75 via-gray-300/50 to-transparent"></div>
+<div class="h-px bg-gray-200/[.35]"></div>
 
 <div {{ $attributes }}>
     <footer class="container py-8 text-center">
