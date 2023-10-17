@@ -4,7 +4,7 @@
         ->when(
             request()->routeIs('media-kit', 'openings.create', 'sponsors'),
             fn ($attributes) => $attributes->merge(['class' => 'md:grid-cols-3 lg:grid-cols-4']),
-            fn ($attributes) => $attributes->merge(['class' => 'md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6']),
+            fn ($attributes) => $attributes->merge(['class' => 'md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5']),
         )
 }}>
     <a
@@ -15,6 +15,16 @@
     >
         <x-icon-beyond-code class="inline h-8 lg:h-9" />
         <span class="sr-only">Beyond Code</span>
+    </a>
+
+    <a
+        href="https://chief.app/?utm_source=benjamincrozat&utm_medium=logo&utm_campaign=benjamincrozat"
+        target="_blank"
+        rel="noopener"
+        class="text-center translate-y-[-3px]"
+    >
+        <x-icon-chief-tools class="inline h-7 lg:h-8" />
+        <span class="sr-only">Chief Tools</span>
     </a>
 
     <a
