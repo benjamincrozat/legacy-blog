@@ -3,8 +3,8 @@
         ->merge(['class' => 'grid items-center grid-cols-2 gap-4 sm:gap-6 md:gap-8 mt-8 md:gap-12'])
         ->when(
             request()->routeIs('media-kit', 'openings.create', 'sponsors'),
-            fn ($attributes) => $attributes->merge(['class' => 'lg:grid-cols-4']),
-            fn ($attributes) => $attributes->merge(['class' => 'lg:grid-cols-3 xl:grid-cols-6']),
+            fn ($attributes) => $attributes->merge(['class' => 'md:grid-cols-3 lg:grid-cols-4']),
+            fn ($attributes) => $attributes->merge(['class' => 'md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6']),
         )
 }}>
     <a

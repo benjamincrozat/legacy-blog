@@ -44,4 +44,22 @@
             </div>
         </x-section>
     </div>
+
+    @if ($recommendations->isNotEmpty())
+        <x-divider />
+
+        <x-section class="container">
+            <x-slot:title class="text-xl text-center">
+                Recommended
+            </x-slot:title>
+
+            <ul class="grid gap-8 mt-8 md:grid-cols-2 md:gap-16">
+                @foreach ($recommendations as $recommendation)
+                    <li>
+                        <x-opening :opening="$recommendation" />
+                    </li>
+                @endforeach
+            </ul>
+        </x-section>
+    @endif
 </x-app>
