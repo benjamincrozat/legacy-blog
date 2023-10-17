@@ -30,7 +30,12 @@
         </x-slot:title>
 
         <div class="flex flex-wrap gap-8 mt-8 md:flex-nowrap md:items-start md:justify-between md:gap-16">
-            <video controls src="https://cdn.benjamincrozat.com/media-library/production/job-offers-demo.mp4" class="md:max-w-[33.33%] rounded-lg shadow-lg"></video>
+            <video
+                controls
+                src="https://cdn.benjamincrozat.com/media-library/production/job-offers-demo.mp4"
+                poster="https://cdn.benjamincrozat.com/job-offers-demo-poster.jpg"
+                class="md:max-w-[33.33%] rounded-lg shadow-lg"
+            ></video>
 
             <div class="flex-grow">
                 <p>In a nutshell:</p>
