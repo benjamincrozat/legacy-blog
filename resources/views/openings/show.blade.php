@@ -3,6 +3,10 @@
 >
     <div class="container mt-8 lg:max-w-screen-md">
         <x-breadcrumb>
+            <x-slot:middle :href="route('openings.index')">
+                Jobs
+            </x-slot:middle>
+
             {{ $opening->title }}
         </x-breadcrumb>
 

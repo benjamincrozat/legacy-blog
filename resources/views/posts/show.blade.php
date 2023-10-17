@@ -4,8 +4,12 @@
     :image="$post->presenter()->image()"
     :canonical="$post->community_link ?? null"
 >
-    <div class="container mt-16 lg:max-w-screen-md">
-        <x-breadcrumb class="mb-8">
+    <div class="container mt-8 lg:max-w-screen-md">
+        <x-breadcrumb class="mb-9">
+            <x-slot:middle :href="route('posts.index')">
+                Articles
+            </x-slot:middle>
+
             {{ $post->title }}
         </x-breadcrumb>
 

@@ -2,10 +2,16 @@
     title="Find your dream job as a web developer"
     description="I gather tons of job offers from various sources and list them in one digestible list."
 >
-    <h1 class="container mt-16 font-bold text-center md:max-w-screen-sm text-4xl/none lg:text-5xl/none">
-        <x-icon-employees class="h-24 mx-auto" />
-        <div class="mt-4">Find your <span class="text-transparent bg-gradient-to-r from-purple-400 to-purple-300 bg-clip-text">dream job</span> as a web&nbsp;developer</div>
-    </h1>
+    <div class="container mt-8 lg:max-w-screen-md">
+        <x-breadcrumb>
+            Jobs
+        </x-breadcrumb>
+
+        <h1 class="mt-8 font-bold text-center text-4xl/none lg:text-5xl/none">
+            <x-icon-employees class="h-24 mx-auto" />
+            <div class="mt-4">Find your <span class="text-transparent bg-gradient-to-r from-purple-400 to-purple-300 bg-clip-text">dream job</span> as a web&nbsp;developer</div>
+        </h1>
+    </div>
 
     @if ($openings->isNotEmpty())
         <x-section class="container mt-16">
@@ -24,7 +30,7 @@
             </div>
         </x-section>
     @else
-        <p class="container text-2xl mt-8 text-center lg:max-w-screen-md">
+        <p class="container mt-8 text-2xl text-center lg:max-w-screen-md">
             There are no job offers at the moment.
         </p>
     @endif

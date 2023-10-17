@@ -2,23 +2,35 @@
     title="Learn about {{ $category->name }}"
     :description="$category->description"
 >
-    <x-section class="container mt-16">
-        <x-slot:title class="text-center">
-            @if ($posts->currentPage() > 1)
-                Page {{ $posts->currentPage() }} of {{ $category->name }}
-            @else
-                {{ $category->name }}
-            @endif
-        </x-slot:title>
+    <div class="container mt-8 lg:max-w-screen-md">
+        <x-breadcrumb>
+            <x-slot:middle>
+                Catégories
+            </x-slot:middle>
 
-        <ul class="grid gap-16 mt-8 md:grid-cols-2 lg:grid-cols-3">
-            @foreach ($posts as $post)
-                <li>
-                    <x-post :post="$post" />
-                </li>
-            @endforeach
-        </ul>
+            {{ $category->name }}
+        </x-breadcrumb>
+    </div>
 
-        {{ $posts->links() }}
-    </x-section>
+    <div class="container mt-8">
+        <x-section>
+            <x-slot:title class="text-center">
+                @if ($posts->currentPage() > 1)
+                    Page {{ $posts->currentPage() }} of {{ $category->name }}
+                @else
+                    {{ $category->name }}
+                @endif
+            </x-slot:title>
+
+            <ul class="grid gap-16 mt-8 md:grid-cols-2 lg:grid-cols-3">
+                @foreach ($posts as $post)
+                    <li>
+                        <x-post :post="$post" />
+                    </li>
+                @endforeach
+            </ul>
+
+            {{ $posts->links() }}
+        </x-section>
+    </div>
 </x-app>

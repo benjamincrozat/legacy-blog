@@ -61,7 +61,7 @@
             More than <span class="font-semibold text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">40,000</span> eager developers visit&nbsp;my&nbsp;blog&nbsp;each&nbsp;month.
         </p>
 
-        <div class="mt-16">
+        <div class="mt-8">
             <a href="https://benjamincrozat.pirsch.io/?domain=benjamincrozat.com&interval=30d&scale=day" target="_blank" rel="nofollow noopener" class="inline-block px-6 py-3 font-bold transition-opacity rounded bg-gradient-to-r from-gray-200/50 to-gray-200 hover:opacity-75">
                 Access my analytics dashboard
             </a>
