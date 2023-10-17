@@ -17,7 +17,7 @@ class OpeningFactory extends Factory
         $country = fake()->country();
 
         $remote = collect([
-            'non-remote',
+            'on-site',
             'partially remote',
             'remote',
         ])->random();

@@ -58,7 +58,7 @@
                 @if ($randomOpening)
                     <a href="{{ route('openings.show', $randomOpening) }}" class="block text-sm text-indigo-700 bg-gradient-to-r from-indigo-50 to-indigo-50/50">
                         <div class="container py-3 text-center sm:max-w-[420px]">
-                            <p>{{ $randomOpening->company }} is looking for a <strong class="font-medium">{{ lcfirst($randomOpening->title) }}</strong>!&nbsp;<x-heroicon-o-megaphone class="inline w-4 h-4 -translate-y-px" /></p>
+                            <p><strong class="font-medium">New position at {{ $randomOpening->company }}</strong>: {{ lcfirst($randomOpening->title) }}.&nbsp;→
                         </div>
                     </a>
                 @else
