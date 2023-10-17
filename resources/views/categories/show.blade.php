@@ -5,7 +5,7 @@
     <div class="container mt-8 lg:max-w-screen-md">
         <x-breadcrumb>
             <x-slot:middle>
-                Catégories
+                Categories
             </x-slot:middle>
 
             {{ $category->name }}
