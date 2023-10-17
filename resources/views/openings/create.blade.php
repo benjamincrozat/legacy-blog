@@ -30,17 +30,12 @@
         </x-slot:title>
 
         <div class="flex flex-wrap gap-8 mt-8 md:flex-nowrap md:items-start md:justify-between md:gap-16">
-            <div
-                class="w-full grid place-items-center md:max-w-[33.33%] h-full bg-black aspect-video rounded-lg shadow-lg"
-                @click="alert("Coming soon! I'm still making adjustments to how I handle job offer.")"
-            >
-                <x-heroicon-s-play class="w-16 h-16 text-white" />
-            </div>
+            <video controls src="https://cdn.benjamincrozat.com/media-library/production/job-offers-demo.mp4" class="md:max-w-[33.33%] rounded-lg shadow-lg"></video>
 
             <div class="flex-grow">
                 <p>In a nutshell:</p>
                 <ol class="grid gap-2 pl-4 mt-2 ml-4 list-decimal">
-                    <li>Your job offer are randomly displayed in front of every potential hires <strong class="font-medium">on every page</strong>.</li>
+                    <li>Your job offer are randomly displayed in front of every potential hires <strong class="font-medium">on&nbsp;every&nbsp;page</strong>.</li>
                     <li>They also are listed on a <a wire:navigate.hover href="{{ route('openings.index') }}" class="underline">dedicated page</a> <strong class="font-medium">above everyone else's</strong>.</li>
                     <li>Your job offer stay on my blog for <strong class="font-medium">an entire month</strong>.</li>
                 </ol>
