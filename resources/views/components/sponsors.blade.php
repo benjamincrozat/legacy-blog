@@ -1,6 +1,6 @@
 <div {{
     $attributes
-        ->merge(['class' => 'grid items-center grid-cols-2 gap-4 sm:gap-6 md:gap-8 mt-8 md:gap-12'])
+        ->merge(['class' => 'grid items-center grid-cols-2 gap-x-4 gap-y-6 sm:gap-6 md:gap-8 mt-8 md:gap-12'])
         ->when(
             request()->routeIs('media-kit', 'openings.create', 'sponsors'),
             fn ($attributes) => $attributes->merge(['class' => 'md:grid-cols-3 lg:grid-cols-4']),
