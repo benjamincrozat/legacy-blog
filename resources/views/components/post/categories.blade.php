@@ -1,6 +1,6 @@
 @if ($categories->isNotEmpty())
     <ul {{ $attributes->merge(['class' => 'flex gap-1']) }}>
-        @foreach ($categories as $category)
+        @foreach ($categories->sortBy('name') as $category)
             <li>
                 <a
                     wire:navigate.hover
