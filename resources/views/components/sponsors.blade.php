@@ -4,7 +4,7 @@
         ->when(
             request()->routeIs('media-kit', 'openings.create', 'sponsors'),
             fn ($attributes) => $attributes->merge(['class' => 'md:grid-cols-3 lg:grid-cols-4']),
-            fn ($attributes) => $attributes->merge(['class' => 'md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5']),
+            fn ($attributes) => $attributes->merge(['class' => 'md:grid-cols-3 lg:grid-cols-4']),
         )
 }}>
     <a
@@ -104,6 +104,17 @@
             height="124"
             alt="redirect.pizza"
             class="inline w-auto h-9 lg:h-10"
+        />
+    </a>
+
+    <a
+        href="https://taskvalve.com/?utm_source=benjamincrozat.com&utm_medium=logo&utm_campaign=sponsorship"''
+        target="_blank"
+        rel="noopener"
+        class="text-center"
+    >
+        <x-icon-taskvalve
+            class="inline h-6 lg:h-7"
         />
     </a>
 </div>
