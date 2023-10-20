@@ -19,7 +19,7 @@ class PostRepository implements PostRepositoryContract
     {
         return Post::where('slug', $slug)
             ->with('categories', 'media')
-            ->published()
+            ->published(1 === auth()->id())
             ->first();
     }
 

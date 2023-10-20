@@ -19,9 +19,11 @@ trait HasLocalScopes
             ->orderByRaw('FIELD(id, ' . $sequence->join(',') . ')');
     }
 
-    public function scopePublished(Builder $query) : void
+    public function scopePublished(Builder $query, bool $condition = false) : void
     {
-        $query->where('published_at', '<=', now());
+        if (! $condition) {
+            $query->where('published_at', '<=', now());
+        }
     }
 
     public function scopeUnpublished(Builder $query) : void

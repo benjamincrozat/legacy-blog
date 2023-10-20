@@ -3,16 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Facades\Posts;
-use Illuminate\View\View;
 use App\Jobs\TrackPageView;
 
 class ShowPostController extends Controller
 {
-    public function __invoke(string $slug) : View
+    public function __invoke(string $slug)
     {
         $post = Posts::get($slug);
 
-        abort_if(is_null($post) && 1 !== auth()->id(), 404);
+        abort_if(is_null($post), 404);
 
         // I track visits for posts after it's been resolved to avoid messing up my analytics.
         dispatch(
