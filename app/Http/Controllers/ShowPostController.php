@@ -25,7 +25,7 @@ class ShowPostController extends Controller
         )->afterResponse();
 
         return view('posts.show', compact('post') + [
-            'recommendations' => Posts::recommendations($post->id),
+            'recommendations' => $post->published_at ? Posts::recommendations($post->id) : collect(),
         ]);
     }
 }
