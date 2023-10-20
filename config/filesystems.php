@@ -80,6 +80,9 @@ return [
             'root' => './media-library/' . env('APP_ENV'),
             'throw' => false,
             'visibility' => 'public',
+            'options' => [
+                'Cache-Control' => 'max-age=31536000, no-transform, public',
+            ],
         ],
     ],
 

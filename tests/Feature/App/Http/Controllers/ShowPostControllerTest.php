@@ -115,3 +115,13 @@ test('a given unpublished post cannot be shown to users', function () {
         ->get(route('posts.show', $post->slug))
         ->assertNotFound();
 });
+
+test('a given unpublished post can be shown to user #1', function () {
+    $user = User::find(1) ?? User::factory()->create(['id' => 1]);
+
+    $post = Post::factory()->create();
+
+    actingAs($user)
+        ->get(route('posts.show', $post->slug))
+        ->assertOk();
+});
