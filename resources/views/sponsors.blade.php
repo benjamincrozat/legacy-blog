@@ -58,7 +58,7 @@
         </ul>
     </div>
 
-    <x-section id="numbers" class="container mt-24 md:mt-32 scroll-mt-4">
+    <x-section id="numbers" class="container mt-24 md:mt-32 scroll-mt-8">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
             I will go even further with your support
         </x-slot:title>
@@ -162,7 +162,7 @@
         <x-sponsors-logos class="justify-center" />
     </x-section>
 
-    <x-section id="roadmap" class="container mt-24 scroll-mt-4 xl:max-w-screen-lg md:mt-32">
+    <x-section id="roadmap" class="container mt-24 scroll-mt-8 xl:max-w-screen-lg md:mt-32">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
             <x-icon-roadmap class="h-16 mx-auto" />
 
@@ -234,7 +234,7 @@
         </div>
     </x-section>
 
-    <x-section id="tiers" class="container mt-32 mb-16 scroll-mt-4">
+    <x-section id="tiers" class="container mt-32 mb-16 scroll-mt-8">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
             Choose your tier, and get your rewards!
         </x-slot:title>
@@ -369,7 +369,7 @@
         </blockquote>
     </div>
 
-    <x-section id="about" class="container mt-32 mb-16 lg:max-w-screen-md scroll-mt-4">
+    <x-section id="about" class="container mt-32 mb-16 lg:max-w-screen-md scroll-mt-8">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
             Who you are sponsoring
         </x-slot:title>

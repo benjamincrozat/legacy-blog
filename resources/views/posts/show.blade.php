@@ -68,4 +68,8 @@
             @endforeach
         </ul>
     </x-section>
+
+    <x-divider />
+
+    <x-donate id="donate" class="container lg:max-w-screen-md" />
 </x-app>

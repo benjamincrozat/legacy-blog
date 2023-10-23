@@ -168,4 +168,6 @@
             {!! Str::markdown(file_get_contents(resource_path('markdown/about.md'))) !!}
         </x-prose>
     </x-section>
+
+    <x-donate id="donate" class="container mt-32 lg:max-w-screen-md" />
 </x-app>
