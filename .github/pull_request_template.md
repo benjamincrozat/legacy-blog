@@ -1,1 +1,0 @@
-If you are trying to submit a pull request, please understand how grateful I am that you care about the project. But don't waste time trying to contribute. I don't want to maintain someone else's code, and I'm happy with how the code looks.

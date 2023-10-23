@@ -57,6 +57,7 @@ jobs:
         env:
           DB_PORT: ${{ job.services.mysql.ports[3306] }}
           DEPLOYMENT_URL: ${{ secrets.DEPLOYMENT_URL }}
+          TORCHLIGHT_TOKEN: ${{ secrets.TORCHLIGHT_TOKEN }}
 
       - name: Deploy on production
         run: curl -X POST ${{ secrets.DEPLOYMENT_URL }}
