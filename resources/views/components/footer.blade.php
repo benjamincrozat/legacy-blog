@@ -11,7 +11,7 @@
             <a wire:navigate.hover href="{{ route('sponsors') }}" class="font-medium underline">Support the blog</a>, <a href="/feed" class="font-medium underline">subscribe to the feed</a>, and follow me on <a href="https://github.com/benjamincrozat" target="_blank" rel="nofollow noopener" class="font-medium underline">GitHub</a> and <a href="https://x.com/benjamincrozat" target="_blank" rel="nofollow noopener" class="font-medium underline">X</a>. For inquiries, <a href="mailto:hello@benjamincrozat.com" class="font-medium underline">send&nbsp;me&nbsp;an&nbsp;email</a>.
         </p>
 
-        @if (! request()->routeIs('home'))
+        @if (! request()->routeIs('home', 'media-kit', 'openings.create', 'sponsors'))
             <x-sponsors />
         @endif
 
