@@ -10,9 +10,15 @@
 
         <p><strong>If you like the content I make, why not consider a monthly donation? Or a one-time payment, it's up to you!</strong></p>
 
-        <p>I will never ask people to pay for content. But I'm also trying to work full-time on the blog and bring the full vision to life. <a href="{{ route('sponsors') }}#roadmap">Learn more</a> about my plans.</p>
+        <p>I will never ask people to pay for content. But I'm also trying to work full-time on the blog and bring the full vision to life. <a href="{{ route('sponsors') }}#roadmap">Learn more</a> about my roadmap.</p>
 
-        <x-button class="mt-2 text-white bg-blue-600">Donate</x-button>
+        <x-button
+            :no-wire-navigate="true"
+            href="{{ route('sponsors') }}#tiers"
+            class="mt-2 text-white no-underline bg-blue-600"
+        >
+            Show your appreciation
+        </x-button>
 
         <p class="text-xs">(If you have a successful business you want to promote, <a wire:nevigate.hover href="{{ route('media-kit') }}">I sell sponsorships</a> too!)</p>
     </x-prose>
