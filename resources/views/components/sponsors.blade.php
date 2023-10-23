@@ -4,7 +4,7 @@ $numbers = collect(range(1, 9));
 
 <div {{
     $attributes
-        ->merge(['class' => 'grid items-center grid-cols-2 gap-x-4 gap-y-6 sm:gap-6 md:gap-8 mt-8 md:gap-12 md:grid-cols-3 lg:grid-cols-4'])
+        ->merge(['class' => 'grid items-center grid-cols-2 gap-x-4 gap-y-6 sm:gap-6 md:gap-8 mt-8 md:gap-12 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'])
 }}>
     <a
         href="https://beyondco.de/?utm_source=benjamincrozat&utm_medium=logo&utm_campaign=benjamincrozat"
