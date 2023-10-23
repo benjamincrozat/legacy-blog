@@ -101,6 +101,46 @@
         </x-section>
     @endif
 
+
+
+    <x-section id="tools" class="container mt-16 md:mt-32 scroll-mt-8">
+        <x-slot:title class="text-center">
+            Free tools I made for developers
+        </x-slot:title>
+
+        <div class="grid gap-16 mt-8 md:grid-cols-2">
+            <div class="flex flex-col col-span-1">
+                <img src="{{ Vite::asset('resources/img/pint-express.jpg') }}" width="96" height="96" alt="Pint Express' logo" class="w-20 h-20 rounded-xl" />
+                <h3 class="mt-4 text-xl font-bold">Pint Express</h3>
+                <p class="flex-grow mt-2">Format and beautify your PHP code right right from the web instead of a terminal. This is useful for snippets found on StackOverflow, for instance.</p>
+                <div class="flex items-center gap-2 mt-6">
+                    <a href="https://github.com/benjamincrozat/benjamincrozat.com/blob/main/resources/views/livewire/pint-express.blade.php" target="_blank" rel="nofollow noopener" class="inline-block px-4 py-3 font-medium bg-gray-200 rounded">
+                        Fork on GitHub
+                    </a>
+
+                    <a wire:navigate.over href="{{ route('pint-express') }}" class="inline-block px-4 py-3 font-medium text-white bg-blue-600 rounded">
+                        Get started
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col col-span-1">
+                <img src="{{ Vite::asset('resources/img/pouest.jpg') }}" width="96" height="96" alt="Pouest" class="w-20 h-20 rounded-xl" />
+                <h3 class="mt-4 text-xl font-bold">Pouest</h3>
+                <p class="flex-grow mt-2">Instantly migrate your PHPUnit tests to Pest without using a terminal.</p>
+                <div class="flex items-center gap-2 mt-6">
+                    <a href="https://github.com/benjamincrozat/benjamincrozat.com/blob/main/resources/views/livewire/pouest.blade.php" target="_blank" rel="nofollow noopener" class="inline-block px-4 py-3 font-medium bg-gray-200 rounded">
+                        Fork on GitHub
+                    </a>
+
+                    <a wire:navigate.over href="{{ route('pouest') }}" class="inline-block px-4 py-3 font-medium text-white bg-blue-600 rounded">
+                        Get started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </x-section>
+
     <x-section class="container mt-32">
         <x-slot:title class="text-center">
             Latest articles
