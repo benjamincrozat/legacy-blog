@@ -105,7 +105,7 @@
 
     <x-section id="tools" class="container mt-16 md:mt-32 scroll-mt-8">
         <x-slot:title class="text-center">
-            Free tools I made for developers
+            Free and open source tools I made for developers
         </x-slot:title>
 
         <div class="grid gap-16 mt-8 md:grid-cols-2">
