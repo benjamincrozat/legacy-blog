@@ -175,50 +175,56 @@
         }
     </script>
 
-    <div class="container grid gap-16 mt-24 text-xl sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center md:mt-32">
-        <div class="flex flex-col h-full text-center">
-            <x-icon-pin class="h-32 mx-auto" />
+    <x-section class="container mt-24 scroll-mt-4 md:mt-32">
+        <x-slot:title class="text-center">
+            What I offer
+        </x-slot:title>
 
-            <p class="flex-grow mt-8 font-bold">
-                Pin your link and logo<br />
-                on my homepage and the footer
-            </p>
+        <div class="grid gap-16 mt-16 text-xl sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center">
+            <div class="flex flex-col h-full text-center">
+                <x-icon-pin class="h-32 mx-auto" />
 
-            <p class="text-center">
-                <x-button href="#display" class="mt-4 px-3 !py-2 text-sm font-bold bg-blue-600 text-white">
-                    Learn more
-                </x-button>
-            </p>
+                <p class="flex-grow mt-8 font-bold">
+                    Pin your link and logo<br />
+                    on my homepage and the footer
+                </p>
+
+                <p class="text-center">
+                    <x-button href="#display" class="mt-4 px-3 !py-2 text-sm font-bold bg-blue-600 text-white">
+                        Learn more
+                    </x-button>
+                </p>
+            </div>
+
+            <div class="flex flex-col h-full text-center">
+                <x-icon-write class="h-32 mx-auto" />
+
+                <p class="flex-grow mt-8 font-bold">
+                    Write about your business
+                </p>
+
+                <p class="text-center">
+                    <x-button href="#write" class="mt-4 px-3 !py-2 text-sm font-bold bg-blue-600 text-white">
+                        Learn more
+                    </x-button>
+                </p>
+            </div>
+
+            <div class="flex flex-col h-full text-center">
+                <x-icon-suit class="h-32 mx-auto" />
+
+                <p class="flex-grow mt-8 font-bold">
+                    Need a custom deal?
+                </p>
+
+                <p class="text-center">
+                    <x-button href="mailto:hello@benjamincrozat.com" class="mt-4 px-3 !py-2 text-sm font-bold bg-green-500 shadow-md shadow-green-100 text-white">
+                        Reach out
+                    </x-button>
+                </p>
+            </div>
         </div>
-
-        <div class="flex flex-col h-full text-center">
-            <x-icon-write class="h-32 mx-auto" />
-
-            <p class="flex-grow mt-8 font-bold">
-                Write about your business
-            </p>
-
-            <p class="text-center">
-                <x-button href="#write" class="mt-4 px-3 !py-2 text-sm font-bold bg-blue-600 text-white">
-                    Learn more
-                </x-button>
-            </p>
-        </div>
-
-        <div class="flex flex-col h-full text-center">
-            <x-icon-suit class="h-32 mx-auto" />
-
-            <p class="flex-grow mt-8 font-bold">
-                Need a custom deal?
-            </p>
-
-            <p class="text-center">
-                <x-button href="mailto:hello@benjamincrozat.com" class="mt-4 px-3 !py-2 text-sm font-bold bg-green-500 shadow-md shadow-green-100 text-white">
-                    Reach out
-                </x-button>
-            </p>
-        </div>
-    </div>
+    </x-section>
 
     <x-section id="display" class="container mt-24 scroll-mt-4 md:mt-32 lg:max-w-screen-md">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
