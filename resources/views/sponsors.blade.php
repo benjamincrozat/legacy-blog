@@ -1,7 +1,6 @@
 <x-app
     title="Support this blog, and get your rewards!"
     description="My goal is to be in every Laravel developer's Google search. See how you can contribute."
-    :hide-footer="true"
 >
     <div class="container mt-16 xl:max-w-screen-lg">
         <x-icon-gift class="h-24 mx-auto" />
