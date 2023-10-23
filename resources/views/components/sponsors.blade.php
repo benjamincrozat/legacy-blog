@@ -1,17 +1,17 @@
+@php
+$numbers = collect(range(1, 9));
+@endphp
+
 <div {{
     $attributes
-        ->merge(['class' => 'grid items-center grid-cols-2 gap-x-4 gap-y-6 sm:gap-6 md:gap-8 mt-8 md:gap-12'])
-        ->when(
-            request()->routeIs('media-kit', 'openings.create', 'sponsors'),
-            fn ($attributes) => $attributes->merge(['class' => 'md:grid-cols-3 lg:grid-cols-4']),
-            fn ($attributes) => $attributes->merge(['class' => 'md:grid-cols-3 lg:grid-cols-4']),
-        )
+        ->merge(['class' => 'grid items-center grid-cols-2 gap-x-4 gap-y-6 sm:gap-6 md:gap-8 mt-8 md:gap-12 md:grid-cols-3 lg:grid-cols-4'])
 }}>
     <a
         href="https://beyondco.de/?utm_source=benjamincrozat&utm_medium=logo&utm_campaign=benjamincrozat"
         target="_blank"
         rel="noopener"
         class="text-center"
+        style="order: {{ $numbers->pull($numbers->random()) }}"
     >
         <x-icon-beyond-code class="inline h-8 lg:h-9" />
         <span class="sr-only">Beyond Code</span>
@@ -22,6 +22,7 @@
         target="_blank"
         rel="noopener"
         class="text-center translate-y-[-3px]"
+        style="order: {{ $numbers->pull($numbers->random()) }}"
     >
         <x-icon-chief-tools class="inline h-7 lg:h-8" />
         <span class="sr-only">Chief Tools</span>
@@ -32,6 +33,7 @@
         target="_blank"
         rel="noopener"
         class="text-center"
+        style="order: {{ $numbers->pull($numbers->random()) }}"
     >
         <img
             loading="lazy"
@@ -48,6 +50,7 @@
         target="_blank"
         rel="noopener"
         class="text-center"
+        style="order: {{ $numbers->pull($numbers->random()) }}"
     >
         <img
             loading="lazy"
@@ -59,23 +62,23 @@
         />
     </a>
 
-    @if (request()->routeIs('media-kit', 'openings.create', 'sponsors'))
-        <a
-            href="https://larajobs.com?utm_source=benjamincrozat&utm_medium=logo&utm_campaign=benjamincrozat"
-            target="_blank"
-            rel="noopener"
-            class="text-center"
-        >
-            <x-icon-larajobs class="inline h-6 lg:h-7" />
-            <span class="sr-only">LaraJobs</span>
-        </a>
-    @endif
+    <a
+        href="https://larajobs.com?utm_source=benjamincrozat&utm_medium=logo&utm_campaign=benjamincrozat"
+        target="_blank"
+        rel="noopener"
+        class="text-center"
+        style="order: {{ $numbers->pull($numbers->random()) }}"
+    >
+        <x-icon-larajobs class="inline h-6 lg:h-7" />
+        <span class="sr-only">LaraJobs</span>
+    </a>
 
     <a
         href="https://opentoworkremote.com/?utm_campaign=sponsorship&utm_source=benjamincrozat.com&utm_medium=logo"
         target="_blank"
         rel="noopener"
         class="font-bold text-center text-lg/none"
+        style="order: {{ $numbers->pull($numbers->random()) }}"
     >
         OpenToWork<br />
         Remote.com
@@ -86,6 +89,7 @@
         target="_blank"
         rel="noopener"
         class="text-center"
+        style="order: {{ $numbers->pull($numbers->random()) }}"
     >
         <x-icon-ploi class="inline h-6 lg:h-7" />
         <span class="sr-only">Ploi</span>
@@ -96,6 +100,7 @@
         target="_blank"
         rel="noopener"
         class="text-center"
+        style="order: {{ $numbers->pull($numbers->random()) }}"
     >
         <img
             loading="lazy"
@@ -112,6 +117,7 @@
         target="_blank"
         rel="noopener"
         class="text-center"
+        style="order: {{ $numbers->pull($numbers->random()) }}"
     >
         <x-icon-taskvalve
             class="inline h-6 lg:h-7"
