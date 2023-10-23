@@ -72,7 +72,7 @@
             These people trust me
         </x-slot:title>
 
-        <x-sponsors class="justify-center" />
+        <x-sponsors-logos class="justify-center" />
     </x-section>
 
     <x-testimonial

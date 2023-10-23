@@ -53,7 +53,7 @@
             These people trust me
         </x-slot:title>
 
-        <x-sponsors class="justify-center" />
+        <x-sponsors-logos class="justify-center" />
     </x-section>
 
     <x-section id="numbers" class="container mt-24 md:mt-32 scroll-mt-4">

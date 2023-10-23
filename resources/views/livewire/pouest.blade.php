@@ -44,9 +44,9 @@ $again = function () {
 
             <textarea
                 wire:model="code"
-                placeholder="Your PHPUnit tests here…"
+                placeholder="Your PHPUnit code here…"
                 required
-                class="w-full px-4 py-3 font-mono text-sm bg-transparent border-0 rounded resize-none placeholder-gray-700/50 focus:ring-teal-400 bg-gradient-to-r from-gray-800/30 to-gray-800/50"
+                class="w-full px-4 py-3 font-mono text-sm bg-transparent border-0 rounded resize-none placeholder-gray-600 focus:ring-teal-400 bg-gradient-to-r from-gray-800/30 to-gray-800/50 min-h-[30vh]"
             ></textarea>
 
             <button

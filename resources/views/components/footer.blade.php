@@ -12,7 +12,7 @@
         </p>
 
         @if (! request()->routeIs('home', 'media-kit', 'openings.create', 'sponsors'))
-            <x-sponsors />
+            <x-sponsors-logos />
         @endif
 
         <p class="mt-8">

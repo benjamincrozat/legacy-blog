@@ -159,7 +159,7 @@
             Their participation added <strong class="font-bold">$490.50</strong> to my MRR (Monthly Recurring Revenue) already!
         </p>
 
-        <x-sponsors class="justify-center" />
+        <x-sponsors-logos class="justify-center" />
     </x-section>
 
     <x-section id="roadmap" class="container mt-24 scroll-mt-4 xl:max-w-screen-lg md:mt-32">

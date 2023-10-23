@@ -57,7 +57,7 @@
                 From apps makers, to SaaS, web hosting, and more, my sponsors are worth checking out!
             </p>
 
-            <x-sponsors />
+            <x-sponsors-logos />
 
             <div class="inline-flex flex-wrap items-center justify-center mt-9 font-handwriting">
                 <a wire:navigate.hover href="{{ route('media-kit') }}" class="text-xl -ml-9 md:text-2xl sm:-ml-10 sm:text-3xl">
