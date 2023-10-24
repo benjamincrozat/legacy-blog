@@ -34,7 +34,9 @@
             Wait, there are no job offers at the moment!
         </p>
 
-        <div class="container mt-24 sm:text-xl lg:max-w-screen-md">
+        <p class="mt-16 font-bold text-center text-xl/tight md:text-2xl/tight">Meanwhile…</p>
+
+        <div class="container mt-16 sm:text-xl lg:max-w-screen-md">
             <p class="font-bold text-xl/tight md:text-2xl/tight">Developers,<br />I have a few recommendations.</p>
             <x-icon-checklist class="float-right w-16 h-16 mt-1 mb-8 ml-8 -mr-4 text-green-500 md:mb-16 md:ml-16 md:w-24 md:h-24" />
             <p class="mt-4">If you need guidance on how to put the odds in your favor, you should read my article "<a wire:navigate.hover href="/laravel-interview-questions" class="text-blue-600 underline">Laravel interview questions and answers</a>."</p>
