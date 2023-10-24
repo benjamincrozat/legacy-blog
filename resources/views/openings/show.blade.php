@@ -54,7 +54,7 @@
 
         <x-section class="container">
             <x-slot:title class="text-xl text-center">
-                Recommended
+                More job offers
             </x-slot:title>
 
             <ul class="grid gap-8 mt-8 md:grid-cols-2 md:gap-16">
