@@ -20,6 +20,6 @@
             Show your appreciation
         </x-button>
 
-        <p class="text-xs">(If you have a successful business you want to promote, <a wire:nevigate.hover href="{{ route('media-kit') }}">I sell sponsorships</a> too!)</p>
+        <p class="text-sm">(If you have a successful business you want to promote, <a wire:nevigate.hover href="{{ route('media-kit') }}">I sell sponsorships</a> too!)</p>
     </x-prose>
 </x-section>
