@@ -58,8 +58,7 @@
 
     <x-section id="numbers" class="container mt-24 md:mt-32 scroll-mt-4">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
-            Post your job offer<br class="hidden sm:inline" />
-            to an ever growing amount of Laravel developers
+            Present your job offer to a growing Laravel workforce.
         </x-slot:title>
 
         <div class="grid grid-cols-2 gap-16 mt-8 md:grid-cols-3">
