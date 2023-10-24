@@ -50,7 +50,7 @@
 
     <x-section class="container mt-24 md:mt-32">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
-            Join other people that chose me for their Laravel needs!
+            Join other people who chose me for their Laravel needs!
         </x-slot:title>
 
         <x-sponsors-logos class="justify-center" />
