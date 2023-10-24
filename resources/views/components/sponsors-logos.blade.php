@@ -119,8 +119,7 @@ $numbers = collect(range(1, 9));
         class="text-center"
         style="order: {{ $numbers->pull($numbers->random()) }}"
     >
-        <x-icon-taskvalve
-            class="inline h-6 lg:h-7"
-        />
+        <x-icon-taskvalve class="inline h-6 lg:h-7" />
+        <span class="sr-only">TaskValue</span>
     </a>
 </div>

@@ -26,7 +26,7 @@
 
     <x-section id="numbers" class="container mt-16 xl:max-w-screen-lg scroll-mt-4">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
-            See how job posting work on my blog
+            See how you can post your Laravel job offer
         </x-slot:title>
 
         <div class="flex flex-wrap gap-8 mt-8 md:flex-nowrap md:items-start md:justify-between md:gap-16">
@@ -50,7 +50,8 @@
 
     <x-section class="container mt-24 md:mt-32">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
-            These people trust me
+            These people all have something to Laravel<br />
+            and chose to work with me. Join them!
         </x-slot:title>
 
         <x-sponsors-logos class="justify-center" />
@@ -58,7 +59,8 @@
 
     <x-section id="numbers" class="container mt-24 md:mt-32 scroll-mt-4">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
-            Post your job offer to an ever growing amount of Laravel developers
+            Post your job offer<br class="hidden sm:inline" />
+            to an ever growing amount of Laravel developers
         </x-slot:title>
 
         <div class="grid grid-cols-2 gap-16 mt-8 md:grid-cols-3">
@@ -142,13 +144,14 @@
 
     <x-section class="container mt-32 mb-16 lg:max-w-screen-md">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
-            Why post your Laravel development job offers on&nbsp;my&nbsp;blog
+            Why post your Laravel development<br class="hidden sm:inline" />
+            job offers on my blog
         </x-slot:title>
 
         <x-prose class="mt-8 text-xl">
             <img loading="lazy" src="https://www.gravatar.com/avatar/d58b99650fe5d74abeb9d9dad5da55ad?s=256" width="128" height="128" alt="Benjamin Crozat" class="float-right mb-8 ml-8 rounded-full" />
 
-            <p><strong>“The amount of developers passing by</strong> to sharpen their diverse skills (CSS, database, JavaScript, Laravel, PHP, SEO, Vue.js, etc.) thanks to the technical content I write <strong>is massive</strong>. And the growth is not stopping anytime soon.</p>
+            <p><strong>“The amount of developers passing by</strong> to sharpen their diverse skills (CSS, databases, JavaScript, Laravel, PHP, Vue.js, etc.) thanks to the technical content I write <strong>is massive</strong>. And the growth is not stopping anytime soon.</p>
 
             <p>My audience is made of <strong>English-speaking developers from all over the world</strong>. Your ideal hire has to be here and I make sure they don't miss your job offer.</p>
 
@@ -162,12 +165,12 @@
 
     <x-section class="container mt-32 mb-16 lg:max-w-screen-md">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
-            My recommendations for hiring a dedicated Laravel developer
+            My recommendations<br class="hidden sm:inline" /> for hiring a dedicated Laravel developer
         </x-slot:title>
 
         <x-prose class="mt-8 prose-h3:font-bold">
             <h3 class="leading-tight">Check for real-world Laravel development experiences</h3>
-            <x-heroicon-s-check-circle class="float-right w-24 h-24 mt-1 mb-8 ml-8 text-green-500 md:w-32 md:h-32" />
+            <x-icon-resume class="float-right w-24 h-24 mt-1 mb-8 ml-8 text-green-500 md:w-32 md:h-32" />
             <p>If you don't have time to coach inexperienced developers on Laravel, make sure they have real-world experience.</p>
             <p><strong>People freshly out of school are certainly cheap, but they won't be able to be proficient on Laravel projects</strong> (of course, some passionate developers are the exception to this rule).</p>
             <p>Here's what, in my opinion, makes a good candidate:</p>
