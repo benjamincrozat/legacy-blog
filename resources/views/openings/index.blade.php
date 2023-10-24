@@ -31,7 +31,7 @@
         </x-section>
     @else
         <p class="container mt-8 text-2xl text-center lg:max-w-screen-md">
-            There are no job offers at the moment.
+            Wait, there are no job offers at the moment!
         </p>
 
         <div class="container mt-24 sm:text-xl lg:max-w-screen-md">
