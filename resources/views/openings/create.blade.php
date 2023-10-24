@@ -1,6 +1,6 @@
 <x-app
-    title="Post your job offer to 40,000 developers each month"
-    description="If you are hiring Laravel developers, my blog can redirect a relevant audience to your job offer, today."
+    title="Post your job offer to 40,000 monthly Laravel developers"
+    description="If you are hiring Laravel developers, my blog can get you the attention a relevant audience, today."
 >
     <div class="container mt-16">
         <x-icon-people class="h-24 mx-auto" />
