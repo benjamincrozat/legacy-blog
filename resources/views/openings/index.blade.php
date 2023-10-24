@@ -41,7 +41,7 @@
         </div>
 
         <div class="container mt-16 sm:text-xl lg:max-w-screen-md">
-            <p class="font-bold text-xl/tight md:text-2xl/tight">Business owners,<br />post your job offer, now!</p>
+            <p class="font-bold text-xl/tight md:text-2xl/tight">Business owners,<br />you could find a developer, now!</p>
             <x-icon-interview class="float-right w-16 h-16 mt-1 mb-8 ml-8 text-green-500 md:mb-16 md:ml-16 md:w-24 md:h-24" />
             <p class="mt-4">My blog is visited by 40,000 Laravel developers each month. This is the right place to find your ideal candidate.</p>
             <x-button href="{{ route('openings.create') }}" class="inline-block px-6 mt-8 text-white bg-orange-400 sm:text-lg">
