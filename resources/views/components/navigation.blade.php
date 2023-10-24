@@ -48,7 +48,7 @@
             </x-slot:trigger>
 
             <x-menu.item href="{{ route('media-kit') }}" icon="s-star" class="text-yellow-400">
-                <strong class="text-black transition-colors group-hover:text-white">Get more eyes on your business</strong>
+                <strong class="text-black transition-colors group-hover:text-white">Promote your business</strong>
             </x-menu.item>
 
             <x-menu.item href="{{ route('openings.create') }}" icon="s-briefcase" class="text-indigo-400">
