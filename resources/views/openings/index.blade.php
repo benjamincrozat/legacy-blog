@@ -13,7 +13,7 @@
         </h1>
     </div>
 
-    @if (! $openings->isNotEmpty())
+    @if ($openings->isNotEmpty())
         <x-section class="container mt-16">
             <x-slot:title class="font-bold text-center text-2xl/tight md:text-3xl/tight">
                 @choice(':count job offer is available|:count job offers are available', $openings->count())
