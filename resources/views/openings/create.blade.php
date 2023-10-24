@@ -162,7 +162,7 @@
 
     <x-section class="container mt-32 mb-16 lg:max-w-screen-md">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
-            What to look for when hiring a dedicated Laravel developer?
+            My recommendations for hiring a dedicated Laravel developer
         </x-slot:title>
 
         <x-prose class="mt-8 prose-h3:font-bold">
@@ -179,7 +179,7 @@
 
             <h3 class="leading-tight">Don't hire a senior Laravel developer to work on basic tasks</h3>
             <x-icon-programmer class="float-right w-24 h-24 mt-1 mb-8 ml-8 text-green-500 md:w-32 md:h-32" />
-            <p><strong>A senior Laravel developer is expensive and for good reasons.</strong> Years of experience made them a master at what they do. <strong>You want them to work on something other than simple interface changes or bug fixes, or they'll get bored and leave as soon as possible.</strong></p>
+            <p><strong>A senior Laravel developer is expensive and for good reasons.</strong> Years of experience made them a master at what they do. <strong>You want them to work on something other than simple interface changes or bug fixes, or they'll get bored and leave as soon as possible.</strong> I'm talking from experience there!</p>
             <p>Senior Laravel developers want to work on complex issues that will make your project easier to maintain, more stable, and more profitable in the long run.</p>
 
             <h3 class="leading-tight">Get a Laravel developer who's a good communicator</h3>
