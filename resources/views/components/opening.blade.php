@@ -1,5 +1,5 @@
 <div class="flex items-start gap-6">
-    <a href="#" class="flex-shrink-0">
+    <a wire:navigate.hover href="{{ route('openings.show', $opening) }}" class="flex-shrink-0">
         <img
             src="{{ fake()->imageUrl() }}"
             width="64"
@@ -11,7 +11,7 @@
 
     <div class="flex flex-col">
         <p class="font-bold">
-            <a href="{{ route('openings.show', $opening) }}" class="text-indigo-600 underline">
+            <a wire:navigate.hover href="{{ route('openings.show', $opening) }}" class="text-indigo-600 underline">
                 {{ $opening->title }}
             </a>
         </p>
