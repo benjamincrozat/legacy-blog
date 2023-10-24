@@ -50,8 +50,7 @@
 
     <x-section class="container mt-24 md:mt-32">
         <x-slot:title class="text-2xl sm:!text-3xl font-bold text-center">
-            These people all have something to Laravel<br class="hidden sm:inline" />
-            and chose to work with me. Join them!
+            Join other people that chose me for their Laravel needs!
         </x-slot:title>
 
         <x-sponsors-logos class="justify-center" />
