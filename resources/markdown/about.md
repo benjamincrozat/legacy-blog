@@ -1,6 +1,6 @@
 ![Benjamin Crozat](https://www.gravatar.com/avatar/d58b99650fe5d74abeb9d9dad5da55ad?s=256){: .float-right .mb-8 .ml-8 .rounded-full width="128" height="128" loading="lazy"}
 
-Hi! I'm Benjamin Crozat. I'm from the South of France and **I've been a self-taught professional web developer for 12 years**.
+Hi! I'm Benjamin Crozat. I'm from the South of France and **I've been a self-taught professional web developer for 12 years**. I started learning PHP and JavaScript back in 2006 when PHP 4 was still widely used, Internet Explorer 6 ruled the world, and we used DHTML to add falling snow on websites.
 
 **Being able to educate myself for free on the web changed my life for the better**. Giving back to the community was a natural direction in my career and I truly enjoy it.
 
