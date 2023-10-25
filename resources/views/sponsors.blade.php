@@ -320,7 +320,7 @@
         </div>
 
         <p class="mt-8 font-normal text-center">
-            Demigod isn't enough? <a wire:navigate.hover href="{{ route('media-kit') }}" class="font-medium underline">Check out what I offer for gods then!</a>
+            Demigod isn't enough? <a wire:navigate.hover href="{{ route('media-kit') }}" class="font-medium underline">Check out the God tier!</a>
         </p>
     </x-section>
 
