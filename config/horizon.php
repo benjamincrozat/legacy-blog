@@ -215,4 +215,6 @@ return [
             ],
         ],
     ],
+
+    'token' => env('HORIZON_TOKEN'),
 ];
