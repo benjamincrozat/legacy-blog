@@ -14,7 +14,7 @@ class HorizonServiceProvider extends HorizonApplicationServiceProvider
                 return true;
             }
 
-            return 1 === $user->id;
+            return 1 === $user?->id;
         });
     }
 }
