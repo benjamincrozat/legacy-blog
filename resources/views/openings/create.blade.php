@@ -18,7 +18,7 @@
             href="{{ config('services.lemonsqueezy.job_offer') }}"
             class="table px-6 py-3 mx-auto font-bold text-white bg-orange-400 rounded mt-14"
         >
-            Get started for <del>$149</del> $99 (launch price)
+            Get started for <del class="font-light opacity-50">$149</del> $99 (launch price)
         </a>
 
         <p class="mt-4 text-sm text-center">Once the payment is done, you will receive instructions on how to send me your job offer.</p>
@@ -33,7 +33,7 @@
             <video
                 controls
                 src="https://cdn.benjamincrozat.com/job-offers-demo.mp4"
-                class="md:max-w-[33.33%] rounded-lg shadow-lg"
+                class="bg-black md:max-w-[33.33%] rounded-lg shadow-lg aspect-video"
             ></video>
 
             <div class="flex-grow text-xl">
