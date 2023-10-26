@@ -18,7 +18,7 @@
             href="{{ config('services.lemonsqueezy.job_offer') }}"
             class="table px-6 py-3 mx-auto font-bold text-white bg-orange-400 rounded mt-14"
         >
-            Get started for $149
+            Get started for <del>$149</del> $99 (launch price)
         </a>
 
         <p class="mt-4 text-sm text-center">Once the payment is done, you will receive instructions on how to send me your job offer.</p>

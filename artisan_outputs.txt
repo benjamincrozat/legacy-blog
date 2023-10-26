@@ -1,0 +1,636 @@
+Collecting output for: php artisan make:cast -h
+Description:
+  Create a new custom Eloquent cast class
+
+Usage:
+  make:cast [options] [--] <name>
+
+Arguments:
+  name                  The name of the cast
+
+Options:
+  -f, --force           Create the class even if the cast already exists
+      --inbound         Generate an inbound cast class
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:channel -h
+Description:
+  Create a new channel class
+
+Usage:
+  make:channel [options] [--] <name>
+
+Arguments:
+  name                  The name of the channel
+
+Options:
+  -f, --force           Create the class even if the channel already exists
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:command -h
+Description:
+  Create a new Artisan command
+
+Usage:
+  make:command [options] [--] <name>
+
+Arguments:
+  name                     The name of the command
+
+Options:
+  -f, --force              Create the class even if the console command already exists
+      --command[=COMMAND]  The terminal command that will be used to invoke the class
+      --test               Generate an accompanying PHPUnit test for the Console command
+      --pest               Generate an accompanying Pest test for the Console command
+  -h, --help               Display help for the given command. When no command is given display help for the list command
+  -q, --quiet              Do not output any message
+  -V, --version            Display this application version
+      --ansi|--no-ansi     Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction     Do not ask any interactive question
+      --env[=ENV]          The environment the command should run under
+  -v|vv|vvv, --verbose     Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:component -h
+Description:
+  Create a new view component class
+
+Usage:
+  make:component [options] [--] <name>
+
+Arguments:
+  name                  The name of the component
+
+Options:
+  -f, --force           Create the class even if the component already exists
+      --inline          Create a component that renders an inline view
+      --view            Create an anonymous component with only a view
+      --test            Generate an accompanying PHPUnit test for the Component
+      --pest            Generate an accompanying Pest test for the Component
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:controller -h
+Description:
+  Create a new controller class
+
+Usage:
+  make:controller [options] [--] <name>
+
+Arguments:
+  name                   The name of the controller
+
+Options:
+      --api              Exclude the create and edit methods from the controller
+      --type=TYPE        Manually specify the controller stub file to use
+      --force            Create the class even if the controller already exists
+  -i, --invokable        Generate a single method, invokable controller class
+  -m, --model[=MODEL]    Generate a resource controller for the given model
+  -p, --parent[=PARENT]  Generate a nested resource controller class
+  -r, --resource         Generate a resource controller class
+  -R, --requests         Generate FormRequest classes for store and update
+  -s, --singleton        Generate a singleton resource controller class
+      --creatable        Indicate that a singleton resource should be creatable
+      --test             Generate an accompanying PHPUnit test for the Controller
+      --pest             Generate an accompanying Pest test for the Controller
+  -h, --help             Display help for the given command. When no command is given display help for the list command
+  -q, --quiet            Do not output any message
+  -V, --version          Display this application version
+      --ansi|--no-ansi   Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction   Do not ask any interactive question
+      --env[=ENV]        The environment the command should run under
+  -v|vv|vvv, --verbose   Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:event -h
+Description:
+  Create a new event class
+
+Usage:
+  make:event [options] [--] <name>
+
+Arguments:
+  name                  The name of the event
+
+Options:
+  -f, --force           Create the class even if the event already exists
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:exception -h
+Description:
+  Create a new custom exception class
+
+Usage:
+  make:exception [options] [--] <name>
+
+Arguments:
+  name                  The name of the exception
+
+Options:
+  -f, --force           Create the class even if the exception already exists
+      --render          Create the exception with an empty render method
+      --report          Create the exception with an empty report method
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:factory -h
+Description:
+  Create a new model factory
+
+Usage:
+  make:factory [options] [--] <name>
+
+Arguments:
+  name                  The name of the factory
+
+Options:
+  -m, --model[=MODEL]   The name of the model
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:job -h
+Description:
+  Create a new job class
+
+Usage:
+  make:job [options] [--] <name>
+
+Arguments:
+  name                  The name of the job
+
+Options:
+  -f, --force           Create the class even if the job already exists
+      --sync            Indicates that job should be synchronous
+      --test            Generate an accompanying PHPUnit test for the Job
+      --pest            Generate an accompanying Pest test for the Job
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:listener -h
+Description:
+  Create a new event listener class
+
+Usage:
+  make:listener [options] [--] <name>
+
+Arguments:
+  name                  The name of the listener
+
+Options:
+  -e, --event[=EVENT]   The event class being listened for
+  -f, --force           Create the class even if the listener already exists
+      --queued          Indicates the event listener should be queued
+      --test            Generate an accompanying PHPUnit test for the Listener
+      --pest            Generate an accompanying Pest test for the Listener
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:mail -h
+Description:
+  Create a new email class
+
+Usage:
+  make:mail [options] [--] <name>
+
+Arguments:
+  name                       The name of the mailable
+
+Options:
+  -f, --force                Create the class even if the mailable already exists
+  -m, --markdown[=MARKDOWN]  Create a new Markdown template for the mailable [default: false]
+      --test                 Generate an accompanying PHPUnit test for the Mailable
+      --pest                 Generate an accompanying Pest test for the Mailable
+  -h, --help                 Display help for the given command. When no command is given display help for the list command
+  -q, --quiet                Do not output any message
+  -V, --version              Display this application version
+      --ansi|--no-ansi       Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction       Do not ask any interactive question
+      --env[=ENV]            The environment the command should run under
+  -v|vv|vvv, --verbose       Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:middleware -h
+Description:
+  Create a new middleware class
+
+Usage:
+  make:middleware [options] [--] <name>
+
+Arguments:
+  name                  The name of the middleware
+
+Options:
+      --test            Generate an accompanying PHPUnit test for the Middleware
+      --pest            Generate an accompanying Pest test for the Middleware
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:migration -h
+Description:
+  Create a new migration file
+
+Usage:
+  make:migration [options] [--] <name>
+
+Arguments:
+  name                   The name of the migration
+
+Options:
+      --create[=CREATE]  The table to be created
+      --table[=TABLE]    The table to migrate
+      --path[=PATH]      The location where the migration file should be created
+      --realpath         Indicate any provided migration file paths are pre-resolved absolute paths
+      --fullpath         Output the full path of the migration (Deprecated)
+  -h, --help             Display help for the given command. When no command is given display help for the list command
+  -q, --quiet            Do not output any message
+  -V, --version          Display this application version
+      --ansi|--no-ansi   Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction   Do not ask any interactive question
+      --env[=ENV]        The environment the command should run under
+  -v|vv|vvv, --verbose   Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:model -h
+Description:
+  Create a new Eloquent model class
+
+Usage:
+  make:model [options] [--] <name>
+
+Arguments:
+  name                  The name of the model
+
+Options:
+  -a, --all             Generate a migration, seeder, factory, policy, resource controller, and form request classes for the model
+  -c, --controller      Create a new controller for the model
+  -f, --factory         Create a new factory for the model
+      --force           Create the class even if the model already exists
+  -m, --migration       Create a new migration file for the model
+      --morph-pivot     Indicates if the generated model should be a custom polymorphic intermediate table model
+      --policy          Create a new policy for the model
+  -s, --seed            Create a new seeder for the model
+  -p, --pivot           Indicates if the generated model should be a custom intermediate table model
+  -r, --resource        Indicates if the generated controller should be a resource controller
+      --api             Indicates if the generated controller should be an API resource controller
+  -R, --requests        Create new form request classes and use them in the resource controller
+      --test            Generate an accompanying PHPUnit test for the Model
+      --pest            Generate an accompanying Pest test for the Model
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:notification -h
+Description:
+  Create a new notification class
+
+Usage:
+  make:notification [options] [--] <name>
+
+Arguments:
+  name                       The name of the notification
+
+Options:
+  -f, --force                Create the class even if the notification already exists
+  -m, --markdown[=MARKDOWN]  Create a new Markdown template for the notification
+      --test                 Generate an accompanying PHPUnit test for the Notification
+      --pest                 Generate an accompanying Pest test for the Notification
+  -h, --help                 Display help for the given command. When no command is given display help for the list command
+  -q, --quiet                Do not output any message
+  -V, --version              Display this application version
+      --ansi|--no-ansi       Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction       Do not ask any interactive question
+      --env[=ENV]            The environment the command should run under
+  -v|vv|vvv, --verbose       Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:observer -h
+Description:
+  Create a new observer class
+
+Usage:
+  make:observer [options] [--] <name>
+
+Arguments:
+  name                  The name of the observer
+
+Options:
+  -f, --force           Create the class even if the observer already exists
+  -m, --model[=MODEL]   The model that the observer applies to
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:policy -h
+Description:
+  Create a new policy class
+
+Usage:
+  make:policy [options] [--] <name>
+
+Arguments:
+  name                  The name of the policy
+
+Options:
+  -f, --force           Create the class even if the policy already exists
+  -m, --model[=MODEL]   The model that the policy applies to
+  -g, --guard[=GUARD]   The guard that the policy relies on
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:provider -h
+Description:
+  Create a new service provider class
+
+Usage:
+  make:provider [options] [--] <name>
+
+Arguments:
+  name                  The name of the provider
+
+Options:
+  -f, --force           Create the class even if the provider already exists
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:request -h
+Description:
+  Create a new form request class
+
+Usage:
+  make:request [options] [--] <name>
+
+Arguments:
+  name                  The name of the request
+
+Options:
+  -f, --force           Create the class even if the request already exists
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:resource -h
+Description:
+  Create a new resource
+
+Usage:
+  make:resource [options] [--] <name>
+
+Arguments:
+  name                  The name of the resource
+
+Options:
+  -f, --force           Create the class even if the resource already exists
+  -c, --collection      Create a resource collection
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:rule -h
+Description:
+  Create a new validation rule
+
+Usage:
+  make:rule [options] [--] <name>
+
+Arguments:
+  name                  The name of the rule
+
+Options:
+  -f, --force           Create the class even if the rule already exists
+  -i, --implicit        Generate an implicit rule
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:scope -h
+Description:
+  Create a new scope class
+
+Usage:
+  make:scope [options] [--] <name>
+
+Arguments:
+  name                  The name of the scope
+
+Options:
+  -f, --force           Create the class even if the scope already exists
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:seeder -h
+Description:
+  Create a new seeder class
+
+Usage:
+  make:seeder <name>
+
+Arguments:
+  name                  The name of the seeder
+
+Options:
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:test -h
+Description:
+  Create a new test class
+
+Usage:
+  make:test [options] [--] <name>
+
+Arguments:
+  name                  The name of the test
+
+Options:
+  -f, --force           Create the class even if the test already exists
+  -u, --unit            Create a unit test
+  -p, --pest            Create a Pest test
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:view -h
+Description:
+  Create a new view
+
+Usage:
+  make:view [options] [--] <name>
+
+Arguments:
+  name                         The name of the view
+
+Options:
+      --extension[=EXTENSION]  The extension of the generated view [default: "blade.php"]
+  -f, --force                  Create the view even if the view already exists
+      --test                   Generate an accompanying PHPUnit test for the View
+      --pest                   Generate an accompanying Pest test for the View
+  -h, --help                   Display help for the given command. When no command is given display help for the list command
+  -q, --quiet                  Do not output any message
+  -V, --version                Display this application version
+      --ansi|--no-ansi         Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction         Do not ask any interactive question
+      --env[=ENV]              The environment the command should run under
+  -v|vv|vvv, --verbose         Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
+Collecting output for: php artisan make:volt -h
+Description:
+  Create a new Volt component
+
+Usage:
+  make:volt [options] [--] <name>
+
+Arguments:
+  name                  The name of the volt component
+
+Options:
+      --class           Create a class based component
+  -f, --force           Create the Volt component even if the component already exists
+      --test            Generate an accompanying PHPUnit test for the Volt component
+      --pest            Generate an accompanying Pest test for the Volt component
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+--------------------------------------------------
+
