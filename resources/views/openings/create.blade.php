@@ -33,6 +33,8 @@
             <video
                 controls
                 src="https://cdn.benjamincrozat.com/job-offers-demo.mp4"
+                width="1280"
+                height="720"
                 class="bg-black md:max-w-[33.33%] rounded-lg shadow-lg aspect-video"
             ></video>
 
