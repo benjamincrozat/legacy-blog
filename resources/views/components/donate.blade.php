@@ -10,7 +10,7 @@
 
         <p><strong>If you like the content I make, why not consider a monthly donation? Or a one-time payment, it's up to you!</strong></p>
 
-        <p>I will never ask people to pay for content. But I'm also trying to work full-time on the blog and bring the full vision to life. <a href="{{ route('sponsors') }}#roadmap">Learn more</a> about my roadmap.</p>
+        <p>I will never ask people to pay for content. But I'm also trying to work full-time on the blog and bring the full vision to life. <a href="{{ route('sponsors') }}#roadmap">Learn more about my roadmap</a>.</p>
 
         <x-button
             :no-wire-navigate="true"
