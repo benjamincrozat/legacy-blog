@@ -103,28 +103,28 @@
                 <div>monthly visitors</div>
             </div>
 
-            <div class="col-span-1" x-data="{ count: 0, target: 63000 }" x-intersect.half="animateNumber">
+            <div class="col-span-1" x-data="{ count: 0, target: 70000 }" x-intersect.half="animateNumber">
                 <div class="flex items-center text-3xl sm:gap-1 md:gap-2 font-extralight sm:text-5xl lg:text-6xl xl:text-7xl">
                     <x-heroicon-s-arrow-trending-up class="flex-shrink-0 inline h-5 mr-2 text-green-500 sm:h-7" />
-                    <span x-text="Math.round(count).toLocaleString()">63,000</span>
+                    <span x-text="Math.round(count).toLocaleString()">70,000</span>
                 </div>
 
                 <div>monthly page views</div>
             </div>
 
-            <div class="col-span-1" x-data="{ count: 0, target: 43000 }" x-intersect.half="animateNumber">
+            <div class="col-span-1" x-data="{ count: 0, target: 45000 }" x-intersect.half="animateNumber">
                 <div class="flex items-center text-3xl sm:gap-1 md:gap-2 font-extralight sm:text-5xl lg:text-6xl xl:text-7xl">
                     <x-heroicon-s-arrow-trending-up class="flex-shrink-0 inline h-5 mr-2 text-green-500 sm:h-7" />
-                    <span x-text="Math.round(count).toLocaleString()">43,000</span>
+                    <span x-text="Math.round(count).toLocaleString()">45,000</span>
                 </div>
 
                 <div>monthly sessions</div>
             </div>
 
-            <div class="col-span-1" x-data="{ count: 0, target: 75 }" x-intersect.half="animateNumber">
+            <div class="col-span-1" x-data="{ count: 0, target: 80 }" x-intersect.half="animateNumber">
                 <div class="flex items-center text-3xl sm:gap-1 md:gap-2 font-extralight sm:text-5xl lg:text-6xl xl:text-7xl">
                     <x-heroicon-s-arrow-trending-up class="flex-shrink-0 inline h-5 mr-2 text-green-500 sm:h-7" />
-                    <span x-text="Math.round(count).toLocaleString()">75</span>%
+                    <span x-text="Math.round(count).toLocaleString()">80</span>%
                 </div>
 
                 <div>visitors on desktop</div>
@@ -145,7 +145,7 @@
                 </div>
 
                 <div>
-                    in the top 5 countries
+                    in the top 10 countries
                 </div>
             </div>
         </div>
