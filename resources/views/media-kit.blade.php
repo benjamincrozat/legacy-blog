@@ -277,7 +277,7 @@
 
     <div class="container mt-16 text-center md:max-w-screen-sm">
         <a href="{{ config('services.lemonsqueezy.sponsorships.monthly') }}" class="inline-block px-6 py-3 font-bold text-white transition-opacity bg-orange-400 rounded hover:opacity-75">
-            Get started for $79/month
+            Get started for $49/month
         </a>
 
         <p class="mt-4 font-medium">
