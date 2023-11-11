@@ -1,7 +1,5 @@
 <?php
 
-use App\Models\User;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -22,18 +20,6 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
-
-        if (! app()->runningUnitTests()) {
-            User::create([
-                'name' => 'Benjamin Crozat',
-                'email' => 'hello@benjamincrozat.com',
-                'email_verified_at' => now(),
-                'description' => "Laravel developer turned content creator.\r\n**[Get more eyes on your business](/media-kit) thanks to my 45,000 monthly visitors.**",
-                'github_handle' => 'benjamincrozat',
-                'x_handle' => 'benjamincrozat',
-                'password' => Hash::make('password'),
-            ]);
-        }
     }
 
     public function down() : void
