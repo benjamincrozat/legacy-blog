@@ -63,7 +63,24 @@ $numbers = collect(range(1, 9));
     </a>
 
     <a
-        href="https://larajobs.com?utm_source=benjamincrozat&utm_medium=logo&utm_campaign=benjamincrozat"
+        href="https://laradir.com/?utm_source=benjamincrozat.com&utm_medium=logo&utm_campaign=sponsorship"''
+        target="_blank"
+        rel="noopener"
+        class="text-center"
+        style="order: {{ $numbers->pull($numbers->random()) }}"
+    >
+        <img
+            loading="lazy"
+            src="{{ Vite::asset('resources/img/laradir.png') }}"
+            width="400"
+            height="124"
+            alt="Laradir"
+            class="inline w-auto h-10 lg:h-11"
+        />
+    </a>
+
+    <a
+        href="https://larajobs.com?ref=benjamin-crozat&utm_source=benjamin-crozat&utm_medium=logo&utm_campaign=benjamin-crozat"
         target="_blank"
         rel="noopener"
         class="text-center"
