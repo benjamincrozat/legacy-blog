@@ -1,3 +1,5 @@
+**This repository is for version 2 of my blog. The version 3 is hosted on a private repository. However, the content of my blog is now open source and everyone can contribute: [benjamincrozat/content](https://github.com/benjamincrozat/content)**
+
 [![Laravel Forge Site Deployment Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fforge.laravel.com%2Fsite-badges%2Fd43de459-aca8-4a36-9b50-8952279f1f68%3Fdate%3D1%26commit%3D1&style=for-the-badge)](https://forge.laravel.com/servers/651685/sites/2125048)
 
 <img src="https://github.com/benjamincrozat/benjamincrozat.com/assets/3613731/d80fbb79-7de6-4b2d-ab62-602890c6aa82" width="64" height="64" alt="The logo of the blog of Benjamin Crozat." />
@@ -107,5 +109,4 @@ Once the tests are green in the CI environment, a webhook from Laravel Forge is 
 
 Some details about the production environment:
 - I host the blog on a [$6 DigitalOcean VPS](https://benjamincrozat.com/recommends/digitalocean) that's managed by [Ploi](https://benjamincrozat.com/recommends/ploi).
-- I could have stopped here, but I'm also using [a managed MySQL database](https://benjamincrozat.com/recommends/digitalocean-managed-mysql-database) for frequent automatic backups and not having to deal with anything related to the configuration.
 - I use Sentry to monitor errors in the production environment only.
