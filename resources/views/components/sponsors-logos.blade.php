@@ -80,7 +80,7 @@ $numbers = collect(range(1, 9));
     </a>
 
     <a
-        href="https://larajobs.com?ref=benjamin-crozat&utm_source=benjamin-crozat&utm_medium=logo&utm_campaign=benjamin-crozat"
+        href="https://larajobs.com?&utm_source=benjamincrozat&utm_medium=logo&utm_campaign=benjamincrozat"
         target="_blank"
         rel="noopener"
         class="text-center"
