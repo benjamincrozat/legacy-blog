@@ -6,7 +6,7 @@
 
 # [benjamincrozat.com](https://benjamincrozat.com)
 
-This is the source code of my blog, [benjamincrozat.com](https://benjamincrozat.com). This blog was built with the TALL stack and gets more than **45,000 visitors per month**.
+This is the source code of my blog, [benjamincrozat.com](https://benjamincrozat.com). This blog was built with the TALL stack and gets more than **50,000 visitors per month**.
 
 <figure>
     <img src="https://github.com/benjamincrozat/benjamincrozat.com/assets/3613731/470cc829-c23f-4cdd-b769-68c2726fa738" alt="My Pirsch Analytics Dashboard." />

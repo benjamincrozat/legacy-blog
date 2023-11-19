@@ -1,5 +1,5 @@
 <x-app
-    title="Post your job offer to 45,000 monthly Laravel developers"
+    title="Post your job offer to 50,000 monthly Laravel developers"
     description="If you are hiring Laravel developers, my blog can get you the attention a relevant audience, today."
 >
     <div class="container mt-16">
@@ -7,7 +7,7 @@
 
         <h1 class="!text-3xl md:!text-4xl/none mt-8 lg:!text-5xl/none font-bold text-center">
             Post your job offer
-            <span class="text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">to 45,000 Laravel developers!</span>
+            <span class="text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">to 50,000 Laravel developers!</span>
         </h1>
 
         <h2 class="mt-2 text-center text-xl/tight md:text-2xl/tight lg:text-3xl/tight">
@@ -63,10 +63,10 @@
         </x-slot:title>
 
         <div class="grid grid-cols-2 gap-16 mt-8 md:grid-cols-3">
-            <div class="col-span-1" x-data="{ count: 0, target: 45000 }" x-intersect.half="animateNumber">
+            <div class="col-span-1" x-data="{ count: 0, target: 50000 }" x-intersect.half="animateNumber">
                 <div class="flex items-center text-3xl sm:gap-1 md:gap-2 font-extralight sm:text-5xl lg:text-6xl xl:text-7xl">
                     <x-heroicon-s-arrow-trending-up class="flex-shrink-0 inline h-5 mr-2 text-green-500 sm:h-7" />
-                    <span x-text="Math.round(count).toLocaleString()">45,000</span>
+                    <span x-text="Math.round(count).toLocaleString()">50,000</span>
                 </div>
 
                 <div>monthly Laravel developers passing by</div>
@@ -81,10 +81,10 @@
                 <div>monthly page views</div>
             </div>
 
-            <div class="col-span-1" x-data="{ count: 0, target: 45000 }" x-intersect.half="animateNumber">
+            <div class="col-span-1" x-data="{ count: 0, target: 50000 }" x-intersect.half="animateNumber">
                 <div class="flex items-center text-3xl sm:gap-1 md:gap-2 font-extralight sm:text-5xl lg:text-6xl xl:text-7xl">
                     <x-heroicon-s-arrow-trending-up class="flex-shrink-0 inline h-5 mr-2 text-green-500 sm:h-7" />
-                    <span x-text="Math.round(count).toLocaleString()">45,000</span>
+                    <span x-text="Math.round(count).toLocaleString()">50,000</span>
                 </div>
 
                 <div>monthly sessions</div>

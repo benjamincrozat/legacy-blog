@@ -49,7 +49,7 @@
         </x-slot:title>
 
         <p class="container mt-2 text-xl/tight md:text-2xl/tight lg:text-3xl/tight">
-            Join more than <span class="font-semibold text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">45,000</span> readers and skyrocket your web&nbsp;development&nbsp;skills.
+            Join more than <span class="font-semibold text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">50,000</span> readers and skyrocket your web&nbsp;development&nbsp;skills.
         </p>
 
         <div id="sponsors" class="container text-center scroll-mt-8 mt-14 md:mt-28">

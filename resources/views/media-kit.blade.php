@@ -1,6 +1,6 @@
 <x-app
     title="Sponsor me and get your company in the spotlight."
-    description="More than 45,000 eager developers visit my blog each month. Why don't you introduce your brand?"
+    description="More than 50,000 eager developers visit my blog each month. Why don't you introduce your brand?"
 >
     <div
         class="!h-[175px] md:!h-[200px] container flex items-end justify-center gap-2 md:gap-4 mt-16 md:mt-24 md:max-w-screen-sm"
@@ -57,7 +57,7 @@
         </x-slot:title>
 
         <p class="mt-4 text-xl md:text-2xl md:mt-2 lg:text-3xl">
-            More than <span class="font-semibold text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">45,000</span> eager developers visit&nbsp;my&nbsp;blog&nbsp;each&nbsp;month.
+            More than <span class="font-semibold text-transparent bg-gradient-to-r from-indigo-300 to-indigo-400 bg-clip-text">50,000</span> eager developers visit&nbsp;my&nbsp;blog&nbsp;each&nbsp;month.
         </p>
 
         <div class="mt-8">
@@ -94,28 +94,28 @@
         </x-slot:title>
 
         <div class="grid grid-cols-2 gap-16 mt-16 md:grid-cols-3">
-            <div class="col-span-1" x-data="{ count: 0, target: 45000 }" x-intersect.half="animateNumber">
+            <div class="col-span-1" x-data="{ count: 0, target: 50000 }" x-intersect.half="animateNumber">
                 <div class="flex items-center text-3xl sm:gap-1 md:gap-2 font-extralight sm:text-5xl lg:text-6xl xl:text-7xl">
                     <x-heroicon-s-arrow-trending-up class="flex-shrink-0 inline h-5 mr-2 text-green-500 sm:h-7" />
-                    <span x-text="Math.round(count).toLocaleString()">45,000</span>
+                    <span x-text="Math.round(count).toLocaleString()">50,000</span>
                 </div>
 
                 <div>monthly visitors</div>
             </div>
 
-            <div class="col-span-1" x-data="{ count: 0, target: 80000 }" x-intersect.half="animateNumber">
+            <div class="col-span-1" x-data="{ count: 0, target: 90000 }" x-intersect.half="animateNumber">
                 <div class="flex items-center text-3xl sm:gap-1 md:gap-2 font-extralight sm:text-5xl lg:text-6xl xl:text-7xl">
                     <x-heroicon-s-arrow-trending-up class="flex-shrink-0 inline h-5 mr-2 text-green-500 sm:h-7" />
-                    <span x-text="Math.round(count).toLocaleString()">80,000</span>
+                    <span x-text="Math.round(count).toLocaleString()">90,000</span>
                 </div>
 
                 <div>monthly page views</div>
             </div>
 
-            <div class="col-span-1" x-data="{ count: 0, target: 50000 }" x-intersect.half="animateNumber">
+            <div class="col-span-1" x-data="{ count: 0, target: 55000 }" x-intersect.half="animateNumber">
                 <div class="flex items-center text-3xl sm:gap-1 md:gap-2 font-extralight sm:text-5xl lg:text-6xl xl:text-7xl">
                     <x-heroicon-s-arrow-trending-up class="flex-shrink-0 inline h-5 mr-2 text-green-500 sm:h-7" />
-                    <span x-text="Math.round(count).toLocaleString()">50,000</span>
+                    <span x-text="Math.round(count).toLocaleString()">55,000</span>
                 </div>
 
                 <div>monthly sessions</div>
@@ -130,7 +130,7 @@
                 <div>visitors on desktop</div>
             </div>
 
-            <div class="col-span-1" x-data="{ count: 0, target: 4600 }" x-intersect.half="animateNumber">
+            <div class="col-span-1" x-data="{ count: 0, target: 4700 }" x-intersect.half="animateNumber">
                 <div class="flex items-center text-3xl sm:gap-1 md:gap-2 font-extralight sm:text-5xl lg:text-6xl xl:text-7xl">
                     <x-heroicon-s-arrow-trending-up class="flex-shrink-0 inline h-5 mr-2 text-green-500 sm:h-7" />
                     <span x-text="Math.round(count).toLocaleString()">4700</span>
