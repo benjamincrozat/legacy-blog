@@ -55,20 +55,20 @@
     >
         <div class="flex flex-col min-h-screen">
             @if (! request()->routeIs('dummy-store.*', 'media-kit', 'openings.*', 'pouest', 'sponsors'))
-                <a href="https://larajobs.com?utm_source=benjamincrozat&utm_medium=banner&utm_campaign=benjamincrozat" target="_blank" rel="noopener" class="block text-sm text-indigo-700 bg-gradient-to-r from-indigo-50 to-indigo-50/50">
-                    <div class="container flex items-center justify-center gap-4 py-3 sm:max-w-[420px]">
+                <a wire:navigate.hover href="https://benjamincrozat.com/best-black-friday-deals-2023" target="_blank" rel="noopener" class="block text-sm text-white bg-gradient-to-r from-gray-900 to-gray-800">
+                    <div class="container flex items-center justify-center gap-4 py-3 sm:max-w-[480px]">
                         <div>
-                            “Looking for your dream job? I recommend <span class="font-medium underline">LaraJobs</span>.”
+                            “Black Friday deals end soon, so go <span class="font-medium underline">check them out</span>!” →
                         </div>
 
                         <img loading="lazy" src="https://www.gravatar.com/avatar/d58b99650fe5d74abeb9d9dad5da55ad?s=84" alt="Benjamin Crozat" class="rounded-full w-[32px] md:w-[34px] h-[32px] md:h-[34px]" />
                     </div>
                 </a>
 
-                <a wire:navigate.hover href="https://benjamincrozat.com/best-black-friday-deals-2023" target="_blank" rel="noopener" class="block text-sm text-white bg-gradient-to-r from-gray-900 to-gray-800">
-                    <div class="container flex items-center justify-center gap-4 py-3 sm:max-w-[420px]">
+                <a href="https://larajobs.com?utm_source=benjamincrozat&utm_medium=banner&utm_campaign=benjamincrozat" target="_blank" rel="noopener" class="block text-sm text-indigo-700 bg-gradient-to-r from-indigo-50 to-indigo-50/50">
+                    <div class="container flex items-center justify-center gap-4 py-3 sm:max-w-[480px]">
                         <div>
-                            “Black Friday deals end soon, so go <span class="font-medium underline">check them out</span>!” →
+                            “Looking for your dream job? I recommend <span class="font-medium underline">LaraJobs</span>.”
                         </div>
 
                         <img loading="lazy" src="https://www.gravatar.com/avatar/d58b99650fe5d74abeb9d9dad5da55ad?s=84" alt="Benjamin Crozat" class="rounded-full w-[32px] md:w-[34px] h-[32px] md:h-[34px] opacity-0" />
