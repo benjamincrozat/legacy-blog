@@ -65,7 +65,7 @@
                     <a wire:navigate.hover href="https://benjamincrozat.com/best-black-friday-deals-2023" class="block text-sm text-white bg-gradient-to-r from-gray-900 to-gray-800">
                         <div class="container flex items-center justify-center gap-4 py-3 sm:max-w-[420px]">
                             <div>
-                                “Black Friday deals end soon, so go check them out!”
+                                “Black Friday deals end soon, so go <span class="font-medium underline">check them out</span>!”
                             </div>
 
                             <img loading="lazy" src="https://www.gravatar.com/avatar/d58b99650fe5d74abeb9d9dad5da55ad?s=84" alt="Benjamin Crozat" class="rounded-full w-[32px] md:w-[34px] h-[32px] md:h-[34px]" />
