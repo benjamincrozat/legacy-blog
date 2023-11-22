@@ -63,7 +63,7 @@
                             </div>
 
                             <div class="mt-1">
-                                Also, <a href="https://larajobs.com?utm_source=benjamincrozat&utm_medium=banner&utm_campaign=benjamincrozat" target="_blank" rel="noopener" class="font-medium underline">LaraJobs</a> has plenty of job offers for you!”
+                                And as always, <a href="https://larajobs.com?utm_source=benjamincrozat&utm_medium=banner&utm_campaign=benjamincrozat" target="_blank" rel="noopener" class="font-medium underline">LaraJobs</a> has plenty of job offers for you!”
                             </div>
                         </div>
 
