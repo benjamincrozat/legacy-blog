@@ -65,8 +65,8 @@
                     </div>
                 </a>
 
-                <div class="container mt-4 text-center">
-                    “Black Friday deals end soon, so go <a wire:navigate.hover href="https://benjamincrozat.com/best-black-friday-deals-2023" class="font-medium underline">check them out</a>!”
+                <div class="container mt-4 mb-8 text-sm text-center">
+                    “Black Friday deals end soon, so go <a wire:navigate.hover href="https://benjamincrozat.com/best-black-friday-deals-2023" class="font-medium underline">check them out</a>!” →
                 </div>
             @endif
 
