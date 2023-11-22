@@ -58,7 +58,7 @@
                 <div class="block text-sm text-white bg-gradient-to-r from-gray-900 to-gray-800">
                     <div class="container flex items-center justify-center gap-4 py-3 md:max-w-screen-sm">
                         <div>
-                            “Black Friday deals end soon, so go <a wire:navigate.hover href="https://benjamincrozat.com/best-black-friday-deals-2023" class="font-medium underline">check them out</a>!<br />
+                            “Black Friday deals end soon, so <a wire:navigate.hover href="https://benjamincrozat.com/best-black-friday-deals-2023" class="font-medium underline">go check them out</a>!<br />
                             And as always, <a href="https://larajobs.com?utm_source=benjamincrozat&utm_medium=banner&utm_campaign=benjamincrozat" target="_blank" rel="noopener" class="font-medium underline">LaraJobs</a> has plenty of job offers for you!”
                         </div>
 
