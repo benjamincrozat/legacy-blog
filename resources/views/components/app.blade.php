@@ -70,8 +70,6 @@
                 </div>
             @endif
 
-            <div class="h-px bg-indigo-50"></div>
-
             @empty($hideNavigation)
                 <x-navigation class="mt-4" />
             @endempty
